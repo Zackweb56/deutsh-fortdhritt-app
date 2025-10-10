@@ -18,18 +18,13 @@ export const ACCESS_CODES_B64: string[] = [
 ];
 
 export const ACCESS_FLAG_KEY = 'access_granted';
-export const ACCESS_USED_KEY_PREFIX = 'access_used:'; // access_used:<CODE>
 
 export const decodeBase64 = (v: string) => atob(v);
 
 export const getAllowedCodes = (): string[] => ACCESS_CODES_B64.map(decodeBase64);
 
-export const isCodeConsumed = (code: string): boolean => {
-  return localStorage.getItem(ACCESS_USED_KEY_PREFIX + code) === 'true';
-};
-
-export const consumeCode = (code: string): void => {
-  localStorage.setItem(ACCESS_USED_KEY_PREFIX + code, 'true');
-};
+// Local single-use removal: now enforced globally by API. Left here for imports compatibility.
+export const isCodeConsumed = (_code: string): boolean => false;
+export const consumeCode = (_code: string): void => {};
 
 

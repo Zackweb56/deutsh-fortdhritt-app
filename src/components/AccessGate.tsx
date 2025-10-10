@@ -19,7 +19,7 @@ const AccessGate: React.FC<AccessGateProps> = ({ children }) => {
     setChecking(false);
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const input = code.trim().toUpperCase();
     if (!allowedCodes.includes(input)) {
@@ -27,13 +27,27 @@ const AccessGate: React.FC<AccessGateProps> = ({ children }) => {
       return;
     }
 
-    if (isCodeConsumed(input)) {
-      setError('تم استخدام رمز الوصول بالفعل ولا يمكن استخدامه مرة أخرى.');
+    try {
+      const resp = await fetch('/api/verify-code', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ code: input }),
+      });
+      const data = await resp.json();
+      if (!data?.ok) {
+        if (data?.status === 'used') {
+          setError('تم استخدام رمز الوصول بالفعل ولا يمكن استخدامه مرة أخرى.');
+        } else {
+          setError('رمز الوصول غير صالح.');
+        }
+        return;
+      }
+    } catch (e) {
+      setError('تعذر التحقق من الرمز. حاول لاحقًا.');
       return;
     }
 
     localStorage.setItem(ACCESS_FLAG_KEY, 'true');
-    consumeCode(input);
     setGranted(true);
     setError('');
   };
