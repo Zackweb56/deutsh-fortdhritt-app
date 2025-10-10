@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* German Learning Tracker - Dark Theme with RTL Support */
+
+@layer base {
+  :root {
+    /* Dark neutral theme (more neutral/gray instead of slate-blue) */
+    --background: 210 6% 6%; /* near black, neutral */
+    --foreground: 210 12% 96%; /* near white text */
+
+    --card: 210 6% 8%;
+    --card-foreground: 210 12% 96%;
+
+    --popover: 210 6% 8%;
+    --popover-foreground: 210 12% 96%;
+
+  /* German flag colors used as accents */
+  /* Primary = German red (used for active/tabs/buttons) */
+  --primary: 357 84% 45%; /* vivid red */
+  --primary-foreground: 210 12% 96%;
+  --primary-glow: 357 84% 55%;
+
+  /* Secondary (supporting) = darker neutral/near-black where needed) */
+  --secondary: 210 6% 8%; /* dark neutral */
+  --secondary-foreground: 210 12% 96%;
+  --secondary-glow: 0 0% 18%;
+
+    /* Gold / Yellow (Bundesflagge gold) */
+    --accent: 45 100% 50%; /* bright gold/yellow */
+    --accent-foreground: 210 6% 6%; /* dark text on yellow */
+
+    --muted: 210 8% 20%;
+    --muted-foreground: 210 12% 72%;
+
+    --destructive: 357 84% 45%;
+    --destructive-foreground: 210 12% 96%;
+
+    --border: 210 8% 16%;
+    --input: 210 8% 16%;
+    --ring: 357 84% 45%;
+
+    --radius: 0.75rem;
+
+    /* Success state for completed items (keep green) */
+    --success: 142 76% 36%;
+    --success-foreground: 210 12% 96%;
+
+    /* Progress bar (dark but visible on the dark background) */
+    --progress: 210 9% 18%; /* dark gray with enough contrast */
+
+    /* Gradients using German flag palette */
+    --gradient-primary: linear-gradient(135deg, hsl(0 0% 8%), hsl(0 0% 18%));
+    --gradient-secondary: linear-gradient(135deg, hsl(357 84% 45%), hsl(357 84% 55%));
+    --gradient-accent: linear-gradient(135deg, hsl(45 100% 50%), hsl(45 100% 60%));
+
+    /* Shadows (subtle, tinted by accent where appropriate) */
+    --shadow-soft: 0 2px 8px -2px hsl(0 0% 8% / 0.6);
+    --shadow-glow: 0 0 20px hsl(357 84% 45% / 0.18);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    direction: rtl;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+  }
+
+  html {
+    direction: rtl;
+  }
+
+  /* Smooth transitions */
+  * {
+    @apply transition-colors duration-200;
+  }
+}
+
+@layer components {
+  /* Card variants */
+  .card-gradient {
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-soft);
+  }
+
+  /* Progress bar */
+  .progress-bar {
+    @apply h-2 rounded-full overflow-hidden bg-muted;
+  }
+
+  .progress-fill {
+    @apply h-full rounded-full transition-all duration-500;
+    /* Dark-but-clear progress fill */
+    background: hsl(var(--primary));
+  }
+
+  /* Completed hour/card state (green) */
+  .completed-hour {
+    background: hsl(var(--success) / 0.12);
+    border-color: hsl(var(--success));
+    color: hsl(var(--success));
+  }
+
+  .icon-success {
+    color: hsl(var(--success));
+  }
+
+  /* Glow effects */
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* RTL-specific utilities */
+  .text-start {
+    text-align: right;
+  }
+
+  .text-end {
+    text-align: left;
+  }
+}
