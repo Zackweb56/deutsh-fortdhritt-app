@@ -38,12 +38,12 @@ interface AppState {
   days: Day[];
   vocabulary: VocabularyItem[];
   resources: Resource[];
-  currentTab: 'schedule' | 'vocabulary' | 'resources';
+  currentTab: 'schedule' | 'vocabulary' | 'lessons' | 'resources';
   isLoaded: boolean;
 }
 
 interface AppContextType extends AppState {
-  setCurrentTab: (tab: 'schedule' | 'vocabulary' | 'resources') => void;
+  setCurrentTab: (tab: 'schedule' | 'vocabulary' | 'lessons' | 'resources') => void;
   toggleHourComplete: (dayId: string, hourId: string) => void;
   updateTimer: (dayId: string, hourId: string, seconds: number, running: boolean) => void;
   addVocabulary: (item: Omit<VocabularyItem, 'id' | 'dateAdded'>) => void;
@@ -106,62 +106,242 @@ const createInitialDays = (): Day[] => {
   return allDays;
 };
 
+// Migration function to update old category names to new German ones
+const migrateResourceCategories = (resources: Resource[]): Resource[] => {
+  const categoryMapping: { [key: string]: string } = {
+    '🎧 Listening': 'Hören',
+    '📖 Reading': 'Lesen',
+    '🗣️ Speaking': 'Sprechen',
+    '✍️ Writing': 'Schreiben',
+    '💬 Grammar in Arabic': 'Grammatik auf Arabisch',
+    '🎓 Courses (structured)': 'Hören', // Map old courses to listening for now
+  };
+
+  return resources.map(resource => ({
+    ...resource,
+    category: categoryMapping[resource.category] || resource.category
+  }));
+};
+
 const createDefaultResources = (): Resource[] => {
   return [
+    // Hören
     {
       id: 'default-1',
-      category: 'القواعد والكتابة',
-      title: 'Deutsche Welle - Learn German',
-      url: 'https://learngerman.dw.com',
-      isDefault: true,
-    },
-    {
-      id: 'default-2',
-      category: 'القواعد والكتابة',
-      title: 'Goethe Institut',
-      url: 'https://www.goethe.de',
-      isDefault: true,
-    },
-    {
-      id: 'default-3',
-      category: 'الاستماع والتحدث',
-      title: 'Easy German YouTube',
+      category: 'Hören',
+      title: 'Easy German (YouTube) - Street Interviews',
       url: 'https://www.youtube.com/@EasyGerman',
       isDefault: true,
     },
     {
-      id: 'default-4',
-      category: 'الاستماع والتحدث',
-      title: 'Coffee Break German Podcast',
+      id: 'default-2',
+      category: 'Hören',
+      title: 'Slow German Podcast - Clear Pronunciation',
+      url: 'https://slowgerman.com',
+      isDefault: true,
+    },
+    {
+      id: 'default-3',
+      category: 'Hören',
+      title: 'Coffee Break German - Structured Podcast',
       url: 'https://coffeebreakgerman.com',
       isDefault: true,
     },
     {
-      id: 'default-5',
-      category: 'المفردات والقراءة',
-      title: 'Memrise German',
-      url: 'https://www.memrise.com/courses/english/german/',
+      id: 'default-4',
+      category: 'Hören',
+      title: 'DW Deutsch – Nachrichten (News)',
+      url: 'https://www.dw.com/de/deutsch-lernen/nachrichten/s-8030',
       isDefault: true,
     },
     {
-      id: 'default-6',
-      category: 'المفردات والقراءة',
-      title: 'Deutsche Welle Top-Thema',
+      id: 'default-5',
+      category: 'Hören',
+      title: 'Deutsche Welle - Top-Thema (Current Events)',
       url: 'https://www.dw.com/de/deutsch-lernen/top-thema/s-8031',
       isDefault: true,
     },
     {
-      id: 'default-7',
-      category: 'الثقافة والإعلام',
-      title: 'ARD Mediathek',
+      id: 'default-6',
+      category: 'Hören',
+      title: 'ARD Mediathek - German TV & Radio',
       url: 'https://www.ardmediathek.de',
       isDefault: true,
     },
     {
-      id: 'default-8',
-      category: 'الثقافة والإعلام',
-      title: 'Tagesschau',
+      id: 'default-7',
+      category: 'Hören',
+      title: 'Tagesschau - Daily News (Clear German)',
       url: 'https://www.tagesschau.de',
+      isDefault: true,
+    },
+    
+    // Lesen
+    {
+      id: 'default-8',
+      category: 'Lesen',
+      title: 'German.net - Reading Practice',
+      url: 'https://german.net/reading',
+      isDefault: true,
+    },
+    {
+      id: 'default-9',
+      category: 'Lesen',
+      title: 'Deutsch Perfekt Magazine - Simplified Articles',
+      url: 'https://www.deutsch-perfekt.com',
+      isDefault: true,
+    },
+    {
+      id: 'default-10',
+      category: 'Lesen',
+      title: 'Beelinguapp - Dual Language Stories',
+      url: 'https://www.beelinguapp.com',
+      isDefault: true,
+    },
+    {
+      id: 'default-11',
+      category: 'Lesen',
+      title: 'Lingua.com - German Reading Texts',
+      url: 'https://lingua.com/german/reading/',
+      isDefault: true,
+    },
+    {
+      id: 'default-12',
+      category: 'Lesen',
+      title: 'Readlang - Interactive Reading',
+      url: 'https://readlang.com',
+      isDefault: true,
+    },
+    {
+      id: 'default-13',
+      category: 'Lesen',
+      title: 'Spiegel Online - German News (Advanced)',
+      url: 'https://www.spiegel.de',
+      isDefault: true,
+    },
+    
+    // Sprechen
+    {
+      id: 'default-14',
+      category: 'Sprechen',
+      title: 'HelloTalk - Language Exchange',
+      url: 'https://www.hellotalk.com',
+      isDefault: true,
+    },
+    {
+      id: 'default-15',
+      category: 'Sprechen',
+      title: 'Tandem - Native Speaker Practice',
+      url: 'https://www.tandem.net',
+      isDefault: true,
+    },
+    {
+      id: 'default-16',
+      category: 'Sprechen',
+      title: 'Speechling - AI Speaking Practice',
+      url: 'https://speechling.com',
+      isDefault: true,
+    },
+    {
+      id: 'default-17',
+      category: 'Sprechen',
+      title: 'italki - Professional German Teachers',
+      url: 'https://www.italki.com/en/teachers/german',
+      isDefault: true,
+    },
+    {
+      id: 'default-18',
+      category: 'Sprechen',
+      title: 'Preply - German Conversation Practice',
+      url: 'https://preply.com/en/online/german-tutors',
+      isDefault: true,
+    },
+    {
+      id: 'default-19',
+      category: 'Sprechen',
+      title: 'GermanPod101 - Conversation Scripts',
+      url: 'https://www.germanpod101.com/german-conversations',
+      isDefault: true,
+    },
+    
+    // Schreiben
+    {
+      id: 'default-20',
+      category: 'Schreiben',
+      title: 'GermanListening.com - Dictation Exercises',
+      url: 'https://germanlistening.com',
+      isDefault: true,
+    },
+    {
+      id: 'default-21',
+      category: 'Schreiben',
+      title: 'Goethe Institut - Writing Samples A2-B2',
+      url: 'https://www.goethe.de/ins/de/de/spr/prf/gzb2/ue9.html',
+      isDefault: true,
+    },
+    {
+      id: 'default-22',
+      category: 'Schreiben',
+      title: 'Lang-8 - Writing Correction Community',
+      url: 'https://lang-8.com',
+      isDefault: true,
+    },
+    {
+      id: 'default-23',
+      category: 'Schreiben',
+      title: 'Journaly - German Writing Practice',
+      url: 'https://journaly.com',
+      isDefault: true,
+    },
+    {
+      id: 'default-24',
+      category: 'Schreiben',
+      title: 'Deutsch Lernen - Writing Exercises',
+      url: 'https://deutsch-lernen.com/schreiben',
+      isDefault: true,
+    },
+    
+    // Grammatik auf Arabisch
+    {
+      id: 'default-25',
+      category: 'Grammatik auf Arabisch',
+      title: 'Deutsch Mit Marwa (YouTube) - Arabic Explanations',
+      url: 'https://www.youtube.com/@DeutschMitMarwa',
+      isDefault: true,
+    },
+    {
+      id: 'default-26',
+      category: 'Grammatik auf Arabisch',
+      title: 'تعلم الألمانية - Arabic German Learning',
+      url: 'https://www.youtube.com/results?search_query=تعلم+الالمانية+بالعربية',
+      isDefault: true,
+    },
+    {
+      id: 'default-27',
+      category: 'Grammatik auf Arabisch',
+      title: 'Goethe Institut Arabic - Grammar PDFs',
+      url: 'https://www.goethe.de/ins/ae/ar/spr/kur/dtz.html',
+      isDefault: true,
+    },
+    {
+      id: 'default-28',
+      category: 'Grammatik auf Arabisch',
+      title: 'German Grammar in Arabic - YouTube Channel',
+      url: 'https://www.youtube.com/results?search_query=قواعد+اللغة+الالمانية+بالعربية',
+      isDefault: true,
+    },
+    {
+      id: 'default-29',
+      category: 'Grammatik auf Arabisch',
+      title: 'Arabic-German Grammar Guide - PDF Resources',
+      url: 'https://www.goethe.de/ins/ae/ar/spr/ueb.html',
+      isDefault: true,
+    },
+    {
+      id: 'default-30',
+      category: 'Grammatik auf Arabisch',
+      title: 'تعلم الألمانية من الصفر - Complete Arabic Guide',
+      url: 'https://www.youtube.com/results?search_query=تعلم+الالمانية+من+الصفر+بالعربية',
       isDefault: true,
     },
   ];
@@ -182,7 +362,21 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
     if (stored) {
       try {
         const parsed = JSON.parse(stored);
-        setState({ ...parsed, isLoaded: true });
+        // Always ensure we have default resources - merge with existing if any
+        const defaultResources = createDefaultResources();
+        const existingResources = parsed.resources || [];
+        
+        // Migrate old category names to new German ones
+        const migratedResources = migrateResourceCategories(existingResources);
+        
+        // Create a map of existing resources by id to avoid duplicates
+        const existingResourceIds = new Set(migratedResources.map((r: Resource) => r.id));
+        
+        // Add default resources that don't already exist
+        const newDefaultResources = defaultResources.filter(r => !existingResourceIds.has(r.id));
+        const allResources = [...migratedResources, ...newDefaultResources];
+        
+        setState({ ...parsed, resources: allResources, isLoaded: true });
       } catch (e) {
         console.error('Failed to parse stored data', e);
         setState({
@@ -211,7 +405,7 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
     }
   }, [state]);
 
-  const setCurrentTab = (tab: 'schedule' | 'vocabulary' | 'resources') => {
+  const setCurrentTab = (tab: 'schedule' | 'vocabulary' | 'lessons' | 'resources') => {
     setState(prev => ({ ...prev, currentTab: tab }));
   };
 

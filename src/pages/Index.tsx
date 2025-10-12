@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { TabNavigation } from '@/components/TabNavigation';
 import { ScheduleTab } from '@/components/schedule/ScheduleTab';
 import { VocabularyTab } from '@/components/vocabulary/VocabularyTab';
+import LessonsTab from '@/components/lessons/LessonsTab';
 import { ResourcesTab } from '@/components/resources/ResourcesTab';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Button } from '@/components/ui/button';
@@ -55,6 +56,7 @@ const AppContent = () => {
       <main className="container mx-auto px-4 py-6">
         {currentTab === 'schedule' && <ScheduleTab />}
         {currentTab === 'vocabulary' && <VocabularyTab />}
+        {currentTab === 'lessons' && <LessonsTab />}
         {currentTab === 'resources' && <ResourcesTab />}
       </main>
       
