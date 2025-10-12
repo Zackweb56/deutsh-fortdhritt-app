@@ -1,5 +1,6 @@
 import { AppProvider, useApp } from '@/contexts/AppContext';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { TabNavigation } from '@/components/TabNavigation';
 import { ScheduleTab } from '@/components/schedule/ScheduleTab';
 import { VocabularyTab } from '@/components/vocabulary/VocabularyTab';
@@ -7,7 +8,7 @@ import { ResourcesTab } from '@/components/resources/ResourcesTab';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Button } from '@/components/ui/button';
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog';
-import { GraduationCap, RefreshCw } from 'lucide-react';
+import { GraduationCap, RefreshCw, Info, Shield } from 'lucide-react';
 
 const AppContent = () => {
   const { currentTab, isLoaded } = useApp();
@@ -73,6 +74,39 @@ const AppContent = () => {
           </div>
         </AlertDialogContent>
       </AlertDialog>
+
+      {/* Footer */}
+      <footer className="mt-12 border-t border-border bg-card/50">
+        <div className="container mx-auto px-4 py-6">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <GraduationCap className="h-4 w-4" />
+              <span>DeutschPath - تعلم الألمانية بنفسك</span>
+            </div>
+            
+            <div className="flex items-center gap-4">
+              <Link 
+                to="/about" 
+                className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <Info className="h-4 w-4" />
+                حول التطبيق
+              </Link>
+              <Link 
+                to="/privacy-policy" 
+                className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <Shield className="h-4 w-4" />
+                سياسة الخصوصية
+              </Link>
+            </div>
+          </div>
+          
+          <div className="mt-4 text-center text-xs text-muted-foreground">
+            <p>تم التطوير بـ ❤️ لمساعدة متعلمي اللغة الألمانية</p>
+          </div>
+        </div>
+      </footer>
 
     </div>
   );
