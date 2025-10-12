@@ -77,38 +77,38 @@ export const ResourcesTab = () => {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 sm:space-y-6 px-2 sm:px-0">
       {/* Header */}
       <div className="text-center space-y-2">
-        <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+        <h1 className="text-2xl sm:text-3xl font-bold text-accent">
           مصادر تعلم الألمانية
         </h1>
-        <p className="text-muted-foreground">
+        <p className="text-sm sm:text-base text-muted-foreground px-2">
           مجموعة شاملة من المصادر لتعلم الألمانية للمتحدثين بالعربية
         </p>
       </div>
 
       {/* Search and Filter */}
-      <Card className="p-4">
-        <div className="flex flex-col sm:flex-row gap-4">
+      <Card className="p-3 sm:p-4">
+        <div className="flex flex-col gap-3 sm:gap-4">
           <div className="flex-1 relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
               placeholder="البحث في المصادر..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10"
+              className="pl-10 text-sm sm:text-base"
             />
           </div>
-          <div className="flex gap-2 flex-wrap">
+          <div className="flex flex-wrap gap-2">
             <Button
               variant={selectedCategory === null ? "default" : "outline"}
               onClick={() => setSelectedCategory(null)}
               size="sm"
-              className="gap-2"
+              className="gap-1 sm:gap-2 text-xs sm:text-sm"
             >
               جميع الفئات
-              <Badge variant="secondary">
+              <Badge variant="secondary" className="text-xs">
                 {resources.length}
               </Badge>
             </Button>
@@ -120,11 +120,12 @@ export const ResourcesTab = () => {
                   variant={selectedCategory === category.id ? "default" : "outline"}
                   onClick={() => setSelectedCategory(category.id)}
                   size="sm"
-                  className="gap-2"
+                  className="gap-1 sm:gap-2 text-xs sm:text-sm"
                 >
-                  <category.icon className="h-4 w-4" />
+                  <category.icon className="h-3 w-3 sm:h-4 sm:w-4" />
+                  <span className="hidden xs:inline sm:hidden">{category.title.split(' ')[0]}</span>
                   <span className="hidden sm:inline">{category.title.split(' ')[0]}</span>
-                  <Badge variant="secondary" className="ml-1">
+                  <Badge variant="secondary" className="text-xs">
                     {categoryResourceCount}
                   </Badge>
                 </Button>
@@ -134,27 +135,47 @@ export const ResourcesTab = () => {
         </div>
       </Card>
 
+      {/* Add Resource Button */}
+      {!isAdding && (
+        <div className="text-center space-y-3 sm:space-y-4">
+          <Button
+            onClick={() => setIsAdding(true)}
+            className="gap-2 bg-accent text-accent-foreground text-sm sm:text-base px-4 sm:px-6"
+          >
+            <Plus className="h-4 w-4" />
+            <span className="hidden xs:inline">إضافة مصدر جديد</span>
+            <span className="xs:hidden">إضافة</span>
+          </Button>
+          
+          {/* Debug info */}
+          <div className="text-xs sm:text-sm text-muted-foreground">
+            إجمالي المصادر: {resources.length} | المصادر المفلترة: {filteredResources.length}
+          </div>
+        </div>
+      )}
+
       {/* Add New Resource */}
       {isAdding && (
-        <Card className="p-4 border-primary">
-          <h3 className="font-semibold mb-4">إضافة مصدر جديد</h3>
-    <div className="space-y-4">
+        <Card className="p-3 sm:p-4 border-primary">
+          <h3 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">إضافة مصدر جديد</h3>
+          <div className="space-y-3 sm:space-y-4">
             <Input
               placeholder="عنوان المصدر"
               value={newTitle}
               onChange={(e) => setNewTitle(e.target.value)}
+              className="text-sm sm:text-base"
             />
             <Input
               placeholder="رابط المصدر (https://...)"
               value={newUrl}
               onChange={(e) => setNewUrl(e.target.value)}
               dir="ltr"
-              className="text-left"
+              className="text-left text-sm sm:text-base"
             />
             <select
               value={newCategory}
               onChange={(e) => setNewCategory(e.target.value)}
-              className="w-full p-2 border border-input rounded-md bg-background"
+              className="w-full p-2 sm:p-3 border border-input rounded-md bg-background text-sm sm:text-base"
             >
               <option value="">اختر الفئة</option>
               {categories.map(category => (
@@ -163,8 +184,8 @@ export const ResourcesTab = () => {
                 </option>
               ))}
             </select>
-            <div className="flex gap-2">
-              <Button onClick={handleAddResource} className="flex-1">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-2">
+              <Button onClick={handleAddResource} className="flex-1 text-sm sm:text-base">
                 إضافة المصدر
               </Button>
               <Button
@@ -175,7 +196,7 @@ export const ResourcesTab = () => {
                   setNewUrl('');
                   setNewCategory('');
                 }}
-                className="flex-1"
+                className="flex-1 text-sm sm:text-base"
               >
                 إلغاء
               </Button>
@@ -185,8 +206,8 @@ export const ResourcesTab = () => {
       )}
 
       {/* Resources by Category - Accordion Style */}
-      <div className="space-y-4">
-        {categories.map(category => {
+    <div className="space-y-4">
+      {categories.map(category => {
           const categoryResources = filteredResources.filter(r => r.category === category.id);
           const isOpen = openAccordions.has(category.id);
           
@@ -195,25 +216,25 @@ export const ResourcesTab = () => {
             return null;
           }
         
-          return (
+        return (
             <Card key={category.id} className="overflow-hidden">
               {/* Accordion Header */}
               <button
                 onClick={() => toggleAccordion(category.id)}
-                className={`w-full p-4 ${category.color} text-white hover:opacity-90 transition-opacity`}
+                className={`w-full p-3 sm:p-4 ${category.color} text-white hover:opacity-90 transition-opacity`}
               >
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <category.icon className="h-6 w-6" />
-                    <div className="text-right">
-                      <h2 className="text-xl font-bold">{category.title}</h2>
-                      <p className="text-sm opacity-90">
+                  <div className="flex items-center gap-2 sm:gap-3 flex-1 min-w-0">
+                    <category.icon className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0" />
+                    <div className="text-right flex-1 min-w-0">
+                      <h2 className="text-lg sm:text-xl font-bold truncate">{category.title}</h2>
+                      <p className="text-xs sm:text-sm opacity-90">
                         {categoryResources.length} مصدر متاح
                       </p>
                     </div>
                   </div>
                   <ChevronDown 
-                    className={`h-5 w-5 transition-transform duration-200 ${
+                    className={`h-4 w-4 sm:h-5 sm:w-5 transition-transform duration-200 flex-shrink-0 ${
                       isOpen ? 'rotate-180' : ''
                     }`} 
                   />
@@ -222,99 +243,83 @@ export const ResourcesTab = () => {
               
               {/* Accordion Content */}
               {isOpen && (
-                <div className="p-4 border-t border-border">
+                <div className="p-3 sm:p-4 border-t border-border">
                   {categoryResources.length > 0 ? (
-                    <div className="grid gap-3">
+                    <div className="space-y-2 sm:space-y-3">
                       {categoryResources.map(resource => (
                         <div
                           key={resource.id}
-                          className="flex items-center justify-between p-4 rounded-lg border border-border hover:border-primary transition-all duration-200 hover:shadow-md"
+                          className="flex flex-col sm:flex-row sm:items-center gap-3 p-3 sm:p-4 rounded-lg border border-border hover:border-primary transition-all duration-200 hover:shadow-md"
                         >
-                          <div className="flex items-center gap-3 flex-1 min-w-0">
-                            <div className={`p-2 rounded-lg ${getCategoryColor(resource.category)} text-white`}>
-                              {React.createElement(getCategoryIcon(resource.category), { className: "h-4 w-4" })}
+                          <div className="flex items-center gap-2 sm:gap-3 flex-1 min-w-0">
+                            <div className={`p-1.5 sm:p-2 rounded-lg ${getCategoryColor(resource.category)} text-white flex-shrink-0`}>
+                              {React.createElement(getCategoryIcon(resource.category), { className: "h-3 w-3 sm:h-4 sm:w-4" })}
                             </div>
                             <div className="flex-1 min-w-0">
                               <a
                                 href={resource.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="block font-medium hover:text-primary transition-colors truncate"
+                                className="block font-medium hover:text-primary transition-colors truncate text-sm sm:text-base"
                               >
                                 {resource.title}
                               </a>
-                              <p className="text-sm text-muted-foreground truncate">
+                              <p className="text-xs sm:text-sm text-muted-foreground truncate mt-1">
                                 {resource.url}
                               </p>
                             </div>
                           </div>
                           
-                          <div className="flex items-center gap-2">
-                            {resource.isDefault && (
-                              <Badge variant="secondary">افتراضي</Badge>
-                            )}
-                            <a
-                              href={resource.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="p-2 hover:bg-accent rounded-lg transition-colors"
-                            >
-                              <ExternalLink className="h-4 w-4" />
-                            </a>
-                            {!resource.isDefault && (
-                              <Button
-                                variant="ghost"
-                                size="sm"
-                                onClick={() => {
-                                  deleteResource(resource.id);
-                                  toast.success('تم حذف المصدر');
-                                }}
-                                className="h-8 w-8 p-0 text-destructive hover:text-destructive"
+                          <div className="flex items-center justify-between sm:justify-end gap-2 sm:gap-2">
+                            <div className="flex items-center gap-2">
+                              {resource.isDefault && (
+                                <Badge variant="secondary" className="text-xs">افتراضي</Badge>
+                              )}
+                              <a
+                                href={resource.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="p-1.5 sm:p-2 hover:bg-accent rounded-lg transition-colors"
                               >
-                                <Trash2 className="h-4 w-4" />
-                              </Button>
-                            )}
+                                <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4" />
+                              </a>
+                              {!resource.isDefault && (
+                                <Button
+                                  variant="ghost"
+                                  size="sm"
+                                  onClick={() => {
+                                    deleteResource(resource.id);
+                                    toast.success('تم حذف المصدر');
+                                  }}
+                                  className="h-7 w-7 sm:h-8 sm:w-8 p-0 text-destructive hover:text-destructive"
+                                >
+                                  <Trash2 className="h-3 w-3 sm:h-4 sm:w-4" />
+                                </Button>
+                              )}
+                            </div>
                           </div>
                         </div>
                       ))}
                     </div>
                   ) : (
-                    <div className="text-center py-8 text-muted-foreground">
-                      <category.icon className="h-12 w-12 mx-auto mb-2 opacity-50" />
-                      <p>لا توجد مصادر في هذه الفئة</p>
+                    <div className="text-center py-6 sm:py-8 text-muted-foreground">
+                      <category.icon className="h-10 w-10 sm:h-12 sm:w-12 mx-auto mb-2 opacity-50" />
+                      <p className="text-sm sm:text-base">لا توجد مصادر في هذه الفئة</p>
                     </div>
                   )}
                 </div>
               )}
             </Card>
-          );
-        })}
+        );
+      })}
       </div>
-
-      {/* Add Resource Button */}
-      {!isAdding && (
-        <div className="text-center space-y-4">
-          <Button
-            onClick={() => setIsAdding(true)}
-            className="gap-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
-          >
-            <Plus className="h-4 w-4" />
-            إضافة مصدر جديد
-          </Button>
-          
-          {/* Debug info */}
-          <div className="text-sm text-muted-foreground">
-            إجمالي المصادر: {resources.length} | المصادر المفلترة: {filteredResources.length}
-          </div>
-        </div>
-      )}
 
       {/* Empty State */}
       {filteredResources.length === 0 && (
-        <Card className="p-8 text-center">
-          <Globe className="h-16 w-16 mx-auto mb-4 text-muted-foreground" />
-          <h3 className="text-lg font-semibold mb-2">لا توجد مصادر مطابقة</h3>
-          <p className="text-muted-foreground mb-4">
+        <Card className="p-6 sm:p-8 text-center">
+          <Globe className="h-12 w-12 sm:h-16 sm:w-16 mx-auto mb-3 sm:mb-4 text-muted-foreground" />
+          <h3 className="text-base sm:text-lg font-semibold mb-2">لا توجد مصادر مطابقة</h3>
+          <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4 px-2">
             جرب تغيير كلمات البحث أو الفئة المحددة
           </p>
           <Button
@@ -323,6 +328,7 @@ export const ResourcesTab = () => {
               setSelectedCategory(null);
             }}
             variant="outline"
+            className="text-sm sm:text-base"
           >
             مسح الفلاتر
           </Button>
