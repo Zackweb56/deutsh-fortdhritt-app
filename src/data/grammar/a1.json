@@ -1,0 +1,1488 @@
+{
+    "A1": {
+      "grammar": [
+        {
+          "title": "الضمائر الشخصية - Personalpronomen",
+          "explanation": "الضمائر الشخصية في الألمانية تُستخدم للإشارة إلى الأشخاص والأشياء. هناك ضمائر للمفرد والجمع، ولكل منها استخدام خاص في الجملة.",
+          "table": {
+            "singular": {
+              "ich": "أنا",
+              "du": "أنت (غير رسمي)",
+              "er": "هو",
+              "sie": "هي",
+              "es": "هو/هي (لغير العاقل)"
+            },
+            "plural": {
+              "wir": "نحن",
+              "ihr": "أنتم (غير رسمي)",
+              "sie": "هم/هن",
+              "Sie": "أنت/أنتم (رسمي)"
+            }
+          },
+          "examples": [
+            {
+              "de": "Ich bin Student.",
+              "ar": "أنا طالب.",
+              "pron": "إش بين شتودِنت"
+            },
+            {
+              "de": "Du bist nett.",
+              "ar": "أنت لطيف.",
+              "pron": "دو بيست نِت"
+            },
+            {
+              "de": "Wir lernen Deutsch.",
+              "ar": "نحن نتعلم الألمانية.",
+              "pron": "فير لِرنِن دُويتش"
+            }
+          ]
+        },
+        {
+          "title": "أدوات التعريف - Artikel (der, die, das)",
+          "explanation": "كل اسم في الألمانية له أداة تعريف تحدد جنسه: der للمذكر، die للمؤنث، das للمحايد. أداة الجمع هي die لجميع الأجناس.",
+          "table": {
+            "bestimmte_Artikel": {
+              "maskulin": "der",
+              "feminin": "die",
+              "neutral": "das",
+              "plural": "die"
+            },
+            "unbestimmte_Artikel": {
+              "maskulin": "ein",
+              "feminin": "eine",
+              "neutral": "ein",
+              "plural": "-"
+            }
+          },
+          "examples": [
+            {
+              "de": "Der Mann ist groß.",
+              "ar": "الرجل طويل.",
+              "pron": "دير مان إست غروس"
+            },
+            {
+              "de": "Die Frau ist nett.",
+              "ar": "المرأة لطيفة.",
+              "pron": "دي فراو إست نِت"
+            },
+            {
+              "de": "Das Kind spielt.",
+              "ar": "الطفل يلعب.",
+              "pron": "داس كيند شبيلت"
+            },
+            {
+              "de": "Ein Hund bellt.",
+              "ar": "كلب ينبح.",
+              "pron": "آين هوند بِلت"
+            }
+          ]
+        },
+        {
+          "title": "تصريف الأفعال في المضارع - Präsens Konjugation",
+          "explanation": "في المضارع، تُصرّف الأفعال حسب الضمير. تأخذ كل ضمير نهاية خاصة تُضاف إلى جذر الفعل. الأفعال المنتظمة تتبع قاعدة ثابتة، أما غير المنتظمة فتتغير أحيانًا في حروفها الأصلية.",
+          "table": {
+            "Endungen": {
+              "ich": "-e",
+              "du": "-st",
+              "er/sie/es": "-t",
+              "wir": "-en",
+              "ihr": "-t",
+              "sie/Sie": "-en"
+            }
+          },
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch.",
+              "ar": "أنا أتعلم الألمانية.",
+              "pron": "إش لِرنِه دُويتش"
+            },
+            {
+              "de": "Du arbeitest hier.",
+              "ar": "أنت تعمل هنا.",
+              "pron": "دو أربايتِست هير"
+            },
+            {
+              "de": "Er spielt Fußball.",
+              "ar": "هو يلعب كرة القدم.",
+              "pron": "إر شبيلت فوسبال"
+            }
+          ]
+        },
+        {
+          "title": "تكوين السؤال - Fragen bilden",
+          "explanation": "لتكوين سؤال في الألمانية، نضع الفعل في بداية الجملة متبوعًا بالفاعل. يمكن أيضًا استخدام أدوات استفهام مثل: was (ماذا), wer (من), wo (أين), wann (متى), wie (كيف), warum (لماذا).",
+          "examples": [
+            {
+              "de": "Kommst du morgen?",
+              "ar": "هل ستأتي غدًا؟",
+              "pron": "كومست دو مورغِن؟"
+            },
+            {
+              "de": "Was machst du?",
+              "ar": "ماذا تفعل؟",
+              "pron": "فاس ماخست دو؟"
+            },
+            {
+              "de": "Wo wohnst du?",
+              "ar": "أين تسكن؟",
+              "pron": "فو فونست دو؟"
+            },
+            {
+              "de": "Wie heißt du?",
+              "ar": "ما اسمك؟",
+              "pron": "في هايست دو؟"
+            }
+          ]
+        },
+        {
+          "title": "ترتيب الكلمات في الجملة - Satzbau",
+          "explanation": "في الجملة الألمانية الخبرية، يأتي الفعل في الموضع الثاني. الفاعل عادة في الموضع الأول أو الثالث. في الأسئلة، يأتي الفعل أولاً.",
+          "examples": [
+            {
+              "de": "Ich gehe heute ins Kino.",
+              "ar": "أنا أذهب اليوم إلى السينما.",
+              "pron": "إش غيه هويتِه إنس كينو"
+            },
+            {
+              "de": "Heute gehe ich ins Kino.",
+              "ar": "اليوم أذهب إلى السينما.",
+              "pron": "هويتِه غيه إش إنس كينو"
+            },
+            {
+              "de": "Er trinkt am Morgen Kaffee.",
+              "ar": "هو يشرب القهوة في الصباح.",
+              "pron": "إر ترينكت آم مورغِن كافِه"
+            }
+          ]
+        },
+        {
+          "title": "النفي - Negation (nicht und kein)",
+          "explanation": "للنفي في الألمانية نستخدم 'nicht' لنفي الأفعال والصفات، و'kein' لنفي الأسماء النكرة. kein تأخذ نفس نهايات أداة النكرة ein.",
+          "table": {
+            "kein": {
+              "maskulin": "kein",
+              "feminin": "keine",
+              "neutral": "kein",
+              "plural": "keine"
+            }
+          },
+          "examples": [
+            {
+              "de": "Ich verstehe das nicht.",
+              "ar": "أنا لا أفهم هذا.",
+              "pron": "إش فِرشتيه داس نيشت"
+            },
+            {
+              "de": "Ich habe kein Auto.",
+              "ar": "ليس لدي سيارة.",
+              "pron": "إش هابِه كاين آوتو"
+            },
+            {
+              "de": "Das ist nicht gut.",
+              "ar": "هذا ليس جيدًا.",
+              "pron": "داس إست نيشت غوت"
+            },
+            {
+              "de": "Ich habe keine Zeit.",
+              "ar": "ليس لدي وقت.",
+              "pron": "إش هابِه كاينِه تسايت"
+            }
+          ]
+        },
+        {
+          "title": "ضمائر الملكية - Possessivpronomen",
+          "explanation": "ضمائر الملكية تُستخدم للتعبير عن الملكية. تتغير حسب الفاعل المالك وجنس الاسم المملوك.",
+          "table": {
+            "Possessivpronomen": {
+              "ich": "mein",
+              "du": "dein",
+              "er": "sein",
+              "sie": "ihr",
+              "es": "sein",
+              "wir": "unser",
+              "ihr": "euer",
+              "sie/Sie": "ihr/Ihr"
+            }
+          },
+          "examples": [
+            {
+              "de": "Das ist mein Buch.",
+              "ar": "هذا كتابي.",
+              "pron": "داس إست ماين بوخ"
+            },
+            {
+              "de": "Deine Tasche ist schön.",
+              "ar": "حقيبتك جميلة.",
+              "pron": "داينِه تاشِه إست شون"
+            },
+            {
+              "de": "Sein Auto ist neu.",
+              "ar": "سيارته جديدة.",
+              "pron": "زاين آوتو إست نُوي"
+            },
+            {
+              "de": "Unsere Familie ist groß.",
+              "ar": "عائلتنا كبيرة.",
+              "pron": "أونزِرِه فاميليِه إست غروس"
+            }
+          ]
+        },
+        {
+          "title": "الأعداد - Zahlen (0-100)",
+          "explanation": "الأعداد في الألمانية من 0 إلى 12 لها أسماء خاصة. من 13 إلى 19 نضيف zehn. من 21 فما فوق نبدأ بالآحاد ثم العشرات متصلة بـ und.",
+          "table": {
+            "Grundzahlen": {
+              "0": "null",
+              "1": "eins",
+              "2": "zwei",
+              "3": "drei",
+              "10": "zehn",
+              "20": "zwanzig",
+              "21": "einundzwanzig",
+              "100": "hundert"
+            }
+          },
+          "examples": [
+            {
+              "de": "Ich bin dreißig Jahre alt.",
+              "ar": "عمري ثلاثون سنة.",
+              "pron": "إش بين درايسيش يارِه ألت"
+            },
+            {
+              "de": "Das kostet fünfzehn Euro.",
+              "ar": "هذا يكلف خمسة عشر يورو.",
+              "pron": "داس كوستِت فونفتسين أويرو"
+            },
+            {
+              "de": "Meine Telefonnummer ist vier fünf sechs.",
+              "ar": "رقم هاتفي هو أربعة خمسة ستة.",
+              "pron": "ماينِه تِليفون نومِر إست فير فونف زِكس"
+            }
+          ]
+        }
+      ],
+      "verbs": [
+        {
+          "verb": "sein",
+          "meaning": "يكون",
+          "type": "غير منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "bin",
+              "du": "bist",
+              "er/sie/es": "ist",
+              "wir": "sind",
+              "ihr": "seid",
+              "sie/Sie": "sind"
+            },
+            "Perfekt": {
+              "auxiliary": "sein",
+              "participle": "gewesen",
+              "example": {
+                "de": "Ich bin in Berlin gewesen.",
+                "ar": "لقد كنت في برلين.",
+                "pron": "إش بين إن بِرلين غِفيزِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Ich bin Lehrer.",
+              "ar": "أنا معلم.",
+              "pron": "إش بين ليرِر"
+            },
+            {
+              "de": "Du bist müde.",
+              "ar": "أنت متعب.",
+              "pron": "دو بيست مودِه"
+            },
+            {
+              "de": "Er ist aus Deutschland.",
+              "ar": "هو من ألمانيا.",
+              "pron": "إر إست آوس دُويتشلاند"
+            }
+          ]
+        },
+        {
+          "verb": "haben",
+          "meaning": "يملك / لديه",
+          "type": "غير منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "habe",
+              "du": "hast",
+              "er/sie/es": "hat",
+              "wir": "haben",
+              "ihr": "habt",
+              "sie/Sie": "haben"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "gehabt",
+              "example": {
+                "de": "Ich habe ein Auto gehabt.",
+                "ar": "لقد كان لدي سيارة.",
+                "pron": "إش هابِه آين آوتو غِهابت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Ich habe ein Auto.",
+              "ar": "أنا أملك سيارة.",
+              "pron": "إش هابِه آين آوتو"
+            },
+            {
+              "de": "Hast du Zeit?",
+              "ar": "هل لديك وقت؟",
+              "pron": "هاست دو تسايت؟"
+            },
+            {
+              "de": "Sie hat zwei Kinder.",
+              "ar": "لديها طفلان.",
+              "pron": "زي هات تسفاي كيندِر"
+            }
+          ]
+        },
+        {
+          "verb": "gehen",
+          "meaning": "يذهب / يمشي",
+          "type": "غير منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "gehe",
+              "du": "gehst",
+              "er/sie/es": "geht",
+              "wir": "gehen",
+              "ihr": "geht",
+              "sie/Sie": "gehen"
+            },
+            "Perfekt": {
+              "auxiliary": "sein",
+              "participle": "gegangen",
+              "example": {
+                "de": "Ich bin ins Kino gegangen.",
+                "ar": "لقد ذهبت إلى السينما.",
+                "pron": "إش بين إنس كينو غِغانغِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Ich gehe zur Schule.",
+              "ar": "أنا أذهب إلى المدرسة.",
+              "pron": "إش غيه تسور شولِه"
+            },
+            {
+              "de": "Gehst du nach Hause?",
+              "ar": "هل تذهب إلى المنزل؟",
+              "pron": "غيست دو ناخ هاوزِه؟"
+            },
+            {
+              "de": "Wir gehen spazieren.",
+              "ar": "نحن نذهب للتنزه.",
+              "pron": "فير غيهِن شباتسيرِن"
+            }
+          ]
+        },
+        {
+          "verb": "kommen",
+          "meaning": "يأتي",
+          "type": "غير منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "komme",
+              "du": "kommst",
+              "er/sie/es": "kommt",
+              "wir": "kommen",
+              "ihr": "kommt",
+              "sie/Sie": "kommen"
+            },
+            "Perfekt": {
+              "auxiliary": "sein",
+              "participle": "gekommen",
+              "example": {
+                "de": "Ich bin gestern gekommen.",
+                "ar": "لقد أتيت أمس.",
+                "pron": "إش بين غِسترِن غِكومِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Ich komme aus Marokko.",
+              "ar": "أنا آتي من المغرب.",
+              "pron": "إش كومِه آوس ماروكو"
+            },
+            {
+              "de": "Kommst du zur Party?",
+              "ar": "هل ستأتي للحفلة؟",
+              "pron": "كومست دو تسور بارتي؟"
+            },
+            {
+              "de": "Er kommt morgen.",
+              "ar": "هو سيأتي غدًا.",
+              "pron": "إر كومت مورغِن"
+            }
+          ]
+        },
+        {
+          "verb": "wohnen",
+          "meaning": "يسكن",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "wohne",
+              "du": "wohnst",
+              "er/sie/es": "wohnt",
+              "wir": "wohnen",
+              "ihr": "wohnt",
+              "sie/Sie": "wohnen"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "gewohnt",
+              "example": {
+                "de": "Ich habe in Berlin gewohnt.",
+                "ar": "لقد سكنت في برلين.",
+                "pron": "إش هابِه إن بِرلين غِفونت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Ich wohne in Marrakesch.",
+              "ar": "أنا أسكن في مراكش.",
+              "pron": "إش فونِه إن ماراكِش"
+            },
+            {
+              "de": "Wo wohnst du?",
+              "ar": "أين تسكن؟",
+              "pron": "فو فونست دو؟"
+            },
+            {
+              "de": "Sie wohnt in der Stadt.",
+              "ar": "هي تسكن في المدينة.",
+              "pron": "زي فونت إن دير شتات"
+            }
+          ]
+        },
+        {
+          "verb": "heißen",
+          "meaning": "يُدعى / يُسمى",
+          "type": "غير منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "heiße",
+              "du": "heißt",
+              "er/sie/es": "heißt",
+              "wir": "heißen",
+              "ihr": "heißt",
+              "sie/Sie": "heißen"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "geheißen",
+              "example": {
+                "de": "Ich habe früher anders geheißen.",
+                "ar": "كان اسمي مختلفًا سابقًا.",
+                "pron": "إش هابِه فروِر أندِرس غِهايسِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Ich heiße Ahmed.",
+              "ar": "اسمي أحمد.",
+              "pron": "إش هايسِه أحمِد"
+            },
+            {
+              "de": "Wie heißt du?",
+              "ar": "ما اسمك؟",
+              "pron": "في هايست دو؟"
+            },
+            {
+              "de": "Er heißt Thomas.",
+              "ar": "اسمه توماس.",
+              "pron": "إر هايست توماس"
+            }
+          ]
+        },
+        {
+          "verb": "machen",
+          "meaning": "يفعل / يصنع",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "mache",
+              "du": "machst",
+              "er/sie/es": "macht",
+              "wir": "machen",
+              "ihr": "macht",
+              "sie/Sie": "machen"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "gemacht",
+              "example": {
+                "de": "Ich habe die Hausaufgaben gemacht.",
+                "ar": "لقد أنجزت الواجبات المنزلية.",
+                "pron": "إش هابِه دي هاوس آوفغابِن غِماخت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Was machst du?",
+              "ar": "ماذا تفعل؟",
+              "pron": "فاس ماخست دو؟"
+            },
+            {
+              "de": "Ich mache Sport.",
+              "ar": "أنا أمارس الرياضة.",
+              "pron": "إش ماخِه شبورت"
+            },
+            {
+              "de": "Sie macht Frühstück.",
+              "ar": "هي تحضر الفطور.",
+              "pron": "زي ماخت فروشتوك"
+            }
+          ]
+        },
+        {
+          "verb": "arbeiten",
+          "meaning": "يعمل",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "arbeite",
+              "du": "arbeitest",
+              "er/sie/es": "arbeitet",
+              "wir": "arbeiten",
+              "ihr": "arbeitet",
+              "sie/Sie": "arbeiten"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "gearbeitet",
+              "example": {
+                "de": "Ich habe heute viel gearbeitet.",
+                "ar": "لقد عملت كثيرًا اليوم.",
+                "pron": "إش هابِه هويتِه فيل غِأربايتِت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Ich arbeite bei Siemens.",
+              "ar": "أنا أعمل في سيمنس.",
+              "pron": "إش أربايتِه باي زيمِنس"
+            },
+            {
+              "de": "Wo arbeitest du?",
+              "ar": "أين تعمل؟",
+              "pron": "فو أربايتِست دو؟"
+            },
+            {
+              "de": "Er arbeitet im Büro.",
+              "ar": "هو يعمل في المكتب.",
+              "pron": "إر أربايتِت إم بورو"
+            }
+          ]
+        },
+        {
+          "verb": "lernen",
+          "meaning": "يتعلم / يدرس",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "lerne",
+              "du": "lernst",
+              "er/sie/es": "lernt",
+              "wir": "lernen",
+              "ihr": "lernt",
+              "sie/Sie": "lernen"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "gelernt",
+              "example": {
+                "de": "Ich habe Deutsch gelernt.",
+                "ar": "لقد تعلمت الألمانية.",
+                "pron": "إش هابِه دُويتش غِلِرنت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch.",
+              "ar": "أنا أتعلم الألمانية.",
+              "pron": "إش لِرنِه دُويتش"
+            },
+            {
+              "de": "Lernst du für die Prüfung?",
+              "ar": "هل تدرس للامتحان؟",
+              "pron": "لِرنست دو فور دي بروفونغ؟"
+            },
+            {
+              "de": "Wir lernen Vokabeln.",
+              "ar": "نحن نتعلم المفردات.",
+              "pron": "فير لِرنِن فوكابِلن"
+            }
+          ]
+        },
+        {
+          "verb": "spielen",
+          "meaning": "يلعب",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "spiele",
+              "du": "spielst",
+              "er/sie/es": "spielt",
+              "wir": "spielen",
+              "ihr": "spielt",
+              "sie/Sie": "spielen"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "gespielt",
+              "example": {
+                "de": "Ich habe Fußball gespielt.",
+                "ar": "لقد لعبت كرة القدم.",
+                "pron": "إش هابِه فوسبال غِشبيلت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Ich spiele Tennis.",
+              "ar": "أنا ألعب التنس.",
+              "pron": "إش شبيلِه تِنيس"
+            },
+            {
+              "de": "Die Kinder spielen im Park.",
+              "ar": "الأطفال يلعبون في الحديقة.",
+              "pron": "دي كيندِر شبيلِن إم بارك"
+            },
+            {
+              "de": "Spielst du Gitarre?",
+              "ar": "هل تعزف الجيتار؟",
+              "pron": "شبيلست دو غيتارِه؟"
+            }
+          ]
+        },
+        {
+          "verb": "essen",
+          "meaning": "يأكل",
+          "type": "غير منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "esse",
+              "du": "isst",
+              "er/sie/es": "isst",
+              "wir": "essen",
+              "ihr": "esst",
+              "sie/Sie": "essen"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "gegessen",
+              "example": {
+                "de": "Ich habe Pizza gegessen.",
+                "ar": "لقد أكلت بيتزا.",
+                "pron": "إش هابِه بيتسا غِغِسِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Ich esse gern Obst.",
+              "ar": "أنا أحب أكل الفواكه.",
+              "pron": "إش إسِه غِرن أوبست"
+            },
+            {
+              "de": "Was isst du zum Frühstück?",
+              "ar": "ماذا تأكل على الفطور؟",
+              "pron": "فاس إست دو تسوم فروشتوك؟"
+            },
+            {
+              "de": "Er isst im Restaurant.",
+              "ar": "هو يأكل في المطعم.",
+              "pron": "إر إست إم رِستورانت"
+            }
+          ]
+        },
+        {
+          "verb": "trinken",
+          "meaning": "يشرب",
+          "type": "غير منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "trinke",
+              "du": "trinkst",
+              "er/sie/es": "trinkt",
+              "wir": "trinken",
+              "ihr": "trinkt",
+              "sie/Sie": "trinken"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "getrunken",
+              "example": {
+                "de": "Ich habe Wasser getrunken.",
+                "ar": "لقد شربت ماء.",
+                "pron": "إش هابِه فاسِر غِترونكِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee.",
+              "ar": "أنا أشرب القهوة.",
+              "pron": "إش ترينكِه كافِه"
+            },
+            {
+              "de": "Trinkst du Tee?",
+              "ar": "هل تشرب الشاي؟",
+              "pron": "ترينكست دو تِه؟"
+            },
+            {
+              "de": "Sie trinkt Wasser.",
+              "ar": "هي تشرب الماء.",
+              "pron": "زي trinkt فاسِر"
+          }
+        ]
+      },
+      {
+        "verb": "sehen",
+        "meaning": "يرى / يشاهد",
+        "type": "غير منتظم",
+        "tenses": {
+          "Präsens": {
+            "ich": "sehe",
+            "du": "siehst",
+            "er/sie/es": "sieht",
+            "wir": "sehen",
+            "ihr": "seht",
+            "sie/Sie": "sehen"
+          },
+          "Perfekt": {
+            "auxiliary": "haben",
+            "participle": "gesehen",
+            "example": {
+              "de": "Ich habe einen Film gesehen.",
+              "ar": "لقد شاهدت فيلمًا.",
+              "pron": "إش هابِه آينِن فيلم غِزيهِن"
+            }
+          }
+        },
+        "examples": [
+          {
+            "de": "Ich sehe fern.",
+            "ar": "أنا أشاهد التلفاز.",
+            "pron": "إش زيه فِرن"
+          },
+          {
+            "de": "Siehst du das Auto?",
+            "ar": "هل ترى السيارة؟",
+            "pron": "زيست دو داس آوتو؟"
+          },
+          {
+            "de": "Wir sehen einen Film.",
+            "ar": "نحن نشاهد فيلمًا.",
+            "pron": "فير زيهِن آينِن فيلم"
+          }
+        ]
+      },
+      {
+        "verb": "hören",
+        "meaning": "يسمع",
+        "type": "منتظم",
+        "tenses": {
+          "Präsens": {
+            "ich": "höre",
+            "du": "hörst",
+            "er/sie/es": "hört",
+            "wir": "hören",
+            "ihr": "hört",
+            "sie/Sie": "hören"
+          },
+          "Perfekt": {
+            "auxiliary": "haben",
+            "participle": "gehört",
+            "example": {
+              "de": "Ich habe Musik gehört.",
+              "ar": "لقد استمعت للموسيقى.",
+              "pron": "إش هابِه موزيك غِهورت"
+            }
+          }
+        },
+        "examples": [
+          {
+            "de": "Ich höre Musik.",
+            "ar": "أنا أستمع للموسيقى.",
+            "pron": "إش هورِه موزيك"
+          },
+          {
+            "de": "Hörst du Radio?",
+            "ar": "هل تستمع للراديو؟",
+            "pron": "هورست دو راديو؟"
+          },
+          {
+            "de": "Er hört einen Podcast.",
+            "ar": "هو يستمع لبودكاست.",
+            "pron": "إر هورت آينِن بودكاست"
+          }
+        ]
+      },
+      {
+        "verb": "fahren",
+        "meaning": "يقود / يسافر",
+        "type": "غير منتظم",
+        "tenses": {
+          "Präsens": {
+            "ich": "fahre",
+            "du": "fährst",
+            "er/sie/es": "fährt",
+            "wir": "fahren",
+            "ihr": "fahrt",
+            "sie/Sie": "fahren"
+          },
+          "Perfekt": {
+            "auxiliary": "sein",
+            "participle": "gefahren",
+            "example": {
+              "de": "Ich bin mit dem Bus gefahren.",
+              "ar": "لقد سافرت بالحافلة.",
+              "pron": "إش بين ميت ديم بوس غِفارِن"
+            }
+          }
+        },
+        "examples": [
+          {
+            "de": "Ich fahre Auto.",
+            "ar": "أنا أقود السيارة.",
+            "pron": "إش فارِه آوتو"
+          },
+          {
+            "de": "Fährst du mit dem Zug?",
+            "ar": "هل تسافر بالقطار؟",
+            "pron": "فيرست دو ميت ديم تسوغ؟"
+          },
+          {
+            "de": "Sie fährt nach Berlin.",
+            "ar": "هي تسافر إلى برلين.",
+            "pron": "زي فيرت ناخ بِرلين"
+          }
+        ]
+      },
+      {
+        "verb": "sprechen",
+        "meaning": "يتكلم",
+        "type": "غير منتظم",
+        "tenses": {
+          "Präsens": {
+            "ich": "spreche",
+            "du": "sprichst",
+            "er/sie/es": "spricht",
+            "wir": "sprechen",
+            "ihr": "sprecht",
+            "sie/Sie": "sprechen"
+          },
+          "Perfekt": {
+            "auxiliary": "haben",
+            "participle": "gesprochen",
+            "example": {
+              "de": "Ich habe mit ihm gesprochen.",
+              "ar": "لقد تحدثت معه.",
+              "pron": "إش هابِه ميت إهم غِشبروخِن"
+            }
+          }
+        },
+        "examples": [
+          {
+            "de": "Ich spreche Deutsch.",
+            "ar": "أنا أتحدث الألمانية.",
+            "pron": "إش شبرِخِه دُويتش"
+          },
+          {
+            "de": "Sprichst du Arabisch?",
+            "ar": "هل تتحدث العربية؟",
+            "pron": "شبريخست دو أرابيش؟"
+          },
+          {
+            "de": "Er spricht sehr schnell.",
+            "ar": "هو يتحدث بسرعة كبيرة.",
+            "pron": "إر شبريخت زِير شنِل"
+          }
+        ]
+      },
+      {
+        "verb": "lesen",
+        "meaning": "يقرأ",
+        "type": "غير منتظم",
+        "tenses": {
+          "Präsens": {
+            "ich": "lese",
+            "du": "liest",
+            "er/sie/es": "liest",
+            "wir": "lesen",
+            "ihr": "lest",
+            "sie/Sie": "lesen"
+          },
+          "Perfekt": {
+            "auxiliary": "haben",
+            "participle": "gelesen",
+            "example": {
+              "de": "Ich habe ein Buch gelesen.",
+              "ar": "لقد قرأت كتابًا.",
+              "pron": "إش هابِه آين بوخ غِليزِن"
+            }
+          }
+        },
+        "examples": [
+          {
+            "de": "Ich lese gern Bücher.",
+            "ar": "أنا أحب قراءة الكتب.",
+            "pron": "إش ليزِه غِرن بوخِر"
+          },
+          {
+            "de": "Liest du die Zeitung?",
+            "ar": "هل تقرأ الجريدة؟",
+            "pron": "ليست دو دي تسايتونغ؟"
+          },
+          {
+            "de": "Sie liest einen Roman.",
+            "ar": "هي تقرأ رواية.",
+            "pron": "زي ليست آينِن رومان"
+          }
+        ]
+      },
+      {
+        "verb": "schreiben",
+        "meaning": "يكتب",
+        "type": "غير منتظم",
+        "tenses": {
+          "Präsens": {
+            "ich": "schreibe",
+            "du": "schreibst",
+            "er/sie/es": "schreibt",
+            "wir": "schreiben",
+            "ihr": "schreibt",
+            "sie/Sie": "schreiben"
+          },
+          "Perfekt": {
+            "auxiliary": "haben",
+            "participle": "geschrieben",
+            "example": {
+              "de": "Ich habe einen Brief geschrieben.",
+              "ar": "لقد كتبت رسالة.",
+              "pron": "إش هابِه آينِن بريف غِشريبِن"
+            }
+          }
+        },
+        "examples": [
+          {
+            "de": "Ich schreibe eine E-Mail.",
+            "ar": "أنا أكتب بريدًا إلكترونيًا.",
+            "pron": "إش شرايبِه آينِه إي-مِيل"
+          },
+          {
+            "de": "Schreibst du einen Text?",
+            "ar": "هل تكتب نصًا؟",
+            "pron": "شرايبست دو آينِن تِكست؟"
+          },
+          {
+            "de": "Er schreibt einen Artikel.",
+            "ar": "هو يكتب مقالًا.",
+            "pron": "إر شرايبت آينِن أرتيكِل"
+          }
+        ]
+      },
+      {
+        "verb": "verstehen",
+        "meaning": "يفهم",
+        "type": "غير منتظم",
+        "tenses": {
+          "Präsens": {
+            "ich": "verstehe",
+            "du": "verstehst",
+            "er/sie/es": "versteht",
+            "wir": "verstehen",
+            "ihr": "versteht",
+            "sie/Sie": "verstehen"
+          },
+          "Perfekt": {
+            "auxiliary": "haben",
+            "participle": "verstanden",
+            "example": {
+              "de": "Ich habe die Frage verstanden.",
+              "ar": "لقد فهمت السؤال.",
+              "pron": "إش هابِه دي فراغِه فِرشتاندِن"
+            }
+          }
+        },
+        "examples": [
+          {
+            "de": "Ich verstehe Deutsch.",
+            "ar": "أنا أفهم الألمانية.",
+            "pron": "إش فِرشتيه دُويتش"
+          },
+          {
+            "de": "Verstehst du mich?",
+            "ar": "هل تفهمني؟",
+            "pron": "فِرشتيست دو ميش؟"
+          },
+          {
+            "de": "Sie versteht die Aufgabe.",
+            "ar": "هي تفهم المهمة.",
+            "pron": "زي فِرشتيت دي آوفغابِه"
+          }
+        ]
+      },
+      {
+        "verb": "kaufen",
+        "meaning": "يشتري",
+        "type": "منتظم",
+        "tenses": {
+          "Präsens": {
+            "ich": "kaufe",
+            "du": "kaufst",
+            "er/sie/es": "kauft",
+            "wir": "kaufen",
+            "ihr": "kauft",
+            "sie/Sie": "kaufen"
+          },
+          "Perfekt": {
+            "auxiliary": "haben",
+            "participle": "gekauft",
+            "example": {
+              "de": "Ich habe Brot gekauft.",
+              "ar": "لقد اشتريت خبزًا.",
+              "pron": "إش هابِه بروت غِكاوفت"
+            }
+          }
+        },
+        "examples": [
+          {
+            "de": "Ich kaufe Obst.",
+            "ar": "أنا أشتري الفواكه.",
+            "pron": "إش كاوفِه أوبست"
+          },
+          {
+            "de": "Kaufst du ein Auto?",
+            "ar": "هل تشتري سيارة؟",
+            "pron": "كاوفست دو آين آوتو؟"
+          },
+          {
+            "de": "Wir kaufen im Supermarkt.",
+            "ar": "نحن نشتري من السوبرماركت.",
+            "pron": "فير كاوفِن إم زوبِرماركت"
+          }
+        ]
+      },
+      {
+        "verb": "nehmen",
+        "meaning": "يأخذ",
+        "type": "غير منتظم",
+        "tenses": {
+          "Präsens": {
+            "ich": "nehme",
+            "du": "nimmst",
+            "er/sie/es": "nimmt",
+            "wir": "nehmen",
+            "ihr": "nehmt",
+            "sie/Sie": "nehmen"
+          },
+          "Perfekt": {
+            "auxiliary": "haben",
+            "participle": "genommen",
+            "example": {
+              "de": "Ich habe den Bus genommen.",
+              "ar": "لقد أخذت الحافلة.",
+              "pron": "إش هابِه دِن بوس غِنومِن"
+            }
+          }
+        },
+        "examples": [
+          {
+            "de": "Ich nehme den Zug.",
+            "ar": "أنا آخذ القطار.",
+            "pron": "إش نيمِه دِن تسوغ"
+          },
+          {
+            "de": "Nimmst du Zucker?",
+            "ar": "هل تأخذ سكرًا؟",
+            "pron": "نيمست دو تسوكِر؟"
+          },
+          {
+            "de": "Er nimmt ein Taxi.",
+            "ar": "هو يأخذ تاكسي.",
+            "pron": "إر نيمت آين تاكسي"
+          }
+        ]
+      },
+      {
+        "verb": "geben",
+        "meaning": "يعطي",
+        "type": "غير منتظم",
+        "tenses": {
+          "Präsens": {
+            "ich": "gebe",
+            "du": "gibst",
+            "er/sie/es": "gibt",
+            "wir": "geben",
+            "ihr": "gebt",
+            "sie/Sie": "geben"
+          },
+          "Perfekt": {
+            "auxiliary": "haben",
+            "participle": "gegeben",
+            "example": {
+              "de": "Ich habe ihm das Buch gegeben.",
+              "ar": "لقد أعطيته الكتاب.",
+              "pron": "إش هابِه إهم داس بوخ غِغيبِن"
+            }
+          }
+        },
+        "examples": [
+          {
+            "de": "Ich gebe dir das Geld.",
+            "ar": "أنا أعطيك المال.",
+            "pron": "إش غيبِه دير داس غِلت"
+          },
+          {
+            "de": "Gibst du mir den Stift?",
+            "ar": "هل تعطيني القلم؟",
+            "pron": "غيبست دو مير دِن شتيفت؟"
+          },
+          {
+            "de": "Es gibt viele Bücher hier.",
+            "ar": "يوجد الكثير من الكتب هنا.",
+            "pron": "إس غيبت فيلِه بوخِر هير"
+          }
+        ]
+      },
+      {
+        "verb": "möchten",
+        "meaning": "يريد / يود",
+        "type": "فعل مساعد",
+        "tenses": {
+          "Präsens": {
+            "ich": "möchte",
+            "du": "möchtest",
+            "er/sie/es": "möchte",
+            "wir": "möchten",
+            "ihr": "möchtet",
+            "sie/Sie": "möchten"
+          }
+        },
+        "examples": [
+          {
+            "de": "Ich möchte Kaffee trinken.",
+            "ar": "أريد أن أشرب قهوة.",
+            "pron": "إش موشتِه كافِه ترينكِن"
+          },
+          {
+            "de": "Möchtest du etwas essen?",
+            "ar": "هل تريد أن تأكل شيئًا؟",
+            "pron": "موشتِست دو إتفاس إسِن؟"
+          },
+          {
+            "de": "Wir möchten ins Kino gehen.",
+            "ar": "نحن نريد الذهاب إلى السينما.",
+            "pron": "فير موشتِن إنس كينو غيهِن"
+          }
+        ]
+      },
+      {
+        "verb": "können",
+        "meaning": "يستطيع / يمكن",
+        "type": "فعل مساعد",
+        "tenses": {
+          "Präsens": {
+            "ich": "kann",
+            "du": "kannst",
+            "er/sie/es": "kann",
+            "wir": "können",
+            "ihr": "könnt",
+            "sie/Sie": "können"
+          },
+          "Perfekt": {
+            "auxiliary": "haben",
+            "participle": "gekonnt",
+            "example": {
+              "de": "Ich habe das machen können.",
+              "ar": "لقد استطعت فعل ذلك.",
+              "pron": "إش هابِه داس ماخِن غِكونت"
+            }
+          }
+        },
+        "examples": [
+          {
+            "de": "Ich kann schwimmen.",
+            "ar": "أنا أستطيع السباحة.",
+            "pron": "إش كان شفيمِن"
+          },
+          {
+            "de": "Kannst du Deutsch sprechen?",
+            "ar": "هل تستطيع التحدث بالألمانية؟",
+            "pron": "كانست دو دُويتش شبرِخِن؟"
+          },
+          {
+            "de": "Er kann gut kochen.",
+            "ar": "هو يستطيع الطبخ بشكل جيد.",
+            "pron": "إر كان غوت كوخِن"
+          }
+        ]
+      },
+      {
+        "verb": "müssen",
+        "meaning": "يجب",
+        "type": "فعل مساعد",
+        "tenses": {
+          "Präsens": {
+            "ich": "muss",
+            "du": "musst",
+            "er/sie/es": "muss",
+            "wir": "müssen",
+            "ihr": "müsst",
+            "sie/Sie": "müssen"
+          },
+          "Perfekt": {
+            "auxiliary": "haben",
+            "participle": "gemusst",
+            "example": {
+              "de": "Ich habe arbeiten müssen.",
+              "ar": "لقد كان يجب علي العمل.",
+              "pron": "إش هابِه أربايتِن غِموست"
+            }
+          }
+        },
+        "examples": [
+          {
+            "de": "Ich muss jetzt gehen.",
+            "ar": "يجب أن أذهب الآن.",
+            "pron": "إش موس يِتست غيهِن"
+          },
+          {
+            "de": "Musst du heute arbeiten?",
+            "ar": "هل يجب عليك العمل اليوم؟",
+            "pron": "موست دو هويتِه أربايتِن؟"
+          },
+          {
+            "de": "Wir müssen lernen.",
+            "ar": "يجب علينا أن ندرس.",
+            "pron": "فير موسِن لِرنِن"
+          }
+        ]
+      },
+      {
+        "verb": "wollen",
+        "meaning": "يريد",
+        "type": "فعل مساعد",
+        "tenses": {
+          "Präsens": {
+            "ich": "will",
+            "du": "willst",
+            "er/sie/es": "will",
+            "wir": "wollen",
+            "ihr": "wollt",
+            "sie/Sie": "wollen"
+          },
+          "Perfekt": {
+            "auxiliary": "haben",
+            "participle": "gewollt",
+            "example": {
+              "de": "Ich habe das nicht gewollt.",
+              "ar": "لم أرد ذلك.",
+              "pron": "إش هابِه داس نيشت غِفولت"
+            }
+          }
+        },
+        "examples": [
+          {
+            "de": "Ich will nach Hause gehen.",
+            "ar": "أريد الذهاب إلى المنزل.",
+            "pron": "إش فيل ناخ هاوزِه غيهِن"
+          },
+          {
+            "de": "Willst du mitkommen?",
+            "ar": "هل تريد أن تأتي معنا؟",
+            "pron": "فيلست دو ميتكومِن؟"
+          },
+          {
+            "de": "Sie will Ärztin werden.",
+            "ar": "هي تريد أن تصبح طبيبة.",
+            "pron": "زي فيل إرتستين فِردِن"
+          }
+        ]
+      },
+      {
+        "verb": "dürfen",
+        "meaning": "يُسمح له / يجوز",
+        "type": "فعل مساعد",
+        "tenses": {
+          "Präsens": {
+            "ich": "darf",
+            "du": "darfst",
+            "er/sie/es": "darf",
+            "wir": "dürfen",
+            "ihr": "dürft",
+            "sie/Sie": "dürfen"
+          },
+          "Perfekt": {
+            "auxiliary": "haben",
+            "participle": "gedurft",
+            "example": {
+              "de": "Ich habe das machen dürfen.",
+              "ar": "لقد سُمح لي بفعل ذلك.",
+              "pron": "إش هابِه داس ماخِن غِدورفت"
+            }
+          }
+        },
+        "examples": [
+          {
+            "de": "Ich darf hier parken.",
+            "ar": "يُسمح لي بالوقوف هنا.",
+            "pron": "إش دارف هير باركِن"
+          },
+          {
+            "de": "Darfst du Auto fahren?",
+            "ar": "هل يُسمح لك بقيادة السيارة؟",
+            "pron": "دارفست دو آوتو فارِن؟"
+          },
+          {
+            "de": "Hier darf man nicht rauchen.",
+            "ar": "لا يُسمح بالتدخين هنا.",
+            "pron": "هير دارف مان نيشت راوخِن"
+          }
+        ]
+      },
+      {
+        "verb": "finden",
+        "meaning": "يجد",
+        "type": "غير منتظم",
+        "tenses": {
+          "Präsens": {
+            "ich": "finde",
+            "du": "findest",
+            "er/sie/es": "findet",
+            "wir": "finden",
+            "ihr": "findet",
+            "sie/Sie": "finden"
+          },
+          "Perfekt": {
+            "auxiliary": "haben",
+            "participle": "gefunden",
+            "example": {
+              "de": "Ich habe mein Handy gefunden.",
+              "ar": "لقد وجدت هاتفي.",
+              "pron": "إش هابِه ماين هاندي غِفوندِن"
+            }
+          }
+        },
+        "examples": [
+          {
+            "de": "Ich finde das Buch.",
+            "ar": "أنا أجد الكتاب.",
+            "pron": "إش فيندِه داس بوخ"
+          },
+          {
+            "de": "Findest du den Weg?",
+            "ar": "هل تجد الطريق؟",
+            "pron": "فيندِست دو دِن فِغ؟"
+          },
+          {
+            "de": "Das finde ich gut.",
+            "ar": "أجد ذلك جيدًا.",
+            "pron": "داس فيندِه إش غوت"
+          }
+        ]
+      },
+      {
+        "verb": "kochen",
+        "meaning": "يطبخ",
+        "type": "منتظم",
+        "tenses": {
+          "Präsens": {
+            "ich": "koche",
+            "du": "kochst",
+            "er/sie/es": "kocht",
+            "wir": "kochen",
+            "ihr": "kocht",
+            "sie/Sie": "kochen"
+          },
+          "Perfekt": {
+            "auxiliary": "haben",
+            "participle": "gekocht",
+            "example": {
+              "de": "Ich habe Suppe gekocht.",
+              "ar": "لقد طبخت حساءً.",
+              "pron": "إش هابِه زوبِه غِكوخت"
+            }
+          }
+        },
+        "examples": [
+          {
+            "de": "Ich koche gern.",
+            "ar": "أنا أحب الطبخ.",
+            "pron": "إش كوخِه غِرن"
+          },
+          {
+            "de": "Kochst du heute?",
+            "ar": "هل تطبخ اليوم؟",
+            "pron": "كوخست دو هويتِه؟"
+          },
+          {
+            "de": "Sie kocht sehr gut.",
+            "ar": "هي تطبخ بشكل جيد جدًا.",
+            "pron": "زي كوخت زِير غوت"
+          }
+        ]
+      },
+      {
+        "verb": "brauchen",
+        "meaning": "يحتاج",
+        "type": "منتظم",
+        "tenses": {
+          "Präsens": {
+            "ich": "brauche",
+            "du": "brauchst",
+            "er/sie/es": "braucht",
+            "wir": "brauchen",
+            "ihr": "braucht",
+            "sie/Sie": "brauchen"
+          },
+          "Perfekt": {
+            "auxiliary": "haben",
+            "participle": "gebraucht",
+            "example": {
+              "de": "Ich habe Hilfe gebraucht.",
+              "ar": "لقد احتجت المساعدة.",
+              "pron": "إش هابِه هيلفِه غِبراوخت"
+            }
+          }
+        },
+        "examples": [
+          {
+            "de": "Ich brauche Hilfe.",
+            "ar": "أنا أحتاج المساعدة.",
+            "pron": "إش براوخِه هيلفِه"
+          },
+          {
+            "de": "Brauchst du Geld?",
+            "ar": "هل تحتاج مالًا؟",
+            "pron": "براوخست دو غِلت؟"
+          },
+          {
+            "de": "Wir brauchen Zeit.",
+            "ar": "نحن نحتاج وقتًا.",
+            "pron": "فير براوخِن تسايت"
+          }
+        ]
+      }
+    ]
+  }
+}

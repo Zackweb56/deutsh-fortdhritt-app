@@ -38,12 +38,12 @@ interface AppState {
   days: Day[];
   vocabulary: VocabularyItem[];
   resources: Resource[];
-  currentTab: 'schedule' | 'vocabulary' | 'lessons' | 'resources';
+  currentTab: 'schedule' | 'vocabulary' | 'grammar' | 'lessons' | 'resources';
   isLoaded: boolean;
 }
 
 interface AppContextType extends AppState {
-  setCurrentTab: (tab: 'schedule' | 'vocabulary' | 'lessons' | 'resources') => void;
+  setCurrentTab: (tab: 'schedule' | 'vocabulary' | 'grammar' | 'lessons' | 'resources') => void;
   toggleHourComplete: (dayId: string, hourId: string) => void;
   updateTimer: (dayId: string, hourId: string, seconds: number, running: boolean) => void;
   addVocabulary: (item: Omit<VocabularyItem, 'id' | 'dateAdded'>) => void;
@@ -405,7 +405,7 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
     }
   }, [state]);
 
-  const setCurrentTab = (tab: 'schedule' | 'vocabulary' | 'lessons' | 'resources') => {
+  const setCurrentTab = (tab: 'schedule' | 'vocabulary' | 'grammar' | 'lessons' | 'resources') => {
     setState(prev => ({ ...prev, currentTab: tab }));
   };
 

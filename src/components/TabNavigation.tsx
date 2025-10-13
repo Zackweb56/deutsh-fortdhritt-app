@@ -1,4 +1,4 @@
-import { Calendar, BookOpen, GraduationCap, Globe } from 'lucide-react';
+import { Calendar, BookOpen, GraduationCap, Globe, PenTool } from 'lucide-react';
 import { useApp } from '@/contexts/AppContext';
 import { Button } from '@/components/ui/button';
 import {
@@ -27,6 +27,7 @@ export const TabNavigation = () => {
   const tabs = [
     { id: 'schedule' as const, label: 'الجدول الزمني', icon: Calendar },
     { id: 'vocabulary' as const, label: 'المفردات', icon: BookOpen },
+    { id: 'grammar' as const, label: 'القواعد والأفعال', icon: PenTool },
     { id: 'lessons' as const, label: 'الدروس', icon: GraduationCap },
     { id: 'resources' as const, label: 'المصادر', icon: Globe },
   ];

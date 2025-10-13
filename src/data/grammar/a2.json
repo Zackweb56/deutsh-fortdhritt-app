@@ -1,0 +1,2015 @@
+{
+    "A2": {
+      "grammar": [
+        {
+          "title": "حالة المفعول به غير المباشر (Dativ) - Dativ",
+          "explanation": "تُستخدم حالة Dativ للإشارة إلى المتلقي غير المباشر (لمن؟). أدوات التعريف تتغير: der → dem, die → der, das → dem. ضمائر الشخصية أيضًا تتغير: ich → mir, du → dir, er → ihm, sie → ihr, es → ihm, wir → uns, ihr → euch, sie/Sie → ihnen/Ihnen.",
+          "table": {
+            "bestimmte_Artikel_Dativ": {
+              "maskulin": "dem",
+              "feminin": "der",
+              "neutral": "dem",
+              "plural": "den"
+            },
+            "unbestimmte_Artikel_Dativ": {
+              "maskulin": "einem",
+              "feminin": "einer",
+              "neutral": "einem",
+              "plural": "-"
+            },
+            "Negativartikel_Dativ": {
+              "maskulin": "keinem",
+              "feminin": "keiner",
+              "neutral": "keinem",
+              "plural": "keinen"
+            }
+          },
+          "examples": [
+            {
+              "de": "Ich gebe dem Mann das Buch.",
+              "ar": "أنا أعطي الرجل الكتاب.",
+              "pron": "إش غِيبه دِيم مان داس بوخ"
+            },
+            {
+              "de": "Sie hilft der Frau.",
+              "ar": "هي تساعد المرأة.",
+              "pron": "زي هِيلفت دِير فراو"
+            },
+            {
+              "de": "Kannst du mir helfen?",
+              "ar": "هل يمكنك مساعدتي؟",
+              "pron": "كانست دو مير هِلفِن؟"
+            },
+            {
+              "de": "Das gehört dem Kind.",
+              "ar": "هذا يخص الطفل.",
+              "pron": "داس غِهيرت دِيم كينت"
+            },
+            {
+              "de": "Ich danke dir für deine Hilfe.",
+              "ar": "أشكرك على مساعدتك.",
+              "pron": "إش دانكِه دير فور داينِه هيلفِه"
+            }
+          ]
+        },
+        {
+          "title": "حالة المضاف إليه (Genitiv) - Genitiv",
+          "explanation": "تُستخدم حالة Genitiv للإشارة إلى الملكية أو الانتماء (لمن؟). أدوات التعريف تتغير: der → des, die → der, das → des. غالبًا ما يتم استبدالها في اللغة المحكية بـ \"von + Dativ\".",
+          "table": {
+            "bestimmte_Artikel_Genitiv": {
+              "maskulin": "des",
+              "feminin": "der",
+              "neutral": "des",
+              "plural": "der"
+            },
+            "unbestimmte_Artikel_Genitiv": {
+              "maskulin": "eines",
+              "feminin": "einer",
+              "neutral": "eines",
+              "plural": "-"
+            }
+          },
+          "examples": [
+            {
+              "de": "Das ist das Auto des Vaters.",
+              "ar": "هذه سيارة الأب.",
+              "pron": "داس إست داس آوتو دِيس فاتِرس"
+            },
+            {
+              "de": "Die Farbe der Blume ist schön.",
+              "ar": "لون الزهرة جميل.",
+              "pron": "دي فاربه دير بلومه إست شون"
+            },
+            {
+              "de": "Das ist das Haus eines Freundes.",
+              "ar": "هذا بيت صديق.",
+              "pron": "داس إست داس هاوس آينِس فروِندِس"
+            },
+            {
+              "de": "Wegen des Wetters bleiben wir zu Hause.",
+              "ar": "بسبب الطقس سنبقى في البيت.",
+              "pron": "فيغِن ديس فيتِرس بلايبن فير تسو هاوزِه"
+            }
+          ]
+        },
+        {
+          "title": "الجمل الثانوية مع \"dass\" و \"weil\" - Nebensätze mit dass & weil",
+          "explanation": "في الجمل الثانوية، يأتي الفعل المُصرّف في نهاية الجملة. أداة الربط \"dass\" (أن) تُستخدم للإبلاغ عن رأي أو حقيقة. أداة الربط \"weil\" (لأن) تُستخدم لإعطاء سبب.",
+          "examples": [
+            {
+              "de": "Ich denke, dass das eine gute Idee ist.",
+              "ar": "أعتقد أن هذه فكرة جيدة.",
+              "pron": "إش دِنكه، داس داس آينِه غُوتِه إيدِيه إست"
+            },
+            {
+              "de": "Er ist müde, weil er nicht geschlafen hat.",
+              "ar": "هو متعب لأنه لم ينم.",
+              "pron": "إر إست مودِه، فايل إر نيشت غِشلافِن هات"
+            },
+            {
+              "de": "Sie weiß, dass er kommt.",
+              "ar": "هي تعرف أنه سيأتي.",
+              "pron": "زي فايس، داس إر كومت"
+            },
+            {
+              "de": "Es tut mir leid, dass ich zu spät komme.",
+              "ar": "أنا آسف لأنني أتيت متأخرًا.",
+              "pron": "إس توت مير لايت، داس إش تسو شبِت كومِه"
+            }
+          ]
+        },
+        {
+          "title": "جمل الظرف - Temporalsätze mit wenn, als, bevor, nachdem",
+          "explanation": "جمل الظرف تُستخدم للتعبير عن الوقت. الفعل يأتي في النهاية. wenn (عندما/كلما - للحاضر والمستقبل), als (عندما - للماضي لحدث واحد), bevor (قبل أن), nachdem (بعد أن), währen (أثناء).",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit habe, besuche ich dich.",
+              "ar": "عندما يكون لدي وقت، سأزورك.",
+              "pron": "فِن إش تسايت هابِه، بِزُوشِه إش ديش"
+            },
+            {
+              "de": "Bevor ich schlafe, lese ich ein Buch.",
+              "ar": "قبل أن أنام، أقرأ كتابًا.",
+              "pron": "بِفور إش شلافِه، ليزِه إش آين بوخ"
+            },
+            {
+              "de": "Während ich koche, höre ich Musik.",
+              "ar": "أثناء طهيي، أستمع إلى الموسيقى.",
+              "pron": "فايرِنت إش كوخِه، هورِه إش موزيك"
+            },
+            {
+              "de": "Als ich Kind war, wohnte ich in Berlin.",
+              "ar": "عندما كنت طفلاً، كنت أسكن في برلين.",
+              "pron": "آلس إش كينت فار، فونتِه إش إن برلين"
+            },
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "ar": "بعد أن أكلت، ذهبت للتنزه.",
+              "pron": "ناخ-دِيم إش غِغِسِن هاتَه، غينغ إش شباتسيرِن"
+            }
+          ]
+        },
+        {
+          "title": "أفعال مع حروف جر - Verben mit Präpositionen",
+          "explanation": "بعض الأفعال في الألمانية تتطلب حرف جر محدد (مثل auf, über, von, für) ويتبعه حالة نحوية معينة (Akkusativ أو Dativ). يجب حفظ هذه الأفعال مع حروف الجر الخاصة بها.",
+          "table": {
+            "Wichtige_Verben_mit_Präpositionen": {
+              "warten auf (+Akk)": "ينتظر",
+              "sprechen über (+Akk)": "يتحدث عن",
+              "denken an (+Akk)": "يفكر في",
+              "sich freuen auf (+Akk)": "يتطلع إلى",
+              "sich freuen über (+Akk)": "يفرح بشيء",
+              "bitten um (+Akk)": "يطلب",
+              "hoffen auf (+Akk)": "يأمل في",
+              "sich interessieren für (+Akk)": "يهتم بـ",
+              "sich kümmern um (+Akk)": "يهتم بـ / يعتني بـ",
+              "gehören zu (+Dat)": "ينتمي إلى",
+              "halten von (+Dat)": "يعتقد حول"
+            }
+          },
+          "examples": [
+            {
+              "de": "Ich warte auf den Bus.",
+              "ar": "أنا أنتظر الحافلة.",
+              "pron": "إش فارتِه آوف دِن بوس"
+            },
+            {
+              "de": "Wir sprechen über das Wetter.",
+              "ar": "نحن نتحدث عن الطقس.",
+              "pron": "فير شبرِخِن إوبِر داس فِتِر"
+            },
+            {
+              "de": "Er denkt an seine Familie.",
+              "ar": "هو يفكر في عائلته.",
+              "pron": "إر دِنكت آن زاينِه فاميليِه"
+            },
+            {
+              "de": "Ich freue mich auf das Wochenende.",
+              "ar": "أنا أتطلع إلى نهاية الأسبوع.",
+              "pron": "إش فْرويِه ميش آوف داس فوخِن-إندِه"
+            }
+          ]
+        },
+        {
+          "title": "صيغة الأمر - Imperativ",
+          "explanation": "تُستخدم صيغة الأمر لإعطاء الأوامر أو الطلبات أو النصائح. هناك أشكال مختلفة لـ du و ihr و Sie.",
+          "table": {
+            "Bildung": {
+              "du": "جذر الفعل (غالبًا بدون -st)",
+              "ihr": "جذر الفعل + -t",
+              "Sie": "جذر الفعل + -en + Sie"
+            },
+            "Unregelmäßige_Formen": {
+              "sein": "du: sei, ihr: seid, Sie: seien Sie",
+              "werden": "du: werde, ihr: werdet, Sie: werden Sie",
+              "wissen": "du: wisse (نادر), ihr: wisst, Sie: wissen Sie"
+            }
+          },
+          "examples": [
+            {
+              "de": "Komm hierher!",
+              "ar": "تعال إلى هنا!",
+              "pron": "كوم هيرهير!"
+            },
+            {
+              "de": "Lest den Text!",
+              "ar": "اقرأوا النص!",
+              "pron": "ليست دِن تِكست!"
+            },
+            {
+              "de": "Sprechen Sie lauter, bitte!",
+              "ar": "تحدثوا بصوت أعلى، من فضلكم!",
+              "pron": "شبرِخِن زي لاوتِر، بِتِه!"
+            },
+            {
+              "de": "Sei ruhig!",
+              "ar": "كن هادئًا!",
+              "pron": "زايه رويك!"
+            },
+            {
+              "de": "Haben Sie Geduld!",
+              "ar": "تحلوا بالصبر!",
+              "pron": "هابن زي غِيدولت!"
+            }
+          ]
+        },
+        {
+          "title": "الماضي البسيط (Präteritum) للأفعال المساعدة والمشتقة",
+          "explanation": "يُستخدم Präteritum بشكل أساسي في السرد المكتوب (القصص، التقارير). بالنسبة للمتحدثين، من المهم فهمه، خاصة مع الأفعال المساعدة sein, haben, werden والأفعال المشتقة مثل möchten, können, etc.",
+          "table": {
+            "Präteritum_wichtige_Verben": {
+              "sein": "ich war, du warst, er war, wir waren, ihr wart, sie waren",
+              "haben": "ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten",
+              "werden": "ich wurde, du wurdest, er wurde, wir wurden, ihr wurdet, sie wurden",
+              "können": "ich konnte, du konntest, er konnte, wir konnten, ihr konntet, sie konnten",
+              "müssen": "ich musste, du musstest, er musste, wir mussten, ihr musstet, sie mussten",
+              "wollen": "ich wollte, du wolltest, er wollte, wir wollten, ihr wolltet, sie wollten",
+              "sollen": "ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten"
+            }
+          },
+          "examples": [
+            {
+              "de": "Es war einmal ein König.",
+              "ar": "كان ياما كان في ملك.",
+              "pron": "إس فار آينْمال آين كُونيغ"
+            },
+            {
+              "de": "Ich hatte keine Zeit.",
+              "ar": "لم يكن لدي وقت.",
+              "pron": "إش هاتِه كاينِه تسايت"
+            },
+            {
+              "de": "Sie wollte Arzt werden.",
+              "ar": "أرادت أن تصبح طبيبة.",
+              "pron": "زي فولته أرتست فيردِن"
+            },
+            {
+              "de": "Damals konnte ich nicht schwimmen.",
+              "ar": "في ذلك الوقت لم أستطع السباحة.",
+              "pron": "دامالس كونته إش نيشت شفيمِن"
+            }
+          ]
+        },
+        {
+          "title": "الماضي التام (Plusquamperfekt)",
+          "explanation": "يُستخدم Plusquamperfekt لوصف فعل حدث قبل فعل آخر في الماضي. يتكون من صيغة الماضي البسيط (Präteritum) للأفعال المساعدة (haben/sein) + التصريف الثالث للفعل الرئيسي.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "ar": "بعد أن أكلت، ذهبت للتنزه.",
+              "pron": "ناخ-دِيم إش غِغِسِن هاتَه، غينغ إش شباتسيرِن"
+            },
+            {
+              "de": "Er war schon nach Hause gegangen, als sie ankam.",
+              "ar": "كان قد ذهب إلى البيت بالفعل عندما وصلت.",
+              "pron": "إر فار شون ناخ هاوزِه غِغانغِن، آلْس زي آنكام"
+            },
+            {
+              "de": "Wir hatten das Buch schon gelesen, bevor wir den Film sahen.",
+              "ar": "كنا قد قرأنا الكتاب بالفعل قبل أن نشاهد الفيلم.",
+              "pron": "فير هاتِن داس بوخ شون غِليزِن، بِفور فير دِن فيلم زاهِن"
+            }
+          ]
+        },
+        {
+          "title": "صيغة المبني للمجهول - Passiv",
+          "explanation": "تُستخدم صيغة المبني للمجهول عندما يكون الفعل أو الحدث نفسه أكثر أهمية من الفاعل. تتكون من الفعل المساعد werden + التصريف الثالث للفعل الرئيسي (Vorgangspassiv).",
+          "table": {
+            "Passiv_Formen": {
+              "Präsens": "werden + Partizip II",
+              "Präteritum": "wurden + Partizip II",
+              "Perfekt": "sein + Partizip II + worden"
+            }
+          },
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "ar": "يتم إصلاح السيارة.",
+              "pron": "داس آوتو فيرد رِبارِيِرت"
+            },
+            {
+              "de": "Hier wird nicht geraucht.",
+              "ar": "لا يُسمح بالتدخين هنا.",
+              "pron": "هير فيرد نيشت غِراوخت"
+            },
+            {
+              "de": "Das Buch wurde gelesen.",
+              "ar": "قُرِئ الكتاب.",
+              "pron": "داس بوخ فُوردِه غِليزِن"
+            },
+            {
+              "de": "Das Haus ist gebaut worden.",
+              "ar": "تم بناء البيت.",
+              "pron": "داس هاوس إست غِباوت فوردِن"
+            }
+          ]
+        },
+        {
+          "title": "تصريف الصفات - Adjektivdeklination",
+          "explanation": "عندما تأتي الصفة قبل الاسم، يجب تصريفها (إضافة نهاية). تعتمد هذه النهاية على جنس الاسم (der, die, das)، وحالة الاسم (Nominativ, Akkusativ, Dativ, Genitiv)، ونوع أداة التعريف (أداة تعريف، أداة نكرة، بدون أداة).",
+          "table": {
+            "Nach bestimmtem Artikel (Nominativ)": {
+              "maskulin": "der groß**e** Tisch",
+              "feminin": "die klein**e** Tasche",
+              "neutral": "das neu**e** Auto",
+              "plural": "die alt**en** Häuser"
+            },
+            "Nach unbestimmtem Artikel (Nominativ)": {
+              "maskulin": "ein groß**er** Tisch",
+              "feminin": "eine klein**e** Tasche",
+              "neutral": "ein neu**es** Auto",
+              "plural": "keine alt**en** Häuser"
+            },
+            "Ohne Artikel (Nominativ)": {
+              "maskulin": "kalter Kaffee",
+              "feminin": "frische Milch",
+              "neutral": "kaltes Wasser",
+              "plural": "neue Bücher"
+            }
+          },
+          "examples": [
+            {
+              "de": "Der alte Mann ist freundlich.",
+              "ar": "الرجل العمر طيب.",
+              "pron": "دير آلتِه مان إست فروِندليش"
+            },
+            {
+              "de": "Ich habe einen neuen Job.",
+              "ar": "لدي وظيفة جديدة.",
+              "pron": "إش هابِه آينِن نُوين جوب"
+            },
+            {
+              "de": "Sie trägt ein schwarzes Kleid.",
+              "ar": "هي ترتدي فستانًا أسود.",
+              "pron": "زي ترِكت آين شفارتسِس كلايت"
+            },
+            {
+              "de": "Mit frischem Brot schmeckt es besser.",
+              "ar": "مع الخبز الطازج يصبح الطعم أفضل.",
+              "pron": "ميت فْريشِم بروت شْمِكت إس بِسِر"
+            }
+          ]
+        },
+        {
+          "title": "أدوات الاستفهام مع حروف الجر - Fragewörter mit Präpositionen",
+          "explanation": "عند السؤال عن فعل مرتبط بحرف جر، نضع حرف الجر في بداية السؤال.",
+          "examples": [
+            {
+              "de": "Mit wem gehst du ins Kino?",
+              "ar": "مع من تذهب إلى السينما؟",
+              "pron": "ميت فيم غيهست دو إنس كينو؟"
+            },
+            {
+              "de": "Über was sprecht ihr?",
+              "ar": "عن ماذا تتحدثون؟",
+              "pron": "إوبِر فاس شبرِخت إير؟"
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "ar": "من أي بلد أنت؟",
+              "pron": "آوس فيلشِم لاند كومست دو؟"
+            },
+            {
+              "de": "Für wen ist das Geschenk?",
+              "ar": "لمن هذه الهدية؟",
+              "pron": "فور فين إست داس غِشينك؟"
+            },
+            {
+              "de": "An wen denkst du?",
+              "ar": "بمن تفكر؟",
+              "pron": "آن فين دينكست دو؟"
+            }
+          ]
+        },
+        {
+          "title": "جمل الشرط - Konditionalsätze mit wenn",
+          "explanation": "تُستخدم جمل الشرط للتعبير عن الشروط. أداة الربط \"wenn\" (إذا) تبدأ الجملة الشرطية، والفعل يأتي في النهاية.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit habe, helfe ich dir.",
+              "ar": "إذا كان لدي وقت، سأساعدك.",
+              "pron": "فِن إش تسايت هابِه، هِلفِه إش دير"
+            },
+            {
+              "de": "Wenn es regnet, bleiben wir zu Hause.",
+              "ar": "إذا أمطرت، سنبقى في البيت.",
+              "pron": "فِن إس رِكنِت، بلايبن فير تسو هاوزِه"
+            },
+            {
+              "de": "Wenn du möchtest, können wir ins Kino gehen.",
+              "ar": "إذا أردت، يمكننا الذهاب إلى السينما.",
+              "pron": "فِن دو موشتِست، كُونِن فير إنس كينو غيهِن"
+            }
+          ]
+        },
+        {
+          "title": "المقارنة - Komparativ und Superlativ",
+          "explanation": "للمقارنة بين شيئين نستخدم صيغة المقارن (Komparativ) بإضافة -er. لأعلى درجة نستخدم صيغة التفضيل (Superlativ) بإضافة -(e)st. بعض الصفات غير منتظمة.",
+          "table": {
+            "Steigerung": {
+              "Positiv": "groß, schnell, gut",
+              "Komparativ": "größer, schneller, besser",
+              "Superlativ": "am größten, am schnellsten, am besten"
+            },
+            "Unregelmäßige_Adjektive": {
+              "gut": "besser, am besten",
+              "gern": "lieber, am liebsten",
+              "viel": "mehr, am meisten",
+              "hoch": "höher, am höchsten"
+            }
+          },
+          "examples": [
+            {
+              "de": "Mein Auto ist schneller als deins.",
+              "ar": "سيارتي أسرع من سيارتك.",
+              "pron": "ماين آوتو إست شنِلِر آلْس داينس"
+            },
+            {
+              "de": "Das ist das schönste Bild.",
+              "ar": "هذه هي الصورة الأجمل.",
+              "pron": "داس إست داس شونستِه بيلت"
+            },
+            {
+              "de": "Ich esse am liebsten Pizza.",
+              "ar": "أفضل ما آكله هو البيتزا.",
+              "pron": "إش إسِه آم ليبستِن بيتسا"
+            },
+            {
+              "de": "Er ist der beste Schüler in der Klasse.",
+              "ar": "هو أفضل تلميذ في الصف.",
+              "pron": "إر إست دير بِيستِه شولِر إن دير كلاسِه"
+            }
+          ]
+        }
+      ],
+      "verbs": [
+        {
+          "verb": "werden",
+          "meaning": "يصبح / يتم (للمستقبل والمبني للمجهول)",
+          "type": "غير منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "werde",
+              "du": "wirst",
+              "er/sie/es": "wird",
+              "wir": "werden",
+              "ihr": "werdet",
+              "sie/Sie": "werden"
+            },
+            "Präteritum": {
+              "ich": "wurde",
+              "du": "wurdest",
+              "er/sie/es": "wurde",
+              "wir": "wurden",
+              "ihr": "wurdet",
+              "sie/Sie": "wurden"
+            },
+            "Perfekt": {
+              "auxiliary": "sein",
+              "participle": "geworden",
+              "example": {
+                "de": "Er ist Arzt geworden.",
+                "ar": "لقد أصبح طبيبًا.",
+                "pron": "إر إست أرتست غِفوردِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Ich werde morgen kommen.",
+              "ar": "سآتي غدًا.",
+              "pron": "إش فيردِه مورغِن كومِن"
+            },
+            {
+              "de": "Das Wetter wird schlecht.",
+              "ar": "الطقس يصبح سيئًا.",
+              "pron": "داس فيتِر فيرد شليخت"
+            },
+            {
+              "de": "Wie wird das Wetter?",
+              "ar": "كيف سيكون الطقس؟",
+              "pron": "في فيرد داس فيتِر؟"
+            }
+          ]
+        },
+        {
+          "verb": "bekommen",
+          "meaning": "يحصل على / يستلم",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "bekomme",
+              "du": "bekommst",
+              "er/sie/es": "bekommt",
+              "wir": "bekommen",
+              "ihr": "bekommt",
+              "sie/Sie": "bekommen"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "bekommen",
+              "example": {
+                "de": "Ich habe einen Brief bekommen.",
+                "ar": "لقد تلقيت رسالة.",
+                "pron": "إش هابِه آينِن بريف بِكومِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Ich bekomme mein Gehalt.",
+              "ar": "أنا أحصل على راتبي.",
+              "pron": "إش بِكومِه ماين غِهالت"
+            },
+            {
+              "de": "Bekommst du oft Post?",
+              "ar": "هل تستلم البريد غالبًا؟",
+              "pron": "بِكومست دو أوفت بوست؟"
+            }
+          ]
+        },
+        {
+          "verb": "erzählen",
+          "meaning": "يحكي / يروي",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "erzähle",
+              "du": "erzählst",
+              "er/sie/es": "erzählt",
+              "wir": "erzählen",
+              "ihr": "erzählt",
+              "sie/Sie": "erzählen"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "erzählt",
+              "example": {
+                "de": "Er hat eine Geschichte erzählt.",
+                "ar": "لقد حكى قصة.",
+                "pron": "إر هات آينِه غِشيشته إرتسِلت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Erzähl mir von deinem Urlaub!",
+              "ar": "احكي لي عن إجازتك!",
+              "pron": "إرتسِل مير فون داينِم أورلاوب!"
+            }
+          ]
+        },
+        {
+          "verb": "vergessen",
+          "meaning": "ينسى",
+          "type": "غير منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "vergesse",
+              "du": "vergisst",
+              "er/sie/es": "vergisst",
+              "wir": "vergessen",
+              "ihr": "vergisst",
+              "sie/Sie": "vergessen"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "vergessen",
+              "example": {
+                "de": "Ich habe meinen Schlüssel vergessen.",
+                "ar": "لقد نسيت مفاتيحي.",
+                "pron": "إش هابِه ماينِن شلوسِل فيرجِسِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Vergiss nicht deinen Ausweis!",
+              "ar": "لا تنسَ هويتك!",
+              "pron": "فِرجيس نيشت داينِن آوسفايس!"
+            }
+          ]
+        },
+        {
+          "verb": "entscheiden",
+          "meaning": "يقرر",
+          "type": "غير منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "entscheide",
+              "du": "entscheidest",
+              "er/sie/es": "entscheidet",
+              "wir": "entscheiden",
+              "ihr": "entscheidet",
+              "sie/Sie": "entscheiden"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "entschieden",
+              "example": {
+                "de": "Wir haben uns für das blaue Auto entschieden.",
+                "ar": "لقد قررنا شراء السيارة الزرقاء.",
+                "pron": "فير هابِن أونس فور داس بلاوِه آوتو إنتشيدِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Du musst dich entscheiden.",
+              "ar": "يجب أن تقرر.",
+              "pron": "دو موست ديش إنتشايدِن"
+            }
+          ]
+        },
+        {
+          "verb": "anfangen",
+          "meaning": "يبدأ (فعل منفصل)",
+          "type": "غير منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "fange an",
+              "du": "fängst an",
+              "er/sie/es": "fängt an",
+              "wir": "fangen an",
+              "ihr": "fangt an",
+              "sie/Sie": "fangen an"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "angefangen",
+              "example": {
+                "de": "Wann hast du mit dem Kurs angefangen?",
+                "ar": "متى بدأت الدورة؟",
+                "pron": "فان هاست دو ميت ديم كورس آنغِفانغِن؟"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Der Film fängt um 20 Uhr an.",
+              "ar": "يبدأ الفيلم الساعة الثامنة.",
+              "pron": "دير فيلم فينكت أوم تسفانتسِش أور آن"
+            }
+          ]
+        },
+        {
+          "verb": "aufhören",
+          "meaning": "يتوقف (فعل منفصل)",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "höre auf",
+              "du": "hörst auf",
+              "er/sie/es": "hört auf",
+              "wir": "hören auf",
+              "ihr": "hört auf",
+              "sie/Sie": "hören auf"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "aufgehört",
+              "example": {
+                "de": "Hast du mit dem Rauchen aufgehört?",
+                "ar": "هل توقفت عن التدخين؟",
+                "pron": "هاست دو ميت ديم راوخِن آوفغِهورت؟"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Hör auf damit!",
+              "ar": "توقف عن ذلك!",
+              "pron": "هور آوف داميت!"
+            }
+          ]
+        },
+        {
+          "verb": "einkaufen",
+          "meaning": "يتسوق (فعل منفصل)",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "kaufe ein",
+              "du": "kaufst ein",
+              "er/sie/es": "kauft ein",
+              "wir": "kaufen ein",
+              "ihr": "kauft ein",
+              "sie/Sie": "kaufen ein"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "eingekauft",
+              "example": {
+                "de": "Ich habe Lebensmittel eingekauft.",
+                "ar": "لقد قمت بشراء البقالة.",
+                "pron": "إش هابِه ليبِنسمِتِل آينغِكاوفت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Wir gehen im Supermarkt einkaufen.",
+              "ar": "نحن نذهب للتسوق في السوبرماركت.",
+              "pron": "فير غيهِن إم زوبرماركت آينكاوفِن"
+            }
+          ]
+        },
+        {
+          "verb": "mitbringen",
+          "meaning": "يُحضر معه (فعل منفصل)",
+          "type": "غير منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "bringe mit",
+              "du": "bringst mit",
+              "er/sie/es": "bringt mit",
+              "wir": "bringen mit",
+              "ihr": "bringt mit",
+              "sie/Sie": "bringen mit"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "mitgebracht",
+              "example": {
+                "de": "Kannst du etwas zu trinken mitbringen?",
+                "ar": "هل يمكنك إحضار شيء للشرب؟",
+                "pron": "كانست دو إتفاس تسو ترينكِن ميتبرينغِن؟"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Er bringt seinen Freund mit.",
+              "ar": "هو يحضر صديقه معه.",
+              "pron": "إر برينكت زاينِن فروِند ميت"
+            }
+          ]
+        },
+        {
+          "verb": "vorstellen",
+          "meaning": "يتعرف / يقدم (شخصًا) (فعل منفصل)",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "stelle vor",
+              "du": "stellst vor",
+              "er/sie/es": "stellt vor",
+              "wir": "stellen vor",
+              "ihr": "stellt vor",
+              "sie/Sie": "stellen vor"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "vorgestellt",
+              "example": {
+                "de": "Darf ich dir meinen Mann vorstellen?",
+                "ar": "هل لي أن أقدم لك زوجي؟",
+                "pron": "دارف إش دير ماينِن مان فورشْتِلِن؟"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Stell dir vor, ich habe ihn getroffen!",
+              "ar": "تخيل، لقد قابلته!",
+              "pron": "شتِل دير فور، إش هابِه إين غِتروفِن!"
+            }
+          ]
+        },
+        {
+          "verb": "stattfinden",
+          "meaning": "يقام / ينعقد (فعل منفصل)",
+          "type": "غير منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "finde statt",
+              "du": "findest statt",
+              "er/sie/es": "findet statt",
+              "wir": "finden statt",
+              "ihr": "findet statt",
+              "sie/Sie": "finden statt"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "stattgefunden",
+              "example": {
+                "de": "Das Konzert hat letzte Woche stattgefunden.",
+                "ar": "أقيم الحفل الأسبوع الماضي.",
+                "pron": "داس كونتسِرت هات لِتستِه فوشِه شتاتغِفوندِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Wo findet die Party statt?",
+              "ar": "أين تقام الحفلة؟",
+              "pron": "فو فيندِت دي بارتي شتات؟"
+            }
+          ]
+        },
+        {
+          "verb": "sich treffen",
+          "meaning": "يلتقي (فعل انعكاسي)",
+          "type": "غير منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "treffe mich",
+              "du": "triffst dich",
+              "er/sie/es": "trifft sich",
+              "wir": "treffen uns",
+              "ihr": "trefft euch",
+              "sie/Sie": "treffen sich"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "getroffen",
+              "example": {
+                "de": "Wir haben uns gestern getroffen.",
+                "ar": "التقينا أمس.",
+                "pron": "فير هابِن أونس جِسترِن غِتروفِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Triffst du dich oft mit Freunden?",
+              "ar": "هل تلتقي مع الأصدقاء غالبًا؟",
+              "pron": "تريفست دو ديش أوفت ميت فروِندِن؟"
+            }
+          ]
+        },
+        {
+          "verb": "sich erinnern",
+          "meaning": "يتذكر (فعل انعكاسي)",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "erinnere mich",
+              "du": "erinnerst dich",
+              "er/sie/es": "erinnert sich",
+              "wir": "erinnern uns",
+              "ihr": "erinnert euch",
+              "sie/Sie": "erinnern sich"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "erinnert",
+              "example": {
+                "de": "Ich erinnere mich nicht an seinen Namen.",
+                "ar": "أنا لا أتذكر اسمه.",
+                "pron": "إش إرينِرِه ميش نيشت آن زاينِن نامِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Erinnern Sie sich an mich?",
+              "ar": "هل تذكرونني؟",
+              "pron": "إرينِرِن زي زيش آن ميش؟"
+            }
+          ]
+        },
+        {
+          "verb": "sich freuen",
+          "meaning": "يفرح / ينتظر بشوق (فعل انعكاسي)",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "freue mich",
+              "du": "freust dich",
+              "er/sie/es": "freut sich",
+              "wir": "freuen uns",
+              "ihr": "freut euch",
+              "sie/Sie": "freuen sich"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "gefreut",
+              "example": {
+                "de": "Ich habe mich sehr über das Geschenk gefreut.",
+                "ar": "لقد فرحت كثيرًا بالهدية.",
+                "pron": "إش هابِه ميش زِير إوبِر داس غِشينك غِفرويت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Ich freue mich auf das Wochenende.",
+              "ar": "أنا أتطلع إلى نهاية الأسبوع.",
+              "pron": "إش فْرويِه ميش آوف داس فوخِن-إندِه"
+            },
+            {
+              "de": "Freust du dich?",
+              "ar": "هل أنت فرح؟",
+              "pron": "فْرويست دو ديش؟"
+            }
+          ]
+        },
+        {
+          "verb": "sich interessieren",
+          "meaning": "يهتم (فعل انعكاسي)",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "interessiere mich",
+              "du": "interessierst dich",
+              "er/sie/es": "interessiert sich",
+              "wir": "interessieren uns",
+              "ihr": "interessiert euch",
+              "sie/Sie": "interessieren sich"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "interessiert",
+              "example": {
+                "de": "Ich habe mich immer für Geschichte interessiert.",
+                "ar": "لقد اهتممت دائمًا بالتاريخ.",
+                "pron": "إش هابِه ميش إمِر فور غِشيشته إنتِرِسِيرت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Interessierst du dich für Politik?",
+              "ar": "هل تهتم بالسياسة؟",
+              "pron": "إنتِرِسِيرست دو ديش فور بوليتيك؟"
+            }
+          ]
+        },
+        {
+          "verb": "sich kümmern",
+          "meaning": "يهتم بـ / يعتني بـ (فعل انعكاسي)",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "kümmere mich",
+              "du": "kümmerst dich",
+              "er/sie/es": "kümmert sich",
+              "wir": "kümmern uns",
+              "ihr": "kümmert euch",
+              "sie/Sie": "kümmern sich"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "gekümmert",
+              "example": {
+                "de": "Sie kümmert sich um die Kinder.",
+                "ar": "هي تعتني بالأطفال.",
+                "pron": "زي كيمِرت زيش أوم دي كيندِر"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Kannst du dich um den Hund kümmern?",
+              "ar": "هل يمكنك الاعتناء بالكلب؟",
+              "pron": "كانست دو ديش أوم دِن هونت كيمِرن؟"
+            }
+          ]
+        },
+        {
+          "verb": "sich vorbereiten",
+          "meaning": "يستعد (فعل انعكاسي)",
+          "type": "غير منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "bereite mich vor",
+              "du": "bereitest dich vor",
+              "er/sie/es": "bereitet sich vor",
+              "wir": "bereiten uns vor",
+              "ihr": "bereitet euch vor",
+              "sie/Sie": "bereiten sich vor"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "vorbereitet",
+              "example": {
+                "de": "Ich habe mich auf die Prüfung vorbereitet.",
+                "ar": "لقد استعددت للامتحان.",
+                "pron": "إش هابِه ميش آوف دي بروفونغ فوربِرايتِت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Wir bereiten uns auf die Reise vor.",
+              "ar": "نحن نستعد للرحلة.",
+              "pron": "فير بْرايتِن أونس آوف دي رايزِه فور"
+            }
+          ]
+        },
+        {
+          "verb": "sich verabreden",
+          "meaning": "يتواعد / يحدد موعدًا (فعل انعكاسي)",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "verabrede mich",
+              "du": "verabredest dich",
+              "er/sie/es": "verabredet sich",
+              "wir": "verabreden uns",
+              "ihr": "verabredet euch",
+              "sie/Sie": "verabreden sich"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "verabredet",
+              "example": {
+                "de": "Wir haben uns für morgen verabredet.",
+                "ar": "لقد حددنا موعدًا للغد.",
+                "pron": "فير هابِن أونس فور مورغِن فيرآبريدِت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Kannst du dich mit mir verabreden?",
+              "ar": "هل يمكنك تحديد موعد معي؟",
+              "pron": "كانست دو ديش ميت مير فيرآبريدِن؟"
+            }
+          ]
+        },
+        {
+          "verb": "sich beschweren",
+          "meaning": "يشكو (فعل انعكاسي)",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "beschwere mich",
+              "du": "beschwerst dich",
+              "er/sie/es": "beschwert sich",
+              "wir": "beschweren uns",
+              "ihr": "beschwert euch",
+              "sie/Sie": "beschweren sich"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "beschwert",
+              "example": {
+                "de": "Er hat sich über den Lärm beschwert.",
+                "ar": "لقد اشتكى من الضوضاء.",
+                "pron": "إر هات زيش إوبِر دِن لِرم بِشفيرت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Die Nachbarn beschweren sich oft.",
+              "ar": "الجيران يشكون غالبًا.",
+              "pron": "دي ناخبارِن بِشفيرِن زيش أوفت"
+            }
+          ]
+        },
+        {
+          "verb": "sich entschuldigen",
+          "meaning": "يعتذر (فعل انعكاسي)",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "entschuldige mich",
+              "du": "entschuldigst dich",
+              "er/sie/es": "entschuldigt sich",
+              "wir": "entschuldigen uns",
+              "ihr": "entschuldigt euch",
+              "sie/Sie": "entschuldigen sich"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "entschuldigt",
+              "example": {
+                "de": "Ich habe mich für die Verspätung entschuldigt.",
+                "ar": "لقد اعتذرت عن التأخير.",
+                "pron": "إش هابِه ميش فور دي فيرشبيتونغ إنتشولديخت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Entschuldigen Sie die Störung!",
+              "ar": "اعذروني على الإزعاج!",
+              "pron": "إنتشولديغِن زي دي شتورونغ!"
+            }
+          ]
+        },
+        {
+          "verb": "sich beeilen",
+          "meaning": "يستعجل (فعل انعكاسي)",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "beeile mich",
+              "du": "beeilst dich",
+              "er/sie/es": "beeilt sich",
+              "wir": "beeilen uns",
+              "ihr": "beeilt euch",
+              "sie/Sie": "beeilen sich"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "beeilt",
+              "example": {
+                "de": "Wir müssen uns beeilen.",
+                "ar": "يجب أن نستعجل.",
+                "pron": "فير موسِن أونس بِآيلِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Beeil dich, wir kommen zu spät!",
+              "ar": "استعجل، سنتأخر!",
+              "pron": "بِآيل ديش، فير كومِن تسو شبِت!"
+            }
+          ]
+        },
+        {
+          "verb": "sich ausruhen",
+          "meaning": "يستريح (فعل انعكاسي)",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "ruhe mich aus",
+              "du": "ruhst dich aus",
+              "er/sie/es": "ruht sich aus",
+              "wir": "ruhen uns aus",
+              "ihr": "ruht euch aus",
+              "sie/Sie": "ruhen sich aus"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "ausgeruht",
+              "example": {
+                "de": "Ich habe mich gut ausgeruht.",
+                "ar": "لقد استرحت جيدًا.",
+                "pron": "إش هابِه ميش غوت آوسغِروهت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Nach der Arbeit ruhe ich mich aus.",
+              "ar": "بعد العمل أستريح.",
+              "pron": "ناخ دير أربايت رويه إش ميش آوس"
+            }
+          ]
+        },
+        {
+          "verb": "sich ärgern",
+          "meaning": "ينزعج / يغضب (فعل انعكاسي)",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "ärgere mich",
+              "du": "ärgerst dich",
+              "er/sie/es": "ärgert sich",
+              "wir": "ärgern uns",
+              "ihr": "ärgert euch",
+              "sie/Sie": "ärgern sich"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "geärgert",
+              "example": {
+                "de": "Ich habe mich über den Fehler geärgert.",
+                "ar": "لقد انزعجت من الخطأ.",
+                "pron": "إش هابِه ميش إوبِر دِن فيلِر غِإيرغيرت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Ärgere dich nicht!",
+              "ar": "لا تنزعج!",
+              "pron": "إيرغيرِه ديش نيشت!"
+            }
+          ]
+        },
+        {
+          "verb": "sich wundern",
+          "meaning": "يتعجب (فعل انعكاسي)",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "wundere mich",
+              "du": "wunderst dich",
+              "er/sie/es": "wundert sich",
+              "wir": "wundern uns",
+              "ihr": "wundert euch",
+              "sie/Sie": "wundern sich"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "gewundert",
+              "example": {
+                "de": "Ich wundere mich über die hohen Preise.",
+                "ar": "أنا أتعجب من الأسعار المرتفعة.",
+                "pron": "إش فوندِرِه ميش إوبِر دي هوهِن برايزِه"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Das wundert mich nicht.",
+              "ar": "هذا لا يعجبني.",
+              "pron": "داس فوندِرت ميش نيشت"
+            }
+          ]
+        },
+        {
+          "verb": "sich freuen auf",
+          "meaning": "يتطلع إلى (فعل انعكاسي مع حرف جر)",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "freue mich auf",
+              "du": "freust dich auf",
+              "er/sie/es": "freut sich auf",
+              "wir": "freuen uns auf",
+              "ihr": "freut euch auf",
+              "sie/Sie": "freuen sich auf"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "gefreut",
+              "example": {
+                "de": "Ich habe mich auf den Urlaub gefreut.",
+                "ar": "لقد كنت أتطلع إلى الإجازة.",
+                "pron": "إش هابِه ميش آوف دِن أورلاوب غِفرويت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Ich freue mich auf das Wochenende.",
+              "ar": "أنا أتطلع إلى نهاية الأسبوع.",
+              "pron": "إش فْرويِه ميش آوف داس فوخِن-إندِه"
+            }
+          ]
+        },
+        {
+          "verb": "sich freuen über",
+          "meaning": "يفرح بشيء (فعل انعكاسي مع حرف جر)",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "freue mich über",
+              "du": "freust dich über",
+              "er/sie/es": "freut sich über",
+              "wir": "freuen uns über",
+              "ihr": "freut euch über",
+              "sie/Sie": "freuen sich über"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "gefreut",
+              "example": {
+                "de": "Sie hat sich über das Geschenk gefreut.",
+                "ar": "لقد فرحت بالهدية.",
+                "pron": "زي هات زيش إوبِر داس غِشينك غِفرويت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Wir freuen uns über deinen Besuch.",
+              "ar": "نحن نفرح بزيارتك.",
+              "pron": "فير فْرويِن أونس إوبِر داينِن بِزُوخ"
+            }
+          ]
+        },
+        {
+          "verb": "sich interessieren für",
+          "meaning": "يهتم بـ (فعل انعكاسي مع حرف جر)",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "interessiere mich für",
+              "du": "interessierst dich für",
+              "er/sie/es": "interessiert sich für",
+              "wir": "interessieren uns für",
+              "ihr": "interessiert euch für",
+              "sie/Sie": "interessieren sich für"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "interessiert",
+              "example": {
+                "de": "Er hat sich immer für Technik interessiert.",
+                "ar": "لقد اهتم دائمًا بالتكنولوجيا.",
+                "pron": "إر هات زيش إمِر فور تِكنيك إنتِرِسِيرت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Interessierst du dich für Musik?",
+              "ar": "هل تهتم بالموسيقى؟",
+              "pron": "إنتِرِسِيرست دو ديش فور موزيك؟"
+            }
+          ]
+        },
+        {
+          "verb": "sich kümmern um",
+          "meaning": "يهتم بـ / يعتني بـ (فعل انعكاسي مع حرف جر)",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "kümmere mich um",
+              "du": "kümmerst dich um",
+              "er/sie/es": "kümmert sich um",
+              "wir": "kümmern uns um",
+              "ihr": "kümmert euch um",
+              "sie/Sie": "kümmern sich um"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "gekümmert",
+              "example": {
+                "de": "Sie kümmert sich um die kranke Nachbarin.",
+                "ar": "هي تعتني بالجارة المريضة.",
+                "pron": "زي كيمِرت زيش أوم دي كرانكِه ناخبارين"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Kümmere dich um deine Aufgaben!",
+              "ar": "اهتم بواجباتك!",
+              "pron": "كيمِرِه ديش أوم داينِه آوفغابِن!"
+            }
+          ]
+        },
+        {
+          "verb": "sich beschäftigen mit",
+          "meaning": "ينشغل بـ / يهتم بـ (فعل انعكاسي مع حرف جر)",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "beschäftige mich mit",
+              "du": "beschäftigst dich mit",
+              "er/sie/es": "beschäftigt sich mit",
+              "wir": "beschäftigen uns mit",
+              "ihr": "beschäftigt euch mit",
+              "sie/Sie": "beschäftigen sich mit"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "beschäftigt",
+              "example": {
+                "de": "Ich habe mich mit der deutschen Grammatik beschäftigt.",
+                "ar": "لقد انشغلت بقواعد اللغة الألمانية.",
+                "pron": "إش هابِه ميش ميت دير دويتشِن غراماتيك بِشيفتيخت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Womit beschäftigst du dich?",
+              "ar": "بماذا تنشغل؟",
+              "pron": "فوميت بِشيفتيخست دو ديش؟"
+            }
+          ]
+        },
+        {
+          "verb": "sich verlieben in",
+          "meaning": "يقع في الحب (فعل انعكاسي مع حرف جر)",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "verliebe mich in",
+              "du": "verliebst dich in",
+              "er/sie/es": "verliebt sich in",
+              "wir": "verlieben uns in",
+              "ihr": "verliebt euch in",
+              "sie/Sie": "verlieben sich in"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "verliebt",
+              "example": {
+                "de": "Er hat sich in seine Kollegin verliebt.",
+                "ar": "لقد وقع في حب زميلته.",
+                "pron": "إر هات زيش إن زاينِه كولِغن فيرليبت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Sie haben sich ineinander verliebt.",
+              "ar": "لقد وقعا في حب بعضهما البعض.",
+              "pron": "زي هابِن زيش إين-آيناندر فيرليبت"
+            }
+          ]
+        },
+        {
+          "verb": "sich gewöhnen an",
+          "meaning": "يعتاد على (فعل انعكاسي مع حرف جر)",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "gewöhne mich an",
+              "du": "gewöhnst dich an",
+              "er/sie/es": "gewöhnt sich an",
+              "wir": "gewöhnen uns an",
+              "ihr": "gewöhnt euch an",
+              "sie/Sie": "gewöhnen sich an"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "gewöhnt",
+              "example": {
+                "de": "Ich habe mich an das kalte Wetter gewöhnt.",
+                "ar": "لقد اعتدت على الطقس البارد.",
+                "pron": "إش هابِه ميش آن داس كالتِه فيتِر غِفونت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Gewöhnst du dich an das Leben in Deutschland?",
+              "ar": "هل تعتاد على الحياة في ألمانيا؟",
+              "pron": "غِفونست دو ديش آن داس ليبن إن دويتشلاند؟"
+            }
+          ]
+        },
+        {
+          "verb": "sich entscheiden für",
+          "meaning": "يقرر لصالح (فعل انعكاسي مع حرف جر)",
+          "type": "غير منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "entscheide mich für",
+              "du": "entscheidest dich für",
+              "er/sie/es": "entscheidet sich für",
+              "wir": "entscheiden uns für",
+              "ihr": "entscheidet euch für",
+              "sie/Sie": "entscheiden sich für"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "entschieden",
+              "example": {
+                "de": "Ich habe mich für das rote Kleid entschieden.",
+                "ar": "لقد قررت لصالح الفستان الأحمر.",
+                "pron": "إش هابِه ميش فور داس روتِه كلايت إنتشيدِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Wofür hast du dich entschieden?",
+              "ar": "ماذا قررت؟",
+              "pron": "فوفور هاست دو ديش إنتشيدِن؟"
+            }
+          ]
+        },
+        {
+          "verb": "sich unterhalten mit",
+          "meaning": "يتحدث مع (فعل انعكاسي مع حرف جر)",
+          "type": "غير منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "unterhalte mich mit",
+              "du": "unterhältst dich mit",
+              "er/sie/es": "unterhält sich mit",
+              "wir": "unterhalten uns mit",
+              "ihr": "unterhaltet euch mit",
+              "sie/Sie": "unterhalten sich mit"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "unterhalten",
+              "example": {
+                "de": "Wir haben uns lange mit den Nachbarn unterhalten.",
+                "ar": "لقد تحدثنا طويلاً مع الجيران.",
+                "pron": "فير هابِن أونس لانغِه ميت دين ناخبارِن أونتِرهالتِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Unterhältst du dich gut mit deinen Kollegen?",
+              "ar": "هل تتحدث جيدًا مع زملائك؟",
+              "pron": "أونتِرهيلتست دو ديش غوت ميت داينِن كولِغِن؟"
+            }
+          ]
+        },
+        {
+          "verb": "sich unterhalten über",
+          "meaning": "يتحدث عن (فعل انعكاسي مع حرف جر)",
+          "type": "غير منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "unterhalte mich über",
+              "du": "unterhältst dich über",
+              "er/sie/es": "underhält sich über",
+              "wir": "unterhalten uns über",
+              "ihr": "unterhaltet euch über",
+              "sie/Sie": "unterhalten sich über"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "unterhalten",
+              "example": {
+                "de": "Sie haben sich über Politik unterhalten.",
+                "ar": "لقد تحدثوا عن السياسة.",
+                "pron": "زي هابِن زيش إوبِر بوليتيك أونتِرهالتِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Worüber unterhaltet ihr euch?",
+              "ar": "عن ماذا تتحدثون؟",
+              "pron": "فور-إوبِر أونتِرهالتِت إير أويش؟"
+            }
+          ]
+        },
+        {
+          "verb": "sich bewerben um",
+          "meaning": "يتقدم لوظيفة (فعل انعكاسي مع حرف جر)",
+          "type": "غير منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "bewerbe mich um",
+              "du": "bewirbst dich um",
+              "er/sie/es": "bewirbt sich um",
+              "wir": "bewerben uns um",
+              "ihr": "bewerbt euch um",
+              "sie/Sie": "bewerben sich um"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "beworben",
+              "example": {
+                "de": "Ich habe mich um eine Stelle beworben.",
+                "ar": "لقد تقدمت لوظيفة.",
+                "pron": "إش هابِه ميش أوم آينِه شتِلِه بِفوربِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Um welche Stelle bewirbst du dich?",
+              "ar": "لوأي وظيفة تتقدم؟",
+              "pron": "أوم فيلشِه شتِلِه بِفيربست دو ديش؟"
+            }
+          ]
+        },
+        {
+          "verb": "sich bedanken bei",
+          "meaning": "يشكر عند (فعل انعكاسي مع حرف جر)",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "bedanke mich bei",
+              "du": "bedankst dich bei",
+              "er/sie/es": "bedankt sich bei",
+              "wir": "bedanken uns bei",
+              "ihr": "bedankt euch bei",
+              "sie/Sie": "bedanken sich bei"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "bedankt",
+              "example": {
+                "de": "Ich habe mich bei ihm bedankt.",
+                "ar": "لقد شكرته.",
+                "pron": "إش هابِه ميش باي إيم بِدانكت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Bedanken Sie sich bei Ihrem Lehrer!",
+              "ar": "اشكروا معلمكم!",
+              "pron": "بِدانكِن زي زيش باي إيرِم ليرِر!"
+            }
+          ]
+        },
+        {
+          "verb": "sich bedanken für",
+          "meaning": "يشكر على (فعل انعكاسي مع حرف جر)",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "bedanke mich für",
+              "du": "bedankst dich für",
+              "er/sie/es": "bedankt sich für",
+              "wir": "bedanken uns für",
+              "ihr": "bedankt euch für",
+              "sie/Sie": "bedanken sich für"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "bedankt",
+              "example": {
+                "de": "Ich bedanke mich für die Einladung.",
+                "ar": "أنا أشكر على الدعوة.",
+                "pron": "إش بِدانكِه ميش فور دي آينلادونغ"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Wofür möchtest du dich bedanken?",
+              "ar": "على ماذا تريد أن تشكر؟",
+              "pron": "فوفور موشتِست دو ديش بِدانكِن؟"
+            }
+          ]
+        },
+        {
+          "verb": "sich entschuldigen bei",
+          "meaning": "يعتذر عند (فعل انعكاسي مع حرف جر)",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "entschuldige mich bei",
+              "du": "entschuldigst dich bei",
+              "er/sie/es": "entschuldigt sich bei",
+              "wir": "entschuldigen uns bei",
+              "ihr": "entschuldigt euch bei",
+              "sie/Sie": "entschuldigen sich bei"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "entschuldigt",
+              "example": {
+                "de": "Ich habe mich bei dir entschuldigt.",
+                "ar": "لقد اعتذرت لديك.",
+                "pron": "إش هابِه ميش باي دير إنتشولديخت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Entschuldige dich bei deinem Bruder!",
+              "ar": "اعتذر لأخيك!",
+              "pron": "إنتشولديغِه ديش باي داينِم برودِر!"
+            }
+          ]
+        },
+        {
+          "verb": "sich entschuldigen für",
+          "meaning": "يعتذر عن (فعل انعكاسي مع حرف جر)",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "entschuldige mich für",
+              "du": "entschuldigst dich für",
+              "er/sie/es": "entschuldigt sich für",
+              "wir": "entschuldigen uns für",
+              "ihr": "entschuldigt euch für",
+              "sie/Sie": "entschuldigen sich für"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "entschuldigt",
+              "example": {
+                "de": "Entschuldigen Sie sich für Ihr Verhalten!",
+                "ar": "اعتذروا عن سلوككم!",
+                "pron": "إنتشولديغِن زي زيش فور إير فيرهالتِن!"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Wofür muss ich mich entschuldigen?",
+              "ar": "عن ماذا يجب أن أعتذر؟",
+              "pron": "فوفور موس إش ميش إنتشولديغِن؟"
+            }
+          ]
+        },
+        {
+          "verb": "sich verabschieden von",
+          "meaning": "يودع (فعل انعكاسي مع حرف جر)",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "verabschiede mich von",
+              "du": "verabschiedest dich von",
+              "er/sie/es": "verabschiedet sich von",
+              "wir": "verabschieden uns von",
+              "ihr": "verabschiedet euch von",
+              "sie/Sie": "verabschieden sich von"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "verabschiedet",
+              "example": {
+                "de": "Ich habe mich von meinen Freunden verabschiedet.",
+                "ar": "لقد ودعت أصدقائي.",
+                "pron": "إش هابِه ميش فون ماينِن فروِندِن فيرآبشيدِت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Verabschiede dich von deinen Gästen!",
+              "ar": "ودع ضيوفك!",
+              "pron": "فيرآبشيدِه ديش فون داينِن غِستِن!"
+            }
+          ]
+        },
+        {
+          "verb": "sich trennen von",
+          "meaning": "يفارق / ينفصل عن (فعل انعكاسي مع حرف جر)",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "trenne mich von",
+              "du": "trennst dich von",
+              "er/sie/es": "trennt sich von",
+              "wir": "trennen uns von",
+              "ihr": "trennt euch von",
+              "sie/Sie": "trennen sich von"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "getrennt",
+              "example": {
+                "de": "Sie haben sich von ihrem Partner getrennt.",
+                "ar": "لقد انفصلوا عن شريكهم.",
+                "pron": "زي هابِن زيش فون إيرِم بارتنِر غِترِنْت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Warum trennst du dich von deinem Freund?",
+              "ar": "لماذا تنفصل عن صديقك؟",
+              "pron": "فاروم ترِنست دو ديش فون داينِم فروِند؟"
+            }
+          ]
+        },
+        {
+          "verb": "sich konzentrieren auf",
+          "meaning": "يركز على (فعل انعكاسي مع حرف جر)",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "konzentriere mich auf",
+              "du": "konzentrierst dich auf",
+              "er/sie/es": "konzentriert sich auf",
+              "wir": "konzentrieren uns auf",
+              "ihr": "konzentriert euch auf",
+              "sie/Sie": "konzentrieren sich auf"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "konzentriert",
+              "example": {
+                "de": "Ich konzentriere mich auf meine Arbeit.",
+                "ar": "أنا أركز على عملي.",
+                "pron": "إش كونتسينتريره ميش آوف ماينِه أربايت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Konzentrier dich auf die Aufgabe!",
+              "ar": "ركز على المهمة!",
+              "pron": "كونتسينتريير ديش آوف دي آوفغابِه!"
+            }
+          ]
+        },
+        {
+          "verb": "sich freuen auf",
+          "meaning": "يتطلع إلى (فعل انعكاسي مع حرف جر)",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "freue mich auf",
+              "du": "freust dich auf",
+              "er/sie/es": "freut sich auf",
+              "wir": "freuen uns auf",
+              "ihr": "freut euch auf",
+              "sie/Sie": "freuen sich auf"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "gefreut",
+              "example": {
+                "de": "Ich freue mich auf das Konzert.",
+                "ar": "أنا أتطلع إلى الحفل.",
+                "pron": "إش فْرويِه ميش آوف داس كونتسِرت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Worauf freust du dich?",
+              "ar": "إلى ماذا تنتظر؟",
+              "pron": "فور-آوف فْرويست دو ديش؟"
+            }
+          ]
+        },
+        {
+          "verb": "sich informieren über",
+          "meaning": "يستفسر عن / يحصل على معلومات عن (فعل انعكاسي مع حرف جر)",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "informiere mich über",
+              "du": "informierst dich über",
+              "er/sie/es": "informiert sich über",
+              "wir": "informieren uns über",
+              "ihr": "informiert euch über",
+              "sie/Sie": "informieren sich über"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "informiert",
+              "example": {
+                "de": "Ich habe mich über die Preise informiert.",
+                "ar": "لقد استفسرت عن الأسعار.",
+                "pron": "إش هابِه ميش إوبِر دي برايزِه إنفورميِرت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Informier dich über das Thema!",
+              "ar": "احصل على معلومات عن الموضوع!",
+              "pron": "إنفورميير ديش إوبِر داس تيما!"
+            }
+          ]
+        },
+        {
+          "verb": "sich beklagen über",
+          "meaning": "يشكو من (فعل انعكاسي مع حرف جر)",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "beklage mich über",
+              "du": "beklagst dich über",
+              "er/sie/es": "beklagt sich über",
+              "wir": "beklagen uns über",
+              "ihr": "beklagt euch über",
+              "sie/Sie": "beklagen sich über"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "beklagt",
+              "example": {
+                "de": "Die Nachbarn beklagen sich über den Lärm.",
+                "ar": "الجيران يشكون من الضوضاء.",
+                "pron": "دي ناخبارِن بِكلاغِن زيش إوبِر دِن لِرم"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Worüber beklagst du dich?",
+              "ar": "من ماذا تشتكي؟",
+              "pron": "فور-إوبِر بِكلاغست دو ديش؟"
+            }
+          ]
+        },
+        {
+          "verb": "sich wenden an",
+          "meaning": "يتوجه إلى (فعل انعكاسي مع حرف جر)",
+          "type": "غير منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "wende mich an",
+              "du": "wendest dich an",
+              "er/sie/es": "wendet sich an",
+              "wir": "wenden uns an",
+              "ihr": "wendet euch an",
+              "sie/Sie": "wenden sich an"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "gewendet",
+              "example": {
+                "de": "Ich habe mich an den Lehrer gewendet.",
+                "ar": "لقد توجهت إلى المعلم.",
+                "pron": "إش هابِه ميش آن دِن ليرِر غِفيندِت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "An wen soll ich mich wenden?",
+              "ar": "إلى من يجب أن أتوجه؟",
+              "pron": "آن فين زول إش ميش فيندِن؟"
+            }
+          ]
+        },
+        {
+          "verb": "sich einigen auf",
+          "meaning": "يتفق على (فعل انعكاسي مع حرف جر)",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "einige mich auf",
+              "du": "einigst dich auf",
+              "er/sie/es": "einigt sich auf",
+              "wir": "einigen uns auf",
+              "ihr": "einigt euch auf",
+              "sie/Sie": "einigen sich auf"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "geeinigt",
+              "example": {
+                "de": "Wir haben uns auf einen Termin geeinigt.",
+                "ar": "لقد اتفقنا على موعد.",
+                "pron": "فير هابِن أونس آوف آينِن تِرمين غِآينيخت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Können wir uns auf einen Preis einigen?",
+              "ar": "هل يمكننا الاتفاق على سعر؟",
+              "pron": "كُونِن فير أونس آوف آينِن برايس آينيغِن؟"
+            }
+          ]
+        },
+        {
+          "verb": "sich verlassen auf",
+          "meaning": "يعتمد على (فعل انعكاسي مع حرف جر)",
+          "type": "غير منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "verlasse mich auf",
+              "du": "verlässt dich auf",
+              "er/sie/es": "verlässt sich auf",
+              "wir": "verlassen uns auf",
+              "ihr": "verlasst euch auf",
+              "sie/Sie": "verlassen sich auf"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "verlassen",
+              "example": {
+                "de": "Ich verlasse mich auf dich.",
+                "ar": "أنا أعتمد عليك.",
+                "pron": "إش فيرلاسِه ميش آوف ديش"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Kann ich mich auf Sie verlassen?",
+              "ar": "هل يمكنني الاعتماد عليك؟",
+              "pron": "كان إش ميش آوف زي فيرلاسِن؟"
+            }
+          ]
+        },
+        {
+          "verb": "sich freuen auf",
+          "meaning": "يتطلع إلى (فعل انعكاسي مع حرف جر)",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "freue mich auf",
+              "du": "freust dich auf",
+              "er/sie/es": "freut sich auf",
+              "wir": "freuen uns auf",
+              "ihr": "freut euch auf",
+              "sie/Sie": "freuen sich auf"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "gefreut",
+              "example": {
+                "de": "Ich freue mich auf den Urlaub.",
+                "ar": "أنا أتطلع إلى الإجازة.",
+                "pron": "إش فْرويِه ميش آوف دِن أورلاوب"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Worauf freust du dich am meisten?",
+              "ar": "إلى ماذا تنتظر أكثر شيء؟",
+              "pron": "فور-آوف فْرويست دو ديش آم مايستِن؟"
+            }
+          ]
+        }
+      ]
+    }
+  }

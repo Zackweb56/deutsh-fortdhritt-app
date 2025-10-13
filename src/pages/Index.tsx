@@ -6,15 +6,17 @@ import { ScheduleTab } from '@/components/schedule/ScheduleTab';
 import { VocabularyTab } from '@/components/vocabulary/VocabularyTab';
 import LessonsTab from '@/components/lessons/LessonsTab';
 import { ResourcesTab } from '@/components/resources/ResourcesTab';
+import { GrammarVerbsTab } from '@/components/grammar/GrammarVerbsTab';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Button } from '@/components/ui/button';
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog';
-import { GraduationCap, RefreshCw, Info, Shield } from 'lucide-react';
+import { GraduationCap, RefreshCw, Info, Shield, Menu, X } from 'lucide-react';
 
 const AppContent = () => {
   const { currentTab, isLoaded } = useApp();
   const { resetAll } = useApp();
   const [confirmOpen, setConfirmOpen] = useState(false);
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   if (!isLoaded) {
     return (
@@ -32,7 +34,8 @@ const AppContent = () => {
     <div className="min-h-screen pb-8">
       <header className="bg-card border-b border-border sticky top-0 z-50 backdrop-blur-sm bg-card/95 relative">
         <div className="container mx-auto px-4 py-4 relative">
-          <div className="absolute left-4 top-4">
+          {/* Desktop reset button */}
+          <div className="absolute left-4 top-4 hidden sm:block">
             <Button onClick={() => setConfirmOpen(true)} className="h-10 px-3 py-2 bg-primary text-primary-foreground hover:bg-primary/90">
               <RefreshCw className="h-5 w-5 ml-2" />
               <span>إعادة التعيين</span>
@@ -48,17 +51,50 @@ const AppContent = () => {
                 <p className="text-xs text-muted-foreground">أداة يومية لتطوير مهاراتك بسرعة</p>
               </div>
             </div>
+            {/* Mobile burger toggle */}
+            <div className="sm:hidden">
+              <Button
+                variant="outline"
+                className="h-10 w-10 p-0 grid place-items-center"
+                onClick={() => setMobileNavOpen(v => !v)}
+                aria-label="Toggle navigation"
+                aria-expanded={mobileNavOpen}
+              >
+                {mobileNavOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              </Button>
+            </div>
           </div>
-          <TabNavigation />
+          {/* Desktop navigation */}
+          <div className="hidden sm:block">
+            <TabNavigation />
+          </div>
         </div>
       </header>
+
+      {/* Mobile collapsible nav */}
+      {mobileNavOpen && (
+        <div className="sm:hidden border-b border-border bg-card/70 backdrop-blur px-4 py-3">
+          <div className="container mx-auto">
+            <div className="mb-3">
+              <Button onClick={() => setConfirmOpen(true)} className="w-full h-10 bg-primary text-primary-foreground hover:bg-primary/90">
+                <RefreshCw className="h-5 w-5 ml-2" />
+                <span>إعادة التعيين</span>
+              </Button>
+            </div>
+            <TabNavigation />
+          </div>
+        </div>
+      )}
 
       <main className="container mx-auto px-4 py-6">
         {currentTab === 'schedule' && <ScheduleTab />}
         {currentTab === 'vocabulary' && <VocabularyTab />}
+        {currentTab === 'grammar' && <GrammarVerbsTab />}
         {currentTab === 'lessons' && <LessonsTab />}
         {currentTab === 'resources' && <ResourcesTab />}
       </main>
+      
+      {/* ScrollToTopButton moved to global App shell */}
       
       <AlertDialog open={confirmOpen} onOpenChange={setConfirmOpen}>
         <AlertDialogContent>
@@ -101,6 +137,7 @@ const AppContent = () => {
                 <Shield className="h-4 w-4" />
                 سياسة الخصوصية
               </Link>
+              <span className="text-xs text-muted-foreground">v1.2.1</span>
             </div>
           </div>
           
