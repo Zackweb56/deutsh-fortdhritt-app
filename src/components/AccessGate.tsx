@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Lock } from "lucide-react";
-import { ACCESS_FLAG_KEY, consumeCode, getAllowedCodes, isCodeConsumed } from '@/lib/access';
+import { ACCESS_FLAG_KEY, getAllowedCodes, getFreeAccessCode, setAccessTier } from '@/lib/access';
 
 interface AccessGateProps {
   children: React.ReactNode;
@@ -22,6 +22,17 @@ const AccessGate: React.FC<AccessGateProps> = ({ children }) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const input = code.trim().toUpperCase();
+    const freeCode = getFreeAccessCode().toUpperCase();
+
+    // Allow free tier code without server verification and without single-use
+    if (input === freeCode) {
+      localStorage.setItem(ACCESS_FLAG_KEY, 'true');
+      setAccessTier('free');
+      setGranted(true);
+      setError('');
+      return;
+    }
+
     if (!allowedCodes.includes(input)) {
       setError('رمز الوصول غير صحيح. يرجى التحقق والمحاولة مرة أخرى.');
       return;
@@ -34,7 +45,16 @@ const AccessGate: React.FC<AccessGateProps> = ({ children }) => {
         body: JSON.stringify({ code: input }),
       });
       const data = await resp.json();
+      // Fallback: allow locally if server is not configured
+      const isLocal = typeof window !== 'undefined' && /^(localhost|127\.0\.0\.1|0\.0\.0\.0)$/i.test(window.location.hostname);
       if (!data?.ok) {
+        if (data?.error === 'server_not_configured' || (resp.status === 500 && isLocal)) {
+          localStorage.setItem(ACCESS_FLAG_KEY, 'true');
+          setAccessTier('full');
+          setGranted(true);
+          setError('');
+          return;
+        }
         if (data?.status === 'used') {
           setError('تم استخدام رمز الوصول بالفعل ولا يمكن استخدامه مرة أخرى.');
         } else {
@@ -43,11 +63,21 @@ const AccessGate: React.FC<AccessGateProps> = ({ children }) => {
         return;
       }
     } catch (e) {
-      setError('تعذر التحقق من الرمز. حاول لاحقًا.');
+      // Network error: if running locally, allow as full to avoid blocking dev/testing
+      const isLocal = typeof window !== 'undefined' && /^(localhost|127\.0\.0\.1|0\.0\.0\.0)$/i.test(window.location.hostname);
+      if (isLocal) {
+        localStorage.setItem(ACCESS_FLAG_KEY, 'true');
+        setAccessTier('full');
+        setGranted(true);
+        setError('');
+      } else {
+        setError('تعذر التحقق من الرمز. حاول لاحقًا.');
+      }
       return;
     }
 
     localStorage.setItem(ACCESS_FLAG_KEY, 'true');
+    setAccessTier('full');
     setGranted(true);
     setError('');
   };

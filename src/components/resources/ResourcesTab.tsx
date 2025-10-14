@@ -6,6 +6,8 @@ import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { ExternalLink, Plus, Search, Globe, BookOpen, Headphones, Mic, PenTool, MessageSquare, GraduationCap, ChevronDown, Trash2 } from 'lucide-react';
 import { toast } from 'sonner';
+import { isLimitedAccess } from '@/lib/access';
+import LockOverlay from '@/components/ui/lock-overlay';
 
 export const ResourcesTab = () => {
   const { resources, addResource, deleteResource } = useApp();
@@ -246,7 +248,7 @@ export const ResourcesTab = () => {
                 <div className="p-3 sm:p-4 border-t border-border">
                   {categoryResources.length > 0 ? (
                     <div className="space-y-2 sm:space-y-3">
-                      {categoryResources.map(resource => (
+                  {categoryResources.map(resource => (
                         <div
                           key={resource.id}
                           className="flex flex-col sm:flex-row sm:items-center gap-3 p-3 sm:p-4 rounded-lg border border-border hover:border-primary transition-all duration-200 hover:shadow-md"
@@ -256,17 +258,22 @@ export const ResourcesTab = () => {
                               {React.createElement(getCategoryIcon(resource.category), { className: "h-3 w-3 sm:h-4 sm:w-4" })}
                             </div>
                             <div className="flex-1 min-w-0">
-                              <a
-                                href={resource.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="block font-medium hover:text-primary transition-colors truncate text-sm sm:text-base"
+                              <LockOverlay
+                                isLocked={isLimitedAccess() && resource.isDefault}
+                                message="مصدر افتراضي محجوب — تواصل عبر واتساب لفتح الوصول الكامل"
                               >
-                                {resource.title}
-                              </a>
-                              <p className="text-xs sm:text-sm text-muted-foreground truncate mt-1">
-                                {resource.url}
-                              </p>
+                                <a
+                                  href={resource.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="block font-medium hover:text-primary transition-colors truncate text-sm sm:text-base"
+                                >
+                                  {resource.title}
+                                </a>
+                                <p className="text-xs sm:text-sm text-muted-foreground truncate mt-1">
+                                  {resource.url}
+                                </p>
+                              </LockOverlay>
                             </div>
                           </div>
                           
@@ -275,14 +282,16 @@ export const ResourcesTab = () => {
                               {resource.isDefault && (
                                 <Badge variant="secondary" className="text-xs">افتراضي</Badge>
                               )}
-                              <a
-                                href={resource.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="p-1.5 sm:p-2 hover:bg-accent rounded-lg transition-colors"
-                              >
-                                <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4" />
-                              </a>
+                              <LockOverlay isLocked={isLimitedAccess() && resource.isDefault}>
+                                <a
+                                  href={resource.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="p-1.5 sm:p-2 hover:bg-accent rounded-lg transition-colors"
+                                >
+                                  <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4" />
+                                </a>
+                              </LockOverlay>
                               {!resource.isDefault && (
                                 <Button
                                   variant="ghost"

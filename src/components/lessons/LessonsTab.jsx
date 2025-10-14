@@ -15,32 +15,61 @@ import {
   RotateCcw
 } from 'lucide-react';
 import { a1Lessons, a2Lessons, b1Lessons, b2Lessons } from '@/data/lessonsData';
+import { useNavigate } from 'react-router-dom';
+import { isLimitedAccess } from '@/lib/access';
+import LockOverlay from '@/components/ui/lock-overlay';
+
+const COMPLETED_KEY = 'completed-lessons-by-level';
+const LEGACY_COMPLETED_KEY = 'completed-lessons';
 
 const LessonsTab = () => {
+  const navigate = useNavigate();
   const [selectedLevel, setSelectedLevel] = useState('A1');
   const [searchTerm, setSearchTerm] = useState('');
   const [expandedLessons, setExpandedLessons] = useState(new Set());
-  const [completedLessons, setCompletedLessons] = useState(new Set());
+  const [completedByLevel, setCompletedByLevel] = useState({ A1: new Set(), A2: new Set(), B1: new Set(), B2: new Set() });
 
-  // Load completed lessons from localStorage on component mount
+  // Load completed lessons per level from localStorage on component mount (with legacy migration)
   useEffect(() => {
-    const savedCompletedLessons = localStorage.getItem('completed-lessons');
-    if (savedCompletedLessons) {
-      try {
-        const parsed = JSON.parse(savedCompletedLessons);
-        setCompletedLessons(new Set(parsed));
-      } catch (error) {
-        console.error('Error loading completed lessons:', error);
+    try {
+      const saved = localStorage.getItem(COMPLETED_KEY);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        setCompletedByLevel({
+          A1: new Set(parsed.A1 || []),
+          A2: new Set(parsed.A2 || []),
+          B1: new Set(parsed.B1 || []),
+          B2: new Set(parsed.B2 || []),
+        });
+        return;
       }
+      // Migrate legacy flat list (assume A1 to avoid data loss)
+      const legacy = localStorage.getItem(LEGACY_COMPLETED_KEY);
+      if (legacy) {
+        const parsedLegacy = JSON.parse(legacy);
+        const migrated = { A1: new Set(parsedLegacy || []), A2: new Set(), B1: new Set(), B2: new Set() };
+        setCompletedByLevel(migrated);
+        localStorage.setItem(COMPLETED_KEY, JSON.stringify({
+          A1: Array.from(migrated.A1),
+          A2: [], B1: [], B2: [],
+        }));
+        localStorage.removeItem(LEGACY_COMPLETED_KEY);
+      }
+    } catch (error) {
+      console.error('Error loading completed lessons by level:', error);
     }
   }, []);
 
-  // Save completed lessons to localStorage whenever it changes
+  // Save completed lessons by level to localStorage whenever it changes
   useEffect(() => {
-    if (completedLessons.size > 0 || localStorage.getItem('completed-lessons')) {
-      localStorage.setItem('completed-lessons', JSON.stringify([...completedLessons]));
-    }
-  }, [completedLessons]);
+    const payload = {
+      A1: Array.from(completedByLevel.A1 || []),
+      A2: Array.from(completedByLevel.A2 || []),
+      B1: Array.from(completedByLevel.B1 || []),
+      B2: Array.from(completedByLevel.B2 || []),
+    };
+    localStorage.setItem(COMPLETED_KEY, JSON.stringify(payload));
+  }, [completedByLevel]);
 
   const levels = {
     'A1': a1Lessons,
@@ -50,6 +79,7 @@ const LessonsTab = () => {
   };
 
   const currentLessons = levels[selectedLevel];
+  const currentCompleted = completedByLevel[selectedLevel] || new Set();
 
   const toggleLessonExpansion = (lessonNumber) => {
     const newExpanded = new Set(expandedLessons);
@@ -62,18 +92,27 @@ const LessonsTab = () => {
   };
 
   const toggleLessonCompletion = (lessonNumber) => {
-    const newCompleted = new Set(completedLessons);
-    if (newCompleted.has(lessonNumber)) {
-      newCompleted.delete(lessonNumber);
-    } else {
-      newCompleted.add(lessonNumber);
-    }
-    setCompletedLessons(newCompleted);
+    setCompletedByLevel(prev => {
+      const next = {
+        A1: new Set(prev.A1),
+        A2: new Set(prev.A2),
+        B1: new Set(prev.B1),
+        B2: new Set(prev.B2),
+      };
+      const setForLevel = next[selectedLevel];
+      if (setForLevel.has(lessonNumber)) {
+        setForLevel.delete(lessonNumber);
+      } else {
+        setForLevel.add(lessonNumber);
+      }
+      return next;
+    });
   };
 
   const clearCompletedLessons = () => {
-    setCompletedLessons(new Set());
-    localStorage.removeItem('completed-lessons');
+    setCompletedByLevel({ A1: new Set(), A2: new Set(), B1: new Set(), B2: new Set() });
+    localStorage.removeItem(COMPLETED_KEY);
+    localStorage.removeItem(LEGACY_COMPLETED_KEY);
   };
 
   const filteredLessons = currentLessons.lessons.filter(lesson =>
@@ -82,9 +121,11 @@ const LessonsTab = () => {
     lesson.title_en.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  const completedCount = completedLessons.size;
+  const completedCount = currentCompleted.size;
   const totalCount = currentLessons.lessons.length;
   const progressPercentage = totalCount > 0 ? (completedCount / totalCount) * 100 : 0;
+
+  const limited = isLimitedAccess();
 
   return (
     <div className="space-y-6">
@@ -172,8 +213,9 @@ const LessonsTab = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {filteredLessons.map((lesson) => {
           const isExpanded = expandedLessons.has(lesson.number);
-          const isCompleted = completedLessons.has(lesson.number);
+          const isCompleted = currentCompleted.has(lesson.number);
           
+          const shouldLock = limited; // lock all lessons for free tier
           return (
             <Card 
               key={lesson.number} 
@@ -188,6 +230,7 @@ const LessonsTab = () => {
                 boxShadow: '0 10px 15px -3px rgba(34, 197, 94, 0.1), 0 4px 6px -2px rgba(34, 197, 94, 0.05)'
               } : {}}
             >
+              <LockOverlay isLocked={shouldLock} message="دروس محجوبة — تواصل عبر واتساب لفتح الوصول الكامل">
               <div className="space-y-3">
                 {/* Lesson Header */}
                 <div className="flex items-start justify-between">
@@ -241,7 +284,13 @@ const LessonsTab = () => {
                       <Button
                         size="sm"
                         className="flex-1"
-                        onClick={() => window.open(lesson.url, '_blank')}
+                        onClick={() => {
+                          if (selectedLevel === 'A1') {
+                            navigate(`/lessons/a1/${lesson.number}`);
+                          } else {
+                            window.open(lesson.url, '_blank');
+                          }
+                        }}
                       >
                         <ExternalLink className="h-4 w-4 mr-1" />
                         ابدأ الدرس
@@ -265,7 +314,13 @@ const LessonsTab = () => {
                       variant="outline"
                       size="sm"
                       className="flex-1 text-xs"
-                      onClick={() => window.open(lesson.url, '_blank')}
+                      onClick={() => {
+                        if (selectedLevel === 'A1') {
+                          navigate(`/lessons/a1/${lesson.number}`);
+                        } else {
+                          window.open(lesson.url, '_blank');
+                        }
+                      }}
                     >
                       <ExternalLink className="h-3 w-3 mr-1" />
                       ابدأ
@@ -281,6 +336,7 @@ const LessonsTab = () => {
                   </div>
                 )}
               </div>
+              </LockOverlay>
             </Card>
           );
         })}

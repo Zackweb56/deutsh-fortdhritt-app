@@ -10,6 +10,7 @@ import About from "./pages/About";
 import AccessGate from "./components/AccessGate";
 import NotFound from "./pages/NotFound";
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import A1Lesson from "./pages/lessons/A1Lesson";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/lessons/a1/:lessonNumber" element={<A1Lesson />} />
             <Route path="/reset-access" element={<ResetAccess />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/about" element={<About />} />

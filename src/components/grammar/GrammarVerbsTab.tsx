@@ -7,6 +7,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Search, BookOpenCheck, ListChecks, Quote } from 'lucide-react';
+import { isLimitedAccess } from '@/lib/access';
+import LockOverlay from '@/components/ui/lock-overlay';
 import a1Data from '@/data/grammar/a1.json';
 import a2Data from '@/data/grammar/a2.json';
 
@@ -158,36 +160,38 @@ export const GrammarVerbsTab = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {grammar.map((topic, idx) => (
               <Card key={idx} className="p-4">
-                <h3 className="text-lg font-semibold mb-2">{topic.title}</h3>
-                {topic.explanation && (
-                  <p className="text-sm text-muted-foreground mb-3 leading-relaxed">
-                    {topic.explanation}
-                  </p>
-                )}
+                <LockOverlay isLocked={isLimitedAccess()} message="القواعد محجوبة — تواصل عبر واتساب لفتح الوصول الكامل">
+                  <h3 className="text-lg font-semibold mb-2">{topic.title}</h3>
+                  {topic.explanation && (
+                    <p className="text-sm text-muted-foreground mb-3 leading-relaxed">
+                      {topic.explanation}
+                    </p>
+                  )}
 
-                {/* Render table data if present */}
-                {topic.table && (
-                  <div className="mb-3 overflow-x-auto">
-                    {renderFlexibleTable(topic.table)}
-                  </div>
-                )}
-
-                {Array.isArray(topic.examples) && topic.examples.length > 0 && (
-                  <div className="space-y-2">
-                    <div className="text-sm font-medium">أمثلة:</div>
-                    <div className="space-y-2">
-                      {topic.examples.map((ex, i) => (
-                        <div key={i} className="p-2 rounded border border-border">
-                          <div className="font-medium">{ex.de}</div>
-                          <div className="text-sm text-muted-foreground">{ex.ar}</div>
-                          {ex.pron && (
-                            <div className="text-xs text-muted-foreground mt-1">{ex.pron}</div>
-                          )}
-                        </div>
-                      ))}
+                  {/* Render table data if present */}
+                  {topic.table && (
+                    <div className="mb-3 overflow-x-auto">
+                      {renderFlexibleTable(topic.table)}
                     </div>
-                  </div>
-                )}
+                  )}
+
+                  {Array.isArray(topic.examples) && topic.examples.length > 0 && (
+                    <div className="space-y-2">
+                      <div className="text-sm font-medium">أمثلة:</div>
+                      <div className="space-y-2">
+                        {topic.examples.map((ex, i) => (
+                          <div key={i} className="p-2 rounded border border-border">
+                            <div className="font-medium">{ex.de}</div>
+                            <div className="text-sm text-muted-foreground">{ex.ar}</div>
+                            {ex.pron && (
+                              <div className="text-xs text-muted-foreground mt-1">{ex.pron}</div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </LockOverlay>
               </Card>
             ))}
           </div>
@@ -223,6 +227,7 @@ export const GrammarVerbsTab = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
             {filteredVerbs.map((v, idx) => (
               <Card key={idx} className="p-4 flex flex-col gap-3">
+                <LockOverlay isLocked={isLimitedAccess()} message="الأفعال محجوبة — تواصل عبر واتساب لفتح الوصول الكامل">
                 <div className="flex items-start justify-between gap-2">
                   <div>
                     <div className="text-xl font-bold text-accent">{v.verb}</div>
@@ -300,6 +305,7 @@ export const GrammarVerbsTab = () => {
                     </AccordionItem>
                   </Accordion>
                 )}
+                </LockOverlay>
               </Card>
             ))}
           </div>

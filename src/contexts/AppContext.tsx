@@ -493,6 +493,11 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
       resources: createDefaultResources(),
       currentTab: 'schedule',
     }));
+    try {
+      // Also clear lessons completion (both new and legacy keys)
+      localStorage.removeItem('completed-lessons-by-level');
+      localStorage.removeItem('completed-lessons');
+    } catch {}
   };
 
   return (

@@ -24,6 +24,8 @@ import { Search, Trash2, Download, ArrowUpDown } from 'lucide-react';
 import { toast } from 'sonner';
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
+import { isLimitedAccess } from '@/lib/access';
+import LockOverlay from '@/components/ui/lock-overlay';
 
 type SortField = 'german' | 'pronunciation' | 'translation' | 'dateAdded';
 type SortDirection = 'asc' | 'desc';
@@ -164,10 +166,12 @@ export const VocabularyTable = () => {
             className="pr-10"
           />
         </div>
-        <Button onClick={handleExportPDF} className="gap-2 bg-neutral-800 text-neutral-foreground">
-          <Download className="h-4 w-4" />
-          <span>تصدير PDF</span>
-        </Button>
+        <LockOverlay isLocked={isLimitedAccess()} message="التصدير محجوب — تواصل عبر واتساب لفتح الوصول الكامل">
+          <Button onClick={handleExportPDF} className="gap-2 bg-neutral-800 text-neutral-foreground">
+            <Download className="h-4 w-4" />
+            <span>تصدير PDF</span>
+          </Button>
+        </LockOverlay>
       </div>
 
       <div className="rounded-lg border overflow-hidden">
