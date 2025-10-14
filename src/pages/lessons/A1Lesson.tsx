@@ -40,6 +40,9 @@ const A1Lesson: React.FC = () => {
   const culturalNotes: { title: string; content: string }[] = content?.cultural_notes || [];
   const pronunciationTips: { tip: string; explanation: string }[] = content?.pronunciation_tips || [];
   const exercises: any[] = content?.exercises || [];
+  const commonMistakes: { mistake: string; correction: string; example: string }[] = content?.common_mistakes || [];
+  const resources: { type: string; title: string; url: string; description: string }[] = content?.resources || [];
+  const reviewQuestions: { question: string; answer: string }[] = content?.review_questions || [];
 
   return (
     <div className="container mx-auto px-4 py-6 space-y-6" dir="rtl">
@@ -57,15 +60,43 @@ const A1Lesson: React.FC = () => {
       </div>
 
       <Card className="p-6 space-y-4">
-        <h2 className="text-xl font-semibold">ملخص الدرس</h2>
+        <div className="flex items-center justify-between">
+          <h2 className="text-xl font-semibold">ملخص الدرس</h2>
+          <div className="flex gap-2 text-xs">
+            {content?.duration && (
+              <Badge variant="outline">{content.duration}</Badge>
+            )}
+            {content?.difficulty && (
+              <Badge variant="secondary">{content.difficulty}</Badge>
+            )}
+          </div>
+        </div>
         <p className="text-sm text-muted-foreground leading-relaxed">{content?.summary || lesson.description}</p>
+        
+        {content?.detailed_description && (
+          <div className="mt-4 p-3 bg-muted/50 rounded-lg">
+            <h3 className="font-medium mb-2">وصف مفصل</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">{content.detailed_description}</p>
+          </div>
+        )}
+        
+        {content?.target_audience && (
+          <div className="mt-3 p-3 bg-gradient-to-r from-yellow-500/10 via-red-500/10 to-black/20 border border-yellow-500/30 rounded-lg">
+            <h3 className="font-medium mb-1 text-yellow-400">الجمهور المستهدف</h3>
+            <p className="text-sm text-yellow-300">{content.target_audience}</p>
+          </div>
+        )}
+        
         {content?.objectives && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2">
-            {content.objectives.map((o: string, i: number) => (
-              <div key={i} className="text-sm px-3 py-2 rounded-lg border border-border bg-card/60">
-                {o}
-              </div>
-            ))}
+          <div className="mt-4">
+            <h3 className="font-medium mb-2">أهداف الدرس</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              {content.objectives.map((o: string, i: number) => (
+                <div key={i} className="text-sm px-3 py-2 rounded-lg border border-border bg-card/60">
+                  {o}
+                </div>
+              ))}
+            </div>
           </div>
         )}
       </Card>
@@ -233,42 +264,138 @@ const A1Lesson: React.FC = () => {
       )}
 
       {exercises.length > 0 && (
-        <Card className="p-6 space-y-3">
-          <h2 className="text-xl font-semibold">تمارين سريعة</h2>
+        <Card className="p-6 space-y-4">
+          <h2 className="text-xl font-semibold">تمارين للتدريب</h2>
+          <p className="text-sm text-muted-foreground">حل هذه التمارين على الورق لتعزيز فهمك للدرس</p>
           {exercises.map((ex, i) => (
-            <div key={i} className="space-y-2">
-              <div className="font-medium">{ex.title}</div>
+            <div key={i} className="space-y-3 p-4 border border-border rounded-lg">
+              <div className="flex items-center gap-2">
+                <Badge variant="outline">{ex.type === 'matching' ? 'مطابقة' : ex.type === 'fill_blanks' ? 'إكمال الفراغات' : ex.type === 'role_play' ? 'تمثيل الأدوار' : ex.type}</Badge>
+                <h3 className="font-medium">{ex.title}</h3>
+              </div>
+              
+              {ex.instructions && (
+                <p className="text-sm text-muted-foreground bg-muted/50 p-2 rounded">{ex.instructions}</p>
+              )}
+              
               {ex.type === 'match' || ex.type === 'matching' ? (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
-                  {ex.pairs?.map((p: any, j: number) => (
-                    <div key={j} className="p-2 rounded border border-border flex items-center justify-between">
-                      <span dir="ltr">{p.left}</span>
-                      <span className="text-muted-foreground">{p.right}</span>
-                    </div>
-                  ))}
+                <div className="space-y-2">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                    {ex.pairs?.map((p: any, j: number) => (
+                      <div key={j} className="p-3 rounded border border-border flex items-center justify-between hover:bg-muted/30 transition-colors">
+                        <span dir="ltr" className="font-medium">{p.left}</span>
+                        <span className="text-muted-foreground">{p.right}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               ) : ex.type === 'fill_blanks' ? (
-                <div className="space-y-2">
-                  {ex.dialogue?.map((d: any, j: number) => (
-                    <div key={j} className="p-2 rounded border border-border text-sm" dir="ltr">{d.text}</div>
-                  ))}
+                <div className="space-y-3">
+                  <div className="space-y-2">
+                    {ex.dialogue?.map((d: any, j: number) => (
+                      <div key={j} className="p-3 rounded border border-border text-sm bg-muted/20" dir="ltr">
+                        <span className="font-medium">{d.speaker}: </span>
+                        {d.text}
+                      </div>
+                    ))}
+                  </div>
                   {ex.options && (
-                    <div className="flex flex-wrap gap-2 text-xs">
-                      {ex.options.map((op: string, k: number) => (
-                        <span key={k} className="px-2 py-1 rounded border bg-card/60" dir="ltr">{op}</span>
-                      ))}
+                    <div>
+                      <p className="text-sm font-medium mb-2">الكلمات المتاحة:</p>
+                      <div className="flex flex-wrap gap-2 text-xs">
+                        {ex.options.map((op: string, k: number) => (
+                          <span key={k} className="px-3 py-1 rounded-full border bg-card/60 hover:bg-primary/10 transition-colors" dir="ltr">{op}</span>
+                        ))}
+                      </div>
                     </div>
                   )}
                 </div>
               ) : ex.type === 'role_play' ? (
-                <ul className="list-disc pr-5 text-sm space-y-1">
-                  {ex.scenarios?.map((s: string, j: number) => (<li key={j}>{s}</li>))}
-                </ul>
+                <div className="space-y-2">
+                  <p className="text-sm text-muted-foreground">سيناريوهات للتدريب:</p>
+                  <ul className="list-disc pr-5 text-sm space-y-1">
+                    {ex.scenarios?.map((s: string, j: number) => (
+                      <li key={j} className="p-2 rounded bg-muted/30">{s}</li>
+                    ))}
+                  </ul>
+                </div>
               ) : null}
             </div>
           ))}
         </Card>
       )}
+
+      {commonMistakes.length > 0 && (
+        <Card className="p-6 space-y-4">
+          <h2 className="text-xl font-semibold">أخطاء شائعة</h2>
+          <div className="space-y-3">
+            {commonMistakes.map((mistake, i) => (
+              <div key={i} className="p-4 border border-red-500/30 rounded-lg bg-gradient-to-r from-red-500/10 to-red-600/10">
+                <div className="flex items-start gap-3">
+                  <div className="text-red-500 font-bold text-lg">❌</div>
+                  <div className="flex-1">
+                    <h3 className="font-medium text-red-400 mb-1">{mistake.mistake}</h3>
+                    <p className="text-sm text-red-300 mb-2">{mistake.correction}</p>
+                    {mistake.example && (
+                      <div className="text-xs font-mono bg-red-500/10 border border-red-500/20 p-2 rounded" dir="ltr">
+                        {mistake.example}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Card>
+      )}
+
+      {resources.length > 0 && (
+        <Card className="p-6 space-y-4">
+          <h2 className="text-xl font-semibold">موارد إضافية</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            {resources.map((resource, i) => (
+              <div key={i} className="p-3 border border-border rounded-lg hover:bg-muted/30 transition-colors">
+                <div className="flex items-center gap-2 mb-2">
+                  <Badge variant="outline">{resource.type}</Badge>
+                  <h3 className="font-medium">{resource.title}</h3>
+                </div>
+                <p className="text-sm text-muted-foreground mb-2">{resource.description}</p>
+                <a 
+                  href={resource.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline text-sm"
+                >
+                  زيارة الرابط →
+                </a>
+              </div>
+            ))}
+          </div>
+        </Card>
+      )}
+
+      {reviewQuestions.length > 0 && (
+        <Card className="p-6 space-y-4">
+          <h2 className="text-xl font-semibold">أسئلة المراجعة</h2>
+          <div className="space-y-4">
+            {reviewQuestions.map((qa, i) => (
+              <div key={i} className="p-4 border border-border rounded-lg">
+                <h3 className="font-medium mb-2 text-primary">سؤال {i + 1}:</h3>
+                <p className="text-sm mb-3">{qa.question}</p>
+                <details className="group">
+                  <summary className="cursor-pointer text-sm font-medium text-muted-foreground hover:text-foreground">
+                    عرض الإجابة
+                  </summary>
+                  <div className="mt-2 p-3 bg-muted/50 rounded text-sm">
+                    {qa.answer}
+                  </div>
+                </details>
+              </div>
+            ))}
+          </div>
+        </Card>
+      )}
+
     </div>
   );
 };
