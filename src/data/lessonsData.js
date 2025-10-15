@@ -6,49 +6,49 @@ export const a1Lessons = {
     {
       "number": 1,
       "title": "التحيات",
-      "title_en": "Greetings",
+      "title_en": "Begrüßungen",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-1",
       "description": "تعلم كيفية قول مرحبا، وداعا، والتحيات الأساسية بالألمانية."
     },
     {
       "number": 2,
       "title": "العبارات الشائعة",
-      "title_en": "Common Phrases",
+      "title_en": "Häufige Ausdrücke",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-2",
       "description": "عبارات مفيدة للحياة اليومية للمحادثات المهذبة."
     },
     {
       "number": 3,
       "title": "الأرقام (الجزء الأول)",
-      "title_en": "Numbers (Part 1)",
+      "title_en": "Zahlen (Teil 1)",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-3",
       "description": "تعلم الأرقام من 1 إلى 20 ونطقها."
     },
     {
       "number": 4,
       "title": "الأرقام (الجزء الثاني)",
-      "title_en": "Numbers (Part 2)",
+      "title_en": "Zahlen (Teil 2)",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-4",
       "description": "تعلم الأرقام من 21 إلى 100 وممارسة العد."
     },
     {
       "number": 5,
       "title": "الأبجدية",
-      "title_en": "Alphabets",
+      "title_en": "Alphabet",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-5",
       "description": "تعلم الأبجدية الألمانية وكيفية تهجئة الأسماء."
     },
     {
       "number": 6,
       "title": "التعريف بالنفس",
-      "title_en": "Introducing Yourself",
+      "title_en": "Sich vorstellen",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-6",
       "description": "تعلم كيفية التعريف بنفسك وطرح الأسئلة الشخصية الأساسية."
     },
     {
       "number": 7,
       "title": "التعرف على شخص ما",
-      "title_en": "Getting to Know Someone",
+      "title_en": "Jemanden kennenlernen",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-7",
       "description": "ممارسة الحوارات البسيطة عند مقابلة أشخاص جدد."
     },
@@ -62,224 +62,224 @@ export const a1Lessons = {
     {
       "number": 9,
       "title": "هيكل الجملة (الجزء الأول)",
-      "title_en": "Sentence Structure (Part 1)",
+      "title_en": "Satzstruktur (Teil 1)",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-9",
       "description": "تعلم الهيكل الأساسي للجملة الألمانية (ترتيب الفاعل-الفعل-المفعول)."
     },
     {
       "number": 10,
       "title": "هيكل الجملة (الجزء الثاني)",
-      "title_en": "Sentence Structure (Part 2)",
+      "title_en": "Satzstruktur (Teil 2)",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-10",
       "description": "فهم كيف تتغير مواقع الأفعال في أسئلة نعم/لا وأسئلة الاستفهام."
     },
     {
       "number": 11,
       "title": "الضمائر",
-      "title_en": "Pronouns",
+      "title_en": "Pronomen",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-11",
       "description": "تعلم الضمائر الشخصية (ich, du, er, sie, es، إلخ)."
     },
     {
       "number": 12,
       "title": "تصريف الأفعال (الجزء الأول)",
-      "title_en": "Verb Conjugation (Part 1)",
+      "title_en": "Verbkonjugation (Teil 1)",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-12",
       "description": "تعلم كيفية تصريف الأفعال العادية في الزمن الحاضر."
     },
     {
       "number": 13,
       "title": "ما هو الفعل؟",
-      "title_en": "What is a Verb?",
+      "title_en": "Was ist ein Verb?",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-13",
       "description": "فهم ما هي الأفعال ودورها في الجمل الألمانية."
     },
     {
       "number": 14,
       "title": "تصريف الأفعال (الجزء الثاني)",
-      "title_en": "Verb Conjugation (Part 2)",
+      "title_en": "Verbkonjugation (Teil 2)",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-14",
       "description": "تعلم أنماط تصريف الأفعال غير العادية."
     },
     {
       "number": 15,
       "title": "تصريف الأفعال (الجزء الثالث)",
-      "title_en": "Verb Conjugation (Part 3)",
+      "title_en": "Verbkonjugation (Teil 3)",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-15",
       "description": "ممارسة نهايات الأفعال وبناء الجمل."
     },
     {
       "number": 16,
       "title": "الأرقام (الجزء الثالث)",
-      "title_en": "Numbers (Part 3)",
+      "title_en": "Zahlen (Teil 3)",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-16",
       "description": "استخدام الأرقام للأسعار وأرقام الهواتف والتواريخ."
     },
     {
       "number": 17,
       "title": "الصفات والأضداد",
-      "title_en": "Adjectives and Opposites",
+      "title_en": "Adjektive und Gegenteile",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-17",
       "description": "تعلم الصفات الشائعة وأضدادها."
     },
     {
       "number": 18,
       "title": "تقديم شخص آخر",
-      "title_en": "Introducing Someone",
+      "title_en": "Jemanden vorstellen",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-18",
       "description": "كيفية تقديم شخص آخر بالألمانية."
     },
     {
       "number": 19,
       "title": "أدوات التعريف",
-      "title_en": "Articles (Definite)",
+      "title_en": "Artikel (bestimmt)",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-19",
       "description": "تعلم der, die, das ومتى نستخدمها."
     },
     {
       "number": 20,
       "title": "أدوات التنكير",
-      "title_en": "Articles (Indefinite)",
+      "title_en": "Artikel (unbestimmt)",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-20",
       "description": "تعلم ein, eine، وكيفية استخدامها مع الأسماء."
     },
     {
       "number": 21,
       "title": "أدوات النفي",
-      "title_en": "Articles (Negative)",
+      "title_en": "Artikel (verneinend)",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-21",
       "description": "تعلم kein/keine لصنع جمل نافية."
     },
     {
       "number": 22,
       "title": "الوقت (الرسمي)",
-      "title_en": "Time (Official)",
+      "title_en": "Zeit (offiziell)",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-22",
       "description": "تعلم قول الوقت الرسمي باستخدام الساعة 24 ساعة."
     },
     {
       "number": 23,
       "title": "الوقت (غير الرسمي)",
-      "title_en": "Time (Unofficial)",
+      "title_en": "Zeit (inoffiziell)",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-23",
       "description": "تعلم كيف يعبر الألمان عن الوقت بشكل غير رسمي."
     },
     {
       "number": 24,
       "title": "الضمائر الملكية (المرفوع)",
-      "title_en": "Possessive Pronouns (Nominative)",
+      "title_en": "Possessivpronomen (Nominativ)",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-24",
       "description": "تعلم mein, dein, sein, ihr، إلخ في حالة الرفع."
     },
     {
       "number": 25,
       "title": "عائلتي",
-      "title_en": "My Family",
+      "title_en": "Meine Familie",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-25",
       "description": "تحدث عن أفراد عائلتك والعلاقات."
     },
     {
       "number": 26,
       "title": "أدوات النصب",
-      "title_en": "Accusative Articles",
+      "title_en": "Akkusativ-Artikel",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-26",
       "description": "تعلم كيف تتغير الأدوات في حالة النصب."
     },
     {
       "number": 27,
       "title": "الضمائر الملكية (النصب)",
-      "title_en": "Possessive Pronouns (Accusative)",
+      "title_en": "Possessivpronomen (Akkusativ)",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-27",
       "description": "استخدام الضمائر الملكية بشكل صحيح في جمل النصب."
     },
     {
       "number": 28,
       "title": "الفعل المساعد (möchten)",
-      "title_en": "Modal Verb (möchten)",
+      "title_en": "Modalverb (möchten)",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-28",
       "description": "تعلم كيفية استخدام möchten للتعبير عن الرغبات بأدب."
     },
     {
       "number": 29,
       "title": "أسئلة الاستفهام",
-      "title_en": "W-Questions",
+      "title_en": "W-Fragen",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-29",
       "description": "تشكيل واستخدام الأسئلة مع wer, was, wo, wie, warum، إلخ."
     },
     {
       "number": 30,
       "title": "في المطعم",
-      "title_en": "In the Restaurant",
+      "title_en": "Im Restaurant",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-30",
       "description": "طلب الطعام والشراب في مطعم ألماني."
     },
     {
       "number": 31,
       "title": "الضمائر الشخصية (النصب)",
-      "title_en": "Personal Pronouns (Accusative)",
+      "title_en": "Personalpronomen (Akkusativ)",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-31",
       "description": "تعلم mich, dich, ihn, sie, es، إلخ."
     },
     {
       "number": 32,
       "title": "أدوات الجر",
-      "title_en": "Dative Articles",
+      "title_en": "Dativ-Artikel",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-32",
       "description": "تعلم dem, der, den، وكيفية استخدامها."
     },
     {
       "number": 33,
       "title": "الأرقام الترتيبية",
-      "title_en": "Ordinal Numbers",
+      "title_en": "Ordnungszahlen",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-33",
       "description": "تعلم أول، ثاني، ثالث، إلخ بالألمانية."
     },
     {
       "number": 34,
       "title": "أسئلة الوقت",
-      "title_en": "Questions of Time",
+      "title_en": "Zeitfragen",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-34",
       "description": "اسأل وأجب على أسئلة حول الوقت والجداول."
     },
     {
       "number": 35,
       "title": "الضمائر الملكية (الجر)",
-      "title_en": "Possessive Pronouns (Dative)",
+      "title_en": "Possessivpronomen (Dativ)",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-35",
       "description": "استخدام الضمائر الملكية بشكل صحيح في حالة الجر."
     },
     {
       "number": 36,
       "title": "الضمائر الشخصية (الجر)",
-      "title_en": "Personal Pronouns (Dative)",
+      "title_en": "Personalpronomen (Dativ)",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-36",
       "description": "تعلم mir, dir, ihm, ihr, uns, euch، إلخ."
     },
     {
       "number": 37,
       "title": "الأفعال المنفصلة",
-      "title_en": "Separable Verbs",
+      "title_en": "Trennbare Verben",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-37",
       "description": "فهم واستخدام الأفعال ذات البادئات المنفصلة في الجمل."
     },
     {
       "number": 38,
       "title": "الروتين اليومي",
-      "title_en": "Daily Routine",
+      "title_en": "Tagesablauf",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-38",
       "description": "وصف أنشطتك اليومية باستخدام الأفعال الانعكاسية."
     },
     {
       "number": 39,
       "title": "الجمل الأمرية",
-      "title_en": "Imperative Sentences",
+      "title_en": "Imperativsätze",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-39",
       "description": "تعلم كيفية إعطاء الأوامر والاقتراحات."
     },
     {
       "number": 40,
       "title": "إعطاء الاتجاهات",
-      "title_en": "Giving Directions",
+      "title_en": "Wegbeschreibung",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-40",
       "description": "اسأل وافهم الاتجاهات في المدينة."
     },
@@ -293,168 +293,168 @@ export const a1Lessons = {
     {
       "number": 42,
       "title": "الأفعال غير المنفصلة",
-      "title_en": "Non-Separable Verbs",
+      "title_en": "Untrennbare Verben",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-42",
       "description": "تعلم الأفعال ذات البادئات غير المنفصلة مثل be-, ent-, ver-."
     },
     {
       "number": 43,
       "title": "التحدث عن الصحة",
-      "title_en": "Talking about Health",
+      "title_en": "Über Gesundheit sprechen",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-43",
       "description": "وصف الأعراض والتحدث عن الذهاب للطبيب."
     },
     {
       "number": 44,
       "title": "الماضي التام (الجزء الأول)",
-      "title_en": "Past Perfect (Part 1)",
+      "title_en": "Perfekt (Teil 1)",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-44",
       "description": "تعلم هيكل زمن الماضي التام (Perfekt)."
     },
     {
       "number": 45,
       "title": "الماضي التام (الجزء الثاني)",
-      "title_en": "Past Perfect (Part 2)",
+      "title_en": "Perfekt (Teil 2)",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-45",
       "description": "استخدام haben أو sein كأفعال مساعدة في زمن Perfekt."
     },
     {
       "number": 46,
       "title": "الماضي التام (الجزء الثالث)",
-      "title_en": "Past Perfect (Part 3)",
+      "title_en": "Perfekt (Teil 3)",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-46",
       "description": "ممارسة أشكال التصريف الثالث وأمثلة الجمل."
     },
     {
       "number": 47,
       "title": "أنشطة العطلة",
-      "title_en": "Vacation Activities",
+      "title_en": "Urlaubsaktivitäten",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-47",
       "description": "تحدث عما فعلته خلال العطل."
     },
     {
       "number": 48,
       "title": "في السوبر ماركت",
-      "title_en": "In the Supermarket",
+      "title_en": "Im Supermarkt",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-48",
       "description": "مفردات وحوارات للتسوق."
     },
     {
       "number": 49,
       "title": "الطقس",
-      "title_en": "Weather",
+      "title_en": "Wetter",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-49",
       "description": "تحدث عن الطقس باستخدام الصفات والأفعال."
     },
     {
       "number": 50,
       "title": "ترتيب المواعيد",
-      "title_en": "Fixing Appointments",
+      "title_en": "Termine vereinbaren",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-50",
       "description": "ترتيب وتأكيد المواعيد بأدب."
     },
     {
       "number": 51,
       "title": "كتابة الرسائل - الدعوة",
-      "title_en": "Letter Writing – Invitation",
+      "title_en": "Brief schreiben – Einladung",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-51",
       "description": "كتابة رسالة دعوة بسيطة بالألمانية."
     },
     {
       "number": 52,
       "title": "الإعجاب وعدم الإعجاب",
-      "title_en": "Likes and Dislikes",
+      "title_en": "Vorlieben und Abneigungen",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-52",
       "description": "التعبير عما تحبه أو لا تحبه باستخدام gern/nicht gern."
     },
     {
       "number": 53,
       "title": "ضمير الاستفهام 'Welch-'",
-      "title_en": "Interrogative Pronoun 'Welch-'",
+      "title_en": "Interrogativpronomen 'Welch-'",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-53",
       "description": "تعلم كيفية استخدام 'welcher, welche, welches'."
     },
     {
       "number": 54,
       "title": "أداة الإشارة 'dies-'",
-      "title_en": "Demonstrative Article 'dies-'",
+      "title_en": "Demonstrativartikel 'dies-'",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-54",
       "description": "استخدام 'dieser, diese, dieses' للإشارة إلى الأشياء."
     },
     {
       "number": 55,
       "title": "شراء الملابس",
-      "title_en": "Buying Clothes",
+      "title_en": "Kleidung kaufen",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-55",
       "description": "مفردات وحوارات لشراء الملابس."
     },
     {
       "number": 56,
       "title": "استئجار تاكسي",
-      "title_en": "Hiring a Taxi",
+      "title_en": "Taxi bestellen",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-56",
       "description": "ممارسة العبارات المفيدة لركوب التاكسي."
     },
     {
       "number": 57,
       "title": "ظروف الزمن",
-      "title_en": "Adverbs of Time",
+      "title_en": "Zeitadverbien",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-57",
       "description": "تعلم ظروف الزمن الشائعة مثل heute, morgen, gestern."
     },
     {
       "number": 58,
       "title": "المحادثة الهاتفية",
-      "title_en": "Telephonic Conversation",
+      "title_en": "Telefongespräch",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-58",
       "description": "إجراء والرد على المكالمات الهاتفية بالألمانية."
     },
     {
       "number": 59,
       "title": "عند الطبيب",
-      "title_en": "At the Doctor's",
+      "title_en": "Beim Arzt",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-59",
       "description": "وصف مشاكل صحتك وفهم أسئلة الطبيب."
     },
     {
       "number": 60,
       "title": "كتابة الرسائل - حجز الفندق",
-      "title_en": "Letter Writing – Hotel Reservation",
+      "title_en": "Brief schreiben – Hotelreservierung",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-60",
       "description": "كتابة بريد إلكتروني رسمي قصير لحجز غرفة فندق."
     },
     {
       "number": 61,
       "title": "ملء النموذج",
-      "title_en": "Filling up a Form",
+      "title_en": "Formular ausfüllen",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-61",
       "description": "تعلم حقول النماذج الشائعة والمفردات."
     },
     {
       "number": 62,
       "title": "مكتب البريد",
-      "title_en": "The Post Office",
+      "title_en": "Die Post",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-62",
       "description": "إرسال الرسائل أو الطرود في مكاتب البريد الألمانية."
     },
     {
       "number": 63,
       "title": "البنك",
-      "title_en": "The Bank",
+      "title_en": "Die Bank",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-63",
       "description": "مفردات أساسية للخدمات المصرفية وفتح حساب."
     },
     {
       "number": 64,
       "title": "البحث عن شقة",
-      "title_en": "Looking for an Apartment",
+      "title_en": "Wohnung suchen",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-64",
       "description": "تحدث عن السكن والإيجار واسأل عن الشقق."
     },
     {
       "number": 65,
       "title": "شراء تذكرة قطار",
-      "title_en": "Buying a Train Ticket",
+      "title_en": "Fahrkarte kaufen",
       "url": "https://learngermanoriginal.com/courses/a1-course/lesson-65",
       "description": "ممارسة الحوارات لشراء التذاكر والسؤال عن الطرق."
     }
@@ -1024,56 +1024,56 @@ export const b2Lessons = {
     {
       "number": 1,
       "title": "حروف العطف المنفصلة",
-      "title_en": "Discontinuous Conjunctions",
+      "title_en": "Korrelierende Konjunktionen",
       "url": "https://learngermanoriginal.com/courses/b2-course/lesson-1",
       "description": "تعلم حروف العطف المنفصلة مثل \"entweder…oder\"، \"weder…noch\"، \"zwar…aber\" إلخ."
     },
     {
       "number": 2,
       "title": "البادئات المنفصلة (الجزء الأول)",
-      "title_en": "Separable prefixes (Part 1)",
+      "title_en": "Trennbare Präfixe (Teil 1)",
       "url": "https://learngermanoriginal.com/courses/b2-course/lesson-2",
       "description": "تعلم عن البادئات المنفصلة – auf, aus, an, ab, ein, bei, entgegen."
     },
     {
       "number": 3,
       "title": "البادئات المنفصلة (الجزء الثاني)",
-      "title_en": "Separable prefixes (Part 2)",
+      "title_en": "Trennbare Präfixe (Teil 2)",
       "url": "https://learngermanoriginal.com/courses/b2-course/lesson-3",
       "description": "تعلم البادئات المنفصلة مثل entlang, gleich, gegenüber, los, mit, fort."
     },
     {
       "number": 4,
       "title": "البادئات المنفصلة (الجزء الثالث)",
-      "title_en": "Separable prefixes (Part 3)",
+      "title_en": "Trennbare Präfixe (Teil 3)",
       "url": "https://learngermanoriginal.com/courses/b2-course/lesson-4",
       "description": "تعلم البادئات المنفصلة مثل heraus, hinein, nach, vor, weg, zu, zurück."
     },
     {
       "number": 5,
       "title": "البادئات المنفصلة (الجزء الرابع)",
-      "title_en": "Separable prefixes (Part 4)",
+      "title_en": "Trennbare Präfixe (Teil 4)",
       "url": "https://learngermanoriginal.com/courses/b2-course/lesson-5",
       "description": "تعلم البادئات المنفصلة مثل zusammen, um, durch, wieder, wider, weiter, unter."
     },
     {
       "number": 6,
       "title": "البادئات غير المنفصلة (الجزء الأول)",
-      "title_en": "Inseparable prefixes (Part 1)",
+      "title_en": "Untrennbare Präfixe (Teil 1)",
       "url": "https://learngermanoriginal.com/courses/b2-course/lesson-6",
       "description": "تعلم عن البادئات غير المنفصلة – be-, er-, ent-, emp-, ge-."
     },
     {
       "number": 7,
       "title": "البادئات غير المنفصلة (الجزء الثاني)",
-      "title_en": "Inseparable prefixes (Part 2)",
+      "title_en": "Untrennbare Präfixe (Teil 2)",
       "url": "https://learngermanoriginal.com/courses/b2-course/lesson-7",
       "description": "تعلم عن البادئات غير المنفصلة – hinter-, miss-, ver-, wider-, zer-."
     },
     {
       "number": 8,
       "title": "بدائل المبني للمجهول",
-      "title_en": "Passive substitutes",
+      "title_en": "Passiversatz",
       "url": "https://learngermanoriginal.com/courses/b2-course/lesson-8",
       "description": "تعلم كيفية تشكيل البدائل للمبني للمجهول."
     }

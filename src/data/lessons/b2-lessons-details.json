@@ -1,0 +1,2021 @@
+[
+    {
+        "lessonNumber": 1,
+        "title": "حروف العطف المنفصلة | Konnektoren für Gegensatz und Alternative",
+        "title_en": "Discontinuous Conjunctions",
+        "summary": "في هذا الدرس المتقدم، ستتعلم استخدام حروف العطف المنفصلة في اللغة الألمانية التي تربط بين الجمل والعبارات بطريقة معقدة ومتقدمة، مع التركيز على الاستخدام الصحيح في السياقات الرسمية والأكاديمية.",
+        "detailed_description": "حروف العطف المنفصلة هي أدوات لغوية متقدمة تُستخدم للتعبير عن التناقض، البدائل، والقيود في الجمل الألمانية. هذه البنى النحوية تتطلب فهمًا عميقًا لتراكيب الجمل وتُعتبر أساسية للكتابة والمحادثة بمستوى متقدم.",
+        "objectives": [
+          "فهم واستخدام حروف العطف المنفصلة المختلفة بشكل صحيح",
+          "التمييز بين الاستخدامات المختلفة لكل زوج من حروف العطف",
+          "بناء جمل معقدة باستخدام هذه التراكيب النحوية",
+          "تطبيق القواعد النحوية المتعلقة بترتيب الكلمات في الجمل المركبة",
+          "استخدام هذه التراكيب في السياقات الأكاديمية والمهنية"
+        ],
+        "target_audience": "متعلمي اللغة الألمانية مستوى B2، الطلاب الجامعيين، المهنيين العاملين في بيئات ناطقة بالألمانية",
+        "duration": "60-75 دقيقة",
+        "difficulty": "متقدم",
+      
+        "vocabulary": [
+          {
+            "category": "حروف العطف المنفصلة الأساسية",
+            "words": [
+              { "de": "entweder...oder", "ar": "إما...أو", "pron": "إنت-ڤيدر...أودر", "usage": "للعرض بين خيارين متبادلين" },
+              { "de": "weder...noch", "ar": "لا...ولا", "pron": "ڤيدر...نوخ", "usage": "لنفي كلا الخيارين" },
+              { "de": "zwar...aber", "ar": "صحيح أن...لكن", "pron": "تسڤار...آبر", "usage": "للإقرار بحقيقة ثم إضافة تناقض" },
+              { "de": "nicht nur...sondern auch", "ar": "ليس فقط...بل أيضًا", "pron": "نيخت نور...زوندرن آوخ", "usage": "لإضافة معلومات مكملة" },
+              { "de": "einerseits...andererseits", "ar": "من جهة...من جهة أخرى", "pron": "آينر-زايتس...أندرر-زايتس", "usage": "لموازنة وجهات النظر" }
+            ]
+          },
+          {
+            "category": "حروف عطف متقدمة",
+            "words": [
+              { "de": "je...desto", "ar": "كلما...كلما", "pron": "ييه...دستو", "usage": "للتعبير عن التناسب" },
+              { "de": "teils...teils", "ar": "جزئيًا...وجزئيًا", "pron": "تايلس...تايلس", "usage": "للتقسيم المتساوي" },
+              { "de": "mal...mal", "ar": "تارة...وتارة", "pron": "مال...مال", "usage": "للتناوب بين حالين" }
+            ]
+          }
+        ],
+      
+        "phrases": [
+          {
+            "category": "تراكيب الجمل المتقدمة",
+            "items": [
+              { "de": "Entweder du kommst pünktlich, oder wir fangen ohne dich an.", "ar": "إما أن تأتي في الوقت المحدد، أو نبدأ بدونك.", "pron": "إنتڤيدر دو كومست بونكتليش، أودر فير فانغن أونه ديخ آن", "context": "عرض حاسم بين خيارين" },
+              { "de": "Er spricht zwar fließend Deutsch, aber mit starkem Akzent.", "ar": "هو يتحدث الألمانية بطلاقة صحيح، لكن بلهجة قوية.", "pron": "إير شبرِيشت تسڤار فليسِند دويتش، آبر ميت شتاركيم آكْتْسِنت", "context": "الإقرار بميزة مع الإشارة إلى عيب" },
+              { "de": "Sie ist nicht nur intelligent, sondern auch sehr kreativ.", "ar": "هي ليست فقط ذكية، بل أيضًا مبدعة جدًا.", "pron": "زي إيست نيخت نور إنتِليجِنت، زوندرن آوخ زيهر كريئاتِيف", "context": "إضافة صفات متكاملة" }
+            ]
+          }
+        ],
+      
+        "dialogues": [
+          {
+            "title": "مناقشة خيارات العمل",
+            "context": "مديران يناقشان استراتيجية الشركة",
+            "level": "رسمي متقدم",
+            "lines": [
+              { "speaker": "المدير الأول", "de": "Einerseits müssen wir expandieren, andererseits dürfen wir die Risiken nicht unterschätzen.", "ar": "من جهة يجب أن نتوسع، ومن جهة أخرى لا يجب أن نقلل من المخاطر." },
+              { "speaker": "المدير الثاني", "de": "Entweder wir investieren jetzt in neue Märkte, oder wir verlieren unsere Wettbewerbsfähigkeit.", "ar": "إما أن نستثمر الآن في أسواق جديدة، أو نفقد قدرتنا التنافسية." },
+              { "speaker": "المدير الأول", "de": "Das Projekt ist zwar ambitioniert, aber durchaus realisierbar.", "ar": "المشروع طموح صحيح، لكنه قابل للتحقيق بكل تأكيد." }
+            ]
+          },
+          {
+            "title": "محادثة أكاديمية",
+            "context": "طالبان يناقشان بحثًا علميًا",
+            "level": "نصف رسمي",
+            "lines": [
+              { "speaker": "سارة", "de": "Die Ergebnisse sind teils erwartet, teils überraschend.", "ar": "النتائج جزئيًا متوقعة، وجزئيًا مفاجئة." },
+              { "speaker": "دافيد", "de": "Je mehr Daten wir sammeln, desto klarer wird das Bild.", "ar": "كلما جمعنا بيانات أكثر، كلما أصبحت الصورة أوضح." },
+              { "speaker": "سارة", "de": "Wir können weder die eine noch die andere Theorie vollständig ausschließen.", "ar": "لا يمكننا استبعاد أي من النظريتين بشكل كامل." }
+            ]
+          }
+        ],
+      
+        "grammar": [
+          {
+            "topic": "ترتيب الكلمات في الجمل مع حروف العطف المنفصلة",
+            "explanation": "عند استخدام حروف العطف المنفصلة، يتبع ترتيب الكلمات قواعد محددة. الجزء الثاني من حرف العطف يحدد موقع الفعل في الجملة.",
+            "rules": [
+              "بعد 'oder' و 'aber' - الفعل يأتي في المركز الثاني",
+              "بعد 'sondern auch' - الفعل يبقى في المركز الثاني",
+              "بعد 'desto' - الفعل يأتي مباشرة بعد 'desto'",
+              "في جمل 'zwar...aber' - كلا الجزئين يحتفظان بترتيب الكلمات المستقل"
+            ],
+            "examples": [
+              { "de": "Entweder er kommt heute, oder er ruft an.", "ar": "إما أن يأتي اليوم، أو يتصل." },
+              { "de": "Zwar ist es teuer, aber die Qualität ist ausgezeichnet.", "ar": "صحيح أنه غالي، لكن الجودة ممتازة." },
+              { "de": "Je länger wir warten, desto schwieriger wird es.", "ar": "كلما انتظرنا أكثر، كلما أصبح الأمر أصعب." }
+            ],
+            "common_mistakes": [
+              "وضع الفعل في المكان الخطأ بعد الجزء الثاني من حرف العطف",
+              "نسيان استخدام كلا جزئي حرف العطف المنفصل"
+            ]
+          },
+          {
+            "topic": "الاستخدام الدقيق لكل زوج من حروف العطف",
+            "explanation": "كل زوج من حروف العطف المنفصلة له استخدام محدد ودقيق ويحمل دلالات معينة.",
+            "examples": [
+              { "de": "weder...nor - للنفي المزدوج", "ar": "لا...ولا - للنفي الكامل" },
+              { "de": "nicht nur...sondern auch - للإضافة والتأكيد", "ar": "ليس فقط...بل أيضًا - للتوسيع" },
+              { "de": "einerseits...andererseits - لعرض وجهات نظر متعددة", "ar": "من جهة...من جهة أخرى - للموازنة" }
+            ]
+          }
+        ],
+      
+        "cultural_notes": [
+          {
+            "title": "الأسلوب المباشر في التواصل الألماني",
+            "content": "يُفضل الألمان استخدام التراكيب اللغوية الواضحة والمباشرة مثل 'entweder...oder' في المناقشات المهنية لتفادي سوء الفهم."
+          },
+          {
+            "title": "الدقة في التعبير",
+            "content": "في السياقات الأكاديمية والمهنية الألمانية، يُعتبر الاستخدام الصحيح لحروف العطف المنفصلة علامة على الإتقان اللغوي والتفكير المنطقي."
+          }
+        ],
+      
+        "pronunciation_tips": [
+          {
+            "tip": "نبرة الصوت في الجمل المركبة",
+            "explanation": "يتم رفع نبرة الصوت قليلاً قبل الجزء الثاني من حرف العطف المنفصل للإشارة إلى أن الجملة لم تنته بعد."
+          },
+          {
+            "tip": "الوقفات المناسبة",
+            "explanation": "يجب عمل وقفة قصيرة جدًا بين جزئي حرف العطف المنفصل لزيادة الوضوح."
+          }
+        ],
+      
+        "exercises": [
+          {
+            "type": "sentence_construction",
+            "title": "بناء الجمل باستخدام حروف العطف المنفصلة",
+            "instructions": "اكمل الجمل التالية باستخدام حروف العطف المنفصلة المناسبة",
+            "items": [
+              {
+                "prompt": "______ wir fahren mit dem Zug, ______ wir nehmen das Auto.",
+                "answer": "Entweder...oder"
+              },
+              {
+                "prompt": "Sie kann ______ schwimmen ______ radfahren.",
+                "answer": "weder...noch"
+              },
+              {
+                "prompt": "______ hat er wenig Erfahrung, ______ er ist sehr lernbereit.",
+                "answer": "Zwar...aber"
+              }
+            ]
+          },
+          {
+            "type": "transformation",
+            "title": "تحويل الجمل البسيطة إلى جمل مركبة",
+            "instructions": "حول الجمل البسيطة التالية إلى جمل مركبة باستخدام حروف العطف المنفصلة المحددة",
+            "items": [
+              {
+                "original": "Er ist müde. Er arbeitet weiter. (zwar...aber)",
+                "transformed": "Zwar ist er müde, aber er arbeitet weiter."
+              },
+              {
+                "original": "Sie spricht Englisch. Sie spricht Französisch. (nicht nur...sondern auch)",
+                "transformed": "Sie spricht nicht nur Englisch, sondern auch Französisch."
+              }
+            ]
+          },
+          {
+            "type": "error_correction",
+            "title": "تصحيح الأخطاء النحوية",
+            "instructions": "صحح الأخطاء في الجمل التالية",
+            "items": [
+              {
+                "incorrect": "Entweder du lernst Deutsch, oder du lernst English.",
+                "correct": "Entweder lernst du Deutsch, oder du lernst Englisch."
+              },
+              {
+                "incorrect": "Zwar es regnet, aber wir gehen spazieren.",
+                "correct": "Zwar regnet es, aber wir gehen spazieren."
+              }
+            ]
+          }
+        ],
+      
+        "common_mistakes": [
+          {
+            "mistake": "خطأ في ترتيب الكلمات بعد الجزء الثاني من حرف العطف",
+            "correction": "تذكر أن الفعل يأتي في المركز الثاني بعد 'oder' و 'aber'",
+            "example": "❌ Entweder du kommst, oder bleibst du → ✅ Entweder kommst du, oder du bleibst"
+          },
+          {
+            "mistake": "استخدام خاطئ لـ 'sondern' بدلاً من 'sondern auch'",
+            "correction": "استخدم 'sondern auch' بعد 'nicht nur' للإضافة",
+            "example": "❌ Nicht nur klug, sondern sympathisch → ✅ Nicht nur klug, sondern auch sympathisch"
+          }
+        ],
+      
+        "resources": [
+          {
+            "type": "video",
+            "title": "شرح متقدم لحروف العطف المنفصلة",
+            "url": "https://learngermanoriginal.com/courses/b2-course/lesson-1",
+            "description": "فيديو يشرح الاستخدامات المتقدمة والتفاصيل الدقيقة لحروف العطف المنفصلة"
+          },
+          {
+            "type": "pdf",
+            "title": "تمارين إضافية مع التصحيح",
+            "url": "https://learngermanoriginal.com/resources/b2-conjunctions-exercises",
+            "description": "ورقة عمل شاملة تحتوي على تمارين متقدمة مع حلول مفصلة"
+          }
+        ],
+      
+        "review_questions": [
+          {
+            "question": "ما الفرق بين استخدام 'entweder...oder' و 'weder...noch'؟",
+            "answer": "'entweder...oder' تستخدم للعرض بين خيارين إيجابيين متبادلين، بينما 'weder...noch' تستخدم لنفي كلا الخيارين."
+          },
+          {
+            "question": "كيف يؤثر استخدام حروف العطف المنفصلة على ترتيب الكلمات في الجملة الألمانية؟",
+            "answer": "كل جزء من حرف العطف المنفصل يعامل كبداية جملة جديدة من حيث ترتيب الكلمات، حيث يأتي الفعل في المركز الثاني بعد كل جزء."
+          },
+          {
+            "question": "ما هو الغرض من استخدام 'zwar...aber' في الجملة؟",
+            "answer": "تُستخدم للإقرار بحقيقة أو صفة معينة ثم إضافة معلومات متناقضة أو مقيدة، مما يخلق توازنًا في التعبير."
+          }
+        ],
+      
+        "next_lesson_preview": {
+          "title": "الدرس القادم: الجمل الشرطية المتقدمة",
+          "description": "في الدرس الثاني، ستتعلم استخدام الجمل الشرطية بمستوى متقدم مع التركيز على الفروق الدقيقة بين Konjunktiv I و Konjunktiv II."
+        },
+      
+        "study_tips": [
+          "اقرأ مقالات أكاديمية باللغة الألمانية وركز على كيفية استخدام حروف العطف المنفصلة",
+          "اكتب فقرات باستخدام كل زوج من حروف العطف على الأقل ثلاث مرات",
+          "سجل نفسك وأنت تتحدث باستخدام هذه التراكيب ثم استمع للتسجيل لتقييم نفسك",
+          "تمرن على تحويل الجمل البسيطة إلى جمل معقدة باستخدام حروف العطف المنفصلة"
+        ],
+      
+        "completion_criteria": [
+          "القدرة على استخدام 5 أنواع مختلفة من حروف العطف المنفصلة بشكل صحيح",
+          "التمييز بين الاستخدامات المختلفة لكل زوج من حروف العطف",
+          "بناء جمل معقدة خالية من الأخطاء في ترتيب الكلمات",
+          "تطبيق هذه التراكيب في سياقات كتابية ومحادثة متقدمة"
+        ],
+      
+        "metadata": {
+          "estimated_study_time": "75 دقيقة",
+          "practice_time_recommended": "20 دقيقة يوميًا لمدة 5 أيام",
+          "tags": ["قواعد متقدمة", "B2", "حروف عطف", "تراكيب جمل", "كتابة متقدمة"],
+          "last_updated": "2024-01-15",
+          "version": "1.0"
+        }
+    },
+    {
+        "lessonNumber": 2,
+        "title": "البادئات المنفصلة (الجزء الأول) | Trennbare Präfixe (Teil 1)",
+        "title_en": "Separable prefixes (Part 1)",
+        "summary": "في هذا الدرس المتقدم، ستتعلم البادئات المنفصلة الأساسية في اللغة الألمانية وكيفية استخدامها لتغيير معاني الأفعال مع التركيز على البادئات: auf, aus, an, ab, ein, bei, entgegen.",
+        "detailed_description": "البادئات المنفصلة هي سمة نحوية فريدة في الألمانية تضيف دلالات مكانية وزمانية ومعنوية للأفعال. فهم هذه البادئات يعد أساسيًا لإتقان اللغة على المستوى المتقدم.",
+        "objectives": [
+          "فهم مفهوم البادئات المنفصلة وآلية عملها",
+          "تمييز البادئات المنفصلة عن غير المنفصلة",
+          "استخدام البادئات السبع الأساسية بشكل صحيح",
+          "بناء جمل متقدمة باستخدام الأفعال المنفصلة",
+          "فهم التغيرات الدلالية التي تسببها البادئات"
+        ],
+        "target_audience": "متعلمي اللغة الألمانية مستوى B2، المهتمين بتطوير مهاراتهم النحوية المتقدمة",
+        "duration": "65-80 دقيقة",
+        "difficulty": "متوسط-متقدم",
+      
+        "vocabulary": [
+          {
+            "category": "البادئات المنفصلة الأساسية",
+            "words": [
+              { "de": "auf-", "ar": "فوق/إلى أعلى", "pron": "أوف", "usage": "تشير إلى الحركة للأعلى أو الفتح" },
+              { "de": "aus-", "ar": "إلى الخارج/من", "pron": "أوس", "usage": "تشير إلى الخروج أو الانتهاء" },
+              { "de": "an-", "ar": "على/إلى", "pron": "آن", "usage": "تشير إلى الاقتراب أو البدء" },
+              { "de": "ab-", "ar": "من/بعيدًا", "pron": "آب", "usage": "تشير إلى الابتعاد أو التنازل" },
+              { "de": "ein-", "ar": "إلى الداخل", "pron": "آين", "usage": "تشير إلى الدخول أو البدء" },
+              { "de": "bei-", "ar": "مع/بجانب", "pron": "باي", "usage": "تشير إلى المشاركة أو الإضافة" },
+              { "de": "entgegen-", "ar": "مقابل/نحو", "pron": "إنت-غيغِن", "usage": "تشير إلى المواجهة أو المعاكسة" }
+            ]
+          },
+          {
+            "category": "أمثلة على الأفعال المنفصلة",
+            "words": [
+              { "de": "aufstehen", "ar": "يستيقظ/يقف", "pron": "أوف-شتيئِن", "usage": "يستخدم للاستيقاظ من النوم" },
+              { "de": "ausgehen", "ar": "يخرج", "pron": "أوس-غيئِن", "usage": "يستخدم للخروج للترفيه" },
+              { "de": "anfangen", "ar": "يبدأ", "pron": "آن-فانغِن", "usage": "يستخدم لبدء activity" },
+              { "de": "abholen", "ar": "يستلم/يلتقي", "pron": "آب-هولِن", "usage": "يستخدم لاستلام أشخاص" },
+              { "de": "einkaufen", "ar": "يتسوق", "pron": "آين-كاوفِن", "usage": "يستخدم للتسوق" },
+              { "de": "beitragen", "ar": "يساهم", "pron": "باي-تراغِن", "usage": "يستخدم للمساهمة" },
+              { "de": "entgegenkommen", "ar": "يأتي للقاء/يتعاون", "pron": "إنت-غيغِن-كومِن", "usage": "يستخدم للتعاون أو اللقاء" }
+            ]
+          }
+        ],
+      
+        "phrases": [
+          {
+            "category": "جمل متقدمة مع البادئات المنفصلة",
+            "items": [
+              { "de": "Ich stehe jeden Morgen um 6 Uhr auf.", "ar": "أستيقظ كل صباح عند الساعة السادسة.", "pron": "إيش شتيئِه ييدِن مورغِن أوم زِكس أور أوف", "context": "روتين يومي" },
+              { "de": "Wir gehen heute Abend aus.", "ar": "سنخرج هذا المساء.", "pron": "فير غيئِن هويئِه آبِنت أوس", "context": "خطط ترفيهية" },
+              { "de": "Der Kurs fängt nächste Woche an.", "ar": "تبدأ الدورة الأسبوع القادم.", "pron": "دير كورس فينغت نايخستِه فيشِه آن", "context": "جدول زمني" }
+            ]
+          }
+        ],
+      
+        "dialogues": [
+          {
+            "title": "محادثة في العمل",
+            "context": "زملاء يناقشان مشروعًا جديدًا",
+            "level": "رسمي",
+            "lines": [
+              { "speaker": "يوليا", "de": "Wann fangen wir mit dem neuen Projekt an?", "ar": "متى نبدأ بالمشروع الجديد؟" },
+              { "speaker": "توماس", "de": "Wir fangen nächsten Montag an. Können Sie die Unterlagen bis dahin zusammenstellen?", "ar": "سنبدأ الاثنين القادم. هل يمكنك تجهيز الأوراق حتى ذلك الحين؟" },
+              { "speaker": "يوليا", "de": "Ja, ich bringe alle Dokumente mit.", "ar": "نعم، سأحضر جميع المستندات." },
+              { "speaker": "توماس", "de": "Perfekt. Dann holen wir das Team um 9 Uhr ab.", "ar": "ممتاز. إذن سنلتقي بالفريق عند الساعة التاسعة." }
+            ]
+          }
+        ],
+      
+        "grammar": [
+          {
+            "topic": "قواعد انفصال البادئات",
+            "explanation": "تنفصل البادئات المنفصلة عن الفعل الرئيسي في الزمن الحاضر والماضي وتذهب إلى نهاية الجملة، بينما تبقى ملتصقة في صيغة المصدر والأزمنة المركبة.",
+            "rules": [
+              "في الزمن الحاضر: البادئة تنفصل وتذهب لنهاية الجملة",
+              "في صيغة المصدر: تبقى البادئة ملتصقة مع 'zu' بينهما",
+              "في Perfekt: تستخدم 'haben' عادة مع الأفعال المنفصلة",
+              "في الجمل الرئيسية: البادئة تنفصل في المركز النهائي"
+            ],
+            "examples": [
+              { "de": "Ich stehe früh auf. (حاضر)", "ar": "أستيقظ مبكرًا." },
+              { "de": "Ich bin früh aufgestanden. (Perfekt)", "ar": "استيقظت مبكرًا." },
+              { "de": "Es ist schwer, früh aufzustehen. (مصدر)", "ar": "من الصعب الاستيقاظ مبكرًا." }
+            ],
+            "common_mistakes": [
+              "نسيان فصل البادئة في الزمن الحاضر",
+              "وضع 'zu' في المكان الخطأ في صيغة المصدر"
+            ]
+          }
+        ],
+      
+        "exercises": [
+          {
+            "type": "sentence_construction",
+            "title": "بناء جمل مع البادئات المنفصلة",
+            "instructions": "اكمل الجمل باستخدام الأفعال المنفصلة المناسبة بين القوسين",
+            "items": [
+              {
+                "prompt": "Ich _______ jeden Tag um 7 Uhr _______. (aufstehen)",
+                "answer": "stehe...auf"
+              },
+              {
+                "prompt": "Wir _______ heute ins Kino _______. (ausgehen)",
+                "answer": "gehen...aus"
+              }
+            ]
+          },
+          {
+            "type": "transformation",
+            "title": "تحويل الجمل إلى صيغ مختلفة",
+            "instructions": "حول الجمل التالية إلى الزمن الماضي (Perfekt)",
+            "items": [
+              {
+                "original": "Sie kauft im Supermarkt ein.",
+                "transformed": "Sie hat im Supermarkt eingekauft."
+              }
+            ]
+          }
+        ],
+      
+        "common_mistakes": [
+          {
+            "mistake": "عدم فصل البادئة في الجمل الرئيسية",
+            "correction": "تأكد من فصل البادئة ونقلها لنهاية الجملة",
+            "example": "❌ Ich aufstehe früh → ✅ Ich stehe früh auf"
+          }
+        ],
+      
+        "resources": [
+          {
+            "type": "video",
+            "title": "البدئات المنفصلة - الجزء الأول",
+            "url": "https://learngermanoriginal.com/courses/b2-course/lesson-2",
+            "description": "فيديو شرح مفصل للبادئات المنفصلة الأساسية"
+          }
+        ],
+      
+        "review_questions": [
+          {
+            "question": "ما هي البادئات المنفصلة السبعة التي تعلمناها؟",
+            "answer": "auf, aus, an, ab, ein, bei, entgegen"
+          },
+          {
+            "question": "ماذا يحدث للبادئة المنفصلة في الزمن الحاضر؟",
+            "answer": "تنفصل عن الفعل وتذهب إلى نهاية الجملة"
+          }
+        ],
+      
+        "next_lesson_preview": {
+          "title": "البادئات المنفصلة (الجزء الثاني)",
+          "description": "سنستكمل المزيد من البادئات المنفصلة المتقدمة واستخداماتها في السياقات المختلفة."
+        },
+      
+        "study_tips": [
+          "اصنع بطاقات تعليمية لكل بادئة مع ثلاثة أمثلة",
+          "تمرن على كتابة جمل باستخدام كل بادئة في أزمنة مختلفة"
+        ],
+      
+        "completion_criteria": [
+          "القدرة على استخدام البادئات السبعة بشكل صحيح",
+          "فهم قواعد الانفصال في الأزمنة المختلفة"
+        ],
+      
+        "metadata": {
+          "estimated_study_time": "80 دقيقة",
+          "practice_time_recommended": "20 دقيقة يوميًا لمدة 4 أيام",
+          "tags": ["قواعد", "B2", "بادئات منفصلة", "أفعال"],
+          "last_updated": "2024-01-15",
+          "version": "1.0"
+        }
+    },
+    {
+        "lessonNumber": 3,
+        "title": "البادئات المنفصلة (الجزء الثاني) | Trennbare Präfixe (Teil 2)",
+        "title_en": "Separable prefixes (Part 2)",
+        "summary": "في هذا الدرس المتقدم، ستتعلم مجموعة ثانية من البادئات المنفصلة الأكثر تعقيدًا في اللغة الألمانية مع التركيز على البادئات: entlang, gleich, gegenüber, los, mit, fort.",
+        "detailed_description": "تضيف هذه البادئات دلالات مكانية واتجاهية متقدمة للأفعال، وتُستخدم في سياقات أكثر تحديدًا وتعقيدًا، مما يثري القدرة التعبيرية للمتعلم على المستوى المتقدم.",
+        "objectives": [
+          "إتقان استخدام البادئات المنفصلة المتقدمة",
+          "فهم الفروق الدقيقة بين البادئات المتشابهة",
+          "تطبيق هذه البادئات في سياقات مكانية واتجاهية",
+          "تمييز الاستخدامات الخاصة بكل بادئة",
+          "بناء جمل معقدة تعبر عن حركة واتجاه دقيقين"
+        ],
+        "target_audience": "متعلمي اللغة الألمانية مستوى B2، المهتمين بتطوير دقة التعبير عن الحركة والاتجاه",
+        "duration": "70-85 دقيقة",
+        "difficulty": "متقدم",
+      
+        "vocabulary": [
+          {
+            "category": "البادئات المنفصلة المتقدمة",
+            "words": [
+              { "de": "entlang-", "ar": "على طول", "pron": "إنت-لانغ", "usage": "تشير إلى الحركة بمحاذاة شيء ما" },
+              { "de": "gleich-", "ar": "فسي/مباشرة", "pron": "غلايخ", "usage": "تشير إلى الفورية أو المساواة" },
+              { "de": "gegenüber-", "ar": "مقابل/في وجه", "pron": "غيغِن-إيبر", "usage": "تشير إلى المواجهة أو المقابلة" },
+              { "de": "los-", "ar": "انطلاق/بداية", "pron": "لوس", "usage": "تشير إلى البدء أو الانطلاق" },
+              { "de": "mit-", "ar": "مع/مشاركة", "pron": "ميت", "usage": "تشير إلى المشاركة أو المصاحبة" },
+              { "de": "fort-", "ar": "استمرار/ابتعاد", "pron": "فورت", "usage": "تشير إلى الاستمرارية أو الابتعاد" }
+            ]
+          },
+          {
+            "category": "أمثلة على الأفعال المنفصلة",
+            "words": [
+              { "de": "entlanggehen", "ar": "يسير على طول", "pron": "إنت-لانغ-غيئِن", "usage": "المشي بمحاذاة شيء" },
+              { "de": "gleichkommen", "ar": "يساوي/يعادل", "pron": "غلايخ-كومِن", "usage": "المساواة في القيمة" },
+              { "de": "gegenüberstehen", "ar": "يقف مقابل", "pron": "غيغِن-إيبر-شتيئِن", "usage": "الوقوف في المواجهة" },
+              { "de": "losfahren", "ar": "ينطلق/يبدأ الرحلة", "pron": "لوس-فارِن", "usage": "بدء الرحلة أو الحركة" },
+              { "de": "mitkommen", "ar": "يأتي مع", "pron": "ميت-كومِن", "usage": "المصاحبة في الذهاب" },
+              { "de": "fortsetzen", "ar": "يستمر/يواصل", "pron": "فورت-زيتسِن", "usage": "استئناف أو متابعة" }
+            ]
+          }
+        ],
+      
+        "phrases": [
+          {
+            "category": "جمل متقدمة مع البادئات",
+            "items": [
+              { "de": "Wir gehen den Fluss entlang.", "ar": "نسير على طول النهر.", "pron": "فير غيئِن دين فلوس إنت-لانغ", "context": "وصف مسار الحركة" },
+              { "de": "Das kommt einer Lösung gleich.", "ar": "هذا يعادل حلاً.", "pron": "داس كومت آينِر لوزونغ غلايخ", "context": "المقارنة والتساوي" },
+              { "de": "Er steht mir gegenüber.", "ar": "هو يقف مقابلتي.", "pron": "إير شتيت مير غيغِن-إيبر", "context": "المواجهة المباشرة" },
+              { "de": "Der Zug fährt um 8 Uhr los.", "ar": "ينطلق القطار عند الساعة الثامنة.", "pron": "دير تسوك فارت أوم آخت أور لوس", "context": "بدء الرحلة" }
+            ]
+          }
+        ],
+      
+        "dialogues": [
+          {
+            "title": "تخطيط رحلة",
+            "context": "أصدقاء يخططون لرحلة مشتركة",
+            "level": "غير رسمي",
+            "lines": [
+              { "speaker": "سارة", "de": "Wann fahren wir los?", "ar": "متى ننطلق؟" },
+              { "speaker": "مارك", "de": "Um 7 Uhr. Kannst du mitkommen?", "ar": "عند الساعة السابعة. هل يمكنك المجيء معنا؟" },
+              { "speaker": "سارة", "de": "Ja, ich komme mit. Wir gehen dann den Waldweg entlang.", "ar": "نعم، سآتي معكم. سنسير بعد ذلك على طول طريق الغابة." },
+              { "speaker": "مارك", "de": "Perfekt! Wir setzen unsere Wanderung fort.", "ar": "ممتاز! سنواصل رحلتنا سيرًا." }
+            ]
+          },
+          {
+            "title": "محادثة عمل",
+            "context": "مناقشة مشروع بين زملاء",
+            "level": "رسمي",
+            "lines": [
+              { "speaker": "هير مولر", "de": "Diese Lösung kommt einem Kompromiss gleich.", "ar": "هذا الحل يعادل حلًا وسطًا." },
+              { "speaker": "فراو شميدت", "de": "Ja, aber wir müssen das Projekt fortsetzen.", "ar": "نعم، لكن我们必须 نواصل المشروع." },
+              { "speaker": "هير مولر", "de": "Setzen wir uns gegenüber und besprechen die Details.", "ar": "لنجلس مقابل بعضنا ونناقش التفاصيل." }
+            ]
+          }
+        ],
+      
+        "grammar": [
+          {
+            "topic": "الاستخدامات الخاصة للبادئات المتقدمة",
+            "explanation": "لكل من هذه البادئات استخدامات خاصة وقواعد إضافية تحكم تركيب الجملة وترتيب الكلمات.",
+            "rules": [
+              "'entlang' يمكن أن تأتي قبل أو بعد المفعول به حسب موقعها في الجملة",
+              "'gleich' تستخدم للمساواة والتشابه في القيمة أو الصفة",
+              "'gegenüber' تتطلب دائمًا مفعولاً في حالة Dativ",
+              "'los' تشير دائمًا إلى بدء الحركة أو الفعل",
+              "'mit' تعبر عن المشاركة والمصاحبة",
+              "'fort' تشير إلى الاستمرارية بعد توقف"
+            ],
+            "examples": [
+              { "de": "Er geht die Straße entlang. / Er geht entlang der Straße.", "ar": "يسير على طول الشارع." },
+              { "de": "Das kommt einem Wunder gleich.", "ar": "هذا يعادل معجزة." },
+              { "de": "Sie steht dem Problem gegenüber.", "ar": "هي تواجه المشكلة." },
+              { "de": "Wir fahren in Urlaub los.", "ar": "ننطلق في إجازة." }
+            ],
+            "common_mistakes": [
+              "نسيان حالة Dativ مع 'gegenüber'",
+              "الخلط بين 'los' و 'anfangen' في سياقات البدء"
+            ]
+          },
+          {
+            "topic": "ترتيب الكلمات مع البادئات المتعددة",
+            "explanation": "عند استخدام أكثر من بادئة أو عنصر في الجملة، يتبع ترتيب الكلمات قواعد محددة للحفاظ على وضوح المعنى.",
+            "examples": [
+              { "de": "Kommst du mit mir mit?", "ar": "هل تأتي معي؟" },
+              { "de": "Wir fahren morgen früh los.", "ar": "سننطلق غدًا مبكرًا." }
+            ]
+          }
+        ],
+      
+        "cultural_notes": [
+          {
+            "title": "الدقة في وصف الاتجاهات",
+            "content": "يُعرف عن الناطقين بالألمانية دقتهم في وصف الاتجاهات والحركات، مما يجعل إتقان هذه البادئات مهمًا للتواصل الفعال."
+          },
+          {
+            "title": "الأهمية في السياقات المهنية",
+            "content": "تستخدم هذه البادئات بكثرة في سياقات العمل الألمانية للتعبير عن التقدم والاستمرارية في المشاريع."
+          }
+        ],
+      
+        "pronunciation_tips": [
+          {
+            "tip": "نطق 'entlang'",
+            "explanation": "يتم نطق 'entlang' مع التركيز على المقطع الأول 'ent-' ونطق 'g' بشكل خفيف في النهاية."
+          },
+          {
+            "tip": "تمييز 'gleich' عن 'glück'",
+            "explanation": "'gleich' تنطق بلفظ 'ch' قوي كما في 'Buch'، بينما 'glück' تنطق بلفظ 'ck' أقصر."
+          }
+        ],
+      
+        "exercises": [
+          {
+            "type": "sentence_construction",
+            "title": "اكمل الجمل بالبادئات المناسبة",
+            "instructions": "اختر البادئة الصحيحة من القائمة وأكمل الجملة",
+            "items": [
+              {
+                "prompt": "Wir _______ den Fluss _______. (entlanggehen)",
+                "answer": "gehen...entlang"
+              },
+              {
+                "prompt": "Kannst du _______? (mitkommen)",
+                "answer": "mitkommen"
+              },
+              {
+                "prompt": "Der Film _______ um 20 Uhr _______. (losgehen)",
+                "answer": "geht...los"
+              }
+            ]
+          },
+          {
+            "type": "transformation",
+            "title": "حول الجمل إلى صيغة الماضي",
+            "instructions": "أعد كتابة الجمل التالية في زمن Perfekt",
+            "items": [
+              {
+                "original": "Sie geht den Weg entlang.",
+                "transformed": "Sie ist den Weg entlanggegangen."
+              },
+              {
+                "original": "Wir fahren nach Berlin los.",
+                "transformed": "Wir sind nach Berlin losgefahren."
+              },
+              {
+                "original": "Er kommt mir gleich.",
+                "transformed": "Er ist mir gleichgekommen."
+              }
+            ]
+          },
+          {
+            "type": "error_correction",
+            "title": "صحح الأخطاء في الجمل",
+            "instructions": "حدد الخطأ وأصلحه في الجمل التالية",
+            "items": [
+              {
+                "incorrect": "Ich entlanggehe die Straße.",
+                "correct": "Ich gehe die Straße entlang."
+              },
+              {
+                "incorrect": "Das kommt ein Problem gleich.",
+                "correct": "Das kommt einem Problem gleich."
+              },
+              {
+                "incorrect": "Sie gegenübersteht mir.",
+                "correct": "Sie steht mir gegenüber."
+              }
+            ]
+          }
+        ],
+      
+        "common_mistakes": [
+          {
+            "mistake": "وضع البادئة في المكان الخطأ",
+            "correction": "تذكر أن البادئات المنفصلة تذهب إلى نهاية الجملة في الزمن الحاضر",
+            "example": "❌ Ich losfahre morgen → ✅ Ich fahre morgen los"
+          },
+          {
+            "mistake": "نسيان حالة Dativ مع 'gegenüber'",
+            "correction": "استخدم دائماً حالة Dativ مع 'gegenüber'",
+            "example": "❌ Sie steht gegenüber ich → ✅ Sie steht mir gegenüber"
+          }
+        ],
+      
+        "resources": [
+          {
+            "type": "video",
+            "title": "البدئات المنفصلة - الجزء الثاني",
+            "url": "https://learngermanoriginal.com/courses/b2-course/lesson-3",
+            "description": "فيديو شرح متقدم للبادئات المنفصلة مع أمثلة عملية"
+          },
+          {
+            "type": "interactive",
+            "title": "تمارين تفاعلية",
+            "url": "https://learngermanoriginal.com/exercises/b2-separable-prefixes-2",
+            "description": "تمارين تفاعلية لتطبيق所学 البادئات"
+          }
+        ],
+      
+        "review_questions": [
+          {
+            "question": "ما الفرق بين 'losfahren' و 'anfahren'؟",
+            "answer": "'losfahren' يشير إلى بدء الرحلة أو الحركة بشكل عام، بينما 'anfahren' يشير إلى البدء بالقيادة أو الاقتراب من مكان ما."
+          },
+          {
+            "question": "كيف نستخدم 'entlang' في الجملة؟",
+            "answer": "يمكن استخدام 'entlang' بعد الفعل مباشرة مع Akkusativ، أو قبل المفعول مع Genitiv في الصيغة الرسمية."
+          },
+          {
+            "question": "ما هي حالة المفعول المطلوبة مع 'gegenüber'؟",
+            "answer": "تتطلب 'gegenüber' دائماً مفعولاً في حالة Dativ."
+          }
+        ],
+      
+        "next_lesson_preview": {
+          "title": "البادئات المنفصلة (الجزء الثالث)",
+          "description": "سنكمل مع البادئات المنفصلة الأكثر تقدمًا والمتعلقة بالاتجاهات المكانية المعقدة."
+        },
+      
+        "study_tips": [
+          "اصنع خريطة ذهنية تربط كل بادئة بالمعنى المكاني المناسب",
+          "تمرن على وصف الاتجاهات باستخدام هذه البادئات",
+          "اقرأ نصوصًا描述ية وركز على كيفية استخدام البادئات المنفصلة",
+          "سجل نفسك وأنت تصف حركات يومية باستخدام هذه البادئات"
+        ],
+      
+        "completion_criteria": [
+          "القدرة على استخدام جميع البادئات الست بشكل صحيح",
+          "فهم الفروق الدقيقة بين البادئات المتشابهة",
+          "التمييز بين حالات الاستخدام المختلفة",
+          "بناء جمل معقدة تعبر عن حركة واتجاه بدقة"
+        ],
+      
+        "metadata": {
+          "estimated_study_time": "85 دقيقة",
+          "practice_time_recommended": "25 دقيقة يوميًا لمدة 4 أيام",
+          "tags": ["قواعد متقدمة", "B2", "بادئات منفصلة", "اتجاهات", "حركة"],
+          "last_updated": "2024-01-15",
+          "version": "1.0"
+        }
+    },
+    {
+        "lessonNumber": 4,
+        "title": "البادئات المنفصلة (الجزء الثالث) | Trennbare Präfixe (Teil 3)",
+        "title_en": "Separable prefixes (Part 3)",
+        "summary": "في هذا الدرس المتقدم، ستتعلم مجموعة ثالثة من البادئات المنفصلة التي تعبر عن حركات واتجاهات مكانية معقدة، مع التركيز على: heraus, hinein, nach, vor, weg, zu, zurück.",
+        "detailed_description": "تركز هذه البادئات على التعبير عن الحركة من الداخل إلى الخارج والعكس، بالإضافة إلى الاتجاهات الأمامية والخلفية، مما يسمح بالتعبير الدقيق عن التنقل في الفضاء.",
+        "objectives": [
+          "إتقان البادئات المعبرة عن الحركة من الداخل والخارج",
+          "فهم الفروق بين البادئات المتضادة",
+          "استخدام البادئات الدالة على الاتجاهات الأمامية والخلفية",
+          "تمييز الاستخدامات المجازية والحقيقية للبادئات",
+          "بناء جمل معقدة تعبر عن حركات متعددة الاتجاهات"
+        ],
+        "target_audience": "متعلمي اللغة الألمانية مستوى B2، المهتمين بتطوير دقة التعبير عن الحركة في الفضاء",
+        "duration": "75-90 دقيقة",
+        "difficulty": "متقدم",
+      
+        "vocabulary": [
+          {
+            "category": "بادئات الحركة المكانية",
+            "words": [
+              { "de": "heraus-", "ar": "إلى الخارج من", "pron": "هير-أوس", "usage": "الحركة من الداخل إلى الخارج باتجاه المتكلم" },
+              { "de": "hinein-", "ar": "إلى الداخل في", "pron": "هين-آين", "usage": "الحركة من الخارج إلى الداخل بعيدًا عن المتكلم" },
+              { "de": "nach-", "ar": "بعد/نحو", "pron": "ناخ", "usage": "الحركة نحو مكان أو الزمن اللاحق" },
+              { "de": "vor-", "ar": "أمام/قبل", "pron": "فور", "usage": "الحركة للأمام أو الزمن السابق" },
+              { "de": "weg-", "ar": "بعيدًا", "pron": "فيغ", "usage": "الحركة بعيدًا عن مكان ما" },
+              { "de": "zu-", "ar": "إلى/أغلق", "pron": "تسو", "usage": "الحركة نحو أو الإغلاق" },
+              { "de": "zurück-", "ar": "إلى الخلف", "pron": "تسو-روك", "usage": "الحركة للخلف أو العودة" }
+            ]
+          },
+          {
+            "category": "أمثلة على الأفعال المنفصلة",
+            "words": [
+              { "de": "herauskommen", "ar": "يخرج من", "pron": "هير-أوس-كومِن", "usage": "الخروج من مكان باتجاه المتكلم" },
+              { "de": "hineingehen", "ar": "يدخل إلى", "pron": "هين-آين-غيئِن", "usage": "الدخول إلى مكان بعيدًا عن المتكلم" },
+              { "de": "nachlaufen", "ar": "يركض وراء", "pron": "ناخ-لاوفِن", "usage": "الركض خلف شيء أو شخص" },
+              { "de": "vorstellen", "ar": "يتقدم/يتخيل", "pron": "فور-شتيئِل", "usage": "التقدم للأمام أو التخيل" },
+              { "de": "weggehen", "ar": "يذهب بعيدًا", "pron": "فيغ-غيئِن", "usage": "الذهاب بعيدًا عن المكان" },
+              { "de": "zumachen", "ar": "يغلق", "pron": "تسو-ماخِن", "usage": "إغلاق شيء ما" },
+              { "de": "zurückkommen", "ar": "يعود", "pron": "تسو-روك-كومِن", "usage": "العودة إلى المكان الأصلي" }
+            ]
+          }
+        ],
+      
+        "phrases": [
+          {
+            "category": "جمل متقدمة مع البادئات المكانية",
+            "items": [
+              { "de": "Kannst du bitte herauskommen?", "ar": "هل يمكنك الخروج من فضلك؟", "pron": "كانست دو بيته هير-أوس-كومِن", "context": "طلب الخروج" },
+              { "de": "Er geht in das Haus hinein.", "ar": "هو يدخل إلى المنزل.", "pron": "إير غيت إن داس هاوس هين-آين", "context": "الدخول إلى مبنى" },
+              { "de": "Das Kind läuft der Mutter nach.", "ar": "الطفل يركض خلف أمه.", "pron": "داس كينت لويفت دير موتر ناخ", "context": "اللحاق بشخص" },
+              { "de": "Komm bitte zurück!", "ar": "عد من فضلك!", "pron": "كوم بيته تسو-روك", "context": "طلب العودة" }
+            ]
+          }
+        ],
+      
+        "dialogues": [
+          {
+            "title": "موقف في المطار",
+            "context": "مسافر يستفسر عن directions",
+            "level": "رسمي",
+            "lines": [
+              { "speaker": "المسافر", "de": "Entschuldigung, wie komme ich hier heraus?", "ar": "عفواً، كيف أخرج من هنا؟" },
+              { "speaker": "الموظف", "de": "Gehen Sie durch diese Tür hinein und dann nach rechts.", "ar": "ادخل من هذا الباب ثم إلى اليمين." },
+              { "speaker": "المسافر", "de": "Und wie komme ich zum Bahnhof zurück?", "ar": "وكيف أعود إلى المحطة؟" },
+              { "speaker": "الموظف", "de": "Nehmen Sie den Bus, der in 10 Minuten wegfährt.", "ar": "خذ الحافلة التي ستنطلق بعد 10 دقائق." }
+            ]
+          },
+          {
+            "title": "محادثة منزلية",
+            "context": "أفراد عائلة يتناقشون",
+            "level": "غير رسمي",
+            "lines": [
+              { "speaker": "الأم", "de": "Kann jemand die Tür zumachen? Es zieht.", "ar": "هل يمكن لأحد أن يغلق الباب؟ هناك تيار هوائي." },
+              { "speaker": "الابن", "de": "Ich stelle den Stuhl vor den Tisch.", "ar": "سأضع الكرسي أمام الطاولة." },
+              { "speaker": "الأب", "de": "Kommt bitte alle heraus, das Essen ist fertig!", "ar": "اخرجوا جميعاً من فضلكم، الطعام جاهز!" }
+            ]
+          }
+        ],
+      
+        "grammar": [
+          {
+            "topic": "التمييز بين herau- و hinein-",
+            "explanation": "يعتمد استخدام 'heraus' أو 'hinein' على موقع المتكلم بالنسبة للحركة. 'heraus' تُستخدم عندما تكون الحركة باتجاه المتكلم، بينما 'hinein' تُستخدم عندما تكون الحركة بعيدًا عن المتكلم.",
+            "rules": [
+              "heraus-: الحركة من الداخل إلى الخارج باتجاه المتكلم",
+              "hinein-: الحركة من الخارج إلى الداخل بعيدًا عن المتكلم",
+              "هذا التمييز ينطبق على جميع البادئات المماثلة (herauf/hinauf, herunter/hinunter)"
+            ],
+            "examples": [
+              { "de": "Komm heraus! (المتكلم في الخارج)", "ar": "اخرج! (المتكلم في الخارج)" },
+              { "de": "Geh hinein! (المتكلم في الخارج)", "ar": "ادخل! (المتكلم في الخارج)" },
+              { "de": "Komm herein! (المتكلم في الداخل)", "ar": "ادخل! (المتكلم في الداخل)" }
+            ],
+            "common_mistakes": [
+              "الخلط بين 'heraus' و 'hinein' حسب موقع المتكلم",
+              "استخدام 'herein' عندما يكون المتكلم في الخارج"
+            ]
+          },
+          {
+            "topic": "الاستخدامات المجازية للبادئات المكانية",
+            "explanation": "كثير من هذه البادئات لها استخدامات مجازية تتجاوز المعنى المكاني المباشر.",
+            "examples": [
+              { "de": "zurückgeben (يعيد - حرفي ومجازي)", "ar": "إعادة شيء مادي أو رد الجميل" },
+              { "de": "vorschlagen (يقترح - مجازي)", "ar": "تقديم اقتراح" },
+              { "de": "nachdenken (يفكر - مجازي)", "ar": "التفكير في شيء ما" }
+            ]
+          }
+        ],
+      
+        "cultural_notes": [
+          {
+            "title": "الدقة في وصف الاتجاهات",
+            "content": "يُعرف الألمان بدقتهم في وصف الاتجاهات والحركات، ويستخدمون هذه البادئات بشكل منتظم في الحياة اليومية."
+          },
+          {
+            "title": "الأهمية في السياقات الرسمية",
+            "content": "في بيئة العمل الألمانية، يستخدم هذه البادئات بكثرة للتعبير عن التقدم في المشاريع والعودة إلى نقاط البداية."
+          }
+        ],
+      
+        "pronunciation_tips": [
+          {
+            "tip": "نطق 'heraus' و 'hinein'",
+            "explanation": "يتم نطق 'heraus' مع التركيز على المقطع الأول 'her-'، بينما 'hinein' تنطق مع التركيز على 'hin-'."
+          },
+          {
+            "tip": "تمييز 'zu' كبادئة وحرف جر",
+            "explanation": "كبادئة تنطق 'تسو' مع الفعل، كحرف جر تنطق بشكل أضعف."
+          }
+        ],
+      
+        "exercises": [
+          {
+            "type": "multiple_choice",
+            "title": "اختر البادئة الصحيحة",
+            "instructions": "اختر البادئة المناسبة للسياق المحدد",
+            "items": [
+              {
+                "question": "Der Dieb ist schnell ______. (weg-/zurück-)",
+                "options": ["weg", "zurück"],
+                "answer": "weg",
+                "explanation": "weg- تعني الذهاب بعيداً، بينما zurück- تعني العودة"
+              },
+              {
+                "question": "Kannst du ______ mir kommen? (her-/hin-)",
+                "options": ["her", "hin"],
+                "answer": "her",
+                "explanation": "her- تستخدم عندما تكون الحركة باتجاه المتكلم"
+              }
+            ]
+          },
+          {
+            "type": "sentence_completion",
+            "title": "أكمل الجمل بالبادئات المناسبة",
+            "instructions": "استخدم البادئة الصحيحة من القائمة: heraus, hinein, nach, zurück",
+            "items": [
+              {
+                "prompt": "Das Buch muss bis morgen _______gegeben werden.",
+                "answer": "zurück"
+              },
+              {
+                "prompt": "Kannst du bitte _______kommen? Ich muss mit dir sprechen.",
+                "answer": "heraus"
+              }
+            ]
+          },
+          {
+            "type": "translation",
+            "title": "ترجمة الجمل مع البادئات",
+            "instructions": "ترجم الجمل التالية إلى الألمانية باستخدام البادئات المناسبة",
+            "items": [
+              {
+                "arabic": "أغلق النافذة من فضلك.",
+                "german": "Mach bitte das Fenster zu."
+              },
+              {
+                "arabic": "سأعود بعد ساعة.",
+                "german": "Ich komme in einer Stunde zurück."
+              }
+            ]
+          }
+        ],
+      
+        "common_mistakes": [
+          {
+            "mistake": "الخلط بين 'heraus' و 'hinein'",
+            "correction": "تذكر أن 'heraus' للحركة باتجاهك، و'hinein' للحركة بعيدًا عنك",
+            "example": "❌ Geh heraus! (عندما تريد من شخص في الخارج الدخول) → ✅ Geh hinein!"
+          },
+          {
+            "mistake": "نسيان انفصال البادئة في الجمل الرئيسية",
+            "correction": "تأكد من فصل البادئة ونقلها لنهاية الجملة",
+            "example": "❌ Ich zurückkomme morgen → ✅ Ich komme morgen zurück"
+          }
+        ],
+      
+        "resources": [
+          {
+            "type": "video",
+            "title": "البدئات المنفصلة - الجزء الثالث",
+            "url": "https://learngermanoriginal.com/courses/b2-course/lesson-4",
+            "description": "فيديو شرح مفصل للبادئات المكانية المعقدة"
+          },
+          {
+            "type": "interactive",
+            "title": "محاكاة مواقف حقيقية",
+            "url": "https://learngermanoriginal.com/exercises/b2-separable-prefixes-3",
+            "description": "تمارين تفاعلية في سياقات واقعية"
+          }
+        ],
+      
+        "review_questions": [
+          {
+            "question": "ما الفرق بين 'herauskommen' و 'hineingehen'؟",
+            "answer": "'herauskommen' تعني الخروج باتجاه المتكلم، بينما 'hineingehen' تعني الدخول بعيدًا عن المتكلم."
+          },
+          {
+            "question": "متى نستخدم 'nach-' كبادئة منفصلة؟",
+            "answer": "تستخدم 'nach-' للدلالة على الحركة خلف شيء ما أو اللحاق به، كما في 'nachlaufen' (يركض خلف)."
+          },
+          {
+            "question": "كيف نفرق بين الاستخدام الحرفي والمجازي لـ 'vor-'؟",
+            "answer": "الحرفي: الحركة للأمام (vorgehen - يتقدم)، المجازي: التخيل أو الاقتراح (vorstellen - يتخيل/يقترح)."
+          }
+        ],
+      
+        "next_lesson_preview": {
+          "title": "البادئات المنفصلة (الجزء الرابع)",
+          "description": "سنكمل مع آخر مجموعة من البادئات المنفصلة المتعلقة بالحركة عبر الأشياء والتكرار والمعاكسة."
+        },
+      
+        "study_tips": [
+          "ارسم مخططات للحركات باستخدام الأسهم لتوضيح معاني البادئات",
+          "تمرن على وصف طريق من منزلك إلى العمل باستخدام هذه البادئات",
+          "استخدم المرآة للتمرن على التمييز بين 'her-' و 'hin-' حسب الموقع",
+          "اصنع قائمة بالأفعال المجازية واستخداماتها"
+        ],
+      
+        "completion_criteria": [
+          "القدرة على التمييز بين جميع البادئات المكانية المتضادة",
+          "استخدام البادئات بشكل صحيح حسب موقع المتكلم",
+          "فهم الاستخدامات المجازية والحرفية",
+          "بناء جمل معقدة تعبر عن حركات متعددة الاتجاهات"
+        ],
+      
+        "metadata": {
+          "estimated_study_time": "90 دقيقة",
+          "practice_time_recommended": "30 دقيقة يوميًا لمدة 3 أيام",
+          "tags": ["قواعد متقدمة", "B2", "بادئات منفصلة", "حركة مكانية", "اتجاهات"],
+          "last_updated": "2024-01-15",
+          "version": "1.0"
+        }
+    },
+    {
+        "lessonNumber": 5,
+        "title": "البادئات المنفصلة (الجزء الرابع) | Trennbare Präfixe (Teil 4)",
+        "title_en": "Separable prefixes (Part 4)",
+        "summary": "في هذا الدرس الختامي من سلسلة البادئات المنفصلة، ستتعلم آخر مجموعة من البادئات المتقدمة التي تعبر عن المفاهيم المجردة والمعقدة مثل: zusammen, um, durch, wieder, wider, weiter, unter.",
+        "detailed_description": "تركز هذه البادئات على التعبير عن المفاهيم المجردة مثل التكامل، التكرار، المعاكسة، والاستمرارية، مما يثري القدرة التعبيرية للمتعلم في المستويات المتقدمة من اللغة الألمانية.",
+        "objectives": [
+          "إتقان البادئات المعبرة عن المفاهيم المجردة",
+          "فهم الفروق الدقيقة بين البادئات المتشابهة",
+          "تمييز الاستخدامات المختلفة لكل بادئة في السياقات المتعددة",
+          "التعرف على البادئات ذات المعاني المزدوجة",
+          "بناء جمل معقدة تعبر عن مفاهيم مجردة متقدمة"
+        ],
+        "target_audience": "متعلمي اللغة الألمانية مستوى B2-C1، المهتمين بتطوير مهارات التعبير عن المفاهيم المعقدة",
+        "duration": "80-95 دقيقة",
+        "difficulty": "متقدم جدًا",
+      
+        "vocabulary": [
+          {
+            "category": "بادئات المفاهيم المجردة",
+            "words": [
+              { "de": "zusammen-", "ar": "معًا/مشترك", "pron": "تسو-زامِن", "usage": "التجمع أو العمل المشترك" },
+              { "de": "um-", "ar": "حول/تغيير", "pron": "أوم", "usage": "الحركة حول شيء أو التغيير" },
+              { "de": "durch-", "ar": "عبر/خلال", "pron": "دورش", "usage": "الحركة عبر شيء أو الإكمال" },
+              { "de": "wieder-", "ar": "مرة أخرى", "pron": "ڤيدر", "usage": "التكرار أو العودة للحالة" },
+              { "de": "wider-", "ar": "ضد/معاكس", "pron": "ڤيدر", "usage": "المعاكسة أو المقاومة" },
+              { "de": "weiter-", "ar": "استمرار/أبعد", "pron": "ڤايتر", "usage": "الاستمرارية أو التقدم" },
+              { "de": "unter-", "ar": "تحت/أقل من", "pron": "أونتر", "usage": "الحركة للأسفل أو الدونية" }
+            ]
+          },
+          {
+            "category": "أمثلة على الأفعال المنفصلة",
+            "words": [
+              { "de": "zusammenarbeiten", "ar": "يتعاون", "pron": "تسو-زامِن-آربايتِن", "usage": "العمل بشكل مشترك" },
+              { "de": "umsteigen", "ar": "يغير وسيلة المواصلات", "pron": "أوم-شتايغِن", "usage": "التغيير بين القطارات أو الحافلات" },
+              { "de": "durchlesen", "ar": "يقرأ كامل الشيء", "pron": "دورش-ليزِن", "usage": "القراءة من البداية للنهاية" },
+              { "de": "wiedersehen", "ar": "يرى مرة أخرى", "pron": "ڤيدر-زيئِن", "usage": "مقابلة شخص مرة أخرى" },
+              { "de": "widersprechen", "ar": "يعترض", "pron": "ڤيدر-شبرِخِن", "usage": "التعبير عن الاعتراض" },
+              { "de": "weitermachen", "ar": "يواصل", "pron": "ڤايتر-ماخِن", "usage": "مواصلة العمل" },
+              { "de": "unterzeichnen", "ar": "يوقع", "pron": "أونتر-تسايشْنِن", "usage": "وضع التوقيع في الأسفل" }
+            ]
+          }
+        ],
+      
+        "phrases": [
+          {
+            "category": "جمل متقدمة مع البادئات المجردة",
+            "items": [
+              { "de": "Wir müssen zusammenarbeiten, um das Ziel zu erreichen.", "ar": "يجب أن نتعاون لتحقيق الهدف.", "pron": "فير موسن تسو-زامِن-آربايتِن، أوم داس تسيل تسو إررايتشِن", "context": "التعاون لتحقيق هدف" },
+              { "de": "Können Sie bitte den Text durchlesen?", "ar": "هل يمكنك قراءة النص كاملاً من فضلك؟", "pron": "كونِن زي بيته دين تيكست دورش-ليزِن", "context": "طلب قراءة متكاملة" },
+              { "de": "Ich widerspreche dieser Meinung entschieden.", "ar": "أعترض على هذا الرأي بشدة.", "pron": "إيش ڤيدر-شبرِخِه ديزر ماينونغ إنتشيدِن", "context": "التعبير عن الاعتراض" },
+              { "de": "Machen Sie bitte weiter!", "ar": "استمر من فضلك!", "pron": "ماخِن زي بيته ڤايتر", "context": "التشجيع على الاستمرار" }
+            ]
+          }
+        ],
+      
+        "dialogues": [
+          {
+            "title": "اجتماع عمل متقدم",
+            "context": "فريق عمل يناقش مشروعًا معقدًا",
+            "level": "رسمي متقدم",
+            "lines": [
+              { "speaker": "المدير", "de": "Wir müssen unsere Kräfte zusammenführen, um erfolgreich zu sein.", "ar": "يجب أن نجمع قوانا لنكون ناجحين." },
+              { "speaker": "المتخصص", "de": "Ich schlage vor, wir setzen die bestehende Strategie fort.", "ar": "أقترح أن نواصل الاستراتيجية الحالية." },
+              { "speaker": "المدير", "de": "Allerdings muss ich Ihnen hier widersprechen.", "ar": "مع ذلك يجب أن أعترض عليك هنا." },
+              { "speaker": "المتخصص", "de": "Dann müssen wir die Pläne komplett umstellen.", "ar": "إذن يجب أن نغير الخطط completamente." }
+            ]
+          },
+          {
+            "title": "محادثة أكاديمية",
+            "context": "باحثان يناقشان دراسة علمية",
+            "level": "نصف رسمي",
+            "lines": [
+              { "speaker": "الدكتور", "de": "Haben Sie die Studie durchgelesen?", "ar": "هل قرأت الدراسة كاملة؟" },
+              { "speaker": "الباحث", "de": "Ja, und ich werde die Forschung nächste Woche weiterführen.", "ar": "نعم، وسأواصل البحث الأسبوع القادم." },
+              { "speaker": "الدكتور", "de": "Wir sehen uns dann beim nächsten Kolloquium wieder.", "ar": "سنرى بعضنا then في الندوة القادمة." }
+            ]
+          }
+        ],
+      
+        "grammar": [
+          {
+            "topic": "التمييز بين wieder- و wider-",
+            "explanation": "يعتبر التمييز بين هاتين البادئتين من أهم التحديات في المستوى المتقدم، حيث أن نطقهما متشابه ولكن معناهما مختلف تمامًا.",
+            "rules": [
+              "wieder-: تعني التكرار أو العودة إلى حالة سابقة (wiederholen - يكرر)",
+              "wider-: تعني المعاكسة أو المقاومة (widersprechen - يعترض)",
+              "wider- تأتي من الكلمة 'Widerstand' التي تعني المقاومة",
+              "wieder- تأتي من الكلمة 'wieder' التي تعني 'مرة أخرى'"
+            ],
+            "examples": [
+              { "de": "Wir sehen uns wieder. (سنرى بعضنا مرة أخرى)", "ar": "التكرار واللقاء" },
+              { "de": "Das widerstrebt mir. (هذا يناقض ميولي)", "ar": "المعاكسة والرفض" },
+              { "de": "Er wiederholt die Klasse. (يكرر الصف)", "ar": "التكرار الأكاديمي" },
+              { "de": "Sie widerlegt die Theorie. (تفند النظرية)", "ar": "المعاكسة العلمية" }
+            ],
+            "common_mistakes": [
+              "الخلط في الكتابة بين 'wieder' و 'wider'",
+              "عدم التمييز بين معنى التكرار والمعاكسة"
+            ]
+          },
+          {
+            "topic": "الاستخدامات المتعددة للبادئات",
+            "explanation": "كثير من هذه البادئات لها استخدامات متعددة تعتمد على السياق والفعل الذي تلتصق به.",
+            "examples": [
+              { "de": "umgehen: يتعامل مع / يتفادى", "ar": "معنى مختلف حسب السياق" },
+              { "de": "untergehen: يغرق / ينهار", "ar": "حرفي ومجازي" },
+              { "de": "durchführen: ينفذ / يمرر", "ar": "تنفيذ مشروع أو تمرير شيء" }
+            ]
+          }
+        ],
+      
+        "cultural_notes": [
+          {
+            "title": "ثقافة العمل الجماعي",
+            "content": "يُعتبر مفهوم 'zusammenarbeit' (العمل المشترك) أساسيًا في الثقافة الألمانية، خاصة في بيئات العمل والبحث العلمي."
+          },
+          {
+            "title": "الدقة في التعبير عن الاعتراض",
+            "content": "في الثقافة الألمانية، يُعتبر التعبير الواضح عن الاعتراض باستخدام 'widersprechen' علامة على الصراحة والوضوح وليس الوقاحة."
+          }
+        ],
+      
+        "pronunciation_tips": [
+          {
+            "tip": "التمييز الصوتي بين wieder- و wider-",
+            "explanation": "على الرغم من تشابه الكتابة، يمكن تمييز 'wieder' بنبرة صوتية أطول قليلاً على 'ie'، بينما 'wider' تنطق بنبرة أقصر."
+          },
+          {
+            "tip": "نطق 'zusammen'",
+            "explanation": "تنطق 'zusammen' مع التركيز على المقطع الأول 'zu-' ونطق 'sam' بشكل واضح."
+          }
+        ],
+      
+        "exercises": [
+          {
+            "type": "distinction_practice",
+            "title": "تمييز بين wieder- و wider-",
+            "instructions": "اختر البادئة الصحيحة مع توضيح السبب",
+            "items": [
+              {
+                "sentence": "Ich muss leider _______sprechen.",
+                "options": ["wieder", "wider"],
+                "answer": "wider",
+                "explanation": "widersprechen تعني الاعتراض والمعاكسة"
+              },
+              {
+                "sentence": "Kannst du das bitte _______holen?",
+                "options": ["wieder", "wider"],
+                "answer": "wieder",
+                "explanation": "wiederholen تعني التكرار"
+              }
+            ]
+          },
+          {
+            "type": "context_application",
+            "title": "استخدام البادئات في السياق المناسب",
+            "instructions": "اختر البادئة المناسبة للسياق المحدد",
+            "items": [
+              {
+                "context": "في محطة القطار تحتاج إلى تغيير القطار",
+                "sentence": "Wir müssen in Köln _______.",
+                "options": ["umsteigen", "durchfahren"],
+                "answer": "umsteigen",
+                "explanation": "umsteigen تعني تغيير وسيلة المواصلات"
+              },
+              {
+                "context": "قراءة كتاب من البداية إلى النهاية",
+                "sentence": "Ich werde das Buch _______.",
+                "options": ["durchlesen", "weiterlesen"],
+                "answer": "durchlesen",
+                "explanation": "durchlesen تعني القراءة الكاملة"
+              }
+            ]
+          },
+          {
+            "type": "sentence_formation",
+            "title": "تكوين جمل متقدمة",
+            "instructions": "استخدم البادئة المحددة لتكوين جملة مناسبة",
+            "items": [
+              {
+                "prefix": "zusammen-",
+                "example": "zusammenarbeiten",
+                "required_elements": ["فريق عمل", "مشروع", "نجاح"]
+              },
+              {
+                "prefix": "weiter-",
+                "example": "weitermachen",
+                "required_elements": ["رغم الصعوبات", "الاستمرار", "الهدف"]
+              }
+            ]
+          }
+        ],
+      
+        "common_mistakes": [
+          {
+            "mistake": "الخلط بين wieder- و wider-",
+            "correction": "تذكر أن wieder للتكرار وwider للمعاكسة",
+            "example": "❌ Ich wiederlege die These → ✅ Ich widerlege die These"
+          },
+          {
+            "mistake": "سوء استخدام unter- في السياقات المجازية",
+            "correction": "unter- يمكن أن تعني الدونية أو التبعية في السياقات المجازية",
+            "example": "❌ Er untergeht dem Druck → ✅ Er unterliegt dem Druck"
+          }
+        ],
+      
+        "resources": [
+          {
+            "type": "video",
+            "title": "البدئات المنفصلة - الجزء الرابع",
+            "url": "https://learngermanoriginal.com/courses/b2-course/lesson-5",
+            "description": "فيديو شرح متقدم للبادئات المجردة والمعقدة"
+          },
+          {
+            "type": "pdf",
+            "title": "دليل البادئات المنفصلة الشامل",
+            "url": "https://learngermanoriginal.com/resources/b2-separable-prefixes-complete",
+            "description": "ملخص شامل لجميع البادئات المنفصلة في الألمانية"
+          }
+        ],
+      
+        "review_questions": [
+          {
+            "question": "ما الفرق الجوهري بين 'wieder-' و 'wider-'؟",
+            "answer": "'wieder-' تعني التكرار والعودة إلى حالة سابقة، بينما 'wider-' تعني المعاكسة والمقاومة والتناقض."
+          },
+          {
+            "question": "كيف نفرق في الاستخدام بين 'durch-' و 'um-'؟",
+            "answer": "'durch-' تعني الحركة عبر شيء أو الإكمال، بينما 'um-' تعني الحركة حول شيء أو التغيير الجذري."
+          },
+          {
+            "question": "ما هي الاستخدامات المختلفة لـ 'unter-'؟",
+            "answer": "يمكن أن تعني الحركة للأسفل، أو الدونية والتبعية، أو التوقيع (حرفياً: الكتابة في الأسفل)."
+          }
+        ],
+      
+        "next_lesson_preview": {
+          "title": "البادئات غير المنفصلة (الجزء الأول)",
+          "description": "سنبدأ رحلة جديدة في تعلم البادئات غير المنفصلة التي تتبع قواعد مختلفة وتضيف معاني متغيرة للأفعال."
+        },
+      
+        "study_tips": [
+          "اصنع جدولاً مقارناً بين البادئات المتشابهة",
+          "تمرن على كتابة فقرات باستخدام كل البادئات المتعلمة",
+          "اقرأ مقالات أكاديمية وركز على كيفية استخدام هذه البادئات",
+          "استخدم البطاقات التعليمية مع جمل مثالية لكل بادئة"
+        ],
+      
+        "completion_criteria": [
+          "القدرة على التمييز بين جميع البادئات المجردة",
+          "استخدام البادئات بشكل صحيح في السياقات المناسبة",
+          "فهم الفروق الدقيقة بين البادئات المتشابهة",
+          "بناء جمل معقدة تعبر عن مفاهيم مجردة متقدمة"
+        ],
+      
+        "metadata": {
+          "estimated_study_time": "95 دقيقة",
+          "practice_time_recommended": "35 دقيقة يوميًا لمدة 3 أيام",
+          "tags": ["قواعد متقدمة", "B2", "بادئات منفصلة", "مفاهيم مجردة", "ختامي"],
+          "last_updated": "2024-01-15",
+          "version": "1.0"
+        }
+    },
+    {
+        "lessonNumber": 6,
+        "title": "البادئات غير المنفصلة (الجزء الأول) | Untrennbare Präfixe (Teil 1)",
+        "title_en": "Inseparable prefixes (Part 1)",
+        "summary": "في هذا الدرس المتقدم، ستتعلم البادئات غير المنفصلة في اللغة الألمانية التي تبقى ملتصقة بالفعل في جميع الأزمنة والصور، مع التركيز على: be-, er-, ent-, emp-, ge-.",
+        "detailed_description": "البادئات غير المنفصلة تضيف معاني متغيرة للأفعال الأساسية وتتبع قواعد نحوية مختلفة عن البادئات المنفصلة. فهم هذه البادئات يعد أساسيًا للإتقان المتقدم للغة الألمانية.",
+        "objectives": [
+          "فهم مفهوم البادئات غير المنفصلة وآلية عملها",
+          "تمييز البادئات غير المنفصلة عن المنفصلة",
+          "إتقان استخدام البادئات الخمس الأساسية غير المنفصلة",
+          "فهم التغيرات الدلالية التي تسببها هذه البادئات",
+          "تطبيق القواعد النحوية الخاصة بالبادئات غير المنفصلة"
+        ],
+        "target_audience": "متعلمي اللغة الألمانية مستوى B2، الراغبين في تطوير فهمهم العميق للبنية النحوية الألمانية",
+        "duration": "70-85 دقيقة",
+        "difficulty": "متقدم",
+      
+        "vocabulary": [
+          {
+            "category": "البادئات غير المنفصلة الأساسية",
+            "words": [
+              { "de": "be-", "ar": "إضافة معنى التوجه أو التغطية", "pron": "بِ", "usage": "تحول الأفعال إلى متعدية أو تضيف معنى الشمول" },
+              { "de": "er-", "ar": "إنجاز/نتيجة/بداية", "pron": "إِر", "usage": "تشير إلى تحقيق نتيجة أو بداية فعل" },
+              { "de": "ent-", "ar": "إزالة/تحرير/عكس", "pron": "إِنت", "usage": "تعبر عن الإزالة أو التحرير أو العكس" },
+              { "de": "emp-", "ar": "استقبال/شعور", "pron": "إِمب", "usage": "ترتبط بالاستقبال أو المشاعر" },
+              { "de": "ge-", "ar": "تكثيف/تكرار", "pron": "غِ", "usage": "تضيف معنى التكثيف أو التكرار (نادرة الاستخدام)" }
+            ]
+          },
+          {
+            "category": "أمثلة على الأفعال غير المنفصلة",
+            "words": [
+              { "de": "besuchen", "ar": "يزور", "pron": "بِ-زُوخِن", "usage": "زيارة شخص أو مكان" },
+              { "de": "erzählen", "ar": "يحكي", "pron": "إِر-تسيلِن", "usage": "سرد قصة أو حدث" },
+              { "de": "entscheiden", "ar": "يقرر", "pron": "إِنت-شايدِن", "usage": "اتخاذ قرار" },
+              { "de": "empfehlen", "ar": "يوصي", "pron": "إِمب-فيْلِن", "usage": "تقديم توصية" },
+              { "de": "gehören", "ar": "ينتمي", "pron": "غِ-هُورِن", "usage": "الانتماء إلى شيء ما" }
+            ]
+          }
+        ],
+      
+        "phrases": [
+          {
+            "category": "جمل متقدمة مع البادئات غير المنفصلة",
+            "items": [
+              { "de": "Ich besuche meine Familie am Wochenende.", "ar": "أزور عائلتي في نهاية الأسبوع.", "pron": "إيش بِ-زُوخِه ماينِه فاميلييه آم فوخِينإندِه", "context": "زيارة عائلية" },
+              { "de": "Er erzählt eine interessante Geschichte.", "ar": "هو يحكي قصة مثيرة للاهتمام.", "pron": "إِر إِر-تسيلت آينِه إنتِريسانتِه غِشيشتِه", "context": "سرد قصة" },
+              { "de": "Wir müssen eine Entscheidung treffen.", "ar": "يجب علينا اتخاذ قرار.", "pron": "فير موسن آينِه إِنت-شايدُونغ تريفِن", "context": "اتخاذ قرار مهم" },
+              { "de": "Kannst du ein gutes Restaurant empfehlen?", "ar": "هل يمكنك التوصية بمطعم جيد؟", "pron": "كانست دو آين غُوتِس رِستوران إِمب-فيْلِن", "context": "طلب توصية" }
+            ]
+          }
+        ],
+      
+        "dialogues": [
+          {
+            "title": "محادثة في السياق الاجتماعي",
+            "context": "أصدقاء يخططون لرحلة",
+            "level": "غير رسمي",
+            "lines": [
+              { "speaker": "آنا", "de": "Ich besuche morgen meine Tante in Berlin.", "ar": "سأزور عمتي غدًا في برلين." },
+              { "speaker": "توم", "de": "Kannst du ein gutes Hotel empfehlen?", "ar": "هل يمكنك التوصية بفندق جيد؟" },
+              { "speaker": "آنا", "de": "Ich entscheide mich für das Hotel am See.", "ar": "أقرر اختيار الفندق على البحيرة." },
+              { "speaker": "توم", "de": "Erzähl mir später mehr davon!", "ar": "احكي لي المزيد عن ذلك لاحقًا!" }
+            ]
+          },
+          {
+            "title": "سياق عمل رسمي",
+            "context": "اجتماع عمل لمناقشة استراتيجية",
+            "level": "رسمي",
+            "lines": [
+              { "speaker": "المدير", "de": "Wir müssen unsere Strategie entschlossen entwickeln.", "ar": "يجب أن نطور استراتيجيتنا بحزم." },
+              { "speaker": "الموظف", "de": "Ich empfehle, den Markt gründlich zu untersuchen.", "ar": "أوصي بدراسة السوق بدقة." },
+              { "speaker": "المدير", "de": "Besuchen Sie bitte die Messe nächste Woche.", "ar": "زر المعرض الأسبوع القادم من فضلك." }
+            ]
+          }
+        ],
+      
+        "grammar": [
+          {
+            "topic": "القواعد الأساسية للبادئات غير المنفصلة",
+            "explanation": "تختلف البادئات غير المنفصلة عن المنفصلة في عدة قواعد أساسية تؤثر على تصريف الأفعال وتركيب الجمل.",
+            "rules": [
+              "لا تنفصل البادئة عن الفعل في أي زمن من الأزمنة",
+              "لا تأخذ الأفعال غير المنفصلة البادئة 'ge-' في صيغة Perfekt",
+              "يتم نطق البادئة غير المنفصلة كجزء لا يتجزأ من الفعل",
+              "تأتي البادئة غير المنفصلة دائمًا في بداية الفعل"
+            ],
+            "examples": [
+              { "de": "Ich besuche (حاضر) → Ich habe besucht (Perfekt)", "ar": "لا تأتي 'ge-' في Perfekt" },
+              { "de": "Er erzählt (حاضر) → Er hat erzählt (Perfekt)", "ar": "البادئة تبقى ملتصقة" },
+              { "de": "Wir empfehlen (حاضر) → Wir haben empfohlen (Perfekt)", "ar": "نفس القاعدة مع تغيير حرف العلة" }
+            ],
+            "common_mistakes": [
+              "إضافة 'ge-' في Perfekt للأفعال غير المنفصلة",
+              "محاولة فصل البادئة غير المنفصلة"
+            ]
+          },
+          {
+            "topic": "التغيرات الدلالية مع البادئات غير المنفصلة",
+            "explanation": "تضيف كل بادئة غير منفصلة معنى محددًا يغير من دلالة الفعل الأصلي.",
+            "examples": [
+              { "de": "suchen (يبحث) → besuchen (يزور)", "ar": "be- تضيف معنى التوجه إلى" },
+              { "de": "zählen (يعد) → erzählen (يحكي)", "ar": "er- تضيف معنى السرد" },
+              { "de": "scheiden (يفصل) → entscheiden (يقرر)", "ar": "ent- تضيف معنى الفصل في الأمر" },
+              { "de": "fehlen (ينقص) → empfehlen (يوصي)", "ar": "emp- تضيف معنى التقديم" }
+            ]
+          }
+        ],
+      
+        "cultural_notes": [
+          {
+            "title": "أهمية الدقة في التعبير",
+            "content": "يُعرف عن الناطقين بالألمانية استخدامهم الدقيق للبادئات غير المنفصلة للتعبير عن الفروق الدقيقة في المعنى، خاصة في السياقات الرسمية والأكاديمية."
+          },
+          {
+            "title": "الاستخدام في اللغة الأدبية",
+            "content": "تستخدم البادئات غير المنفصلة بكثرة في الأدب الألماني لإضافة عمق ودقة للتعبير عن المشاعر والأفكار المعقدة."
+          }
+        ],
+      
+        "pronunciation_tips": [
+          {
+            "tip": "نبرة الصوت في البادئات غير المنفصلة",
+            "explanation": "يتم التركيز على المقطع الأول من الفعل مع البادئة غير المنفصلة، مما يعطي نبرة صوتية مميزة."
+          },
+          {
+            "tip": "نطق 'emp-' و 'ent-'",
+            "explanation": "تنطق 'emp-' مع دمج صوتي بين 'm' و 'p'، بينما 'ent-' تنطق مع 't' واضحة."
+          }
+        ],
+      
+        "exercises": [
+          {
+            "type": "prefix_identification",
+            "title": "تعريف البادئات غير المنفصلة",
+            "instructions": "حدد البادئة غير المنفصلة في الأفعال التالية واذكر معناها",
+            "items": [
+              {
+                "verb": "besprechen",
+                "prefix": "be-",
+                "meaning": "إضافة معنى المناقشة الشاملة"
+              },
+              {
+                "verb": "erklären",
+                "prefix": "er-",
+                "meaning": "إضافة معنى التوضيح والبيان"
+              },
+              {
+                "verb": "entwickeln",
+                "prefix": "ent-",
+                "meaning": "إضافة معنى التطور والنمو"
+              }
+            ]
+          },
+          {
+            "type": "sentence_formation",
+            "title": "تكوين الجمل مع الأفعال غير المنفصلة",
+            "instructions": "استخدم الفعل بين القوسين في الجملة المناسبة",
+            "items": [
+              {
+                "sentence": "Ich _______ meinen Freund im Krankenhaus. (besuchen)",
+                "answer": "besuche"
+              },
+              {
+                "sentence": "Kannst du mir _______ was passiert ist? (erzählen)",
+                "answer": "erzählen"
+              },
+              {
+                "sentence": "Wir _______ uns für die rote Farbe. (entscheiden)",
+                "answer": "entscheiden"
+              }
+            ]
+          },
+          {
+            "type": "perfekt_formation",
+            "title": "تحويل إلى زمن Perfekt",
+            "instructions": "حول الجمل التالية إلى زمن Perfekt مع الانتباه لعدم إضافة 'ge-'",
+            "items": [
+              {
+                "present": "Sie empfiehlt ein Buch.",
+                "perfekt": "Sie hat ein Buch empfohlen."
+              },
+              {
+                "present": "Er entdeckt eine neue Lösung.",
+                "perfekt": "Er hat eine neue Lösung entdeckt."
+              },
+              {
+                "present": "Ich beantworte die Frage.",
+                "perfekt": "Ich habe die Frage beantwortet."
+              }
+            ]
+          }
+        ],
+      
+        "common_mistakes": [
+          {
+            "mistake": "إضافة 'ge-' في Perfekt",
+            "correction": "تذكر أن الأفعال غير المنفصلة لا تأخذ 'ge-' في Perfekt",
+            "example": "❌ Ich habe gebesucht → ✅ Ich habe besucht"
+          },
+          {
+            "mistake": "محاولة فصل البادئة غير المنفصلة",
+            "correction": "البادئات غير المنفصلة تبقى ملتصقة دائمًا",
+            "example": "❌ Ich be suche → ✅ Ich besuche"
+          }
+        ],
+      
+        "resources": [
+          {
+            "type": "video",
+            "title": "البدئات غير المنفصلة - الجزء الأول",
+            "url": "https://learngermanoriginal.com/courses/b2-course/lesson-6",
+            "description": "فيديو شرح مفصل للبادئات غير المنفصلة الأساسية"
+          },
+          {
+            "type": "interactive",
+            "title": "تمارين التفريق بين البادئات",
+            "url": "https://learngermanoriginal.com/exercises/b2-inseparable-prefixes-1",
+            "description": "تمارين تفاعلية للتمييز بين البادئات المنفصلة وغير المنفصلة"
+          }
+        ],
+      
+        "review_questions": [
+          {
+            "question": "ما هي القاعدة الأساسية للتمييز بين البادئات المنفصلة وغير المنفصلة في زمن Perfekt؟",
+            "answer": "الأفعال المنفصلة تأخذ 'ge-' في Perfekt، بينما الأفعال غير المنفصلة لا تأخذ 'ge-'."
+          },
+          {
+            "question": "ما هو المعنى الأساسي الذي تضيفه بادئة 'be-'؟",
+            "answer": "تضيف بادئة 'be-' معنى التوجه أو التغطية أو التحويل إلى فعل متعدٍ."
+          },
+          {
+            "question": "كيف نفرق في النطق بين الفعل المنفصل وغير المنفصل؟",
+            "answer": "في الأفعال المنفصلة، يتم التركيز على البادئة عند فصلها، بينما في غير المنفصلة، يتم التركيز على المقطع الأول من الفعل ككل."
+          }
+        ],
+      
+        "next_lesson_preview": {
+          "title": "البادئات غير المنفصلة (الجزء الثاني)",
+          "description": "سنستكمل مع البادئات غير المنفصلة المتقدمة واستخداماتها في السياقات المعقدة والمجازية."
+        },
+      
+        "study_tips": [
+          "اصنع قائمة مقارنة بين الأفعال مع البادئات المنفصلة وغير المنفصلة",
+          "تمرن على كتابة الجمل في أزمنة مختلفة مع الانتباه لعدم إضافة 'ge-'",
+          "اقرأ نصوصًا أدبية وركز على استخدام البادئات غير المنفصلة",
+          "استخدم التسجيلات الصوتية لمقارنة نطقك بالنطق الأصلي"
+        ],
+      
+        "completion_criteria": [
+          "القدرة على تمييز البادئات غير المنفصلة الخمس",
+          "الفهم الصحيح لقواعد استخدامها في الأزمنة المختلفة",
+          "التمييز بين المعاني المضافة بكل بادئة",
+          "استخدام الأفعال غير المنفصلة في جمل صحيحة نحويًا"
+        ],
+      
+        "metadata": {
+          "estimated_study_time": "85 دقيقة",
+          "practice_time_recommended": "25 دقيقة يوميًا لمدة 4 أيام",
+          "tags": ["قواعد متقدمة", "B2", "بادئات غير منفصلة", "نحو", "أفعال"],
+          "last_updated": "2024-01-15",
+          "version": "1.0"
+        }
+    },
+    {
+        "lessonNumber": 7,
+        "title": "البادئات غير المنفصلة (الجزء الثاني) | Untrennbare Präfixe (Teil 2)",
+        "title_en": "Inseparable prefixes (Part 2)",
+        "summary": "في هذا الدرس المتقدم، ستتعلم المجموعة الثانية من البادئات غير المنفصلة التي تعبر عن مفاهيم معقدة مثل المقاومة، الخطأ، التدمير، والتحول، مع التركيز على: hinter-, miss-, ver-, wider-, zer-.",
+        "detailed_description": "هذه البادئات تضيف دلالات سلبية أو تحويلية قوية للأفعال، وتستخدم في سياقات متقدمة للتعبير عن المفاهيم المعقدة والمجردة في اللغة الألمانية.",
+        "objectives": [
+          "إتقان استخدام البادئات غير المنفصلة المتقدمة",
+          "فهم الدلالات السلبية والتحويلية لهذه البادئات",
+          "التمييز بين البادئات المتشابهة في المعنى",
+          "تطبيق هذه البادئات في السياقات الأكاديمية والمهنية",
+          "فهم الفروق الدقيقة في استخدام كل بادئة"
+        ],
+        "target_audience": "متعلمي اللغة الألمانية مستوى B2-C1، المهتمين بالتعبير عن المفاهيم المعقدة والمجردة",
+        "duration": "75-90 دقيقة",
+        "difficulty": "متقدم جدًا",
+      
+        "vocabulary": [
+          {
+            "category": "البادئات غير المنفصلة المتقدمة",
+            "words": [
+              { "de": "hinter-", "ar": "وراء/خلف", "pron": "هينتر", "usage": "تشير إلى الحركة خلف شيء أو الفعل الخفي" },
+              { "de": "miss-", "ar": "خطأ/سوء", "pron": "ميس", "usage": "تعبر عن الخطأ أو الفشل أو السوء" },
+              { "de": "ver-", "ar": "تحويل/تغيير/خطأ", "pron": "فير", "usage": "أكثر البادئات تنوعًا - تعبر عن التحول أو الخطأ" },
+              { "de": "wider-", "ar": "ضد/معاكس", "pron": "ڤيدر", "usage": "تعبر عن المقاومة أو المعاكسة" },
+              { "de": "zer-", "ar": "تدمير/تفكيك", "pron": "تسير", "usage": "تشير إلى التدمير أو التفكيك" }
+            ]
+          },
+          {
+            "category": "أمثلة على الأفعال غير المنفصلة",
+            "words": [
+              { "de": "hinterlassen", "ar": "يترك وراءه", "pron": "هينتر-لاسِن", "usage": "ترك أثر أو إرث" },
+              { "de": "missverstehen", "ar": "يسيء الفهم", "pron": "ميس-فير-شتيئِن", "usage": "الفهم الخاطئ" },
+              { "de": "verändern", "ar": "يغير", "pron": "فير-إندِرن", "usage": "إحداث تغيير" },
+              { "de": "widersprechen", "ar": "يعترض", "pron": "ڤيدر-شبرِخِن", "usage": "التعبير عن الاعتراض" },
+              { "de": "zerstören", "ar": "يدمر", "pron": "تسير-شتورِن", "usage": "التدمير الكامل" },
+              { "de": "hintergehen", "ar": "يخدع", "pron": "هينتر-غيئِن", "usage": "الخداع والغش" },
+              { "de": "misslingen", "ar": "يفشل", "pron": "ميس-لينغِن", "usage": "عدم النجاح في شيء" },
+              { "de": "versprechen", "ar": "يعد", "pron": "فير-شبرِخِن", "usage": "إعطاء وعد" },
+              { "de": "widerstehen", "ar": "يقاوم", "pron": "ڤيدر-شتيئِن", "usage": "المقاومة والثبات" },
+              { "de": "zerbrechen", "ar": "يكسر", "pron": "تسير-برِخِن", "usage": "الكسر إلى أجزاء" }
+            ]
+          }
+        ],
+      
+        "phrases": [
+          {
+            "category": "جمل متقدمة مع البادئات غير المنفصلة",
+            "items": [
+              { "de": "Er hat ein wichtiges Dokument hinterlassen.", "ar": "لقد ترك وثيقة مهمة وراءه.", "pron": "إير هات آين ڤيشتيغِس دوكومِنت هينتر-لاسِن", "context": "ترك أثر مهم" },
+              { "de": "Sie haben meine Worte missverstanden.", "ar": "لقد أسأتم فهم كلماتي.", "pron": "زي هابِن ماينِه فورتِه ميس-فير-شتانِن", "context": "سوء الفهم" },
+              { "de": "Die Situation hat sich völlig verändert.", "ar": "لقد تغير الموقف completely.", "pron": "دي زيتواتسيون هات زيش فيليخ فير-إندِرت", "context": "تغير جذري" },
+              { "de": "Ich muss Ihnen leider widersprechen.", "ar": "يجب أن أعترض عليك مع الأسف.", "pron": "إيش موس إينِن لايدر ڤيدر-شبرِخِن", "context": "الاعتراض المهذب" },
+              { "de": "Das Erdbeben hat die Stadt zerstört.", "ar": "دمر الزلزال المدينة.", "pron": "داس إيرد-بيبن هات دي شتات تسير-شتورت", "context": "تدمير كامل" }
+            ]
+          }
+        ],
+      
+        "dialogues": [
+          {
+            "title": "نقاش أكاديمي متقدم",
+            "context": "باحثان يناقشان نظرية علمية",
+            "level": "رسمي متقدم",
+            "lines": [
+              { "speaker": "الدكتور فاغنر", "de": "Ich fürchte, Sie missverstehen die grundlegende Theorie.", "ar": "أخشى أنكم تسيئون فهم النظرية الأساسية." },
+              { "speaker": "الدكتورة ويبر", "de": "Dann muss ich Ihnen widersprechen. Meine Interpretation ist valide.", "ar": "إذن يجب أن أعترض عليك. تفسيري صحيح." },
+              { "speaker": "الدكتور فاغنر", "de": "Diese Annahme könnte Ihre gesamte Argumentation zerstören.", "ar": "هذا الافتراض قد يدمر حجتك بالكامل." },
+              { "speaker": "الدكتورة ويبر", "de": "Lassen Sie uns die Beweise nicht hinterfragen, sondern akzeptieren.", "ar": "دعونا لا نشكك في الأدلة بل نقبلها." }
+            ]
+          },
+          {
+            "title": "محادثة في سياق عمل",
+            "context": "مدير يناقش تقرير أداء",
+            "level": "رسمي",
+            "lines": [
+              { "speaker": "المدير", "de": "Das Projekt ist leider misslungen.", "ar": "المشروع فشل مع الأسف." },
+              { "speaker": "الموظف", "de": "Ich verspreche, die Fehler zu analysieren und zu verändern.", "ar": "أعد بتحليل الأخطاء وتغييرها." },
+              { "speaker": "المدير", "de": "Hinterlassen Sie mir bitte einen detaillierten Bericht.", "ar": "اترك لي تقريرًا مفصلًا من فضلك." }
+            ]
+          }
+        ],
+      
+        "grammar": [
+          {
+            "topic": "الدلالات السلبية والتحويلية للبادئات",
+            "explanation": "تمتلك هذه البادئات دلالات قوية غالبًا ما تكون سلبية أو تحويلية، مما يغير المعنى الأساسي للفعل بشكل جذري.",
+            "rules": [
+              "miss-: دائماً تعبر عن الخطأ أو الفشل أو السوء",
+              "zer-: دائماً تعبر عن التدمير أو التفكيك",
+              "wider-: تعبر عن المقاومة أو المعاكسة",
+              "ver-: الأكثر تنوعاً - يمكن أن تعبر عن التحول، الخطأ، الإكمال، أو التغيير",
+              "hinter-: تعبر عن الخفاء أو ما وراء الشيء"
+            ],
+            "examples": [
+              { "de": "verstehen (يفهم) → missverstehen (يسيء الفهم)", "ar": "إضافة معنى الخطأ" },
+              { "de": "bauen (يبني) → zerstören (يدمر)", "ar": "تحويل البناء إلى تدمير" },
+              { "de": "sprechen (يتكلم) → widersprechen (يعترض)", "ar": "إضافة معنى المعاكسة" },
+              { "de": "gehen (يذهب) → hintergehen (يخدع)", "ar": "إضافة معنى الخداع" },
+              { "de": "ändern (يغير) → verändern (يغير بشكل جذري)", "ar": "تكثيف معنى التغيير" }
+            ],
+            "common_mistakes": [
+              "الخلط بين 'wider-' و 'wieder-' في الكتابة",
+              "عدم إدراك القوة الدلالية لبادئة 'zer-'",
+              "سوء فهم السياقات المختلفة لبادئة 'ver-'"
+            ]
+          },
+          {
+            "topic": "الاستخدامات المتعددة لبادئة 'ver-'",
+            "explanation": "تعتبر بادئة 'ver-' الأكثر تعقيدًا وتنوعًا في الألمانية، حيث تمتلك أكثر من 15 معنى مختلفًا حسب السياق.",
+            "examples": [
+              { "de": "versprechen (يعد) - معنى الوعد", "ar": "إضافة معنى الالتزام" },
+              { "de": "vergessen (ينسى) - معنى النسيان", "ar": "إضافة معنى الفقدان" },
+              { "de": "verkaufen (يبيع) - معنى البيع", "ar": "تحويل الملكية" },
+              { "de": "verlieren (يخسر) - معنى الخسارة", "ar": "إضافة معنى الفقد" },
+              { "de": "versuchen (يحاول) - معنى المحاولة", "ar": "إضافة معنى التجريب" }
+            ]
+          }
+        ],
+      
+        "cultural_notes": [
+          {
+            "title": "الثقافة النقدية في ألمانيا",
+            "content": "يُعتبر استخدام أفعال مثل 'widersprechen' و 'hinterfragen' جزءًا من الثقافة النقدية الألمانية التي تشجع على التساؤل والتحليل النقدي."
+          },
+          {
+            "title": "الدقة في التعبير عن الأخطاء",
+            "content": "يستخدم الألمان البادئات السلبية مثل 'miss-' بدقة للتعبير عن الأخطاء والفشل، مما يعكس ثقافة الصراحة والوضوح."
+          }
+        ],
+      
+        "pronunciation_tips": [
+          {
+            "tip": "نطق 'ver-' في السياقات المختلفة",
+            "explanation": "تنطق 'ver-' دائمًا بنفس الطريقة رغم تنوع معانيها، مع التركيز على المقطع الأول من الفعل ككل."
+          },
+          {
+            "tip": "التمييز بين 'wider-' و 'wieder-'",
+            "explanation": "'wider-' تنطق بلفظ 'i' قصير، بينما 'wieder-' تنطق بلفظ 'ie' طويل."
+          }
+        ],
+      
+        "exercises": [
+          {
+            "type": "meaning_analysis",
+            "title": "تحليل المعنى المضاف",
+            "instructions": "حدد المعنى الذي تضيفه البادئة غير المنفصلة في الأفعال التالية",
+            "items": [
+              {
+                "base_verb": "stehen (يقف)",
+                "prefixed_verb": "widerstehen (يقاوم)",
+                "added_meaning": "معنى المقاومة والثبات"
+              },
+              {
+                "base_verb": "lassen (يترك)",
+                "prefixed_verb": "hinterlassen (يترك وراءه)",
+                "added_meaning": "معنى ترك أثر أو إرث"
+              },
+              {
+                "base_verb": "gehen (يذهب)",
+                "prefixed_verb": "zergehen (ينصهر/يذوب)",
+                "added_meaning": "معنى الذوبان أو التفكك"
+              }
+            ]
+          },
+          {
+            "type": "sentence_correction",
+            "title": "تصحيح الأخطاء الشائعة",
+            "instructions": "صحح الأخطاء في الجمل التالية مع شرح السبب",
+            "items": [
+              {
+                "incorrect": "Ich habe den Text wiederverstanden.",
+                "correct": "Ich habe den Text missverstanden.",
+                "explanation": "wieder- تعني التكرار، بينما miss- تعني الخطأ في الفهم"
+              },
+              {
+                "incorrect": "Er hat das Glas zerbrochengehabt.",
+                "correct": "Er hat das Glas zerbrochen.",
+                "explanation": "الأفعال غير المنفصلة لا تأخذ 'ge-' في Perfekt"
+              }
+            ]
+          },
+          {
+            "type": "context_application",
+            "title": "تطبيق في السياق المناسب",
+            "instructions": "اختر الفعل المناسب للسياق المحدد",
+            "items": [
+              {
+                "context": "بعد مناقشة طويلة، قرر الفريق تغيير الاستراتيجية completely",
+                "options": ["ändern", "verändern"],
+                "answer": "verändern",
+                "explanation": "ver- تضيف معنى التغيير الجذري والشامل"
+              },
+              {
+                "context": "لم يفهم الشخص الرسالة بشكل صحيح",
+                "options": ["verstehen", "missverstehen"],
+                "answer": "missverstehen",
+                "explanation": "miss- تضيف معنى الخطأ في الفهم"
+              }
+            ]
+          }
+        ],
+      
+        "common_mistakes": [
+          {
+            "mistake": "الخلط بين 'wider-' و 'wieder-'",
+            "correction": "تذكر أن 'wider-' للمقاومة و'wieder-' للتكرار",
+            "example": "❌ Ich wiederstehe der Versuchung → ✅ Ich widerstehe der Versuchung"
+          },
+          {
+            "mistake": "إضافة 'ge-' في Perfekt للأفعال غير المنفصلة",
+            "correction": "الأفعال غير المنفصلة لا تأخذ 'ge-' في Perfekt",
+            "example": "❌ Ich habe gemisstraut → ✅ Ich habe misstraut"
+          },
+          {
+            "mistake": "عدم إدراك قوة دلالة 'zer-'",
+            "correction": "'zer-' تعني دائماً التدمير أو التفكيك الكامل",
+            "example": "❌ Das Kind hat das Spielzeug zerlegt (إذا كان المقصود التركيب) → ✅ Das Kind hat das Spielzeug auseinandergenommen"
+          }
+        ],
+      
+        "resources": [
+          {
+            "type": "video",
+            "title": "البدئات غير المنفصلة - الجزء الثاني",
+            "url": "https://learngermanoriginal.com/courses/b2-course/lesson-7",
+            "description": "فيديو شرح متقدم للبادئات غير المنفصلة المعقدة"
+          },
+          {
+            "type": "pdf",
+            "title": "دليل البادئات غير المنفصلة الشامل",
+            "url": "https://learngermanoriginal.com/resources/b2-inseparable-prefixes-complete",
+            "description": "ملخص شامل لجميع البادئات غير المنفصلة واستخداماتها"
+          }
+        ],
+      
+        "review_questions": [
+          {
+            "question": "ما هي البادئة التي تعبر دائماً عن الخطأ أو الفشل؟",
+            "answer": "بادئة 'miss-' تعبر دائماً عن الخطأ، الفشل، أو السوء في الفعل."
+          },
+          {
+            "question": "كيف نفرق في الاستخدام بين 'verändern' و 'ändern'؟",
+            "answer": "'ändern' تعني تغيير طفيف أو تعديل، بينما 'verändern' تعني تغيير جذري وشامل."
+          },
+          {
+            "question": "ما هي القاعدة النحوية الثابتة لجميع البادئات غير المنفصلة؟",
+            "answer": "جميع البادئات غير المنفصلة تبقى ملتصقة بالفعل في جميع الأزمنة ولا تأخذ 'ge-' في صيغة Perfekt."
+          }
+        ],
+      
+        "next_lesson_preview": {
+          "title": "بدائل المبني للمجهول",
+          "description": "سننتقل إلى موضوع جديد ومتقدم وهو استخدام البدائل المختلفة للمبني للمجهول في اللغة الألمانية للتعبير بأساليب أكثر تنوعًا."
+        },
+      
+        "study_tips": [
+          "اصنع جدولاً مقارناً يوضح الفروق بين البادئات المتشابهة",
+          "تمرن على كتابة فقرات تستخدم فيها جميع البادئات غير المنفصلة المتعلمة",
+          "اقرأ مقالات نقدية أو علمية وركز على استخدام هذه البادئات",
+          "استخدم تقنية الترميز اللوني للتمييز بين البادئات المختلفة"
+        ],
+      
+        "completion_criteria": [
+          "القدرة على التمييز بين جميع البادئات غير المنفصلة المتقدمة",
+          "فهم الدلالات المختلفة لكل بادئة واستخدامها في السياق المناسب",
+          "تجنب الأخطاء الشائعة في استخدام البادئات غير المنفصلة",
+          "استخدام هذه البادئات في التعبير عن مفاهيم معقدة ومجردة"
+        ],
+      
+        "metadata": {
+          "estimated_study_time": "90 دقيقة",
+          "practice_time_recommended": "30 دقيقة يوميًا لمدة 3 أيام",
+          "tags": ["قواعد متقدمة", "B2", "بادئات غير منفصلة", "دلالات سلبية", "مفاهيم مجردة"],
+          "last_updated": "2024-01-15",
+          "version": "1.0"
+        }
+    },
+    {
+        "lessonNumber": 8,
+        "title": "بدائل المبني للمجهول | Passiversatzformen",
+        "title_en": "Passive substitutes",
+        "summary": "في هذا الدرس المتقدم، ستتعلم البدائل المختلفة للمبني للمجهول في اللغة الألمانية التي تسمح بالتعبير عن الأفعال المبهمة الفاعل بأساليب أكثر مرونة وتنوعًا، مع التركيز على استخدام man, lassen, sich lassen, sein + zu + Infinitiv، والصيغ الانعكاسية.",
+        "detailed_description": "بدائل المبني للمجهول تثري القدرة التعبيرية في المستويات المتقدمة من اللغة الألمانية، وتستخدم بكثرة في السياقات الأكاديمية، التقنية، والإدارية لتجنب التكرار وإضافة التنوع الأسلوبي للنص.",
+        "objectives": [
+          "فهم البدائل المختلفة للمبني للمجهول واستخداماتها",
+          "التمييز بين الاستخدامات المناسبة لكل بديل",
+          "إتقان القواعد النحوية الخاصة بكل صيغة بديلة",
+          "تطبيق هذه البدائل في السياقات الأكاديمية والمهنية",
+          "تحسين التنوع الأسلوبي في الكتابة والتحدث"
+        ],
+        "target_audience": "متعلمي اللغة الألمانية مستوى B2-C1، المهتمين بتطوير أسلوبهم الكتابي والشفهي في المستويات المتقدمة",
+        "duration": "85-100 دقيقة",
+        "difficulty": "متقدم جدًا",
+      
+        "vocabulary": [
+          {
+            "category": "الصيغ البديلة الأساسية",
+            "words": [
+              { "de": "man + Aktiv", "ar": "صيغة غير شخصية", "pron": "مان", "usage": "تستخدم عندما يكون الفاعل غير محدد أو غير مهم" },
+              { "de": "lassen + sich + Infinitiv", "ar": "إمكانية التنفيذ", "pron": "لاسِن زيش", "usage": "تعبر عن الإمكانية أو القابلية للتنفيذ" },
+              { "de": "sein + zu + Infinitiv", "ar": "الضرورة أو الإمكانية", "pron": "زاين تسو", "usage": "تعبر عن الضرورة أو الإمكانية في صيغة مختصرة" },
+              { "de": "bekommen/erhalten/kriegen + Partizip II", "ar": "استلام الفعل", "pron": "بِ-كومِن/إِر-هالتِن/كريغِن", "usage": "تعبر عن استلام الفعل (مشابه للمبني للمعلوم)" },
+              { "de": "sich lassen + Infinitiv", "ar": "القابلية للتنفيذ", "pron": "زيش لاسِن", "usage": "صيغة انعكاسية تعبر عن الإمكانية" }
+            ]
+          },
+          {
+            "category": "أمثلة على الصيغ البديلة",
+            "words": [
+              { "de": "Man öffnet das Fenster.", "ar": "يتم فتح النافذة.", "pron": "مان أوفْنِت داس فينستِر", "usage": "صيغة غير شخصية للفعل" },
+              { "de": "Das Problem lässt sich lösen.", "ar": "يمكن حل المشكلة.", "pron": "داس بروبليم لاسِت زيش لوزِن", "usage": "التعبير عن الإمكانية" },
+              { "de": "Die Aufgabe ist zu erledigen.", "ar": "يجب إنجاز المهمة.", "pron": "دي أوف-غابِه إيست تسو إِر-ليدِيغِن", "usage": "التعبير عن الضرورة" },
+              { "de": "Ich bekomme das Buch geschenkt.", "ar": "أحصل على الكتاب هدية.", "pron": "إيش بِ-كومِه داس بُوخ غِ-شينكت", "usage": "استلام الفعل" },
+              { "de": "Das Material lässt sich leicht verarbeiten.", "ar": "يمكن معالجة المادة بسهولة.", "pron": "داس ماتِريال لاسِت زيش لايشت فير-آربايتِن", "usage": "القابلية للمعالجة" }
+            ]
+          }
+        ],
+      
+        "phrases": [
+          {
+            "category": "جمل متقدمة مع البدائل",
+            "items": [
+              { "de": "Man sollte diese Regel beachten.", "ar": "يجب مراعاة هذه القاعدة.", "pron": "مان زولْتِه ديزِه ريغِل بِ-آخْتِن", "context": "توصية عامة" },
+              { "de": "Diese Tür lässt sich nicht öffnen.", "ar": "لا يمكن فتح هذا الباب.", "pron": "ديزِه تور لاسِت زيش نيشت أوفْنِن", "context": "استحالة التنفيذ" },
+              { "de": "Die Dokumente sind bis morgen abzugeben.", "ar": "يجب تسليم المستندات حتى الغد.", "pron": "دي دوكومِنتِه زينت بِيس مورغِن آب-تسو-غيِبِن", "context": "موعد نهائي" },
+              { "de": "Er bekam den Preis verliehen.", "ar": "حصل على الجائزة (تم منحه إياها).", "pron": "إير بِ-كام دين برايس فير-ليهِن", "context": "استلام جائزة" },
+              { "de": "Das Gerät lässt sich einfach bedienen.", "ar": "يمكن تشغيل الجهاز بسهولة.", "pron": "داس غِ-ريت لاسِت زيش آينفاخ بِ-دينِن", "context": "سهولة الاستخدام" }
+            ]
+          }
+        ],
+      
+        "dialogues": [
+          {
+            "title": "تعليمات تقنية متقدمة",
+            "context": "خبير تقني يشرح تشغيل جهاز معقد",
+            "level": "رسمي متقدم",
+            "lines": [
+              { "speaker": "الخبير", "de": "Das System lässt sich durch mehrere Methoden konfigurieren.", "ar": "يمكن تكوين النظام بعدة طرق." },
+              { "speaker": "المتدرب", "de": "Und wie wird die Software aktualisiert?", "ar": "وكيف يتم تحديث البرنامج؟" },
+              { "speaker": "الخبير", "de": "Man startet den Update-Prozess automatisch.", "ar": "يتم بدء عملية التحديث تلقائيًا." },
+              { "speaker": "المتدرب", "de": "Sind alle Einstellungen zu speichern?", "ar": "هل يجب حفظ جميع الإعدادات؟" },
+              { "speaker": "الخبير", "de": "Ja, die Änderungen sind unbedingt zu sichern.", "ar": "نعم، يجب حفظ التغييرات absolutely." }
+            ]
+          },
+          {
+            "title": "محادثة في سياق أكاديمي",
+            "context": "مناقشة منهجية البحث",
+            "level": "أكاديمي",
+            "lines": [
+              { "speaker": "الأستاذ", "de": "Diese Methode lässt sich auf verschiedene Probleme anwenden.", "ar": "يمكن تطبيق هذه الطريقة على مشاكل مختلفة." },
+              { "speaker": "الطالب", "de": "Bekommt man die Ergebnisse sofort?", "ar": "هل يحصل المرء على النتائج فورًا؟" },
+              { "speaker": "الأستاذ", "de": "Die Daten sind zunächst zu analysieren.", "ar": "يجب تحليل البيانات أولاً." },
+              { "speaker": "الطالب", "de": "Man muss also Geduld haben.", "ar": "إذن يجب أن يكون لدى المرء صبر." }
+            ]
+          }
+        ],
+      
+        "grammar": [
+          {
+            "topic": "التمييز بين البدائل المختلفة",
+            "explanation": "كل بديل من بدائل المبني للمجهول له استخدامات محددة وفروق دقيقة في المعنى والتوظيف.",
+            "rules": [
+              "'man + Aktiv': تستخدم عندما يكون الفاعل غير محدد أو غير مهم، وتكون أقرب للمبني للمعلوم",
+              "'lassen + sich': تعبر عن الإمكانية أو القابلية للتنفيذ (تشبه can في الإنجليزية)",
+              "'sein + zu + Infinitiv': تعبر عن الضرورة أو الإمكانية في صيغة مختصرة وجازمة",
+              "'bekommen + Partizip II': تعبر عن استلام الفعل من قبل المفعول (مشابه للمبني للمعلوم)",
+              "'sich lassen': صيغة انعكاسية تعبر عن الإمكانية، تشبه 'lassen + sich'"
+            ],
+            "examples": [
+              { "de": "Man baut hier ein neues Haus. (مبني للمعلوم غير شخصي)", "ar": "يتم بناء منزل جديد هنا." },
+              { "de": "Das Haus lässt sich leicht bauen. (إمكانية)", "ar": "يمكن بناء المنزل بسهولة." },
+              { "de": "Das Haus ist schnell zu bauen. (ضرورة/إمكانية)", "ar": "يجب/يمكن بناء المنزل بسرعة." },
+              { "de": "Er bekommt das Haus gebaut. (استلام الفعل)", "ar": "يحصل على المنزل مبنيًا." }
+            ],
+            "common_mistakes": [
+              "الخلط بين 'lassen sich' و 'sein zu' في التعبير عن الإمكانية",
+              "استخدام 'man' في السياقات الرسمية جدًا",
+              "نسيان انعكاسية 'sich lassen'"
+            ]
+          },
+          {
+            "topic": "التحول بين الصيغ المختلفة",
+            "explanation": "يمكن التحويل بين بدائل المبني للمجهول مع الحفاظ على المعنى الأساسي مع اختلافات أسلوبية طفيفة.",
+            "examples": [
+              { "de": "Vorgangspassiv: Das Buch wird gelesen.", "ar": "المبني للمجهول: يتم قراءة الكتاب." },
+              { "de": "mit man: Man liest das Buch.", "ar": "باستخدام man: يقرأ المرء الكتاب." },
+              { "de": "mit lassen: Das Buch lässt sich lesen.", "ar": "باستخدام lassen: يمكن قراءة الكتاب." },
+              { "de": "mit sein zu: Das Buch ist zu lesen.", "ar": "باستخدام sein zu: يجب/يمكن قراءة الكتاب." }
+            ]
+          }
+        ],
+      
+        "cultural_notes": [
+          {
+            "title": "الأسلوب غير المباشر في التواصل الألماني",
+            "content": "يُفضل في السياقات الأكاديمية والرسمية في ألمانيا استخدام البدائل غير المباشرة مثل 'man' و 'sich lassen' لتجنب التوجيه المباشر الذي قد يُعتبر وقحًا."
+          },
+          {
+            "title": "الدقة في التعبير عن الإمكانية والضرورة",
+            "content": "يستخدم الألمان هذه الصيغ بدقة للتمييز بين ما هو ممكن وما هو ضروري، مما يعكس الثقافة الدقيقة والمنظمة."
+          }
+        ],
+      
+        "pronunciation_tips": [
+          {
+            "tip": "نطق 'lassen sich'",
+            "explanation": "يتم نطق 'lassen sich' ككلمة متصلة مع التركيز على المقطع الأول من 'lassen'."
+          },
+          {
+            "tip": "التمييز بين 'ist zu' و 'is zu'",
+            "explanation": "يتم نطق 'ist' مع 't' واضحة، بينما في اللهجات المحكية قد تختفي الـ 't'."
+          }
+        ],
+      
+        "exercises": [
+          {
+            "type": "transformation",
+            "title": "تحويل المبني للمجهول إلى بدائله",
+            "instructions": "حول الجمل التالية من المبني للمجهول إلى الصيغ البديلة المطلوبة",
+            "items": [
+              {
+                "original": "Das Auto wird repariert. (Vorgangspassiv)",
+                "targets": [
+                  "mit man: Man repariert das Auto.",
+                  "mit lassen: Das Auto lässt sich reparieren.",
+                  "mit sein zu: Das Auto ist zu reparieren."
+                ]
+              },
+              {
+                "original": "Die Entscheidung wird getroffen. (Vorgangspassiv)",
+                "targets": [
+                  "mit man: Man trifft die Entscheidung.",
+                  "mit lassen: Die Entscheidung lässt sich treffen.",
+                  "mit sein zu: Die Entscheidung ist zu treffen."
+                ]
+              }
+            ]
+          },
+          {
+            "type": "appropriate_usage",
+            "title": "اختيار الصيغة المناسبة للسياق",
+            "instructions": "اختر الصيغة البديلة المناسبة للسياق المحدد",
+            "items": [
+              {
+                "context": "تعليمات استخدام جهاز تقني - التعبير عن الإمكانية",
+                "sentence": "_______ leicht bedienen.",
+                "options": ["Das Gerät lässt sich", "Man kann das Gerät", "Das Gerät ist"],
+                "answer": "Das Gerät lässt sich",
+                "explanation": "'lassen sich' مناسبة للتعبير عن إمكانية الاستخدام"
+              },
+              {
+                "context": "تعليمات أمنية - التعبير عن الضرورة",
+                "sentence": "_______ unbedingt beachten.",
+                "options": ["Man muss", "Die Regel ist zu", "Die Regel lässt sich"],
+                "answer": "Die Regel ist zu",
+                "explanation": "'sein zu' تعبر عن الضرورة الملحة"
+              }
+            ]
+          },
+          {
+            "type": "error_correction",
+            "title": "تصحيح الأخطاء النحوية",
+            "instructions": "صحح الأخطاء في الجمل التالية مع شرح السبب",
+            "items": [
+              {
+                "incorrect": "Das Problem kann sich lösen lassen.",
+                "correct": "Das Problem lässt sich lösen.",
+                "explanation": "صيغة 'lassen sich' لا تحتاج إلى 'können' الإضافي"
+              },
+              {
+                "incorrect": "Man sind die Regeln zu beachten.",
+                "correct": "Die Regeln sind zu beachten.",
+                "explanation": "لا يمكن الجمع بين 'man' و 'sein zu' في جملة واحدة"
+              },
+              {
+                "incorrect": "Ich bekomme das Haus bauen.",
+                "correct": "Ich bekomme das Haus gebaut.",
+                "explanation": "مع 'bekommen' يجب استخدام Partizip II وليس Infinitiv"
+              }
+            ]
+          }
+        ],
+      
+        "common_mistakes": [
+          {
+            "mistake": "الجمع بين أكثر من بديل في جملة واحدة",
+            "correction": "استخدم بديلاً واحدًا فقط للمبني للمجهول في كل جملة",
+            "example": "❌ Man lässt sich das Problem lösen → ✅ Das Problem lässt sich lösen"
+          },
+          {
+            "mistake": "نسيان Partizip II مع 'bekommen'",
+            "correction": "تأكد من استخدام Partizip II مع 'bekommen/erhalten/kriegen'",
+            "example": "❌ Ich bekomme den Brief schreiben → ✅ Ich bekomme den Brief geschrieben"
+          },
+          {
+            "mistake": "الخلط بين معنى الإمكانية والضرورة في 'sein zu'",
+            "correction": "افهم أن 'sein zu' يمكن أن تعبر عن الإمكانية أو الضرورة حسب السياق",
+            "example": "Die Aufgabe ist zu erledigen. (تعني الضرورة عادةً)"
+          }
+        ],
+      
+        "resources": [
+          {
+            "type": "video",
+            "title": "بدائل المبني للمجهول - شرح متقدم",
+            "url": "https://learngermanoriginal.com/courses/b2-course/lesson-8",
+            "description": "فيديو شرح مفصل لجميع بدائل المبني للمجهول مع أمثلة عملية"
+          },
+          {
+            "type": "interactive",
+            "title": "محول الصيغ النحوية",
+            "url": "https://learngermanoriginal.com/exercises/b2-passive-substitutes",
+            "description": "أداة تفاعلية للتحويل بين صيغ المبني للمجهول وبدائله"
+          }
+        ],
+      
+        "review_questions": [
+          {
+            "question": "ما الفرق الأساسي بين استخدام 'man' و 'lassen sich'؟",
+            "answer": "'man' تعبر عن فعل غير شخصي (شبيه بالمبني للمعلوم)، بينما 'lassen sich' تعبر عن إمكانية تنفيذ الفعل (شبيه بـ can في الإنجليزية)."
+          },
+          {
+            "question": "متى نستخدم 'bekommen + Partizip II'؟",
+            "answer": "نستخدم هذه الصيغة عندما نريد التعبير عن استلام الفعل من قبل المفعول، أي أن المفعول يحصل على الفعل مُنفَّذًا له."
+          },
+          {
+            "question": "كيف نفرق بين معنى الضرورة والإمكانية في 'sein zu + Infinitiv'؟",
+            "answer": "يتم التمييز حسب السياق. عادةً في التعليمات والتوجيهات تعني الضرورة، وفي الوصف التقني تعني الإمكانية."
+          }
+        ],
+      
+        "next_lesson_preview": {
+          "title": "الجمل الشرطية المتقدمة",
+          "description": "في الدرس القادم، سنتعلم استخدام الجمل الشرطية بمستوى متقدم مع التركيز على Konjunktiv II في السياقات الافتراضية والمعقدة."
+        },
+      
+        "study_tips": [
+          "تمرن على كتابة فقرة واحدة بعدة صيغ مختلفة لنفس المحتوى",
+          "اقرأ النصوص التقنية والإدارية وركز على استخدام البدائل المختلفة",
+          "اصنع جدولاً مقارناً يوضح الفروق بين جميع البدائل",
+          "سجل نفسك وأنت تشرح مفهومًا تقنيًا باستخدام بدائل المبني للمجهول"
+        ],
+      
+        "completion_criteria": [
+          "القدرة على استخدام جميع بدائل المبني للمجهول الخمسة بشكل صحيح",
+          "التمييز بين الاستخدامات المناسبة لكل بديل حسب السياق",
+          "تجنب الأخطاء الشائعة في استخدام هذه الصيغ",
+          "التحويل بطلاقة بين المبني للمجهول وبدائله المختلفة"
+        ],
+      
+        "metadata": {
+          "estimated_study_time": "100 دقيقة",
+          "practice_time_recommended": "35 دقيقة يوميًا لمدة 3 أيام",
+          "tags": ["قواعد متقدمة", "B2", "مبني للمجهول", "بدائل نحوية", "أسلوب كتابي"],
+          "last_updated": "2024-01-15",
+          "version": "1.0"
+        }
+    }
+]

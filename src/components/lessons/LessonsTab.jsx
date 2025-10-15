@@ -215,7 +215,8 @@ const LessonsTab = () => {
           const isExpanded = expandedLessons.has(lesson.number);
           const isCompleted = currentCompleted.has(lesson.number);
           
-          const shouldLock = limited; // lock all lessons for free tier
+          // Allow first 2 lessons from each level for free users, lock the rest
+          const shouldLock = limited && lesson.number > 2;
           return (
             <Card 
               key={lesson.number} 
@@ -287,6 +288,8 @@ const LessonsTab = () => {
                         onClick={() => {
                           if (selectedLevel === 'A1') {
                             navigate(`/lessons/a1/${lesson.number}`);
+                          } else if (selectedLevel === 'B2') {
+                            navigate(`/lessons/b2/${lesson.number}`);
                           } else {
                             window.open(lesson.url, '_blank');
                           }
@@ -317,6 +320,8 @@ const LessonsTab = () => {
                       onClick={() => {
                         if (selectedLevel === 'A1') {
                           navigate(`/lessons/a1/${lesson.number}`);
+                        } else if (selectedLevel === 'B2') {
+                          navigate(`/lessons/b2/${lesson.number}`);
                         } else {
                           window.open(lesson.url, '_blank');
                         }

@@ -11,6 +11,7 @@ import AccessGate from "./components/AccessGate";
 import NotFound from "./pages/NotFound";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import A1Lesson from "./pages/lessons/A1Lesson";
+import B2Lesson from "./pages/lessons/B2Lesson";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/lessons/a1/:lessonNumber" element={<A1Lesson />} />
+            <Route path="/lessons/b2/:lessonNumber" element={<B2Lesson />} />
             <Route path="/reset-access" element={<ResetAccess />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/about" element={<About />} />

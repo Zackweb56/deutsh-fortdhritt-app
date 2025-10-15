@@ -3,20 +3,20 @@ import { useParams, Link } from 'react-router-dom';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { a1Lessons } from '@/data/lessonsData';
+import { b2Lessons } from '@/data/lessonsData';
 import { ArrowRight, BookOpen, Volume2, Info, Layers, MessageSquare, Loader2 } from 'lucide-react';
-import a1Details from '@/data/lessons/a1-lessons-details.json';
+import b2Details from '@/data/lessons/b2-lessons-details.json';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { speakGerman } from '@/lib/tts';
 import { isLimitedAccess } from '@/lib/access';
 
-const A1Lesson: React.FC = () => {
+const B2Lesson: React.FC = () => {
   const { lessonNumber } = useParams();
   const num = Number(lessonNumber);
   const [speakingText, setSpeakingText] = useState<string | null>(null);
 
   const lesson = useMemo(() => {
-    return (a1Lessons?.lessons || []).find((l: any) => l.number === num);
+    return (b2Lessons?.lessons || []).find((l: any) => l.number === num);
   }, [num]);
 
   // Check if lesson is locked for free users (first 2 lessons are free)
@@ -52,7 +52,7 @@ const A1Lesson: React.FC = () => {
   }
 
   // Structured content from JSON (rich, categorized)
-  const content = (a1Details as any[]).find((l) => l.lessonNumber === num);
+  const content = (b2Details as any[]).find((l) => l.lessonNumber === num);
   const vocabularyGroups: { category: string; words: { de: string; ar: string; pron?: string; usage?: string }[] }[] = content?.vocabulary || [];
   const phraseGroups: { category: string; items: { de: string; ar: string; pron?: string; context?: string }[] }[] = content?.phrases || [];
   const dialogues: { title: string; context?: string; level?: string; lines: { speaker?: string; de: string; ar: string }[] }[] = content?.dialogues || [];
@@ -72,7 +72,7 @@ const A1Lesson: React.FC = () => {
             <BookOpen className="h-6 w-6 text-white" />
           </div>
           <div>
-            <h1 className="text-2xl font-bold">A1 — الدرس {lesson.number}</h1>
+            <h1 className="text-2xl font-bold">B2 — الدرس {lesson.number}</h1>
             <p className="text-muted-foreground">{lesson.title} — {lesson.title_en}</p>
           </div>
         </div>
@@ -99,7 +99,7 @@ const A1Lesson: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <h3 className="font-medium text-sm text-muted-foreground mb-1">الملخص</h3>
-              <p className="text-sm">{content.summary || lesson.description}</p>
+              <p className="text-sm">{content.summary}</p>
             </div>
             <div>
               <h3 className="font-medium text-sm text-muted-foreground mb-1">الجمهور المستهدف</h3>
@@ -219,47 +219,6 @@ const A1Lesson: React.FC = () => {
         </Card>
       )}
 
-      {/* Dialogues Section */}
-      {dialogues.length > 0 && (
-        <Card className="p-6">
-          <div className="flex items-center gap-2 mb-4">
-            <MessageSquare className="h-5 w-5 text-primary" />
-            <h2 className="text-xl font-semibold">الحوارات</h2>
-          </div>
-          
-          <Accordion type="multiple" className="space-y-2">
-            {dialogues.map((dialogue, index) => (
-              <AccordionItem key={index} value={`dialogue-${index}`} className="border rounded-lg px-4">
-                <AccordionTrigger className="text-right">
-                  <span className="font-medium">{dialogue.title}</span>
-                </AccordionTrigger>
-                <AccordionContent>
-                  <div className="space-y-3 pt-2">
-                    {dialogue.context && (
-                      <p className="text-sm text-muted-foreground">{dialogue.context}</p>
-                    )}
-                    
-                    <div className="space-y-2">
-                      {dialogue.lines.map((line, lineIndex) => (
-                        <div key={lineIndex} className="p-3 bg-muted/50 rounded-lg">
-                          {line.speaker && (
-                            <p className="font-medium text-sm text-primary mb-1">{line.speaker}</p>
-                          )}
-                          <div className="flex items-center justify-between">
-                            <p className="font-medium">{line.de}</p>
-                          </div>
-                          <p className="text-sm text-muted-foreground">{line.ar}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </Card>
-      )}
-
       {/* Grammar Section */}
       {grammar.length > 0 && (
         <Card className="p-6">
@@ -329,6 +288,47 @@ const A1Lesson: React.FC = () => {
         </Card>
       )}
 
+      {/* Dialogues Section */}
+      {dialogues.length > 0 && (
+        <Card className="p-6">
+          <div className="flex items-center gap-2 mb-4">
+            <MessageSquare className="h-5 w-5 text-primary" />
+            <h2 className="text-xl font-semibold">الحوارات</h2>
+          </div>
+          
+          <Accordion type="multiple" className="space-y-2">
+            {dialogues.map((dialogue, index) => (
+              <AccordionItem key={index} value={`dialogue-${index}`} className="border rounded-lg px-4">
+                <AccordionTrigger className="text-right">
+                  <span className="font-medium">{dialogue.title}</span>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <div className="space-y-3 pt-2">
+                    {dialogue.context && (
+                      <p className="text-sm text-muted-foreground">{dialogue.context}</p>
+                    )}
+                    
+                    <div className="space-y-2">
+                      {dialogue.lines.map((line, lineIndex) => (
+                        <div key={lineIndex} className="p-3 bg-muted/50 rounded-lg">
+                          {line.speaker && (
+                            <p className="font-medium text-sm text-primary mb-1">{line.speaker}</p>
+                          )}
+                          <div className="flex items-center justify-between">
+                            <p className="font-medium">{line.de}</p>
+                          </div>
+                          <p className="text-sm text-muted-foreground">{line.ar}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </Card>
+      )}
+
       {/* Cultural Notes Section */}
       {culturalNotes.length > 0 && (
         <Card className="p-6">
@@ -367,68 +367,6 @@ const A1Lesson: React.FC = () => {
         </Card>
       )}
 
-      {exercises.length > 0 && (
-        <Card className="p-6 space-y-4">
-          <h2 className="text-xl font-semibold">تمارين للتدريب</h2>
-          <p className="text-sm text-muted-foreground">حل هذه التمارين على الورق لتعزيز فهمك للدرس</p>
-          {exercises.map((ex, i) => (
-            <div key={i} className="space-y-3 p-4 border border-border rounded-lg">
-              <div className="flex items-center gap-2">
-                <Badge variant="outline">{ex.type === 'matching' ? 'مطابقة' : ex.type === 'fill_blanks' ? 'إكمال الفراغات' : ex.type === 'role_play' ? 'تمثيل الأدوار' : ex.type}</Badge>
-                <h3 className="font-medium">{ex.title}</h3>
-              </div>
-              
-              {ex.instructions && (
-                <p className="text-sm text-muted-foreground bg-muted/50 p-2 rounded">{ex.instructions}</p>
-              )}
-              
-              {ex.type === 'match' || ex.type === 'matching' ? (
-                <div className="space-y-2">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
-                    {ex.pairs?.map((p: any, j: number) => (
-                      <div key={j} className="p-3 rounded border border-border flex items-center justify-between hover:bg-muted/30 transition-colors">
-                        <span dir="ltr" className="font-medium">{p.left}</span>
-                        <span className="text-muted-foreground">{p.right}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ) : ex.type === 'fill_blanks' ? (
-                <div className="space-y-3">
-                  <div className="space-y-2">
-                    {ex.dialogue?.map((d: any, j: number) => (
-                      <div key={j} className="p-3 rounded border border-border text-sm bg-muted/20" dir="ltr">
-                        <span className="font-medium">{d.speaker}: </span>
-                        {d.text}
-                      </div>
-                    ))}
-                  </div>
-                  {ex.options && (
-                    <div>
-                      <p className="text-sm font-medium mb-2">الكلمات المتاحة:</p>
-                      <div className="flex flex-wrap gap-2 text-xs">
-                        {ex.options.map((op: string, k: number) => (
-                          <span key={k} className="px-3 py-1 rounded-full border bg-card/60 hover:bg-primary/10 transition-colors" dir="ltr">{op}</span>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
-              ) : ex.type === 'role_play' ? (
-                <div className="space-y-2">
-                  <p className="text-sm text-muted-foreground">سيناريوهات للتدريب:</p>
-                  <ul className="list-disc pr-5 text-sm space-y-1">
-                    {ex.scenarios?.map((s: string, j: number) => (
-                      <li key={j} className="p-2 rounded bg-muted/30">{s}</li>
-                    ))}
-                  </ul>
-                </div>
-              ) : null}
-            </div>
-          ))}
-        </Card>
-      )}
-
       {/* Common Mistakes Section */}
       {commonMistakes.length > 0 && (
         <Card className="p-6">
@@ -450,6 +388,29 @@ const A1Lesson: React.FC = () => {
               </div>
             ))}
           </div>
+        </Card>
+      )}
+
+      {/* Review Questions Section */}
+      {reviewQuestions.length > 0 && (
+        <Card className="p-6">
+          <div className="flex items-center gap-2 mb-4">
+            <MessageSquare className="h-5 w-5 text-primary" />
+            <h2 className="text-xl font-semibold">أسئلة المراجعة</h2>
+          </div>
+          
+          <Accordion type="multiple" className="space-y-2">
+            {reviewQuestions.map((qa, index) => (
+              <AccordionItem key={index} value={`question-${index}`} className="border rounded-lg px-4">
+                <AccordionTrigger className="text-right">
+                  <span className="font-medium">{qa.question}</span>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-sm pt-2">{qa.answer}</p>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </Card>
       )}
 
@@ -483,29 +444,6 @@ const A1Lesson: React.FC = () => {
         </Card>
       )}
 
-      {/* Review Questions Section */}
-      {reviewQuestions.length > 0 && (
-        <Card className="p-6">
-          <div className="flex items-center gap-2 mb-4">
-            <MessageSquare className="h-5 w-5 text-primary" />
-            <h2 className="text-xl font-semibold">أسئلة المراجعة</h2>
-          </div>
-          
-          <Accordion type="multiple" className="space-y-2">
-            {reviewQuestions.map((qa, index) => (
-              <AccordionItem key={index} value={`question-${index}`} className="border rounded-lg px-4">
-                <AccordionTrigger className="text-right">
-                  <span className="font-medium">{qa.question}</span>
-                </AccordionTrigger>
-                <AccordionContent>
-                  <p className="text-sm pt-2">{qa.answer}</p>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </Card>
-      )}
-
       {/* Navigation */}
       <div className="flex justify-between items-center pt-6">
         <Link 
@@ -519,15 +457,15 @@ const A1Lesson: React.FC = () => {
         <div className="flex gap-2">
           {num > 1 && (
             <Link 
-              to={`/lessons/a1/${num - 1}`}
+              to={`/lessons/b2/${num - 1}`}
               className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90"
             >
               الدرس السابق
             </Link>
           )}
-          {num < (a1Lessons?.lessons?.length || 0) && (
+          {num < (b2Lessons?.lessons?.length || 0) && (
             <Link 
-              to={`/lessons/a1/${num + 1}`}
+              to={`/lessons/b2/${num + 1}`}
               className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90"
             >
               الدرس التالي
@@ -539,5 +477,4 @@ const A1Lesson: React.FC = () => {
   );
 };
 
-export default A1Lesson;
-
+export default B2Lesson;
