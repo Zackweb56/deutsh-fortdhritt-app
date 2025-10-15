@@ -1,0 +1,747 @@
+[
+    {
+        "lessonNumber": 1,
+        "title": "الأفعال الانعكاسية (الجزء الأول) | Reflexive Verben (Teil 1)",
+        "title_en": "Reflexive Verbs (Part 1)",
+        "summary": "في هذا الدرس، ستتعلم الأفعال الانعكاسية في اللغة الألمانية بشكل متقدم بما يتناسب مع مستوى B1، بما في ذلك الاستخدام الصحيح للضمائر الانعكاسية في الحالات المختلفة (Akkusativ و Dativ)، والتمييز بين الأفعال الانعكاسية الحقيقية والزائفة، واستخدامها في سياقات حياتية متنوعة وفقًا لمتطلبات امتحان Goethe Zertifikat B1.",
+        "detailed_description": "الأفعال الانعكاسية في المستوى B1 تتجاوز المفاهيم الأساسية وتتطلب فهمًا عميقًا للتمييز بين الحالات النحوية المختلفة والاستخدامات المتقدمة في سياقات معقدة. هذا الدرس يركز على بناء جمل صحيحة نحويًا باستخدام الأفعال الانعكاسية في الزمن الحاضر والماضي والمستقبل، مع التركيز على الفروق الدقيقة بين الاستخدامات المختلفة.",
+        "objectives": [
+          "فهم مفهوم الأفعال الانعكاسية والتمييز بين أنواعها",
+          "استخدام الضمائر الانعكاسية الصحيحة في الحالات Akkusativ و Dativ",
+          "بناء جمل صحيحة نحويًا باستخدام الأفعال الانعكاسية",
+          "استخدام الأفعال الانعكاسية في الأزمنة المختلفة (الحاضر، الماضي، المستقبل)",
+          "التمييز بين الأفعال الانعكاسية الحقيقية والزائفة",
+          "تطبيق الأفعال الانعكاسية في سياقات تواصلية متنوعة"
+        ],
+        "target_audience": "متعلمي الألمانية في المستوى B1، المتقدمين لامتحان Goethe Zertifikat B1، الراغبين في تحسين مهارات التواصل اليومي",
+        "duration": "70-85 دقيقة",
+        "difficulty": "متوسط (B1)",
+      
+        "vocabulary": [
+          {
+            "category": "الأفعال الانعكاسية الشائعة مع Akkusativ",
+            "words": [
+              { "de": "sich ärgern über", "ar": "ينزعج من", "pron": "زِيش إرغيرن أوبِر", "usage": "للتعبير عن الانزعاج" },
+              { "de": "sich freuen auf", "ar": "يتطلع إلى", "pron": "زِيش فروين أوف", "usage": "للتعبير عن التطلع للمستقبل" },
+              { "de": "sich freuen über", "ar": "يفرح بـ", "pron": "زِيش فروين أوبِر", "usage": "للتعبير عن الفرح بشيء ماضي" },
+              { "de": "sich interessieren für", "ar": "يهتم بـ", "pron": "زِيش إنتِرِسيرِن فور", "usage": "للتعبير عن الاهتمامات" },
+              { "de": "sich konzentrieren auf", "ar": "يركز على", "pron": "زِيش كونتسينتيرِن أوف", "usage": "للتعبير عن التركيز" },
+              { "de": "sich kümmern um", "ar": "يهتم بـ/يعتني بـ", "pron": "زِيش كيومِرن أوم", "usage": "للتعبير عن الاهتمام بالآخرين" }
+            ]
+          },
+          {
+            "category": "الأفعال الانعكاسية مع Dativ",
+            "words": [
+              { "de": "sich etwas aneignen", "ar": "يكتسب شيئًا", "pron": "زِيش إتفاس آن-أيغنِن", "usage": "لاكتساب المعرفة أو المهارات" },
+              { "de": "sich etwas vorstellen", "ar": "يتخيل شيئًا", "pron": "زِيش إتفاس فور-شتيلِن", "usage": "للتخيل" },
+              { "de": "sich etwas leisten", "ar": "يسمح لنفسه بشيء", "pron": "زِيش إتفاس لايستِن", "usage": "للإمكانيات المادية" },
+              { "de": "sich etwas merken", "ar": "يتذكر شيئًا", "pron": "زِيش إتفاس ميركِن", "usage": "للحفظ والتذكر" },
+              { "de": "sich Zeit nehmen", "ar": "يأخذ وقته", "pron": "زِيش تسايت نيمِن", "usage": "لأخذ الوقت الكافي" }
+            ]
+          },
+          {
+            "category": "أفعال انعكاسية للروتين اليومي",
+            "words": [
+              { "de": "sich anziehen", "ar": "يرتدي الملابس", "pron": "زِيش آن-تسيِن", "usage": "للارتداء" },
+              { "de": "sich ausziehen", "ar": "يخلع الملابس", "pron": "زِيش أوت-تسيِن", "usage": "للخلع" },
+              { "de": "sich duschen", "ar": "يستحم", "pron": "زِيش دوشِن", "usage": "للاستحمام" },
+              { "de": "sich rasieren", "ar": "يحلق", "pron": "زِيش رازيرِن", "usage": "للحلاقة" },
+              { "de": "sich schminken", "ar": "تضع الماكياج", "pron": "زِيش شمينكِن", "usage": "للمكياج" },
+              { "de": "sich ausruhen", "ar": "يستريح", "pron": "زِيش أوس-روهِن", "usage": "للراحة" }
+            ]
+          },
+          {
+            "category": "أفعال انعكاسية للعلاقات الاجتماعية",
+            "words": [
+              { "de": "sich verlieben in", "ar": "يقع في الحب", "pron": "زِيش فيرليبن إن", "usage": "للوقوع في الحب" },
+              { "de": "sich trennen von", "ar": "ينفصل عن", "pron": "زِيش ترينِن فون", "usage": "للانفصال" },
+              { "de": "sich streiten mit", "ar": "يتشاجر مع", "pron": "زِيش شترايتِن ميت", "usage": "للشجار" },
+              { "de": "sich versöhnen mit", "ar": "يتصالح مع", "pron": "زِيش فيرزونِن ميت", "usage": "للمصالحة" },
+              { "de": "sich unterhalten mit", "ar": "يتحدث مع", "pron": "زِيش أونتر-هالتِن ميت", "usage": "للمحادثة" }
+            ]
+          }
+        ],
+      
+        "phrases": [
+          {
+            "category": "التعبير عن المشاعر والمواقف",
+            "items": [
+              { "de": "Ich ärgere mich über die Verspätung des Zuges.", "ar": "أنا منزعج من تأخر القطار.", "pron": "إيش إرغيرِه ميش أوبِر دي فيرشبيتونغ ديس تسوغِس", "context": "للتعبير عن الانزعاج" },
+              { "de": "Wir freuen uns schon auf den Urlaub.", "ar": "نحن نتطلع بالفعل إلى الإجازة.", "pron": "فير فروين أونز شون أوف دين أورلاوب", "context": "للتطلع للمستقبل" },
+              { "de": "Sie freut sich über das Geschenk.", "ar": "هي تفرح بالهدية.", "pron": "زي فرويت زِيش أوبِر داس غِشينك", "context": "للفرح بشيء حصل" }
+            ]
+          },
+          {
+            "category": "الروتين اليومي",
+            "items": [
+              { "de": "Morgens ziehe ich mich schnell an.", "ar": "في الصباح أرتدي ملابسي بسرعة.", "pron": "مورغنِس تسييه إيش ميش شنِل آن", "context": "لروتين الصباح" },
+              { "de": "Vor dem Schlafen dusche ich mich.", "ar": "قبل النوم أستحم.", "pron": "فور ديم شلافِن دوشِه إيش ميش", "context": "لروتين المساء" },
+              { "de": "Ich ruhe mich am Wochenende aus.", "ar": "أستريح في عطلة نهاية الأسبوع.", "pron": "إيش رويه ميش آم فوشِن-إندِه أوس", "context": "للراحة والإسترخاء" }
+            ]
+          },
+          {
+            "category": "العلاقات الشخصية",
+            "items": [
+              { "de": "Er hat sich in seine Kollegin verliebt.", "ar": "هو وقع في الحب بزميلته.", "pron": "إير هات زِيش إن زاينِه كولِغين فيرليبت", "context": "للوقوع في الحب" },
+              { "de": "Sie haben sich nach dem Streit versöhnt.", "ar": "هم تصالحوا بعد الشجار.", "pron": "زي هابِن زِيش ناخ ديم شترايت فيرزونت", "context": "للمصالحة" },
+              { "de": "Wir unterhalten uns oft über Politik.", "ar": "نحن نتحدث كثيرًا عن السياسة.", "pron": "فير أونتر-هالتِن أونز أوفت أوبِر بوليتيك", "context": "للمواضيع الجادة" }
+            ]
+          }
+        ],
+      
+        "dialogues": [
+          {
+            "title": "محادثة في العمل",
+            "context": "موظفان يتحدثان عن ضغوط العمل والراحة",
+            "level": "شبه رسمي",
+            "lines": [
+              { "speaker": "توماس", "de": "Ich kann mich heute gar nicht konzentrieren. Ich habe mich die ganze Woche über die Projektdeadline geärgert.", "ar": "لا أستطيع التركيز اليوم إطلاقًا. لقد انزعجت طوال الأسبوع من موعد تسليم المشروع." },
+              { "speaker": "يوليا", "de": "Das verstehe ich. Ich muss mich auch immer sehr aufraffen, um mich auf die Arbeit zu konzentrieren. Warum ruhst du dich nicht am Wochenende richtig aus?", "ar": "أتفهم ذلك. أنا أيضًا يجب أن أجهد نفسي دائمًا لكي أركز على العمل. لماذا لا تستريح بشكل صحيح في عطلة نهاية الأسبوع؟" },
+              { "speaker": "توماس", "de": "Du hast recht. Ich sollte mir mehr Zeit für mich selbst nehmen. Vielleicht freue ich mich dann mehr auf die neue Woche.", "ar": "أنت محقة. يجب أن آخذ المزيد من الوقت لنفسي. ربما سأتطلع بعدها أكثر إلى الأسبوع الجديد." }
+            ]
+          },
+          {
+            "title": "حديث بين صديقين",
+            "context": "صديقان يتحدثان عن العلاقات الشخصية",
+            "level": "غير رسمي",
+            "lines": [
+              { "speaker": "آنا", "de": "Weißt du, ich habe mich in meinen Nachbarn verliebt!", "ar": "أتعلم، لقد وقعت في الحب بجاري!" },
+              { "speaker": "ليزا", "de": "Wirklich? Das ist ja toll! Aber erinnerst du dich daran, wie du dich vor einem Jahr von deinem Ex getrennt hast? Da hast du dich wochenlang nicht wohlgefühlt.", "ar": "حقًا؟ هذا رائع! لكن أتتذكرين كيف انفصلت عن حبيبك السابق قبل سنة؟ لم تشعري بالراحة لأسابيع حينها." },
+              { "speaker": "آنا", "de": "Ja, aber diesmal ist es anders. Ich freue mich jeden Tag darauf, ihn zu sehen. Und wir unterhalten uns so gut miteinander!", "ar": "نعم، لكن هذه المرة الأمر مختلف. أتطلع كل يوم إلى رؤيته. ونحن نتحدث بشكل رائع مع بعضنا!" }
+            ]
+          }
+        ],
+      
+        "grammar": [
+          {
+            "topic": "الضمائر الانعكاسية في الحالات المختلفة",
+            "explanation": "في المستوى B1، يجب إتقان استخدام الضمائر الانعكاسية في كل من حالتي Akkusativ و Dativ، والتمييز بينهما بناءً على متطلبات الفعل.",
+            "rules": [
+              "الضمائر الانعكاسية مع Akkusativ: mich, dich, sich, uns, euch, sich",
+              "الضمائر الانعكاسية مع Dativ: mir, dir, sich, uns, euch, sich",
+              "معظم الأفعال الانعكاسية تأخذ Akkusativ، لكن بعضها يأخذ Dativ خاصة عندما يكون المفعول غير الشخص نفسه",
+              "في الجملة مع Dativ، يكون الضمير الانعكاسي في حالة Dativ حتى لو كان الفعل يتطلب مفعولاً آخر"
+            ],
+            "examples": [
+              { "de": "Ich wasche mich. (Akkusativ)", "ar": "أغتسل." },
+              { "de": "Ich wasche mir die Hände. (Dativ)", "ar": "أغسل يدي." },
+              { "de": "Er kauft sich ein Buch. (Dativ)", "ar": "يشتري لنفسه كتابًا." }
+            ],
+            "common_mistakes": [
+              "الخلط بين mich و mir: ❌ Ich wasche mir → ✅ Ich wasche mich",
+              "نسيان الضمير الانعكاسي مع الأفعال التي تتطلبه: ❌ Ich konzentriere auf Arbeit → ✅ Ich konzentriere mich auf Arbeit"
+            ]
+          },
+          {
+            "topic": "الأفعال الانعكاسية في الماضي (Perfekt)",
+            "explanation": "بناء الجملة الانعكاسية في زمن الماضي يتطلب استخدام الفعل المساعد 'haben' مع معظم الأفعال الانعكاسية، مع وضع الضمير الانعكاسي في المكان الصحيح.",
+            "rules": [
+              "جميع الأفعال الانعكاسية تستخدم 'haben' كفعل مساعد في الماضي",
+              "الضمير الانعكاسي يأتي مباشرة بعد الفعل المساعد",
+              "تصريف الفعل يأتي في نهاية الجملة كاسم مفعول (Partizip II)",
+              "في الأفعال الانعكاسية، يبقى الجزء 'sich' في التصريف"
+            ],
+            "examples": [
+              { "de": "Ich habe mich über das Geschenk gefreut.", "ar": "فرحت بالهدية." },
+              { "de": "Wir haben uns gestern ausgeruht.", "ar": "استرحنا أمس." },
+              { "de": "Sie hat sich schnell angezogen.", "ar": "هي ارتدت ملابسها بسرعة." }
+            ],
+            "common_mistakes": [
+              "استخدام 'sein' بدلاً من 'haben': ❌ Ich bin mich gefreut → ✅ Ich habe mich gefreut",
+              "وضع الضمير الانعكاسي في المكان الخطأ: ❌ Ich habe gefreut mich → ✅ Ich habe mich gefreut"
+            ]
+          },
+          {
+            "topic": "التمييز بين الأفعال الانعكاسية الحقيقية والزائفة",
+            "explanation": "في المستوى B1، من المهم التمييز بين الأفعال الانعكاسية الحقيقية (التي لا يمكن استخدامها بدون الضمير الانعكاسي) والأفعال الانعكاسية الزائفة (التي يمكن استخدامها مع وبدون الضمير الانعكاسي مع تغير المعنى).",
+            "rules": [
+              "الأفعال الانعكاسية الحقيقية: لا معنى لها بدون الضمير الانعكاسي (مثل: sich ausruhen, sich beeilen)",
+              "الأفعال الانعكاسية الزائفة: يمكن استخدامها مع وبدون الضمير الانعكاسي (مثل: sich waschen / waschen)",
+              "مع الأفعال الزائفة، يتغير المعنى حسب وجود الضمير الانعكاسي",
+              "بعض الأفعال تتطلب حرف جر مختلف مع وبدون الضمير الانعكاسي"
+            ],
+            "examples": [
+              { "de": "sich waschen (يغتسل) vs. waschen (يغسل)", "ar": "Ich wasche mich (أغتسل) vs. Ich wasche das Auto (أغسل السيارة)" },
+              { "de": "sich setzen (يجلس) vs. setzen (يضع)", "ar": "Ich setze mich (أجلس) vs. Ich setze die Vase (أضع المزهرية)" },
+              { "de": "sich treffen (يلتقي) vs. treffen (يضرب/يلتقي بشخص)", "ar": "Wir treffen uns (نلتقي) vs. Ich treffe den Ball (أضرب الكرة)" }
+            ],
+            "common_mistakes": [
+              "حذف الضمير الانعكاسي مع الأفعال الحقيقية: ❌ Ich beeile → ✅ Ich beeile mich",
+              "استخدام الضمير الانعكاسي بدون داع مع الأفعال الزائفة: ❌ Ich wasche mich das Auto → ✅ Ich wasche das Auto"
+            ]
+          },
+          {
+            "topic": "الأفعال الانعكاسية مع حروف الجر",
+            "explanation": "الكثير من الأفعال الانعكاسية في مستوى B1 تتطلب حروف جر محددة، ويجب حفظ هذه المجموعات كوحدات متكاملة.",
+            "rules": [
+              "sich ärgern über + Akkusativ: للانزعاج من شيء",
+              "sich freuen auf + Akkusativ: للتطلع إلى شيء مستقبلي",
+              "sich freuen über + Akkusativ: للفرح بشيء ماضي أو حالي",
+              "sich interessieren für + Akkusativ: للاهتمام بشيء",
+              "sich konzentrieren auf + Akkusativ: للتركيز على شيء",
+              "sich kümmern um + Akkusativ: للاهتمام بشيء أو شخص"
+            ],
+            "examples": [
+              { "de": "Ich ärgere mich über das schlechte Wetter.", "ar": "أنا منزعج من الطقس السيء." },
+              { "de": "Wir freuen uns auf das Konzert.", "ar": "نحن نتطلع إلى الحفلة الموسيقية." },
+              { "de": "Sie interessiert sich für moderne Kunst.", "ar": "هي تهتم بالفن الحديث." },
+              { "de": "Er konzentriert sich auf seine Arbeit.", "ar": "هو يركز على عمله." }
+            ],
+            "common_mistakes": [
+              "استخدام حرف جر خاطئ: ❌ Ich interessiere mich auf Kunst → ✅ Ich interessiere mich für Kunst",
+              "نسيان حرف الجر: ❌ Ich ärgere mich das Wetter → ✅ Ich ärgere mich über das Wetter"
+            ]
+          }
+        ],
+      
+        "cultural_notes": [
+          {
+            "title": "الأفعال الانعكاسية في التواصل اليومي",
+            "content": "في الثقافة الألمانية، يستخدم المتحدثون الأفعال الانعكاسية بكثرة في المحادثات اليومية للتعبير عن المشاعر والمواقف الشخصية. هذا يعكس ميلاً نحو التعبير الذاتي والصراحة في التواصل."
+          },
+          {
+            "title": "الاختلافات الإقليمية",
+            "content": "هناك بعض الاختلافات في استخدام الأفعال الانعكاسية بين مناطق ألمانيا. في الجنوب، قد تستخدم بعض الأفعال الانعكاسية بشكل مختلف قليلاً عن الشمال."
+          },
+          {
+            "title": "الأهمية في السياق المهني",
+            "content": "في بيئة العمل الألمانية، استخدام الأفعال الانعكاسية بشكل صحيح يدل على إتقان متقدم للغة ويُعتبر مهمًا للتعبير عن المواقف المهنية مثل التركيز والاهتمام والالتزام."
+          }
+        ],
+      
+        "pronunciation_tips": [
+          {
+            "tip": "نطق 'sich' و 'mich'",
+            "explanation": "ينطق 'sich' كـ 'زِيش' مع صوت 'ز' ناعم، و'mich' كـ 'مِيش' مع صوت 'ش' واضح. تجنب نطقها كـ 'سيتش' أو 'ميتش'."
+          },
+          {
+            "tip": "التمييز بين 'euch' و 'euch'",
+            "explanation": "ينطق 'euch' كـ 'أويش' مع صوت 'ش' في النهاية. في بعض اللهجات الجنوبية قد ينطق بشكل مختلف."
+          },
+          {
+            "tip": "النبرة في الأفعال المركبة",
+            "explanation": "في الأفعال الانعكاسية المركبة مثل 'ausruhen'، تكون النبرة على المقطع الأول من الجزء الرئيسي: AUSruhen، وليس على البادئة."
+          }
+        ],
+      
+        "exercises": [
+          {
+            "type": "fill_blanks",
+            "title": "أكمل الجمل بالضمائر الانعكاسية الصحيحة",
+            "instructions": "اختر الضمير الانعكاسي الصحيح لإكمال كل جملة",
+            "questions": [
+              {
+                "sentence": "Ich wasche ___ jeden Morgen die Haare.",
+                "options": ["mich", "mir", "dich", "uns"],
+                "answer": "mir"
+              },
+              {
+                "sentence": "Wir freuen ___ schon auf den Urlaub.",
+                "options": ["uns", "euch", "sich", "mich"],
+                "answer": "uns"
+              },
+              {
+                "sentence": "Kannst du ___ bitte beeilen?",
+                "options": ["dich", "dir", "sich", "euch"],
+                "answer": "dich"
+              },
+              {
+                "sentence": "Sie ärgert ___ über die Verspätung.",
+                "options": ["sich", "ihr", "sie", "es"],
+                "answer": "sich"
+              }
+            ]
+          },
+          {
+            "type": "sentence_building",
+            "title": "رتب الكلمات لتكوين جمل صحيحة",
+            "instructions": "رتب الكلمات التالية لتكوين جمل صحيحة مع الأفعال الانعكاسية",
+            "questions": [
+              {
+                "words": ["mich", "Ich", "über", "ärgere", "die", "Note"],
+                "answer": "Ich ärgere mich über die Note."
+              },
+              {
+                "words": ["sich", "Wir", "auf", "freuen", "das", "Fest"],
+                "answer": "Wir freuen uns auf das Fest."
+              },
+              {
+                "words": ["sich", "Er", "für", "interessiert", "Politik"],
+                "answer": "Er interessiert sich für Politik."
+              }
+            ]
+          },
+          {
+            "type": "error_correction",
+            "title": "صحح الأخطاء في الجمل",
+            "instructions": "كل جملة تحتوي على خطأ واحد في استخدام الفعل الانعكاسي. صححه",
+            "questions": [
+              {
+                "incorrect": "Ich konzentriere auf meine Arbeit.",
+                "correct": "Ich konzentriere mich auf meine Arbeit.",
+                "explanation": "الفعل 'konzentrieren' يتطلب ضميرًا انعكاسيًا (mich)"
+              },
+              {
+                "incorrect": "Wir freuen uns über das Wochenende.",
+                "correct": "Wir freuen uns auf das Wochenende.",
+                "explanation": "نستخدم 'auf' للتطلع إلى المستقبل، و'über' للفرح بشيء حصل"
+              },
+              {
+                "incorrect": "Sie wäscht dir die Hände.",
+                "correct": "Sie wäscht sich die Hände.",
+                "explanation": "الضمير الانعكاسي للغائب هو 'sich' وليس 'dir'"
+              }
+            ]
+          },
+          {
+            "type": "translation",
+            "title": "ترجم الجمل من العربية إلى الألمانية",
+            "instructions": "ترجم الجمل التالية باستخدام الأفعال الانعكاسية المناسبة",
+            "questions": [
+              {
+                "sentence": "أنا أتطلع إلى الإجازة.",
+                "answer": "Ich freue mich auf den Urlaub."
+              },
+              {
+                "sentence": "هو يغسل يديه.",
+                "answer": "Er wäscht sich die Hände."
+              },
+              {
+                "sentence": "نحن نرتدي ملابسنا بسرعة.",
+                "answer": "Wir ziehen uns schnell an."
+              },
+              {
+                "sentence": "هم يهتمون بالموسيقى.",
+                "answer": "Sie interessieren sich für Musik."
+              }
+            ]
+          }
+        ],
+      
+        "common_mistakes": [
+          {
+            "mistake": "الخلط بين mich و mir",
+            "correction": "استخدم mich مع الأفعال التي تأخذ Akkusativ، وmir مع الأفعال التي تأخذ Dativ",
+            "example": "❌ Ich wasche mir → ✅ Ich wasche mich (Akkusativ) | ❌ Ich kaufe mich ein Buch → ✅ Ich kaufe mir ein Buch (Dativ)"
+          },
+          {
+            "mistake": "نسيان الضمير الانعكاسي مع الأفعال الحقيقية",
+            "correction": "تذكر أن بعض الأفعال لا معنى لها بدون الضمير الانعكاسي",
+            "example": "❌ Ich beeile → ✅ Ich beeile mich | ❌ Wir ruhen aus → ✅ Wir ruhen uns aus"
+          },
+          {
+            "mistake": "الخلط بين حروف الجر مع الأفعال الانعكاسية",
+            "correction": "احفظ الأفعال الانعكاسية مع حروف الجر الخاصة بها",
+            "example": "❌ Ich freue mich für den Urlaub → ✅ Ich freue mich auf den Urlaub | ❌ Ich ärgere mich für die Verspätung → ✅ Ich ärgere mich über die Verspätung"
+          },
+          {
+            "mistake": "استخدام الفعل المساعد الخاطئ في الماضي",
+            "correction": "جميع الأفعال الانعكاسية تستخدم 'haben' كفعل مساعد في الماضي",
+            "example": "❌ Ich bin mich gefreut → ✅ Ich habe mich gefreut | ❌ Wir sind uns ausgeruht → ✅ Wir haben uns ausgeruht"
+          }
+        ],
+      
+        "resources": [
+          {
+            "type": "video",
+            "title": "فيديو: الأفعال الانعكاسية في المستوى B1",
+            "url": "https://learngermanoriginal.com/courses/b1-course/lesson-1",
+            "description": "فيديو تعليمي شامل يوضح استخدامات الأفعال الانعكاسية المتقدمة في مستوى B1"
+          },
+          {
+            "type": "pdf",
+            "title": "قائمة شاملة بالأفعال الانعكاسية",
+            "description": "ملف PDF يحتوي على جميع الأفعال الانعكاسية المهمة للمستوى B1 مع أمثلة واستخدامات"
+          },
+          {
+            "type": "interactive",
+            "title": "تمارين تفاعلية على الأفعال الانعكاسية",
+            "description": "تمارين تفاعلية عبر الإنترنت للتدرب على استخدام الأفعال الانعكاسية في سياقات مختلفة"
+          }
+        ],
+      
+        "review_questions": [
+          {
+            "question": "ما الفرق بين mich و mir؟ ومتى نستخدم كل منهما؟",
+            "answer": "mich هي ضمير انعكاسي في حالة Akkusativ، وmir في حالة Dativ. نستخدم mich مع الأفعال التي تتطلب مفعولاً به مباشرًا (Ich wasche mich)، ونستخدم mir عندما يكون الضمير في حالة Dativ (Ich wasche mir die Hände)."
+          },
+          {
+            "question": "كيف نفرق بين الفعل الانعكاسي الحقيقي والزائف؟",
+            "answer": "الفعل الانعكاسي الحقيقي لا يمكن استخدامه بدون الضمير الانعكاسي ولا معنى له بدونه (مثل: sich beeilen). الفعل الانعكاسي الزائف يمكن استخدامه مع وبدون الضمير الانعكاسي مع تغير المعنى (مثل: waschen / sich waschen)."
+          },
+          {
+            "question": "ما الفرق بين sich freuen auf و sich freuen über؟",
+            "answer": "sich freuen auf تستخدم للتطلع إلى شيء في المستقبل (Ich freue mich auf den Urlaub)، بينما sich freuen über تستخدم للفرح بشيء حصل في الماضي أو presente (Ich freue mich über das Geschenk)."
+          },
+          {
+            "question": "ما هو الفعل المساعد المستخدم مع الأفعال الانعكاسية في زمن الماضي (Perfekt)؟",
+            "answer": "جميع الأفعال الانعكاسية تستخدم الفعل المساعد 'haben' في زمن الماضي، ولا تستخدم أبدًا 'sein' مع الأفعال الانعكاسية."
+          }
+        ],
+      
+        "next_lesson_preview": {
+          "title": "الدرس القادم: الأفعال الانعكاسية (الجزء الثاني) وحروف الجر",
+          "description": "في الدرس الثاني من المستوى B1، ستتعمق أكثر في استخدام الأفعال الانعكاسية مع حروف الجر المختلفة، وستتعلم أفعالاً انعكاسية متقدمة للتعبير عن مواقف معقدة في الحياة اليومية والمهنية."
+        },
+      
+        "study_tips": [
+          "احفظ الأفعال الانعكاسية في مجموعات حسب حروف الجر المصاحبة لها",
+          "تدرب على بناء جمل باستخدام الأفعال الانعكاسية في جميع الضمائر",
+          "استخدم البطاقات التعليمية لحفظ الأفعال الانعكاسية مع أمثلة عملية",
+          "سجل نفسك وأنت تتحدث باستخدام الأفعال الانعكاسية ثم استمع للتسجيل",
+          "اقرأ نصوصًا باللغة الألمانية وركز على identifying الأفعال الانعكاسية",
+          "تدرب على تحويل الجمل من غير انعكاسية إلى انعكاسية والعكس"
+        ],
+      
+        "completion_criteria": [
+          "القدرة على استخدام الضمائر الانعكاسية الصحيحة في حالتي Akkusativ و Dativ",
+          "التمييز بين الأفعال الانعكاسية الحقيقية والزائفة",
+          "استخدام الأفعال الانعكاسية مع حروف الجر المناسبة",
+          "بناء جمل صحيحة باستخدام الأفعال الانعكاسية في الأزمنة المختلفة",
+          "فهم واستخدام 20 فعلًا انعكاسيًا على الأقل في سياقات مناسبة",
+          "القدرة على تصحيح الأخطاء الشائعة في استخدام الأفعال الانعكاسية"
+        ],
+      
+        "metadata": {
+          "estimated_study_time": "70-85 دقيقة",
+          "practice_time_recommended": "25-35 دقيقة يوميًا لمدة 5-7 أيام",
+          "tags": ["أفعال انعكاسية", "B1", "مستوى متوسط", "قواعد", "ضمائر انعكاسية", "حروف جر"],
+          "cefr_level": "B1",
+          "exam_relevance": "Goethe Zertifikat B1 - الأجزاء الكتابية والشفوية",
+          "last_updated": "2024-01-15",
+          "version": "1.0"
+        }
+    },
+    {
+        "lessonNumber": 2,
+        "title": "الأفعال الانعكاسية (الجزء الثاني) | Reflexive Verben (Teil 2)",
+        "title_en": "Reflexive Verbs (Part 2)",
+        "summary": "في هذا الدرس المتقدم للمستوى B1، ستتعمق في فهم الأفعال الانعكاسية واستخداماتها المعقدة، بما في ذلك الأفعال الانعكاسية مع حروف الجر، والاستخدامات الخاصة في السياقات المختلفة، والتمييز بين الأفعال الانعكاسية الحقيقية والزائفة.",
+        "detailed_description": "يتناول هذا الدرس الجوانب المتقدمة للأفعال الانعكاسية التي تُعتبر أساسية للمستوى B1. ستركز على بناء جمل أكثر تعقيدًا باستخدام الأفعال الانعكاسية في مختلف الأزمنة ومع حروف الجر المختلفة، مع التركيز على الاستخدامات العملية في المحادثات اليومية والكتابة.",
+        "objectives": [
+          "فهم الفرق بين الأفعال الانعكاسية الحقيقية والزائفة",
+          "استخدام الأفعال الانعكاسية مع حروف الجر المختلفة",
+          "تركيب جمل معقدة باستخدام الأفعال الانعكاسية في الأزمنة المختلفة",
+          "التمييز بين الاستخدام الانعكاسي وغير الانعكاسي لنفس الفعل",
+          "استخدام الأفعال الانعكاسية في الجمل الشرطية والسببية",
+          "تطبيق الأفعال الانعكاسية في سياقات التواصل اليومي المتقدمة"
+        ],
+        "target_audience": "متعلمي الألمانية في المستوى B1، المتقدمين لامتحان Goethe Zertifikat B1، الراغبين في تحسين مهارات التواصل اليومي",
+        "duration": "75-90 دقيقة",
+        "difficulty": "متوسط (B1)",
+      
+        "vocabulary": [
+          {
+            "category": "أفعال انعكاسية مع حروف الجر",
+            "words": [
+              { "de": "sich freuen auf + Akk", "ar": "يتطلع إلى", "pron": "زِيش فْرَوْيِنْ أوف", "usage": "للحديث عن التطلع لشيء مستقبلي" },
+              { "de": "sich freuen über + Akk", "ar": "يفرح بشيء", "pron": "زِيش فْرَوْيِنْ إوبِر", "usage": "للحديث عن الفرح بشيء حصل" },
+              { "de": "sich ärgern über + Akk", "ar": "ينزعج من", "pron": "زِيش إيرْجِرْن إوبِر", "usage": "للتعبير عن الانزعاج" },
+              { "de": "sich konzentrieren auf + Akk", "ar": "يركز على", "pron": "زِيش كُونْتْسِنْتْرِيرِنْ أوف", "usage": "للتركيز في العمل أو الدراسة" },
+              { "de": "sich gewöhnen an + Akk", "ar": "يعتاد على", "pron": "زِيش جِفُوهِنْ آن", "usage": "للتكيف مع وضع جديد" },
+              { "de": "sich entscheiden für + Akk", "ar": "يقرر لصالح", "pron": "زِيش إنتْشَايْدِنْ فُور", "usage": "لاتخاذ القرارات" }
+            ]
+          },
+          {
+            "category": "أفعال انعكاسية متقدمة",
+            "words": [
+              { "de": "sich bewerben um + Akk", "ar": "يتقدم بطلب للحصول على", "pron": "زِيش بِفِيرْبِنْ أوم", "usage": "للتقدم للوظائف أو المنح" },
+              { "de": "sich unterhalten mit + Dat", "ar": "يتحدث مع", "pron": "زِيش أُونْتَرْهَالْتِنْ مِيت", "usage": "للمحادثات الاجتماعية" },
+              { "de": "sich entschuldigen für + Akk", "ar": "يعتذر عن", "pron": "زِيش إنتْشُولْدِيجِنْ فُور", "usage": "للاعتذار" },
+              { "de": "sich erkundigen nach + Dat", "ar": "يستفسر عن", "pron": "زِيش إيرْكُونْدِيجِنْ نَاخ", "usage": "لطلب المعلومات" },
+              { "de": "sich kümmern um + Akk", "ar": "يهتم بـ / يعتني بـ", "pron": "زِيش كُوْمِرْن أوم", "usage": "للعناية بالآخرين أو المهام" }
+            ]
+          },
+          {
+            "category": "أفعال انعكاسية للروتين اليومي",
+            "words": [
+              { "de": "sich ausruhen", "ar": "يستريح", "pron": "زِيش أُوسْرُوهِنْ", "usage": "للراحة بعد العمل" },
+              { "de": "sich anziehen", "ar": "يرتدي الملابس", "pron": "زِيش آنْتْسِيهِنْ", "usage": "لللبس" },
+              { "de": "sich ausziehen", "ar": "يخلع الملابس", "pron": "زِيش أُوسْتْسِيهِنْ", "usage": "لخلع الملابس" },
+              { "de": "sich duschen", "ar": "يستحم", "pron": "زِيش دُوشِنْ", "usage": "للاستحمام" },
+              { "de": "sich rasieren", "ar": "يحلق", "pron": "زِيش رَازِيرِنْ", "usage": "للحلاقة" }
+            ]
+          }
+        ],
+      
+        "phrases": [
+          {
+            "category": "في العمل والدراسة",
+            "items": [
+              { "de": "Ich muss mich auf die Prüfung konzentrieren", "ar": "يجب أن أركز على الامتحان", "pron": "إِش مُوس زِيش أوف دِي بِرُوفُونْغ كُونْتْسِنْتْرِيرِنْ", "context": "للتركيز في الدراسة" },
+              { "de": "Er hat sich um eine Stelle beworben", "ar": "هو تقدم بطلب للحصول على وظيفة", "pron": "إِير هَات زِيش أوم آينِه شْتَيلِه بِفُورْبِنْ", "context": "للتقدم للوظائف" },
+              { "de": "Wir müssen uns an die neuen Regeln gewöhnen", "ar": "يجب أن نعتاد على القواعد الجديدة", "pron": "فِير مُوسِنْ أُونْس آن دِي نُويْنْ رِيجِلْن جِفُوهْنِنْ", "context": "للتكيف مع التغييرات" }
+            ]
+          },
+          {
+            "category": "في الحياة الاجتماعية",
+            "items": [
+              { "de": "Ich freue mich schon auf das Wochenende", "ar": "أتطلع بالفعل إلى نهاية الأسبوع", "pron": "إِيش فْرَوْيِه مِيش شُون أوف دَاس فُوكِينْإِندِه", "context": "للتطلع للمستقبل" },
+              { "de": "Sie hat sich über das Geschenk sehr gefreut", "ar": "هي فرحت كثيرًا بالهدية", "pron": "زِي هَات زِيش إوبِر دَاس جِشِينْك زِيهِر جِفْرَوْيت", "context": "للتعبير عن الفرح" },
+              { "de": "Ich möchte mich für meine Verspätung entschuldigen", "ar": "أود أن أعتذر عن تأخري", "pron": "إِيش مُوشْتِه زِيش فُور ماينِه فِيرْشْبِيْتُونْغ إنتْشُولْدِيجِنْ", "context": "للاعتذار الرسمي" }
+            ]
+          },
+          {
+            "category": "في الحياة اليومية",
+            "items": [
+              { "de": "Nach der Arbeit ruhe ich mich immer aus", "ar": "بعد العمل أستريح دائمًا", "pron": "نَاخ دِير أُرْبَايت رُوهِه إِيش مِيش إِمِر أُوس", "context": "لروتين الراحة" },
+              { "de": "Kannst du dich um die Kinder kümmern?", "ar": "هل يمكنك الاعتناء بالأطفال؟", "pron": "كَانْست دُو زِيش أوم دِي كِينْدِر كُوْمِرْن؟", "context": "لطلب المساعدة" },
+              { "de": "Ich habe mich für den Deutschkurs entschieden", "ar": "قررت الالتحاق بدورة اللغة الألمانية", "pron": "إِيش هَابِه زِيش فُور دِين دُويْتْشكُورس إنتْشَايدِنْ", "context": "لاتخاذ القرارات" }
+            ]
+          }
+        ],
+      
+        "dialogues": [
+          {
+            "title": "محادثة في العمل",
+            "context": "موظف يتحدث مع مديره عن التكيف مع الوظيفة الجديدة",
+            "level": "رسمي",
+            "lines": [
+              { "speaker": "مدير", "de": "Herr Schmidt, wie fühlen Sie sich in der neuen Position?", "ar": "سيد شميدت، كيف تشعر في المنصب الجديد؟" },
+              { "speaker": "موظف", "de": "Guten Tag, Frau Müller. Ich gewöhne mich langsam an die neuen Aufgaben.", "ar": "مساء الخير، سيدة مولر. أنا أعتاد ببطء على المهام الجديدة." },
+              { "speaker": "مدير", "de": "Haben Sie sich schon auf das große Projekt konzentrieren können?", "ar": "هل استطعت التركيز على المشروع الكبير؟" },
+              { "speaker": "موظف", "de": "Ja, ich konzentriere mich seit letzter Woche darauf. Ich muss mich aber noch mehr anstrengen.", "ar": "نعم، أركز عليه منذ الأسبوع الماضي. لكن يجب أن أجتهد أكثر." },
+              { "speaker": "مدير", "de": "Das freut mich zu hören. Wenn Sie Fragen haben, können Sie sich jederzeit an mich wenden.", "ar": "يسعدني سماع هذا. إذا كانت لديك أسئلة، يمكنك التوجه إلي في أي وقت." }
+            ]
+          },
+          {
+            "title": "محادثة بين أصدقاء",
+            "context": "صديقان يتحدثان عن الخطط المستقبلية",
+            "level": "غير رسمي",
+            "lines": [
+              { "speaker": "توماس", "de": "Hey Lena! Worauf freust du dich im Moment am meisten?", "ar": "مرحبًا لينا! ما الذي تتطلعين إليه أكثر في الوقت الحالي؟" },
+              { "speaker": "لينا", "de": "Ich freue mich total auf meinen Urlaub in Italien. Und du?", "ar": "أتطلع تمامًا إلى إجازتي في إيطاليا. وأنت؟" },
+              { "speaker": "توماس", "de": "Ich habe mich gerade für einen Masterstudiengang beworben. Ich hoffe, ich bekomme einen Platz.", "ar": "لقد تقدمت للتو بطلب لبرنامج ماجستير. آمل أن أحصل على مقعد." },
+              { "speaker": "لينا", "de": "Toll! Darüber musst du dich aber nicht ärgern, wenn es nicht klappt. Du kannst dich immer noch anderswo bewerben.", "ar": "رائع! لكن لا يجب أن تنزعج إذا لم ينجح الأمر. يمكنك دائمًا التقدم في مكان آخر." }
+            ]
+          },
+          {
+            "title": "محادثة في المركز التعليمي",
+            "context": "طالب يستفسر عن دورات لغة",
+            "level": "شبه رسمي",
+            "lines": [
+              { "speaker": "موظف", "de": "Guten Morgen! Wie kann ich Ihnen helfen?", "ar": "صباح الخير! كيف يمكنني مساعدتك؟" },
+              { "speaker": "طالب", "de": "Guten Morgen. Ich möchte mich nach Deutschkursen erkundigen.", "ar": "صباح الخير. أود الاستفسار عن دورات اللغة الألمانية." },
+              { "speaker": "موظف", "de": "Sehr gerne. Haben Sie sich schon für einen bestimmten Kurs entschieden?", "ar": "بكل سرور. هل قررت بالفعل دورة معينة؟" },
+              { "speaker": "طالب", "de": "Nein, ich kann mich noch nicht entscheiden. Können Sie mir die verschiedenen Optionen erklären?", "ar": "لا، لا أستطيع أن أقرر بعد. هل يمكنك شرح الخيارات المختلفة لي؟" },
+              { "speaker": "موظف", "de": "Natürlich. Bevor Sie sich entscheiden, sollten Sie sich über die Inhalte jedes Kurses informieren.", "ar": "بالتأكيد. قبل أن تقرر، يجب أن تستفسر عن محتويات كل دورة." }
+            ]
+          }
+        ],
+      
+        "grammar": [
+          {
+            "topic": "الأفعال الانعكاسية مع حروف الجر",
+            "explanation": "في المستوى B1، نتعلم استخدام الأفعال الانعكاسية مع حروف الجر المختلفة، حيث يحدد حرف الجر الحالة الإعرابية للاسم الذي يليه (Akkusativ أو Dativ).",
+            "rules": [
+              "sich freuen auf + Akk: للتطلع للمستقبل - Ich freue mich auf die Reise",
+              "sich freuen über + Akk: للفرح بشيء حصل - Ich freue mich über das Geschenk",
+              "sich ärgern über + Akk: للانزعاج من شيء - Ich ärgere mich über die Verspätung",
+              "sich konzentrieren auf + Akk: للتركيز على شيء - Ich konzentriere mich auf die Arbeit",
+              "sich gewöhnen an + Akk: للاعتياد على شيء - Ich gewöhne mich an das kalte Wetter"
+            ],
+            "examples": [
+              { "de": "Ich freue mich auf meinen Geburtstag.", "ar": "أتطلع إلى عيد ميلادي." },
+              { "de": "Sie ärgert sich über den Fehler.", "ar": "هي تنزعج من الخطأ." },
+              { "de": "Wir gewöhnen uns an die neue Umgebung.", "ar": "نعتاد على البيئة الجديدة." }
+            ],
+            "common_mistakes": [
+              "الخلط بين 'auf' و'über': ❌ Ich freue mich auf das Geschenk (إذا حصلت عليه بالفعل) → ✅ Ich freue mich über das Geschenk",
+              "نسيان حرف الجر: ❌ Ich freue mich die Reise → ✅ Ich freue mich auf die Reise"
+            ]
+          },
+          {
+            "topic": "الفرق بين الأفعال الانعكاسية الحقيقية والزائفة",
+            "explanation": "الأفعال الانعكاسية الحقيقية لا يمكن استخدامها بدون الضمير الانعكاسي، بينما الأفعال الانعكاسية الزائفة يمكن استخدامها مع وبدون الضمير الانعكاسي ولكن بمعانٍ مختلفة.",
+            "rules": [
+              "أفعال انعكاسية حقيقية: لا توجد بدون الضمير الانعكاسي - sich beeilen, sich erkälten",
+              "أفعال انعكاسية زائفة: يمكن استخدامها مع وبدون الضمير - waschen/sich waschen",
+              "تغيير المعنى: بعض الأفعال تغير معناها مع الضمير الانعكاسي - stellen/sich stellen"
+            ],
+            "examples": [
+              { "de": "Ich beeile mich. (انعكاسي حقيقي)", "ar": "أنا أسرع." },
+              { "de": "Ich wasche mich. (انعكاسي) / Ich wasche das Auto. (غير انعكاسي)", "ar": "أنا أغتسل. / أنا أغسل السيارة." },
+              { "de": "Ich stelle die Vase auf den Tisch. / Ich stelle mich vor.", "ar": "أضع المزهرية على الطاولة. / أعرف بنفسي." }
+            ],
+            "common_mistakes": [
+              "حذف الضمير الانعكاسي مع الأفعال الحقيقية: ❌ Ich beeile → ✅ Ich beeile mich",
+              "استخدام الضمير الانعكاسي مع الأفعال غير الانعكاسية: ❌ Ich wasche mich das Auto → ✅ Ich wasche das Auto"
+            ]
+          },
+          {
+            "topic": "الأفعال الانعكاسية في الجمل المركبة",
+            "explanation": "في المستوى B1، نتعلم استخدام الأفعال الانعكاسية في جمل معقدة تحتوي على أدوات ربط مختلفة مثل 'weil', 'dass', 'wenn'.",
+            "rules": [
+              "مع 'weil': الفعل الانعكاسي يذهب للنهاية - ..., weil ich mich nicht konzentrieren kann",
+              "مع 'dass': نفس القاعدة - Ich weiß, dass du dich ärgerst",
+              "مع 'wenn': في الجمل الشرطية - Wenn ich mich beeile, komme ich pünktlich",
+              "ترتيب العناصر: الضمير الانعكاسي يأتي عادة بعد الفاعل مباشرة"
+            ],
+            "examples": [
+              { "de": "Ich komme zu spät, weil ich mich verspätet habe.", "ar": "جئت متأخرًا لأنني تأخرت." },
+              { "de": "Es ist gut, dass du dich entschuldigt hast.", "ar": "من الجيد أنك اعتذرت." },
+              { "de": "Wenn ich mich anstrenge, schaffe ich die Prüfung.", "ar": "إذا اجتهدت، سأنجح في الامتحان." }
+            ],
+            "common_mistakes": [
+              "وضع الضمير الانعكاسي في المكان الخطأ: ❌ Weil kann ich mich nicht konzentrieren → ✅ ..., weil ich mich nicht konzentrieren kann",
+              "نسيان الفعل المساعد في الماضي: ❌ Weil ich mich verspätet → ✅ ..., weil ich mich verspätet habe"
+            ]
+          }
+        ],
+      
+        "cultural_notes": [
+          {
+            "title": "الأفعال الانعكاسية في التواصل اليومي الألماني",
+            "content": "الألمان يستخدمون الأفعال الانعكاسية بكثرة في المحادثات اليومية، خاصة في التعبير عن المشاعر والآراء الشخصية. استخدامها بشكل صحيح يجعل كلامك يبدو أكثر طبيعية وأقرب إلى اللغة المحكية."
+          },
+          {
+            "title": "الاعتذار في الثقافة الألمانية",
+            "content": "في الثقافة الألمانية، الاعتذار باستخدام 'sich entschuldigen' يعتبر مهمًا في حالة ارتكاب خطأ. لكن الإفراط في الاعتذار قد يُفسر على أنه ضعف في الشخصية."
+          },
+          {
+            "title": "التعبير عن المشاعر",
+            "content": "الألمان عادة ما يكونون مباشرين في التعبير عن مشاعرهم باستخدام أفعال انعكاسية مثل 'sich freuen' أو 'sich ärgern'. هذا يعتبر طبيعيًا ومقبولاً في معظم السياقات."
+          }
+        ],
+      
+        "pronunciation_tips": [
+          {
+            "tip": "نطق 'sich' و 'euch'",
+            "explanation": "'sich' تنطق 'زِيش' مع صوت 'ز' ناعم، و'euch' تنطق 'أوْيْش' مع صوت 'ش' واضح."
+          },
+          {
+            "tip": "الربط بين الكلمات",
+            "explanation": "في الجمل مع الأفعال الانعكاسية، يتم الربط بين الضمير الانعكاسي والفعل: 'Ich freue mich auf' تنطق ككلمة واحدة تقريبًا: 'إِشفْرَوْيِهْمِيشْأُوف'."
+          },
+          {
+            "tip": "النبرة على المقطع الصحيح",
+            "explanation": "في الأفعال الانعكاسية المركبة، النبرة تكون عادة على المقطع الأول من الفعل: 'ÁNziehen', 'ÁUsruhen'."
+          }
+        ],
+      
+        "exercises": [
+          {
+            "type": "fill_blanks",
+            "title": "أكمل الجمل بحرف الجر المناسب",
+            "instructions": "اختر حرف الجر الصحيح لإكمال كل جملة",
+            "questions": [
+              {
+                "sentence": "Ich freue mich ___ das Wochenende.",
+                "options": ["auf", "über", "für", "um"],
+                "answer": "auf"
+              },
+              {
+                "sentence": "Sie ärgert sich ___ den Fehler.",
+                "options": ["auf", "über", "an", "nach"],
+                "answer": "über"
+              },
+              {
+                "sentence": "Wir gewöhnen uns ___ das kalte Wetter.",
+                "options": ["auf", "über", "an", "für"],
+                "answer": "an"
+              },
+              {
+                "sentence": "Er hat sich ___ eine Stelle beworben.",
+                "options": ["auf", "über", "um", "an"],
+                "answer": "um"
+              }
+            ]
+          },
+          {
+            "type": "sentence_building",
+            "title": "رتب الكلمات مع إضافة الضمير الانعكاسي",
+            "instructions": "رتب الكلمات التالية مع إضافة الضمير الانعكاسي المناسب",
+            "questions": [
+              {
+                "words": ["Ich", "freuen", "auf", "Urlaub"],
+                "answer": "Ich freue mich auf den Urlaub."
+              },
+              {
+                "words": ["Wir", "müssen", "konzentrieren", "auf", "Arbeit"],
+                "answer": "Wir müssen uns auf die Arbeit konzentrieren."
+              },
+              {
+                "words": ["Sie", "hat", "entschuldigen", "für", "Verspätung"],
+                "answer": "Sie hat sich für die Verspätung entschuldigt."
+              }
+            ]
+          },
+          {
+            "type": "transformation",
+            "title": "حول الجمل إلى صيغة انعكاسية",
+            "instructions": "حول الجمل التالية لاستخدام الأفعال الانعكاسية",
+            "questions": [
+              {
+                "original": "Ich ziehe meine Jacke an.",
+                "transformed": "Ich ziehe mich an.",
+                "explanation": "الفعل 'anziehen' يمكن أن يكون انعكاسيًا (لللبس) أو غير انعكاسي (للبس شيء)"
+              },
+              {
+                "original": "Er wäscht sein Auto.",
+                "transformed": "Er wäscht sich.",
+                "explanation": "نفس الفعل يمكن استخدامه انعكاسيًا (للاغتسال) أو غير انعكاسي (لغسل شيء)"
+              }
+            ]
+          }
+        ],
+      
+        "common_mistakes": [
+          {
+            "mistake": "الخلط بين 'sich freuen auf' و 'sich freuen über'",
+            "correction": "استخدم 'auf' للمستقبل و'über' للماضي",
+            "example": "❌ Ich freue mich auf das Geschenk (إذا استلمته) → ✅ Ich freue mich über das Geschenk"
+          },
+          {
+            "mistake": "نسيان حرف الجر مع الأفعال الانعكاسية",
+            "correction": "تذكر أن العديد من الأفعال الانعكاسية تحتاج حرف جر",
+            "example": "❌ Ich freue mich das Wochenende → ✅ Ich freue mich auf das Wochenende"
+          },
+          {
+            "mistake": "وضع الضمير الانعكاسي في المكان الخطأ في الجمل المركبة",
+            "correction": "في الجمل الرئيسية، الضمير الانعكاسي يأتي بعد الفاعل مباشرة",
+            "example": "❌ Weil mich ich freue → ✅ ..., weil ich mich freue"
+          }
+        ],
+      
+        "review_questions": [
+          {
+            "question": "ما الفرق بين 'sich freuen auf' و 'sich freuen über'؟",
+            "answer": "'sich freuen auf' تستخدم للتطلع لشيء في المستقبل، بينما 'sich freuen über' تستخدم للفرح بشيء حصل في الماضي أو الحاضر."
+          },
+          {
+            "question": "كيف نفرق بين الفعل الانعكاسي الحقيقي والزائف؟",
+            "answer": "الفعل الانعكاسي الحقيقي لا يمكن استخدامه بدون الضمير الانعكاسي، بينما الزائف يمكن استخدامه مع وبدون الضمير ولكن بمعانٍ مختلفة."
+          },
+          {
+            "question": "ما هو ترتيب الضمير الانعكاسي في الجملة الرئيسية والجملة الفرعية؟",
+            "answer": "في الجملة الرئيسية، يأتي الضمير الانعكاسي بعد الفاعل مباشرة. في الجملة الفرعية، يأتي بعد الفاعل وقبل بقية عناصر الجملة."
+          }
+        ],
+      
+        "study_tips": [
+          "اصنع قائمة بالأفعال الانعكاسية مع حروف الجر الخاصة بها",
+          "تدرب على استخدام الأفعال الانعكاسية في جمل من حياتك اليومية",
+          "استخدم البطاقات التعليمية لحفظ الأفعال الانعكاسية مع حروف الجر",
+          "سجل نفسك وأنت تتحدث باستخدام الأفعال الانعكاسية ثم استمع للتسجيل",
+          "اقرأ نصوصًا بالألمانية وركز على identifying الأفعال الانعكاسية"
+        ],
+      
+        "completion_criteria": [
+          "القدرة على استخدام 10 أفعال انعكاسية مختلفة مع حروف الجر الصحيحة",
+          "التمييز بين الأفعال الانعكاسية الحقيقية والزائفة",
+          "بناء جمل معقدة تحتوي على أفعال انعكاسية في مختلف الأزمنة",
+          "استخدام الأفعال الانعكاسية بشكل صحيح في المحادثات اليومية",
+          "فهم واستخدام الأفعال الانعكاسية في السياقات الرسمية وغير الرسمية"
+        ],
+      
+        "metadata": {
+          "estimated_study_time": "75-90 دقيقة",
+          "practice_time_recommended": "25-35 دقيقة يوميًا لمدة 5 أيام",
+          "tags": ["أفعال انعكاسية", "B1", "قواعد متقدمة", "حروف الجر", "محادثة"],
+          "cefr_level": "B1",
+          "exam_relevance": "Goethe Zertifikat B1 - الأجزاء الكتابية والشفوية",
+          "last_updated": "2024-01-15",
+          "version": "1.0"
+        }
+    }
+]

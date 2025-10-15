@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Lock } from "lucide-react";
-import { ACCESS_FLAG_KEY, getAllowedCodes, getFreeAccessCode, setAccessTier } from '@/lib/access';
+import { Lock, X, MessageCircle } from "lucide-react";
+import { ACCESS_FLAG_KEY, ACCESS_TIER_KEY, getAllowedCodes, getFreeAccessCode, setAccessTier, isLimitedAccess, WHATSAPP_LINK } from '@/lib/access';
 
 interface AccessGateProps {
   children: React.ReactNode;
@@ -11,6 +11,7 @@ const AccessGate: React.FC<AccessGateProps> = ({ children }) => {
   const [code, setCode] = useState<string>('');
   const [error, setError] = useState<string>('');
   const [checking, setChecking] = useState<boolean>(true);
+  const [showFreeInfo, setShowFreeInfo] = useState<boolean>(false);
   const allowedCodes = useMemo(() => getAllowedCodes(), []);
 
   useEffect(() => {
@@ -30,6 +31,9 @@ const AccessGate: React.FC<AccessGateProps> = ({ children }) => {
       setAccessTier('free');
       setGranted(true);
       setError('');
+      try {
+        localStorage.setItem('free_info_shown', 'false');
+      } catch {}
       return;
     }
 
@@ -81,6 +85,23 @@ const AccessGate: React.FC<AccessGateProps> = ({ children }) => {
     setGranted(true);
     setError('');
   };
+
+  // Ensure hooks are not conditionally rendered: decide free modal visibility here
+  useEffect(() => {
+    if (checking) return;
+    if (isLimitedAccess()) {
+      try {
+        const shown = localStorage.getItem('free_info_shown');
+        if (shown !== 'true') {
+          setShowFreeInfo(true);
+        }
+      } catch {
+        setShowFreeInfo(true);
+      }
+    } else {
+      setShowFreeInfo(false);
+    }
+  }, [checking, granted]);
 
   if (checking) {
     return (
@@ -138,7 +159,98 @@ const AccessGate: React.FC<AccessGateProps> = ({ children }) => {
     );
   }
 
-  return <>{children}</>;
+  const closeFreeInfo = () => {
+    setShowFreeInfo(false);
+    try { localStorage.setItem('free_info_shown', 'true'); } catch {}
+  };
+
+  const handleUpgradeLogout = () => {
+    try {
+      localStorage.removeItem(ACCESS_FLAG_KEY);
+      localStorage.removeItem(ACCESS_TIER_KEY);
+      // Optionally clear free info flag to show again if they re-login as free later
+      // localStorage.removeItem('free_info_shown');
+    } catch {}
+    window.location.reload();
+  };
+
+  return <>
+    {children}
+
+    {/* Free mode info modal */}
+    {isLimitedAccess() && showFreeInfo && (
+      <div className="fixed inset-0 z-50 flex items-center justify-center">
+        <div className="absolute inset-0 bg-black/60" onClick={closeFreeInfo} />
+        <div className="relative z-10 w-full max-w-lg mx-4">
+          <div className="bg-card text-foreground border border-border rounded-2xl shadow-xl overflow-hidden">
+            <div className="p-5 flex items-start justify-between gap-3 border-b border-border">
+              <div className="flex items-center gap-3">
+                <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+                  <Lock className="h-5 w-5 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold">وضع الوصول المجاني</h3>
+                  <p className="text-xs text-muted-foreground">أنت الآن تستخدم النسخة التجريبية المجانية</p>
+                </div>
+              </div>
+              <button onClick={closeFreeInfo} className="p-1 rounded-md hover:bg-muted/50 transition-colors">
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+
+            <div className="p-5 space-y-3 text-sm">
+              <div className="rounded-lg p-3 border bg-green-500/10 border-green-500/30">
+                <p className="font-medium mb-1 text-green-300">ماذا ستحصل عليه مجانًا؟</p>
+                <ul className="list-disc pr-5 space-y-1 text-green-200/90">
+                  <li>الوصول لأول درسين في كل مستوى</li>
+                  <li>عرض المحتوى التعليمي الأساسي ومعاينة الأقسام</li>
+                  <li>تجربة الواجهة والميزات الرئيسية</li>
+                </ul>
+              </div>
+              <div className="rounded-lg p-3 border bg-destructive/10 border-destructive/30">
+                <p className="font-medium mb-1 text-destructive">ما الذي يتطلب الترقية؟</p>
+                <ul className="list-disc pr-5 space-y-1 text-destructive/90">
+                  <li>فتح جميع الدروس والمستويات كاملة</li>
+                  <li>فتح جميع القواعد و الأفعال كاملة</li>
+                  <li>الوصول غير محدود للحوارات والتمارين المتقدمة</li>
+                  <li>تحديثات دورية ومحتوى حصري</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="p-5 flex flex-col sm:flex-row gap-2 sm:gap-3 border-t border-border">
+              <a
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md bg-green-600 text-white hover:bg-green-600/90 transition-colors flex-1"
+              >
+                <MessageCircle className="h-4 w-4" />
+                تواصل عبر واتساب: 0773443694
+              </a>
+              <button
+                onClick={closeFreeInfo}
+                className="inline-flex items-center justify-center px-4 py-2 rounded-md border border-border hover:bg-muted/50 transition-colors flex-1"
+              >
+                متابعة لاحقًا
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    )}
+
+    {/* Upgrade (logout) floating button for free tier */}
+    {isLimitedAccess() && (
+      <button
+        onClick={handleUpgradeLogout}
+        className="fixed left-4 bottom-4 z-40 px-4 py-2 rounded-full bg-primary text-primary-foreground shadow-lg hover:bg-primary/90 transition-colors animate-pulse"
+        title="تسجيل الخروج من الوصول المجاني للترقية"
+      >
+        الترقية
+      </button>
+    )}
+  </>;
 };
 
 export default AccessGate;

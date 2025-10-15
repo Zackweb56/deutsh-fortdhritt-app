@@ -110,9 +110,16 @@ const LessonsTab = () => {
   };
 
   const clearCompletedLessons = () => {
-    setCompletedByLevel({ A1: new Set(), A2: new Set(), B1: new Set(), B2: new Set() });
-    localStorage.removeItem(COMPLETED_KEY);
-    localStorage.removeItem(LEGACY_COMPLETED_KEY);
+    setCompletedByLevel(prev => {
+      const next = {
+        A1: new Set(prev.A1),
+        A2: new Set(prev.A2),
+        B1: new Set(prev.B1),
+        B2: new Set(prev.B2),
+      };
+      next[selectedLevel] = new Set();
+      return next;
+    });
   };
 
   const filteredLessons = currentLessons.lessons.filter(lesson =>
@@ -288,6 +295,10 @@ const LessonsTab = () => {
                         onClick={() => {
                           if (selectedLevel === 'A1') {
                             navigate(`/lessons/a1/${lesson.number}`);
+                          } else if (selectedLevel === 'A2') {
+                            navigate(`/lessons/a2/${lesson.number}`);
+                          } else if (selectedLevel === 'B1') {
+                            navigate(`/lessons/b1/${lesson.number}`);
                           } else if (selectedLevel === 'B2') {
                             navigate(`/lessons/b2/${lesson.number}`);
                           } else {
@@ -320,6 +331,10 @@ const LessonsTab = () => {
                       onClick={() => {
                         if (selectedLevel === 'A1') {
                           navigate(`/lessons/a1/${lesson.number}`);
+                        } else if (selectedLevel === 'A2') {
+                          navigate(`/lessons/a2/${lesson.number}`);
+                        } else if (selectedLevel === 'B1') {
+                          navigate(`/lessons/b1/${lesson.number}`);
                         } else if (selectedLevel === 'B2') {
                           navigate(`/lessons/b2/${lesson.number}`);
                         } else {

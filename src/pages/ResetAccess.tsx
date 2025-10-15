@@ -2,14 +2,16 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ShieldX, Home } from 'lucide-react';
-import { ACCESS_FLAG_KEY } from '@/lib/access';
+import { ACCESS_FLAG_KEY, ACCESS_TIER_KEY } from '@/lib/access';
 
 const ResetAccess = () => {
   const navigate = useNavigate();
   const [done, setDone] = useState(false);
 
   const handleReset = () => {
+    // Clear both access flag and tier
     localStorage.removeItem(ACCESS_FLAG_KEY);
+    localStorage.removeItem(ACCESS_TIER_KEY);
     setDone(true);
   };
 
