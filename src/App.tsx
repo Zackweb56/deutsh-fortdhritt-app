@@ -8,6 +8,8 @@ import ResetAccess from "./pages/ResetAccess";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import About from "./pages/About";
 import AccessGate from "./components/AccessGate";
+import { useEffect } from "react";
+import { setupAdsAutoSync } from "./lib/ads";
 import NotFound from "./pages/NotFound";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import A1Lesson from "./pages/lessons/A1Lesson";
@@ -17,30 +19,36 @@ import B2Lesson from "./pages/lessons/B2Lesson";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <AccessGate>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/lessons/a1/:lessonNumber" element={<A1Lesson />} />
-            <Route path="/lessons/a2/:lessonNumber" element={<A2Lesson />} />
-            <Route path="/lessons/b1/:lessonNumber" element={<B1Lesson />} />
-            <Route path="/lessons/b2/:lessonNumber" element={<B2Lesson />} />
-            <Route path="/reset-access" element={<ResetAccess />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/about" element={<About />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-          <ScrollToTopButton />
-        </BrowserRouter>
-      </AccessGate>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+const App = () => {
+  useEffect(() => {
+    setupAdsAutoSync();
+  }, []);
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <AccessGate>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/lessons/a1/:lessonNumber" element={<A1Lesson />} />
+              <Route path="/lessons/a2/:lessonNumber" element={<A2Lesson />} />
+              <Route path="/lessons/b1/:lessonNumber" element={<B1Lesson />} />
+              <Route path="/lessons/b2/:lessonNumber" element={<B2Lesson />} />
+              <Route path="/reset-access" element={<ResetAccess />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/about" element={<About />} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+            <ScrollToTopButton />
+          </BrowserRouter>
+        </AccessGate>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;

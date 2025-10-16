@@ -29,6 +29,7 @@ const AccessGate: React.FC<AccessGateProps> = ({ children }) => {
     if (input === freeCode) {
       localStorage.setItem(ACCESS_FLAG_KEY, 'true');
       setAccessTier('free');
+      window.dispatchEvent(new Event('access-tier-changed'));
       setGranted(true);
       setError('');
       try {
@@ -55,6 +56,7 @@ const AccessGate: React.FC<AccessGateProps> = ({ children }) => {
         if (data?.error === 'server_not_configured' || (resp.status === 500 && isLocal)) {
           localStorage.setItem(ACCESS_FLAG_KEY, 'true');
           setAccessTier('full');
+          window.dispatchEvent(new Event('access-tier-changed'));
           setGranted(true);
           setError('');
           return;
@@ -72,6 +74,7 @@ const AccessGate: React.FC<AccessGateProps> = ({ children }) => {
       if (isLocal) {
         localStorage.setItem(ACCESS_FLAG_KEY, 'true');
         setAccessTier('full');
+        window.dispatchEvent(new Event('access-tier-changed'));
         setGranted(true);
         setError('');
       } else {
@@ -82,6 +85,7 @@ const AccessGate: React.FC<AccessGateProps> = ({ children }) => {
 
     localStorage.setItem(ACCESS_FLAG_KEY, 'true');
     setAccessTier('full');
+    window.dispatchEvent(new Event('access-tier-changed'));
     setGranted(true);
     setError('');
   };
@@ -171,6 +175,7 @@ const AccessGate: React.FC<AccessGateProps> = ({ children }) => {
       // Optionally clear free info flag to show again if they re-login as free later
       // localStorage.removeItem('free_info_shown');
     } catch {}
+    window.dispatchEvent(new Event('access-tier-changed'));
     window.location.reload();
   };
 
@@ -212,6 +217,8 @@ const AccessGate: React.FC<AccessGateProps> = ({ children }) => {
                 <ul className="list-disc pr-5 space-y-1 text-destructive/90">
                   <li>فتح جميع الدروس والمستويات كاملة</li>
                   <li>فتح جميع القواعد و الأفعال كاملة</li>
+                  <li>إمكانية تحميل المفردات مع الترجمة بالعربية في صيغة ملف PDF</li>
+                  <li>عدم ظهور الإعلانات المزعجة</li>
                   <li>الوصول غير محدود للحوارات والتمارين المتقدمة</li>
                   <li>تحديثات دورية ومحتوى حصري</li>
                 </ul>
