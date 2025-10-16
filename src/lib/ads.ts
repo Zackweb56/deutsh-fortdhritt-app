@@ -20,7 +20,6 @@ export const enableAds = async () => {
     const script = document.createElement('script');
     script.src = AD_SCRIPT_SRC;
     script.async = true;
-    (script as any).dataset = { zone: AD_DATA_ZONE, cfasync: 'false' } as DOMStringMap;
     script.setAttribute('data-zone', AD_DATA_ZONE);
     script.setAttribute('data-cfasync', 'false');
     script.id = AD_SCRIPT_ID;
