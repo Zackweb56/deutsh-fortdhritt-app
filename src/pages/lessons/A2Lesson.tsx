@@ -389,24 +389,112 @@ const A2Lesson: React.FC = () => {
                 </div>
               ) : ex.type === 'fill_blanks' ? (
                 <div className="space-y-3">
-                  <div className="space-y-2">
-                    {ex.dialogue?.map((d: any, j: number) => (
-                      <div key={j} className="p-3 rounded border border-border text-sm bg-muted/20" dir="ltr">
-                        <span className="font-medium">{d.speaker}: </span>
-                        {d.text}
-                      </div>
-                    ))}
-                  </div>
-                  {ex.options && (
-                    <div>
-                      <p className="text-sm font-medium mb-2">الكلمات المتاحة:</p>
-                      <div className="flex flex-wrap gap-2 text-xs">
-                        {ex.options.map((op: string, k: number) => (
-                          <span key={k} className="px-3 py-1 rounded-full border bg-card/60 hover:bg-primary/10 transition-colors" dir="ltr">{op}</span>
-                        ))}
-                      </div>
+                  {/* If structured questions list */}
+                  {Array.isArray(ex.questions) && ex.questions.length > 0 ? (
+                    <div className="space-y-2">
+                      {ex.questions.map((q: any, j: number) => (
+                        <div key={j} className="p-3 rounded border border-border text-sm bg-muted/10">
+                          {q.sentence && <p className="mb-2" dir="ltr">{q.sentence}</p>}
+                          {Array.isArray(q.options) && (
+                            <div className="flex flex-wrap gap-2 text-xs" dir="ltr">
+                              {q.options.map((op: string, k: number) => (
+                                <span key={k} className="px-3 py-1 rounded-full border bg-card/60 hover:bg-primary/10 transition-colors">{op}</span>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    // Dialogue-style fill blanks
+                    <div className="space-y-2">
+                      {ex.dialogue?.map((d: any, j: number) => (
+                        <div key={j} className="p-3 rounded border border-border text-sm bg-muted/20" dir="ltr">
+                          <span className="font-medium">{d.speaker}: </span>
+                          {d.text}
+                        </div>
+                      ))}
+                      {ex.options && (
+                        <div>
+                          <p className="text-sm font-medium mb-2">الكلمات المتاحة:</p>
+                          <div className="flex flex-wrap gap-2 text-xs" dir="ltr">
+                            {ex.options.map((op: string, k: number) => (
+                              <span key={k} className="px-3 py-1 rounded-full border bg-card/60 hover:bg-primary/10 transition-colors">{op}</span>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                     </div>
                   )}
+                </div>
+              ) : ex.type === 'sentence_building' ? (
+                <div className="space-y-2">
+                  {ex.questions?.map((q: any, j: number) => (
+                    <div key={j} className="p-3 rounded border border-border bg-muted/10 text-sm">
+                      <div className="flex flex-wrap gap-2 mb-2" dir="ltr">
+                        {q.words?.map((w: string, k: number) => (
+                          <span key={k} className="px-2 py-1 rounded bg-muted/40 border text-xs">{w}</span>
+                        ))}
+                      </div>
+                      {q.answer && <p className="text-xs text-muted-foreground">الحل المقترح: {q.answer}</p>}
+                    </div>
+                  ))}
+                </div>
+              ) : ex.type === 'dialogue_completion' ? (
+                <div className="space-y-2">
+                  {ex.dialogue?.map((d: any, j: number) => (
+                    <div key={j} className="p-3 rounded border border-border text-sm bg-muted/10" dir="ltr">
+                      <span className="font-medium">{d.speaker}: </span>
+                      {d.text}
+                    </div>
+                  ))}
+                </div>
+              ) : ex.type === 'error_correction' ? (
+                <div className="space-y-2">
+                  {ex.questions?.map((q: any, j: number) => (
+                    <div key={j} className="p-3 rounded border border-border text-sm bg-muted/10">
+                      <p className="mb-1">الجملة: {q.incorrect}</p>
+                      {q.correct && <p className="text-xs text-green-600">الصحيح: {q.correct}</p>}
+                      {q.explanation && <p className="text-xs text-muted-foreground">التوضيح: {q.explanation}</p>}
+                    </div>
+                  ))}
+                </div>
+              ) : ex.type === 'speaking_practice' ? (
+                <div className="space-y-2">
+                  {Array.isArray(ex.prompts) && (
+                    <ul className="list-disc pr-5 text-sm space-y-1">
+                      {ex.prompts.map((p: string, j: number) => (
+                        <li key={j}>{p}</li>
+                      ))}
+                    </ul>
+                  )}
+                  {ex.duration && <p className="text-xs text-muted-foreground">المدة المقترحة: {ex.duration}</p>}
+                  {Array.isArray(ex.tips) && (
+                    <div className="text-xs text-muted-foreground">
+                      <p className="font-medium mb-1">نصائح:</p>
+                      <ul className="list-disc pr-5 space-y-1">
+                        {ex.tips.map((t: string, j: number) => <li key={j}>{t}</li>)}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              ) : ex.type === 'writing_exercise' ? (
+                <div className="space-y-2">
+                  {Array.isArray(ex.requirements) && (
+                    <ul className="list-disc pr-5 text-sm space-y-1">
+                      {ex.requirements.map((r: string, j: number) => (
+                        <li key={j}>{r}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ) : ex.type === 'translation' ? (
+                <div className="space-y-2">
+                  {ex.questions?.map((q: any, j: number) => (
+                    <div key={j} className="p-3 rounded border border-border text-sm bg-muted/10">
+                      <p>{q.sentence}</p>
+                    </div>
+                  ))}
                 </div>
               ) : ex.type === 'role_play' ? (
                 <div className="space-y-2">
