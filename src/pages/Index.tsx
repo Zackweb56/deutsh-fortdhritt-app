@@ -5,6 +5,7 @@ import { TabNavigation } from '@/components/TabNavigation';
 import { ScheduleTab } from '@/components/schedule/ScheduleTab';
 import { VocabularyTab } from '@/components/vocabulary/VocabularyTab';
 import LessonsTab from '@/components/lessons/LessonsTab';
+import ListeningTab from '@/components/listening/ListeningTab';
 import { ResourcesTab } from '@/components/resources/ResourcesTab';
 import { GrammarVerbsTab } from '@/components/grammar/GrammarVerbsTab';
 import { Skeleton } from '@/components/ui/skeleton';
@@ -32,7 +33,7 @@ const AppContent = () => {
 
   return (
     <div className="min-h-screen pb-8">
-      <header className="bg-card border-b border-border sticky top-0 z-50 backdrop-blur-sm bg-card/95 relative">
+      <header className="bg-card/95 border-b border-border sticky top-0 z-50 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-4 relative">
           {/* Desktop reset button */}
           <div className="absolute left-4 top-4 hidden sm:block">
@@ -91,6 +92,7 @@ const AppContent = () => {
         {currentTab === 'vocabulary' && <VocabularyTab />}
         {currentTab === 'grammar' && <GrammarVerbsTab />}
         {currentTab === 'lessons' && <LessonsTab />}
+        {currentTab === 'listening' && <ListeningTab />}
         {currentTab === 'resources' && <ResourcesTab />}
       </main>
       

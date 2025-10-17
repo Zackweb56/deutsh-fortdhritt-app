@@ -197,7 +197,7 @@ const LessonsTab = () => {
               {level === 'A1' && <Badge variant="secondary" className="ml-1">65 درس</Badge>}
               {level === 'A2' && <Badge variant="secondary" className="ml-1">50 درس</Badge>}
               {level === 'B1' && <Badge variant="secondary" className="ml-1">27 درس</Badge>}
-              {level === 'B2' && <Badge variant="secondary" className="ml-1">8 دروس</Badge>}
+              {level === 'B2' && <Badge variant="secondary" className="ml-1">18 درس</Badge>}
             </Button>
           ))}
         </div>

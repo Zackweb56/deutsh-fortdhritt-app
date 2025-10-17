@@ -1026,35 +1026,35 @@ export const b2Lessons = {
       "title": "حروف العطف المنفصلة",
       "title_en": "Korrelierende Konjunktionen",
       "url": "https://learngermanoriginal.com/courses/b2-course/lesson-1",
-      "description": "تعلم حروف العطف المنفصلة مثل \"entweder…oder\"، \"weder…noch\"، \"zwar…aber\" إلخ."
+      "description": "تعلم حروف العطف المنفصلة مثل entweder…oder، weder…noch، zwar…aber وغيرها."
     },
     {
       "number": 2,
       "title": "البادئات المنفصلة (الجزء الأول)",
       "title_en": "Trennbare Präfixe (Teil 1)",
       "url": "https://learngermanoriginal.com/courses/b2-course/lesson-2",
-      "description": "تعلم عن البادئات المنفصلة – auf, aus, an, ab, ein, bei, entgegen."
+      "description": "تعلم عن البادئات المنفصلة – auf-, aus-, an-, ab-, ein-, bei-, entgegen-."
     },
     {
       "number": 3,
       "title": "البادئات المنفصلة (الجزء الثاني)",
       "title_en": "Trennbare Präfixe (Teil 2)",
       "url": "https://learngermanoriginal.com/courses/b2-course/lesson-3",
-      "description": "تعلم البادئات المنفصلة مثل entlang, gleich, gegenüber, los, mit, fort."
+      "description": "تعلم البادئات المنفصلة مثل entlang-, gleich-, gegenüber-, los-, mit-, fort-."
     },
     {
       "number": 4,
       "title": "البادئات المنفصلة (الجزء الثالث)",
       "title_en": "Trennbare Präfixe (Teil 3)",
       "url": "https://learngermanoriginal.com/courses/b2-course/lesson-4",
-      "description": "تعلم البادئات المنفصلة مثل heraus, hinein, nach, vor, weg, zu, zurück."
+      "description": "تعلم البادئات المنفصلة مثل heraus-, hinein-, nach-, vor-, weg-, zu-, zurück-."
     },
     {
       "number": 5,
       "title": "البادئات المنفصلة (الجزء الرابع)",
       "title_en": "Trennbare Präfixe (Teil 4)",
       "url": "https://learngermanoriginal.com/courses/b2-course/lesson-5",
-      "description": "تعلم البادئات المنفصلة مثل zusammen, um, durch, wieder, wider, weiter, unter."
+      "description": "تعلم البادئات المنفصلة مثل zusammen-, um-, durch-, wieder-, wider-, weiter-, unter-."
     },
     {
       "number": 6,
@@ -1075,7 +1075,77 @@ export const b2Lessons = {
       "title": "بدائل المبني للمجهول",
       "title_en": "Passiversatz",
       "url": "https://learngermanoriginal.com/courses/b2-course/lesson-8",
-      "description": "تعلم كيفية تشكيل البدائل للمبني للمجهول."
+      "description": "تعلم كيفية التعبير عن المعنى المبني للمجهول باستخدام تراكيب بديلة."
+    },
+    {
+      "number": 9,
+      "title": "المبني للمجهول بالأزمنة المختلفة",
+      "title_en": "Passiv in verschiedenen Zeiten",
+      "url": "https://learngermanoriginal.com/courses/b2-course/lesson-9",
+      "description": "تعلم استخدام المبني للمجهول في الأزمنة المختلفة مثل Perfekt و Plusquamperfekt و Futur."
+    },
+    {
+      "number": 10,
+      "title": "الأفعال مع حروف الجر",
+      "title_en": "Verben mit Präpositionen",
+      "url": "https://learngermanoriginal.com/courses/b2-course/lesson-10",
+      "description": "تعلم الأفعال التي تتطلب حروف جر معينة مثل warten auf، sich freuen über."
+    },
+    {
+      "number": 11,
+      "title": "الأفعال التي تتطلب حالة معينة",
+      "title_en": "Verben mit bestimmten Kasus",
+      "url": "https://learngermanoriginal.com/courses/b2-course/lesson-11",
+      "description": "تعلم الأفعال التي تأتي مع حالة Akkusativ أو Dativ أو Genitiv."
+    },
+    {
+      "number": 12,
+      "title": "صيغ التمني والافتراض",
+      "title_en": "Konjunktiv II",
+      "url": "https://learngermanoriginal.com/courses/b2-course/lesson-12",
+      "description": "تعلم كيفية التعبير عن التمني أو الافتراض أو الاحتمال باستخدام Konjunktiv II."
+    },
+    {
+      "number": 13,
+      "title": "الأسلوب غير المباشر (الكلام المنقول)",
+      "title_en": "Indirekte Rede mit Konjunktiv I",
+      "url": "https://learngermanoriginal.com/courses/b2-course/lesson-13",
+      "description": "تعلم كيفية نقل الكلام باستخدام Konjunktiv I في اللغة الألمانية."
+    },
+    {
+      "number": 14,
+      "title": "الجمل الموصولة المتقدمة",
+      "title_en": "Relativsätze mit Präpositionen",
+      "url": "https://learngermanoriginal.com/courses/b2-course/lesson-14",
+      "description": "تعلم الجمل الموصولة التي تحتوي على حروف جر مثل: der Mann, mit dem ich spreche."
+    },
+    {
+      "number": 15,
+      "title": "أنواع الجمل الظرفية المتقدمة",
+      "title_en": "Nebensätze: Kausal, Konzessiv, Konditional, Konsekutiv",
+      "url": "https://learngermanoriginal.com/courses/b2-course/lesson-15",
+      "description": "تعلم الجمل الظرفية المتقدمة مثل weil, obwohl, wenn, sodass وغيرها."
+    },
+    {
+      "number": 16,
+      "title": "المبني للمجهول باستخدام lassen و bekommen",
+      "title_en": "Lassen-Passiv & Bekommen-Passiv",
+      "url": "https://learngermanoriginal.com/courses/b2-course/lesson-16",
+      "description": "تعلم طرق أخرى للتعبير عن المبني للمجهول باستخدام lassen و bekommen."
+    },
+    {
+      "number": 17,
+      "title": "تعبيرات الربط بين الجمل",
+      "title_en": "Redemittel für Argumentation und Meinung",
+      "url": "https://learngermanoriginal.com/courses/b2-course/lesson-17",
+      "description": "تعلم تعبيرات الربط مثل außerdem, dennoch, einerseits… andererseits, im Gegensatz zu."
+    },
+    {
+      "number": 18,
+      "title": "المفردات المتقدمة حسب المواضيع",
+      "title_en": "Themenbezogener Wortschatz B2",
+      "url": "https://learngermanoriginal.com/courses/b2-course/lesson-18",
+      "description": "مفردات متقدمة حول مواضيع مثل البيئة، التكنولوجيا، العمل، والمجتمع."
     }
   ]
 };
