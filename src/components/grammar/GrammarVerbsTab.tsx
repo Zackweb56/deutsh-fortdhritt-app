@@ -11,6 +11,8 @@ import { isLimitedAccess } from '@/lib/access';
 import LockOverlay from '@/components/ui/lock-overlay';
 import a1Data from '@/data/grammar/a1.json';
 import a2Data from '@/data/grammar/a2.json';
+import b1Data from '@/data/grammar/b1.json';
+import b2Data from '@/data/grammar/b2.json';
 
 type PresentConjugation = {
   ich?: string;
@@ -79,10 +81,12 @@ function highlightVerbText(v: { verb: string; tenses?: { Präsens?: PresentConju
 }
 
 export const GrammarVerbsTab = () => {
-  type LevelKey = 'A1' | 'A2';
+  type LevelKey = 'A1' | 'A2' | 'B1' | 'B2';
   const dataByLevel = useMemo(() => ({
     A1: (a1Data as any)?.A1 as { grammar?: GrammarTopic[]; verbs?: VerbItem[] },
     A2: (a2Data as any)?.A2 as { grammar?: GrammarTopic[]; verbs?: VerbItem[] },
+    B1: (b1Data as any)?.B1 as { grammar?: GrammarTopic[]; verbs?: VerbItem[] },
+    B2: (b2Data as any)?.B2 as { grammar?: GrammarTopic[]; verbs?: VerbItem[] },
   }), []);
 
   const [level, setLevel] = useState<LevelKey>('A1');
@@ -132,6 +136,8 @@ export const GrammarVerbsTab = () => {
               <SelectContent align="end">
                 <SelectItem value="A1">A1</SelectItem>
                 <SelectItem value="A2">A2</SelectItem>
+                <SelectItem value="B1">B1</SelectItem>
+                <SelectItem value="B2">B2</SelectItem>
               </SelectContent>
             </Select>
             <Badge variant="secondary" className="text-xs">

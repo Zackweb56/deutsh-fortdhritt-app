@@ -1,0 +1,2215 @@
+{
+    "B2": {
+      "grammar": [
+        {
+          "title": "Konjunktiv II - صيغة الشرط الثانية",
+          "explanation": "تُستخدم للتعبير عن الأمنيات غير الواقعية، والمجاملة، والنصائح، والشروط غير الحقيقية. تتكون من: würde + Infinitiv أو الأشكال الخاصة للأفعال القوية (wäre, hätte, käme). في الجمل الشرطية غير الحقيقية، يُستخدم Konjunktiv II في كلا الجملتين.",
+          "table": {
+            "Häufige_Formen": {
+              "sein": "ich wäre, du wärst, er wäre, wir wären, ihr wärt, sie wären",
+              "haben": "ich hätte, du hättest, er hätte, wir hätten, ihr hättet, sie hätten",
+              "werden": "ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden",
+              "können": "ich könnte, du könntest, er könnte, wir könnten, ihr könntet, sie könnten",
+              "müssen": "ich müsste, du müsstest, er müsste, wir müssten, ihr müsstet, sie müssten",
+              "dürfen": "ich dürfte, du dürftest, er dürfte, wir dürften, ihr dürftet, sie dürften",
+              "kommen": "ich käme, du kämest, er käme, wir kämen, ihr kämet, sie kämen",
+              "gehen": "ich ginge, du gingest, er ginge, wir gingen, ihr ginget, sie gingen"
+            }
+          },
+          "examples": [
+            {
+              "de": "Wenn ich reich wäre, würde ich um die Welt reisen.",
+              "ar": "لو كنت غنيًا، لسافرت حول العالم.",
+              "pron": "فِن إش رايش فيره، فوردِه إش أوم دي فيلت رايزِن"
+            },
+            {
+              "de": "An deiner Stelle würde ich das nicht tun.",
+              "ar": "لو كنت مكانك، لما فعلت ذلك.",
+              "pron": "آن داينِر شتيلِه فوردِه إش داس نيشت تون"
+            },
+            {
+              "de": "Könnten Sie mir bitte helfen?",
+              "ar": "هل يمكنكم مساعدتي من فضلكم؟",
+              "pron": "كونتِن زي مير بِتِه هِلفِن؟"
+            },
+            {
+              "de": "Ich hätte gern ein Glas Wasser.",
+              "ar": "أود كأسًا من الماء.",
+              "pron": "إش هيتِه غيرن آين غلاس فاسِر"
+            },
+            {
+              "de": "Wäre es möglich, dass Sie früher kommen?",
+              "ar": "هل سيكون من الممكن أن تأتوا مبكرًا؟",
+              "pron": "فيرِه إس موغليش، داس زي فروِر كومِن؟"
+            }
+          ]
+        },
+        {
+          "title": "Konjunktiv I - صيغة الشرط الأولى (الكلام المنقول)",
+          "explanation": "تُستخدم بشكل أساسي في الكلام المنقول (indirekte Rede) خاصة في اللغة الرسمية والإعلامية. تُشكل من جذر الفعل + نهايات خاصة. في اللغة المحكية، غالبًا ما يتم استخدام Konjunktiv II أو würde + Infinitiv بدلاً منها.",
+          "table": {
+            "Endungen_Konjunktiv_I": {
+              "ich": "-e",
+              "du": "-est",
+              "er/sie/es": "-e",
+              "wir": "-en",
+              "ihr": "-et",
+              "sie/Sie": "-en"
+            },
+            "Beispiel_sein": {
+              "ich": "sei",
+              "du": "seist/seiest",
+              "er/sie/es": "sei",
+              "wir": "seien",
+              "ihr": "seiet",
+              "sie/Sie": "seien"
+            }
+          },
+          "examples": [
+            {
+              "de": "Er sagte, er habe keine Zeit.",
+              "ar": "قال إنه ليس لديه وقت.",
+              "pron": "إر زاغتِه، إر هابِه كاينِه تسايت"
+            },
+            {
+              "de": "Sie berichtete, sie sei krank gewesen.",
+              "ar": "أبلغت أنها كانت مريضة.",
+              "pron": "زي بِريشتِتِه، زي زايه كرانك غِفيزِن"
+            },
+            {
+              "de": "Der Minister erklärte, man müsse die Situation analysieren.",
+              "ar": "أوضح الوزير أنه يجب تحليل الوضع.",
+              "pron": "دير مينيستِر إركليرتِه، مان موسِه دي زيتواتسيون آناليزيرِن"
+            },
+            {
+              "de": "Die Zeitung schrieb, es werde weitere Treffen geben.",
+              "ar": "كتبت الصحيفة أنه ستكون هناك اجتماعات أخرى.",
+              "pron": "دي تسايتونغ شريب، إس فيردِه فايتِرِه تريفِن غيبِن"
+            }
+          ]
+        },
+        {
+          "title": "Partizipialkonstruktionen - تراكيب اسم المفعول",
+          "explanation": "تُستخدم لتقصير الجمل النسبية وجعل الأسلوب أكثر رسمية. يمكن استخدام Partizip I (الحالي) أو Partizip II (الماضي) كصفات. Partizip I = Infinitiv + d، Partizip II = الشكل المعتاد. يجب تصريف كلا الشكلين كالصفات.",
+          "examples": [
+            {
+              "de": "Das weinende Kind = Das Kind, das weint.",
+              "ar": "الطفل الباكي = الطفل الذي يبكي.",
+              "pron": "داس فاينِندِه كينت"
+            },
+            {
+              "de": "Die schlafende Katze liegt auf dem Sofa.",
+              "ar": "القطة النائمة مستلقية على الأريكة.",
+              "pron": "دي شلافِندِه كاتسِه ليخت آوف ديم زوفا"
+            },
+            {
+              "de": "Der gestohlene Wagen wurde gefunden.",
+              "ar": "تم العثور على السيارة المسروقة.",
+              "pron": "دير غِشتولِنِه فاغِن فوردِه غِفوندِن"
+            },
+            {
+              "de": "Die von ihm geschriebenen Briefe sind interessant.",
+              "ar": "الرسائل المكتوبة من قِبَله مثيرة للاهتمام.",
+              "pron": "دي فون إيم غِشريبِنِن بريفِه زينت إنتِرِسانت"
+            },
+            {
+              "de": "Der lachende Mann ist mein Nachbar.",
+              "ar": "الرجل الضاحك هو جاري.",
+              "pron": "دير لاخِندِه مان إست ماين ناخبار"
+            }
+          ]
+        },
+        {
+          "title": "Erweiterte Attributsätze - الجمل الصفية الموسعة",
+          "explanation": "في الألمانية الرسمية، يمكن وضع معلومات كثيرة بين أداة التعريف والاسم. هذه التراكيب شائعة في النصوص الأكاديمية والصحفية.",
+          "examples": [
+            {
+              "de": "Die vor zwei Jahren eröffnete Bibliothek ist sehr modern.",
+              "ar": "المكتبة التي افتُتحت قبل عامين حديثة جدًا.",
+              "pron": "دي فور تسفايه يارِن إرأوفنِتِه بيبليوتيك إست زِر مودِرن"
+            },
+            {
+              "de": "Der von allen geschätzte Lehrer geht in Rente.",
+              "ar": "المعلم المُقدَّر من الجميع يتقاعد.",
+              "pron": "دير فون آلِن غِشيتستِه ليرِر غيهت إن رِنتِه"
+            },
+            {
+              "de": "Die in diesem Buch beschriebenen Methoden sind veraltet.",
+              "ar": "الأساليب الموضحة في هذا الكتاب قديمة.",
+              "pron": "دي إن ديزِم بوخ بِشريبِنِن ميتودِن زينت فيرآلتِت"
+            }
+          ]
+        },
+        {
+          "title": "Nominalisierung - تحويل الأفعال إلى أسماء",
+          "explanation": "في الألمانية، يمكن تحويل الأفعال إلى أسماء. هذا شائع في اللغة الرسمية والأكاديمية. يُكتب الفعل المُسَمَّى بحرف كبير ويمكن أن يأخذ أدوات التعريف.",
+          "table": {
+            "Häufige_Endungen": {
+              "-ung": "die Bedeutung, die Meinung, die Erfahrung",
+              "-heit/-keit": "die Freiheit, die Möglichkeit, die Schwierigkeit",
+              "-schaft": "die Freundschaft, die Gesellschaft, die Wissenschaft",
+              "-nis": "das Ergebnis, die Kenntnis, das Verständnis"
+            }
+          },
+          "examples": [
+            {
+              "de": "Das Rauchen ist hier verboten. (= Es ist verboten zu rauchen)",
+              "ar": "التدخين ممنوع هنا.",
+              "pron": "داس راوخِن إست هير فيربوتِن"
+            },
+            {
+              "de": "Beim Lernen höre ich Musik. (= Während ich lerne, höre ich Musik)",
+              "ar": "أثناء الدراسة أستمع إلى الموسيقى.",
+              "pron": "بايم ليرنِن هورِه إش موزيك"
+            },
+            {
+              "de": "Das Schreiben von Romanen ist schwierig.",
+              "ar": "كتابة الروايات صعبة.",
+              "pron": "داس شرايبِن فون رومانِن إست شفيريش"
+            },
+            {
+              "de": "Die Verbesserung der Wirtschaft ist notwendig.",
+              "ar": "تحسين الاقتصاد ضروري.",
+              "pron": "دي فيربِسِرونغ دير فيرتشافت إست نوتفِنديش"
+            }
+          ]
+        },
+        {
+          "title": "Zweiteilige Konnektoren - أدوات الربط الثنائية",
+          "explanation": "أدوات ربط تتكون من جزأين تربط بين عناصر متساوية في الجملة. يجب استخدام الجزأين معًا.",
+          "table": {
+            "Wichtige_Konnektoren": {
+              "sowohl... als auch": "سواء... أو (إيجابي)",
+              "weder... noch": "لا... ولا",
+              "entweder... oder": "إما... أو",
+              "nicht nur... sondern auch": "ليس فقط... بل أيضًا",
+              "zwar... aber": "صحيح... لكن",
+              "je... desto/umso": "كلما... كلما"
+            }
+          },
+          "examples": [
+            {
+              "de": "Ich spreche sowohl Deutsch als auch Englisch.",
+              "ar": "أتحدث الألمانية والإنجليزية معًا.",
+              "pron": "إش شبريشِه زوفول دويتش آلس آوخ إنغليش"
+            },
+            {
+              "de": "Er ist weder reich noch berühmt.",
+              "ar": "هو ليس غنيًا ولا مشهورًا.",
+              "pron": "إر إست فيدِر رايش نوخ بِرومت"
+            },
+            {
+              "de": "Entweder komme ich morgen oder übermorgen.",
+              "ar": "إما سآتي غدًا أو بعد غد.",
+              "pron": "إنتفيدِر كومِه إش مورغِن أودر إوبِرمورغِن"
+            },
+            {
+              "de": "Sie ist nicht nur intelligent, sondern auch fleißig.",
+              "ar": "هي ليست ذكية فقط، بل أيضًا مجتهدة.",
+              "pron": "زي إست نيشت نور إنتِليغِنت، زوندِرن آوخ فلايسيش"
+            },
+            {
+              "de": "Je mehr ich lerne, desto besser verstehe ich.",
+              "ar": "كلما تعلمت أكثر، كلما فهمت أفضل.",
+              "pron": "يِه مير إش ليرنِه، ديستو بِسِر فيرشتيهِه إش"
+            }
+          ]
+        },
+        {
+          "title": "Subjektive Bedeutung der Modalverben - المعنى الذاتي للأفعال الناقصة",
+          "explanation": "الأفعال الناقصة يمكن أن تُستخدم للتعبير عن الافتراض والاحتمال (المعنى الذاتي) بدلاً من الضرورة أو القدرة (المعنى الموضوعي). يُستخدم غالبًا مع Perfekt: Modalverb + Partizip II + haben/sein.",
+          "table": {
+            "Modalverb_subjektive_Bedeutung": {
+              "müssen": "لا بد أن (تأكد قوي)",
+              "dürfen": "من المحتمل أن (احتمال مهذب)",
+              "können": "ربما / يمكن أن",
+              "mögen": "ربما (تخمين)",
+              "sollen": "يُقال أن / من المفترض أن"
+            }
+          },
+          "examples": [
+            {
+              "de": "Er muss krank sein. (= Ich bin sicher, dass er krank ist)",
+              "ar": "لا بد أنه مريض.",
+              "pron": "إر موس كرانك زاين"
+            },
+            {
+              "de": "Sie kann zu Hause sein. (= Vielleicht ist sie zu Hause)",
+              "ar": "ربما تكون في البيت.",
+              "pron": "زي كان تسو هاوزِه زاين"
+            },
+            {
+              "de": "Das dürfte stimmen. (= Wahrscheinlich stimmt das)",
+              "ar": "من المحتمل أن يكون هذا صحيحًا.",
+              "pron": "داس دورفتِه شتيمِن"
+            },
+            {
+              "de": "Er soll sehr reich sein. (= Man sagt, dass er sehr reich ist)",
+              "ar": "يُقال إنه غني جدًا.",
+              "pron": "إر زول زِر رايش زاين"
+            },
+            {
+              "de": "Sie mag etwa 30 Jahre alt sein.",
+              "ar": "ربما تكون في الثلاثين من عمرها تقريبًا.",
+              "pron": "زي ماغ إتفا درايسيش يارِه آلت زاين"
+            }
+          ]
+        },
+        {
+          "title": "Futur II - المستقبل التام",
+          "explanation": "يُستخدم للتعبير عن فعل سيكون قد اكتمل في المستقبل، أو للتعبير عن افتراض حول الماضي. التركيب: werden + Partizip II + haben/sein.",
+          "examples": [
+            {
+              "de": "Bis morgen werde ich das Buch gelesen haben.",
+              "ar": "بحلول الغد سأكون قد قرأت الكتاب.",
+              "pron": "بيس مورغِن فيردِه إش داس بوخ غِليزِن هابِن"
+            },
+            {
+              "de": "Sie werden schon angekommen sein. (= Vermutung über die Vergangenheit)",
+              "ar": "من المحتمل أنهم قد وصلوا بالفعل.",
+              "pron": "زي فيردِن شون آنغِكومِن زاين"
+            },
+            {
+              "de": "In zwei Jahren wird er die Universität abgeschlossen haben.",
+              "ar": "خلال عامين سيكون قد أنهى الجامعة.",
+              "pron": "إن تسفايه يارِن فيرد إر دي أونيفيرزيتيت آبغِشلوسِن هابِن"
+            }
+          ]
+        },
+        {
+          "title": "Relativsätze mit Präpositionen - الجمل الموصولية مع حروف الجر",
+          "explanation": "عندما يتطلب الفعل في الجملة الموصولية حرف جر، يُوضع حرف الجر قبل أداة الموصول (der, die, das, etc.).",
+          "examples": [
+            {
+              "de": "Der Mann, mit dem ich gesprochen habe, ist mein Chef.",
+              "ar": "الرجل الذي تحدثت معه هو مديري.",
+              "pron": "دير مان، ميت ديم إش غِشبروخِن هابِه، إست ماين شِف"
+            },
+            {
+              "de": "Das Thema, über das wir diskutieren, ist wichtig.",
+              "ar": "الموضوع الذي نناقشه مهم.",
+              "pron": "داس تيما، إوبِر داس فير ديسكوتيرِن، إست فيشتيش"
+            },
+            {
+              "de": "Die Stadt, in der ich wohne, ist sehr schön.",
+              "ar": "المدينة التي أسكن فيها جميلة جدًا.",
+              "pron": "دي شتات، إن دير إش فونِه، إست زِر شون"
+            },
+            {
+              "de": "Der Freund, auf den ich warte, kommt zu spät.",
+              "ar": "الصديق الذي أنتظره يتأخر.",
+              "pron": "دير فروِند، آوف دِن إش فارتِه، كومت تسو شبِت"
+            }
+          ]
+        },
+        {
+          "title": "Konzessivsätze (obwohl, trotzdem) - جمل التنازل",
+          "explanation": "تُستخدم للتعبير عن تناقض أو أمر غير متوقع. obwohl (رغم أن) تبدأ جملة ثانوية (الفعل في النهاية)، trotzdem (ومع ذلك) تربط جملتين رئيسيتين.",
+          "examples": [
+            {
+              "de": "Obwohl es regnet, gehen wir spazieren.",
+              "ar": "رغم أنها تمطر، نذهب للتنزه.",
+              "pron": "أوبفول إس رِغنِت، غيهِن فير شباتسيرِن"
+            },
+            {
+              "de": "Es regnet. Trotzdem gehen wir spazieren.",
+              "ar": "تمطر. ومع ذلك نذهب للتنزه.",
+              "pron": "إس رِغنِت. تروتسديم غيهِن فير شباتسيرِن"
+            },
+            {
+              "de": "Obwohl er krank war, ist er zur Arbeit gegangen.",
+              "ar": "رغم أنه كان مريضًا، ذهب إلى العمل.",
+              "pron": "أوبفول إر كرانك فار، إست إر تسور أربايت غِغانغِن"
+            },
+            {
+              "de": "Er war müde. Dennoch hat er weitergearbeitet.",
+              "ar": "كان متعبًا. ومع ذلك واصل العمل.",
+              "pron": "إر فار مودِه. دِنوخ هات إر فايتِرغِآربايتِت"
+            }
+          ]
+        },
+        {
+          "title": "Finalsätze (damit, um... zu) - جمل الغرض",
+          "explanation": "تُستخدم للتعبير عن الهدف أو الغرض. damit (لكي/حتى) + جملة ثانوية (مع فاعل مختلف)، um... zu (لـ) بدون فاعل صريح (نفس الفاعل).",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+              "ar": "أتعلم الألمانية لأعمل في ألمانيا.",
+              "pron": "إش ليرنِه دويتش، أوم إن دويتشلاند تسو آربايتِن"
+            },
+            {
+              "de": "Ich gebe dir das Buch, damit du es lesen kannst.",
+              "ar": "أعطيك الكتاب لكي تتمكن من قراءته.",
+              "pron": "إش غيبِه دير داس بوخ، داميت دو إس ليزِن كانست"
+            },
+            {
+              "de": "Er spart Geld, um ein Auto zu kaufen.",
+              "ar": "يدخر المال ليشتري سيارة.",
+              "pron": "إر شبارت غِلت، أوم آين آوتو تسو كاوفِن"
+            },
+            {
+              "de": "Sie arbeitet hart, damit ihre Kinder studieren können.",
+              "ar": "تعمل بجد لكي يتمكن أطفالها من الدراسة.",
+              "pron": "زي آربايتِت هارت، داميت إيرِه كيندِر شتوديرِن كُونِن"
+            }
+          ]
+        },
+        {
+          "title": "Konsekutivsätze (sodass, so... dass) - جمل النتيجة",
+          "explanation": "تُستخدم للتعبير عن نتيجة أو عواقب. sodass أو so... dass (بحيث/لدرجة أن) تربط السبب بالنتيجة.",
+          "examples": [
+            {
+              "de": "Er hat viel gelernt, sodass er die Prüfung bestanden hat.",
+              "ar": "درس كثيرًا بحيث نجح في الامتحان.",
+              "pron": "إر هات فيل غِليرنت، زوداس إر دي بروفونغ بِشتاندِن هات"
+            },
+            {
+              "de": "Das Wetter war so schön, dass wir den ganzen Tag draußen waren.",
+              "ar": "كان الطقس جميلًا لدرجة أننا بقينا في الخارج طوال اليوم.",
+              "pron": "داس فيتِر فار زو شون، داس فير دِن غانتسِن تاغ دراوسِن فارِن"
+            },
+            {
+              "de": "Sie war so müde, dass sie sofort eingeschlafen ist.",
+              "ar": "كانت متعبة جدًا لدرجة أنها نامت فورًا.",
+              "pron": "زي فار زو مودِه، داس زي زوفورت آينغِشلافِن إست"
+            }
+          ]
+        },
+        {
+          "title": "Modalsätze (indem, dadurch dass) - جمل الطريقة",
+          "explanation": "تُستخدم للتعبير عن كيفية حدوث شيء أو الوسيلة المستخدمة. indem (بأن/عن طريق) و dadurch dass (من خلال أن) يعبران عن الطريقة.",
+          "examples": [
+            {
+              "de": "Man lernt eine Sprache, indem man viel übt.",
+              "ar": "يتعلم المرء لغة بأن يمارس كثيرًا.",
+              "pron": "مان ليرنت آينِه شبراخِه، إنديم مان فيل أوبت"
+            },
+            {
+              "de": "Er hat das Problem gelöst, indem er alle Informationen analysiert hat.",
+              "ar": "حل المشكلة بأن حلل جميع المعلومات.",
+              "pron": "إر هات داس بروبليم غِلوزت، إنديم إر آلِه إنفورماتسيونِن آناليزيرت هات"
+            },
+            {
+              "de": "Dadurch, dass sie jeden Tag trainiert, ist sie fit geworden.",
+              "ar": "من خلال أنها تدربت كل يوم، أصبحت لائقة.",
+              "pron": "دادورش، داس زي يِدِن تاغ ترينيرت، إست زي فيت غِفوردِن"
+            }
+          ]
+        },
+        {
+          "title": "Irreale Vergleichssätze (als ob, als wenn) - جمل المقارنة غير الحقيقية",
+          "explanation": "تُستخدم للمقارنة غير الواقعية. als ob / als wenn (كما لو) + Konjunktiv II تعبر عن شيء يبدو لكنه ليس حقيقيًا.",
+          "examples": [
+            {
+              "de": "Er tut so, als ob er nichts wüsste.",
+              "ar": "يتصرف كما لو أنه لا يعرف شيئًا.",
+              "pron": "إر توت زو، آلس أوب إر نيشتس فوستِه"
+            },
+            {
+              "de": "Sie sieht aus, als wäre sie krank.",
+              "ar": "تبدو كما لو كانت مريضة.",
+              "pron": "زي زيهت آوس، آلس فيرِه زي كرانك"
+            },
+            {
+              "de": "Er spricht, als ob er der Chef wäre.",
+              "ar": "يتحدث كما لو كان هو المدير.",
+              "pron": "إر شبريشت، آلس أوب إر دير شِف فيرِه"
+            }
+          ]
+        },
+        {
+          "title": "Adversativsätze (während, wohingegen) - جمل التعارض",
+          "explanation": "تُستخدم للتعبير عن تناقض أو اختلاف بين أمرين. während (بينما) و wohingegen (في حين أن) تقارن بين أمرين متعارضين.",
+          "examples": [
+            {
+              "de": "Er liebt Sport, während sie Bücher bevorzugt.",
+              "ar": "هو يحب الرياضة، بينما تفضل هي الكتب.",
+              "pron": "إر ليبت شبورت، فايرِنت زي بوشِر بِفورتسوخت"
+            },
+            {
+              "de": "Manche Menschen arbeiten hart, wohingegen andere faul sind.",
+              "ar": "بعض الناس يعملون بجد، في حين أن آخرين كسالى.",
+              "pron": "مانشِه مِنشِن آربايتِن هارت، فوهينغِغِن آندِرِه فاول زينت"
+            },
+            {
+              "de": "Er ist optimistisch, während ich eher pessimistisch bin.",
+              "ar": "هو متفائل، بينما أنا متشائم أكثر.",
+              "pron": "إر إست أوبتيميستيش، فايرِنت إش إيِر بِسيميستيش بين"
+            }
+          ]
+        },
+        {
+          "title": "Indirekte Fragesätze - الأسئلة غير المباشرة",
+          "explanation": "تُستخدم لنقل الأسئلة بشكل غير مباشر. الفعل يأتي في نهاية الجملة. تبدأ بأدوات الاستفهام (wer, was, wo, wann, warum, wie) أو ob (إذا/هل).",
+          "examples": [
+            {
+              "de": "Ich weiß nicht, wann er kommt.",
+              "ar": "لا أعرف متى سيأتي.",
+              "pron": "إش فايس نيشت، فان إر كومت"
+            },
+            {
+              "de": "Kannst du mir sagen, wo die Post ist?",
+              "ar": "هل يمكنك أن تخبرني أين مكتب البريد؟",
+              "pron": "كانست دو مير زاغِن، فو دي بوست إست؟"
+            },
+            {
+              "de": "Er fragt, ob ich Zeit habe.",
+              "ar": "يسأل إذا كان لدي وقت.",
+              "pron": "إر فراغت، أوب إش تسايت هابِه"
+            },
+            {
+              "de": "Ich verstehe nicht, warum sie gegangen ist.",
+              "ar": "لا أفهم لماذا ذهبت.",
+              "pron": "إش فيرشتيهِه نيشت، فاروم زي غِغانغِن إست"
+            }
+          ]
+        },
+        {
+          "title": "Negation (nicht, kein, nie, niemand, nichts) - النفي",
+          "explanation": "النفي المتقدم في الألمانية يشمل أدوات متعددة. nicht (لا)، kein (لا يوجد)، nie/niemals (أبدًا)، niemand (لا أحد)، nichts (لا شيء)، nirgendwo (في أي مكان).",
+          "examples": [
+            {
+              "de": "Ich habe nie davon gehört.",
+              "ar": "لم أسمع بذلك أبدًا.",
+              "pron": "إش هابِه ني دافون غِهورت"
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "ar": "لا أحد يعرف الإجابة.",
+              "pron": "نيماند فايس دي آنتفورت"
+            },
+            {
+              "de": "Ich habe nichts verstanden.",
+              "ar": "لم أفهم شيئًا.",
+              "pron": "إش هابِه نيشتس فيرشتاندِن"
+            },
+            {
+              "de": "Nirgendwo ist es so schön wie hier.",
+              "ar": "في أي مكان ليس جميلًا مثل هنا.",
+              "pron": "نيرغِندفو إست إس زو شون في هير"
+            },
+            {
+              "de": "Weder er noch sie wissen etwas davon.",
+              "ar": "لا هو ولا هي يعلمان شيئًا عن ذلك.",
+              "pron": "فيدِر إر نوخ زي فيسِن إتفاس دافون"
+            }
+          ]
+        }
+      ],
+"verbs": [
+        {
+          "verb": "sich auseinandersetzen mit",
+          "meaning": "يتعامل مع / يواجه (فكريًا)",
+          "type": "منتظم انعكاسي",
+          "tenses": {
+            "Präsens": {
+              "ich": "setze mich auseinander mit",
+              "du": "setzt dich auseinander mit",
+              "er/sie/es": "setzt sich auseinander mit",
+              "wir": "setzen uns auseinander mit",
+              "ihr": "setzt euch auseinander mit",
+              "sie/Sie": "setzen sich auseinander mit"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "auseinandergesetzt",
+              "example": {
+                "de": "Ich habe mich intensiv mit diesem Thema auseinandergesetzt.",
+                "ar": "لقد تعاملت بشكل مكثف مع هذا الموضوع.",
+                "pron": "إش هابِه ميش إنتِنزيف ميت ديزِم تيما آوسآيناندِرغِزِتست"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Man muss sich kritisch mit der Literatur auseinandersetzen.",
+              "ar": "يجب على المرء التعامل بشكل نقدي مع الأدب.",
+              "pron": "مان موس زيش كريتيش ميت دير ليتِراتور آوسآيناندِرزِتسِن"
+            },
+            {
+              "de": "Die Schüler setzen sich im Unterricht mit komplexen philosophischen Fragen auseinander.",
+              "ar": "يتعامل التلاميذ في الدرس مع أسئلة فلسفية معقدة.",
+              "pron": "دي شولِر زِتسِن زيش إمونتِريخت ميت كومبلكسِن فيلوزوفيشِن فراغِن آوسآيناندِر"
+            },
+            {
+              "de": "Wir müssen uns ernsthaft mit den Klimaveränderungen auseinandersetzen.",
+              "ar": "يجب أن نتعامل بجدية مع التغيرات المناخية.",
+              "pron": "فير موسِن أونس إرنستهافت ميت دِن كليمافِرايندرونغِن آوسآيناندِرزِتسِن"
+            }
+          ]
+        },
+        {
+          "verb": "beitragen zu",
+          "meaning": "يساهم في",
+          "type": "غير منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "trage bei zu",
+              "du": "trägst bei zu",
+              "er/sie/es": "trägt bei zu",
+              "wir": "tragen bei zu",
+              "ihr": "tragt bei zu",
+              "sie/Sie": "tragen bei zu"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "beigetragen",
+              "example": {
+                "de": "Diese Maßnahme hat zum Erfolg beigetragen.",
+                "ar": "ساهم هذا الإجراء في النجاح.",
+                "pron": "ديزِه ماسنامِه هات تسوم إرفولغ بايغِتراغِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Jeder kann zum Umweltschutz beitragen.",
+              "ar": "يمكن للجميع المساهمة في حماية البيئة.",
+              "pron": "يِدِر كان تسوم أومفِلتشوتس بايتراغِن"
+            },
+            {
+              "de": "Die neuen Technologien tragen wesentlich zur Effizienzsteigerung bei.",
+              "ar": "تساهم التقنيات الجديدة بشكل أساسي في زيادة الكفاءة.",
+              "pron": "دي نويِن تِكنولوجيِن تراغِن فيزِنتليش تسور إفيتسيينتس-شتايغِرونغ باي"
+            },
+            {
+              "de": "Seine Forschungsergebnisse haben erheblich zum Fortschritt der Medizin beigetragen.",
+              "ar": "ساهمت نتائج أبحاثه بشكل كبير في تقدم الطب.",
+              "pron": "زاينِه فورشونغس-إرغِبنيسِه هابِن إيرهيبلِش تسوم فورتشريت دير ميديتسين بايغِتراغِن"
+            },
+            {
+              "de": "Die Spenden der Bürger tragen zur Finanzierung des Projekts bei.",
+              "ar": "تساهم تبرعات المواطنين في تمويل المشروع.",
+              "pron": "دي شبِندِن دير بورغِر تراغِن تسور فينانتسيرونغ دِس بروياكتس باي"
+            }
+          ]
+        },
+        {
+          "verb": "zurückführen auf",
+          "meaning": "يعيد إلى / يرجع إلى",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "führe zurück auf",
+              "du": "führst zurück auf",
+              "er/sie/es": "führt zurück auf",
+              "wir": "führen zurück auf",
+              "ihr": "führt zurück auf",
+              "sie/Sie": "führen zurück auf"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "zurückgeführt",
+              "example": {
+                "de": "Man kann diese Entwicklung auf mehrere Faktoren zurückführen.",
+                "ar": "يمكن إرجاع هذا التطور إلى عدة عوامل.",
+                "pron": "مان كان ديزِه إنتفيكلونغ آوف ميريرِه فاكتورِن تسوروكفورِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Das Problem lässt sich auf mangelnde Kommunikation zurückführen.",
+              "ar": "يمكن إرجاع المشكلة إلى قلة التواصل.",
+              "pron": "داس بروبليم ليست زيش آوف مانغِلندِه كوموونيكاتسيون تسوروكفورِن"
+            },
+            {
+              "de": "Die hohen Kosten sind auf die gestiegenen Materialpreise zurückzuführen.",
+              "ar": "تُعزى التكاليف المرتفعة إلى ارتفاع أسعار المواد.",
+              "pron": "دي هوهِن كوستِن زينت آوف دي غِشتِيغِنِن ماتِريال-برايزِه تسوروكتسوفورِن"
+            },
+            {
+              "de": "Der Erfolg des Unternehmens ist auf die innovative Strategie zurückzuführen.",
+              "ar": "يُعزى نجاح الشركة إلى الاستراتيجية المبتكرة.",
+              "pron": "دير إرفولغ دِس أونتِرهيمِنز إست آوف دي إينوفاتيفِه شتراتِغي تسوروكتسوفورِن"
+            }
+          ]
+        },
+        {
+          "verb": "ausgehen von",
+          "meaning": "يفترض / ينطلق من",
+          "type": "غير منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "gehe aus von",
+              "du": "gehst aus von",
+              "er/sie/es": "geht aus von",
+              "wir": "gehen aus von",
+              "ihr": "geht aus von",
+              "sie/Sie": "gehen aus von"
+            },
+            "Perfekt": {
+              "auxiliary": "sein",
+              "participle": "ausgegangen",
+              "example": {
+                "de": "Wir sind von falschen Voraussetzungen ausgegangen.",
+                "ar": "انطلقنا من افتراضات خاطئة.",
+                "pron": "فير زينت فون فالشِن فوراوسزِتسونغِن آوسغِغانغِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Ich gehe davon aus, dass er morgen kommt.",
+              "ar": "أفترض أنه سيأتي غدًا.",
+              "pron": "إش غيهِه دافون آوس، داس إر مورغِن كومت"
+            },
+            {
+              "de": "Die Wissenschaftler gehen von einer signifikanten Temperaturerhöhung aus.",
+              "ar": "ينطلق العلماء من افتراض ارتفاع كبير في درجة الحرارة.",
+              "pron": "دي فيسِنشافتلِر غيهِن فون آينِر زيكنيفيكانتِن تيمبراتور-إيرهوهونغ آوس"
+            },
+            {
+              "de": "Bei der Planung sind wir von realistischen Zahlen ausgegangen.",
+              "ar": "انطلقنا في التخطيط من أرقام واقعية.",
+              "pron": "باي دير بلانونغ زينت فير فون ريالستيشِن تسالِن آوسغِغانغِن"
+            },
+            {
+              "de": "Der Anwalt geht von einem Freispruch aus.",
+              "ar": "يفترض المحامي البراءة.",
+              "pron": "دير آنفالت غيهت فون آينِم فرايشبروخ آوس"
+            }
+          ]
+        },
+        {
+          "verb": "verfolgen",
+          "meaning": "يتابع / يطارد / يسعى لـ",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "verfolge",
+              "du": "verfolgst",
+              "er/sie/es": "verfolgt",
+              "wir": "verfolgen",
+              "ihr": "verfolgt",
+              "sie/Sie": "verfolgen"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "verfolgt",
+              "example": {
+                "de": "Er hat seine Ziele konsequent verfolgt.",
+                "ar": "لقد سعى لتحقيق أهدافه بثبات.",
+                "pron": "إر هات زاينِه تسيلِه كونزِكفِنت فيرفولغت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Die Polizei verfolgt den Verdächtigen.",
+              "ar": "تطارد الشرطة المشتبه به.",
+              "pron": "دي بوليتساي فيرفولغت دِن فيردِشتيغتِن"
+            },
+            {
+              "de": "Ich verfolge die Nachrichten regelmäßig.",
+              "ar": "أتابع الأخبار بانتظام.",
+              "pron": "إش فيرفولغِه دي ناخريشتِن رِغِلميسيش"
+            },
+            {
+              "de": "Das Unternehmen verfolgt eine aggressive Expansionsstrategie.",
+              "ar": "تتبع الشركة استراتيجية توسعية عدوانية.",
+              "pron": "داس أونتِرهيمِن فيرفولغت آينِه أغرِسيفِه إكسبانسيونس-شتراتِغي"
+            },
+            {
+              "de": "Sie verfolgt aufmerksam die politischen Entwicklungen in der Region.",
+              "ar": "تتابع باهتمام التطورات السياسية في المنطقة.",
+              "pron": "زي فيرفولغت آوفمِركزام دي بوليتيشِن إنتفيكلونغِن إن دير رِغيون"
+            }
+          ]
+        },
+        {
+          "verb": "behaupten",
+          "meaning": "يدّعي / يزعم",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "behaupte",
+              "du": "behauptest",
+              "er/sie/es": "behauptet",
+              "wir": "behaupten",
+              "ihr": "behauptet",
+              "sie/Sie": "behaupten"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "behauptet",
+              "example": {
+                "de": "Er hat behauptet, dass er unschuldig sei.",
+                "ar": "ادعى أنه بريء.",
+                "pron": "إر هات بِهاوبتِت، داس إر أونشولديش زايه"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Man kann nicht einfach etwas behaupten, ohne Beweise zu haben.",
+              "ar": "لا يمكن للمرء أن يدعي شيئًا دون وجود أدلة.",
+              "pron": "مان كان نيشت آينفاخ إتفاس بِهاوبتِن، أونِه بِفايزِه تسو هابِن"
+            },
+            {
+              "de": "Der Zeuge behauptet, den Täter eindeutig erkannt zu haben.",
+              "ar": "يدّعي الشاهد أنه تعرف على الجاني بوضوح.",
+              "pron": "دير تسوغِه بِهاوبتِت، دِن تيتِر آيندويشتيش إركانت تسو هابِن"
+            },
+            {
+              "de": "Sie behauptet standhaft ihre Unschuld.",
+              "ar": "تؤكد بإصرار براءتها.",
+              "pron": "زي بِهاوبتِت شتانتهافت إيرِه أونشولت"
+            }
+          ]
+        },
+        {
+          "verb": "betonen",
+          "meaning": "يؤكد على / يشدد على",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "betone",
+              "du": "betonst",
+              "er/sie/es": "betont",
+              "wir": "betonen",
+              "ihr": "betont",
+              "sie/Sie": "betonen"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "betont",
+              "example": {
+                "de": "Der Redner hat die Wichtigkeit dieses Themas betont.",
+                "ar": "شدد المتحدث على أهمية هذا الموضوع.",
+                "pron": "دير ريدنِر هات دي فيشتيشكايت ديزِس تيماس بِتونت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Ich möchte betonen, dass dies nur meine Meinung ist.",
+              "ar": "أود أن أؤكد أن هذا رأيي فقط.",
+              "pron": "إش موشتِه بِتونِن، داس ديس نور ماينِه ماينونغ إست"
+            },
+            {
+              "de": "Der Minister betonte die Notwendigkeit sofortiger Maßnahmen.",
+              "ar": "شدّد الوزير على ضرورة اتخاذ إجراءات فورية.",
+              "pron": "دير مينيستِر بِتونتَه دي نوتفِنديكايت زوفورتِيغِر ماسنامِن"
+            },
+            {
+              "de": "In seinem Vortrag betonte er besonders die wirtschaftlichen Vorteile.",
+              "ar": "في محاضرته، أكد بشكل خاص على المزايا الاقتصادية.",
+              "pron": "إن زاينِم فورتْراغ بِتونتَه إر بِزوندِرس دي فيرتشافتليشِن فورتايلِه"
+            },
+            {
+              "de": "Die Studie betont den Zusammenhang zwischen Ernährung und Gesundheit.",
+              "ar": "تشدد الدراسة على العلاقة بين التغذية والصحة.",
+              "pron": "دي شتوديِه بِتونَت دِن تسوزامِنهانغ تسيشِن إرنيرونغ أونت غِزونتهايت"
+            }
+          ]
+        },
+        {
+          "verb": "widersprechen",
+          "meaning": "يعارض / يناقض",
+          "type": "غير منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "widerspreche",
+              "du": "widersprichst",
+              "er/sie/es": "widerspricht",
+              "wir": "widersprechen",
+              "ihr": "widersprecht",
+              "sie/Sie": "widersprechen"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "widersprochen",
+              "example": {
+                "de": "Ich habe seiner Aussage widersprochen.",
+                "ar": "لقد عارضت تصريحه.",
+                "pron": "إش هابِه زاينِر آوسزاغِه فيدِرشبروخِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Niemand wagte es, dem Chef zu widersprechen.",
+              "ar": "لم يجرؤ أحد على معارضة المدير.",
+              "pron": "نيماند فاغتِه إس، ديم شِف تسو فيدِرشبريشِن"
+            },
+            {
+              "de": "Die Fakten widersprechen eindeutig seiner Theorie.",
+              "ar": "تناقض الحقائق نظريته بوضوح.",
+              "pron": "دي فاكتِن فيدِرشبريشِن آيندويشتيش زاينِر تيوري"
+            },
+            {
+              "de": "Ich muss Ihnen an dieser Stelle leider widersprechen.",
+              "ar": "يجب أن أعارضكم في هذه النقطة للأسف.",
+              "pron": "إش موس إينِن آن ديزِر شتيلِه لايدِر فيدِرشبريشِن"
+            }
+          ]
+        },
+        {
+          "verb": "gelten als",
+          "meaning": "يُعتبر / يُنظر إليه كـ",
+          "type": "غير منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "gelte als",
+              "du": "giltst als",
+              "er/sie/es": "gilt als",
+              "wir": "gelten als",
+              "ihr": "geltet als",
+              "sie/Sie": "gelten als"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "gegolten",
+              "example": {
+                "de": "Er hat immer als zuverlässig gegolten.",
+                "ar": "لطالما اعتُبر موثوقًا.",
+                "pron": "إر هات إمِر آلس تسوفيرليسيش غِغولتِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Sie gilt als Expertin auf diesem Gebiet.",
+              "ar": "تُعتبر خبيرة في هذا المجال.",
+              "pron": "زي غيلت آلس إكسبِرتين آوف ديزِم غِبيت"
+            },
+            {
+              "de": "Dieses Buch gilt als Meisterwerk der deutschen Literatur.",
+              "ar": "يُعتبر هذا الكتاب تحفة من تحف الأدب الألماني.",
+              "pron": "ديزِس بُوخ غيلت آلس مايستِرفيرك دير دويتشِن ليتِراتور"
+            },
+            {
+              "de": "Er gilt als einer der einflussreichsten Politiker des Landes.",
+              "ar": "يُعتبر أحد أكثر السياسيين نفوذًا في البلاد.",
+              "pron": "إر غيلت آلس آينِر دير آينفلوسريشستِن بوليتيكِر دِس لاندِس"
+            },
+            {
+              "de": "Die Methode gilt in Fachkreisen als veraltet.",
+              "ar": "تُعتبر الطريقة قديمة في الأوساط المتخصصة.",
+              "pron": "دي ميتودِه غيلت إن فاخ-كرايزِن آلس فيرآلتِت"
+            }
+          ]
+        },
+        {
+          "verb": "sich beschränken auf",
+          "meaning": "يقتصر على / يحصر نفسه في",
+          "type": "منتظم انعكاسي",
+          "tenses": {
+            "Präsens": {
+              "ich": "beschränke mich auf",
+              "du": "beschränkst dich auf",
+              "er/sie/es": "beschränkt sich auf",
+              "wir": "beschränken uns auf",
+              "ihr": "beschränkt euch auf",
+              "sie/Sie": "beschränken sich auf"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "beschränkt",
+              "example": {
+                "de": "Ich habe mich auf die wichtigsten Punkte beschränkt.",
+                "ar": "لقد اقتصرت على النقاط الأكثر أهمية.",
+                "pron": "إش هابِه ميش آوف دي فيشتيغستِن بونكتِه بِشرِنكت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Wir sollten uns auf das Wesentliche beschränken.",
+              "ar": "يجب أن نقتصر على الأساسيات.",
+              "pron": "فير زولتِن أونس آوف داس فيزِنتليشِه بِشرينكِن"
+            },
+            {
+              "de": "Die Untersuchung beschränkt sich auf den Zeitraum von 2000 bis 2010.",
+              "ar": "يقتصر البحث على الفترة من 2000 إلى 2010.",
+              "pron": "دي أونتِرشوخونغ بِشرِنكت زيش آوف دِن تسايتْراوم فون تسفايتاوزِنت بيس تسايتاوزِنت تساين"
+            },
+            {
+              "de": "Bitte beschränken Sie sich bei Ihrer Antwort auf die Fakten.",
+              "ar": "يرجى الاقتصار على الحقائق في إجابتك.",
+              "pron": "بِتِه بِشرينكِن زي زيش باي إيرِر آنتفورت آوف دي فاكتِن"
+            }
+          ]
+        },
+        {
+          "verb": "erörtern",
+          "meaning": "يناقش / يبحث في",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "erörtere",
+              "du": "erörterst",
+              "er/sie/es": "erörtert",
+              "wir": "erörtern",
+              "ihr": "erörtert",
+              "sie/Sie": "erörtern"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "erörtert",
+              "example": {
+                "de": "Wir haben das Problem ausführlich erörtert.",
+                "ar": "لقد ناقشنا المشكلة بالتفصيل.",
+                "pron": "فير هابِن داس بروبليم آوسفورليش إرأورتِرت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "In der Diskussion wurden verschiedene Aspekte erörtert.",
+              "ar": "في النقاش تم بحث جوانب مختلفة.",
+              "pron": "إن دير ديسكوسيون فوردِن فيرشيدِنِه آسبِكتِه إرأورتِرت"
+            },
+            {
+              "de": "Die Kommission wird die möglichen Lösungen in der nächsten Sitzung erörtern.",
+              "ar": "ستناقش اللجنة الحلول الممكنة في الجلسة القادمة.",
+              "pron": "دي كوميسيون فيرت دي موكلِشِن لوزونغِن إن دير ناخستِن زِتسونغ إرأورتِرن"
+            },
+            {
+              "de": "Wir müssen die Vor- und Nachteile dieses Vorschlags gründlich erörtern.",
+              "ar": "يجب أن نناقش إيجابيات وسلبيات هذا الاقتراح بدقة.",
+              "pron": "فير موسِن دي فور- أونت ناختايلِه ديزِس فورشلاغس غروندليش إرأورتِرن"
+            },
+            {
+              "de": "Der Vertrag wurde in allen Einzelheiten erörtert.",
+              "ar": "تمت مناقشة العقد بكل تفاصيله.",
+              "pron": "دير فيرتراغ فوردِه إن آلِن آينتسِل-هايتِن إرأورتِرت"
+            }
+          ]
+        },
+        {
+          "verb": "voraussetzen",
+          "meaning": "يفترض مسبقًا / يتطلب",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "setze voraus",
+              "du": "setzt voraus",
+              "er/sie/es": "setzt voraus",
+              "wir": "setzen voraus",
+              "ihr": "setzt voraus",
+              "sie/Sie": "setzen voraus"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "vorausgesetzt",
+              "example": {
+                "de": "Diese Aufgabe setzt bestimmte Kenntnisse voraus.",
+                "ar": "تتطلب هذه المهمة معرفة معينة.",
+                "pron": "ديزِه آوفغابِه زِتست بِشتيمتِه كِنتنيسِه فوراوس"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Ich setze voraus, dass alle pünktlich erscheinen.",
+              "ar": "أفترض أن الجميع سيحضرون في الوقت المحدد.",
+              "pron": "إش زِتسِه فوراوس، داس آلِه بونكتليش إرشاينِن"
+            },
+            {
+              "de": "Die Stelle setzt mehrjährige Berufserfahrung voraus.",
+              "ar": "تتطلب الوظيفة خبرة مهنية لعدة سنوات.",
+              "pron": "دي شتيلِه زِتست مير-ييريغِه بِروفس-إرفارونغ فوراوس"
+            },
+            {
+              "de": "Der Erfolg des Projekts setzt eine ausreichende Finanzierung voraus.",
+              "ar": "يتطلب نجاح المشروع تمويلًا كافيًا.",
+              "pron": "دير إرفولغ دِس بروياكتس زِتست آينِه آوسرايتشِندِه فينانتسيرونغ فوراوس"
+            },
+            {
+              "de": "Das neue Gesetz setzt die Zustimmung des Parlaments voraus.",
+              "ar": "يتطلب القانون الجديد موافقة البرلمان.",
+              "pron": "داس نويِه غِتسِت زِتست دي تسو شتيمونغ دِس بارلامِنتس فوراوس"
+            }
+          ]
+        },
+        {
+          "verb": "rechtfertigen",
+          "meaning": "يبرر",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "rechtfertige",
+              "du": "rechtfertigst",
+              "er/sie/es": "rechtfertigt",
+              "wir": "rechtfertigen",
+              "ihr": "rechtfertigt",
+              "sie/Sie": "rechtfertigen"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "gerechtfertigt",
+              "example": {
+                "de": "Er konnte sein Verhalten nicht rechtfertigen.",
+                "ar": "لم يستطع تبرير سلوكه.",
+                "pron": "إر كونتِه زاين فيرهالتِن نيشت ريشتفِرتيغِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Wie können Sie diese Entscheidung rechtfertigen?",
+              "ar": "كيف يمكنكم تبرير هذا القرار؟",
+              "pron": "في كُونِن زي ديزِه إنتشايدونغ ريشتفِرتيغِن؟"
+            },
+            {
+              "de": "Die hohen Kosten sind durch die gestiegene Qualität gerechtfertigt.",
+              "ar": "التكاليف المرتفعة مبررة بسبب تحسن الجودة.",
+              "pron": "دي هوهِن كوستِن زينت دورخ دي غِشتِيغِنِه كفاليتيت غِرِشتفِرتيخت"
+            },
+            {
+              "de": "Seine Handlung war ethisch nicht zu rechtfertigen.",
+              "ar": "لم يكن من الممكن تبرير سلوكه أخلاقيًا.",
+              "pron": "زاينِه هاندلونغ فار إتيش نيشت تسو ريشتفِرتيغِن"
+            }
+          ]
+        },
+        {
+          "verb": "unterstellen",
+          "meaning": "يفترض / يتهم ضمنيًا",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "unterstelle",
+              "du": "unterstellst",
+              "er/sie/es": "unterstellt",
+              "wir": "unterstellen",
+              "ihr": "unterstellt",
+              "sie/Sie": "unterstellen"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "unterstellt",
+              "example": {
+                "de": "Man hat mir unterstellt, ich hätte gelogen.",
+                "ar": "اتُهمت ضمنيًا بأنني كذبت.",
+                "pron": "مان هات مير أونتِرشتِلت، إش هيتِه غِلوغِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Was unterstellen Sie mir damit?",
+              "ar": "ماذا تفترض عني بهذا؟",
+              "pron": "فاس أونتِرشتِلِن زي مير داميت؟"
+            },
+            {
+              "de": "Ich möchte Ihnen nichts unterstellen, aber die Fakten sprechen für sich.",
+              "ar": "لا أريد اتهامك بأي شيء، لكن الحقائق تتحدث عن نفسها.",
+              "pron": "إش موشتِه إينِن نيشتس أونتِرشتِلِن، آبِر دي فاكتِن شبراخِن فور زيش"
+            },
+            {
+              "de": "Der Artikel unterstellt der Regierung bewusste Täuschung.",
+              "ar": "يفترض المقال أن الحكومة تخدع عمدًا.",
+              "pron": "دير آرتيكِل أونتِرشتِلت دير رِغيرونغ بيفوسْتِه تويشونغ"
+            },
+            {
+              "de": "Ohne Beweise sollte man niemandem unlautere Absichten unterstellen.",
+              "ar": "بدون أدلة، لا ينبغي افتراض نوايا غير نزيهة لأي شخص.",
+              "pron": "أونِه بِفايزِه زولتِه مان نيماندِم أونلاوتِرِه آبزِختِن أونتِرشتِلِن"
+            }
+          ]
+        },
+        {
+          "verb": "überwiegen",
+          "meaning": "يرجح / يتفوق",
+          "type": "غير منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "überwiege",
+              "du": "überwiegst",
+              "er/sie/es": "überwiegt",
+              "wir": "überwiegen",
+              "ihr": "überwiegt",
+              "sie/Sie": "überwiegen"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "überwogen",
+              "example": {
+                "de": "Die Vorteile haben die Nachteile überwogen.",
+                "ar": "رجحت المزايا على العيوب.",
+                "pron": "دي فورتايلِه هابِن دي ناختايلِه إوبِرفوغِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Bei dieser Entscheidung überwiegen die positiven Aspekte.",
+              "ar": "في هذا القرار تتفوق الجوانب الإيجابية.",
+              "pron": "باي ديزِر إنتشايدونغ إوبِرفيغِن دي بوزيتيفِن آسبِكتِه"
+            },
+            {
+              "de": "In diesem Fall überwiegt das öffentliche Interesse.",
+              "ar": "في هذه الحالة، يرجح المصلحة العامة.",
+              "pron": "إن ديزِم فال إوبِرفيخت داس أوفنتليشِه إنتِرسِه"
+            },
+            {
+              "de": "Trotz einiger Schwierigkeiten überwiegt der Nutzen dieser Maßnahme.",
+              "ar": "على الرغم من بعض الصعوبات، تفوق فائدة هذا الإجراء.",
+              "pron": "تروتس آينيغِر شفيِريكايتِن إوبِرفيخت دير نوتسِن ديزِر ماسنامِه"
+            }
+          ]
+        },
+        {
+          "verb": "gewährleisten",
+          "meaning": "يضمن / يكفل",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "gewährleiste",
+              "du": "gewährleistest",
+              "er/sie/es": "gewährleistet",
+              "wir": "gewährleisten",
+              "ihr": "gewährleistet",
+              "sie/Sie": "gewährleisten"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "gewährleistet",
+              "example": {
+                "de": "Die Regierung hat die Sicherheit der Bürger gewährleistet.",
+                "ar": "ضمنت الحكومة أمن المواطنين.",
+                "pron": "دي رِغيرونغ هات دي زيشِرهايت دير بورغِر غِفيرلايستِت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Wir müssen die Qualität gewährleisten.",
+              "ar": "يجب أن نضمن الجودة.",
+              "pron": "فير موسِن دي كفاليتيت غِفيرلايستِن"
+            },
+            {
+              "de": "Das Unternehmen gewährleistet einen 24-stündigen Kundenservice.",
+              "ar": "تضمن الشركة خدمة عملاء على مدار 24 ساعة.",
+              "pron": "داس أونتِرهيمِن غِفيرلايستِت آينِن فير-أوندتسفانتسِش-ستوندِيغِن كوندِن-سِرفيس"
+            },
+            {
+              "de": "Der Vertrag gewährleistet die Einhaltung aller vereinbarten Bedingungen.",
+              "ar": "يكفل العقد الالتزام بجميع الشروط المتفق عليها.",
+              "pron": "دير فيرتراغ غِفيرلايستِت دي آينهالتونغ آلِر فيرآينبارتِن بِدينغونغِن"
+            },
+            {
+              "de": "Moderne Technologien gewährleisten eine effiziente Datenverarbeitung.",
+              "ar": "تضمن التقنيات الحديثة معالجة فعالة للبيانات.",
+              "pron": "مودِرنِه تِكنولوجيِن غِفيرلايستِن آينِه إفيتسيِينتِه داتِن-فِراربايتونغ"
+            }
+          ]
+        },
+        {
+          "verb": "bewältigen",
+          "meaning": "يتغلب على / يتعامل مع",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "bewältige",
+              "du": "bewältigst",
+              "er/sie/es": "bewältigt",
+              "wir": "bewältigen",
+              "ihr": "bewältigt",
+              "sie/Sie": "bewältigen"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "bewältigt",
+              "example": {
+                "de": "Sie hat die Krise erfolgreich bewältigt.",
+                "ar": "لقد تغلبت على الأزمة بنجاح.",
+                "pron": "زي هات دي كريزِه إرفولغرايش بِفيلتيخت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Diese Aufgabe ist schwer zu bewältigen.",
+              "ar": "من الصعب التغلب على هذه المهمة.",
+              "pron": "ديزِه آوفغابِه إست شفير تسو بِفيلتيغِن"
+            },
+            {
+              "de": "Das Team bewältigte die Herausforderungen mit Bravour.",
+              "ar": "تغلب الفريق على التحديات ببراعة.",
+              "pron": "داس تيم بِفيلتيختِه دي هِراوسفوردِرونغِن ميت برافور"
+            },
+            {
+              "de": "Die Stadtverwaltung muss den plötzlichen Bevölkerungszuwachs bewältigen.",
+              "ar": "يجب على إدارة المدينة التعامل مع الزيادة السكانية المفاجئة.",
+              "pron": "دي شتات-فِرفالتونغ موس دِن بلوتسليشِن بيفولكِيرونغس-تسوفاخس بِفيلتيغِن"
+            },
+            {
+              "de": "Er hat die traumatischen Erlebnisse gut bewältigt.",
+              "ar": "تعامل بشكل جيد مع التجارب الصادمة.",
+              "pron": "إر هات دي تروماتيشِن إرليبْنيسِه غوت بِفيلتيخت"
+            }
+          ]
+        },
+        {
+          "verb": "erzielen",
+          "meaning": "يحقق (نتيجة/هدف)",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "erziele",
+              "du": "erzielst",
+              "er/sie/es": "erzielt",
+              "wir": "erzielen",
+              "ihr": "erzielt",
+              "sie/Sie": "erzielen"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "erzielt",
+              "example": {
+                "de": "Das Team hat ein gutes Ergebnis erzielt.",
+                "ar": "حقق الفريق نتيجة جيدة.",
+                "pron": "داس تيم هات آين غوتِس إرغِبنيس إرتسيلت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Wir wollen einen Kompromiss erzielen.",
+              "ar": "نريد التوصل إلى حل وسط.",
+              "pron": "فير فولِن آينِن كومبروميس إرتسيلِن"
+            },
+            {
+              "de": "Das Unternehmen erzielte einen Rekordumsatz im letzten Quartal.",
+              "ar": "حقق الشركة رقمًا قياسيًا في المبيعات في الربع الأخير.",
+              "pron": "داس أونتِرهيمِن إرتسيلتَه آينِن رِكورد-أومزاتس إم لِتستِن كفارتال"
+            },
+            {
+              "de": "Bei den Verhandlungen wurde eine Einigung erzielt.",
+              "ar": "تم التوصل إلى اتفاق في المفاوضات.",
+              "pron": "باي دِن فيرهاندلونغِن فوردِه آينِه آينيغونغ إرتسيلت"
+            },
+            {
+              "de": "Die Mannschaft erzielte in der ersten Halbzeit zwei Tore.",
+              "ar": "سجل الفريق هدفين في الشوط الأول.",
+              "pron": "دي مانشافت إرتسيلتَه إن دير إرستِن هالبتسايت تسفاي تورِه"
+            }
+          ]
+        },
+        {
+          "verb": "sich engagieren für",
+          "meaning": "يلتزم بـ / ينخرط في",
+          "type": "منتظم انعكاسي",
+          "tenses": {
+            "Präsens": {
+              "ich": "engagiere mich für",
+              "du": "engagierst dich für",
+              "er/sie/es": "engagiert sich für",
+              "wir": "engagieren uns für",
+              "ihr": "engagiert euch für",
+              "sie/Sie": "engagieren sich für"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "engagiert",
+              "example": {
+                "de": "Sie hat sich immer für soziale Gerechtigkeit engagiert.",
+                "ar": "لطالما التزمت بالعدالة الاجتماعية.",
+                "pron": "زي هات زيش إمِر فور زوتسيالِه غِرِشتيشكايت إنغاجيرت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Viele junge Menschen engagieren sich für den Umweltschutz.",
+              "ar": "ينخرط العديد من الشباب في حماية البيئة.",
+              "pron": "فيلِه يونغِه مِنشِن إنغاجيرِن زيش فور دِن أومفِلتشوتس"
+            },
+            {
+              "de": "Er engagiert sich ehrenamtlich in der Flüchtlingshilfe.",
+              "ar": "يتطوع في مساعدة اللاجئين.",
+              "pron": "إر إنغاجيرت زيش إرِن-أمتليش إن دير فلوشتْلينغس-هيلفِه"
+            },
+            {
+              "de": "Die Firma engagiert sich stark für die Ausbildung von Jugendlichen.",
+              "ar": "تلتزم الشركة بشدة بتدريب الشباب.",
+              "pron": "دي فيرما إنغاجيرت زيش شتارك فور دي آوسبيلدونغ فون يوغِندليشِن"
+            },
+            {
+              "de": "Sie engagierte sich politisch für die Menschenrechte.",
+              "ar": "التزمت سياسيًا بحقوق الإنسان.",
+              "pron": "زي إنغاجيرتَه زيش بوليتيش فور دي مِنشِن-رِختِه"
+            }
+          ]
+        },
+        {
+          "verb": "ablehnen",
+          "meaning": "يرفض",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "lehne ab",
+              "du": "lehnst ab",
+              "er/sie/es": "lehnt ab",
+              "wir": "lehnen ab",
+              "ihr": "lehnt ab",
+              "sie/Sie": "lehnen ab"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "abgelehnt",
+              "example": {
+                "de": "Der Antrag wurde abgelehnt.",
+                "ar": "تم رفض الطلب.",
+                "pron": "دير آنتراغ فوردِه آبغِلينت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Ich muss dieses Angebot leider ablehnen.",
+              "ar": "يجب أن أرفض هذا العرض للأسف.",
+              "pron": "إش موس ديزِس آنغِبوت لايدِر آبلينِن"
+            },
+            {
+              "de": "Das Gericht lehnte die Klage aus formalen Gründen ab.",
+              "ar": "رفضت المحكمة الدعوى لأسباب شكلية.",
+              "pron": "داس غِريشت لِينتَه دي كلاغِه آوس فورمالِن غروندِن آب"
+            },
+            {
+              "de": "Sie lehnte höflich die Einladung ab.",
+              "ar": "رفضت الدعوة بأدب.",
+              "pron": "زي لِينتَه هوفليش دي آينلادونغ آب"
+            },
+            {
+              "de": "Die Mehrheit der Kommission lehnte den Vorschlag ab.",
+              "ar": "رفضت أغلبية اللجنة الاقتراح.",
+              "pron": "دي ميرهايت دير كوميسيون لِينتَه دِن فورشلاغ آب"
+            }
+          ]
+        },
+        {
+          "verb": "befürworten",
+          "meaning": "يؤيد / يدعم",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "befürworte",
+              "du": "befürwortest",
+              "er/sie/es": "befürwortet",
+              "wir": "befürworten",
+              "ihr": "befürwortet",
+              "sie/Sie": "befürworten"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "befürwortet",
+              "example": {
+                "de": "Die Partei hat die Reform befürwortet.",
+                "ar": "أيد الحزب الإصلاح.",
+                "pron": "دي بارتايه هات دي ريفورم بِفورفورتِت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Ich befürworte diese Maßnahme vollkommen.",
+              "ar": "أؤيد هذا الإجراء تمامًا.",
+              "pron": "إش بِفورفورتِه ديزِه ماسنامِه فولكومِن"
+            },
+            {
+              "de": "Der Ausschuss befürwortet einstimmig das Projekt.",
+              "ar": "يؤيد اللجنة المشروع بالإجماع.",
+              "pron": "دير آوشوس بِفورفورتِت آينشتيمِخ داس بروياكت"
+            },
+            {
+              "de": "Die meisten Experten befürworten diesen Ansatz.",
+              "ar": "يؤيد معظم الخبراء هذا النهج.",
+              "pron": "دي مايستِن إكسبِرتِن بِفورفورتِن ديزِن آنزاتس"
+            },
+            {
+              "de": "Sie befürwortet nachdrücklich die Einführung erneuerbarer Energien.",
+              "ar": "تؤيد بشدة إدخال الطاقة المتجددة.",
+              "pron": "زي بِفورفورتِت ناخدرِوكليش دي آينفورونغ إرنويِربارِر إنِرجيِن"
+            }
+          ]
+        },
+        {
+          "verb": "nachvollziehen",
+          "meaning": "يفهم / يستوعب (الدوافع)",
+          "type": "غير منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "vollziehe nach",
+              "du": "vollziehst nach",
+              "er/sie/es": "vollzieht nach",
+              "wir": "vollziehen nach",
+              "ihr": "vollzieht nach",
+              "sie/Sie": "vollziehen nach"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "nachvollzogen",
+              "example": {
+                "de": "Ich kann deine Reaktion gut nachvollziehen.",
+                "ar": "يمكنني فهم رد فعلك جيدًا.",
+                "pron": "إش كان داينِه رِآكتسيون غوت ناخفولتسيهِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Seine Argumentation ist schwer nachzuvollziehen.",
+              "ar": "من الصعب استيعاب حجته.",
+              "pron": "زاينِه آرغومِنتاتسيون إست شفير ناختسوفولتسيهِن"
+            },
+            {
+              "de": "Ich kann Ihre Entscheidung voll und ganz nachvollziehen.",
+              "ar": "يمكنني فهم قراركم بشكل كامل.",
+              "pron": "إش كان إيرِه إنتشايدونغ فول أونت غانتس ناخفولتسيهِن"
+            },
+            {
+              "de": "Die komplexen mathematischen Formeln sind kaum nachzuvollziehen.",
+              "ar": "من الصعب استيعاب المعادلات الرياضية المعقدة.",
+              "pron": "دي كومبلكسِن ماتِه ماتيشِن فورمِلِن زينت كاوم ناختسوفولتسيهِن"
+            },
+            {
+              "de": "Seine Motive sind für Außenstehende schwer nachzuvollziehen.",
+              "ar": "من الصعب على الأشخاص الخارجيين فهم دوافعه.",
+              "pron": "زاينِه موتيفِه زينت فور آوسِن-شتِهندِه شفير ناختسوفولتسيهِن"
+            }
+          ]
+        },
+        {
+          "verb": "berücksichtigen",
+          "meaning": "يأخذ في الاعتبار",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "berücksichtige",
+              "du": "berücksichtigst",
+              "er/sie/es": "berücksichtigt",
+              "wir": "berücksichtigen",
+              "ihr": "berücksichtigt",
+              "sie/Sie": "berücksichtigen"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "berücksichtigt",
+              "example": {
+                "de": "Wir haben alle Faktoren berücksichtigt.",
+                "ar": "لقد أخذنا جميع العوامل في الاعتبار.",
+                "pron": "فير هابِن آلِه فاكتورِن بِروكزيشتيخت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Man muss die besonderen Umstände berücksichtigen.",
+              "ar": "يجب أخذ الظروف الخاصة في الاعتبار.",
+              "pron": "مان موس دي بِزوندِرِن أومشتيندِه بِروكزيشتيغِن"
+            },
+            {
+              "de": "Bei der Planung wurden die Budgetbeschränkungen nicht ausreichend berücksichtigt.",
+              "ar": "لم تؤخذ قيود الميزانية في الاعتبار بشكل كافٍ أثناء التخطيط.",
+              "pron": "باي دير بلانونغ فوردِن دي بوتشِيه-بِشرِنكونغِن نيشت آوسرايتشِنت بِروكزيشتيخت"
+            },
+            {
+              "de": "Die individuellen Bedürfnisse der Kunden müssen berücksichtigt werden.",
+              "ar": "يجب أخذ الاحتياجات الفردية للعملاء في الاعتبار.",
+              "pron": "دي إنديفيدوالِن بِدورفنيسِه دير كوندِن موسِن بِروكزيشتيخت فيردِن"
+            },
+            {
+              "de": "In der Studie wurden verschiedene Altersgruppen berücksichtigt.",
+              "ar": "أخذت الدراسة في الاعتبار فئات عمرية مختلفة.",
+              "pron": "إن دير شتوديِه فوردِن فيرشيدِنِه آلتِرس-غروبِن بِروكزيشتيخت"
+            }
+          ]
+        },
+        {
+          "verb": "veranlassen",
+          "meaning": "يحفّز / يدفع / يتسبب في",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "veranlasse",
+              "du": "veranlasst",
+              "er/sie/es": "veranlasst",
+              "wir": "veranlassen",
+              "ihr": "veranlasst",
+              "sie/Sie": "veranlassen"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "veranlasst",
+              "example": {
+                "de": "Was hat dich zu dieser Entscheidung veranlasst?",
+                "ar": "ما الذي دفعك إلى هذا القرار؟",
+                "pron": "فاس هات ديش تسو ديزِر إنتشايدونغ فيرآنلاست؟"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Der Vorfall veranlasste die Polizei zu ermitteln.",
+              "ar": "دفعت الحادثة الشرطة للتحقيق.",
+              "pron": "دير فورفال فيرآنلاستِه دي بوليتساي تسو إرميتِلن"
+            },
+            {
+              "de": "Die positive Resonanz veranlasste uns zur Fortsetzung des Projekts.",
+              "ar": "دفعنا الرد الإيجابي إلى مواصلة المشروع.",
+              "pron": "دي بوزيتيفِه رِزونانتس فيرآنلاستِه أونس تسور فورتزِتسونغ دِس بروياكتس"
+            },
+            {
+              "de": "Der Arzt veranlasste sofortige Untersuchungen.",
+              "ar": "أمر الطبيب بإجراء فحوصات فورية.",
+              "pron": "دير آرتست فيرآنلاستِه زوفورتِيغِه أونتِرشوخونغِن"
+            },
+            {
+              "de": "Die Sicherheitslücke veranlasste ein sofortiges Update der Software.",
+              "ar": "تسببت الثغرة الأمنية في تحديث فوري للبرنامج.",
+              "pron": "دي زيشِرهايتس-ليوكِه فيرآنلاستِه آينِه زوفورتِيغِس أوبديتِه دير سوفتفير"
+            }
+          ]
+        },
+        {
+          "verb": "veranschaulichen",
+          "meaning": "يوضح / يبيّن بالأمثلة",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "veranschauliche",
+              "du": "veranschaulichst",
+              "er/sie/es": "veranschaulicht",
+              "wir": "veranschaulichen",
+              "ihr": "veranschaulicht",
+              "sie/Sie": "veranschaulichen"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "veranschaulicht",
+              "example": {
+                "de": "Das Beispiel veranschaulicht das Problem sehr gut.",
+                "ar": "يوضح المثال المشكلة بشكل جيد جدًا.",
+                "pron": "داس بايشبيل فيرآنشاوليشت داس بروبليم زِر غوت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Können Sie das bitte anhand eines Beispiels veranschaulichen?",
+              "ar": "هل يمكنك توضيح ذلك بمثال من فضلك؟",
+              "pron": "كُونِن زي داس بِتِه آنهاند آينِس بايشبيلس فيرآنشاوليشِن؟"
+            },
+            {
+              "de": "Die Grafik veranschaulicht die Entwicklung der Bevölkerungszahlen.",
+              "ar": "تُوضح الرسم البياني تطور أعداد السكان.",
+              "pron": "دي غرافيك فيرآنشاوليشت دي إنتفيكلونغ دير بيفولكِيرونغس-تسالِن"
+            },
+            {
+              "de": "Anhand dieser Statistik lässt sich der Trend gut veranschaulichen.",
+              "ar": "يمكن توضيح الاتجاه بشكل جيد باستخدام هذه الإحصائية.",
+              "pron": "آنهانت ديزِر شتاتيستيك ليست زيش دير ترينت غوت فيرآنشاوليشِن"
+            },
+            {
+              "de": "Der Dozent veranschaulichte den komplexen Sachverhalt mit einem einfachen Diagramm.",
+              "ar": "وضح المحاضر الوضع المعقد برسم بياني بسيط.",
+              "pron": "دير دوتسِنت فيرآنشاوليختِه دِن كومبلكسِن زاخفِرهالت ميت آينِم آينفاخِن دياغرام"
+            }
+          ]
+        },
+        {
+          "verb": "sich durchsetzen",
+          "meaning": "يفرض نفسه / ينجح في تحقيق",
+          "type": "منتظم انعكاسي",
+          "tenses": {
+            "Präsens": {
+              "ich": "setze mich durch",
+              "du": "setzt dich durch",
+              "er/sie/es": "setzt sich durch",
+              "wir": "setzen uns durch",
+              "ihr": "setzt euch durch",
+              "sie/Sie": "setzen sich durch"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "durchgesetzt",
+              "example": {
+                "de": "Sie hat sich mit ihrer Meinung durchgesetzt.",
+                "ar": "لقد فرضت رأيها.",
+                "pron": "زي هات زيش ميت إيرِر ماينونغ دورشغِزِتست"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "In diesem Beruf muss man sich durchsetzen können.",
+              "ar": "في هذه المهنة يجب أن تكون قادرًا على فرض نفسك.",
+              "pron": "إن ديزِم بِروف موس مان زيش دورشزِتسِن كُونِن"
+            },
+            {
+              "de": "Trotz anfänglicher Widerstände setzte sich die neue Technologie durch.",
+              "ar": "على الرغم من المقاومة الأولية، فرضت التكنولوجيا الجديدة نفسها.",
+              "pron": "تروتس آنفينغليشِر فيدِرشتِندِه زِتستِه زيش دي نويِه تِكنولوجي دورش"
+            },
+            {
+              "de": "Er setzte sich im Wettbewerb gegen starke Konkurrenz durch.",
+              "ar": "فرض نفسه في المنافسة ضد منافسة قوية.",
+              "pron": "إر زِتستِه زيش إم فيتبِفِرب آغِن شتاركِه كونكورِنتس دورش"
+            },
+            {
+              "de": "Die Vernunft wird sich am Ende durchsetzen.",
+              "ar": "سوف ينتصر العقل في النهاية.",
+              "pron": "دي فيرنونفت فيرت زيش آم إندِه دورشزِتسِن"
+            }
+          ]
+        },
+        {
+          "verb": "aufgreifen",
+          "meaning": "يتناول (موضوع) / يلتقط",
+          "type": "غير منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "greife auf",
+              "du": "greifst auf",
+              "er/sie/es": "greift auf",
+              "wir": "greifen auf",
+              "ihr": "greift auf",
+              "sie/Sie": "greifen auf"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "aufgegriffen",
+              "example": {
+                "de": "Die Medien haben das Thema aufgegriffen.",
+                "ar": "تناولت وسائل الإعلام الموضوع.",
+                "pron": "دي ميديِن هابِن داس تيما آوفغِغريفِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Ich möchte einen wichtigen Punkt aufgreifen.",
+              "ar": "أود أن أتناول نقطة مهمة.",
+              "pron": "إش موشتِه آينِن فيشتيغِن بونكت آوفغرايفِن"
+            },
+            {
+              "de": "Der Autor greift in seinem neuen Buch aktuelle gesellschaftliche Probleme auf.",
+              "ar": "يتناول المؤلف في كتابه الجديد مشاكل مجتمعية راهنة.",
+              "pron": "دير آوتور غرايفت إن زاينِم نويِن بُوخ آكتوإلِه غِزِلشافتليشِه بروبليمِه آوف"
+            },
+            {
+              "de": "Die Opposition griff die Äußerungen der Regierung scharf auf.",
+              "ar": "تناولت المعارضة تصريحات الحكومة بشكل حاد.",
+              "pron": "دي أوبوزيتسيون غريف دي أويسِيرونغِن دير رِغيرونغ شارف آوف"
+            },
+            {
+              "de": "Die Diskussion griff viele der zuvor angesprochenen Themen wieder auf.",
+              "ar": "تناولت المناقشة العديد من المواضيع التي سبق التطرق إليها.",
+              "pron": "دي ديسكوسيون غريف فيلِه دير تسوفور آنغِشبروخِنِن تيمِن فيدِر آوف"
+            }
+          ]
+        },
+        {
+          "verb": "vertreten",
+          "meaning": "يمثل / يدافع عن (رأي)",
+          "type": "غير منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "vertrete",
+              "du": "vertrittst",
+              "er/sie/es": "vertritt",
+              "wir": "vertreten",
+              "ihr": "vertretet",
+              "sie/Sie": "vertreten"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "vertreten",
+              "example": {
+                "de": "Er hat seine Meinung klar vertreten.",
+                "ar": "لقد دافع عن رأيه بوضوح.",
+                "pron": "إر هات زاينِه ماينونغ كلار فيرتريتِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Welche Position vertreten Sie in dieser Frage?",
+              "ar": "ما هو الموقف الذي تدافع عنه في هذه المسألة؟",
+              "pron": "فيلشِه بوزيتسيون فيرتريتِن زي إن ديزِر فراغِه؟"
+            },
+            {
+              "de": "Die Gewerkschaft vertritt die Interessen der Arbeitnehmer.",
+              "ar": "تمثل النقابة مصالح العمال.",
+              "pron": "دي غِفيركشافت فيرتريت دي إنتِرسِن دير آربايتنِهمِر"
+            },
+            {
+              "de": "Er vertrat die Firma bei den internationalen Verhandlungen.",
+              "ar": "مثل الشركة في المفاوضات الدولية.",
+              "pron": "إر فيرترات دي فيرما باي دِن إنترناتسيونالِن فيرهاندلونغِن"
+            },
+            {
+              "de": "Diese Auffassung wird in wissenschaftlichen Kreisen weitgehend vertreten.",
+              "ar": "هذا الرأي يُدافع عنه على نطاق واسع في الأوساط العلمية.",
+              "pron": "ديزِه آوففاسونغ فيرت فيسِنشافتليشِن كرايزِن فايتغِهينت فيرتريتِن"
+            }
+          ]
+        },
+        {
+          "verb": "umgehen mit",
+          "meaning": "يتعامل مع",
+          "type": "غير منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "gehe um mit",
+              "du": "gehst um mit",
+              "er/sie/es": "geht um mit",
+              "wir": "gehen um mit",
+              "ihr": "geht um mit",
+              "sie/Sie": "gehen um mit"
+            },
+            "Perfekt": {
+              "auxiliary": "sein",
+              "participle": "umgegangen",
+              "example": {
+                "de": "Sie ist sehr geschickt mit der Situation umgegangen.",
+                "ar": "لقد تعاملت بمهارة كبيرة مع الموقف.",
+                "pron": "زي إست زِر غِشيكت ميت دير زيتواتسيون أومغِغانغِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Man muss lernen, mit Kritik umzugehen.",
+              "ar": "يجب أن يتعلم المرء كيفية التعامل مع النقد.",
+              "pron": "مان موس ليرنِن، ميت كريتيك أومتسوغيهِن"
+            },
+            {
+              "de": "Er geht sehr professionell mit schwierigen Kunden um.",
+              "ar": "يتعامل بشكل محترف جدًا مع العملاء الصعبين.",
+              "pron": "إر غيهت زِر بروفِسيونِل ميت شفيِريكايتِن كوندِن أوم"
+            },
+            {
+              "de": "Die Mitarbeiter wurden im Umgang mit der neuen Software geschult.",
+              "ar": "تم تدريب الموظفين على التعامل مع البرنامج الجديد.",
+              "pron": "دي ميت-آربايتر فوردِن إم أومغانغ ميت دير نويِن سوفتفير غِشولت"
+            },
+            {
+              "de": "Wir müssen verantwortungsbewusst mit den natürlichen Ressourcen umgehen.",
+              "ar": "يجب أن نتعامل بمسؤولية مع الموارد الطبيعية.",
+              "pron": "فير موسِن فيرأنتفورتونغس-بيفوسْت ميت دِن ناتورليشِن رِسورسِن أومغيهِن"
+            }
+          ]
+        },
+        {
+          "verb": "zunehmen",
+          "meaning": "يزداد / يتزايد",
+          "type": "غير منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "nehme zu",
+              "du": "nimmst zu",
+              "er/sie/es": "nimmt zu",
+              "wir": "nehmen zu",
+              "ihr": "nehmt zu",
+              "sie/Sie": "nehmen zu"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "zugenommen",
+              "example": {
+                "de": "Die Zahl der Arbeitslosen hat zugenommen.",
+                "ar": "ازداد عدد العاطلين عن العمل.",
+                "pron": "دي تسال دير آربايتسلوزِن هات تسوغِنومِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Die Probleme nehmen ständig zu.",
+              "ar": "تتزايد المشاكل باستمرار.",
+              "pron": "دي بروبليمِه نيمِن شتينديش تسو"
+            },
+            {
+              "de": "Die Nachfrage nach erneuerbaren Energien nimmt weltweit zu.",
+              "ar": "يتزايد الطلب على الطاقة المتجددة عالميًا.",
+              "pron": "دي ناخفراغِه ناخ إرنويِربارِن إنِرجيِن نيمت فيلتفايت تسو"
+            },
+            {
+              "de": "Mit zunehmendem Alter nimmt die körperliche Leistungsfähigkeit ab.",
+              "ar": "مع تقدم العمر، تتناقص القدرة البدنية.",
+              "pron": "ميت تسونِهمِندِم آلتِر نيمت دي كوبربليشِه لايستونغس-فيشكايت آب"
+            },
+            {
+              "de": "Die Geschwindigkeit des Autos nahm kontinuierlich zu.",
+              "ar": "ازدادت سرعة السيارة بشكل مستمر.",
+              "pron": "دي غِشفينديشكايت دِس آوتوس نام كونتينويرليش تسو"
+            }
+          ]
+        },
+        {
+          "verb": "abnehmen",
+          "meaning": "يتناقص / ينقص",
+          "type": "غير منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "nehme ab",
+              "du": "nimmst ab",
+              "er/sie/es": "nimmt ab",
+              "wir": "nehmen ab",
+              "ihr": "nehmt ab",
+              "sie/Sie": "nehmen ab"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "abgenommen",
+              "example": {
+                "de": "Die Nachfrage hat stark abgenommen.",
+                "ar": "انخفض الطلب بشدة.",
+                "pron": "دي ناخفراغِه هات شتارك آبغِنومِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Mit dem Alter nimmt die Sehkraft ab.",
+              "ar": "مع التقدم في السن تضعف قوة البصر.",
+              "pron": "ميت ديم آلتِر نيمت دي زيكرافت آب"
+            },
+            {
+              "de": "Die Bedeutung der traditionellen Medien nimmt stetig ab.",
+              "ar": "تتناقص أهمية وسائل الإعلام التقليدية باستمرار.",
+              "pron": "دي بِدويتونغ دير تراديتسيونالِن ميديِن نيمت شتيتيش آب"
+            },
+            {
+              "de": "Die Schmerzen nehmen nach Einnahme der Medikamente deutlich ab.",
+              "ar": "تتناقص الآلام بشكل ملحوظ بعد تناول الأدوية.",
+              "pron": "دي شميرتسِن نيمِن ناخ آيننامِه دير ميديكاْمِنتِه دويتليش آب"
+            },
+            {
+              "de": "Die Produktionskosten sind im letzten Jahr um 15% abgenommen.",
+              "ar": "انخفضت تكاليف الإنتاج بنسبة 15% في العام الماضي.",
+              "pron": "دي برودوكتسيونس-كوستِن زينت إم لِتستِن يار أوم فيرفتسِهن بروتسِنت آبغِنومِن"
+            }
+          ]
+        },
+        {
+          "verb": "verschärfen",
+          "meaning": "يشدد / يزيد حدة",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "verschärfe",
+              "du": "verschärfst",
+              "er/sie/es": "verschärft",
+              "wir": "verschärfen",
+              "ihr": "verschärft",
+              "sie/Sie": "verschärfen"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "verschärft",
+              "example": {
+                "de": "Die Regierung hat die Gesetze verschärft.",
+                "ar": "شددت الحكومة القوانين.",
+                "pron": "دي رِغيرونغ هات دي غِزِتسِه فيرشيرفت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Die Krise hat sich weiter verschärft.",
+              "ar": "تفاقمت الأزمة أكثر.",
+              "pron": "دي كريزِه هات زيش فايتِر فيرشيرفت"
+            },
+            {
+              "de": "Die Behörden verschärfen die Sicherheitskontrollen an Flughäfen.",
+              "ar": "تشدد السلطات إجراءات التفتيش الأمني في المطارات.",
+              "pron": "دي بِهيردِن فيرشيرفِن دي زيشِرهايتس-كونترولِن آن فلوكهافِن"
+            },
+            {
+              "de": "Der Konflikt zwischen den beiden Ländern verschärft sich zusehends.",
+              "ar": "يتصاعد النزاع بين البلدين بشكل ملحوظ.",
+              "pron": "دير كونفليكت تسيشِن دِن بايدِن لاندِرن فيرشيرفت زيش تسوزهِنتس"
+            },
+            {
+              "de": "Die Konkurrenzsituation hat sich durch den Markteintritt neuer Anbieter verschärft.",
+              "ar": "اشتدت حالة المنافسة بسبب دخول مزودين جدد إلى السوق.",
+              "pron": "دي كونكورِنتس-زيتواتسيون هات زيش دورخ دِن ماركت-آينتريت نويِر آنبيتر فيرشيرفت"
+            }
+          ]
+        },
+        {
+          "verb": "herauskristallisieren",
+          "meaning": "يتبلور / يتضح",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "kristallisiere heraus",
+              "du": "kristallisierst heraus",
+              "er/sie/es": "kristallisiert heraus",
+              "wir": "kristallisieren heraus",
+              "ihr": "kristallisiert heraus",
+              "sie/Sie": "kristallisieren heraus"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "herauskristallisiert",
+              "example": {
+                "de": "Es hat sich herauskristallisiert, dass wir eine Lösung brauchen.",
+                "ar": "لقد تبين أننا بحاجة إلى حل.",
+                "pron": "إس هات زيش هِراوسكريستاليزيرت، داس فير آينِه لوزونغ براوخِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Allmählich kristallisiert sich ein Plan heraus.",
+              "ar": "تدريجيًا تتبلور خطة.",
+              "pron": "آلميليش كريستاليزيرت زيش آين بلان هِراوس"
+            },
+            {
+              "de": "Im Laufe der Diskussion kristallisierte sich eine klare Position heraus.",
+              "ar": "خلال النقاش، تبلور موقف واضح.",
+              "pron": "إم لاوفِه دير ديسكوسيون كريستاليزيرتَه زيش آينِه كلارِه بوزيتسيون هِراوس"
+            },
+            {
+              "de": "Aus den Bewerbungen haben sich drei vielversprechende Kandidaten herauskristallisiert.",
+              "ar": "تبلور من بين الطلبات ثلاثة مرشحين واعدين.",
+              "pron": "آوس دِن بِفيربونغِن هابِن زيش دراي فيل-فِرشبريشِندِه كانديداتِن هِراوسكريستاليزيرت"
+            },
+            {
+              "de": "Die Hauptprobleme kristallisieren sich immer deutlicher heraus.",
+              "ar": "تتضح المشاكل الرئيسية بشكل متزايد.",
+              "pron": "دي هاوبت-بروبليمِه كريستاليزيرِن زيش إمِر دويتليشِر هِراوس"
+            }
+          ]
+        },
+        {
+          "verb": "erfordern",
+          "meaning": "يتطلب / يستلزم",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "erfordere",
+              "du": "erforderst",
+              "er/sie/es": "erfordert",
+              "wir": "erfordern",
+              "ihr": "erfordert",
+              "sie/Sie": "erfordern"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "erfordert",
+              "example": {
+                "de": "Diese Aufgabe hat viel Geduld erfordert.",
+                "ar": "تطلبت هذه المهمة صبرًا كبيرًا.",
+                "pron": "ديزِه آوفغابِه هات فيل غِدولت إرفوردِرت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Der Job erfordert ausgezeichnete Sprachkenntnisse.",
+              "ar": "تتطلب الوظيفة مهارات لغوية ممتازة.",
+              "pron": "دير جوب إرفوردِرت آوسغِتسايشنِتِه شبراخكِنتنيسِه"
+            },
+            {
+              "de": "Die Reparatur des Geräts erfordert spezielles Werkzeug.",
+              "ar": "تتطلب إصلاح الجهاز أدوات خاصة.",
+              "pron": "دي رِباراتور دِس غِريتس إرفوردِرت شبتسيإلِس فيركتسويغ"
+            },
+            {
+              "de": "Die komplexe Situation erfordert ein umsichtiges Vorgehen.",
+              "ar": "تتطلب الحالة المعقدة نهجًا حذرًا.",
+              "pron": "دي كومبلكسِه زيتواتسيون إرفوردِرت آينِه أومزيتشيغِس فورغيهِن"
+            },
+            {
+              "de": "Die Implementierung des Systems erfordert erhebliche Investitionen.",
+              "ar": "يتطلب تنفيذ النظام استثمارات كبيرة.",
+              "pron": "دي إمبليمِنتيرونغ دِس زيستِمس إرفوردِرت إربهيبلِشِه إنفِستيتسيونِن"
+            }
+          ]
+        },
+        {
+          "verb": "darlegen",
+          "meaning": "يعرض / يشرح بالتفصيل",
+          "type": "منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "lege dar",
+              "du": "legst dar",
+              "er/sie/es": "legt dar",
+              "wir": "legen dar",
+              "ihr": "legt dar",
+              "sie/Sie": "legen dar"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "dargelegt",
+              "example": {
+                "de": "Er hat seine Argumente überzeugend dargelegt.",
+                "ar": "لقد عرض حججه بشكل مقنع.",
+                "pron": "إر هات زاينِه آرغومِنتِه إوبِرتسويغِنت دارغِليخت"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Ich möchte meine Position kurz darlegen.",
+              "ar": "أود أن أعرض موقفي بإيجاز.",
+              "pron": "إش موشتِه ماينِه بوزيتسيون كورتس دارليغِن"
+            },
+            {
+              "de": "Der Anwalt legte die rechtlichen Grundlagen detailliert dar.",
+              "ar": "عرض المحامي الأسس القانونية بالتفصيل.",
+              "pron": "دير آنفالت ليختِه دي رِختليشِن غرونت-لاكِن دِتاييرت دار"
+            },
+            {
+              "de": "Im Bericht wird die strategische Ausrichtung des Unternehmens klar dargelegt.",
+              "ar": "يُعرض في التقرير التوجه الاستراتيجي للشركة بوضوح.",
+              "pron": "إم بِريخت فيرت دي شتراتِغيشِه آوسريختونغ دِس أونتِرهيمِنز كلار دارغِليخت"
+            },
+            {
+              "de": "Die Studie legt die wirtschaftlichen Auswirkungen des Klimawandels dar.",
+              "ar": "تعرض الدراسة الآثار الاقتصادية للتغير المناخي.",
+              "pron": "دي شتوديِه ليخت دي فيرتشافتليشِن آوس-فيركونغِن دِس كليما-فاندِس دار"
+            }
+          ]
+        },
+        {
+          "verb": "nachweisen",
+          "meaning": "يثبت / يبرهن",
+          "type": "غير منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "weise nach",
+              "du": "weist nach",
+              "er/sie/es": "weist nach",
+              "wir": "weisen nach",
+              "ihr": "weist nach",
+              "sie/Sie": "weisen nach"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "nachgewiesen",
+              "example": {
+                "de": "Die Studie hat einen Zusammenhang nachgewiesen.",
+                "ar": "أثبتت الدراسة وجود علاقة.",
+                "pron": "دي شتوديِه هات آينِن تسوزامِنهانغ ناخغِفيزِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Das lässt sich wissenschaftlich nachweisen.",
+              "ar": "يمكن إثبات ذلك علميًا.",
+              "pron": "داس ليست زيش فيسِنشافتليش ناخفايزِن"
+            },
+            {
+              "de": "Die Forscher konnten die Wirksamkeit des Medikaments nachweisen.",
+              "ar": "تمكن الباحثون من إثبات فعالية الدواء.",
+              "pron": "دي فورشِر كونتِن دي فيركزامكايت دِس ميديكاْمِنتس ناخفايزِن"
+            },
+            {
+              "de": "Es gelang ihm nicht, seine Unschuld vor Gericht nachzuweisen.",
+              "ar": "لم يتمكن من إثبات براءته أمام المحكمة.",
+              "pron": "إس غِلانغ إيم نيشت، زاينِه أونشولت فور غِريشت ناختسوفايزِن"
+            },
+            {
+              "de": "Die Behörden haben Betrug in großem Umfang nachgewiesen.",
+              "ar": "أثبتت السلطات وجود احتيال على نطاق واسع.",
+              "pron": "دي بِهيردِن هابِن بِتروغ إن غروسِم أومفانغ ناخغِفيزِن"
+            }
+          ]
+        },
+        {
+          "verb": "hervorheben",
+          "meaning": "يبرز / يشدد على",
+          "type": "غير منتظم",
+          "tenses": {
+            "Präsens": {
+              "ich": "hebe hervor",
+              "du": "hebst hervor",
+              "er/sie/es": "hebt hervor",
+              "wir": "heben hervor",
+              "ihr": "hebt hervor",
+              "sie/Sie": "heben hervor"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "hervorgehoben",
+              "example": {
+                "de": "Der Autor hat diesen Punkt besonders hervorgehoben.",
+                "ar": "أبرز المؤلف هذه النقطة بشكل خاص.",
+                "pron": "دير آوتور هات ديزِن بونكت بِزوندِرس هيرفورغِهوبِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Ich möchte die Bedeutung dieses Aspekts hervorheben.",
+              "ar": "أود أن أبرز أهمية هذا الجانب.",
+              "pron": "إش موشتِه دي بِدويتونغ ديزِس آسبِكتس هيرفورهيبِن"
+            },
+            {
+              "de": "Der Manager hob die außergewöhnlichen Leistungen des Teams hervor.",
+              "ar": "أبرز المدير الإنجازات الاستثنائية للفريق.",
+              "pron": "دير مانيغِر هوب دي آوسِيرغِفونليشِن لايستونغِن دِس تيمز هيرفور"
+            },
+            {
+              "de": "In der Präsentation wurden die wichtigsten Ergebnisse hervorgehoben.",
+              "ar": "تم إبراز النتائج الأكثر أهمية في العرض التقديمي.",
+              "pron": "إن دير برِزِنتاتسيون فوردِن دي فيشتيغستِن إرغِبنيسِه هيرفورغِهوبِن"
+            },
+            {
+              "de": "Besonders hervorzuheben ist die hohe Qualität der verwendeten Materialien.",
+              "ar": "يجدر الإشارة بشكل خاص إلى الجودة العالية للمواد المستخدمة.",
+              "pron": "بِزوندِرس هيرفورتسوهيبِن إست دي هوهِه كفاليتيت دير فيرڤندِتِن ماتِريالِيِن"
+            }
+          ]
+        },
+        {
+          "verb": "sich niederschlagen",
+          "meaning": "ينعكس / يظهر أثره",
+          "type": "غير منتظم انعكاسي",
+          "tenses": {
+            "Präsens": {
+              "ich": "schlage mich nieder",
+              "du": "schlägst dich nieder",
+              "er/sie/es": "schlägt sich nieder",
+              "wir": "schlagen uns nieder",
+              "ihr": "schlagt euch nieder",
+              "sie/Sie": "schlagen sich nieder"
+            },
+            "Perfekt": {
+              "auxiliary": "haben",
+              "participle": "niedergeschlagen",
+              "example": {
+                "de": "Die Krise hat sich in den Zahlen niedergeschlagen.",
+                "ar": "انعكست الأزمة في الأرقام.",
+                "pron": "دي كريزِه هات زيش إن دِن تسالِن نيدِرغِشلاغِن"
+              }
+            }
+          },
+          "examples": [
+            {
+              "de": "Das Problem schlägt sich in der Qualität nieder.",
+              "ar": "تنعكس المشكلة على الجودة.",
+              "pron": "داس بروبليم شليخت زيش إن دير كفاليتيت نيدِر"
+            },
+            {
+              "de": "Die gestiegenen Rohstoffpreise schlagen sich auf die Endprodukte nieder.",
+              "ar": "تنعكس أسعار المواد الخام المرتفعة على المنتجات النهائية.",
+              "pron": "دي غِشتِيغِنِن رو-شتوف-برايزِه شلاغِن زيش آوف دي إنت-برودوكتِه نيدِر"
+            },
+            {
+              "de": "Die positive Stimmung schlägt sich in den Umfrageergebnissen nieder.",
+              "ar": "تنعكس المشاعر الإيجابية في نتائج الاستطلاعات.",
+              "pron": "دي بوزيتيفِه شتيمونغ شليخت زيش إن دِن أومفراغِه-إرغِبنيسِن نيدِر"
+            },
+            {
+              "de": "Die langen Arbeitszeiten schlagen sich negativ auf die Work-Life-Balance nieder.",
+              "ar": "تنعكس ساعات العمل الطويلة سلبًا على التوازن بين العمل والحياة.",
+              "pron": "دي لانغِن آربايتس-تسايتِن شلاغِن زيش نِغاتيف آوف دي فورك-لايف-بالانس نيدِر"
+            }
+          ]
+        }
+      ]
+    }
+}

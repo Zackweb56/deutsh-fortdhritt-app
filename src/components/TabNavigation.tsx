@@ -29,7 +29,7 @@ export const TabNavigation = () => {
     { id: 'vocabulary' as const, label: 'المفردات', icon: BookOpen },
     { id: 'grammar' as const, label: 'القواعد والأفعال', icon: PenTool },
     { id: 'lessons' as const, label: 'الدروس', icon: GraduationCap },
-    { id: 'listening' as const, label: 'الاستماع', icon: Headphones },
+    { id: 'listening' as const, label: 'الاستماع و القراءة', icon: Headphones },
     { id: 'resources' as const, label: 'المصادر', icon: Globe },
   ];
 
