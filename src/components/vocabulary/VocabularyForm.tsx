@@ -54,7 +54,7 @@ export const VocabularyForm = () => {
             id="pronunciation"
             value={pronunciation}
             onChange={(e) => setPronunciation(e.target.value)}
-            placeholder="[ˈɡuːtn̩ taːk]"
+            placeholder="جوتن تاك"
             dir="ltr"
             className="text-left"
           />

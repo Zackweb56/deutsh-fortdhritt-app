@@ -1,0 +1,1424 @@
+{
+    "levels": [
+      {
+        "level": "A1",
+        "vocab": [
+          {
+            "id": 1,
+            "arabic": "مرحبا",
+            "german": "Hallo",
+            "pronunciation_ar": "هالو",
+            "notes": ""
+          },
+          {
+            "id": 2,
+            "arabic": "مع السلامة",
+            "german": "Tschüss",
+            "pronunciation_ar": "تشوس",
+            "notes": ""
+          },
+          {
+            "id": 3,
+            "arabic": "شكراً",
+            "german": "Danke",
+            "pronunciation_ar": "دانكِه",
+            "notes": ""
+          },
+          {
+            "id": 4,
+            "arabic": "من فضلك / لو سمحت",
+            "german": "Bitte",
+            "pronunciation_ar": "بيتَه",
+            "notes": "تعني أيضًا 'عفواً' ردا على شكر"
+          },
+          {
+            "id": 5,
+            "arabic": "عذراً",
+            "german": "Entschuldigung",
+            "pronunciation_ar": "إنت-شول-دي-جونج",
+            "notes": ""
+          },
+          {
+            "id": 6,
+            "arabic": "نعم",
+            "german": "Ja",
+            "pronunciation_ar": "يا",
+            "notes": ""
+          },
+          {
+            "id": 7,
+            "arabic": "لا",
+            "german": "Nein",
+            "pronunciation_ar": "ناين",
+            "notes": ""
+          },
+          {
+            "id": 8,
+            "arabic": "صباح الخير",
+            "german": "Guten Morgen",
+            "pronunciation_ar": "جوتن مورجن",
+            "notes": ""
+          },
+          {
+            "id": 9,
+            "arabic": "مساء الخير",
+            "german": "Guten Abend",
+            "pronunciation_ar": "جوتن آبِنت",
+            "notes": ""
+          },
+          {
+            "id": 10,
+            "arabic": "ليلة سعيدة",
+            "german": "Gute Nacht",
+            "pronunciation_ar": "جوتَه ناخت",
+            "notes": ""
+          },
+          {
+            "id": 11,
+            "arabic": "اسمي...",
+            "german": "Ich heiße...",
+            "pronunciation_ar": "إيش هايْسِه",
+            "notes": ""
+          },
+          {
+            "id": 12,
+            "arabic": "كيف حالك؟",
+            "german": "Wie geht es dir?",
+            "pronunciation_ar": "في جيت إس دير؟",
+            "notes": ""
+          },
+          {
+            "id": 13,
+            "arabic": "بخير، شكراً",
+            "german": "Gut, danke",
+            "pronunciation_ar": "جوت، دانكِه",
+            "notes": ""
+          },
+          {
+            "id": 14,
+            "arabic": "من أين أنت؟",
+            "german": "Woher kommst du?",
+            "pronunciation_ar": "فو-هير كومست دو؟",
+            "notes": ""
+          },
+          {
+            "id": 15,
+            "arabic": "أنا من...",
+            "german": "Ich komme aus...",
+            "pronunciation_ar": "إيش كومِه آوس",
+            "notes": ""
+          },
+          {
+            "id": 16,
+            "arabic": "تفضل",
+            "german": "Gern geschehen",
+            "pronunciation_ar": "جيرن جِشيهين",
+            "notes": "رد على 'شكراً'"
+          },
+          {
+            "id": 17,
+            "arabic": "لا أفهم",
+            "german": "Ich verstehe nicht",
+            "pronunciation_ar": "إيش فير-شتييه نيشت",
+            "notes": ""
+          },
+          {
+            "id": 18,
+            "arabic": "تكلم ببطء من فضلك",
+            "german": "Sprechen Sie langsam, bitte",
+            "pronunciation_ar": "شبراخين زي لانجزام، بيتَه",
+            "notes": ""
+          },
+          {
+            "id": 19,
+            "arabic": "كم الساعة؟",
+            "german": "Wie spät ist es?",
+            "pronunciation_ar": "في شبيت إست إس؟",
+            "notes": ""
+          },
+          {
+            "id": 20,
+            "arabic": "أحتاج مساعدة",
+            "german": "Ich brauche Hilfe",
+            "pronunciation_ar": "إيش براوخِه هيلفِه",
+            "notes": ""
+          },
+          {
+            "id": 21,
+            "arabic": "أين المحطة؟",
+            "german": "Wo ist der Bahnhof?",
+            "pronunciation_ar": "فو إست دير بان-هوف؟",
+            "notes": ""
+          },
+          {
+            "id": 22,
+            "arabic": "هذا",
+            "german": "das",
+            "pronunciation_ar": "داس",
+            "notes": ""
+          },
+          {
+            "id": 23,
+            "arabic": "ماء",
+            "german": "Wasser",
+            "pronunciation_ar": "فاسِر",
+            "notes": ""
+          },
+          {
+            "id": 24,
+            "arabic": "خبز",
+            "german": "Brot",
+            "pronunciation_ar": "بروت",
+            "notes": ""
+          },
+          {
+            "id": 25,
+            "arabic": "قهوة",
+            "german": "Kaffee",
+            "pronunciation_ar": "كا-في",
+            "notes": ""
+          },
+          {
+            "id": 26,
+            "arabic": "شاي",
+            "german": "Tee",
+            "pronunciation_ar": "تي",
+            "notes": ""
+          },
+          {
+            "id": 27,
+            "arabic": "حليب",
+            "german": "Milch",
+            "pronunciation_ar": "ميلش",
+            "notes": ""
+          },
+          {
+            "id": 28,
+            "arabic": "تفاحة",
+            "german": "Apfel",
+            "pronunciation_ar": "آب-فِل",
+            "notes": ""
+          },
+          {
+            "id": 29,
+            "arabic": "منزل",
+            "german": "Haus",
+            "pronunciation_ar": "هاوس",
+            "notes": ""
+          },
+          {
+            "id": 30,
+            "arabic": "شقة",
+            "german": "Wohnung",
+            "pronunciation_ar": "فو-نونج",
+            "notes": ""
+          },
+          {
+            "id": 31,
+            "arabic": "عمل",
+            "german": "Arbeit",
+            "pronunciation_ar": "آر-بايت",
+            "notes": ""
+          },
+          {
+            "id": 32,
+            "arabic": "مدينة",
+            "german": "Stadt",
+            "pronunciation_ar": "شتات",
+            "notes": ""
+          },
+          {
+            "id": 33,
+            "arabic": "بلدة",
+            "german": "Dorf",
+            "pronunciation_ar": "دورف",
+            "notes": ""
+          },
+          {
+            "id": 34,
+            "arabic": "سيارة",
+            "german": "Auto",
+            "pronunciation_ar": "آو-تو",
+            "notes": ""
+          },
+          {
+            "id": 35,
+            "arabic": "دراجة",
+            "german": "Fahrrad",
+            "pronunciation_ar": "فار-راد",
+            "notes": ""
+          },
+          {
+            "id": 36,
+            "arabic": "قطار",
+            "german": "Zug",
+            "pronunciation_ar": "تسووك",
+            "notes": ""
+          },
+          {
+            "id": 37,
+            "arabic": "طويل",
+            "german": "groß",
+            "pronunciation_ar": "جروس",
+            "notes": ""
+          },
+          {
+            "id": 38,
+            "arabic": "قصير",
+            "german": "klein",
+            "pronunciation_ar": "كلاين",
+            "notes": ""
+          },
+          {
+            "id": 39,
+            "arabic": "جميل",
+            "german": "schön",
+            "pronunciation_ar": "شون",
+            "notes": ""
+          },
+          {
+            "id": 40,
+            "arabic": "جديد",
+            "german": "neu",
+            "pronunciation_ar": "نوي",
+            "notes": ""
+          },
+          {
+            "id": 41,
+            "arabic": "قديم",
+            "german": "alt",
+            "pronunciation_ar": "آلت",
+            "notes": ""
+          },
+          {
+            "id": 42,
+            "arabic": "ساخن",
+            "german": "heiß",
+            "pronunciation_ar": "هايس",
+            "notes": ""
+          },
+          {
+            "id": 43,
+            "arabic": "بارد",
+            "german": "kalt",
+            "pronunciation_ar": "كالت",
+            "notes": ""
+          },
+          {
+            "id": 44,
+            "arabic": "سريع",
+            "german": "schnell",
+            "pronunciation_ar": "شْنِل",
+            "notes": ""
+          },
+          {
+            "id": 45,
+            "arabic": "بطيء",
+            "german": "langsam",
+            "pronunciation_ar": "لانج-زام",
+            "notes": ""
+          },
+          {
+            "id": 46,
+            "arabic": "سهل",
+            "german": "einfach",
+            "pronunciation_ar": "آين-فاخ",
+            "notes": ""
+          },
+          {
+            "id": 47,
+            "arabic": "صعب",
+            "german": "schwierig",
+            "pronunciation_ar": "شفي-ريش",
+            "notes": ""
+          },
+          {
+            "id": 48,
+            "arabic": "مكلف",
+            "german": "teuer",
+            "pronunciation_ar": "توي-ر",
+            "notes": ""
+          },
+          {
+            "id": 49,
+            "arabic": "رخيص",
+            "german": "billig",
+            "pronunciation_ar": "بي-ليش",
+            "notes": ""
+          },
+          {
+            "id": 50,
+            "arabic": "مفتوح",
+            "german": "offen",
+            "pronunciation_ar": "أوفِن",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "level": "A2",
+        "vocab": [
+          {
+            "id": 1,
+            "arabic": "سابقًا / مُسبقًا",
+            "german": "vorher",
+            "pronunciation_ar": "فور-هير",
+            "notes": ""
+          },
+          {
+            "id": 2,
+            "arabic": "بعد ذلك",
+            "german": "nachher",
+            "pronunciation_ar": "ناخ-هير",
+            "notes": ""
+          },
+          {
+            "id": 3,
+            "arabic": "السبب",
+            "german": "der Grund",
+            "pronunciation_ar": "ديَّر جْروند",
+            "notes": ""
+          },
+          {
+            "id": 4,
+            "arabic": "النتيجة",
+            "german": "die Folge",
+            "pronunciation_ar": "دي فولجِه",
+            "notes": ""
+          },
+          {
+            "id": 5,
+            "arabic": "مُقارنة بـ",
+            "german": "verglichen mit",
+            "pronunciation_ar": "فير-جليشِن ميت",
+            "notes": ""
+          },
+          {
+            "id": 6,
+            "arabic": "على الرغم من",
+            "german": "trotz",
+            "pronunciation_ar": "تروتس",
+            "notes": "يتبعها اسم في حالة المفعول به (Akkusativ)"
+          },
+          {
+            "id": 7,
+            "arabic": "بسبب",
+            "german": "wegen",
+            "pronunciation_ar": "فيجِن",
+            "notes": "يتبعها اسم في حالة المفعول به (Akkusativ)"
+          },
+          {
+            "id": 8,
+            "arabic": "من خلال / عبر",
+            "german": "durch",
+            "pronunciation_ar": "دورش",
+            "notes": ""
+          },
+          {
+            "id": 9,
+            "arabic": "حسب / حَسَبَ",
+            "german": "laut",
+            "pronunciation_ar": "لاوت",
+            "notes": ""
+          },
+          {
+            "id": 10,
+            "arabic": "الطقس",
+            "german": "das Wetter",
+            "pronunciation_ar": "داس فيتِر",
+            "notes": ""
+          },
+          {
+            "id": 11,
+            "arabic": "الصحة",
+            "german": "die Gesundheit",
+            "pronunciation_ar": "دي جِزوندهايت",
+            "notes": ""
+          },
+          {
+            "id": 12,
+            "arabic": "أنصحك بـ...",
+            "german": "Ich empfehle dir...",
+            "pronunciation_ar": "إيش إم-فيليه دير",
+            "notes": ""
+          },
+          {
+            "id": 13,
+            "arabic": "أقترح أن...",
+            "german": "Ich schlage vor, dass...",
+            "pronunciation_ar": "إيش شلاجِه فور، داس...",
+            "notes": ""
+          },
+          {
+            "id": 14,
+            "arabic": "أوافق / لا أوافق",
+            "german": "Ich stimme zu / nicht zu",
+            "pronunciation_ar": "إيش شتيمِه تسو / نيشت تسو",
+            "notes": ""
+          },
+          {
+            "id": 15,
+            "arabic": "الهدف / الهدف",
+            "german": "das Ziel",
+            "pronunciation_ar": "داس تسيل",
+            "notes": ""
+          },
+          {
+            "id": 16,
+            "arabic": "التجربة",
+            "german": "die Erfahrung",
+            "pronunciation_ar": "دي إر-فارونج",
+            "notes": ""
+          },
+          {
+            "id": 17,
+            "arabic": "المشكلة",
+            "german": "das Problem",
+            "pronunciation_ar": "داس بروبلييم",
+            "notes": ""
+          },
+          {
+            "id": 18,
+            "arabic": "الحل",
+            "german": "die Lösung",
+            "pronunciation_ar": "دي لوزونج",
+            "notes": ""
+          },
+          {
+            "id": 19,
+            "arabic": "الطبيب",
+            "german": "der Arzt",
+            "pronunciation_ar": "ديَّر آرتست",
+            "notes": ""
+          },
+          {
+            "id": 20,
+            "arabic": "أشعر بالمرض",
+            "german": "Ich fühle mich krank",
+            "pronunciation_ar": "إيش فيوله ميش كرانك",
+            "notes": ""
+          },
+          {
+            "id": 21,
+            "arabic": "لدي موعد",
+            "german": "Ich habe einen Termin",
+            "pronunciation_ar": "إيش هابِه آينِن تيرمين",
+            "notes": ""
+          },
+          {
+            "id": 22,
+            "arabic": "أحتاج إلى دواء",
+            "german": "Ich brauche Medikamente",
+            "pronunciation_ar": "إيش براوخِه ميدي-كا-مينتَه",
+            "notes": ""
+          },
+          {
+            "id": 23,
+            "arabic": "في الخارج",
+            "german": "im Ausland",
+            "pronunciation_ar": "إيم آوس-لاند",
+            "notes": ""
+          },
+          {
+            "id": 24,
+            "arabic": "السفر",
+            "german": "die Reise",
+            "pronunciation_ar": "دي رايزِه",
+            "notes": ""
+          },
+          {
+            "id": 25,
+            "arabic": "تذكرة الذهاب والإياب",
+            "german": "die Hin- und Rückfahrkarte",
+            "pronunciation_ar": "دي هين- أوند روك-فار-كارتِه",
+            "notes": ""
+          },
+          {
+            "id": 26,
+            "arabic": "جواز السفر",
+            "german": "der Reisepass",
+            "pronunciation_ar": "ديَّر رايزِه-باس",
+            "notes": ""
+          },
+          {
+            "id": 27,
+            "arabic": "متى يغادر القطار؟",
+            "german": "Wann fährt der Zug ab?",
+            "pronunciation_ar": "فان فيرت دير تسوك آب؟",
+            "notes": ""
+          },
+          {
+            "id": 28,
+            "arabic": "أحتاج إلى مساعدة",
+            "german": "Ich benötige Hilfe",
+            "pronunciation_ar": "إيش بيه-نوتيجه هيلفِه",
+            "notes": "صيغة أكثر رسمية من 'Ich brauche Hilfe'"
+          },
+          {
+            "id": 29,
+            "arabic": "هل يمكنني الدفع ببطاقة الائتمان؟",
+            "german": "Kann ich mit Kreditkarte zahlen?",
+            "pronunciation_ar": "كان إيش ميت كريديت-كارتِه تسالِن؟",
+            "notes": ""
+          },
+          {
+            "id": 30,
+            "arabic": "الشكوى",
+            "german": "die Beschwerde",
+            "pronunciation_ar": "دي بيه-شفيردِه",
+            "notes": ""
+          },
+          {
+            "id": 31,
+            "arabic": "الوظيفة / المهنة",
+            "german": "der Beruf",
+            "pronunciation_ar": "ديَّر بيروف",
+            "notes": ""
+          },
+          {
+            "id": 32,
+            "arabic": "التقديم على وظيفة",
+            "german": "sich bewerben",
+            "pronunciation_ar": "زِيش بيه-فيربِن",
+            "notes": "فعل"
+          },
+          {
+            "id": 33,
+            "arabic": "رسالة الدافع",
+            "german": "das Anschreiben",
+            "pronunciation_ar": "داس آن-شريبِن",
+            "notes": ""
+          },
+          {
+            "id": 34,
+            "arabic": "مقابلة العمل",
+            "german": "das Vorstellungsgespräch",
+            "pronunciation_ar": "داس فور-شتيلونج-جيه-شبريش",
+            "notes": ""
+          },
+          {
+            "id": 35,
+            "arabic": "الراتب",
+            "german": "das Gehalt",
+            "pronunciation_ar": "داس جيه-هالت",
+            "notes": ""
+          },
+          {
+            "id": 36,
+            "arabic": "الزبون / العميل",
+            "german": "der Kunde",
+            "pronunciation_ar": "ديَّر كونده",
+            "notes": ""
+          },
+          {
+            "id": 37,
+            "arabic": "الاجتماع",
+            "german": "die Besprechung",
+            "pronunciation_ar": "دي بيه-شبريشونج",
+            "notes": ""
+          },
+          {
+            "id": 38,
+            "arabic": "المشروع",
+            "german": "das Projekt",
+            "pronunciation_ar": "داس بروييكت",
+            "notes": ""
+          },
+          {
+            "id": 39,
+            "arabic": "الواجب المنزلي",
+            "german": "die Hausaufgabe",
+            "pronunciation_ar": "دي هاوس-آوف-جابِه",
+            "notes": ""
+          },
+          {
+            "id": 40,
+            "arabic": "الامتحان",
+            "german": "die Prüfung",
+            "pronunciation_ar": "دي بروفونج",
+            "notes": ""
+          },
+          {
+            "id": 41,
+            "arabic": "النجاح / الرسوب",
+            "german": "bestehen / durchfallen",
+            "pronunciation_ar": "بيه-شتييه / دورش-فالِن",
+            "notes": ""
+          },
+          {
+            "id": 42,
+            "arabic": "الدراسة في الجامعة",
+            "german": "das Studium",
+            "pronunciation_ar": "داس شتوديوم",
+            "notes": ""
+          },
+          {
+            "id": 43,
+            "arabic": "العلاقات",
+            "german": "die Beziehungen",
+            "pronunciation_ar": "دي بيه-تسيونجِن",
+            "notes": "جمع"
+          },
+          {
+            "id": 44,
+            "arabic": "الصداقة",
+            "german": "die Freundschaft",
+            "pronunciation_ar": "دي فرويند-شافت",
+            "notes": ""
+          },
+          {
+            "id": 45,
+            "arabic": "الجدال / النقاش",
+            "german": "die Diskussion",
+            "pronunciation_ar": "دي ديس-كوس-يون",
+            "notes": ""
+          },
+          {
+            "id": 46,
+            "arabic": "الهدية",
+            "german": "das Geschenk",
+            "pronunciation_ar": "داس جيه-شينك",
+            "notes": ""
+          },
+          {
+            "id": 47,
+            "arabic": "الدعوة",
+            "german": "die Einladung",
+            "pronunciation_ar": "دي آين-لادونج",
+            "notes": ""
+          },
+          {
+            "id": 48,
+            "arabic": "مُثير للإعجاب",
+            "german": "beeindruckend",
+            "pronunciation_ar": "بيه-آين-دروكِنت",
+            "notes": ""
+          },
+          {
+            "id": 49,
+            "arabic": "محبط",
+            "german": "enttäuschend",
+            "pronunciation_ar": "إنت-تويشِنت",
+            "notes": ""
+          },
+          {
+            "id": 50,
+            "arabic": "من المهم أن...",
+            "german": "Es ist wichtig, dass...",
+            "pronunciation_ar": "إس إست فيش-تيخت، داس...",
+            "notes": "يتبعها جملة فرعية"
+          }
+        ]
+      },
+      {
+        "level": "B1",
+        "vocab": [
+          {
+            "id": 1,
+            "arabic": "على الرغم من ذلك",
+            "german": "trotzdem",
+            "pronunciation_ar": "تروتس-ديم",
+            "notes": "حرف ربط"
+          },
+          {
+            "id": 2,
+            "arabic": "بالإضافة إلى ذلك",
+            "german": "darüber hinaus",
+            "pronunciation_ar": "دار-أوبير هين-أوس",
+            "notes": ""
+          },
+          {
+            "id": 3,
+            "arabic": "الميزة",
+            "german": "der Vorteil",
+            "pronunciation_ar": "ديَّر فور-تايل",
+            "notes": ""
+          },
+          {
+            "id": 4,
+            "arabic": "العيب",
+            "german": "der Nachteil",
+            "pronunciation_ar": "ديَّر ناخ-تايل",
+            "notes": ""
+          },
+          {
+            "id": 5,
+            "arabic": "المقابلة / المقارنة",
+            "german": "der Vergleich",
+            "pronunciation_ar": "ديَّر فير-غلايش",
+            "notes": ""
+          },
+          {
+            "id": 6,
+            "arabic": "التأثير",
+            "german": "der Einfluss",
+            "pronunciation_ar": "ديَّر آين-فلوس",
+            "notes": ""
+          },
+          {
+            "id": 7,
+            "arabic": "التطور",
+            "german": "die Entwicklung",
+            "pronunciation_ar": "دي إنت-فيكلونج",
+            "notes": ""
+          },
+          {
+            "id": 8,
+            "arabic": "التغيير",
+            "german": "die Veränderung",
+            "pronunciation_ar": "دي فير-أنديرونج",
+            "notes": ""
+          },
+          {
+            "id": 9,
+            "arabic": "التحسن",
+            "german": "die Verbesserung",
+            "pronunciation_ar": "دي فير-بيسيرونج",
+            "notes": ""
+          },
+          {
+            "id": 10,
+            "arabic": "الانطباع",
+            "german": "der Eindruck",
+            "pronunciation_ar": "ديَّر آين-دروك",
+            "notes": ""
+          },
+          {
+            "id": 11,
+            "arabic": "يعتمد على",
+            "german": "es kommt darauf an",
+            "pronunciation_ar": "إس كومت دار-آوف آن",
+            "notes": ""
+          },
+          {
+            "id": 12,
+            "arabic": "يبدو أن",
+            "german": "es scheint, dass",
+            "pronunciation_ar": "إس شاينت، داس",
+            "notes": ""
+          },
+          {
+            "id": 13,
+            "arabic": "من الواضح أن",
+            "german": "es ist klar, dass",
+            "pronunciation_ar": "إس إست كلار، داس",
+            "notes": ""
+          },
+          {
+            "id": 14,
+            "arabic": "بشكل عام",
+            "german": "im Allgemeinen",
+            "pronunciation_ar": "إيم آل-غي-ماينِن",
+            "notes": ""
+          },
+          {
+            "id": 15,
+            "arabic": "عادةً",
+            "german": "normalerweise",
+            "pronunciation_ar": "نور-مالر-فايزه",
+            "notes": ""
+          },
+          {
+            "id": 16,
+            "arabic": "بشكل رئيسي",
+            "german": "hauptsächlich",
+            "pronunciation_ar": "هاوبت-زيكليش",
+            "notes": ""
+          },
+          {
+            "id": 17,
+            "arabic": "خاصةً",
+            "german": "besonders",
+            "pronunciation_ar": "بي-زوندرس",
+            "notes": ""
+          },
+          {
+            "id": 18,
+            "arabic": "على الأقل",
+            "german": "mindestens",
+            "pronunciation_ar": "ميندستنز",
+            "notes": ""
+          },
+          {
+            "id": 19,
+            "arabic": "على الأكثر",
+            "german": "höchstens",
+            "pronunciation_ar": "هويشستنز",
+            "notes": ""
+          },
+          {
+            "id": 20,
+            "arabic": "تقريباً",
+            "german": "ungefähr",
+            "pronunciation_ar": "أون-غي-فيير",
+            "notes": ""
+          },
+          {
+            "id": 21,
+            "arabic": "المستوى",
+            "german": "das Niveau",
+            "pronunciation_ar": "داس نيفو",
+            "notes": ""
+          },
+          {
+            "id": 22,
+            "arabic": "القدرة",
+            "german": "die Fähigkeit",
+            "pronunciation_ar": "دي فيه-غيشكايت",
+            "notes": ""
+          },
+          {
+            "id": 23,
+            "arabic": "المعرفة",
+            "german": "die Kenntnis",
+            "pronunciation_ar": "دي كينت-نيس",
+            "notes": ""
+          },
+          {
+            "id": 24,
+            "arabic": "الخبرة",
+            "german": "die Erfahrung",
+            "pronunciation_ar": "دي إر-فارونج",
+            "notes": ""
+          },
+          {
+            "id": 25,
+            "arabic": "النجاح",
+            "german": "der Erfolg",
+            "pronunciation_ar": "ديَّر إر-فولك",
+            "notes": ""
+          },
+          {
+            "id": 26,
+            "arabic": "الفشل",
+            "german": "der Misserfolg",
+            "pronunciation_ar": "ديَّر ميس-إر-فولك",
+            "notes": ""
+          },
+          {
+            "id": 27,
+            "arabic": "الفرق",
+            "german": "der Unterschied",
+            "pronunciation_ar": "ديَّر أونت-رشيد",
+            "notes": ""
+          },
+          {
+            "id": 28,
+            "arabic": "القرار",
+            "german": "die Entscheidung",
+            "pronunciation_ar": "دي إنت-شيدونج",
+            "notes": ""
+          },
+          {
+            "id": 29,
+            "arabic": "الاختيار",
+            "german": "die Wahl",
+            "pronunciation_ar": "دي فال",
+            "notes": ""
+          },
+          {
+            "id": 30,
+            "arabic": "الهدف",
+            "german": "das Ziel",
+            "pronunciation_ar": "داس تسيل",
+            "notes": ""
+          },
+          {
+            "id": 31,
+            "arabic": "الخطة",
+            "german": "der Plan",
+            "pronunciation_ar": "ديَّر بلان",
+            "notes": ""
+          },
+          {
+            "id": 32,
+            "arabic": "المستقبل",
+            "german": "die Zukunft",
+            "pronunciation_ar": "دي تسو-كونفت",
+            "notes": ""
+          },
+          {
+            "id": 33,
+            "arabic": "الماضي",
+            "german": "die Vergangenheit",
+            "pronunciation_ar": "دي فير-غانج-نهايت",
+            "notes": ""
+          },
+          {
+            "id": 34,
+            "arabic": "الحاضر",
+            "german": "die Gegenwart",
+            "pronunciation_ar": "دي غي-غن-فارت",
+            "notes": ""
+          },
+          {
+            "id": 35,
+            "arabic": "الرأي",
+            "german": "die Meinung",
+            "pronunciation_ar": "دي ماينونج",
+            "notes": ""
+          },
+          {
+            "id": 36,
+            "arabic": "النقطة الأساسية",
+            "german": "der Hauptpunkt",
+            "pronunciation_ar": "ديَّر هاوبت-بونكت",
+            "notes": ""
+          },
+          {
+            "id": 37,
+            "arabic": "الحجة",
+            "german": "das Argument",
+            "pronunciation_ar": "داس أرغو-مينت",
+            "notes": ""
+          },
+          {
+            "id": 38,
+            "arabic": "المناقشة",
+            "german": "die Diskussion",
+            "pronunciation_ar": "دي ديس-كوس-يون",
+            "notes": ""
+          },
+          {
+            "id": 39,
+            "arabic": "النتيجة",
+            "german": "das Ergebnis",
+            "pronunciation_ar": "داس إر-جيبنيس",
+            "notes": ""
+          },
+          {
+            "id": 40,
+            "arabic": "الحل",
+            "german": "die Lösung",
+            "pronunciation_ar": "دي لوزونج",
+            "notes": ""
+          },
+          {
+            "id": 41,
+            "arabic": "الصعوبة",
+            "german": "die Schwierigkeit",
+            "pronunciation_ar": "دي شفي-ريغ-كايت",
+            "notes": ""
+          },
+          {
+            "id": 42,
+            "arabic": "التحدي",
+            "german": "die Herausforderung",
+            "pronunciation_ar": "دي هير-أوس-فالديرونج",
+            "notes": ""
+          },
+          {
+            "id": 43,
+            "arabic": "الفرصة",
+            "german": "die Gelegenheit",
+            "pronunciation_ar": "دي غي-ليغن-هايت",
+            "notes": ""
+          },
+          {
+            "id": 44,
+            "arabic": "الإمكانية",
+            "german": "die Möglichkeit",
+            "pronunciation_ar": "دي موغ-ليش-كايت",
+            "notes": ""
+          },
+          {
+            "id": 45,
+            "arabic": "الشرط",
+            "german": "die Bedingung",
+            "pronunciation_ar": "دي بي-دينجونج",
+            "notes": ""
+          },
+          {
+            "id": 46,
+            "arabic": "المتطلب",
+            "german": "die Voraussetzung",
+            "pronunciation_ar": "دي فور-أوس-زيتسونج",
+            "notes": ""
+          },
+          {
+            "id": 47,
+            "arabic": "الوضع",
+            "german": "die Situation",
+            "pronunciation_ar": "دي زيت-ؤا-تسي-ون",
+            "notes": ""
+          },
+          {
+            "id": 48,
+            "arabic": "الظروف",
+            "german": "die Umstände",
+            "pronunciation_ar": "دي أوم-شتينده",
+            "notes": "جمع"
+          },
+          {
+            "id": 49,
+            "arabic": "السلوك",
+            "german": "das Verhalten",
+            "pronunciation_ar": "داس فير-هالتِن",
+            "notes": ""
+          },
+          {
+            "id": 50,
+            "arabic": "التصرف",
+            "german": "die Handlung",
+            "pronunciation_ar": "دي هاندلونج",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "level": "B2",
+            "vocab": [
+              {
+                "id": 1,
+                "arabic": "بالتأكيد",
+                "german": "zweifellos",
+                "pronunciation_ar": "تسفاي-فيلوس",
+                "notes": ""
+              },
+              {
+                "id": 2,
+                "arabic": "على وجه التحديد",
+                "german": "insbesondere",
+                "pronunciation_ar": "إنس بيزونديريه",
+                "notes": ""
+              },
+              {
+                "id": 3,
+                "arabic": "في الواقع",
+                "german": "tatsächlich",
+                "pronunciation_ar": "تات-زيكليش",
+                "notes": ""
+              },
+              {
+                "id": 4,
+                "arabic": "بشكل ملحوظ",
+                "german": "auffällig",
+                "pronunciation_ar": "أوف-فيليش",
+                "notes": ""
+              },
+              {
+                "id": 5,
+                "arabic": "بشكل كبير",
+                "german": "erheblich",
+                "pronunciation_ar": "إير-هيبليش",
+                "notes": ""
+              },
+              {
+                "id": 6,
+                "arabic": "بشكل متزايد",
+                "german": "zunehmend",
+                "pronunciation_ar": "تسو-نايمنت",
+                "notes": ""
+              },
+              {
+                "id": 7,
+                "arabic": "في النهاية",
+                "german": "letztendlich",
+                "pronunciation_ar": "ليتست-إندليش",
+                "notes": ""
+              },
+              {
+                "id": 8,
+                "arabic": "بشكل أساسي",
+                "german": "grundsätzlich",
+                "pronunciation_ar": "جروند-زينتسليش",
+                "notes": ""
+              },
+              {
+                "id": 9,
+                "arabic": "تحت أي ظرف",
+                "german": "unter keinen Umständen",
+                "pronunciation_ar": "أونتير كاينن أوم-شتيندن",
+                "notes": ""
+              },
+              {
+                "id": 10,
+                "arabic": "بغض النظر عن",
+                "german": "unabhängig von",
+                "pronunciation_ar": "أون-أاب-هينغيش فون",
+                "notes": ""
+              },
+              {
+                "id": 11,
+                "arabic": "المقابل / المعادل",
+                "german": "das Gegenstück",
+                "pronunciation_ar": "داس غيغن-شتوك",
+                "notes": ""
+              },
+              {
+                "id": 12,
+                "arabic": "الخلفية",
+                "german": "der Hintergrund",
+                "pronunciation_ar": "دير هينتر-جروند",
+                "notes": ""
+              },
+              {
+                "id": 13,
+                "arabic": "المنظور",
+                "german": "die Perspektive",
+                "pronunciation_ar": "دي بير-سبيكتيفه",
+                "notes": ""
+              },
+              {
+                "id": 14,
+                "arabic": "السياق",
+                "german": "der Zusammenhang",
+                "pronunciation_ar": "دير تسوزامن-هانغ",
+                "notes": ""
+              },
+              {
+                "id": 15,
+                "arabic": "النتيجة الحتمية",
+                "german": "die Folgeerscheinung",
+                "pronunciation_ar": "دي فولجه-إير-شاينونج",
+                "notes": ""
+              },
+              {
+                "id": 16,
+                "arabic": "التأثير الجانبي",
+                "german": "die Nebenwirkung",
+                "pronunciation_ar": "دي نيبن-فيركونج",
+                "notes": ""
+              },
+              {
+                "id": 17,
+                "arabic": "الافتراض",
+                "german": "die Annahme",
+                "pronunciation_ar": "دي أن-ناميه",
+                "notes": ""
+              },
+              {
+                "id": 18,
+                "arabic": "الفرضية",
+                "german": "die Vermutung",
+                "pronunciation_ar": "دي فير-موتونج",
+                "notes": ""
+              },
+              {
+                "id": 19,
+                "arabic": "الدليل",
+                "german": "der Nachweis",
+                "pronunciation_ar": "دير ناخ-فايس",
+                "notes": ""
+              },
+              {
+                "id": 20,
+                "arabic": "الإثبات",
+                "german": "der Beweis",
+                "pronunciation_ar": "دير بي-فايس",
+                "notes": ""
+              },
+              {
+                "id": 21,
+                "arabic": "التحقق",
+                "german": "die Überprüfung",
+                "pronunciation_ar": "دي أوبر-بروفونج",
+                "notes": ""
+              },
+              {
+                "id": 22,
+                "arabic": "التقييم",
+                "german": "die Bewertung",
+                "pronunciation_ar": "دي بي-فيرتونج",
+                "notes": ""
+              },
+              {
+                "id": 23,
+                "arabic": "المعيار",
+                "german": "das Kriterium",
+                "pronunciation_ar": "داس كري-تيريوم",
+                "notes": ""
+              },
+              {
+                "id": 24,
+                "arabic": "المستوى",
+                "german": "der Standard",
+                "pronunciation_ar": "دير شتاندارد",
+                "notes": ""
+              },
+              {
+                "id": 25,
+                "arabic": "الجودة",
+                "german": "die Qualität",
+                "pronunciation_ar": "دي كفاليتيت",
+                "notes": ""
+              },
+              {
+                "id": 26,
+                "arabic": "الكفاءة",
+                "german": "die Kompetenz",
+                "pronunciation_ar": "دي كوم-بي-تنتس",
+                "notes": ""
+              },
+              {
+                "id": 27,
+                "arabic": "المسؤولية",
+                "german": "die Verantwortung",
+                "pronunciation_ar": "دي فير-أنتفورتونج",
+                "notes": ""
+              },
+              {
+                "id": 28,
+                "arabic": "الالتزام",
+                "german": "die Verpflichtung",
+                "pronunciation_ar": "دي فير-بفليشتونج",
+                "notes": ""
+              },
+              {
+                "id": 29,
+                "arabic": "التحدي",
+                "german": "die Herausforderung",
+                "pronunciation_ar": "دي هير-أوس-فالديرونج",
+                "notes": ""
+              },
+              {
+                "id": 30,
+                "arabic": "المبادرة",
+                "german": "die Initiative",
+                "pronunciation_ar": "دي إيني-تسياتيفه",
+                "notes": ""
+              },
+              {
+                "id": 31,
+                "arabic": "الطموح",
+                "german": "der Anspruch",
+                "pronunciation_ar": "دير أن-شبروخ",
+                "notes": ""
+              },
+              {
+                "id": 32,
+                "arabic": "التوقعات",
+                "german": "die Erwartungen",
+                "pronunciation_ar": "دي إير-فار-تونجن",
+                "notes": "جمع"
+              },
+              {
+                "id": 33,
+                "arabic": "الواقع",
+                "german": "die Realität",
+                "pronunciation_ar": "دي ري-أليتيت",
+                "notes": ""
+              },
+              {
+                "id": 34,
+                "arabic": "الإدراك",
+                "german": "die Wahrnehmung",
+                "pronunciation_ar": "دي فار-نايمونج",
+                "notes": ""
+              },
+              {
+                "id": 35,
+                "arabic": "الوعي",
+                "german": "das Bewusstsein",
+                "pronunciation_ar": "داس بي-فوسست-زاين",
+                "notes": ""
+              },
+              {
+                "id": 36,
+                "arabic": "التفكير النقدي",
+                "german": "das kritische Denken",
+                "pronunciation_ar": "داس كري-تيشه دينكن",
+                "notes": ""
+              },
+              {
+                "id": 37,
+                "arabic": "التحليل",
+                "german": "die Analyse",
+                "pronunciation_ar": "دي أنا-ليزه",
+                "notes": ""
+              },
+              {
+                "id": 38,
+                "arabic": "التفسير",
+                "german": "die Interpretation",
+                "pronunciation_ar": "دي إن-تير-بري-تاتسيون",
+                "notes": ""
+              },
+              {
+                "id": 39,
+                "arabic": "المنهجية",
+                "german": "die Methodik",
+                "pronunciation_ar": "دي ميتوديك",
+                "notes": ""
+              },
+              {
+                "id": 40,
+                "arabic": "الإستراتيجية",
+                "german": "die Strategie",
+                "pronunciation_ar": "دي شترات-غي",
+                "notes": ""
+              },
+              {
+                "id": 41,
+                "arabic": "التكيف",
+                "german": "die Anpassung",
+                "pronunciation_ar": "دي أن-باسونج",
+                "notes": ""
+              },
+              {
+                "id": 42,
+                "arabic": "المرونة",
+                "german": "die Flexibilität",
+                "pronunciation_ar": "دي فليك-سيبيليتيت",
+                "notes": ""
+              },
+              {
+                "id": 43,
+                "arabic": "الابتكار",
+                "german": "die Innovation",
+                "pronunciation_ar": "دي إنو-فاتسيون",
+                "notes": ""
+              },
+              {
+                "id": 44,
+                "arabic": "التقدم",
+                "german": "der Fortschritt",
+                "pronunciation_ar": "دير فورت-شريت",
+                "notes": ""
+              },
+              {
+                "id": 45,
+                "arabic": "التطور",
+                "german": "die Entwicklung",
+                "pronunciation_ar": "دي إنت-فيكلونج",
+                "notes": ""
+              },
+              {
+                "id": 46,
+                "arabic": "التغيير الجذري",
+                "german": "der Wandel",
+                "pronunciation_ar": "دير فان-del",
+                "notes": ""
+              },
+              {
+                "id": 47,
+                "arabic": "الاتجاه",
+                "german": "der Trend",
+                "pronunciation_ar": "دير تريند",
+                "notes": ""
+              },
+              {
+                "id": 48,
+                "arabic": "الظاهرة",
+                "german": "das Phänomen",
+                "pronunciation_ar": "داس في-نومين",
+                "notes": ""
+              },
+              {
+                "id": 49,
+                "arabic": "التأثير",
+                "german": "die Auswirkung",
+                "pronunciation_ar": "دي أوس-فيركونج",
+                "notes": ""
+              },
+              {
+                "id": 50,
+                "arabic": "العواقب",
+                "german": "die Konsequenzen",
+                "pronunciation_ar": "دي كون-زي-كفينتسن",
+                "notes": "جمع"
+              }
+            ]
+      }
+    ]
+}
