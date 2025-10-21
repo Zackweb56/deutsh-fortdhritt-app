@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Badge } from '@/components/ui/badge';
-import { RotateCcw, CheckCircle, XCircle, Volume2, VolumeX, Plus } from 'lucide-react';
+import { RotateCcw, CheckCircle, XCircle, Volume2, VolumeX, Plus, ArrowLeft, BookOpen } from 'lucide-react';
 import { toast } from 'sonner';
 import vocabularsData from '@/data/vocabulars/vocabulars.json';
 import { playTTS } from '@/utils/tts';
@@ -18,9 +18,17 @@ interface VocabularyItem {
   notes: string;
 }
 
+interface Category {
+  id: number;
+  name_arabic: string;
+  name_german: string;
+  icon: string;
+  vocab: VocabularyItem[];
+}
+
 interface Level {
   level: string;
-  vocab: VocabularyItem[];
+  categories: Category[];
 }
 
 interface VocabularyLearningProps {
@@ -29,7 +37,9 @@ interface VocabularyLearningProps {
 
 export const VocabularyLearning = ({ onScoreUpdate }: VocabularyLearningProps) => {
   const { addVocabulary } = useApp();
+  const [viewMode, setViewMode] = useState<'levels' | 'categories' | 'cards'>('levels');
   const [selectedLevel, setSelectedLevel] = useState<string>('A1');
+  const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [userGuess, setUserGuess] = useState('');
   const [isFlipped, setIsFlipped] = useState(false);
@@ -47,10 +57,10 @@ export const VocabularyLearning = ({ onScoreUpdate }: VocabularyLearningProps) =
 
   const currentCard = shuffledCards[currentCardIndex];
 
-  // Shuffle cards when level changes
+  // Shuffle cards when category changes
   useEffect(() => {
-    if (currentLevel) {
-      const shuffled = [...currentLevel.vocab].sort(() => Math.random() - 0.5);
+    if (selectedCategory) {
+      const shuffled = [...selectedCategory.vocab].sort(() => Math.random() - 0.5);
       setShuffledCards(shuffled);
       setCurrentCardIndex(0);
       setUserGuess('');
@@ -58,7 +68,29 @@ export const VocabularyLearning = ({ onScoreUpdate }: VocabularyLearningProps) =
       setIsCorrect(null);
       setScore({ correct: 0, total: 0 });
     }
-  }, [selectedLevel, currentLevel]);
+  }, [selectedCategory]);
+
+  // Handle level selection
+  const handleLevelSelect = (level: string) => {
+    setSelectedLevel(level);
+    setViewMode('categories');
+  };
+
+  // Handle category selection
+  const handleCategorySelect = (category: Category) => {
+    setSelectedCategory(category);
+    setViewMode('cards');
+  };
+
+  // Handle back navigation
+  const handleBack = () => {
+    if (viewMode === 'cards') {
+      setViewMode('categories');
+      setSelectedCategory(null);
+    } else if (viewMode === 'categories') {
+      setViewMode('levels');
+    }
+  };
 
   const handleGuess = () => {
     if (!currentCard || !userGuess.trim()) {
@@ -99,8 +131,8 @@ export const VocabularyLearning = ({ onScoreUpdate }: VocabularyLearningProps) =
   };
 
   const handleRestart = () => {
-    if (currentLevel) {
-      const shuffled = [...currentLevel.vocab].sort(() => Math.random() - 0.5);
+    if (selectedCategory) {
+      const shuffled = [...selectedCategory.vocab].sort(() => Math.random() - 0.5);
       setShuffledCards(shuffled);
       setCurrentCardIndex(0);
       setUserGuess('');
@@ -146,11 +178,106 @@ export const VocabularyLearning = ({ onScoreUpdate }: VocabularyLearningProps) =
     });
   };
 
-  if (!currentLevel || shuffledCards.length === 0) {
+  // Levels View
+  if (viewMode === 'levels') {
+    return (
+      <div className="space-y-6">
+        <Card className="card-gradient p-6">
+          <div className="flex items-center gap-3 mb-6">
+            <BookOpen className="h-6 w-6 text-primary" />
+            <h2 className="text-2xl font-bold">اختر مستوى التعلم</h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {levels.map((level) => (
+              <Button
+                key={level.level}
+                onClick={() => handleLevelSelect(level.level)}
+                className="h-20 text-lg font-bold bg-primary hover:bg-primary/90 text-primary-foreground"
+                variant="default"
+              >
+                {level.level}
+              </Button>
+            ))}
+          </div>
+        </Card>
+      </div>
+    );
+  }
+
+  // Categories View
+  if (viewMode === 'categories') {
+    if (!currentLevel) {
+      return (
+        <Card className="card-gradient p-6">
+          <div className="text-center text-muted-foreground">
+            <p>لا توجد فئات متاحة للمستوى المحدد</p>
+          </div>
+        </Card>
+      );
+    }
+
+    return (
+      <div className="space-y-6">
+        <Card className="card-gradient p-6">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
+            <div className="flex items-center gap-3">
+              <h2 className="text-2xl font-bold">مستوى {selectedLevel} - اختر الفئة</h2>
+            </div>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={handleBack}
+              className="gap-2 self-start sm:self-auto"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              العودة
+            </Button>
+          </div>
+          <div className="flex flex-wrap justify-center gap-4">
+            {currentLevel.categories.map((category) => (
+              <Card
+                key={category.id}
+                className="overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-200 hover:scale-105 w-fit max-w-xs"
+                onClick={() => handleCategorySelect(category)}
+              >
+                {/* Card Header - Image Based Size */}
+                <div className="bg-primary/10 relative flex items-center justify-center">
+                  <img
+                    src={category.icon}
+                    alt={category.name_arabic}
+                    className="w-auto h-48 object-contain"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                      e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                    }}
+                  />
+                  <div className="absolute inset-0 w-full h-full bg-primary/10 flex items-center justify-center hidden">
+                    <BookOpen className="w-16 h-16 text-primary" />
+                  </div>
+                </div>
+                
+                {/* Card Body - Category Information */}
+                <div className="p-4 text-center space-y-2 min-w-[200px]">
+                  <h3 className="font-bold text-sm leading-tight">{category.name_arabic}</h3>
+                  <p className="text-xs text-muted-foreground leading-tight">{category.name_german}</p>
+                  <Badge variant="secondary" className="text-xs">
+                    {category.vocab.length} مفردة
+                  </Badge>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </Card>
+      </div>
+    );
+  }
+
+  // Cards View
+  if (!selectedCategory || shuffledCards.length === 0) {
     return (
       <Card className="card-gradient p-6">
         <div className="text-center text-muted-foreground">
-          <p>لا توجد مفردات متاحة للمستوى المحدد</p>
+          <p>لا توجد مفردات متاحة للفئة المحددة</p>
         </div>
       </Card>
     );
@@ -158,22 +285,23 @@ export const VocabularyLearning = ({ onScoreUpdate }: VocabularyLearningProps) =
 
   return (
     <div className="space-y-6">
-      {/* Level Selection and Score */}
+      {/* Header with Back Button and Score */}
       <Card className="card-gradient p-6">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6">
           <div className="flex items-center gap-4">
-            <Select value={selectedLevel} onValueChange={setSelectedLevel}>
-              <SelectTrigger className="w-32">
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                {levels.map(level => (
-                  <SelectItem key={`level-${level.level}`} value={level.level}>
-                    {level.level}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={handleBack}
+              className="gap-2"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              العودة
+            </Button>
+            <div>
+              <h2 className="text-lg font-bold">{selectedCategory.name_arabic}</h2>
+              <p className="text-sm text-muted-foreground">{selectedCategory.name_german}</p>
+            </div>
             <Badge variant="secondary" className="text-sm">
               {currentCardIndex + 1} / {shuffledCards.length}
             </Badge>
