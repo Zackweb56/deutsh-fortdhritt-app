@@ -7,7 +7,7 @@
             "id": 1,
             "name_arabic": "التحيات والأساسيات",
             "name_german": "Begrüßungen und Grundlagen",
-            "icon": "public/media/images/a1_cat_01.png",
+            "icon": "/media/images/a1_cat_01.png",
             "vocab": [
               {
                 "id": 1,
@@ -365,7 +365,7 @@
             "id": 2,
             "name_arabic": "الأرقام والوقت",
             "name_german": "Zahlen und Zeit",
-            "icon": "public/media/images/a1_cat_02.png",
+            "icon": "/media/images/a1_cat_02.png",
             "vocab": [
               {
                 "id": 1,
@@ -723,7 +723,7 @@
             "id": 3,
             "name_arabic": "العائلة والأشخاص",
             "name_german": "Familie und Menschen",
-            "icon": "public/media/images/a1_cat_03.png",
+            "icon": "/media/images/a1_cat_03.png",
             "vocab": [
               {
                 "id": 1,
@@ -1081,7 +1081,7 @@
             "id": 4,
             "name_arabic": "المنزل والأشياء",
             "name_german": "Zuhause und Objekte",
-            "icon": "public/media/images/a1_cat_04.png",
+            "icon": "/media/images/a1_cat_04.png",
             "vocab": [
               {
                 "id": 1,
@@ -1439,7 +1439,7 @@
             "id": 5,
             "name_arabic": "الطعام والشراب",
             "name_german": "Essen und Trinken",
-            "icon": "public/media/images/a1_cat_05.png",
+            "icon": "/media/images/a1_cat_05.png",
             "vocab": [
               {
                 "id": 1,
@@ -1802,7 +1802,7 @@
             "id": 1,
             "name_arabic": "الملابس والتسوق",
             "name_german": "Kleidung und Einkaufen",
-            "icon": "public/media/images/a2_cat_01.png",
+            "icon": "/media/images/a2_cat_01.png",
             "vocab": [
               {
                 "id": 1,
@@ -2160,7 +2160,7 @@
             "id": 2,
             "name_arabic": "الأنشطة اليومية",
             "name_german": "Tägliche Aktivitäten",
-            "icon": "public/media/images/a2_cat_02.png",
+            "icon": "/media/images/a2_cat_02.png",
             "vocab": [
               {
                 "id": 1,
@@ -2518,7 +2518,7 @@
             "id": 3,
             "name_arabic": "الطقس والفصول",
             "name_german": "Wetter und Jahreszeiten",
-            "icon": "public/media/images/a2_cat_03.png",
+            "icon": "/media/images/a2_cat_03.png",
             "vocab": [
               {
                 "id": 1,
@@ -2876,7 +2876,7 @@
             "id": 4,
             "name_arabic": "المدينة والأماكن",
             "name_german": "Stadt und Orte",
-            "icon": "public/media/images/a2_cat_04.png",
+            "icon": "/media/images/a2_cat_04.png",
             "vocab": [
               {
                 "id": 1,
@@ -3234,7 +3234,7 @@
             "id": 5,
             "name_arabic": "الصحة والجسم",
             "name_german": "Gesundheit und Körper",
-            "icon": "public/media/images/a2_cat_05.png",
+            "icon": "/media/images/a2_cat_05.png",
             "vocab": [
               {
                 "id": 1,
@@ -3597,7 +3597,7 @@
             "id": 1,
             "name_arabic": "العمل والمهن",
             "name_german": "Arbeit und Berufe",
-            "icon": "public/media/images/b1_cat_01.png",
+            "icon": "/media/images/b1_cat_01.png",
             "vocab": [
               {
                 "id": 1,
@@ -3955,7 +3955,7 @@
             "id": 2,
             "name_arabic": "السفر والمواصلات",
             "name_german": "Reisen und Transport",
-            "icon": "public/media/images/b1_cat_02.png",
+            "icon": "/media/images/b1_cat_02.png",
             "vocab": [
               {
                 "id": 1,
@@ -4320,7 +4320,7 @@
             "id": 3,
             "name_arabic": "الإعلام والاتصال",
             "name_german": "Medien und Kommunikation",
-            "icon": "public/media/images/b1_cat_03.png",
+            "icon": "/media/images/b1_cat_03.png",
             "vocab": [
               {
                 "id": 1,
@@ -4678,7 +4678,7 @@
             "id": 4,
             "name_arabic": "المشاعر والعواطف",
             "name_german": "Gefühle und Emotionen",
-            "icon": "public/media/images/b1_cat_04.png",
+            "icon": "/media/images/b1_cat_04.png",
             "vocab": [
               {
                 "id": 1,
@@ -5036,7 +5036,7 @@
             "id": 5,
             "name_arabic": "المدرسة والتعليم",
             "name_german": "Schule und Bildung",
-            "icon": "public/media/images/b1_cat_05.png",
+            "icon": "/media/images/b1_cat_05.png",
             "vocab": [
               {
                 "id": 1,
@@ -5399,7 +5399,7 @@
             "id": 1,
             "name_arabic": "السياسة والمجتمع",
             "name_german": "Politik und Gesellschaft",
-            "icon": "public/media/images/b2_cat_01.png",
+            "icon": "/media/images/b2_cat_01.png",
             "vocab": [
               {
                 "id": 1,
@@ -5757,7 +5757,7 @@
             "id": 2,
             "name_arabic": "البيئة والطبيعة",
             "name_german": "Umwelt und Natur",
-            "icon": "public/media/images/b2_cat_02.png",
+            "icon": "/media/images/b2_cat_02.png",
             "vocab": [
               {
                 "id": 1,
@@ -6115,7 +6115,7 @@
             "id": 3,
             "name_arabic": "التكنولوجيا",
             "name_german": "Technologie",
-            "icon": "public/media/images/b2_cat_03.png",
+            "icon": "/media/images/b2_cat_03.png",
             "vocab": [
               {
                 "id": 1,
@@ -6473,7 +6473,7 @@
             "id": 4,
             "name_arabic": "الثقافة والتقاليد",
             "name_german": "Kultur und Traditionen",
-            "icon": "public/media/images/b2_cat_04.png",
+            "icon": "/media/images/b2_cat_04.png",
             "vocab": [
               {
                 "id": 1,
@@ -6831,7 +6831,7 @@
             "id": 5,
             "name_arabic": "المفاهيم المجردة",
             "name_german": "Abstrakte Konzepte",
-            "icon": "public/media/images/b2_cat_05.png",
+            "icon": "/media/images/b2_cat_05.png",
             "vocab": [
               {
                 "id": 1,
