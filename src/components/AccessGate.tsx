@@ -2,6 +2,21 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { Lock, X, MessageCircle } from "lucide-react";
 import { ACCESS_FLAG_KEY, ACCESS_TIER_KEY, getAllowedCodes, getFreeAccessCode, setAccessTier, isLimitedAccess, WHATSAPP_LINK } from '@/lib/access';
 
+const DEVICE_ID_KEY = 'device_id';
+
+const getDeviceId = (): string => {
+  try {
+    let id = localStorage.getItem(DEVICE_ID_KEY);
+    if (!id) {
+      id = crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).substring(2) + Date.now().toString(36);
+      localStorage.setItem(DEVICE_ID_KEY, id);
+    }
+    return id;
+  } catch {
+    return 'fallback-device-id';
+  }
+};
+
 interface AccessGateProps {
   children: React.ReactNode;
 }
@@ -44,10 +59,11 @@ const AccessGate: React.FC<AccessGateProps> = ({ children }) => {
     }
 
     try {
+      const deviceId = getDeviceId();
       const resp = await fetch('/api/verify-code', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ code: input }),
+        body: JSON.stringify({ code: input, deviceId }),
       });
       const data = await resp.json();
       // Fallback: allow locally if server is not configured

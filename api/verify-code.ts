@@ -42,8 +42,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   if (req.method !== 'POST') return res.status(405).json({ ok: false, error: 'method_not_allowed' });
 
-  const { code } = req.body || {};
-  if (typeof code !== 'string') return res.status(400).json({ ok: false, error: 'invalid_request' });
+  const { code, deviceId } = req.body || {};
+  if (typeof code !== 'string' || typeof deviceId !== 'string') return res.status(400).json({ ok: false, error: 'invalid_request' });
 
   const normalized = code.trim().toUpperCase();
 
@@ -53,13 +53,21 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (!ALLOWED.has(normalized)) return res.status(200).json({ ok: false, status: 'invalid' });
 
   const key = USED_KEY(normalized);
-  const already = await redis.get<string>(key);
-  if (already === 'true') return res.status(200).json({ ok: false, status: 'used' });
-
-  // SET key true NX ensures single-writer; if returns null, someone else set it first
-  const setResult = await redis.set<string>(key, 'true', { nx: true });
-  if (setResult === null) {
+  const storedDeviceId = await redis.get<string>(key);
+  if (storedDeviceId && storedDeviceId !== deviceId) {
     return res.status(200).json({ ok: false, status: 'used' });
+  }
+
+  // If no stored deviceId, set it to this deviceId NX ensures single-writer
+  if (!storedDeviceId) {
+    const setResult = await redis.set<string>(key, deviceId, { nx: true });
+    if (setResult === null) {
+      // Someone else set it first, check again
+      const newStored = await redis.get<string>(key);
+      if (newStored && newStored !== deviceId) {
+        return res.status(200).json({ ok: false, status: 'used' });
+      }
+    }
   }
   return res.status(200).json({ ok: true, status: 'ok' });
 }
