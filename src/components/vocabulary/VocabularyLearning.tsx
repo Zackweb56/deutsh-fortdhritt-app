@@ -345,10 +345,16 @@ export const VocabularyLearning = ({ onScoreUpdate }: VocabularyLearningProps) =
               {/* Front of Card (Arabic) */}
               <div className="absolute inset-0 w-full h-full backface-hidden bg-card rounded-lg border-2 border-border flex flex-col items-center justify-center p-6">
                 <div className="text-center">
-                  <h3 className="text-2xl font-bold text-card-foreground mb-4">
+                  <h3
+                    dir="rtl"
+                    className="text-2xl font-bold text-card-foreground mb-4 text-right"
+                    style={{ unicodeBidi: "bidi-override" }}
+                  >
                     {currentCard?.arabic}
                   </h3>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm text-muted-foreground" dir="rtl" 
+                    style={{ unicodeBidi: "bidi-override" }}
+                  >
                     ما هي الكلمة الألمانية؟
                   </p>
                 </div>
