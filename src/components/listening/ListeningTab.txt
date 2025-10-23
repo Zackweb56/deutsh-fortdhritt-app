@@ -32,14 +32,6 @@ interface LevelData {
   exercises: ListeningExercise[];
 }
 
-interface WordTiming {
-  word: string;
-  startTime: number;
-  endTime: number;
-  index: number;
-  paragraphIndex: number;
-}
-
 const ListeningTab = () => {
   const [selectedLevel, setSelectedLevel] = useState<keyof typeof listeningData>('A1');
   const [selectedExercise, setSelectedExercise] = useState<ListeningExercise | null>(null);
@@ -51,12 +43,9 @@ const ListeningTab = () => {
   const [isMuted, setIsMuted] = useState(false);
   const [showCaptions, setShowCaptions] = useState(true);
   const [playbackRate, setPlaybackRate] = useState(1);
-  const [currentWordIndex, setCurrentWordIndex] = useState(-1);
-  const [wordTimings, setWordTimings] = useState<WordTiming[]>([]);
   
   const audioRef = useRef<HTMLAudioElement>(null);
   const progressRef = useRef<HTMLDivElement>(null);
-  const germanTextRef = useRef<HTMLDivElement>(null);
 
   const levels = Object.keys(listeningData) as Array<keyof typeof listeningData>;
   const currentLevelData = listeningData[selectedLevel] as LevelData;
@@ -68,158 +57,14 @@ const ListeningTab = () => {
     exercise.german.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // Reset when exercise changes
-  useEffect(() => {
-    if (selectedExercise) {
-      setCurrentWordIndex(-1);
-      setWordTimings([]);
-      setCurrentTime(0);
-    }
-  }, [selectedExercise]);
-
-  // Get actual duration and initialize timings
-  useEffect(() => {
-    const audio = audioRef.current;
-    if (!audio || !selectedExercise) return;
-
-    const handleLoadedMetadata = () => {
-      const actualDuration = audio.duration;
-      setDuration(actualDuration);
-      initializeWordTimings(selectedExercise.german, actualDuration);
-    };
-
-    audio.addEventListener('loadedmetadata', handleLoadedMetadata);
-    
-    // If metadata is already loaded
-    if (audio.duration) {
-      handleLoadedMetadata();
-    }
-    
-    return () => {
-      audio.removeEventListener('loadedmetadata', handleLoadedMetadata);
-    };
-  }, [selectedExercise]);
-
-  // Split text into paragraphs and words
-  const splitTextIntoParagraphsAndWords = (text: string): { paragraphs: string[][], words: string[] } => {
-    // Split into paragraphs
-    const paragraphs = text.split(/\.\s+/).filter(p => p.length > 0);
-    
-    const paragraphWords: string[][] = [];
-    const allWords: string[] = [];
-    let wordIndex = 0;
-
-    paragraphs.forEach((paragraph, paraIndex) => {
-      // Add period back to the last sentence of each paragraph except the last one
-      const paragraphText = paraIndex < paragraphs.length - 1 ? paragraph + '.' : paragraph;
-      
-      // Split paragraph into words with punctuation
-      const words = paragraphText.split(/(\s+)/).filter(part => part.trim().length > 0);
-      
-      paragraphWords.push(words);
-      allWords.push(...words);
-    });
-
-    return { paragraphs: paragraphWords, words: allWords };
-  };
-
-  // Generate more accurate word timings
-  const initializeWordTimings = (text: string, audioDuration: number) => {
-    const { paragraphs, words } = splitTextIntoParagraphsAndWords(text);
-    const estimatedTimings: WordTiming[] = [];
-    
-    // More sophisticated timing estimation
-    const totalCharacters = text.replace(/\s/g, '').length;
-    const charactersPerSecond = totalCharacters / audioDuration;
-    
-    let currentTime = 0;
-    let wordIndex = 0;
-
-    paragraphs.forEach((paragraphWords, paragraphIndex) => {
-      paragraphWords.forEach((word) => {
-        // Estimate time based on word complexity (length + punctuation)
-        let wordDuration = (word.length / charactersPerSecond) * 0.8; // Base duration
-        
-        // Adjust for punctuation and word complexity
-        if (word.match(/[.,!?;:]/)) {
-          wordDuration *= 1.3; // Pause for punctuation
-        }
-        
-        // Adjust for long words
-        if (word.length > 8) {
-          wordDuration *= 1.2;
-        }
-        
-        // Minimum duration
-        wordDuration = Math.max(wordDuration, 0.3);
-        
-        estimatedTimings.push({
-          word,
-          startTime: currentTime,
-          endTime: currentTime + wordDuration,
-          index: wordIndex,
-          paragraphIndex
-        });
-        
-        currentTime += wordDuration;
-        wordIndex++;
-      });
-      
-      // Add a small pause between paragraphs
-      if (paragraphIndex < paragraphs.length - 1) {
-        currentTime += 0.5; // 0.5 second pause between paragraphs
-      }
-    });
-
-    // Normalize to fit actual audio duration
-    const totalEstimatedTime = currentTime;
-    const scaleFactor = audioDuration / totalEstimatedTime;
-    
-    const normalizedTimings = estimatedTimings.map(timing => ({
-      ...timing,
-      startTime: timing.startTime * scaleFactor,
-      endTime: timing.endTime * scaleFactor
-    }));
-
-    setWordTimings(normalizedTimings);
-  };
-
   // Audio event handlers
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
 
-    const handleTimeUpdate = () => {
-      const time = audio.currentTime;
-      setCurrentTime(time);
-      
-      // Find the current word based on timing
-      if (wordTimings.length > 0) {
-        const currentWord = wordTimings.find(
-          timing => time >= timing.startTime && time < timing.endTime
-        );
-        
-        if (currentWord && currentWord.index !== currentWordIndex) {
-          setCurrentWordIndex(currentWord.index);
-        } else if (!currentWord && currentWordIndex !== -1) {
-          // Reset if no word found (between words or at end)
-          setCurrentWordIndex(-1);
-        }
-      }
-    };
-
-    const handleDurationChange = () => {
-      const newDuration = audio.duration;
-      if (newDuration && newDuration !== duration) {
-        setDuration(newDuration);
-      }
-    };
-
-    const handleEnded = () => {
-      setIsPlaying(false);
-      setCurrentWordIndex(-1);
-    };
-
+    const handleTimeUpdate = () => setCurrentTime(audio.currentTime);
+    const handleDurationChange = () => setDuration(audio.duration);
+    const handleEnded = () => setIsPlaying(false);
     const handlePlay = () => setIsPlaying(true);
     const handlePause = () => setIsPlaying(false);
 
@@ -236,24 +81,7 @@ const ListeningTab = () => {
       audio.removeEventListener('play', handlePlay);
       audio.removeEventListener('pause', handlePause);
     };
-  }, [selectedExercise, wordTimings, currentWordIndex, duration]);
-
-  // Scroll to keep current word visible
-  useEffect(() => {
-    if (currentWordIndex >= 0 && germanTextRef.current) {
-      const wordElements = germanTextRef.current.querySelectorAll('.word-highlight');
-      if (wordElements[currentWordIndex]) {
-        // Small delay to ensure the highlight is applied
-        setTimeout(() => {
-          wordElements[currentWordIndex].scrollIntoView({
-            behavior: 'smooth',
-            block: 'center',
-            inline: 'nearest'
-          });
-        }, 100);
-      }
-    }
-  }, [currentWordIndex]);
+  }, [selectedExercise]);
 
   // Audio controls
   const togglePlayPause = () => {
@@ -263,9 +91,7 @@ const ListeningTab = () => {
     if (isPlaying) {
       audio.pause();
     } else {
-      audio.play().catch(error => {
-        console.error('Audio play failed:', error);
-      });
+      audio.play();
     }
   };
 
@@ -277,11 +103,9 @@ const ListeningTab = () => {
     const rect = progressBar.getBoundingClientRect();
     const clickX = e.clientX - rect.left;
     const percentage = clickX / rect.width;
-    const newTime = percentage * duration;
-    
-    audio.currentTime = newTime;
-    setCurrentTime(newTime);
+    audio.currentTime = percentage * duration;
   };
+
 
   const handleVolumeChange = (newVolume: number) => {
     const audio = audioRef.current;
@@ -314,97 +138,16 @@ const ListeningTab = () => {
   };
 
   const formatTime = (time: number) => {
-    if (isNaN(time)) return "0:00";
     const minutes = Math.floor(time / 60);
     const seconds = Math.floor(time % 60);
     return `${minutes}:${seconds.toString().padStart(2, '0')}`;
-  };
-
-  // Render German text with word highlighting in paragraphs
-  const renderGermanText = () => {
-    if (!selectedExercise || wordTimings.length === 0) {
-      return (
-        <div className="p-6 bg-gradient-to-br from-neutral-800 to-neutral-900 rounded-xl border border-neutral-700 shadow-sm">
-          <p
-            className="text-base leading-loose whitespace-pre-line text-neutral-100 font-medium text-left"
-            dir="ltr"
-            style={{
-              direction: 'ltr',
-              unicodeBidi: 'bidi-override',
-              textAlign: 'left',
-            }}
-          >
-            {selectedExercise?.german}
-          </p>
-        </div>
-      );
-    }
-
-    // Group words by paragraph
-    const paragraphs: WordTiming[][] = [];
-    wordTimings.forEach((timing) => {
-      if (!paragraphs[timing.paragraphIndex]) {
-        paragraphs[timing.paragraphIndex] = [];
-      }
-      paragraphs[timing.paragraphIndex].push(timing);
-    });
-
-    return (
-      <div
-        className="p-6 bg-gradient-to-br from-neutral-800 to-neutral-900 rounded-xl border border-neutral-700 shadow-sm max-h-96 overflow-y-auto"
-        dir="ltr"
-        style={{
-          direction: 'ltr',
-          unicodeBidi: 'isolate', // key difference here!
-        }}
-      >
-        <div className="space-y-5">
-          {paragraphs.map((paragraphWords, paragraphIndex) => (
-            <p
-              key={paragraphIndex}
-              className="text-base leading-loose mb-5 last:mb-0 text-left"
-              dir="ltr"
-              style={{
-                direction: 'ltr',
-                unicodeBidi: 'isolate',
-                textAlign: 'left',
-              }}
-            >
-              {paragraphWords.map((timing) => {
-                const isCurrent = timing.index === currentWordIndex;
-                const isPast = currentWordIndex !== -1 && timing.index < currentWordIndex;
-
-                return (
-                  <span
-                    key={timing.index}
-                    className={`word-highlight transition-all duration-300 mx-0.5 inline-block ${
-                      isCurrent
-                        ? 'bg-yellow-400 text-gray-900 font-bold px-2 py-1 rounded-md shadow-lg scale-110 ring-2 ring-yellow-500 ring-offset-1'
-                        : isPast
-                        ? 'text-neutral-400 opacity-70 font-medium'
-                        : 'text-neutral-100 font-medium'
-                    }`}
-                    style={{
-                      direction: 'ltr',
-                      unicodeBidi: 'isolate',
-                    }}
-                  >
-                    {timing.word}
-                  </span>
-                );
-              })}
-            </p>
-          ))}
-        </div>
-      </div>
-    );
   };
 
   const progressPercentage = duration > 0 ? (currentTime / duration) * 100 : 0;
 
   return (
     <div className="space-y-6">
-      {/* Header and other components remain the same */}
+      {/* Header */}
       <Card className="p-6 bg-gradient-to-r from-primary/5 to-secondary/5 border-primary/20">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="flex items-center gap-3">
@@ -464,6 +207,7 @@ const ListeningTab = () => {
             </h3>
             <div className="space-y-2 max-h-96 overflow-y-auto">
               {filteredExercises.map((exercise) => {
+                // Find the original index in the level's exercises to determine locking
                 const originalIndex = currentLevelData.exercises.findIndex(ex => ex.id === exercise.id);
                 const shouldLock = limited && originalIndex >= 2;
                 return (
@@ -529,6 +273,12 @@ const ListeningTab = () => {
                       console.error('Audio error:', e);
                       console.error('Audio src:', selectedExercise.audio_url);
                     }}
+                    onLoadStart={() => {
+                      console.log('Audio loading started:', selectedExercise.audio_url);
+                    }}
+                    onCanPlay={() => {
+                      console.log('Audio can play:', selectedExercise.audio_url);
+                    }}
                   />
 
                   {/* Progress Bar */}
@@ -549,17 +299,23 @@ const ListeningTab = () => {
                     </div>
                   </div>
 
-                  {/* Controls */}
+                  {/* All Controls in Glass Container */}
                   <div className="backdrop-blur-lg bg-black/20 border border-white/10 rounded-2xl p-4 shadow-xl">
                     <div className="flex flex-col items-center gap-4">
+                      {/* Play/Pause Button */}
                       <Button
                         size="lg"
                         onClick={togglePlayPause}
-                        className="h-14 w-14 rounded-full backdrop-blur-sm bg-white/20 hover:bg-white/30 border border-white/30 shadow-lg"
+                        className="h-14 w-14 rounded-full backdrop-blur-sm bg-white/20 hover:bg-white/30 border border-white/30 shadow-lg transition-all duration-200"
                       >
-                        {isPlaying ? <Pause className="h-6 w-6" /> : <Play className="h-6 w-6" />}
+                        {isPlaying ? (
+                          <Pause className="h-6 w-6" />
+                        ) : (
+                          <Play className="h-6 w-6" />
+                        )}
                       </Button>
 
+                      {/* Additional Controls */}
                       <div className="flex flex-col sm:flex-row items-center justify-between gap-4 w-full">
                         <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
                           {/* Volume Control */}
@@ -570,7 +326,11 @@ const ListeningTab = () => {
                               onClick={toggleMute}
                               className="rounded-full h-10 w-10 p-0 backdrop-blur-sm bg-white/20 hover:bg-white/30 border border-white/30"
                             >
-                              {isMuted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
+                              {isMuted ? (
+                                <VolumeX className="h-4 w-4" />
+                              ) : (
+                                <Volume2 className="h-4 w-4" />
+                              )}
                             </Button>
                             <div className="flex-1 sm:w-32 min-w-0">
                               <Slider
@@ -594,7 +354,7 @@ const ListeningTab = () => {
                                   variant={playbackRate === rate ? "default" : "outline"}
                                   size="sm"
                                   onClick={() => handlePlaybackRateChange(rate)}
-                                  className={`h-9 w-12 text-xs rounded-full ${
+                                  className={`h-9 w-12 text-xs rounded-full transition-all duration-200 ${
                                     playbackRate === rate 
                                       ? 'bg-primary text-primary-foreground shadow-lg' 
                                       : 'backdrop-blur-sm bg-white/20 hover:bg-white/30 border-white/30 text-white hover:text-white'
@@ -607,11 +367,12 @@ const ListeningTab = () => {
                           </div>
                         </div>
 
+                        {/* Caption Toggle */}
                         <Button
                           variant={showCaptions ? "default" : "outline"}
                           size="sm"
                           onClick={() => setShowCaptions(!showCaptions)}
-                          className={`rounded-full px-4 py-2 ${
+                          className={`rounded-full px-4 py-2 transition-all duration-200 ${
                             showCaptions 
                               ? 'bg-primary text-primary-foreground shadow-lg' 
                               : 'backdrop-blur-sm bg-white/20 hover:bg-white/30 border-white/30 text-white hover:text-white'
@@ -625,21 +386,21 @@ const ListeningTab = () => {
                   </div>
                 </div>
 
-                {/* German Text with Highlighting */}
+                {/* German Text */}
                 <div className="space-y-4">
                   <div>
                     <h4 className="font-semibold mb-2 text-primary">النص الألماني</h4>
-                    {renderGermanText()}
+                    <div className="p-4 bg-muted/50 rounded-lg">
+                      <p className="text-sm leading-relaxed text-left">{selectedExercise.german}</p>
+                    </div>
                   </div>
 
-                  {/* Arabic Translation */}
+                  {/* Arabic Translation (Captions) */}
                   {showCaptions && (
                     <div>
                       <h4 className="font-semibold mb-2 text-secondary">الترجمة العربية</h4>
                       <div className="p-4 bg-secondary/10 rounded-lg border border-secondary/20">
-                        <p className="text-sm leading-relaxed text-right whitespace-pre-line">
-                          {selectedExercise.arabic}
-                        </p>
+                        <p className="text-sm leading-relaxed text-right">{selectedExercise.arabic}</p>
                       </div>
                     </div>
                   )}
@@ -650,7 +411,9 @@ const ListeningTab = () => {
             <Card className="p-8 text-center">
               <Headphones className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
               <h3 className="text-lg font-semibold mb-2">اختر تمرين للاستماع</h3>
-              <p className="text-muted-foreground">اختر تمرين من القائمة لبدء الاستماع</p>
+              <p className="text-muted-foreground">
+                اختر تمرين من القائمة لبدء الاستماع
+              </p>
             </Card>
           )}
         </div>
@@ -661,7 +424,9 @@ const ListeningTab = () => {
         <Card className="p-8 text-center">
           <Headphones className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
           <h3 className="text-lg font-semibold mb-2">لا توجد تمارين</h3>
-          <p className="text-muted-foreground">لم يتم العثور على تمارين تطابق البحث "{searchTerm}"</p>
+          <p className="text-muted-foreground">
+            لم يتم العثور على تمارين تطابق البحث "{searchTerm}"
+          </p>
         </Card>
       )}
     </div>
