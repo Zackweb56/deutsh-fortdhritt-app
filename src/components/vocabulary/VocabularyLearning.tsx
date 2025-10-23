@@ -9,6 +9,8 @@ import { toast } from 'sonner';
 import vocabularsData from '@/data/vocabulars/vocabulars.json';
 import { playTTS } from '@/utils/tts';
 import { useApp } from '@/contexts/AppContext';
+import { isLimitedAccess } from '@/lib/access';
+import LockOverlay from '@/components/ui/lock-overlay';
 
 interface VocabularyItem {
   id: number;
@@ -216,6 +218,8 @@ export const VocabularyLearning = ({ onScoreUpdate }: VocabularyLearningProps) =
       );
     }
 
+    const limited = isLimitedAccess();
+
     return (
       <div className="space-y-6">
         <Card className="card-gradient p-6">
@@ -234,38 +238,42 @@ export const VocabularyLearning = ({ onScoreUpdate }: VocabularyLearningProps) =
             </Button>
           </div>
           <div className="flex flex-wrap justify-center gap-4">
-            {currentLevel.categories.map((category) => (
-              <Card
-                key={category.id}
-                className="overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-200 hover:scale-105 w-fit max-w-xs"
-                onClick={() => handleCategorySelect(category)}
-              >
-                {/* Card Header - Image Based Size */}
-                <div className="bg-primary/10 relative flex items-center justify-center">
-                  <img
-                    src={category.icon}
-                    alt={category.name_arabic}
-                    className="w-auto h-48 object-contain"
-                    onError={(e) => {
-                      e.currentTarget.style.display = 'none';
-                      e.currentTarget.nextElementSibling?.classList.remove('hidden');
-                    }}
-                  />
-                  <div className="absolute inset-0 w-full h-full bg-primary/10 flex items-center justify-center hidden">
-                    <BookOpen className="w-16 h-16 text-primary" />
-                  </div>
-                </div>
-                
-                {/* Card Body - Category Information */}
-                <div className="p-4 text-center space-y-2 min-w-[200px]">
-                  <h3 className="font-bold text-sm leading-tight">{category.name_arabic}</h3>
-                  <p className="text-xs text-muted-foreground leading-tight">{category.name_german}</p>
-                  <Badge variant="secondary" className="text-xs">
-                    {category.vocab.length} مفردة
-                  </Badge>
-                </div>
-              </Card>
-            ))}
+            {currentLevel.categories.map((category) => {
+              const shouldLock = limited && category.id > 2;
+              return (
+                <LockOverlay key={category.id} isLocked={shouldLock} message="فئات محجوبة — تواصل عبر واتساب لفتح الوصول الكامل">
+                  <Card
+                    className="overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-200 hover:scale-105 w-fit max-w-xs"
+                    onClick={() => handleCategorySelect(category)}
+                  >
+                    {/* Card Header - Image Based Size */}
+                    <div className="bg-primary/10 relative flex items-center justify-center">
+                      <img
+                        src={category.icon}
+                        alt={category.name_arabic}
+                        className="w-auto h-48 object-contain"
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none';
+                          e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                        }}
+                      />
+                      <div className="absolute inset-0 w-full h-full bg-primary/10 flex items-center justify-center hidden">
+                        <BookOpen className="w-16 h-16 text-primary" />
+                      </div>
+                    </div>
+
+                    {/* Card Body - Category Information */}
+                    <div className="p-4 text-center space-y-2 min-w-[200px]">
+                      <h3 className="font-bold text-sm leading-tight">{category.name_arabic}</h3>
+                      <p className="text-xs text-muted-foreground leading-tight">{category.name_german}</p>
+                      <Badge variant="secondary" className="text-xs">
+                        {category.vocab.length} مفردة
+                      </Badge>
+                    </div>
+                  </Card>
+                </LockOverlay>
+              );
+            })}
           </div>
         </Card>
       </div>

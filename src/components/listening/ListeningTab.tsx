@@ -206,8 +206,10 @@ const ListeningTab = () => {
               تمارين الاستماع - {selectedLevel}
             </h3>
             <div className="space-y-2 max-h-96 overflow-y-auto">
-              {filteredExercises.map((exercise, index) => {
-                const shouldLock = limited && index >= 2;
+              {filteredExercises.map((exercise) => {
+                // Find the original index in the level's exercises to determine locking
+                const originalIndex = currentLevelData.exercises.findIndex(ex => ex.id === exercise.id);
+                const shouldLock = limited && originalIndex >= 2;
                 return (
                   <LockOverlay key={exercise.id} isLocked={shouldLock} message="تمارين محجوبة — تواصل عبر واتساب لفتح الوصول الكامل">
                     <div
@@ -224,7 +226,7 @@ const ListeningTab = () => {
                             ? 'bg-primary text-white'
                             : 'bg-muted text-muted-foreground'
                         }`}>
-                          {index + 1}
+                          {originalIndex + 1}
                         </div>
                         <div className="flex-1 min-w-0">
                           <h4 className="font-medium text-sm truncate">{exercise.title}</h4>
