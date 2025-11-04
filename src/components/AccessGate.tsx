@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Lock, X, MessageCircle } from "lucide-react";
+import { Lock, X, MessageCircle, Info } from "lucide-react";
 import { ACCESS_FLAG_KEY, ACCESS_TIER_KEY, getAllowedCodes, getFreeAccessCode, setAccessTier, isLimitedAccess, WHATSAPP_LINK } from '@/lib/access';
 
 const DEVICE_ID_KEY = 'device_id';
@@ -27,6 +27,8 @@ const AccessGate: React.FC<AccessGateProps> = ({ children }) => {
   const [error, setError] = useState<string>('');
   const [checking, setChecking] = useState<boolean>(true);
   const [showFreeInfo, setShowFreeInfo] = useState<boolean>(false);
+  const [showFreeCode, setShowFreeCode] = useState<boolean>(false);
+  const [copied, setCopied] = useState<boolean>(false);
   const allowedCodes = useMemo(() => getAllowedCodes(), []);
 
   useEffect(() => {
@@ -169,9 +171,63 @@ const AccessGate: React.FC<AccessGateProps> = ({ children }) => {
                 دخول
               </button>
             </form>
+            <div className="mt-6 w-full max-w-md mx-auto rounded-xl border border-muted/40 bg-card p-4 shadow-sm sm:p-5 transition-all">
+              {/* WhatsApp + Info */}
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <a
+                  href={WHATSAPP_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 rounded-lg bg-neutral-800 px-3 py-2 text-sm font-medium text-green-700 hover:bg-neutral-900 transition-colors"
+                >
+                  <MessageCircle className="h-4 w-4 text-green-600" />
+                  <span>واتساب</span>
+                  <span className="text-xs text-green-600/70">0773443694</span>
+                </a>
 
-            <div className="mt-6 text-center text-xs text-muted-foreground">
-              <p>هذا الحاجز لحماية الوصول. إذا لم يكن لديك رمز، تواصل مع المسؤول.</p>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setShowFreeCode((s) => !s);
+                    setCopied(false);
+                  }}
+                  className="flex items-center gap-1 rounded-md px-2 py-1 text-xs text-muted-foreground hover:bg-muted/20 transition-colors"
+                  aria-label="معلومة حول رمز الوصول المجاني"
+                >
+                  <Info className="h-4 w-4" />
+                  <span className="hidden sm:inline">معلومة</span>
+                </button>
+              </div>
+
+              {/* Free Code Section */}
+              {showFreeCode && (
+                <div className="mt-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 rounded-lg bg-muted/10 px-3 py-2">
+                  <div className="text-sm text-muted-foreground">
+                    رمز الوصول المجاني:{" "}
+                    <span className="font-semibold text-primary">FREE-ACCESS</span>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={async () => {
+                      try {
+                        await navigator.clipboard.writeText("FREE-ACCESS");
+                        setCopied(true);
+                        setTimeout(() => setCopied(false), 2000);
+                      } catch {
+                        // ignore
+                      }
+                    }}
+                    className="text-xs font-medium text-primary hover:underline"
+                  >
+                    {copied ? "✅ تم النسخ" : "نسخ"}
+                  </button>
+                </div>
+              )}
+
+              {/* Note */}
+              <p className="mt-4 text-center text-xs text-muted-foreground leading-relaxed">
+                هذا الحاجز لحماية الوصول. إذا لم يكن لديك رمز، تواصل مع المسؤول.
+              </p>
             </div>
           </div>
         </div>

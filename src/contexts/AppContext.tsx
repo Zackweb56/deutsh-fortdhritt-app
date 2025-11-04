@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, useRef, ReactNode } from 'react';
 
 export interface StudyHour {
   id: string;
@@ -447,6 +447,128 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
       }),
     }));
   };
+
+  // Global timer tick: runs regardless of which tab/component is mounted so timers continue
+  useEffect(() => {
+    let interval: number | undefined;
+    const lastRef = { current: Date.now() };
+
+    const playCompletionSound = () => {
+      try {
+        const AudioCtor = (window as any).AudioContext || (window as any).webkitAudioContext;
+        if (AudioCtor) {
+          const ctx = new AudioCtor();
+          if (ctx.state === 'suspended' && typeof ctx.resume === 'function') ctx.resume().catch(() => {});
+          const gain = ctx.createGain();
+          const osc = ctx.createOscillator();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(880, ctx.currentTime);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          gain.gain.setValueAtTime(0.0001, ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.2, ctx.currentTime + 0.01);
+          osc.start(ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.45);
+          osc.stop(ctx.currentTime + 0.5);
+          setTimeout(() => { try { if (typeof (ctx as any).close === 'function') (ctx as any).close(); } catch (e) {} }, 1000);
+        } else {
+          const audio = new Audio();
+          audio.play().catch(() => {});
+        }
+      } catch (e) {}
+    };
+
+    const playFiveMinuteWarning = () => {
+      try {
+        const AudioCtor = (window as any).AudioContext || (window as any).webkitAudioContext;
+        if (AudioCtor) {
+          const ctx = new AudioCtor();
+          if (ctx.state === 'suspended' && typeof ctx.resume === 'function') ctx.resume().catch(() => {});
+          const gain = ctx.createGain();
+          const osc = ctx.createOscillator();
+          osc.type = 'triangle';
+          const now = ctx.currentTime;
+          osc.frequency.setValueAtTime(1200, now);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          gain.gain.setValueAtTime(0.0001, now);
+          gain.gain.exponentialRampToValueAtTime(0.15, now + 0.01);
+          osc.start(now);
+          osc.frequency.exponentialRampToValueAtTime(800, now + 0.18);
+          gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.22);
+          osc.stop(now + 0.25);
+
+          const osc2 = ctx.createOscillator();
+          osc2.type = 'triangle';
+          osc2.frequency.setValueAtTime(900, now + 0.28);
+          const gain2 = ctx.createGain();
+          osc2.connect(gain2);
+          gain2.connect(ctx.destination);
+          gain2.gain.setValueAtTime(0.0001, now + 0.28);
+          gain2.gain.exponentialRampToValueAtTime(0.12, now + 0.29);
+          osc2.start(now + 0.28);
+          gain2.gain.exponentialRampToValueAtTime(0.0001, now + 0.6);
+          osc2.stop(now + 0.62);
+
+          setTimeout(() => { try { if (typeof (ctx as any).close === 'function') (ctx as any).close(); } catch (e) {} }, 1200);
+        } else {
+          const audio = new Audio();
+          audio.play().catch(() => {});
+        }
+      } catch (e) {}
+    };
+
+    interval = window.setInterval(() => {
+      const now = Date.now();
+      const elapsed = Math.floor((now - (lastRef.current || now)) / 1000);
+      if (elapsed <= 0) return;
+      lastRef.current = now;
+
+      const events: Array<{ type: 'warn' | 'complete' } & { dayId: string; hourId: string }> = [];
+
+      setState(prev => {
+        let changed = false;
+        const next = {
+          ...prev,
+          days: prev.days.map(day => ({
+            ...day,
+            hours: day.hours.map(hour => {
+              if (hour.timerRunning && hour.timerSeconds > 0) {
+                const oldSeconds = hour.timerSeconds;
+                const newSeconds = Math.max(0, oldSeconds - elapsed);
+                // warn if we crossed the 5-minute threshold during this elapsed window
+                if (oldSeconds > 300 && newSeconds <= 300) {
+                  events.push({ type: 'warn', dayId: day.id, hourId: hour.id });
+                }
+                if (newSeconds <= 0) {
+                  events.push({ type: 'complete', dayId: day.id, hourId: hour.id });
+                  changed = true;
+                  return { ...hour, timerSeconds: 0, timerRunning: false };
+                }
+                changed = true;
+                return { ...hour, timerSeconds: newSeconds };
+              }
+              return hour;
+            }),
+          })),
+        };
+        // if nothing changed, return prev (avoid unnecessary writes)
+        return changed ? next : prev;
+      });
+
+      // play sounds after state update
+      if (events.length > 0) {
+        events.forEach(ev => {
+          if (ev.type === 'warn') playFiveMinuteWarning();
+          if (ev.type === 'complete') playCompletionSound();
+        });
+      }
+    }, 1000);
+
+    return () => {
+      if (interval) window.clearInterval(interval);
+    };
+  }, []);
 
   const addVocabulary = (item: Omit<VocabularyItem, 'id' | 'dateAdded'>) => {
     const newItem: VocabularyItem = {
