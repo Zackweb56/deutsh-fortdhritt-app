@@ -123,7 +123,7 @@ export const ArtikelQuiz = () => {
     <div className="space-y-6">
         <Card className="card-gradient">
           <CardHeader>
-            <CardTitle className="text-2xl text-center">اختبار المقالات</CardTitle>
+            <CardTitle className="text-2xl text-center">اختبار أدوات التعريف</CardTitle>
             <p className="text-center text-muted-foreground">اختر الفئة التي تريد اختبارها</p>
           </CardHeader>
           <CardContent className="space-y-6">
@@ -159,7 +159,7 @@ export const ArtikelQuiz = () => {
         {/* Rules Reference */}
         <Card>
           <CardHeader>
-            <CardTitle className="text-lg">تذكير قواعد المقالات</CardTitle>
+            <CardTitle className="text-lg">تذكير قواعد أدوات التعريف</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -188,7 +188,7 @@ export const ArtikelQuiz = () => {
       <Card>
         <CardHeader>
           <div className="flex justify-between items-center flex-wrap gap-2">
-            <CardTitle className="text-lg sm:text-xl">اختبار المقالات - {selectedCategory}</CardTitle>
+            <CardTitle className="text-lg sm:text-xl">اختبار أدوات التعريف - {selectedCategory}</CardTitle>
             <div className="text-xs sm:text-sm text-muted-foreground">
               التقدم: {currentIndex + 1}/{quizWords.length} ({Math.round(progress)}%) | صحيح: {correctCount} | خطأ: {incorrectCount} | متبقي: {quizWords.length - currentIndex - 1}
             </div>
@@ -203,7 +203,7 @@ export const ArtikelQuiz = () => {
           {!showResult ? (
             <div className="space-y-6">
               <div className="text-center">
-                <h3 className="text-xl sm:text-2xl font-bold mb-2">ما هو المقال الصحيح لكلمة:</h3>
+                <h3 className="text-xl sm:text-2xl font-bold mb-2">ما هي الأداة الصحيحة لكلمة:</h3>
                 <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">{currentWord.noun}</div>
                 <div className="text-base sm:text-lg text-muted-foreground">{currentWord.arabic}</div>
               </div>
@@ -281,7 +281,7 @@ export const ArtikelQuiz = () => {
       {/* Rules Reference */}
       <Card>
         <CardHeader>
-          <CardTitle className="text-base sm:text-lg">تذكير قواعد المقالات</CardTitle>
+          <CardTitle className="text-base sm:text-lg">تذكير قواعد أدوات التعريف</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

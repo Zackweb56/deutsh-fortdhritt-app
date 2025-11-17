@@ -15,7 +15,7 @@ export const VocabularyTab = () => {
       <Tabs defaultValue="learning" className="w-full">
         <TabsList className="flex w-full sm:grid sm:grid-cols-4 overflow-x-auto">
           <TabsTrigger value="learning" className="text-[10px] sm:text-sm">تعلم المفردات</TabsTrigger>
-          <TabsTrigger value="quiz" className="text-[10px] sm:text-sm">اختبار المقالات</TabsTrigger>
+          <TabsTrigger value="quiz" className="text-[10px] sm:text-sm">اختبار أدوات التعريف</TabsTrigger>
           <TabsTrigger value="add" className="text-[10px] sm:text-sm">إضافة مفردة جديدة</TabsTrigger>
           <TabsTrigger value="list" className="text-[10px] sm:text-sm">قائمة المفردات</TabsTrigger>
         </TabsList>
