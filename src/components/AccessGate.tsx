@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Lock, X, MessageCircle, Info } from "lucide-react";
-import { ACCESS_FLAG_KEY, ACCESS_TIER_KEY, getAllowedCodes, getFreeAccessCode, setAccessTier, isLimitedAccess, WHATSAPP_LINK } from '@/lib/access';
+import { Lock, X, MessageCircle, Info, Clock } from "lucide-react";
+import { ACCESS_FLAG_KEY, ACCESS_TIER_KEY, getAllowedCodes, getFreeAccessCode, getTestAccessCode, setAccessTier, isLimitedAccess, logoutIfTestExpired, isTestAccess, forceTestLogout, WHATSAPP_LINK } from '@/lib/access';
 
 const DEVICE_ID_KEY = 'device_id';
 
@@ -29,6 +29,7 @@ const AccessGate: React.FC<AccessGateProps> = ({ children }) => {
   const [showFreeInfo, setShowFreeInfo] = useState<boolean>(false);
   const [showFreeCode, setShowFreeCode] = useState<boolean>(false);
   const [copied, setCopied] = useState<boolean>(false);
+  const [timeLeft, setTimeLeft] = useState<number>(0);
   const allowedCodes = useMemo(() => getAllowedCodes(), []);
 
   useEffect(() => {
@@ -37,10 +38,42 @@ const AccessGate: React.FC<AccessGateProps> = ({ children }) => {
     setChecking(false);
   }, []);
 
+  // Timer for test access
+  useEffect(() => {
+    if (!isTestAccess()) return;
+
+    const updateTimer = () => {
+      try {
+        const expiresAtStr = localStorage.getItem('test_expires_at');
+        if (!expiresAtStr) {
+          forceTestLogout();
+          return;
+        }
+        const expiresAt = new Date(expiresAtStr);
+        const now = Date.now();
+        const remaining = Math.max(0, Math.floor((expiresAt.getTime() - now) / 1000));
+
+        setTimeLeft(remaining);
+
+        if (remaining <= 0) {
+          forceTestLogout();
+        }
+      } catch {
+        forceTestLogout();
+      }
+    };
+
+    updateTimer();
+    const interval = setInterval(updateTimer, 1000);
+
+    return () => clearInterval(interval);
+  }, [granted]);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const input = code.trim().toUpperCase();
     const freeCode = getFreeAccessCode().toUpperCase();
+    const testCode = getTestAccessCode().toUpperCase();
 
     // Allow free tier code without server verification and without single-use
     if (input === freeCode) {
@@ -52,6 +85,17 @@ const AccessGate: React.FC<AccessGateProps> = ({ children }) => {
       try {
         localStorage.setItem('free_info_shown', 'false');
       } catch {}
+      return;
+    }
+
+    // Allow test code without server verification, set expiration
+    if (input === testCode) {
+      localStorage.setItem(ACCESS_FLAG_KEY, 'true');
+      setAccessTier('test');
+      localStorage.setItem('test_expires_at', new Date(Date.now() + 10 * 60 * 1000).toISOString());
+      window.dispatchEvent(new Event('access-tier-changed'));
+      setGranted(true);
+      setError('');
       return;
     }
 
@@ -315,6 +359,19 @@ const AccessGate: React.FC<AccessGateProps> = ({ children }) => {
               </button>
             </div>
           </div>
+        </div>
+      </div>
+    )}
+
+    {/* Test access timer display */}
+    {isTestAccess() && (
+      <div className="fixed bottom-8 left-6 z-50 bg-background/80 backdrop-blur-4xl border shadow-xl rounded-lg px-3 py-2">
+        <div className="flex items-center gap-2 text-sm">
+          <Clock className="h-4 w-4 text-primary" />
+          <span className="font-medium">وقت الاختبار المتبقي:</span>
+          <span className={`font-mono ${timeLeft <= 60 ? 'text-destructive animate-pulse' : 'text-primary'}`}>
+            {Math.floor(timeLeft / 60)}:{(timeLeft % 60).toString().padStart(2, '0')}
+          </span>
         </div>
       </div>
     )}

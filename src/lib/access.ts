@@ -122,7 +122,11 @@ export const consumeCode = (_code: string): void => {};
 export const FREE_ACCESS_CODE_B64 = 'RlJFRS1BQ0NFU1M='; // "FREE-ACCESS"
 export const getFreeAccessCode = (): string => decodeBase64(FREE_ACCESS_CODE_B64);
 
-export type AccessTier = 'full' | 'free';
+// Test access code (not single-use, expires after 10 minutes). Users get full access.
+export const TEST_ACCESS_CODE_B64 = 'VEVTVC1BQ0NFU1M='; // "TEST-ACCESS"
+export const getTestAccessCode = (): string => decodeBase64(TEST_ACCESS_CODE_B64);
+
+export type AccessTier = 'full' | 'free' | 'test';
 
 export const setAccessTier = (tier: AccessTier) => {
   try {
@@ -133,13 +137,50 @@ export const setAccessTier = (tier: AccessTier) => {
 export const getAccessTier = (): AccessTier => {
   try {
     const v = localStorage.getItem(ACCESS_TIER_KEY) as AccessTier | null;
-    return v === 'free' ? 'free' : 'full';
+    if (v === 'free' || v === 'test') return v;
+    return 'full';
   } catch {
     return 'full';
   }
 };
 
 export const isLimitedAccess = (): boolean => getAccessTier() === 'free';
+
+export const isTestAccess = (): boolean => getAccessTier() === 'test';
+
+export const checkTestExpiration = (): boolean => {
+  try {
+    const expiresAtStr = localStorage.getItem('test_expires_at');
+    if (!expiresAtStr) return true; // expired if no timestamp
+    const expiresAt = new Date(expiresAtStr);
+    return Date.now() > expiresAt.getTime();
+  } catch {
+    return true;
+  }
+};
+
+export const logoutIfTestExpired = () => {
+  if (isTestAccess() && checkTestExpiration()) {
+    try {
+      localStorage.removeItem(ACCESS_FLAG_KEY);
+      localStorage.removeItem(ACCESS_TIER_KEY);
+      localStorage.removeItem('test_expires_at');
+    } catch {}
+    window.dispatchEvent(new Event('access-tier-changed'));
+    window.location.reload();
+  }
+};
+
+// Force logout for test access when expired
+export const forceTestLogout = () => {
+  try {
+    localStorage.removeItem(ACCESS_FLAG_KEY);
+    localStorage.removeItem(ACCESS_TIER_KEY);
+    localStorage.removeItem('test_expires_at');
+  } catch {}
+  window.dispatchEvent(new Event('access-tier-changed'));
+  window.location.reload();
+};
 
 // WhatsApp contact link used in lock overlays. Customize the phone and prefilled text.
 export const WHATSAPP_LINK =
