@@ -108,10 +108,10 @@ export const ArtikelQuiz = () => {
 
   const getArtikelColor = (artikel: string) => {
     switch (artikel) {
-      case 'der': return 'bg-black';
-      case 'die': return 'bg-red-500';
-      case 'das': return 'bg-yellow-500';
-      default: return 'bg-neutral-500';
+      case 'der': return 'bg-black text-white';
+      case 'die': return 'bg-red-700 text-white';
+      case 'das': return 'bg-yellow-500 text-white';
+      default: return 'bg-neutral-400 text-white';
     }
   };
 
@@ -157,20 +157,23 @@ export const ArtikelQuiz = () => {
         </Card>
 
         {/* Rules Reference */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-lg">تذكير قواعد أدوات التعريف</CardTitle>
+        <Card className="card-gradient">
+          <CardHeader className="pb-3">
+            <CardTitle className="text-base sm:text-lg text-right font-bold text-white">تذكير قواعد أدوات التعريف</CardTitle>
           </CardHeader>
-          <CardContent>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <CardContent className="pt-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
               {Object.entries(artikelsData.rules).map(([artikel, data]: [string, any]) => (
-                <div key={artikel} className="space-y-2">
-                  <Badge className={`${getArtikelColor(artikel)} text-white w-full justify-center text-sm`}>
+                <div key={artikel} className="space-y-3 bg-neutral-800 p-4 rounded-lg">
+                  <Badge className={`${getArtikelColor(artikel)} w-full justify-center text-sm py-1.5 font-bold`}>
                     {artikel}
                   </Badge>
-                  <ul className="text-xs space-y-1 text-right">
+                  <ul className="text-xs sm:text-sm space-y-2 text-right pr-2">
                     {data.rules.map((rule: string, index: number) => (
-                      <li key={index} className="text-muted-foreground">• {rule}</li>
+                      <li key={index} className="text-neutral-400 flex items-start">
+                        <span className="ml-2 mt-1.5 flex-shrink-0 w-1.5 h-1.5 bg-red-500 rounded-full"></span>
+                        <span>{rule}</span>
+                      </li>
                     ))}
                   </ul>
                 </div>
@@ -185,27 +188,45 @@ export const ArtikelQuiz = () => {
   return (
     <div className="space-y-6">
       {/* Score and Progress */}
-      <Card>
-        <CardHeader>
-          <div className="flex justify-between items-center flex-wrap gap-2">
-            <CardTitle className="text-lg sm:text-xl">اختبار أدوات التعريف - {selectedCategory}</CardTitle>
-            <div className="text-xs sm:text-sm text-muted-foreground">
-              التقدم: {currentIndex + 1}/{quizWords.length} ({Math.round(progress)}%) | صحيح: {correctCount} | خطأ: {incorrectCount} | متبقي: {quizWords.length - currentIndex - 1}
+      <Card className="card-gradient">
+        <CardHeader className="pb-4">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+            <CardTitle className="text-lg sm:text-xl font-bold text-white">
+              اختبار أدوات التعريف - <span className="text-red-500">{selectedCategory}</span>
+            </CardTitle>
+            <div className="flex flex-wrap gap-3 sm:gap-4 text-xs sm:text-sm">
+              <div className="bg-neutral-800 px-3 py-1.5 rounded border border-neutral-700">
+                <span className="text-green-400 font-bold">{correctCount}</span> صحيح
+              </div>
+              <div className="bg-neutral-800 px-3 py-1.5 rounded border border-neutral-700">
+                <span className="text-red-400 font-bold">{incorrectCount}</span> خطأ
+              </div>
+              <div className="bg-neutral-800 px-3 py-1.5 rounded border border-neutral-700">
+                <span className="text-yellow-400 font-bold">{quizWords.length - currentIndex - 1}</span> متبقي
+              </div>
             </div>
           </div>
-          <Progress value={progress} className="w-full bg-neutral-700 [&>div]:bg-red-500" />
+          <div className="pt-3">
+            <div className="flex justify-between text-sm text-neutral-400 mb-2">
+              <span>التقدم: {currentIndex + 1}/{quizWords.length}</span>
+              <span>{Math.round(progress)}%</span>
+            </div>
+            <Progress value={progress} className="w-full h-2 bg-neutral-700 [&>div]:bg-red-500 rounded-full" />
+          </div>
         </CardHeader>
       </Card>
 
       {/* Quiz Card */}
       <Card className="card-gradient">
-        <CardContent className="p-4 sm:p-6">
+        <CardContent className="p-4 sm:p-8">
           {!showResult ? (
-            <div className="space-y-6">
-              <div className="text-center">
-                <h3 className="text-xl sm:text-2xl font-bold mb-2">ما هي الأداة الصحيحة لكلمة:</h3>
-                <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">{currentWord.noun}</div>
-                <div className="text-base sm:text-lg text-muted-foreground">{currentWord.arabic}</div>
+            <div className="space-y-8">
+              <div className="text-center space-y-4">
+                <h3 className="text-xl sm:text-2xl font-bold text-white">ما هي الأداة الصحيحة لكلمة:</h3>
+                <div className="bg-neutral-800 p-6 rounded-lg border border-neutral-700 mx-auto max-w-md">
+                  <div className="text-3xl sm:text-4xl font-bold text-red-600 mb-3">{currentWord?.noun}</div>
+                  <div className="text-lg sm:text-xl text-neutral-400 font-medium">{currentWord?.arabic}</div>
+                </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
@@ -221,55 +242,75 @@ export const ArtikelQuiz = () => {
                 ))}
               </div>
 
-              <div className="text-center">
+              <div className="text-center pt-4">
                 <Button
                   onClick={handleSubmit}
                   disabled={!selectedArtikel}
                   size="lg"
-                  className="w-full sm:w-auto"
+                  className="w-full sm:w-64 h-12 text-lg font-semibold bg-red-500 hover:bg-red-600 text-white border-0 disabled:bg-neutral-700 disabled:text-neutral-500"
                 >
                   تحقق من الإجابة
                 </Button>
               </div>
             </div>
           ) : (
-            <div className="space-y-6">
+            <div className="space-y-8">
               <div className="text-center">
-                <div className={`inline-flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 rounded-full mb-6 ${isCorrect ? 'bg-green-100 border-4 border-green-500' : 'bg-red-100 border-4 border-red-500'}`}>
-                  <div className={`text-4xl sm:text-5xl font-bold ${isCorrect ? 'text-green-600' : 'text-red-600'}`}>
+                {/* Result Icon */}
+                <div className={`inline-flex items-center justify-center w-24 h-24 sm:w-28 sm:h-28 rounded-full mb-6 border-4 ${
+                  isCorrect ? 'border-green-500 bg-green-900/20' : 'border-red-500 bg-red-900/20'
+                }`}>
+                  <div className={`text-5xl sm:text-6xl font-bold ${
+                    isCorrect ? 'text-green-400' : 'text-red-400'
+                  }`}>
                     {isCorrect ? '✓' : '✗'}
                   </div>
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold mb-4">
+                
+                <h3 className={`text-2xl sm:text-3xl font-bold mb-6 ${
+                  isCorrect ? 'text-green-400' : 'text-red-400'
+                }`}>
                   {isCorrect ? 'إجابة صحيحة!' : 'إجابة خاطئة'}
                 </h3>
-                <div className="bg-gradient-to-r from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 mb-4">
-                  <div className="text-lg sm:text-xl mb-2">
-                    <span className="font-bold text-white">{currentWord.noun}</span>
-                    <span className="mx-2 text-gray-400">=</span>
-                    <Badge className={`${getArtikelColor(currentWord.artikel)} text-white text-sm px-3 py-1`}>
-                      {currentWord.artikel}
-                    </Badge>
+                
+                {/* Word Display - Artikel + Noun together */}
+                <div className="bg-neutral-800 p-6 sm:p-8 rounded-lg border border-neutral-700 mb-6 max-w-md mx-auto">
+                  <div className="text-xl sm:text-2xl mb-3 flex items-center justify-center gap-3 flex-wrap">
+                    <span className={`order-1 text-md rounded-2xl px-4 py-1 font-bold ${getArtikelColor(currentWord?.artikel || '')}`}>
+                      {currentWord?.artikel}
+                    </span>
+                    <span className="font-bold text-white text-2xl sm:text-3xl">{currentWord?.noun}</span>
                   </div>
-                  <div className="text-base sm:text-lg text-gray-300 font-medium">{currentWord.arabic}</div>
+                  <div className="text-lg sm:text-xl text-neutral-400 font-medium text-center">{currentWord?.arabic}</div>
                 </div>
+                
+                {/* User Answer Feedback */}
                 {!isCorrect && (
-                  <div className="bg-red-900/20 p-4 rounded-lg border border-red-800">
-                    <p className="text-sm text-red-300 mb-2 font-medium">إجابتك:</p>
-                    <Badge variant="outline" className="border-red-600 text-red-300">
-                      {selectedArtikel}
-                    </Badge>
+                  <div className="bg-red-900/20 p-5 rounded-lg border border-red-800 max-w-md mx-auto">
+                    <p className="text-sm text-red-400 mb-3 font-medium text-right">إجابتك:</p>
+                    <div className="flex items-center justify-center gap-3 flex-wrap ltr">
+                      <span className={`order-1 text-md rounded-2xl px-4 py-1 font-bold ${getArtikelColor(selectedArtikel)}`}>
+                        {selectedArtikel}
+                      </span>
+                      <span className="font-bold text-red-400 text-xl">{currentWord?.noun}</span>
+                    </div>
                   </div>
                 )}
+                
+                {/* Encouragement Message */}
                 {isCorrect && (
-                  <div className="bg-yellow-900/20 p-4 rounded-lg border border-yellow-800">
-                    <p className="text-sm text-yellow-300 font-medium">ممتاز! استمر في هذا المستوى</p>
+                  <div className="bg-green-900/20 p-5 rounded-lg border border-green-800 max-w-md mx-auto">
+                    <p className="text-lg text-green-400 font-bold">ممتاز! استمر في هذا المستوى</p>
                   </div>
                 )}
               </div>
 
-              <div className="text-center">
-                <Button onClick={handleNext} size="lg" className="w-full sm:w-auto px-8 py-3 text-lg font-semibold bg-red-500 hover:bg-red-600 text-white shadow-lg hover:shadow-xl transition-all duration-200">
+              <div className="text-center pt-4">
+                <Button 
+                  onClick={handleNext} 
+                  size="lg" 
+                  className="w-full sm:w-64 h-12 text-lg font-semibold bg-green-500 hover:bg-green-600 text-white border-0"
+                >
                   {currentIndex + 1 < quizWords.length ? 'الكلمة التالية' : 'إعادة الاختبار'}
                 </Button>
               </div>
@@ -279,20 +320,23 @@ export const ArtikelQuiz = () => {
       </Card>
 
       {/* Rules Reference */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-base sm:text-lg">تذكير قواعد أدوات التعريف</CardTitle>
+      <Card className="card-gradient">
+        <CardHeader className="pb-3">
+          <CardTitle className="text-base sm:text-lg text-right font-bold text-white">تذكير قواعد أدوات التعريف</CardTitle>
         </CardHeader>
-        <CardContent>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <CardContent className="pt-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
             {Object.entries(artikelsData.rules).map(([artikel, data]: [string, any]) => (
-              <div key={artikel} className="space-y-2">
-                <Badge className={`${getArtikelColor(artikel)} text-white w-full justify-center text-sm`}>
+              <div key={artikel} className="space-y-3 bg-neutral-800 p-4 rounded-lg">
+                <Badge className={`${getArtikelColor(artikel)} w-full justify-center text-sm py-1.5 font-bold`}>
                   {artikel}
                 </Badge>
-                <ul className="text-xs space-y-1 text-right">
+                <ul className="text-xs sm:text-sm space-y-2 text-right pr-2">
                   {data.rules.map((rule: string, index: number) => (
-                    <li key={index} className="text-muted-foreground">• {rule}</li>
+                    <li key={index} className="text-neutral-400 flex items-start">
+                      <span className="ml-2 mt-1.5 flex-shrink-0 w-1.5 h-1.5 bg-red-500 rounded-full"></span>
+                      <span>{rule}</span>
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -302,11 +346,19 @@ export const ArtikelQuiz = () => {
       </Card>
 
       {/* Control Buttons */}
-      <div className="flex flex-col sm:flex-row gap-3 justify-center">
-        <Button variant="outline" onClick={handleRestart} className="w-full sm:w-auto">
+      <div className="flex flex-col sm:flex-row gap-3 justify-center pb-8">
+        <Button 
+          variant="outline" 
+          onClick={handleRestart} 
+          className="w-full sm:w-auto h-12 px-6 text-base border-2 border-neutral-600 text-white hover:text-white hover:border-red-500 hover:bg-red-800"
+        >
           إعادة الاختبار
         </Button>
-        <Button variant="outline" onClick={() => setQuizStarted(false)} className="w-full sm:w-auto">
+        <Button 
+          variant="outline" 
+          onClick={() => setQuizStarted(false)} 
+          className="w-full sm:w-auto h-12 px-6 text-base border-2 border-neutral-600 text-white hover:text-white hover:border-yellow-500 hover:bg-yellow-800"
+        >
           تغيير الفئة
         </Button>
       </div>
