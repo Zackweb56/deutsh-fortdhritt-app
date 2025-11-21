@@ -77,10 +77,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       // Mark as used for this device (no expiration, permanent)
       await redis.set(testKey, 'true');
       return res.status(200).json({ ok: true, status: 'ok' });
-    } catch (error) {
-      console.error('Redis error for test code:', error);
-      return res.status(500).json({ ok: false, error: 'redis_error' });
-    }
+  } catch (error) {
+    console.error('Redis error for test code:', error);
+    console.error('Error details:', JSON.stringify(error, null, 2));
+    return res.status(500).json({ ok: false, error: 'redis_error' });
+  }
   }
 
   console.log('Processing paid code');
