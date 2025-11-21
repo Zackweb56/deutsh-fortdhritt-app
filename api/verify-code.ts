@@ -31,8 +31,8 @@ ALLOWED.add(TEST_ACCESS_CODE);
 const USED_KEY = (code: string) => `access_used:${code}`;
 const TEST_USED_KEY = (deviceId: string) => `test_used:${deviceId}`;
 
-const redisUrl = (process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL) as string | undefined;
-const redisToken = (process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN) as string | undefined;
+const redisUrl = (process.env.DG_KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL) as string | undefined;
+const redisToken = (process.env.DG_KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN) as string | undefined;
 
 const redis = new Redis({
   url: redisUrl || '',
