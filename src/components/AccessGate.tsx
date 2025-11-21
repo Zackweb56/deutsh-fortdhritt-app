@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Lock, X, MessageCircle, Info, Clock } from "lucide-react";
-import { ACCESS_FLAG_KEY, ACCESS_TIER_KEY, getAllowedCodes, getFreeAccessCode, getTestAccessCode, setAccessTier, isLimitedAccess, logoutIfTestExpired, isTestAccess, forceTestLogout, WHATSAPP_LINK } from '@/lib/access';
+import { Lock, X, MessageCircle, Info } from "lucide-react";
+import { ACCESS_FLAG_KEY, ACCESS_TIER_KEY, getAllowedCodes, getFreeAccessCode, setAccessTier, isLimitedAccess, WHATSAPP_LINK } from '@/lib/access';
 
 const DEVICE_ID_KEY = 'device_id';
 
@@ -29,7 +29,6 @@ const AccessGate: React.FC<AccessGateProps> = ({ children }) => {
   const [showFreeInfo, setShowFreeInfo] = useState<boolean>(false);
   const [showFreeCode, setShowFreeCode] = useState<boolean>(false);
   const [copied, setCopied] = useState<boolean>(false);
-  const [timeLeft, setTimeLeft] = useState<number>(0);
   const allowedCodes = useMemo(() => getAllowedCodes(), []);
 
   useEffect(() => {
@@ -38,88 +37,10 @@ const AccessGate: React.FC<AccessGateProps> = ({ children }) => {
     setChecking(false);
   }, []);
 
-  // Timer for test access
-  useEffect(() => {
-    if (!isTestAccess()) return;
-
-    const updateTimer = () => {
-      try {
-        const expiresAtStr = localStorage.getItem('test_expires_at');
-        if (!expiresAtStr) {
-          forceTestLogout();
-          return;
-        }
-        const expiresAt = new Date(expiresAtStr);
-        const now = Date.now();
-        const remaining = Math.max(0, Math.floor((expiresAt.getTime() - now) / 1000));
-
-        setTimeLeft(remaining);
-
-        if (remaining <= 0) {
-          forceTestLogout();
-        }
-      } catch {
-        forceTestLogout();
-      }
-    };
-
-    updateTimer();
-    const interval = setInterval(updateTimer, 1000);
-
-    return () => clearInterval(interval);
-  }, [granted]);
-
-  // Security measures for test access
-  useEffect(() => {
-    if (!isTestAccess()) return;
-
-    // Prevent right-click context menu
-    const handleContextMenu = (e: MouseEvent) => {
-      e.preventDefault();
-      return false;
-    };
-
-    // Prevent dev tools shortcuts
-    const handleKeyDown = (e: KeyboardEvent) => {
-      // F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C, Ctrl+U
-      if (
-        e.key === 'F12' ||
-        (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) ||
-        (e.ctrlKey && e.key === 'U')
-      ) {
-        e.preventDefault();
-        return false;
-      }
-    };
-
-    // Prevent screenshot attempts (PrintScreen)
-    const handleKeyUp = (e: KeyboardEvent) => {
-      if (e.key === 'PrintScreen') {
-        e.preventDefault();
-        // Clear clipboard if possible
-        if (navigator.clipboard) {
-          navigator.clipboard.writeText('').catch(() => {});
-        }
-        return false;
-      }
-    };
-
-    document.addEventListener('contextmenu', handleContextMenu, { passive: false });
-    document.addEventListener('keydown', handleKeyDown, { passive: false });
-    document.addEventListener('keyup', handleKeyUp, { passive: false });
-
-    return () => {
-      document.removeEventListener('contextmenu', handleContextMenu);
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('keyup', handleKeyUp);
-    };
-  }, [granted]);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const input = code.trim().toUpperCase();
     const freeCode = getFreeAccessCode().toUpperCase();
-    const testCode = getTestAccessCode().toUpperCase();
 
     // Allow free tier code without server verification and without single-use
     if (input === freeCode) {
@@ -131,71 +52,6 @@ const AccessGate: React.FC<AccessGateProps> = ({ children }) => {
       try {
         localStorage.setItem('free_info_shown', 'false');
       } catch {}
-      return;
-    }
-
-    // Allow test code with server verification for device restriction
-    if (input === testCode) {
-      const deviceId = getDeviceId();
-
-      // Check local single-use for test access (fallback when server not configured)
-      const testUsedKey = `test_used_${deviceId}`;
-      if (localStorage.getItem(testUsedKey) === 'true') {
-        setError('تم استخدام رمز الاختبار بالفعل على هذا الجهاز ولا يمكن استخدامه مرة أخرى.');
-        return;
-      }
-
-      try {
-        const resp = await fetch('/api/verify-code', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ code: input, deviceId }),
-        });
-        const data = await resp.json();
-        // Fallback: allow locally if server is not configured
-        const isLocal = typeof window !== 'undefined' && /^(localhost|127\.0\.0\.1|0\.0\.0\.0)$/i.test(window.location.hostname);
-        if (!data?.ok) {
-          if (data?.error === 'server_not_configured' || (resp.status === 500 && isLocal)) {
-            localStorage.setItem(ACCESS_FLAG_KEY, 'true');
-            setAccessTier('test');
-            localStorage.setItem('test_expires_at', new Date(Date.now() + 10 * 60 * 1000).toISOString());
-            localStorage.setItem(testUsedKey, 'true'); // Mark as used locally
-            window.dispatchEvent(new Event('access-tier-changed'));
-            setGranted(true);
-            setError('');
-            return;
-          }
-          if (data?.status === 'used') {
-            setError('تم استخدام رمز الاختبار بالفعل على هذا الجهاز ولا يمكن استخدامه مرة أخرى.');
-          } else {
-            setError('رمز الاختبار غير صالح.');
-          }
-          return;
-        }
-      } catch (e) {
-        // Network error: if running locally, allow as test to avoid blocking dev/testing
-        const isLocal = typeof window !== 'undefined' && /^(localhost|127\.0\.0\.1|0\.0\.0\.0)$/i.test(window.location.hostname);
-        if (isLocal) {
-          localStorage.setItem(ACCESS_FLAG_KEY, 'true');
-          setAccessTier('test');
-          localStorage.setItem('test_expires_at', new Date(Date.now() + 10 * 60 * 1000).toISOString());
-          localStorage.setItem(testUsedKey, 'true'); // Mark as used locally
-          window.dispatchEvent(new Event('access-tier-changed'));
-          setGranted(true);
-          setError('');
-        } else {
-          setError('تعذر التحقق من رمز الاختبار. حاول لاحقًا.');
-        }
-        return;
-      }
-
-      localStorage.setItem(ACCESS_FLAG_KEY, 'true');
-      setAccessTier('test');
-      localStorage.setItem('test_expires_at', new Date(Date.now() + 10 * 60 * 1000).toISOString());
-      localStorage.setItem(testUsedKey, 'true'); // Mark as used locally
-      window.dispatchEvent(new Event('access-tier-changed'));
-      setGranted(true);
-      setError('');
       return;
     }
 
@@ -396,40 +252,6 @@ const AccessGate: React.FC<AccessGateProps> = ({ children }) => {
   };
 
   return <>
-    {/* Watermark overlay for test access */}
-    {isTestAccess() && (
-      <div className="fixed inset-0 pointer-events-none z-10 select-none">
-        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/5" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-45 text-black/10 text-6xl font-bold whitespace-nowrap select-none pointer-events-none">
-          TEST ACCESS
-        </div>
-        <div className="absolute bottom-4 right-4 text-xs text-black/20 font-mono select-none pointer-events-none">
-          Test Mode - {Math.floor(timeLeft / 60)}:{(timeLeft % 60).toString().padStart(2, '0')} remaining
-        </div>
-      </div>
-    )}
-
-    {/* Global styles for test access security */}
-    {isTestAccess() && (
-      <style dangerouslySetInnerHTML={{
-        __html: `
-          * {
-            -webkit-user-select: none !important;
-            -moz-user-select: none !important;
-            -ms-user-select: none !important;
-            user-select: none !important;
-            -webkit-touch-callout: none !important;
-          }
-          body {
-            -webkit-user-select: none !important;
-            -moz-user-select: none !important;
-            -ms-user-select: none !important;
-            user-select: none !important;
-          }
-        `
-      }} />
-    )}
-
     {children}
 
     {/* Free mode info modal */}
@@ -493,19 +315,6 @@ const AccessGate: React.FC<AccessGateProps> = ({ children }) => {
               </button>
             </div>
           </div>
-        </div>
-      </div>
-    )}
-
-    {/* Test access timer display */}
-    {isTestAccess() && (
-      <div className="fixed bottom-8 left-6 z-50 bg-background/80 backdrop-blur-4xl border shadow-xl rounded-lg px-3 py-2">
-        <div className="flex items-center gap-2 text-sm">
-          <Clock className="h-4 w-4 text-primary" />
-          <span className="font-medium">وقت الاختبار المتبقي:</span>
-          <span className={`font-mono ${timeLeft <= 60 ? 'text-destructive animate-pulse' : 'text-primary'}`}>
-            {Math.floor(timeLeft / 60)}:{(timeLeft % 60).toString().padStart(2, '0')}
-          </span>
         </div>
       </div>
     )}
