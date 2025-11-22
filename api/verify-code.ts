@@ -17,6 +17,10 @@ const ACCESS_CODES_B64: string[] = [
 const decode = (v: string) => Buffer.from(v, 'base64').toString('utf-8');
 const ALLOWED = new Set(ACCESS_CODES_B64.map(decode));
 const USED_KEY = (code: string) => `access_used:${code}`;
+<<<<<<< Updated upstream
+=======
+const TEST_USED_KEY = 'test_access_used';
+>>>>>>> Stashed changes
 
 const redisUrl = (process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL) as string | undefined;
 const redisToken = (process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN) as string | undefined;
@@ -42,6 +46,20 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
   if (!ALLOWED.has(normalized)) return res.status(200).json({ ok: false, status: 'invalid' });
 
+<<<<<<< Updated upstream
+=======
+  // Special handling for TEST-ACCESS: allow only once globally for any device
+  if (normalized === TEST_ACCESS_CODE) {
+    const alreadyUsed = await redis.get<string>(TEST_USED_KEY);
+    if (alreadyUsed) {
+      return res.status(200).json({ ok: false, status: 'used' });
+    }
+    // Mark as used globally (no deviceId recording)
+    await redis.set(TEST_USED_KEY, 'true');
+    return res.status(200).json({ ok: true, status: 'ok' });
+  }
+
+>>>>>>> Stashed changes
   const key = USED_KEY(normalized);
   const already = await redis.get<string>(key);
   if (already === 'true') return res.status(200).json({ ok: false, status: 'used' });
