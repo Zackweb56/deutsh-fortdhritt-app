@@ -31,8 +31,8 @@ ALLOWED.add(TEST_ACCESS_CODE);
 const USED_KEY = (code: string) => `access_used:${code}`;
 const TEST_USED_KEY = (deviceId: string) => `test_used:${deviceId}`;
 
-const redisUrl = (process.env.DG_KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL) as string | undefined;
-const redisToken = (process.env.DG_KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN) as string | undefined;
+const redisUrl = (process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL) as string | undefined;
+const redisToken = (process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN) as string | undefined;
 
 const redis = new Redis({
   url: redisUrl || '',
@@ -40,49 +40,75 @@ const redis = new Redis({
 });
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
+  console.log('API called with method:', req.method);
   res.setHeader('Content-Type', 'application/json');
   res.setHeader('Cache-Control', 'no-store');
 
   if (req.method !== 'POST') return res.status(405).json({ ok: false, error: 'method_not_allowed' });
 
   const { code, deviceId } = req.body || {};
+  console.log('Request body:', { code: code ? 'present' : 'missing', deviceId: deviceId ? 'present' : 'missing' });
   if (typeof code !== 'string' || typeof deviceId !== 'string') return res.status(400).json({ ok: false, error: 'invalid_request' });
 
   const normalized = code.trim().toUpperCase();
+  console.log('Normalized code:', normalized);
 
+  console.log('Redis URL present:', !!redisUrl);
+  console.log('Redis token present:', !!redisToken);
   if (!redisUrl || !redisToken) {
+    console.log('Redis not configured');
     return res.status(500).json({ ok: false, error: 'server_not_configured' });
   }
+
+  console.log('Code in ALLOWED set:', ALLOWED.has(normalized));
   if (!ALLOWED.has(normalized)) return res.status(200).json({ ok: false, status: 'invalid' });
 
   // Special handling for TEST-ACCESS: allow only once per device
   if (normalized === TEST_ACCESS_CODE) {
+    console.log('Processing TEST_ACCESS_CODE');
     const testKey = TEST_USED_KEY(deviceId);
-    const alreadyUsed = await redis.get<string>(testKey);
-    if (alreadyUsed) {
-      return res.status(200).json({ ok: false, status: 'used' });
-    }
-    // Mark as used for this device (no expiration, permanent)
-    await redis.set(testKey, 'true');
-    return res.status(200).json({ ok: true, status: 'ok' });
-  }
-
-  const key = USED_KEY(normalized);
-  const storedDeviceId = await redis.get<string>(key);
-  if (storedDeviceId && storedDeviceId !== deviceId) {
-    return res.status(200).json({ ok: false, status: 'used' });
-  }
-
-  // If no stored deviceId, set it to this deviceId NX ensures single-writer
-  if (!storedDeviceId) {
-    const setResult = await redis.set<string>(key, deviceId, { nx: true });
-    if (setResult === null) {
-      // Someone else set it first, check again
-      const newStored = await redis.get<string>(key);
-      if (newStored && newStored !== deviceId) {
+    console.log('Test key:', testKey);
+    try {
+      const alreadyUsed = await redis.get<string>(testKey);
+      console.log('Already used:', !!alreadyUsed);
+      if (alreadyUsed) {
         return res.status(200).json({ ok: false, status: 'used' });
       }
+      // Mark as used for this device (no expiration, permanent)
+      await redis.set(testKey, 'true');
+      return res.status(200).json({ ok: true, status: 'ok' });
+    } catch (error) {
+      console.error('Redis error for test code:', error);
+      return res.status(500).json({ ok: false, error: 'redis_error' });
     }
   }
-  return res.status(200).json({ ok: true, status: 'ok' });
+
+  console.log('Processing paid code');
+  const key = USED_KEY(normalized);
+  console.log('Used key:', key);
+  try {
+    const storedDeviceId = await redis.get<string>(key);
+    console.log('Stored deviceId:', storedDeviceId);
+    if (storedDeviceId && storedDeviceId !== deviceId) {
+      return res.status(200).json({ ok: false, status: 'used' });
+    }
+
+    // If no stored deviceId, set it to this deviceId NX ensures single-writer
+    if (!storedDeviceId) {
+      const setResult = await redis.set<string>(key, deviceId, { nx: true });
+      console.log('Set result:', setResult);
+      if (setResult === null) {
+        // Someone else set it first, check again
+        const newStored = await redis.get<string>(key);
+        console.log('New stored deviceId:', newStored);
+        if (newStored && newStored !== deviceId) {
+          return res.status(200).json({ ok: false, status: 'used' });
+        }
+      }
+    }
+    return res.status(200).json({ ok: true, status: 'ok' });
+  } catch (error) {
+    console.error('Redis error for paid code:', error);
+    return res.status(500).json({ ok: false, error: 'redis_error' });
+  }
 }
