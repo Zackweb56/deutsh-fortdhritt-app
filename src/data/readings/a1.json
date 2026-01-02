@@ -1,0 +1,62 @@
+[
+    {
+        "de_text": "Mein Name ist Layla. Ich komme aus Marokko und lebe seit zwei Jahren in Deutschland. Ich bin 16 Jahre alt. Ich habe einen Bruder und eine Schwister. Mein Bruder Youssef ist 19 Jahre alt. Meine Schwester Amina ist 14 Jahre alt. Wir wohnen mit unseren Eltern in einer Wohnung in Köln. Meine Mutter arbeitet in einem Restaurant. Sie kocht gerne marokkanisches Essen. Mein Vater arbeitet in einer Autowerkstatt.\n\nIch mag Musik und tanze gerne. Oft höre ich marokkanische Musik. Wir haben eine Katze. Ihr Name ist Mishmish. Das bedeutet „Aprikose“ auf Arabisch. Ich gehe auch gerne in die Schule. Mein Lieblingsfach ist Kunst. Mathe mag ich nicht so gerne.\n\nNach der Schule trinke ich oft Tee mit Minze zu Hause. Manchmal backe ich mit meiner Mutter marokkanische Kekse. Am Wochenende treffe ich mich mit Freunden. Wir gehen manchmal in einen Park. Am Freitag kocht meine Familie Couscous. Das ist unser traditionelles Gericht. Sonntags schlafe ich lange. Dann helfe ich meiner Mutter im Haus. Am Abend sehen wir oft marokkanische Filme. Das macht Spaß!",
+        "questions": [
+          {
+            "question": "Wie alt ist Laylas Schwester?",
+            "options": ["zwölf Jahre", "dreizehn Jahre", "vierzehn Jahre", "fünfzehn Jahre"],
+            "correct_answer": "vierzehn Jahre"
+          },
+          {
+            "question": "Wo arbeitet Laylas Vater?",
+            "options": ["in einem Restaurant", "in einer Autowerkstatt", "in einer Bank", "in der Schule"],
+            "correct_answer": "in einer Autowerkstatt"
+          },
+          {
+            "question": "Was ist Laylas Lieblingsfach in der Schule?",
+            "options": ["Mathe", "Kunst", "Musik", "Sport"],
+            "correct_answer": "Kunst"
+          },
+          {
+            "question": "Was trinkt Layla oft nach der Schule?",
+            "options": ["Kaffee", "Wasser", "Tee mit Minze", "Saft"],
+            "correct_answer": "Tee mit Minze"
+          },
+          {
+            "question": "Was kocht Laylas Familie am Freitag?",
+            "options": ["Pizza", "Couscous", "Suppe", "Nudeln"],
+            "correct_answer": "Couscous"
+          }
+        ]
+    },
+    {
+        "de_text": "Mein Name ist Karim. Ich komme aus Casablanca in Marokko. Seit einem Jahr lerne ich Deutsch, weil ich eine Ausbildung in Deutschland machen möchte. Ich möchte gerne in der Pflege arbeiten. Das heißt: Ich möchte Menschen helfen, die krank oder alt sind. Meine Tante arbeitet auch in der Pflege. Sie hat mir viel darüber erzählt.\n\nIn Marokko habe ich in einem Café gearbeitet. Aber ich wollte immer einen Beruf mit Sinn machen. Deshalb habe ich mich für die Pflege entschieden. Jeden Tag lerne ich Deutsch. Ich besuche einen Sprachkurs. Manchmal ist Deutsch schwer, aber ich gebe nicht auf. Ich übe viel mit Apps und Videos.\n\nMein Bruder lebt schon in Berlin. Er hilft mir oft. Bald möchte ich nach Deutschland ziehen und mit der Ausbildung beginnen. Meine Familie unterstützt mich. Meine Mutter sagt immer: 'Hilfe für andere ist das größte Geschenk.' Das motiviert mich sehr.\n\nIch freue mich auf die Zukunft. Ich will nicht nur Deutsch lernen, sondern auch die deutsche Kultur kennenlernen. Vielleicht kann ich später auch marokkanische Pflegemethoden mit deutschen Methoden verbinden. Das ist mein Traum.",
+        "questions": [
+          {
+            "question": "Woher kommt Karim?",
+            "options": ["Aus Berlin", "Aus Österreich", "Aus Casablanca", "Aus München"],
+            "correct_answer": "Aus Casablanca"
+          },
+          {
+            "question": "Was möchte Karim in Deutschland machen?",
+            "options": ["Deutsch lernen", "Im Café arbeiten", "Eine Ausbildung in der Pflege machen", "Urlaub machen"],
+            "correct_answer": "Eine Ausbildung in der Pflege machen"
+          },
+          {
+            "question": "Wer arbeitet schon in der Pflege?",
+            "options": ["Sein Vater", "Seine Tante", "Sein Bruder", "Seine Mutter"],
+            "correct_answer": "Seine Tante"
+          },
+          {
+            "question": "Wie lernt Karim Deutsch?",
+            "options": ["Nur in der Schule", "Mit einem Sprachkurs und Apps", "Nur mit seinem Bruder", "Er lernt nicht Deutsch"],
+            "correct_answer": "Mit einem Sprachkurs und Apps"
+          },
+          {
+            "question": "Was sagt Karims Mutter über Hilfe?",
+            "options": ["Hilfe ist schwer", "Hilfe kostet Geld", "Hilfe für andere ist das größte Geschenk", "Hilfe ist nicht wichtig"],
+            "correct_answer": "Hilfe für andere ist das größte Geschenk"
+          }
+        ]
+    }
+]

@@ -13686,8 +13686,8 @@
           "lines": [
             { "speaker": "آنا", "de": "Wo warst du im Urlaub?", "ar": "أين كنت في الإجازة؟" },
             { "speaker": "توم", "de": "Ich bin nach Italien geflogen.", "ar": "لقد طرت إلى إيطاليا." },
-            { "speaker": "آنا", "ar": "Wow! Und was hast du dort gemacht?", "ar": "واو! وماذا فعلت هناك؟" },
-            { "de": "توم", "de": "Ich bin viel gelaufen und habe viele Museen besucht.", "ar": "لقد مشيت كثيراً وزارت العديد من المتاحف." },
+            { "speaker": "آنا", "de": "Wow! Und was hast du dort gemacht?", "ar": "واو! وماذا فعلت هناك؟" },
+            { "speaker": "توم", "de": "Ich bin viel gelaufen und habe viele Museen besucht.", "ar": "لقد مشيت كثيراً وزارت العديد من المتاحف." },
             { "speaker": "آنا", "de": "Bist du alleine gereist?", "ar": "هل سافرت وحدك؟" },
             { "speaker": "توم", "de": "Nein, ich bin mit Freunden gefahren.", "ar": "لا، سافرت مع أصدقاء." }
           ]
@@ -14630,11 +14630,11 @@
           "context": "زبون يبحث عن منتج في السوبر ماركت",
           "level": "رسمي",
           "lines": [
-            { "de": "الزبون", "de": "Entschuldigung, wo finde ich die Milch?", "ar": "عفواً، أين أجد الحليب؟" },
-            { "de": "الموظف", "de": "Die Milch ist in der Molkereiabteilung, gleich links.", "ar": "الحليب في قسم منتجات الألبان، على اليسار مباشرة." },
-            { "de": "الزبون", "de": "Danke! Und wo sind die Eier?", "ar": "شكراً! وأين البيض؟" },
-            { "de": "الموظف", "de": "Die Eier sind neben der Milch.", "ar": "البيض بجانب الحليب." },
-            { "de": "الزبون", "de": "Vielen Dank für Ihre Hilfe!", "ar": "شكراً جزيلاً على مساعدتكم!" }
+            { "speaker": "الزبون", "de": "Entschuldigung, wo finde ich die Milch?", "ar": "عفواً، أين أجد الحليب؟" },
+            { "speaker": "الموظف", "de": "Die Milch ist in der Molkereiabteilung, gleich links.", "ar": "الحليب في قسم منتجات الألبان، على اليسار مباشرة." },
+            { "speaker": "الزبون", "de": "Danke! Und wo sind die Eier?", "ar": "شكراً! وأين البيض؟" },
+            { "speaker": "الموظف", "de": "Die Eier sind neben der Milch.", "ar": "البيض بجانب الحليب." },
+            { "speaker": "الزبون", "de": "Vielen Dank für Ihre Hilfe!", "ar": "شكراً جزيلاً على مساعدتكم!" }
           ]
         },
         {
@@ -14642,13 +14642,13 @@
           "context": "زبون يدفع عند الصندوق",
           "level": "رسمي",
           "lines": [
-            { "de": "موظف الصندوق", "de": "Guten Tag! Das macht zusammen 25,40 Euro.", "ar": "نهارك سعيد! المجموع هو 25.40 يورو." },
-            { "de": "الزبون", "de": "Kann ich mit Karte zahlen?", "ar": "هل يمكنني الدفع بالبطاقة؟" },
-            { "de": "موظف الصندوق", "de": "Ja, natürlich. Stecken Sie die Karte bitte ein.", "ar": "نعم، بالتأكيد. أدخلوا البطاقة من فضلكم." },
-            { "de": "الزبون", "de": "Brauche ich eine Tüte?", "ar": "هل أحتاج كيساً؟" },
-            { "de": "موظف الصندوق", "de": "Möchten Sie eine? Die großen kosten 20 Cent.", "ar": "هل تريدون واحداً؟ الكبيرة سعرها 20 سنت." },
-            { "de": "الزبون", "de": "Nein, danke. Ich habe meine eigene Tasche.", "ar": "لا، شكراً. لدي حقيبتي الخاصة." },
-            { "de": "موظف الصندوق", "de": "Alles klar. Hier ist Ihre Quittung. Einen schönen Tag noch!", "ar": "حسناً. ها هو إيصالكم. يوم سعيد!" }
+            { "speaker": "موظف الصندوق", "de": "Guten Tag! Das macht zusammen 25,40 Euro.", "ar": "نهارك سعيد! المجموع هو 25.40 يورو." },
+            { "speaker": "الزبون", "de": "Kann ich mit Karte zahlen?", "ar": "هل يمكنني الدفع بالبطاقة؟" },
+            { "speaker": "موظف الصندوق", "de": "Ja, natürlich. Stecken Sie die Karte bitte ein.", "ar": "نعم، بالتأكيد. أدخلوا البطاقة من فضلكم." },
+            { "speaker": "الزبون", "de": "Brauche ich eine Tüte?", "ar": "هل أحتاج كيساً؟" },
+            { "speaker": "موظف الصندوق", "de": "Möchten Sie eine? Die großen kosten 20 Cent.", "ar": "هل تريدون واحداً؟ الكبيرة سعرها 20 سنت." },
+            { "speaker": "الزبون", "de": "Nein, danke. Ich habe meine eigene Tasche.", "ar": "لا، شكراً. لدي حقيبتي الخاصة." },
+            { "speaker": "موظف الصندوق", "de": "Alles klar. Hier ist Ihre Quittung. Einen schönen Tag noch!", "ar": "حسناً. ها هو إيصالكم. يوم سعيد!" }
           ]
         }
       ],

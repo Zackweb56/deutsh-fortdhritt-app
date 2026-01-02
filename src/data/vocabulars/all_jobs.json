@@ -1,0 +1,663 @@
+[
+    {
+    "category": "IT (Information Technology)",
+    "subcategories": [
+        {
+        "name": "General / Main vocab (hardware & peripherals)",
+        "vocabs": [
+            { "de": "der Computer", "artikel": "der", "ar": "الكمبيوتر / الحاسوب", "image": "/mnt/data/74f8eae3-6697-439f-bf84-1e9f9bd7c0d6.png" },
+            { "de": "der Laptop", "artikel": "der", "ar": "اللابتوب", "image": "/mnt/data/74f8eae3-6697-439f-bf84-1e9f9bd7c0d6.png" },
+            { "de": "der Monitor", "artikel": "der", "ar": "الشاشة / المونيتور", "image": "/mnt/data/74f8eae3-6697-439f-bf84-1e9f9bd7c0d6.png" },
+            { "de": "die Tastatur", "artikel": "die", "ar": "لوحة المفاتيح", "image": "/mnt/data/74f8eae3-6697-439f-bf84-1e9f9bd7c0d6.png" },
+            { "de": "die Maus", "artikel": "die", "ar": "الفأرة", "image": "/mnt/data/74f8eae3-6697-439f-bf84-1e9f9bd7c0d6.png" },
+            { "de": "der Drucker", "artikel": "der", "ar": "الطابعة", "image": "/mnt/data/74f8eae3-6697-439f-bf84-1e9f9bd7c0d6.png" },
+            { "de": "der Scanner", "artikel": "der", "ar": "الماسح الضوئي", "image": null },
+            { "de": "die Festplatte", "artikel": "die", "ar": "القرص الصلب", "image": null },
+            { "de": "die SSD (Solid State Drive)", "artikel": "die", "ar": "قرص حالة صلبة", "image": null },
+            { "de": "der USB-Stick", "artikel": "der", "ar": "فلاشة USB", "image": null },
+            { "de": "die Grafikkarte", "artikel": "die", "ar": "بطاقة الرسوميات", "image": null },
+            { "de": "die Soundkarte", "artikel": "die", "ar": "بطاقة الصوت", "image": null },
+            { "de": "die Webcam", "artikel": "die", "ar": "كاميرا ويب", "image": null },
+            { "de": "das Netzteil", "artikel": "das", "ar": "مزود الطاقة (Power supply)", "image": null },
+            { "de": "das Mainboard / die Hauptplatine", "artikel": "das", "ar": "اللوحة الأم", "image": null },
+            { "de": "der Lüfter", "artikel": "der", "ar": "المروحة (للتبريد)", "image": null },
+            { "de": "das Kabel", "artikel": "das", "ar": "كابل", "image": null },
+            { "de": "das HDMI-Kabel", "artikel": "das", "ar": "كابل HDMI", "image": null },
+            { "de": "das Netzwerkkabel (RJ45)", "artikel": "das", "ar": "كابل الشبكة (RJ45)", "image": null },
+            { "de": "die Dockingstation", "artikel": "die", "ar": "محطة الإرساء", "image": null }
+        ]
+        },
+        {
+        "name": "Systemintegration & Netzwerk (main + advanced)",
+        "vocabs": [
+            { "de": "der Server", "artikel": "der", "ar": "الخادم / السيرفر", "image": null },
+            { "de": "das Rechenzentrum", "artikel": "das", "ar": "مركز البيانات", "image": null },
+            { "de": "der Client", "artikel": "der", "ar": "جهاز العميل / جهاز المستخدم", "image": null },
+            { "de": "der Router", "artikel": "der", "ar": "الراوتر", "image": null },
+            { "de": "der Switch", "artikel": "der", "ar": "المبدل / السويتش", "image": null },
+            { "de": "der Access Point", "artikel": "der", "ar": "نقطة الوصول اللاسلكية", "image": null },
+            { "de": "die Netzwerktopologie", "artikel": "die", "ar": "طوبولوجيا الشبكة", "image": null },
+            { "de": "die IP-Adresse", "artikel": "die", "ar": "عنوان IP", "image": null },
+            { "de": "das Subnetz / Subnetting", "artikel": "das", "ar": "الشبكة الفرعية / تجزئة الشبكة", "image": null },
+            { "de": "die MAC-Adresse", "artikel": "die", "ar": "عنوان MAC", "image": null },
+            { "de": "die DNS (Domain Name System)", "artikel": "die", "ar": "نظام أسماء النطاقات (DNS)", "image": null },
+            { "de": "die DHCP-Konfiguration", "artikel": "die", "ar": "تكوين DHCP", "image": null },
+            { "de": "die Routing-Tabelle", "artikel": "die", "ar": "جدول التوجيه", "image": null },
+            { "de": "die Firewall", "artikel": "die", "ar": "جدار الحماية", "image": null },
+            { "de": "die VPN-Verbindung (Virtual Private Network)", "artikel": "die", "ar": "اتصال VPN شبكة خاصة افتراضية", "image": null },
+            { "de": "die Bandbreite", "artikel": "die", "ar": "عرض النطاق الترددي", "image": null },
+            { "de": "der Load Balancer", "artikel": "der", "ar": "موزع الحمل / موازن التحميل", "image": null },
+            { "de": "die Netzwerksicherheit", "artikel": "die", "ar": "أمن الشبكات", "image": null },
+            { "de": "die Authentifizierung", "artikel": "die", "ar": "المصادقة", "image": null },
+            { "de": "die Autorisierung / Zugriffsrechte", "artikel": "die", "ar": "التفويض / صلاحيات الوصول", "image": null },
+            { "de": "die Zwei-Faktor-Authentifizierung (2FA)", "artikel": "die", "ar": "المصادقة بعاملين", "image": null },
+            { "de": "die Verschlüsselung (Encryption)", "artikel": "die", "ar": "التشفير", "image": null },
+            { "de": "TLS / SSL", "artikel": "", "ar": "بروتوكولات تأمين الاتصال (TLS/SSL)", "image": null },
+            { "de": "das Protokoll (z. B. TCP/IP, HTTP, HTTPS, FTP, SSH)", "artikel": "das", "ar": "بروتوكول (مثل TCP/IP, HTTP, HTTPS, FTP, SSH)", "image": null },
+            { "de": "die Netzwerkanalyse / Packet Capture (z. B. wireshark)", "artikel": "die", "ar": "تحليل الشبكة / اعتراض الحزم", "image": null },
+            { "de": "die QoS (Quality of Service)", "artikel": "die", "ar": "جودة الخدمة", "image": null },
+            { "de": "die VLAN (Virtual LAN)", "artikel": "die", "ar": "الشبكة المحلية الافتراضية", "image": null },
+            { "de": "die Portweiterleitung (Port Forwarding)", "artikel": "die", "ar": "إعادة توجيه المنافذ", "image": null },
+            { "de": "die Störung (Incident)", "artikel": "die", "ar": "عطل / حادثة", "image": null },
+            { "de": "die Fernwartung (Remote Maintenance)", "artikel": "die", "ar": "الصيانة عن بُعد", "image": null },
+            { "de": "die Systemüberwachung (Monitoring)", "artikel": "die", "ar": "مراقبة النظام", "image": null },
+            { "de": "der Netzwerkadministrator", "artikel": "der", "ar": "مسؤول الشبكة", "image": null },
+            { "de": "die Datensicherung / das Backup", "artikel": "die / das", "ar": "النسخ الاحتياطي", "image": null },
+            { "de": "die Wiederherstellung (Recovery)", "artikel": "die", "ar": "الاستعادة", "image": null },
+            { "de": "die Virtualisierung (VMware, KVM, Hyper-V)", "artikel": "die", "ar": "الافتراضية", "image": null },
+            { "de": "der Hypervisor", "artikel": "der", "ar": "مشرف الأجهزة الافتراضية (Hypervisor)", "image": null },
+            { "de": "Container / Docker", "artikel": "", "ar": "حاويات / دوكر", "image": null }
+        ]
+        },
+        {
+        "name": "Anwendungsentwicklung (Development: frontend, backend, database)",
+        "vocabs": [
+            { "de": "die Anwendung / Applikation", "artikel": "die", "ar": "التطبيق", "image": null },
+            { "de": "der Entwickler / die Entwicklerin", "artikel": "der / die", "ar": "المطوّر / المطوّرة", "image": null },
+            { "de": "die Programmiersprache (z. B. Java, Python, PHP, JavaScript)", "artikel": "die", "ar": "لغة البرمجة", "image": null },
+            { "de": "das Framework (z. B. Laravel, Spring, Django, React)", "artikel": "das", "ar": "الإطار البرمجي", "image": null },
+            { "de": "die API (Application Programming Interface) / REST-API", "artikel": "die", "ar": "واجهة برمجة التطبيقات / REST-API", "image": null },
+            { "de": "GraphQL", "artikel": "", "ar": "GraphQL (بديل للـ REST)", "image": null },
+            { "de": "das Endpoint", "artikel": "das", "ar": "نقطة نهاية (Endpoint)", "image": null },
+            { "de": "die Middleware", "artikel": "die", "ar": "الوسيط البرمجي (Middleware)", "image": null },
+            { "de": "das Model-View-Controller (MVC)-Muster", "artikel": "das", "ar": "نموذج MVC (الواجهة/النموذج/التحكم)", "image": null },
+            { "de": "das Repository / ORM (z. B. Eloquent, Hibernate)", "artikel": "das", "ar": "مستودع البيانات / ORM", "image": null },
+            { "de": "die Datenbank (SQL / NoSQL)", "artikel": "die", "ar": "قاعدة البيانات", "image": null },
+            { "de": "die relationale Datenbank (z. B. MySQL, PostgreSQL)", "artikel": "die", "ar": "قاعدة بيانات علائقية", "image": null },
+            { "de": "die NoSQL-Datenbank (z. B. MongoDB)", "artikel": "die", "ar": "قاعدة بيانات NoSQL", "image": null },
+            { "de": "die Transaktion / ACID", "artikel": "die", "ar": "المعاملة / خصائص ACID", "image": null },
+            { "de": "die Indizierung / Index", "artikel": "die", "ar": "الفهرسة / المؤشر", "image": null },
+            { "de": "die Normalisierung", "artikel": "die", "ar": "التطبيع (قاعدة البيانات)", "image": null },
+            { "de": "die Abfrage / Query (z. B. SELECT)", "artikel": "die", "ar": "الاستعلام / Query", "image": null },
+            { "de": "der API-Key / Token", "artikel": "der", "ar": "مفتاح API / رمز تعريفي", "image": null },
+            { "de": "OAuth / JWT", "artikel": "", "ar": "بروتوكولات المصادقة وتبادل التوكن (OAuth / JWT)", "image": null },
+            { "de": "die Unit-Tests / Integrationstests", "artikel": "die", "ar": "اختبارات الوحدة / التكامل", "image": null },
+            { "de": "TDD (Test Driven Development)", "artikel": "", "ar": "التطوير القائم على الاختبارات", "image": null },
+            { "de": "CI / CD (Continuous Integration / Continuous Deployment)", "artikel": "", "ar": "التكامل / النشر المستمر", "image": null },
+            { "de": "der Build-Server", "artikel": "der", "ar": "خادم البناء (Build server)", "image": null },
+            { "de": "die Versionsverwaltung (z. B. Git)", "artikel": "die", "ar": "نظام تحكم بالإصدارات", "image": null },
+            { "de": "Branch / Merge / Pull Request", "artikel": "", "ar": "فرع / دمج / طلب سحب", "image": null },
+            { "de": "das Deployment", "artikel": "das", "ar": "نشر التطبيق", "image": null },
+            { "de": "das Rollback", "artikel": "das", "ar": "التراجع عن نشر", "image": null },
+            { "de": "das Load Testing / Performance Testing", "artikel": "das", "ar": "اختبار الحمل / الأداء", "image": null },
+            { "de": "die Asynchrone Verarbeitung / Message Queue (z. B. RabbitMQ, Kafka)", "artikel": "die", "ar": "المعالجة غير المتزامنة / قوائم الرسائل", "image": null },
+            { "de": "die Caching-Strategie (z. B. Redis)", "artikel": "die", "ar": "استراتيجية التخزين المؤقت", "image": null }
+        ]
+        },
+        {
+        "name": "IT-Systemelektroniker (hardware & field work)",
+        "vocabs": [
+            { "de": "die Hardwarediagnose", "artikel": "die", "ar": "تشخيص الهاردوير", "image": null },
+            { "de": "das BIOS / UEFI", "artikel": "das", "ar": "الـ BIOS / UEFI", "image": null },
+            { "de": "die Firmware", "artikel": "die", "ar": "البرمجيات الثابتة (Firmware)", "image": null },
+            { "de": "die Leiterplatte (PCB)", "artikel": "die", "ar": "اللوحة المطبوعة (PCB)", "image": null },
+            { "de": "das Multimeter", "artikel": "das", "ar": "مقياس متعدد (Multimeter)", "image": null },
+            { "de": "die Lötstelle / Löten", "artikel": "die", "ar": "النقطة الملحومة / اللحام", "image": null },
+            { "de": "der Ersatzteilbestand", "artikel": "der", "ar": "مخزون قطع الغيار", "image": null },
+            { "de": "die Geräteprüfung / Zertifizierung", "artikel": "die", "ar": "اختبار / اعتماد الأجهزة", "image": null },
+            { "de": "die Verkabelung / Patchpanel", "artikel": "die", "ar": "التمديدات الكهربائية / لوحة التوزيع", "image": null },
+            { "de": "die Störungsanalyse", "artikel": "die", "ar": "تحليل الأعطال", "image": null },
+            { "de": "das Ersatzteil", "artikel": "das", "ar": "قطعة غيار", "image": null },
+            { "de": "die Service-Level-Agreement (SLA)", "artikel": "die", "ar": "اتفاقية مستوى الخدمة", "image": null }
+        ]
+        },
+        {
+        "name": "Kaufmann/-frau für Digitalisierungsmanagement (business + data)",
+        "vocabs": [
+            { "de": "die Digitalisierungsstrategie", "artikel": "die", "ar": "استراتيجية الرقمنة", "image": null },
+            { "de": "das Prozessmapping", "artikel": "das", "ar": "رسم خرائط العمليات", "image": null },
+            { "de": "das Change Management", "artikel": "das", "ar": "إدارة التغيير", "image": null },
+            { "de": "das Anforderungsmanagement (Requirements Engineering)", "artikel": "das", "ar": "إدارة المتطلبات", "image": null },
+            { "de": "die Stakeholder-Analyse", "artikel": "die", "ar": "تحليل الجهات المعنية", "image": null },
+            { "de": "das KPI (Key Performance Indicator)", "artikel": "das", "ar": "مؤشر الأداء الرئيسي", "image": null },
+            { "de": "die Datenanalyse / Business Intelligence (BI)", "artikel": "die", "ar": "تحليل البيانات / استخبارات الأعمال", "image": null },
+            { "de": "die Datenschutz-Grundverordnung (DSGVO/GDPR)", "artikel": "die", "ar": "اللائحة العامة لحماية البيانات", "image": null },
+            { "de": "das Datenmodell", "artikel": "das", "ar": "نموذج البيانات", "image": null },
+            { "de": "die Prozessautomatisierung (RPA)", "artikel": "die", "ar": "أتمتة العمليات (RPA)", "image": null }
+        ]
+        },
+        {
+        "name": "Mediengestalter/in Digital & Print (design & multimedia)",
+        "vocabs": [
+            { "de": "das Layout", "artikel": "das", "ar": "التخطيط / Layout", "image": null },
+            { "de": "die Typografie", "artikel": "die", "ar": "فن اختيار الخطوط (Typography)", "image": null },
+            { "de": "das Vektorgrafikformat (SVG)", "artikel": "das", "ar": "رسوميات متجهية (SVG)", "image": null },
+            { "de": "die Rastergrafik (PNG, JPEG)", "artikel": "die", "ar": "رسوميات نقطية (PNG, JPEG)", "image": null },
+            { "de": "das Farbprofil / CMYK / RGB", "artikel": "das", "ar": "نمط الألوان / CMYK / RGB", "image": null },
+            { "de": "das Mockup / Prototyp", "artikel": "das", "ar": "نموذج تجريبي / بروتوتايب", "image": null },
+            { "de": "die Bildbearbeitung (Photoshop)", "artikel": "die", "ar": "معالجة الصور", "image": null },
+            { "de": "die Videobearbeitung (Premiere, DaVinci)", "artikel": "die", "ar": "تحرير الفيديو", "image": null },
+            { "de": "die User Experience (UX)", "artikel": "die", "ar": "تجربة المستخدم", "image": null },
+            { "de": "die User Interface (UI)", "artikel": "die", "ar": "واجهة المستخدم", "image": null }
+        ]
+        },
+        {
+        "name": "Security & Compliance (important cross-cutting terms)",
+        "vocabs": [
+            { "de": "die IT-Sicherheit", "artikel": "die", "ar": "أمن تقنية المعلومات", "image": null },
+            { "de": "das Penetration Testing / Pentest", "artikel": "das", "ar": "اختبار الاختراق", "image": null },
+            { "de": "die Schwachstellenanalyse (Vulnerability Assessment)", "artikel": "die", "ar": "تحليل نقاط الضعف", "image": null },
+            { "de": "das Sicherheitskonzept", "artikel": "das", "ar": "مفهوم/خطة الأمان", "image": null },
+            { "de": "die Backup- und Recovery-Strategie", "artikel": "die", "ar": "استراتيجية النسخ الاحتياطي والاستعادة", "image": null },
+            { "de": "die Notfallwiederherstellung (Disaster Recovery)", "artikel": "die", "ar": "استعادة الطوارئ بعد الكوارث", "image": null }
+        ]
+        }
+    ]
+    },
+    {
+    "category": "Pflege (Nursing/Care)",
+    "subcategories": [
+        {
+        "name": "General / Everyday Nursing Vocabulary",
+        "vocabs": [
+            { "de": "die Pflegekraft", "artikel": "die", "ar": "الممرضة / مقدم الرعاية", "image": null },
+            { "de": "der Patient", "artikel": "der", "ar": "المريض", "image": null },
+            { "de": "die Patientin", "artikel": "die", "ar": "المريضة", "image": null },
+            { "de": "das Krankenhaus", "artikel": "das", "ar": "المستشفى", "image": null },
+            { "de": "die Klinik", "artikel": "die", "ar": "العيادة", "image": null },
+            { "de": "das Pflegeheim", "artikel": "das", "ar": "دار الرعاية", "image": null },
+            { "de": "die Behandlung", "artikel": "die", "ar": "العلاج", "image": null },
+            { "de": "die Untersuchung", "artikel": "die", "ar": "الفحص / المعاينة الطبية", "image": null },
+            { "de": "das Medikament", "artikel": "das", "ar": "الدواء", "image": null },
+            { "de": "die Spritze", "artikel": "die", "ar": "الحقنة", "image": null },
+            { "de": "der Verband", "artikel": "der", "ar": "الضماد", "image": null },
+            { "de": "die Infusion", "artikel": "die", "ar": "التحليل الوريدي", "image": null },
+            { "de": "das Fieber", "artikel": "das", "ar": "الحمى", "image": null },
+            { "de": "der Blutdruck", "artikel": "der", "ar": "ضغط الدم", "image": null },
+            { "de": "die Temperatur", "artikel": "die", "ar": "درجة الحرارة", "image": null },
+            { "de": "das Röntgenbild", "artikel": "das", "ar": "الأشعة السينية", "image": null },
+            { "de": "der Notfall", "artikel": "der", "ar": "الحالة الطارئة", "image": null },
+            { "de": "die Visite", "artikel": "die", "ar": "جولة الطبيب / زيارة المريض", "image": null },
+            { "de": "der Arzt", "artikel": "der", "ar": "الطبيب", "image": null },
+            { "de": "die Ärztin", "artikel": "die", "ar": "الطبيبة", "image": null }
+        ]
+        },
+        {
+        "name": "Medical Equipment & Tools",
+        "vocabs": [
+            { "de": "das Stethoskop", "artikel": "das", "ar": "السماعة الطبية", "image": null },
+            { "de": "das Thermometer", "artikel": "das", "ar": "ميزان الحرارة", "image": null },
+            { "de": "die Blutdruckmanschette", "artikel": "die", "ar": "جهاز قياس ضغط الدم", "image": null },
+            { "de": "der Rollstuhl", "artikel": "der", "ar": "الكرسي المتحرك", "image": null },
+            { "de": "das Bettgestell", "artikel": "das", "ar": "سرير المستشفى", "image": null },
+            { "de": "die Patientenakte", "artikel": "die", "ar": "ملف المريض", "image": null },
+            { "de": "der Beatmungsgerät", "artikel": "der", "ar": "جهاز التنفس الصناعي", "image": null },
+            { "de": "die Infusionspumpe", "artikel": "die", "ar": "مضخة التسريب", "image": null },
+            { "de": "die Spritzenkanüle", "artikel": "die", "ar": "إبرة الحقن", "image": null },
+            { "de": "der Verbandkasten", "artikel": "der", "ar": "صندوق الإسعافات الأولية", "image": null },
+            { "de": "die Hygienehandschuhe", "artikel": "die", "ar": "قفازات النظافة", "image": null },
+            { "de": "die Schutzmaske", "artikel": "die", "ar": "الكمامة / قناع الحماية", "image": null }
+        ]
+        },
+        {
+        "name": "Medical Procedures & Care Actions",
+        "vocabs": [
+            { "de": "die Blutentnahme", "artikel": "die", "ar": "سحب الدم", "image": null },
+            { "de": "die Injektion", "artikel": "die", "ar": "الحقن", "image": null },
+            { "de": "die Wundversorgung", "artikel": "die", "ar": "العناية بالجروح", "image": null },
+            { "de": "die Körperpflege", "artikel": "die", "ar": "العناية بالجسم", "image": null },
+            { "de": "die Mobilisation", "artikel": "die", "ar": "تحريك / تنشيط المريض", "image": null },
+            { "de": "die Vitalzeichenkontrolle", "artikel": "die", "ar": "مراقبة العلامات الحيوية", "image": null },
+            { "de": "die Medikamentengabe", "artikel": "die", "ar": "إعطاء الدواء", "image": null },
+            { "de": "die Beatmung", "artikel": "die", "ar": "التنفس الصناعي", "image": null },
+            { "de": "die Wunddesinfektion", "artikel": "die", "ar": "تطهير الجروح", "image": null },
+            { "de": "die Katheterisierung", "artikel": "die", "ar": "تركيب القسطرة", "image": null }
+        ]
+        },
+        {
+        "name": "Advanced Nursing / Medical Terms",
+        "vocabs": [
+            { "de": "die Anamnese", "artikel": "die", "ar": "التاريخ الطبي للمريض", "image": null },
+            { "de": "die Diagnose", "artikel": "die", "ar": "التشخيص", "image": null },
+            { "de": "die Therapie", "artikel": "die", "ar": "العلاج / المعالجة", "image": null },
+            { "de": "die Pflegeplanung", "artikel": "die", "ar": "تخطيط الرعاية", "image": null },
+            { "de": "die Pflegebericht", "artikel": "die", "ar": "تقرير الرعاية", "image": null },
+            { "de": "die Medikationsplan", "artikel": "die", "ar": "خطة الأدوية", "image": null },
+            { "de": "die Hygienevorschrift", "artikel": "die", "ar": "قواعد النظافة", "image": null },
+            { "de": "die Infektionsprävention", "artikel": "die", "ar": "الوقاية من العدوى", "image": null },
+            { "de": "die Schmerztherapie", "artikel": "die", "ar": "علاج الألم", "image": null },
+            { "de": "die Palliativpflege", "artikel": "die", "ar": "الرعاية التلطيفية", "image": null },
+            { "de": "die Rehabilitation", "artikel": "die", "ar": "التأهيل / إعادة التأهيل", "image": null },
+            { "de": "die Intensivpflege", "artikel": "die", "ar": "الرعاية المركزة", "image": null },
+            { "de": "die Beatmungsüberwachung", "artikel": "die", "ar": "مراقبة التنفس الصناعي", "image": null },
+            { "de": "die Ernährungsberatung", "artikel": "die", "ar": "استشارة التغذية", "image": null },
+            { "de": "die Pflegeethik", "artikel": "die", "ar": "أخلاقيات التمريض", "image": null },
+            { "de": "die Fachweiterbildung", "artikel": "die", "ar": "التخصص الطبي / التدريب المهني المتقدم", "image": null }
+        ]
+        },
+        {
+        "name": "Body Parts & Anatomy",
+        "vocabs": [
+            { "de": "der Kopf", "artikel": "der", "ar": "الرأس", "image": null },
+            { "de": "der Bauch", "artikel": "der", "ar": "البطن", "image": null },
+            { "de": "der Rücken", "artikel": "der", "ar": "الظهر", "image": null },
+            { "de": "die Brust", "artikel": "die", "ar": "الصدر", "image": null },
+            { "de": "das Herz", "artikel": "das", "ar": "القلب", "image": null },
+            { "de": "die Lunge", "artikel": "die", "ar": "الرئة", "image": null },
+            { "de": "der Arm", "artikel": "der", "ar": "الذراع", "image": null },
+            { "de": "das Bein", "artikel": "das", "ar": "الساق", "image": null },
+            { "de": "die Haut", "artikel": "die", "ar": "الجلد", "image": null },
+            { "de": "der Knochen", "artikel": "der", "ar": "العظم", "image": null },
+            { "de": "der Muskel", "artikel": "der", "ar": "العضلة", "image": null },
+            { "de": "die Vene", "artikel": "die", "ar": "الوريد", "image": null },
+            { "de": "die Arterie", "artikel": "die", "ar": "الشريان", "image": null }
+        ]
+        },
+        {
+        "name": "Common Conditions & Symptoms",
+        "vocabs": [
+            { "de": "der Schmerz", "artikel": "der", "ar": "الألم", "image": null },
+            { "de": "die Übelkeit", "artikel": "die", "ar": "الغثيان", "image": null },
+            { "de": "das Erbrechen", "artikel": "das", "ar": "التقيؤ", "image": null },
+            { "de": "der Schwindel", "artikel": "der", "ar": "الدوخة", "image": null },
+            { "de": "die Atemnot", "artikel": "die", "ar": "ضيق التنفس", "image": null },
+            { "de": "der Husten", "artikel": "der", "ar": "السعال", "image": null },
+            { "de": "die Entzündung", "artikel": "die", "ar": "الالتهاب", "image": null },
+            { "de": "die Infektion", "artikel": "die", "ar": "العدوى", "image": null },
+            { "de": "die Blutung", "artikel": "die", "ar": "النزيف", "image": null },
+            { "de": "die Bewusstlosigkeit", "artikel": "die", "ar": "فقدان الوعي", "image": null },
+            { "de": "die Diabetes", "artikel": "die", "ar": "مرض السكري", "image": null },
+            { "de": "der Bluthochdruck", "artikel": "der", "ar": "ارتفاع ضغط الدم", "image": null },
+            { "de": "die Demenz", "artikel": "die", "ar": "الخرف", "image": null }
+        ]
+        },
+        {
+        "name": "Daily Care & Hygiene",
+        "vocabs": [
+            { "de": "das Bettmachen", "artikel": "das", "ar": "ترتيب السرير", "image": null },
+            { "de": "die Grundpflege", "artikel": "die", "ar": "الرعاية الأساسية", "image": null },
+            { "de": "die Hilfe bei der Nahrungsaufnahme", "artikel": "die", "ar": "المساعدة في تناول الطعام", "image": null },
+            { "de": "die Mundpflege", "artikel": "die", "ar": "العناية بالفم", "image": null },
+            { "de": "die Lagerung", "artikel": "die", "ar": "تغيير وضعية المريض", "image": null },
+            { "de": "die Inkontinenzversorgung", "artikel": "die", "ar": "العناية بسلس البول", "image": null },
+            { "de": "die Prophylaxe (Dekubitus, Thrombose)", "artikel": "die", "ar": "الوقاية (من تقرحات الفراش، الجلطات)", "image": null },
+            { "de": "die Desinfektion der Hände", "artikel": "die", "ar": "تطهير اليدين", "image": null },
+            { "de": "die Bettenwasch", "artikel": "die", "ar": "غسل المريض في السرير", "image": null },
+            { "de": "die Rasur", "artikel": "die", "ar": "الحلاقة", "image": null }
+        ]
+        }
+    ]
+    },
+    {
+    "category": "Elektronik (Electronics)",
+    "subcategories": [
+        {
+        "name": "Basic Electronics Vocabulary",
+        "vocabs": [
+            { "de": "der Widerstand", "artikel": "der", "ar": "المقاومة", "image": null },
+            { "de": "der Kondensator", "artikel": "der", "ar": "المكثف", "image": null },
+            { "de": "die Diode", "artikel": "die", "ar": "الصمام الثنائي", "image": null },
+            { "de": "der Transistor", "artikel": "der", "ar": "الترانزستور", "image": null },
+            { "de": "der Strom", "artikel": "der", "ar": "التيار الكهربائي", "image": null },
+            { "de": "die Spannung", "artikel": "die", "ar": "الجهد الكهربائي", "image": null },
+            { "de": "der Stromkreis", "artikel": "der", "ar": "الدائرة الكهربائية", "image": null },
+            { "de": "die Batterie / der Akku", "artikel": "die / der", "ar": "البطارية", "image": null },
+            { "de": "das Multimeter", "artikel": "das", "ar": "جهاز قياس متعدد", "image": null },
+            { "de": "die Leiterplatte (PCB)", "artikel": "die", "ar": "اللوحة المطبوعة", "image": null },
+            { "de": "die Lötstelle", "artikel": "die", "ar": "نقطة اللحام", "image": null },
+            { "de": "der Schalter", "artikel": "der", "ar": "المفتاح الكهربائي", "image": null },
+            { "de": "die Sicherung", "artikel": "die", "ar": "الصمام / الفيوز", "image": null },
+            { "de": "das Kabel", "artikel": "das", "ar": "الكابل", "image": null },
+            { "de": "die Steckdose", "artikel": "die", "ar": "المأخذ الكهربائي", "image": null }
+        ]
+        },
+        {
+        "name": "Advanced Electronic Components",
+        "vocabs": [
+            { "de": "der Operationsverstärker (Op-Amp)", "artikel": "der", "ar": "المكبر التشغيلي", "image": null },
+            { "de": "der Mikrocontroller", "artikel": "der", "ar": "الميكروكنترولر", "image": null },
+            { "de": "das Relais", "artikel": "das", "ar": "المرحّل", "image": null },
+            { "de": "der Thyristor", "artikel": "der", "ar": "الثايرستور", "image": null },
+            { "de": "der Transformator", "artikel": "der", "ar": "المحول الكهربائي", "image": null },
+            { "de": "die Induktivität / Spule", "artikel": "die", "ar": "الملف / الحث", "image": null },
+            { "de": "die Photodiode", "artikel": "die", "ar": "الصمام الضوئي", "image": null },
+            { "de": "der Sensor (z. B. Temperatursensor, Bewegungssensor)", "artikel": "der", "ar": "الحساس / المجس", "image": null },
+            { "de": "das Display / LCD / OLED", "artikel": "das", "ar": "الشاشة", "image": null },
+            { "de": "das Potentiometer", "artikel": "das", "ar": "مقاومة متغيرة", "image": null }
+        ]
+        },
+        {
+        "name": "Electronic Tools & Equipment",
+        "vocabs": [
+            { "de": "der Lötkolben", "artikel": "der", "ar": "مكواة اللحام", "image": null },
+            { "de": "das Oszilloskop", "artikel": "das", "ar": "جهاز قياس الإشارات الكهربائية", "image": null },
+            { "de": "die Zange", "artikel": "die", "ar": "الزرادية / كماشة", "image": null },
+            { "de": "der Schraubendreher", "artikel": "der", "ar": "المفك", "image": null },
+            { "de": "das Netzgerät / Labornetzteil", "artikel": "das", "ar": "مزود طاقة مخبري", "image": null },
+            { "de": "der Lötdraht", "artikel": "der", "ar": "سلك اللحام", "image": null },
+            { "de": "das Testboard / Breadboard", "artikel": "das", "ar": "لوحة تجريبية", "image": null },
+            { "de": "das Messgerät", "artikel": "das", "ar": "جهاز القياس", "image": null }
+        ]
+        },
+        {
+        "name": "Electronic Processes & Concepts",
+        "vocabs": [
+            { "de": "die Signalverarbeitung", "artikel": "die", "ar": "معالجة الإشارات", "image": null },
+            { "de": "die Schaltung", "artikel": "die", "ar": "الدائرة / التخطيط الكهربائي", "image": null },
+            { "de": "die Digitalelektronik", "artikel": "die", "ar": "الإلكترونيات الرقمية", "image": null },
+            { "de": "die Analogelektronik", "artikel": "die", "ar": "الإلكترونيات التناظرية", "image": null },
+            { "de": "die Mikroelektronik", "artikel": "die", "ar": "الإلكترونيات الدقيقة / المتناهية الصغر", "image": null },
+            { "de": "die Leistungselektronik", "artikel": "die", "ar": "إلكترونيات القدرة", "image": null },
+            { "de": "die Leiterplattenfertigung", "artikel": "die", "ar": "تصنيع اللوحات المطبوعة", "image": null },
+            { "de": "die Signalverstärkung", "artikel": "die", "ar": "تكبير الإشارة", "image": null },
+            { "de": "die Spannungsregelung", "artikel": "die", "ar": "تنظيم الجهد", "image": null },
+            { "de": "die Stromversorgung", "artikel": "die", "ar": "تغذية التيار / مصدر الطاقة", "image": null }
+        ]
+        },
+        {
+        "name": "Roles & Technical Positions",
+        "vocabs": [
+            { "de": "der Elektroniker / die Elektronikerin", "artikel": "der / die", "ar": "فني إلكترونيات", "image": null },
+            { "de": "der Elektrotechniker / die Elektrotechnikerin", "artikel": "der / die", "ar": "مهندس كهرباء", "image": null },
+            { "de": "der Entwicklungsingenieur / die Entwicklungsingenieurin", "artikel": "der / die", "ar": "مهندس تطوير", "image": null },
+            { "de": "der Leiter der Elektronikabteilung", "artikel": "der", "ar": "رئيس قسم الإلكترونيات", "image": null },
+            { "de": "der Prüftechniker / die Prüftechnikerin", "artikel": "der / die", "ar": "فني الفحص والاختبارات", "image": null }
+        ]
+        },
+        {
+        "name": "Types of Circuits & Systems",
+        "vocabs": [
+            { "de": "die Reihenschaltung", "artikel": "die", "ar": "دائرة التوالي", "image": null },
+            { "de": "die Parallelschaltung", "artikel": "die", "ar": "دائرة التوازي", "image": null },
+            { "de": "die integrierte Schaltung (IC)", "artikel": "die", "ar": "الدائرة المتكاملة", "image": null },
+            { "de": "die gedruckte Schaltung", "artikel": "die", "ar": "الدائرة المطبوعة", "image": null },
+            { "de": "die Steuerung", "artikel": "die", "ar": "نظام التحكم", "image": null },
+            { "de": "die Regelung", "artikel": "die", "ar": "نظام التنظيم", "image": null },
+            { "de": "die Verstärkerschaltung", "artikel": "die", "ar": "دائرة المكبر", "image": null },
+            { "de": "die Filterschaltung", "artikel": "die", "ar": "دائرة المرشح", "image": null },
+            { "de": "die Oszillatorschaltung", "artikel": "die", "ar": "دائرة المذبذب", "image": null }
+        ]
+        },
+        {
+        "name": "Tools & Accessories",
+        "vocabs": [
+            { "de": "die Entlötpumpe", "artikel": "die", "ar": "مضخة إزالة اللحام", "image": null },
+            { "de": "der Entlötlitze", "artikel": "der", "ar": "ضفيرة إزالة اللحام", "image": null },
+            { "de": "die dritte Hand", "artikel": "die", "ar": "اليد الثالثة (حامل المساعدة)", "image": null },
+            { "de": "die Abisolierzange", "artikel": "die", "ar": "كماشة نزع العزل", "image": null },
+            { "de": "die Seitenschneider", "artikel": "die", "ar": "قاطعة الأسلاك", "image": null },
+            { "de": "die Pinzette", "artikel": "die", "ar": "الملقاط", "image": null },
+            { "de": "der Schrumpfschlauch", "artikel": "der", "ar": "الأنبوب الحراري", "image": null },
+            { "de": "die Lötpaste", "artikel": "die", "ar": "معجون اللحام", "image": null },
+            { "de": "die Schraubendreher-Set", "artikel": "die", "ar": "طقم المفكات", "image": null },
+            { "de": "der Kabelbinder", "artikel": "der", "ar": "رباط الكابل", "image": null }
+        ]
+        },
+        {
+        "name": "Concepts & Units",
+        "vocabs": [
+            { "de": "die Leistung", "artikel": "die", "ar": "القدرة", "image": null },
+            { "de": "die Frequenz", "artikel": "die", "ar": "التردد", "image": null },
+            { "de": "die Kapazität", "artikel": "die", "ar": "السعة", "image": null },
+            { "de": "die Induktivität", "artikel": "die", "ar": "الحث", "image": null },
+            { "de": "das Ampere (A)", "artikel": "das", "ar": "الأمبير (وحدة التيار)", "image": null },
+            { "de": "das Volt (V)", "artikel": "das", "ar": "الفولت (وحدة الجهد)", "image": null },
+            { "de": "das Ohm (Ω)", "artikel": "das", "ar": "الأوم (وحدة المقاومة)", "image": null },
+            { "de": "das Watt (W)", "artikel": "das", "ar": "الواط (وحدة القدرة)", "image": null },
+            { "de": "das Hertz (Hz)", "artikel": "das", "ar": "الهيرتز (وحدة التردد)", "image": null },
+            { "de": "das Farad (F)", "artikel": "das", "ar": "الفاراد (وحدة السعة)", "image": null },
+            { "de": "der Kurzschluss", "artikel": "der", "ar": "الدائرة القصيرة", "image": null },
+            { "de": "der offene Stromkreis", "artikel": "der", "ar": "الدائرة المفتوحة", "image": null }
+        ]
+        }
+    ]
+    },
+    {
+    "category": "Mechanik (Mechanics)",
+    "subcategories": [
+        {
+        "name": "Basic Mechanics Vocabulary",
+        "vocabs": [
+            { "de": "das Werkzeug", "artikel": "das", "ar": "الأداة / الأدوات", "image": null },
+            { "de": "der Schraubenschlüssel", "artikel": "der", "ar": "مفتاح الربط", "image": null },
+            { "de": "der Schraubendreher", "artikel": "der", "ar": "المفك", "image": null },
+            { "de": "der Hammer", "artikel": "der", "ar": "المطرقة", "image": null },
+            { "de": "die Zange", "artikel": "die", "ar": "كماشة / زرادية", "image": null },
+            { "de": "die Schraube", "artikel": "die", "ar": "المسمار", "image": null },
+            { "de": "die Mutter", "artikel": "die", "ar": "الصمولة", "image": null },
+            { "de": "die Unterlegscheibe", "artikel": "die", "ar": "الغسالة / الواشر", "image": null },
+            { "de": "der Bolzen", "artikel": "der", "ar": "المسمار الكبير / البرغي", "image": null },
+            { "de": "die Achse", "artikel": "die", "ar": "المحور", "image": null },
+            { "de": "das Lager", "artikel": "das", "ar": "المحمل", "image": null },
+            { "de": "die Feder", "artikel": "die", "ar": "الزنبرك", "image": null },
+            { "de": "die Riemenscheibe", "artikel": "die", "ar": "البكرة", "image": null },
+            { "de": "der Motor", "artikel": "der", "ar": "المحرك", "image": null },
+            { "de": "das Getriebe", "artikel": "das", "ar": "ناقل الحركة / التروس", "image": null }
+        ]
+        },
+        {
+        "name": "Advanced Mechanical Components",
+        "vocabs": [
+            { "de": "die Hydraulik", "artikel": "die", "ar": "الهيدروليك", "image": null },
+            { "de": "die Pneumatik", "artikel": "die", "ar": "النيوماتيك / الضغط الهوائي", "image": null },
+            { "de": "der Kolben", "artikel": "der", "ar": "المكبس", "image": null },
+            { "de": "die Kurbelwelle", "artikel": "die", "ar": "عمود الكرنك", "image": null },
+            { "de": "das Zahnrad", "artikel": "das", "ar": "التروس", "image": null },
+            { "de": "die Kupplung", "artikel": "die", "ar": "القابض / الكلتش", "image": null },
+            { "de": "die Bremse", "artikel": "die", "ar": "الفرامل", "image": null },
+            { "de": "das Schmieröl", "artikel": "das", "ar": "زيت التشحيم", "image": null },
+            { "de": "der Riemen / Zahnriemen", "artikel": "der", "ar": "الحزام / سير الأسنان", "image": null },
+            { "de": "das Differential", "artikel": "das", "ar": "التفاضل", "image": null },
+            { "de": "der Kolbenring", "artikel": "der", "ar": "حلقة المكبس", "image": null },
+            { "de": "die Ventilsteuerung", "artikel": "die", "ar": "نظام التحكم في الصمامات", "image": null }
+        ]
+        },
+        {
+        "name": "Mechanical Tools & Workshop Equipment",
+        "vocabs": [
+            { "de": "die Drehmaschine", "artikel": "die", "ar": "مخرطة", "image": null },
+            { "de": "die Fräsmaschine", "artikel": "die", "ar": "آلة التفريز", "image": null },
+            { "de": "die Bohrmaschine", "artikel": "die", "ar": "مثقاب / آلة الحفر", "image": null },
+            { "de": "der Schraubstock", "artikel": "der", "ar": "الملزمة", "image": null },
+            { "de": "das Messschieber / Schieblehre", "artikel": "das", "ar": "القدمة / الفرجار", "image": null },
+            { "de": "die Wasserwaage", "artikel": "die", "ar": "الميزان المائي", "image": null },
+            { "de": "der Drehmomentschlüssel", "artikel": "der", "ar": "مفتاح عزم الدوران", "image": null },
+            { "de": "das Werkstatthandbuch", "artikel": "das", "ar": "دليل الورشة", "image": null }
+        ]
+        },
+        {
+        "name": "Mechanical Processes & Actions",
+        "vocabs": [
+            { "de": "die Montage", "artikel": "die", "ar": "التركيب / التجميع", "image": null },
+            { "de": "die Demontage", "artikel": "die", "ar": "فك التركيب", "image": null },
+            { "de": "das Schleifen", "artikel": "das", "ar": "الجلخ / الصنفرة", "image": null },
+            { "de": "das Bohren", "artikel": "das", "ar": "الحفر", "image": null },
+            { "de": "das Fräsen", "artikel": "das", "ar": "التفريز", "image": null },
+            { "de": "das Schweißen", "artikel": "das", "ar": "اللحام", "image": null },
+            { "de": "die Schmierung", "artikel": "die", "ar": "التشحيم", "image": null },
+            { "de": "die Inspektion", "artikel": "die", "ar": "التفتيش / الفحص", "image": null },
+            { "de": "die Wartung", "artikel": "die", "ar": "الصيانة", "image": null },
+            { "de": "die Reparatur", "artikel": "die", "ar": "الإصلاح", "image": null }
+        ]
+        },
+        {
+        "name": "Roles & Positions",
+        "vocabs": [
+            { "de": "der Mechaniker / die Mechanikerin", "artikel": "der / die", "ar": "الميكانيكي / الميكانيكية", "image": null },
+            { "de": "der Kfz-Mechatroniker / die Kfz-Mechatronikerin", "artikel": "der / die", "ar": "ميكانيكي سيارات / ميكاترونيات السيارات", "image": null },
+            { "de": "der Werkstattleiter", "artikel": "der", "ar": "رئيس الورشة", "image": null },
+            { "de": "der Prüftechniker / die Prüftechnikerin", "artikel": "der / die", "ar": "فني الاختبارات", "image": null },
+            { "de": "der Produktionsingenieur / die Produktionsingenieurin", "artikel": "der / die", "ar": "مهندس الإنتاج", "image": null }
+        ]
+        },
+        {
+        "name": "Automotive Specific Parts",
+        "vocabs": [
+            { "de": "der Vergaser", "artikel": "der", "ar": "الكاربوريتر", "image": null },
+            { "de": "die Einspritzpumpe", "artikel": "die", "ar": "مضخة الحقن", "image": null },
+            { "de": "die Zündkerze", "artikel": "die", "ar": "شمعة الإشعال", "image": null },
+            { "de": "der Auspuff", "artikel": "der", "ar": "العادم", "image": null },
+            { "de": "der Stoßdämpfer", "artikel": "der", "ar": "ماص الصدمات", "image": null },
+            { "de": "die Lichtmaschine", "artikel": "die", "ar": "الدينامو / المولد", "image": null },
+            { "de": "der Anlasser", "artikel": "der", "ar": "المُشغل / مفتاح التشغيل", "image": null },
+            { "de": "der Luftfilter", "artikel": "der", "ar": "فلتر الهواء", "image": null },
+            { "de": "der Ölfilter", "artikel": "der", "ar": "فلتر الزيت", "image": null },
+            { "de": "der Keilriemen", "artikel": "der", "ar": "سير المحرك", "image": null }
+        ]
+        },
+        {
+        "name": "Measurement & Precision",
+        "vocabs": [
+            { "de": "die Messuhr", "artikel": "die", "ar": "ساعة القياس", "image": null },
+            { "de": "das Mikrometer", "artikel": "das", "ar": "الميكرومتر", "image": null },
+            { "de": "das Fühlermaß", "artikel": "das", "ar": "مقياس السماكة / مقياس الفجوة", "image": null },
+            { "de": "die Rauheit", "artikel": "die", "ar": "الخشونة", "image": null },
+            { "de": "die Toleranz", "artikel": "die", "ar": "التسامح / التفاوت المسموح به", "image": null },
+            { "de": "das Spiel", "artikel": "das", "ar": "اللُعب / الفراغ (بين قطعتين)", "image": null },
+            { "de": "die Passung", "artikel": "die", "ar": "التداخل / الملاءمة", "image": null },
+            { "de": "die Kalibrierung", "artikel": "die", "ar": "المعايرة", "image": null }
+        ]
+        },
+        {
+        "name": "Workshop & Workshop Items",
+        "vocabs": [
+            { "de": "die Werkstatt", "artikel": "die", "ar": "الورشة", "image": null },
+            { "de": "der Werkzeugkasten", "artikel": "der", "ar": "صندوق الأدوات", "image": null },
+            { "de": "der Wagenheber", "artikel": "der", "ar": "الرافعة / الجاك", "image": null },
+            { "de": "die Hebebühne", "artikel": "die", "ar": "منصة الرفع", "image": null },
+            { "de": "der Arbeitsplatz", "artikel": "der", "ar": "مكان العمل", "image": null },
+            { "de": "die Schutzkleidung", "artikel": "die", "ar": "ملابس الوقاية", "image": null },
+            { "de": "der Schutzhelm", "artikel": "der", "ar": "خوذة الوقاية", "image": null },
+            { "de": "die Schutzbrille", "artikel": "die", "ar": "نظارات الوقاية", "image": null },
+            { "de": "die Arbeitsbeleuchtung", "artikel": "die", "ar": "إضاءة العمل", "image": null },
+            { "de": "der Entfetter", "artikel": "der", "ar": "مزيل الشحوم", "image": null },
+            { "de": "der Rostlöser", "artikel": "der", "ar": "مزيل الصدأ", "image": null }
+        ]
+        }
+    ]
+    },
+    {
+    "category": "Bakery (Bäckerei/Konditorei)",
+    "subcategories": [
+        {
+        "name": "Basic Bakery Vocabulary",
+        "vocabs": [
+            { "de": "das Mehl", "artikel": "das", "ar": "الدقيق", "image": null },
+            { "de": "die Hefe", "artikel": "die", "ar": "الخميرة", "image": null },
+            { "de": "die Butter", "artikel": "die", "ar": "الزبدة", "image": null },
+            { "de": "der Zucker", "artikel": "der", "ar": "السكر", "image": null },
+            { "de": "das Ei", "artikel": "das", "ar": "البيضة", "image": null },
+            { "de": "die Milch", "artikel": "die", "ar": "الحليب", "image": null },
+            { "de": "das Salz", "artikel": "das", "ar": "الملح", "image": null },
+            { "de": "das Wasser", "artikel": "das", "ar": "الماء", "image": null },
+            { "de": "der Teig", "artikel": "der", "ar": "العجين", "image": null },
+            { "de": "das Backblech", "artikel": "das", "ar": "صينية الخبز", "image": null },
+            { "de": "der Ofen", "artikel": "der", "ar": "الفرن", "image": null },
+            { "de": "die Backform", "artikel": "die", "ar": "قالب الخبز / الكعك", "image": null },
+            { "de": "die Küchenmaschine", "artikel": "die", "ar": "آلة العجن / الخلاط", "image": null },
+            { "de": "die Rührschüssel", "artikel": "die", "ar": "وعاء الخلط", "image": null },
+            { "de": "der Teigroller / Nudelholz", "artikel": "der", "ar": "شوبك / عصا الفرد", "image": null }
+        ]
+        },
+        {
+        "name": "Advanced Bakery Ingredients & Products",
+        "vocabs": [
+            { "de": "die Vollkornmehl", "artikel": "die", "ar": "دقيق القمح الكامل", "image": null },
+            { "de": "das Weizenmehl", "artikel": "das", "ar": "دقيق القمح", "image": null },
+            { "de": "das Roggenmehl", "artikel": "das", "ar": "دقيق الجاودار", "image": null },
+            { "de": "die Backhefe", "artikel": "die", "ar": "خميرة الخبز", "image": null },
+            { "de": "die Süßwaren", "artikel": "die", "ar": "المعجنات / الحلويات", "image": null },
+            { "de": "das Croissant", "artikel": "das", "ar": "كرواسون", "image": null },
+            { "de": "die Brezel", "artikel": "die", "ar": "بريتزل", "image": null },
+            { "de": "der Kuchen", "artikel": "der", "ar": "الكعكة", "image": null },
+            { "de": "die Torte", "artikel": "die", "ar": "التورتة", "image": null },
+            { "de": "das Gebäck", "artikel": "das", "ar": "المعجنات", "image": null },
+            { "de": "der Muffin", "artikel": "der", "ar": "مافن", "image": null },
+            { "de": "die Füllung", "artikel": "die", "ar": "الحشوة", "image": null },
+            { "de": "die Glasur", "artikel": "die", "ar": "التغطية / الصقيع", "image": null }
+        ]
+        },
+        {
+        "name": "Bakery Tools & Equipment",
+        "vocabs": [
+            { "de": "der Backofen", "artikel": "der", "ar": "الفرن", "image": null },
+            { "de": "die Rührmaschine", "artikel": "die", "ar": "آلة الخلط", "image": null },
+            { "de": "die Teigkarte / Spachtel", "artikel": "die", "ar": "سكين العجين / ملعقة", "image": null },
+            { "de": "die Spritztüte", "artikel": "die", "ar": "كيس الحلويات / الحقن", "image": null },
+            { "de": "das Backpapier", "artikel": "das", "ar": "ورق الخبز", "image": null },
+            { "de": "der Teigschaber", "artikel": "der", "ar": "مكشطة العجين", "image": null },
+            { "de": "das Gärkörbchen", "artikel": "das", "ar": "سلة التخمير", "image": null },
+            { "de": "die Küchenwaage", "artikel": "die", "ar": "ميزان المطبخ", "image": null },
+            { "de": "das Thermometer", "artikel": "das", "ar": "ميزان الحرارة", "image": null }
+        ]
+        },
+        {
+        "name": "Bakery Processes & Techniques",
+        "vocabs": [
+            { "de": "das Kneten", "artikel": "das", "ar": "العجن", "image": null },
+            { "de": "das Formen", "artikel": "das", "ar": "تشكيل العجين", "image": null },
+            { "de": "das Gehenlassen / Gären", "artikel": "das", "ar": "التخمير", "image": null },
+            { "de": "das Backen", "artikel": "das", "ar": "الخبز", "image": null },
+            { "de": "das Verzieren", "artikel": "das", "ar": "التزيين", "image": null },
+            { "de": "das Glasieren", "artikel": "das", "ar": "تغطية / تغليف بالكريمة أو الصقيع", "image": null },
+            { "de": "das Schneiden / Portionieren", "artikel": "das", "ar": "التقطيع / تقسيم القطع", "image": null },
+            { "de": "das Abkühlen", "artikel": "das", "ar": "التبريد", "image": null },
+            { "de": "die Lagerung", "artikel": "die", "ar": "التخزين", "image": null }
+        ]
+        },
+        {
+        "name": "Bakery Roles & Positions",
+        "vocabs": [
+            { "de": "der Bäcker / die Bäckerin", "artikel": "der / die", "ar": "خباز / خبازة", "image": null },
+            { "de": "der Konditor / die Konditorin", "artikel": "der / die", "ar": "صانع الحلويات / معجنات", "image": null },
+            { "de": "der Filialleiter / die Filialleiterin", "artikel": "der / die", "ar": "مدير الفرع", "image": null },
+            { "de": "der Verkaufsmitarbeiter / die Verkaufsmitarbeiterin", "artikel": "der / die", "ar": "موظف المبيعات", "image": null },
+            { "de": "der Lehrling / die Auszubildende", "artikel": "der / die", "ar": "متدرب / متدربة", "image": null }
+        ]
+        },
+        {
+        "name": "Types of Bread & Rolls",
+        "vocabs": [
+            { "de": "das Brot", "artikel": "das", "ar": "الخبز", "image": null },
+            { "de": "das Roggenbrot", "artikel": "das", "ar": "خبز الجاودار", "image": null },
+            { "de": "das Vollkornbrot", "artikel": "das", "ar": "خبز القمح الكامل", "image": null },
+            { "de": "das Weißbrot", "artikel": "das", "ar": "خبز أبيض", "image": null },
+            { "de": "das Mischbrot", "artikel": "das", "ar": "خبز مختلط (القمح والجاودار)", "image": null },
+            { "de": "das Sauerteigbrot", "artikel": "das", "ar": "خبز العجين المخمر", "image": null },
+            { "de": "das Körnerbrot", "artikel": "das", "ar": "خبز الحبوب", "image": null },
+            { "de": "das Brötchen", "artikel": "das", "ar": "لفافة صغيرة", "image": null },
+            { "de": "das Semmel", "artikel": "das", "ar": "لفافة (اسم آخر للـ Brötchen في جنوب ألمانيا)", "image": null },
+            { "de": "das Laugengebäck", "artikel": "das", "ar": "المعجنات المملحة (مثل البريتزل)", "image": null }
+        ]
+        },
+        {
+        "name": "Pastries & Sweet Treats",
+        "vocabs": [
+            { "de": "das Plundergebäck", "artikel": "das", "ar": "المعجنات الهشة (مثل الكرواسون)", "image": null },
+            { "de": "der Apfelstrudel", "artikel": "der", "ar": "فطيرة التفاح", "image": null },
+            { "de": "der Donut / Berliner", "artikel": "der", "ar": "دونات", "image": null },
+            { "de": "das Stück Kuchen", "artikel": "das", "ar": "قطعة كعك", "image": null },
+            { "de": "der Bienenstich", "artikel": "der", "ar": "كعكة العسل واللوز", "image": null },
+            { "de": "der Streuselkuchen", "artikel": "der", "ar": "كعكة الفتات", "image": null },
+            { "de": "der Käsekuchen", "artikel": "der", "ar": "كعكة الجبن", "image": null },
+            { "de": "das Franzbrötchen", "artikel": "das", "ar": "لفافة حلوى بالقرفة (من هامبورغ)", "image": null },
+            { "de": "das Teilchen", "artikel": "das", "ar": "قطعة حلوى (شائع في منطقة الراين)", "image": null },
+            { "de": "die Sahne", "artikel": "die", "ar": "الكريمة", "image": null },
+            { "de": "die Marmelade", "artikel": "die", "ar": "المربى", "image": null },
+            { "de": "die Mandel", "artikel": "die", "ar": "اللوز", "image": null },
+            { "de": "die Rosine", "artikel": "die", "ar": "الزبيب", "image": null }
+        ]
+        }
+    ]
+    }
+]

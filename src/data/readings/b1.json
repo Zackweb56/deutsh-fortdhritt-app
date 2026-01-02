@@ -1,0 +1,268 @@
+[
+    {
+        "de_text": "Familie Bauer plant ihren Sommerurlaub. Sie sucht zunächst ein Reisebüro auf, um sich ausführlich beraten zu lassen. Nach einigen Gesprächen entscheidet sie sich für die griechische Insel Kreta. Familie Bauer bucht nicht nur die Flüge, sondern auch eine Unterkunft in einem familienfreundlichen Hotel, das nur wenige Gehminuten vom Strand entfernt liegt. Die Familie genießt es, im klaren Meerwasser zu schwimmen.\n\nAm Tag der Abreise fahren Herr und Frau Bauer gemeinsam mit ihren drei Kindern mit einem Shuttle-Service zum Flughafen. Dort herrscht reges Treiben, denn zahlreiche andere Reisende warten ebenfalls auf ihre Flüge. Die Familie hat mehrere Gepäckstücke dabei: zwei große Koffer, eine Reisetasche und zwei Rucksäcke, die als Handgepäck gelten. Am Check-in-Schalter erhalten sie ihre Bordkarten und lassen ihre Koffer aufgeben. Die Mitarbeiterin erklärt ihnen den Weg zu ihrem Flugsteig. Da die Zeit knapp wird, begeben sie sich rasch zur Sicherheitskontrolle. Alle passieren die Kontrolle ohne Probleme und finden schließlich ihr Gate. Nach einer kurzen Wartezeit wird ihr Flug aufgerufen, und sie steigen gemeinsam mit den anderen Passagieren ins Flugzeug.\n\nWährend des Starts fühlt sich Herr Bauer etwas unwohl; ihm ist leicht schwindelig. Nach etwa zweieinhalb Stunden Flugzeit landet die Maschine sicher auf Kreta. Am Flughafen angekommen, müssen alle noch etwas am Gepäckband warten, bis alle Koffer angekommen sind. Danach kann der lang ersehnte Urlaub endlich beginnen.",
+        "questions": [
+          {
+            "question": "Wo lässt sich Familie Bauer beraten?",
+            "options": [
+              "Im Internet",
+              "In einem Reisebüro",
+              "Am Flughafen",
+              "Bei Freunden"
+            ],
+            "correct_answer": "In einem Reisebüro"
+          },
+          {
+            "question": "Welches Reiseziel wählt die Familie?",
+            "options": [
+              "Mallorca",
+              "Kreta",
+              "Sizilien",
+              "Zypern"
+            ],
+            "correct_answer": "Kreta"
+          },
+          {
+            "question": "Wie viele Gepäckstücke nimmt die Familie mit?",
+            "options": [
+              "Zwei Koffer und zwei Taschen",
+              "Drei Koffer und ein Rucksack",
+              "Zwei Koffer, eine Tasche und zwei Rucksäcke",
+              "Nur Handgepäck"
+            ],
+            "correct_answer": "Zwei Koffer, eine Tasche und zwei Rucksäcke"
+          },
+          {
+            "question": "Wie fühlt sich Herr Bauer während des Starts?",
+            "options": [
+              "Er ist müde.",
+              "Er hat Hunger.",
+              "Ihm ist etwas unwohl/schwindelig.",
+              "Er ist aufgeregt und glücklich."
+            ],
+            "correct_answer": "Ihm ist etwas unwohl/schwindelig."
+          },
+          {
+            "question": "Wo holt die Familie nach der Landung ihr aufgegebenes Gepäck ab?",
+            "options": [
+              "Am Check-in-Schalter",
+              "Am Gepäckband",
+              "Am Gate",
+              "Im Shuttle-Bus"
+            ],
+            "correct_answer": "Am Gepäckband"
+          }
+        ]
+    },
+    {
+        "de_text": "In Deutschland gibt es eine Vielzahl traditioneller Feste und gesetzlicher Feiertage. Den Auftakt des Jahres bildet der Karneval, der besonders im Rheinland ausgelassen gefeiert wird. Viele Menschen ziehen sich bunte und oft witzige Kostüme an und feiern auf den Straßen und in den Sälen. In einigen Regionen, insbesondere in Süddeutschland, ist die Bezeichnung Fasching oder Fastnacht üblich.\n\nDas nächste bedeutende Fest im Kalender ist Ostern. Es erinnert an die Kreuzigung und die Auferstehung Jesu Christi. Für Kinder ist es besonders süß: Sie suchen bunte Ostereier und bekommen kleine Geschenke.\n\nDer 1. Mai ist als Tag der Arbeit ein gesetzlicher Feiertag, an dem traditionell die Rechte der Arbeitnehmer im Mittelpunkt stehen. An diesem Tag finden oft Demonstrationen und Kundgebungen der Gewerkschaften statt.\n\nIm Mai wird auch der Muttertag begangen, meist am zweiten Sonntag des Monats. An diesem Tag bedanken sich die Kinder bei ihren Müttern mit Aufmerksamkeiten und kleinen Geschenken.\n\nDer 3. Oktober ist der Tag der Deutschen Einheit und gleichzeitig der Nationalfeiertag. Er erinnert an die Wiedervereinigung von Ost- und Westdeutschland im Jahr 1990.\n\nDie Vorweihnachtszeit beginnt mit dem ersten Adventssonntag. Viele Familien stellen einen Adventskranz mit vier Kerzen auf, von denen an jedem Sonntag eine weitere angezündet wird. Am 6. Dezember ist Nikolaustag. Der Legende nach bringt der heilige Nikolaus in der Nacht zuvor kleine Gaben in die geputzten Schuhe der Kinder.\n\nWeihnachten, das Fest der Geburt Jesu, wird vom 24. bis 26. Dezember gefeiert. Dabei spielen der Weihnachtsbaum, gemeinsame Mahlzeiten und der Austausch von Geschenken eine große Rolle.\n\nDas Jahr endet mit Silvester am 31. Dezember. Um Mitternacht wird mit Feuerwerk und Sekt auf das neue Jahr angestoßen. Der darauf folgende Neujahrstag ist ebenfalls ein gesetzlicher Feiertag.",
+        "questions": [
+          {
+            "question": "Wo feiern die Menschen hauptsächlich während des Karnevals?",
+            "options": [
+              "In Kirchen",
+              "Auf den Straßen und in Festhallen",
+              "Nur zu Hause",
+              "Im Wald"
+            ],
+            "correct_answer": "Auf den Straßen und in Festhallen"
+          },
+          {
+            "question": "Wer organisiert am 1. Mai oft Demonstrationen?",
+            "options": [
+              "Sportvereine",
+              "Gewerkschaften",
+              "Schulklassen",
+              "Kirchengemeinden"
+            ],
+            "correct_answer": "Gewerkschaften"
+          },
+          {
+            "question": "Welche Bedeutung hat der Tag der Deutschen Einheit?",
+            "options": [
+              "Es ist der Tag der Arbeit.",
+              "Es ist der Nationalfeiertag.",
+              "Es ist ein religiöser Feiertag.",
+              "Es ist der Tag der Verfassung."
+            ],
+            "correct_answer": "Es ist der Nationalfeiertag."
+          },
+          {
+            "question": "Wie viele Kerzen hat ein klassischer Adventskranz?",
+            "options": [
+              "Eine Kerze",
+              "Vier Kerzen",
+              "Fünf Kerzen",
+              "Zwölf Kerzen"
+            ],
+            "correct_answer": "Vier Kerzen"
+          },
+          {
+            "question": "Auf welche Figur geht der Nikolaustag zurück?",
+            "options": [
+              "Auf einen König",
+              "Auf einen Heiligen",
+              "Auf einen Engel",
+              "Auf einen Politiker"
+            ],
+            "correct_answer": "Auf einen Heiligen"
+          }
+        ]
+    },
+    {
+        "de_text": "München ist nicht nur eine wichtige Metropole und die Landeshauptstadt Bayerns, sondern auch die Stadt, in der ich aufgewachsen bin.\n\nJeden Morgen auf meinem Weg zur Arbeit fahre ich an mehreren bekannten Sehenswürdigkeiten vorbei. Zuerst komme ich am Englischen Garten vorbei, einer der größten innerstädtischen Parkanlagen der Welt, die bereits über 200 Jahre alt ist. Von dort aus ist es nicht weit zum Marienplatz mit dem Neuen Rathaus und seiner berühmten Glockenspiel-Uhr. Von dort nehme ich die U-Bahn und fahre ein paar Stationen bis zum Stachus, wo sich der Karlsplatz und das historische Karlstor befinden.\n\nVon dort sind es nur wenige Gehminuten zur Kaufingerstraße, einer großen Einkaufsmeile mit vielen Geschäften, Cafés und Restaurants.\n\nHier arbeite ich als Rezeptionistin in einem Hotel und betreue die vielen Gäste, die als Touristen München erkunden. Als gebürtige Münchnerin kann ich ihnen gute Empfehlungen geben, welche Sehenswürdigkeiten besonders sehenswert sind und wie sie am besten dorthin gelangen. Dadurch komme ich oft mit den Besuchern unserer Stadt ins Gespräch und erfahre, aus welchen Ländern sie angereist sind und wie es ihnen in München gefällt. Als besonderen Service organisiert unser Hotel auch eigene Stadtführungen, die sehr beliebt sind und häufig gebucht werden.",
+        "questions": [
+          {
+            "question": "Wie alt ist der Englische Garten ungefähr?",
+            "options": [
+              "50 Jahre",
+              "über 100 Jahre",
+              "über 200 Jahre",
+              "über 500 Jahre"
+            ],
+            "correct_answer": "über 200 Jahre"
+          },
+          {
+            "question": "In der Nähe welches Platzes befinden sich das Neue Rathaus und das Glockenspiel?",
+            "options": [
+              "Stachus",
+              "Karlsplatz",
+              "Marienplatz",
+              "Kaufingerstraße"
+            ],
+            "correct_answer": "Marienplatz"
+          },
+          {
+            "question": "Was ist die Kaufingerstraße?",
+            "options": [
+              "Ein großer Park",
+              "Eine bekannte Einkaufsstraße",
+              "Ein Hotel",
+              "Ein U-Bahnhof"
+            ],
+            "correct_answer": "Eine bekannte Einkaufsstraße"
+          },
+          {
+            "question": "Wo arbeitet die Erzählerin?",
+            "options": [
+              "In einem Restaurant",
+              "In einem Geschäft",
+              "In einem Hotel",
+              "Im Rathaus"
+            ],
+            "correct_answer": "In einem Hotel"
+          },
+          {
+            "question": "Welchen besonderen Service bietet das Hotel an?",
+            "options": [
+              "Kostenlose Fahrräder",
+              "Stadtführungen",
+              "Flughafentransfers",
+              "Freie U-Bahn-Tickets"
+            ],
+            "correct_answer": "Stadtführungen"
+          }
+        ]
+    },
+    {
+        "de_text": "Lena und Max sind sehr aktiv. Sie joggen fast täglich etwa acht Kilometer, auch bei schlechtem Wetter. Gelegentlich besuchen sie auch ein Fitnessstudio, und donnerstags spielen sie regelmäßig Badminton. Im vergangenen Sommer sind sie oft mit dem Fahrrad zu einem nahegelegenen Fluss gefahren, um dort zu schwimmen. Im Winter fällt das Schwimmen allerdings weg, da es in der Umgebung kein beheiztes Freibad gibt.\n\nJulia ist tierbegeistert. Ihre freie Zeit verbringt sie oft in einem örtlichen Tierheim: Sie reinigt die Gehege der Meerschweinchen, beschäftigt sich mit den Katzen und führt Hunde aus. Manchmal darf sie sogar der Tierärztin assistieren und bei der Versorgung kranker Tiere helfen. Das liegt ihr und bereitet ihr große Freude. Vielleicht ergreift sie später selbst den Beruf der Tierärztin.\n\nSimon verbringt seine Freizeit meist auf der Couch und schaut Serien. Ab und zu liest er ein Buch oder hört Musik, dabei nickt er aber oft ein. Wenn er Hunger hat, bestellt er sich gerne eine Currywurst beim Imbiss und isst sie direkt aus der Pappschale, um sich das Geschirrspülen zu ersparen. Seine Freunde finden, dass Simon ziemlich bequem ist. Aber sie mögen ihn dennoch.",
+        "questions": [
+          {
+            "question": "Joggen Lena und Max jeden Tag acht Kilometer?",
+            "options": [
+              "Ja, immer.",
+              "Nur bei gutem Wetter.",
+              "Fast täglich, aber nicht immer.",
+              "Nur am Donnerstag."
+            ],
+            "correct_answer": "Fast täglich, aber nicht immer."
+          },
+          {
+            "question": "Wo können Lena und Max im Winter schwimmen gehen?",
+            "options": [
+              "Im Fluss",
+              "In einem Hallenbad",
+              "Gar nicht, es gibt keine Möglichkeit.",
+              "Im Fitnessstudio"
+            ],
+            "correct_answer": "Gar nicht, es gibt keine Möglichkeit."
+          },
+          {
+            "question": "Welche Aussage über Julia trifft nicht zu?",
+            "options": [
+              "Julia möchte Tierärztin werden, weil sie Tiere liebt.",
+              "Julia möchte Tierärztin werden, weil sie gut mit kranken Tieren umgehen kann.",
+              "Julia mag keine Hunde und Katzen.",
+              "Julia möchte Tierärztin werden, weil ihr die Arbeit mit Tieren Freude macht."
+            ],
+            "correct_answer": "Julia mag keine Hunde und Katzen."
+          },
+          {
+            "question": "Simons Freunde mögen ihn, …",
+            "options": [
+              "… weil er bequem ist.",
+              "… damit er bequem ist.",
+              "… seitdem er bequem ist.",
+              "… obwohl er bequem ist."
+            ],
+            "correct_answer": "… obwohl er bequem ist."
+          }
+        ]
+    },
+    {
+        "de_text": "In der Arbeitswelt existiert eine große Vielfalt an unterschiedlichen Berufen.\n\nEin Lehrer oder eine Lehrerin unterrichtet Schülerinnen und Schüler und vermittelt ihnen Wissen. In der Grundschule lernen die Kinder Lesen, Schreiben und Rechnen. In höheren Klassen unterrichten Lehrer oft spezielle Fächer wie Mathematik, Fremdsprachen oder Naturwissenschaften.\n\nEin Beruf, für den ein Studium erforderlich ist, ist der Arztberuf. Ärzte behandeln kranke Menschen in einer Praxis oder im Krankenhaus. Sie führen Untersuchungen durch, stellen Diagnosen und verordnen Medikamente oder Therapien. Es gibt verschiedene Fachrichtungen, zum Beispiel Chirurgie, Innere Medizin oder Pädiatrie.\n\nHandwerker erlernen ihren Beruf in der Regel durch eine duale Ausbildung. Ein Beispiel ist der Tischler. Er stellt Möbel und andere Holzprodukte her. Dafür muss er wissen, wie man Holz auswählt, bearbeitet und zusammensetzt. Tischler können individuelle Möbelstücke nach Kundenwunsch anfertigen.\n\nEin Landwirt arbeitet ebenfalls mit natürlichen Produkten. Auf seinem Hof hält er oft Nutztiere wie Rinder, Schweine oder Hühner. Auf den Feldern baut er Getreide, Gemüse oder Obst an. Die Erzeugnisse liefert er an Großhändler oder verkauft sie direkt auf dem Wochenmarkt.\n\nEin Koch oder eine Köchin arbeitet mit Lebensmitteln und ist für die Zubereitung von Speisen in Restaurants, Hotels oder Kantinen verantwortlich. Die Ausbildung erfolgt in der Regel über eine Lehre in der Gastronomie oder eine schulische Ausbildung.\n\nEin Verkäufer arbeitet im Einzelhandel. Er berät Kunden und verkauft Waren wie Kleidung, Elektronik oder Lebensmittel.",
+        "questions": [
+          {
+            "question": "Was ist eine Hauptaufgabe eines Lehrers?",
+            "options": [
+              "Möbel herstellen",
+              "Kranke Menschen untersuchen",
+              "Schüler unterrichten",
+              "Lebensmittel verkaufen"
+            ],
+            "correct_answer": "Schüler unterrichten"
+          },
+          {
+            "question": "Welcher der genannten Berufe erfordert in der Regel kein Studium?",
+            "options": [
+              "Chirurg",
+              "Lehrer",
+              "Tischler",
+              "Arzt"
+            ],
+            "correct_answer": "Tischler"
+          },
+          {
+            "question": "Welches Material braucht ein Tischler für seine Arbeit primär?",
+            "options": [
+              "Mehl",
+              "Holz",
+              "Medikamente",
+              "Getreide"
+            ],
+            "correct_answer": "Holz"
+          },
+          {
+            "question": "Was gehört nicht zu den typischen Tätigkeiten eines Arztes?",
+            "options": [
+              "Diagnosen stellen",
+              "Medikamente verschreiben",
+              "Möbel anfertigen",
+              "Patienten untersuchen"
+            ],
+            "correct_answer": "Möbel anfertigen"
+          },
+          {
+            "question": "Wie wird man in der Regel Köchin oder Koch?",
+            "options": [
+              "Durch ein Medizinstudium",
+              "Durch eine Lehre oder schulische Ausbildung",
+              "Durch eine Tischlerausbildung",
+              "Ohne Ausbildung"
+            ],
+            "correct_answer": "Durch eine Lehre oder schulische Ausbildung"
+          }
+        ]
+    }
+]
+
