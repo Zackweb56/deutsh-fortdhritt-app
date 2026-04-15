@@ -147,15 +147,19 @@ const preloadAudioFast = (url: string): Promise<HTMLAudioElement> => {
   return new Promise((resolve, reject) => {
     const audio = new Audio();
     audio.preload = 'auto';
+    audio.setAttribute('playsinline', 'true');
     
     const timeout = setTimeout(() => {
       reject(new Error(`Timeout loading audio: ${url}`));
-    }, 3000);
+    }, 8000);
     
-    audio.addEventListener('canplaythrough', () => {
+    const onReady = () => {
       clearTimeout(timeout);
       resolve(audio);
-    }, { once: true });
+    };
+
+    audio.addEventListener('loadeddata', onReady, { once: true });
+    audio.addEventListener('canplay', onReady, { once: true });
     
     audio.addEventListener('error', () => {
       clearTimeout(timeout);
@@ -178,6 +182,7 @@ const StoryLibraryTab = () => {
   const [lastWrongKey, setLastWrongKey] = useState<string | null>(null);
   const [errorCount, setErrorCount] = useState(0);
   const [lineCompleted, setLineCompleted] = useState(false);
+  const [audioUnlocked, setAudioUnlocked] = useState(false);
   const typingInputRef = useRef<HTMLInputElement>(null);
   const activeAudioRef = useRef<HTMLAudioElement | null>(null);
   const audioCacheRef = useRef<Map<string, HTMLAudioElement>>(new Map());
@@ -341,9 +346,22 @@ const StoryLibraryTab = () => {
     }
   }, [view, lineIndex]);
 
+  // Mobile browsers block autoplay until first user interaction
+  useEffect(() => {
+    const unlock = () => setAudioUnlocked(true);
+    window.addEventListener('pointerdown', unlock, { once: true });
+    window.addEventListener('keydown', unlock, { once: true });
+    window.addEventListener('touchstart', unlock, { once: true });
+    return () => {
+      window.removeEventListener('pointerdown', unlock);
+      window.removeEventListener('keydown', unlock);
+      window.removeEventListener('touchstart', unlock);
+    };
+  }, []);
+
   // Play voice for current line
   useEffect(() => {
-    if (view !== 'reader' || !currentLine) return;
+    if (view !== 'reader' || !currentLine || !audioUnlocked) return;
     
     const timer = setTimeout(() => {
       playLineVoice(currentLine);
@@ -356,7 +374,7 @@ const StoryLibraryTab = () => {
         activeAudioRef.current = null;
       }
     };
-  }, [view, lineIndex, currentLine, playLineVoice]);
+  }, [view, lineIndex, currentLine, playLineVoice, audioUnlocked]);
 
   // Preload next line proactively
   useEffect(() => {
@@ -487,60 +505,36 @@ const StoryLibraryTab = () => {
     window.setTimeout(() => moveToNextLine(), 80);
   }, [selectedStory, lineIndex, lineCompleted, playPhraseCompleteSfx]);
 
-  const handleTypeKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+  const handleTypingInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (!currentLine || lineCompleted) return;
 
+    const rawValue = event.target.value.replace(/\r?\n/g, '');
     const expected = currentLine.de;
+    const normalizedValue = rawValue.slice(0, expected.length);
 
-    if (event.key === 'Tab') return;
+    if (normalizedValue === typedValue) return;
 
-    if (event.key === 'Backspace') {
-      event.preventDefault();
-      setTypedValue((prev) => prev.slice(0, -1));
+    if (normalizedValue.length < typedValue.length) {
+      setTypedValue(normalizedValue);
       setLastWrongKey(null);
       return;
     }
 
-    if (event.key === ' ') {
-      event.preventDefault();
-      const expectedChar = expected[typedValue.length];
-      if (expectedChar === ' ') {
-        const nextValue = typedValue + ' ';
-        setTypedValue(nextValue);
-        setLastWrongKey(null);
-        if (nextValue === expected) {
-          handleLineCompleted();
-        }
-      } else {
+    for (let i = typedValue.length; i < normalizedValue.length; i++) {
+      if (normalizedValue[i] !== expected[i]) {
         setErrorCount((prev) => prev + 1);
-        setLastWrongKey('space');
+        setLastWrongKey(normalizedValue[i] === ' ' ? 'space' : normalizedValue[i]);
         setTimeout(() => setLastWrongKey(null), 400);
+        return;
       }
-      return;
     }
 
-    if (event.key.length !== 1) {
-      event.preventDefault();
-      return;
+    setTypedValue(normalizedValue);
+    setLastWrongKey(null);
+
+    if (normalizedValue === expected) {
+      handleLineCompleted();
     }
-
-    event.preventDefault();
-    const expectedChar = expected[typedValue.length];
-
-    if (event.key === expectedChar) {
-      const nextValue = typedValue + event.key;
-      setTypedValue(nextValue);
-      setLastWrongKey(null);
-
-      if (nextValue === expected) {
-        handleLineCompleted();
-      }
-      return;
-    }
-
-    setErrorCount((prev) => prev + 1);
-    setLastWrongKey(event.key);
-    setTimeout(() => setLastWrongKey(null), 400);
   };
 
   const continueToNextStory = () => {
@@ -660,67 +654,123 @@ const StoryLibraryTab = () => {
     const typedChars = typedValue.length;
     const isSpaceError = lastWrongKey === 'space';
     
+    // Build word-based display
+    const words = target.split(/(\s+)/);
+    let globalCharIndex = 0;
+    
     return (
       <div 
         ref={containerRef}
         className="relative w-full overflow-x-auto"
-        style={{ direction: 'ltr', unicodeBidi: 'isolate' }}
+        style={{ direction: 'ltr', unicodeBidi: 'bidi-override' }}
       >
-        <div className="relative inline-block min-w-full">
-          <p className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.4] sm:leading-[1.3] tracking-tight font-mono whitespace-pre-wrap break-words">
-            <span aria-hidden>{LRM}</span>
-            {target.split('').map((char, idx) => {
-              const isTyped = idx < typedChars;
-              const isCurrent = idx === typedChars && !lineCompleted;
-              const isWrong = lastWrongKey && isCurrent && !isSpaceError;
-              const isSpace = char === ' ';
-              
-              let charDisplay = char;
-              let charClass = 'transition-all duration-150 inline-block';
-              
-              if (isTyped) {
-                if (isSpace) {
-                  charDisplay = '·';
-                  charClass += ' text-emerald-400/70';
-                } else {
-                  charClass += ' text-emerald-400';
+        <div className="relative inline-block min-w-full" style={{ direction: 'ltr' }}>
+          <div 
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.4] sm:leading-[1.3] tracking-tight font-mono"
+            style={{ 
+              direction: 'ltr',
+              unicodeBidi: 'bidi-override',
+              whiteSpace: 'normal',
+              wordBreak: 'normal',
+              overflowWrap: 'break-word',
+              display: 'flex',
+              flexWrap: 'wrap',
+              textAlign: 'left'
+            }}
+          >
+            {words.map((segment, segIdx) => {
+              if (segment.match(/^\s+$/)) {
+                // Handle spaces
+                const spaceLen = segment.length;
+                const result = [];
+                for (let i = 0; i < spaceLen; i++) {
+                  const idx = globalCharIndex;
+                  const isTyped = idx < typedChars;
+                  const isCurrent = idx === typedChars && !lineCompleted;
+                  
+                  let charClass = 'inline-block transition-all duration-150';
+                  let charDisplay = ' ';
+                  
+                  if (isTyped) {
+                    charDisplay = '·';
+                    charClass += ' text-emerald-400/70';
+                  } else if (isCurrent) {
+                    charDisplay = '_';
+                    charClass += isSpaceError ? ' text-amber-500' : ' text-amber-400';
+                    charClass += ' font-bold transform scale-110';
+                  } else {
+                    charDisplay = ' ';
+                    charClass += ' text-foreground/20';
+                  }
+                  
+                  result.push(
+                    <span
+                      key={`space-${idx}`}
+                      data-char-index={idx}
+                      className={charClass}
+                      style={{
+                        display: 'inline-block',
+                        transform: isCurrent ? 'scale(1.05)' : 'scale(1)',
+                      }}
+                    >
+                      {charDisplay}
+                    </span>
+                  );
+                  globalCharIndex++;
                 }
-              } else if (isCurrent) {
-                if (isSpace) {
-                  charDisplay = '_';
-                  charClass += isSpaceError ? ' text-amber-500' : ' text-amber-400';
-                  charClass += ' font-bold transform scale-110';
-                } else {
-                  charClass += isWrong ? ' text-rose-500' : ' text-sky-400';
-                  charClass += ' font-bold transform scale-110';
-                }
+                return <span key={`seg-${segIdx}`} className="whitespace-pre" style={{ direction: 'ltr' }}>{result}</span>;
               } else {
-                if (isSpace) {
-                  charDisplay = ' ';
-                  charClass += ' text-foreground/20';
-                } else {
-                  charClass += ' text-foreground/25';
+                // Handle word
+                const wordChars = [];
+                
+                for (let i = 0; i < segment.length; i++) {
+                  const idx = globalCharIndex;
+                  const isTyped = idx < typedChars;
+                  const isCurrent = idx === typedChars && !lineCompleted;
+                  const isWrong = lastWrongKey && isCurrent && !isSpaceError;
+                  const char = segment[i];
+                  
+                  let charClass = 'inline-block transition-all duration-150';
+                  
+                  if (isTyped) {
+                    charClass += ' text-emerald-400';
+                  } else if (isCurrent) {
+                    charClass += isWrong ? ' text-rose-500' : ' text-sky-400';
+                    charClass += ' font-bold transform scale-110';
+                  } else {
+                    charClass += ' text-foreground/25';
+                  }
+                  
+                  wordChars.push(
+                    <span
+                      key={`char-${idx}`}
+                      data-char-index={idx}
+                      className={charClass}
+                      style={{
+                        display: 'inline-block',
+                        transform: isCurrent ? 'scale(1.05)' : 'scale(1)',
+                      }}
+                    >
+                      {char}
+                    </span>
+                  );
+                  globalCharIndex++;
                 }
+                
+                return (
+                  <span 
+                    key={`word-${segIdx}`} 
+                    className="inline-block whitespace-nowrap" 
+                    style={{ direction: 'ltr', unicodeBidi: 'bidi-override' }}
+                  >
+                    {wordChars}
+                  </span>
+                );
               }
-              
-              return (
-                <span
-                  key={idx}
-                  data-char-index={idx}
-                  className={charClass}
-                  style={{
-                    display: 'inline-block',
-                    transform: isCurrent ? 'scale(1.05)' : 'scale(1)',
-                  }}
-                >
-                  {charDisplay}
-                </span>
-              );
             })}
-            <span aria-hidden>{LRM}</span>
-          </p>
+          </div>
           
-          {/* Premium moving underline cursor - now positioned exactly under the character */}
+          {/* Premium moving underline cursor */}
           {!lineCompleted && cursorStyle.width > 0 && (
             <div
               className="absolute rounded-full transition-all duration-150 ease-out"
@@ -733,8 +783,7 @@ const StoryLibraryTab = () => {
                 background: 'linear-gradient(90deg, #38bdf8, #7dd3fc)',
                 borderRadius: '2px',
               }}
-            >
-            </div>
+            />
           )}
         </div>
       </div>
@@ -787,7 +836,10 @@ const StoryLibraryTab = () => {
                 <span>•</span>
                 <button
                   type="button"
-                  onClick={() => playLineVoice(currentLine)}
+                  onClick={() => {
+                    setAudioUnlocked(true);
+                    playLineVoice(currentLine);
+                  }}
                   className="inline-flex items-center gap-1 hover:text-foreground transition-colors"
                 >
                   <Volume2 className="h-3 w-3 sm:h-4 sm:w-4" />
@@ -799,7 +851,14 @@ const StoryLibraryTab = () => {
                 {renderLineWithVocab(currentLine)}
               </div>
               
-              <div dir="ltr" className="text-left w-full">
+              <div
+                dir="ltr"
+                className="text-left w-full"
+                onPointerDown={() => {
+                  setAudioUnlocked(true);
+                  typingInputRef.current?.focus();
+                }}
+              >
                 {renderTypingProgress(currentLine.de)}
               </div>
 
@@ -827,13 +886,15 @@ const StoryLibraryTab = () => {
                 ref={typingInputRef}
                 className="sr-only"
                 value={typedValue}
-                onChange={() => undefined}
-                onKeyDown={handleTypeKeyDown}
+                onChange={handleTypingInputChange}
                 autoFocus
                 aria-label="حقل الكتابة"
                 dir="ltr"
                 inputMode="text"
                 autoComplete="off"
+                autoCapitalize="none"
+                autoCorrect="off"
+                spellCheck={false}
               />
               
               {/* Mobile touch keyboard hint */}
@@ -847,7 +908,7 @@ const StoryLibraryTab = () => {
               العودة
             </Button>
             <Button size="sm" className="sm:size-default" onClick={() => typingInputRef.current?.focus()}>
-              تركيز
+              ⌨️ اضغط للكتابة
             </Button>
           </div>
         </Card>

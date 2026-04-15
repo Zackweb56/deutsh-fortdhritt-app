@@ -116,8 +116,8 @@ const ReadingsTab = () => {
       </Card>
 
       {/* Level Selection */}
-      <Card className="p-4">
-        <div className="flex flex-wrap gap-2">
+      <Card className="p-4 overflow-x-auto">
+        <div className="flex flex-nowrap sm:flex-wrap gap-2 min-w-max sm:min-w-0">
           {(['A1', 'A2', 'B1', 'B2'] as Level[]).map(level => {
             const levelData = readingsData[level] || [];
             const levelCount = levelData.length;

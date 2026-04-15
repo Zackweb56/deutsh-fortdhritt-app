@@ -422,8 +422,8 @@ const ListeningTab = () => {
       </Card>
 
       {/* Level Selection */}
-      <Card className="p-4">
-        <div className="flex flex-wrap gap-2">
+      <Card className="p-4 overflow-x-auto">
+        <div className="flex flex-nowrap sm:flex-wrap gap-2 min-w-max sm:min-w-0">
           {levels.map(level => (
             <Button
               key={level}

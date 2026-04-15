@@ -189,17 +189,19 @@ export const VocabularyLearning = ({ onScoreUpdate }: VocabularyLearningProps) =
             <BookOpen className="h-6 w-6 text-primary" />
             <h2 className="text-2xl font-bold">اختر مستوى التعلم</h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="overflow-x-auto">
+            <div className="flex flex-nowrap md:flex-wrap gap-4 min-w-max md:min-w-0">
             {levels.map((level) => (
               <Button
                 key={level.level}
                 onClick={() => handleLevelSelect(level.level)}
-                className="h-20 text-lg font-bold bg-primary hover:bg-primary/90 text-primary-foreground"
+                className="h-20 min-w-[96px] text-lg font-bold bg-primary hover:bg-primary/90 text-primary-foreground"
                 variant="default"
               >
                 {level.level}
               </Button>
             ))}
+            </div>
           </div>
         </Card>
       </div>
