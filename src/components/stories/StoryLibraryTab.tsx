@@ -279,9 +279,22 @@ const StoryLibraryTab = () => {
       const audio = await preloadAudioWithFallback(line.voiceSrc);
       activeAudioRef.current = audio;
       audio.currentTime = 0;
+      audio.volume = 1;
+      // Add playsinline for mobile
+      audio.setAttribute('playsinline', 'true');
       await audio.play();
     } catch (error) {
       console.error('Failed to play line voice:', error);
+      // Retry with user interaction
+      const retryPlay = () => {
+        if (activeAudioRef.current) {
+          activeAudioRef.current.play().catch(() => {});
+        }
+        window.removeEventListener('click', retryPlay);
+        window.removeEventListener('touchstart', retryPlay);
+      };
+      window.addEventListener('click', retryPlay, { once: true });
+      window.addEventListener('touchstart', retryPlay, { once: true });
     }
   }, [preloadAudioWithFallback]);
 
@@ -291,9 +304,19 @@ const StoryLibraryTab = () => {
     try {
       const sfx = await preloadAudioWithFallback(sfxSrc);
       sfx.currentTime = 0;
+      sfx.volume = 1;
+      sfx.setAttribute('playsinline', 'true');
       await sfx.play();
     } catch (error) {
       console.error('Failed to play completion sound:', error);
+      // Retry with user interaction
+      const retryPlay = () => {
+        playPhraseCompleteSfx();
+        window.removeEventListener('click', retryPlay);
+        window.removeEventListener('touchstart', retryPlay);
+      };
+      window.addEventListener('click', retryPlay, { once: true });
+      window.addEventListener('touchstart', retryPlay, { once: true });
     }
   }, [preloadAudioWithFallback]);
 
@@ -348,11 +371,21 @@ const StoryLibraryTab = () => {
 
   // Mobile browsers block autoplay until first user interaction
   useEffect(() => {
-    const unlock = () => setAudioUnlocked(true);
+    const unlock = () => {
+      setAudioUnlocked(true);
+      // Create and play silent audio to unlock audio context
+      const silentAudio = new Audio();
+      silentAudio.volume = 0;
+      silentAudio.play().catch(() => {});
+    };
+    
+    window.addEventListener('click', unlock, { once: true });
     window.addEventListener('pointerdown', unlock, { once: true });
     window.addEventListener('keydown', unlock, { once: true });
     window.addEventListener('touchstart', unlock, { once: true });
+    
     return () => {
+      window.removeEventListener('click', unlock);
       window.removeEventListener('pointerdown', unlock);
       window.removeEventListener('keydown', unlock);
       window.removeEventListener('touchstart', unlock);
