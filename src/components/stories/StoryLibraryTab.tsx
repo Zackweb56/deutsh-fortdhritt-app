@@ -134,12 +134,25 @@ const vocabTriggerButton = (vocabItem: StoryVocab, label: string, key: string) =
 
 const countWords = (text: string) => text.trim().split(/\s+/).filter(Boolean).length;
 
-// Helper to get audio URL with fallback
-const getAudioUrl = (src: string, useFallback = false) => {
-  if (useFallback) {
-    return `/src/data/stories/${src}`;
+const bundledStoryAudio = import.meta.glob('/src/data/stories/voices/**/*.mp3', {
+  eager: true,
+  import: 'default',
+}) as Record<string, string>;
+
+const bundledAudioByVoiceSrc = Object.entries(bundledStoryAudio).reduce<Record<string, string>>((acc, [path, url]) => {
+  const marker = '/voices/';
+  const markerIndex = path.indexOf(marker);
+  if (markerIndex !== -1) {
+    acc[path.slice(markerIndex + 1)] = url;
   }
-  return `/${src}`;
+  return acc;
+}, {});
+
+const getAudioUrls = (src: string): string[] => {
+  const bundled = bundledAudioByVoiceSrc[src];
+  if (bundled) return [bundled];
+  // Keep runtime fallbacks for existing environments.
+  return [`/${src}`, `/src/data/stories/${src}`];
 };
 
 // Preload audio with priority
@@ -186,7 +199,7 @@ const StoryLibraryTab = () => {
   const typingInputRef = useRef<HTMLInputElement>(null);
   const activeAudioRef = useRef<HTMLAudioElement | null>(null);
   const audioCacheRef = useRef<Map<string, HTMLAudioElement>>(new Map());
-  const preloadQueueRef = useRef<Set<string>>(new Set());
+  const preloadPromisesRef = useRef<Map<string, Promise<HTMLAudioElement>>>(new Map());
   const containerRef = useRef<HTMLDivElement>(null);
   const [cursorStyle, setCursorStyle] = useState({ left: 0, top: 0, width: 0, height: 0 });
 
@@ -219,48 +232,35 @@ const StoryLibraryTab = () => {
 
   // Preload audio with caching and fallback
   const preloadAudioWithFallback = useCallback(async (src: string): Promise<HTMLAudioElement> => {
-    const primaryUrl = getAudioUrl(src, false);
-    const fallbackUrl = getAudioUrl(src, true);
-    
-    // Check cache first
-    if (audioCacheRef.current.has(primaryUrl)) {
-      return audioCacheRef.current.get(primaryUrl)!;
-    }
-    
-    // Check if already in preload queue
-    if (preloadQueueRef.current.has(primaryUrl)) {
-      return new Promise((resolve) => {
-        const checkInterval = setInterval(() => {
-          const cached = audioCacheRef.current.get(primaryUrl);
-          if (cached) {
-            clearInterval(checkInterval);
-            resolve(cached);
-          }
-        }, 50);
-      });
-    }
-    
-    preloadQueueRef.current.add(primaryUrl);
-    
-    try {
-      // Try primary URL first
-      const audio = await preloadAudioFast(primaryUrl);
-      audioCacheRef.current.set(primaryUrl, audio);
-      preloadQueueRef.current.delete(primaryUrl);
-      return audio;
-    } catch (error) {
-      console.warn(`Primary audio failed for ${src}, trying fallback`);
-      try {
-        // Try fallback URL
-        const fallbackAudio = await preloadAudioFast(fallbackUrl);
-        audioCacheRef.current.set(primaryUrl, fallbackAudio);
-        preloadQueueRef.current.delete(primaryUrl);
-        return fallbackAudio;
-      } catch (fallbackError) {
-        console.error(`Both audio sources failed for ${src}`);
-        preloadQueueRef.current.delete(primaryUrl);
-        throw fallbackError;
+    const cached = audioCacheRef.current.get(src);
+    if (cached) return cached;
+
+    const inFlight = preloadPromisesRef.current.get(src);
+    if (inFlight) return inFlight;
+
+    const loadPromise = (async () => {
+      const candidateUrls = getAudioUrls(src);
+      let lastError: unknown = null;
+
+      for (const url of candidateUrls) {
+        try {
+          const audio = await preloadAudioFast(url);
+          audioCacheRef.current.set(src, audio);
+          return audio;
+        } catch (error) {
+          lastError = error;
+          console.warn(`Audio load failed for ${url}`, error);
+        }
       }
+
+      throw lastError ?? new Error(`No playable source found for ${src}`);
+    })();
+
+    preloadPromisesRef.current.set(src, loadPromise);
+    try {
+      return await loadPromise;
+    } finally {
+      preloadPromisesRef.current.delete(src);
     }
   }, []);
 
