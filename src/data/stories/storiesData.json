@@ -8,49 +8,49 @@
     "lines": [
       {
         "id": "a1-mt1",
-        "de": "Ich wache um sieben Uhr auf.",
-        "ar": "أستيقظ في الساعة السابعة.",
+        "de": "Ich wache um sieben Uhr auf",
+        "ar": "أستيقظ في الساعة السابعة",
         "vocab": [
-          { "word": "wache auf", "ar": "أستيقظ", "explanation": "أترك النوم وأبدأ يومي." },
-          { "word": "sieben Uhr", "ar": "الساعة السابعة", "explanation": "الوقت في الصباح." }
+          { "word": "wache auf", "ar": "أستيقظ", "explanation": "أترك النوم وأبدأ يومي" },
+          { "word": "sieben Uhr", "ar": "الساعة السابعة", "explanation": "الوقت في الصباح" }
         ]
       },
       {
         "id": "a1-mt2",
-        "de": "Dann putze ich meine Zähne.",
-        "ar": "ثم أغسل أسناني.",
+        "de": "Dann putze ich meine Zähne",
+        "ar": "ثم أغسل أسناني",
         "vocab": [
-          { "word": "putze", "ar": "أغسل", "explanation": "أنظف باستخدام الفرشاة." },
-          { "word": "Zähne", "ar": "أسناني", "explanation": "الأجزاء البيضاء في الفم." }
+          { "word": "putze", "ar": "أغسل", "explanation": "أنظف باستخدام الفرشاة" },
+          { "word": "Zähne", "ar": "أسناني", "explanation": "الأجزاء البيضاء في الفم" }
         ]
       },
       {
         "id": "a1-mt3",
-        "de": "Ich frühstücke mit Brot und Milch.",
-        "ar": "أتناول الفطور مع الخبز والحليب.",
+        "de": "Ich frühstücke mit Brot und Milch",
+        "ar": "أتناول الفطور مع الخبز والحليب",
         "vocab": [
-          { "word": "frühstücke", "ar": "أتناول الفطور", "explanation": "آكل أول وجبة في اليوم." },
-          { "word": "Brot", "ar": "خبز", "explanation": "طعام يُصنع من الدقيق." },
-          { "word": "Milch", "ar": "حليب", "explanation": "سائل أبيض من البقر." }
+          { "word": "frühstücke", "ar": "أتناول الفطور", "explanation": "آكل أول وجبة في اليوم" },
+          { "word": "Brot", "ar": "خبز", "explanation": "طعام يُصنع من الدقيق" },
+          { "word": "Milch", "ar": "حليب", "explanation": "سائل أبيض من البقر" }
         ]
       },
       {
         "id": "a1-mt4",
-        "de": "Dann gehe ich zur Arbeit.",
-        "ar": "ثم أذهب إلى العمل.",
+        "de": "Dann gehe ich zur Arbeit",
+        "ar": "ثم أذهب إلى العمل",
         "vocab": [
-          { "word": "gehe", "ar": "أذهب", "explanation": "أنتقل من مكان إلى آخر." },
-          { "word": "Arbeit", "ar": "العمل", "explanation": "المكان الذي أعمل فيه." }
+          { "word": "gehe", "ar": "أذهب", "explanation": "أنتقل من مكان إلى آخر" },
+          { "word": "Arbeit", "ar": "العمل", "explanation": "المكان الذي أعمل فيه" }
         ]
       },
       {
         "id": "a1-mt5",
-        "de": "Am Abend koche ich Abendessen.",
-        "ar": "في المساء أطبخ العشاء.",
+        "de": "Am Abend koche ich Abendessen",
+        "ar": "في المساء أطبخ العشاء",
         "vocab": [
-          { "word": "Abend", "ar": "المساء", "explanation": "آخر جزء من اليوم." },
-          { "word": "koche", "ar": "أطبخ", "explanation": "أعد الطعام على النار." },
-          { "word": "Abendessen", "ar": "العشاء", "explanation": "الوجبة الأخيرة في اليوم." }
+          { "word": "Abend", "ar": "المساء", "explanation": "آخر جزء من اليوم" },
+          { "word": "koche", "ar": "أطبخ", "explanation": "أعد الطعام على النار" },
+          { "word": "Abendessen", "ar": "العشاء", "explanation": "الوجبة الأخيرة في اليوم" }
         ]
       }
     ]
@@ -64,48 +64,48 @@
     "lines": [
       {
         "id": "a1-mf1",
-        "de": "Meine Familie ist gross.",
-        "ar": "عائلتي كبيرة.",
+        "de": "Meine Familie ist gross",
+        "ar": "عائلتي كبيرة",
         "vocab": [
-          { "word": "Familie", "ar": "عائلتي", "explanation": "والداي وأقاربي." },
-          { "word": "gross", "ar": "كبيرة", "explanation": "عدد أفرادها كثير." }
+          { "word": "Familie", "ar": "عائلتي", "explanation": "والداي وأقاربي" },
+          { "word": "gross", "ar": "كبيرة", "explanation": "عدد أفرادها كثير" }
         ]
       },
       {
         "id": "a1-mf2",
-        "de": "Ich habe eine Mutter und einen Vater.",
-        "ar": "لدي أم وأب.",
+        "de": "Ich habe eine Mutter und einen Vater",
+        "ar": "لدي أم وأب",
         "vocab": [
-          { "word": "Mutter", "ar": "أم", "explanation": "والدتي." },
-          { "word": "Vater", "ar": "أب", "explanation": "والدي." }
+          { "word": "Mutter", "ar": "أم", "explanation": "والدتي" },
+          { "word": "Vater", "ar": "أب", "explanation": "والدي" }
         ]
       },
       {
         "id": "a1-mf3",
-        "de": "Ich habe auch einen Bruder.",
-        "ar": "لدي أيضاً أخ.",
+        "de": "Ich habe auch einen Bruder",
+        "ar": "لدي أيضاً أخ",
         "vocab": [
-          { "word": "Bruder", "ar": "أخ", "explanation": "ولد من نفس الوالدين." },
-          { "word": "auch", "ar": "أيضاً", "explanation": "بالإضافة إلى ذلك." }
+          { "word": "Bruder", "ar": "أخ", "explanation": "ولد من نفس الوالدين" },
+          { "word": "auch", "ar": "أيضاً", "explanation": "بالإضافة إلى ذلك" }
         ]
       },
       {
         "id": "a1-mf4",
-        "de": "Meine Schwester ist klein.",
-        "ar": "أختي صغيرة.",
+        "de": "Meine Schwester ist klein",
+        "ar": "أختي صغيرة",
         "vocab": [
-          { "word": "Schwester", "ar": "أخت", "explanation": "بنت من نفس الوالدين." },
-          { "word": "klein", "ar": "صغيرة", "explanation": "عمرها قليل." }
+          { "word": "Schwester", "ar": "أخت", "explanation": "بنت من نفس الوالدين" },
+          { "word": "klein", "ar": "صغيرة", "explanation": "عمرها قليل" }
         ]
       },
       {
         "id": "a1-mf5",
-        "de": "Wir spielen gerne zusammen.",
-        "ar": "نلعب معاً بسرور.",
+        "de": "Wir spielen gerne zusammen",
+        "ar": "نلعب معاً بسرور",
         "vocab": [
-          { "word": "spielen", "ar": "نلعب", "explanation": "نقوم بنشاط ممتع." },
-          { "word": "gerne", "ar": "بسرور", "explanation": "نحب أن نفعل ذلك." },
-          { "word": "zusammen", "ar": "معاً", "explanation": "في نفس المكان والوقت." }
+          { "word": "spielen", "ar": "نلعب", "explanation": "نقوم بنشاط ممتع" },
+          { "word": "gerne", "ar": "بسرور", "explanation": "نحب أن نفعل ذلك" },
+          { "word": "zusammen", "ar": "معاً", "explanation": "في نفس المكان والوقت" }
         ]
       }
     ]
@@ -119,48 +119,48 @@
     "lines": [
       {
         "id": "a1-is1",
-        "de": "Ich gehe in den Supermarkt.",
-        "ar": "أذهب إلى السوبرماركت.",
+        "de": "Ich gehe in den Supermarkt",
+        "ar": "أذهب إلى السوبرماركت",
         "vocab": [
-          { "word": "gehe", "ar": "أذهب", "explanation": "أنتقل إلى هناك." },
-          { "word": "Supermarkt", "ar": "السوبرماركت", "explanation": "متجر لبيع الطعام." }
+          { "word": "gehe", "ar": "أذهب", "explanation": "أنتقل إلى هناك" },
+          { "word": "Supermarkt", "ar": "السوبرماركت", "explanation": "متجر لبيع الطعام" }
         ]
       },
       {
         "id": "a1-is2",
-        "de": "Ich kaufe Milch und Brot.",
-        "ar": "أشتري حليباً وخبزاً.",
+        "de": "Ich kaufe Milch und Brot",
+        "ar": "أشتري حليباً وخبزاً",
         "vocab": [
-          { "word": "kaufe", "ar": "أشتري", "explanation": "آخذ مقابل مال." },
-          { "word": "Milch", "ar": "حليب", "explanation": "سائل أبيض من البقر." },
-          { "word": "Brot", "ar": "خبز", "explanation": "طعام يُصنع من الدقيق." }
+          { "word": "kaufe", "ar": "أشتري", "explanation": "آخذ مقابل مال" },
+          { "word": "Milch", "ar": "حليب", "explanation": "سائل أبيض من البقر" },
+          { "word": "Brot", "ar": "خبز", "explanation": "طعام يُصنع من الدقيق" }
         ]
       },
       {
         "id": "a1-is3",
-        "de": "Das kostet zwei Euro.",
-        "ar": "هذا يكلف يوروين.",
+        "de": "Das kostet zwei Euro",
+        "ar": "هذا يكلف يوروين",
         "vocab": [
-          { "word": "kostet", "ar": "يكلف", "explanation": "السعر المطلوب." },
-          { "word": "zwei Euro", "ar": "يوروين", "explanation": "عملة أوروبية." }
+          { "word": "kostet", "ar": "يكلف", "explanation": "السعر المطلوب" },
+          { "word": "zwei Euro", "ar": "يوروين", "explanation": "عملة أوروبية" }
         ]
       },
       {
         "id": "a1-is4",
-        "de": "Ich bezahle an der Kasse.",
-        "ar": "أدفع عند الخروج.",
+        "de": "Ich bezahle an der Kasse",
+        "ar": "أدفع عند الخروج",
         "vocab": [
-          { "word": "bezahle", "ar": "أدفع", "explanation": "أعطي المال." },
-          { "word": "Kasse", "ar": "الخروج", "explanation": "مكان الدفع." }
+          { "word": "bezahle", "ar": "أدفع", "explanation": "أعطي المال" },
+          { "word": "Kasse", "ar": "الخروج", "explanation": "مكان الدفع" }
         ]
       },
       {
         "id": "a1-is5",
-        "de": "Dann gehe ich nach Hause.",
-        "ar": "ثم أذهب إلى المنزل.",
+        "de": "Dann gehe ich nach Hause",
+        "ar": "ثم أذهب إلى المنزل",
         "vocab": [
-          { "word": "dann", "ar": "ثم", "explanation": "بعد ذلك." },
-          { "word": "nach Hause", "ar": "إلى المنزل", "explanation": "مكان سكني." }
+          { "word": "dann", "ar": "ثم", "explanation": "بعد ذلك" },
+          { "word": "nach Hause", "ar": "إلى المنزل", "explanation": "مكان سكني" }
         ]
       }
     ]
@@ -174,48 +174,48 @@
     "lines": [
       {
         "id": "a1-mz1",
-        "de": "Mein Zimmer ist klein und sauber.",
-        "ar": "غرفتي صغيرة ونظيفة.",
+        "de": "Mein Zimmer ist klein und sauber",
+        "ar": "غرفتي صغيرة ونظيفة",
         "vocab": [
-          { "word": "Zimmer", "ar": "غرفتي", "explanation": "مكان نومي." },
-          { "word": "klein", "ar": "صغيرة", "explanation": "ليست كبيرة." },
-          { "word": "sauber", "ar": "نظيفة", "explanation": "ليس فيها أوساخ." }
+          { "word": "Zimmer", "ar": "غرفتي", "explanation": "مكان نومي" },
+          { "word": "klein", "ar": "صغيرة", "explanation": "ليست كبيرة" },
+          { "word": "sauber", "ar": "نظيفة", "explanation": "ليس فيها أوساخ" }
         ]
       },
       {
         "id": "a1-mz2",
-        "de": "Das Bett ist weich.",
-        "ar": "السرير ناعم.",
+        "de": "Das Bett ist weich",
+        "ar": "السرير ناعم",
         "vocab": [
-          { "word": "Bett", "ar": "السرير", "explanation": "مكان النوم." },
-          { "word": "weich", "ar": "ناعم", "explanation": "مريح للجسم." }
+          { "word": "Bett", "ar": "السرير", "explanation": "مكان النوم" },
+          { "word": "weich", "ar": "ناعم", "explanation": "مريح للجسم" }
         ]
       },
       {
         "id": "a1-mz3",
-        "de": "Der Tisch ist braun.",
-        "ar": "الطاولة بنية.",
+        "de": "Der Tisch ist braun",
+        "ar": "الطاولة بنية",
         "vocab": [
-          { "word": "Tisch", "ar": "الطاولة", "explanation": "مكان وضع الأشياء." },
-          { "word": "braun", "ar": "بنية", "explanation": "لون بين الأحمر والأسود." }
+          { "word": "Tisch", "ar": "الطاولة", "explanation": "مكان وضع الأشياء" },
+          { "word": "braun", "ar": "بنية", "explanation": "لون بين الأحمر والأسود" }
         ]
       },
       {
         "id": "a1-mz4",
-        "de": "Das Fenster ist offen.",
-        "ar": "النافذة مفتوحة.",
+        "de": "Das Fenster ist offen",
+        "ar": "النافذة مفتوحة",
         "vocab": [
-          { "word": "Fenster", "ar": "النافذة", "explanation": "فتحة في الجدار." },
-          { "word": "offen", "ar": "مفتوحة", "explanation": "ليست مغلقة." }
+          { "word": "Fenster", "ar": "النافذة", "explanation": "فتحة في الجدار" },
+          { "word": "offen", "ar": "مفتوحة", "explanation": "ليست مغلقة" }
         ]
       },
       {
         "id": "a1-mz5",
-        "de": "Ich mag mein Zimmer sehr.",
-        "ar": "أحب غرفتي كثيراً.",
+        "de": "Ich mag mein Zimmer sehr",
+        "ar": "أحب غرفتي كثيراً",
         "vocab": [
-          { "word": "mag", "ar": "أحب", "explanation": "لدي شعور إيجابي نحوها." },
-          { "word": "sehr", "ar": "كثيراً", "explanation": "بدرجة كبيرة." }
+          { "word": "mag", "ar": "أحب", "explanation": "لدي شعور إيجابي نحوها" },
+          { "word": "sehr", "ar": "كثيراً", "explanation": "بدرجة كبيرة" }
         ]
       }
     ]
@@ -229,53 +229,53 @@
     "lines": [
       {
         "id": "a2-ge1",
-        "de": "Gesundes Essen gibt mir viel Energie.",
-        "ar": "الطعام الصحي يمنحني طاقة كبيرة.",
+        "de": "Gesundes Essen gibt mir viel Energie",
+        "ar": "الطعام الصحي يمنحني طاقة كبيرة",
         "vocab": [
-          { "word": "Gesundes Essen", "ar": "الطعام الصحي", "explanation": "طعام مفيد للجسم." },
-          { "word": "gibt", "ar": "يمنحني", "explanation": "يعطيني." },
-          { "word": "Energie", "ar": "طاقة", "explanation": "قوة للنشاط والحركة." }
+          { "word": "Gesundes Essen", "ar": "الطعام الصحي", "explanation": "طعام مفيد للجسم" },
+          { "word": "gibt", "ar": "يمنحني", "explanation": "يعطيني" },
+          { "word": "Energie", "ar": "طاقة", "explanation": "قوة للنشاط والحركة" }
         ]
       },
       {
         "id": "a2-ge2",
-        "de": "Ich esse jeden Tag Obst und Gemüse.",
-        "ar": "آكل الفواكه والخضروات كل يوم.",
+        "de": "Ich esse jeden Tag Obst und Gemüse",
+        "ar": "آكل الفواكه والخضروات كل يوم",
         "vocab": [
-          { "word": "esse", "ar": "آكل", "explanation": "أتناول الطعام." },
-          { "word": "jeden Tag", "ar": "كل يوم", "explanation": "يومياً بدون انقطاع." },
-          { "word": "Obst", "ar": "الفواكه", "explanation": "منتجات طبيعية حلوة من الأشجار." },
-          { "word": "Gemüse", "ar": "الخضروات", "explanation": "نباتات مفيدة للأكل." }
+          { "word": "esse", "ar": "آكل", "explanation": "أتناول الطعام" },
+          { "word": "jeden Tag", "ar": "كل يوم", "explanation": "يومياً بدون انقطاع" },
+          { "word": "Obst", "ar": "الفواكه", "explanation": "منتجات طبيعية حلوة من الأشجار" },
+          { "word": "Gemüse", "ar": "الخضروات", "explanation": "نباتات مفيدة للأكل" }
         ]
       },
       {
         "id": "a2-ge3",
-        "de": "Wasser trinken ist sehr wichtig.",
-        "ar": "شرب الماء مهم جداً.",
+        "de": "Wasser trinken ist sehr wichtig",
+        "ar": "شرب الماء مهم جداً",
         "vocab": [
-          { "word": "Wasser", "ar": "الماء", "explanation": "سائل شفاف للشرب." },
-          { "word": "trinken", "ar": "شرب", "explanation": "إدخال السائل إلى الفم." },
-          { "word": "wichtig", "ar": "مهم", "explanation": "لا يمكن الاستغناء عنه." }
+          { "word": "Wasser", "ar": "الماء", "explanation": "سائل شفاف للشرب" },
+          { "word": "trinken", "ar": "شرب", "explanation": "إدخال السائل إلى الفم" },
+          { "word": "wichtig", "ar": "مهم", "explanation": "لا يمكن الاستغناء عنه" }
         ]
       },
       {
         "id": "a2-ge4",
-        "de": "Zu viel Zucker ist nicht gut für mich.",
-        "ar": "السكر الكثير ليس جيداً لي.",
+        "de": "Zu viel Zucker ist nicht gut für mich",
+        "ar": "السكر الكثير ليس جيداً لي",
         "vocab": [
-          { "word": "zu viel", "ar": "كثير جداً", "explanation": "كمية زائدة عن الحاجة." },
-          { "word": "Zucker", "ar": "السكر", "explanation": "مادة حلوة ضارة بكثرة." },
-          { "word": "nicht gut", "ar": "ليس جيداً", "explanation": "يسبب ضرراً للصحة." }
+          { "word": "zu viel", "ar": "كثير جداً", "explanation": "كمية زائدة عن الحاجة" },
+          { "word": "Zucker", "ar": "السكر", "explanation": "مادة حلوة ضارة بكثرة" },
+          { "word": "nicht gut", "ar": "ليس جيداً", "explanation": "يسبب ضرراً للصحة" }
         ]
       },
       {
         "id": "a2-ge5",
-        "de": "Ich koche mein Mittagessen selbst.",
-        "ar": "أطبخ غدائي بنفسي.",
+        "de": "Ich koche mein Mittagessen selbst",
+        "ar": "أطبخ غدائي بنفسي",
         "vocab": [
-          { "word": "koche", "ar": "أطبخ", "explanation": "أعد الطعام على النار." },
-          { "word": "Mittagessen", "ar": "غدائي", "explanation": "الوجبة الثانية في اليوم." },
-          { "word": "selbst", "ar": "بنفسي", "explanation": "بدون مساعدة أحد." }
+          { "word": "koche", "ar": "أطبخ", "explanation": "أعد الطعام على النار" },
+          { "word": "Mittagessen", "ar": "غدائي", "explanation": "الوجبة الثانية في اليوم" },
+          { "word": "selbst", "ar": "بنفسي", "explanation": "بدون مساعدة أحد" }
         ]
       }
     ]
@@ -289,52 +289,52 @@
     "lines": [
       {
         "id": "a2-mh1",
-        "de": "Mein Hobby ist Fussball spielen.",
-        "ar": "هوايتي هي لعب كرة القدم.",
+        "de": "Mein Hobby ist Fussball spielen",
+        "ar": "هوايتي هي لعب كرة القدم",
         "vocab": [
-          { "word": "Hobby", "ar": "هوايتي", "explanation": "نشاط أحبه في وقت الفراغ." },
-          { "word": "Fussball", "ar": "كرة القدم", "explanation": "رياضة بالقدم والكرة." },
-          { "word": "spielen", "ar": "لعب", "explanation": "القيام بنشاط رياضي." }
+          { "word": "Hobby", "ar": "هوايتي", "explanation": "نشاط أحبه في وقت الفراغ" },
+          { "word": "Fussball", "ar": "كرة القدم", "explanation": "رياضة بالقدم والكرة" },
+          { "word": "spielen", "ar": "لعب", "explanation": "القيام بنشاط رياضي" }
         ]
       },
       {
         "id": "a2-mh2",
-        "de": "Jeden Samstag spiele ich mit Freunden.",
-        "ar": "كل سبت ألعب مع أصدقائي.",
+        "de": "Jeden Samstag spiele ich mit Freunden",
+        "ar": "كل سبت ألعب مع أصدقائي",
         "vocab": [
-          { "word": "jeden Samstag", "ar": "كل سبت", "explanation": "أسبوعياً في هذا اليوم." },
-          { "word": "spiele", "ar": "ألعب", "explanation": "أمارس اللعب." },
-          { "word": "Freunden", "ar": "أصدقائي", "explanation": "أشخاص أحب قضاء الوقت معهم." }
+          { "word": "jeden Samstag", "ar": "كل سبت", "explanation": "أسبوعياً في هذا اليوم" },
+          { "word": "spiele", "ar": "ألعب", "explanation": "أمارس اللعب" },
+          { "word": "Freunden", "ar": "أصدقائي", "explanation": "أشخاص أحب قضاء الوقت معهم" }
         ]
       },
       {
         "id": "a2-mh3",
-        "de": "Wir trainieren auf einem grossen Feld.",
-        "ar": "نتدرب في ملعب كبير.",
+        "de": "Wir trainieren auf einem grossen Feld",
+        "ar": "نتدرب في ملعب كبير",
         "vocab": [
-          { "word": "trainieren", "ar": "نتدرب", "explanation": "نمارس الرياضة بانتظام." },
-          { "word": "grossen", "ar": "كبير", "explanation": "مساحته واسعة." },
-          { "word": "Feld", "ar": "ملعب", "explanation": "مكان مخصص للرياضة." }
+          { "word": "trainieren", "ar": "نتدرب", "explanation": "نمارس الرياضة بانتظام" },
+          { "word": "grossen", "ar": "كبير", "explanation": "مساحته واسعة" },
+          { "word": "Feld", "ar": "ملعب", "explanation": "مكان مخصص للرياضة" }
         ]
       },
       {
         "id": "a2-mh4",
-        "de": "Fussball macht mir sehr viel Spass.",
-        "ar": "كرة القدم تمنحني متعة كبيرة.",
+        "de": "Fussball macht mir sehr viel Spass",
+        "ar": "كرة القدم تمنحني متعة كبيرة",
         "vocab": [
-          { "word": "macht", "ar": "تمنحني", "explanation": "تعطيني." },
-          { "word": "Spass", "ar": "متعة", "explanation": "شعور بالفرح والسعادة." },
-          { "word": "sehr viel", "ar": "كبيرة جداً", "explanation": "بكمية كبيرة." }
+          { "word": "macht", "ar": "تمنحني", "explanation": "تعطيني" },
+          { "word": "Spass", "ar": "متعة", "explanation": "شعور بالفرح والسعادة" },
+          { "word": "sehr viel", "ar": "كبيرة جداً", "explanation": "بكمية كبيرة" }
         ]
       },
       {
         "id": "a2-mh5",
-        "de": "Nach dem Spiel bin ich müde aber glücklich.",
-        "ar": "بعد المباراة أكون متعباً لكن سعيداً.",
+        "de": "Nach dem Spiel bin ich müde aber glücklich",
+        "ar": "بعد المباراة أكون متعباً لكن سعيداً",
         "vocab": [
-          { "word": "nach dem Spiel", "ar": "بعد المباراة", "explanation": "عند انتهاء اللعب." },
-          { "word": "müde", "ar": "متعباً", "explanation": "أحتاج للراحة." },
-          { "word": "glücklich", "ar": "سعيداً", "explanation": "أشعر بفرح كبير." }
+          { "word": "nach dem Spiel", "ar": "بعد المباراة", "explanation": "عند انتهاء اللعب" },
+          { "word": "müde", "ar": "متعباً", "explanation": "أحتاج للراحة" },
+          { "word": "glücklich", "ar": "سعيداً", "explanation": "أشعر بفرح كبير" }
         ]
       }
     ]
@@ -348,53 +348,53 @@
     "lines": [
       {
         "id": "a2-ar1",
-        "de": "Ich reise sehr gerne in andere Länder.",
-        "ar": "أسافر جداً إلى بلدان أخرى.",
+        "de": "Ich reise sehr gerne in andere Länder",
+        "ar": "أسافر جداً إلى بلدان أخرى",
         "vocab": [
-          { "word": "reise", "ar": "أسافر", "explanation": "أذهب لمسافات بعيدة." },
-          { "word": "gerne", "ar": "جداً", "explanation": "بكل سرور." },
-          { "word": "Länder", "ar": "بلدان", "explanation": "دول غير بلدي." }
+          { "word": "reise", "ar": "أسافر", "explanation": "أذهب لمسافات بعيدة" },
+          { "word": "gerne", "ar": "جداً", "explanation": "بكل سرور" },
+          { "word": "Länder", "ar": "بلدان", "explanation": "دول غير بلدي" }
         ]
       },
       {
         "id": "a2-ar2",
-        "de": "Letztes Jahr war ich in Italien.",
-        "ar": "السنة الماضية كنت في إيطاليا.",
+        "de": "Letztes Jahr war ich in Italien",
+        "ar": "السنة الماضية كنت في إيطاليا",
         "vocab": [
-          { "word": "Letztes Jahr", "ar": "السنة الماضية", "explanation": "قبل هذه السنة." },
-          { "word": "war", "ar": "كنت", "explanation": "قضيت وقتاً." },
-          { "word": "Italien", "ar": "إيطاليا", "explanation": "دولة في جنوب أوروبا." }
+          { "word": "Letztes Jahr", "ar": "السنة الماضية", "explanation": "قبل هذه السنة" },
+          { "word": "war", "ar": "كنت", "explanation": "قضيت وقتاً" },
+          { "word": "Italien", "ar": "إيطاليا", "explanation": "دولة في جنوب أوروبا" }
         ]
       },
       {
         "id": "a2-ar3",
-        "de": "Die Pizza dort ist sehr lecker.",
-        "ar": "البيتزا هناك لذيذة جداً.",
+        "de": "Die Pizza dort ist sehr lecker",
+        "ar": "البيتزا هناك لذيذة جداً",
         "vocab": [
-          { "word": "Pizza", "ar": "البيتزا", "explanation": "طعام إيطالي مشهور." },
-          { "word": "dort", "ar": "هناك", "explanation": "في ذلك المكان." },
-          { "word": "lecker", "ar": "لذيذة", "explanation": "طعمها رائع." }
+          { "word": "Pizza", "ar": "البيتزا", "explanation": "طعام إيطالي مشهور" },
+          { "word": "dort", "ar": "هناك", "explanation": "في ذلك المكان" },
+          { "word": "lecker", "ar": "لذيذة", "explanation": "طعمها رائع" }
         ]
       },
       {
         "id": "a2-ar4",
-        "de": "Ich besuche immer Museen und Kirchen.",
-        "ar": "أزور دائماً المتاحف والكنائس.",
+        "de": "Ich besuche immer Museen und Kirchen",
+        "ar": "أزور دائماً المتاحف والكنائس",
         "vocab": [
-          { "word": "besuche", "ar": "أزور", "explanation": "أذهب إلى." },
-          { "word": "immer", "ar": "دائماً", "explanation": "في كل مرة." },
-          { "word": "Museen", "ar": "المتاحف", "explanation": "أماكن تعرض التاريخ والفن." },
-          { "word": "Kirchen", "ar": "الكنائس", "explanation": "أماكن عبادة للمسيحيين." }
+          { "word": "besuche", "ar": "أزور", "explanation": "أذهب إلى" },
+          { "word": "immer", "ar": "دائماً", "explanation": "في كل مرة" },
+          { "word": "Museen", "ar": "المتاحف", "explanation": "أماكن تعرض التاريخ والفن" },
+          { "word": "Kirchen", "ar": "الكنائس", "explanation": "أماكن عبادة للمسيحيين" }
         ]
       },
       {
         "id": "a2-ar5",
-        "de": "Nächstes Jahr möchte ich nach Paris fliegen.",
-        "ar": "السنة القادمة أريد أن أسافر إلى باريس.",
+        "de": "Nächstes Jahr möchte ich nach Paris fliegen",
+        "ar": "السنة القادمة أريد أن أسافر إلى باريس",
         "vocab": [
-          { "word": "Nächstes Jahr", "ar": "السنة القادمة", "explanation": "بعد هذه السنة." },
-          { "word": "möchte", "ar": "أريد", "explanation": "لدي رغبة في." },
-          { "word": "fliegen", "ar": "أسافر بالطائرة", "explanation": "أذهب بطائرة." }
+          { "word": "Nächstes Jahr", "ar": "السنة القادمة", "explanation": "بعد هذه السنة" },
+          { "word": "möchte", "ar": "أريد", "explanation": "لدي رغبة في" },
+          { "word": "fliegen", "ar": "أسافر بالطائرة", "explanation": "أذهب بطائرة" }
         ]
       }
     ]
@@ -408,52 +408,52 @@
     "lines": [
       {
         "id": "a2-ik1",
-        "de": "Gestern war ich mit Freunden im Kino.",
-        "ar": "بالأمس كنت مع أصدقائي في السينما.",
+        "de": "Gestern war ich mit Freunden im Kino",
+        "ar": "بالأمس كنت مع أصدقائي في السينما",
         "vocab": [
-          { "word": "Gestern", "ar": "بالأمس", "explanation": "اليوم الماضي." },
-          { "word": "Freunden", "ar": "أصدقائي", "explanation": "أشخاص مقربين." },
-          { "word": "Kino", "ar": "السينما", "explanation": "مكان عرض الأفلام." }
+          { "word": "Gestern", "ar": "بالأمس", "explanation": "اليوم الماضي" },
+          { "word": "Freunden", "ar": "أصدقائي", "explanation": "أشخاص مقربين" },
+          { "word": "Kino", "ar": "السينما", "explanation": "مكان عرض الأفلام" }
         ]
       },
       {
         "id": "a2-ik2",
-        "de": "Wir haben einen lustigen Film gesehen.",
-        "ar": "شاهدنا فيلماً مضحكاً.",
+        "de": "Wir haben einen lustigen Film gesehen",
+        "ar": "شاهدنا فيلماً مضحكاً",
         "vocab": [
-          { "word": "haben gesehen", "ar": "شاهدنا", "explanation": "نظرنا إلى." },
-          { "word": "lustigen", "ar": "مضحكاً", "explanation": "يجعلني أضحك." },
-          { "word": "Film", "ar": "فيلم", "explanation": "قصة مصورة طويلة." }
+          { "word": "haben gesehen", "ar": "شاهدنا", "explanation": "نظرنا إلى" },
+          { "word": "lustigen", "ar": "مضحكاً", "explanation": "يجعلني أضحك" },
+          { "word": "Film", "ar": "فيلم", "explanation": "قصة مصورة طويلة" }
         ]
       },
       {
         "id": "a2-ik3",
-        "de": "Die Schauspieler haben toll gespielt.",
-        "ar": "الممثلون مثلوا بشكل رائع.",
+        "de": "Die Schauspieler haben toll gespielt",
+        "ar": "الممثلون مثلوا بشكل رائع",
         "vocab": [
-          { "word": "Schauspieler", "ar": "الممثلون", "explanation": "الأشخاص في الفيلم." },
-          { "word": "toll", "ar": "رائع", "explanation": "ممتاز وجيد جداً." },
-          { "word": "gespielt", "ar": "مثلوا", "explanation": "أدوا أدوارهم." }
+          { "word": "Schauspieler", "ar": "الممثلون", "explanation": "الأشخاص في الفيلم" },
+          { "word": "toll", "ar": "رائع", "explanation": "ممتاز وجيد جداً" },
+          { "word": "gespielt", "ar": "مثلوا", "explanation": "أدوا أدوارهم" }
         ]
       },
       {
         "id": "a2-ik4",
-        "de": "Ich habe Popcorn und Cola gekauft.",
-        "ar": "اشتريت فشار وكولا.",
+        "de": "Ich habe Popcorn und Cola gekauft",
+        "ar": "اشتريت فشار وكولا",
         "vocab": [
-          { "word": "habe gekauft", "ar": "اشتريت", "explanation": "حصلت مقابل مال." },
-          { "word": "Popcorn", "ar": "فشار", "explanation": "ذرة مقلية." },
-          { "word": "Cola", "ar": "كولا", "explanation": "مشروب غازي بني." }
+          { "word": "habe gekauft", "ar": "اشتريت", "explanation": "حصلت مقابل مال" },
+          { "word": "Popcorn", "ar": "فشار", "explanation": "ذرة مقلية" },
+          { "word": "Cola", "ar": "كولا", "explanation": "مشروب غازي بني" }
         ]
       },
       {
         "id": "a2-ik5",
-        "de": "Der Film hat zwei Stunden gedauert.",
-        "ar": "الفيلم استمر ساعتين.",
+        "de": "Der Film hat zwei Stunden gedauert",
+        "ar": "الفيلم استمر ساعتين",
         "vocab": [
-          { "word": "Film", "ar": "الفيلم", "explanation": "القصة المصورة." },
-          { "word": "zwei Stunden", "ar": "ساعتين", "explanation": "وحدة قياس الوقت." },
-          { "word": "gedauert", "ar": "استمر", "explanation": "أخذ من الوقت مقداراً." }
+          { "word": "Film", "ar": "الفيلم", "explanation": "القصة المصورة" },
+          { "word": "zwei Stunden", "ar": "ساعتين", "explanation": "وحدة قياس الوقت" },
+          { "word": "gedauert", "ar": "استمر", "explanation": "أخذ من الوقت مقداراً" }
         ]
       }
     ]
@@ -467,63 +467,63 @@
     "lines": [
       {
         "id": "b1-ed1",
-        "de": "Erfolg kommt nicht über Nacht, sondern durch tägliche Arbeit.",
-        "ar": "النجاح لا يأتي بين ليلة وضحاها، بل بالعمل اليومي.",
+        "de": "Erfolg kommt nicht über Nacht, sondern durch tägliche Arbeit",
+        "ar": "النجاح لا يأتي بين ليلة وضحاها، بل بالعمل اليومي",
         "vocab": [
-          { "word": "Erfolg", "ar": "النجاح", "explanation": "تحقيق الأهداف المرجوة." },
-          { "word": "über Nacht", "ar": "بين ليلة وضحاها", "explanation": "بسرعة وبشكل مفاجئ." },
-          { "word": "tägliche Arbeit", "ar": "العمل اليومي", "explanation": "الجهد المستمر كل يوم." }
+          { "word": "Erfolg", "ar": "النجاح", "explanation": "تحقيق الأهداف المرجوة" },
+          { "word": "über Nacht", "ar": "بين ليلة وضحاها", "explanation": "بسرعة وبشكل مفاجئ" },
+          { "word": "tägliche Arbeit", "ar": "العمل اليومي", "explanation": "الجهد المستمر كل يوم" }
         ]
       },
       {
         "id": "b1-ed2",
-        "de": "Wer regelmässig übt, verbessert seine Fähigkeiten schnell.",
-        "ar": "من يتدرب بانتظام يحسن مهاراته بسرعة.",
+        "de": "Wer regelmässig übt, verbessert seine Fähigkeiten schnell",
+        "ar": "من يتدرب بانتظام يحسن مهاراته بسرعة",
         "vocab": [
-          { "word": "regelmässig", "ar": "بانتظام", "explanation": "باستمرار ودون انقطاع." },
-          { "word": "übt", "ar": "يتدرب", "explanation": "يمارس شيئاً مراراً." },
-          { "word": "verbessert", "ar": "يحسن", "explanation": "يجعل أفضل مما كان." },
-          { "word": "Fähigkeiten", "ar": "مهاراته", "explanation": "قدراته على فعل شيء ما." }
+          { "word": "regelmässig", "ar": "بانتظام", "explanation": "باستمرار ودون انقطاع" },
+          { "word": "übt", "ar": "يتدرب", "explanation": "يمارس شيئاً مراراً" },
+          { "word": "verbessert", "ar": "يحسن", "explanation": "يجعل أفضل مما كان" },
+          { "word": "Fähigkeiten", "ar": "مهاراته", "explanation": "قدراته على فعل شيء ما" }
         ]
       },
       {
         "id": "b1-ed3",
-        "de": "Auch wenn es schwierig wird, sollte man nicht aufgeben.",
-        "ar": "حتى عندما يصبح الأمر صعباً، لا ينبغي للمرء أن يستسلم.",
+        "de": "Auch wenn es schwierig wird, sollte man nicht aufgeben",
+        "ar": "حتى عندما يصبح الأمر صعباً، لا ينبغي للمرء أن يستسلم",
         "vocab": [
-          { "word": "schwierig", "ar": "صعباً", "explanation": "يحتاج إلى جهد كبير." },
-          { "word": "sollte man nicht", "ar": "لا ينبغي للمرء", "explanation": "ليس من الصواب أن." },
-          { "word": "aufgeben", "ar": "يستسلم", "explanation": "يتوقف عن المحاولة." }
+          { "word": "schwierig", "ar": "صعباً", "explanation": "يحتاج إلى جهد كبير" },
+          { "word": "sollte man nicht", "ar": "لا ينبغي للمرء", "explanation": "ليس من الصواب أن" },
+          { "word": "aufgeben", "ar": "يستسلم", "explanation": "يتوقف عن المحاولة" }
         ]
       },
       {
         "id": "b1-ed4",
-        "de": "Disziplin bedeutet, Dinge zu tun, auch wenn man keine Lust hat.",
-        "ar": "الانضباط يعني فعل الأشياء حتى عندما لا يكون لديك رغبة.",
+        "de": "Disziplin bedeutet, Dinge zu tun, auch wenn man keine Lust hat",
+        "ar": "الانضباط يعني فعل الأشياء حتى عندما لا يكون لديك رغبة",
         "vocab": [
-          { "word": "Disziplin", "ar": "الانضباط", "explanation": "الالتزام بالقيام بالواجبات." },
-          { "word": "bedeutet", "ar": "يعني", "explanation": "يفيد بأن." },
-          { "word": "Lust", "ar": "رغبة", "explanation": "شعور داخلي يدفع للفعل." }
+          { "word": "Disziplin", "ar": "الانضباط", "explanation": "الالتزام بالقيام بالواجبات" },
+          { "word": "bedeutet", "ar": "يعني", "explanation": "يفيد بأن" },
+          { "word": "Lust", "ar": "رغبة", "explanation": "شعور داخلي يدفع للفعل" }
         ]
       },
       {
         "id": "b1-ed5",
-        "de": "Kleine Fortschritte führen langfristig zu grossen Ergebnissen.",
-        "ar": "التقدمات الصغيرة تؤدي على المدى الطويل إلى نتائج كبيرة.",
+        "de": "Kleine Fortschritte führen langfristig zu grossen Ergebnissen",
+        "ar": "التقدمات الصغيرة تؤدي على المدى الطويل إلى نتائج كبيرة",
         "vocab": [
-          { "word": "Fortschritte", "ar": "تقدمات", "explanation": "تحسن بسيط نحو الهدف." },
-          { "word": "langfristig", "ar": "على المدى الطويل", "explanation": "بعد فترة زمنية كبيرة." },
-          { "word": "Ergebnissen", "ar": "نتائج", "explanation": "ما نصل إليه بعد جهد." }
+          { "word": "Fortschritte", "ar": "تقدمات", "explanation": "تحسن بسيط نحو الهدف" },
+          { "word": "langfristig", "ar": "على المدى الطويل", "explanation": "بعد فترة زمنية كبيرة" },
+          { "word": "Ergebnissen", "ar": "نتائج", "explanation": "ما نصل إليه بعد جهد" }
         ]
       },
       {
         "id": "b1-ed6",
-        "de": "Jeder erfolgreiche Mensch hat einmal klein angefangen.",
-        "ar": "كل إنسان ناجح بدأ صغيراً في يوم من الأيام.",
+        "de": "Jeder erfolgreiche Mensch hat einmal klein angefangen",
+        "ar": "كل إنسان ناجح بدأ صغيراً في يوم من الأيام",
         "vocab": [
-          { "word": "erfolgreiche", "ar": "ناجح", "explanation": "حققت أهدافه." },
-          { "word": "Mensch", "ar": "إنسان", "explanation": "شخص." },
-          { "word": "angefangen", "ar": "بدأ", "explanation": "قام بالخطوة الأولى." }
+          { "word": "erfolgreiche", "ar": "ناجح", "explanation": "حققت أهدافه" },
+          { "word": "Mensch", "ar": "إنسان", "explanation": "شخص" },
+          { "word": "angefangen", "ar": "بدأ", "explanation": "قام بالخطوة الأولى" }
         ]
       }
     ]
@@ -537,63 +537,63 @@
     "lines": [
       {
         "id": "b1-wf1",
-        "de": "Ein echter Freund ist in guten und schlechten Zeiten da.",
-        "ar": "الصديق الحقيقي موجود في الأوقات الجيدة والسيئة.",
+        "de": "Ein echter Freund ist in guten und schlechten Zeiten da",
+        "ar": "الصديق الحقيقي موجود في الأوقات الجيدة والسيئة",
         "vocab": [
-          { "word": "echter Freund", "ar": "صديق حقيقي", "explanation": "شخص يمكن الاعتماد عليه." },
-          { "word": "guten Zeiten", "ar": "الأوقات الجيدة", "explanation": "فترات السعادة والنجاح." },
-          { "word": "schlechten Zeiten", "ar": "الأوقات السيئة", "explanation": "فترات الصعوبة والحزن." }
+          { "word": "echter Freund", "ar": "صديق حقيقي", "explanation": "شخص يمكن الاعتماد عليه" },
+          { "word": "guten Zeiten", "ar": "الأوقات الجيدة", "explanation": "فترات السعادة والنجاح" },
+          { "word": "schlechten Zeiten", "ar": "الأوقات السيئة", "explanation": "فترات الصعوبة والحزن" }
         ]
       },
       {
         "id": "b1-wf2",
-        "de": "Freundschaft bedeutet, einander zuzuhören und zu verstehen.",
-        "ar": "الصداقة تعني الاستماع والفهم المتبادل.",
+        "de": "Freundschaft bedeutet, einander zuzuhören und zu verstehen",
+        "ar": "الصداقة تعني الاستماع والفهم المتبادل",
         "vocab": [
-          { "word": "Freundschaft", "ar": "الصداقة", "explanation": "علاقة المحبة بين الأصدقاء." },
-          { "word": "zuzuhören", "ar": "الاستماع", "explanation": "الإنصات باهتمام للآخر." },
-          { "word": "zu verstehen", "ar": "الفهم", "explanation": "إدراك مشاعر وأفكار الآخر." }
+          { "word": "Freundschaft", "ar": "الصداقة", "explanation": "علاقة المحبة بين الأصدقاء" },
+          { "word": "zuzuhören", "ar": "الاستماع", "explanation": "الإنصات باهتمام للآخر" },
+          { "word": "zu verstehen", "ar": "الفهم", "explanation": "إدراك مشاعر وأفكار الآخر" }
         ]
       },
       {
         "id": "b1-wf3",
-        "de": "Manchmal muss man auch verzeihen können.",
-        "ar": "يجب على المرء أحياناً أن يكون قادراً على المسامحة.",
+        "de": "Manchmal muss man auch verzeihen können",
+        "ar": "يجب على المرء أحياناً أن يكون قادراً على المسامحة",
         "vocab": [
-          { "word": "Manchmal", "ar": "أحياناً", "explanation": "في بعض الأوقات." },
-          { "word": "verzeihen", "ar": "المسامحة", "explanation": "التجاوز عن الأخطاء." },
-          { "word": "können", "ar": "يكون قادراً على", "explanation": "لديه القدرة على فعل شيء." }
+          { "word": "Manchmal", "ar": "أحياناً", "explanation": "في بعض الأوقات" },
+          { "word": "verzeihen", "ar": "المسامحة", "explanation": "التجاوز عن الأخطاء" },
+          { "word": "können", "ar": "يكون قادراً على", "explanation": "لديه القدرة على فعل شيء" }
         ]
       },
       {
         "id": "b1-wf4",
-        "de": "Gemeinsame Erlebnisse stärken die Freundschaft.",
-        "ar": "التجارب المشتركة تقوي الصداقة.",
+        "de": "Gemeinsame Erlebnisse stärken die Freundschaft",
+        "ar": "التجارب المشتركة تقوي الصداقة",
         "vocab": [
-          { "word": "Gemeinsame Erlebnisse", "ar": "التجارب المشتركة", "explanation": "مواقف مررنا بها معاً." },
-          { "word": "stärken", "ar": "تقوي", "explanation": "تجعلها أقوى وأعمق." },
-          { "word": "Freundschaft", "ar": "الصداقة", "explanation": "العلاقة بين الأصدقاء." }
+          { "word": "Gemeinsame Erlebnisse", "ar": "التجارب المشتركة", "explanation": "مواقف مررنا بها معاً" },
+          { "word": "stärken", "ar": "تقوي", "explanation": "تجعلها أقوى وأعمق" },
+          { "word": "Freundschaft", "ar": "الصداقة", "explanation": "العلاقة بين الأصدقاء" }
         ]
       },
       {
         "id": "b1-wf5",
-        "de": "Ein guter Freund kritisiert dich ehrlich, aber respektvoll.",
-        "ar": "الصديق الجيد ينتقدك بصدق ولكن باحترام.",
+        "de": "Ein guter Freund kritisiert dich ehrlich, aber respektvoll",
+        "ar": "الصديق الجيد ينتقدك بصدق ولكن باحترام",
         "vocab": [
-          { "word": "guter Freund", "ar": "صديق جيد", "explanation": "شخص يهتم لمصلحتك." },
-          { "word": "kritisiert", "ar": "ينتقد", "explanation": "يشير إلى الأخطاء." },
-          { "word": "ehrlich", "ar": "بصدق", "explanation": "بدون كذب." },
-          { "word": "respektvoll", "ar": "باحترام", "explanation": "بطريقة مهذبة ومقبولة." }
+          { "word": "guter Freund", "ar": "صديق جيد", "explanation": "شخص يهتم لمصلحتك" },
+          { "word": "kritisiert", "ar": "ينتقد", "explanation": "يشير إلى الأخطاء" },
+          { "word": "ehrlich", "ar": "بصدق", "explanation": "بدون كذب" },
+          { "word": "respektvoll", "ar": "باحترام", "explanation": "بطريقة مهذبة ومقبولة" }
         ]
       },
       {
         "id": "b1-wf6",
-        "de": "Freundschaft kann man nicht kaufen, sie wächst mit der Zeit.",
-        "ar": "الصداقة لا يمكن شراؤها، بل تنمو مع الوقت.",
+        "de": "Freundschaft kann man nicht kaufen, sie wächst mit der Zeit",
+        "ar": "الصداقة لا يمكن شراؤها، بل تنمو مع الوقت",
         "vocab": [
-          { "word": "kaufen", "ar": "شراؤها", "explanation": "الحصول عليها بالمال." },
-          { "word": "wächst", "ar": "تنمو", "explanation": "تتطور وتصبح أكبر." },
-          { "word": "mit der Zeit", "ar": "مع الوقت", "explanation": "بمرور الأيام والسنين." }
+          { "word": "kaufen", "ar": "شراؤها", "explanation": "الحصول عليها بالمال" },
+          { "word": "wächst", "ar": "تنمو", "explanation": "تتطور وتصبح أكبر" },
+          { "word": "mit der Zeit", "ar": "مع الوقت", "explanation": "بمرور الأيام والسنين" }
         ]
       }
     ]
@@ -607,65 +607,65 @@
     "lines": [
       {
         "id": "b1-us1",
-        "de": "Die Umwelt zu schützen ist unsere gemeinsame Verantwortung.",
-        "ar": "حماية البيئة هي مسؤوليتنا المشتركة.",
+        "de": "Die Umwelt zu schützen ist unsere gemeinsame Verantwortung",
+        "ar": "حماية البيئة هي مسؤوليتنا المشتركة",
         "vocab": [
-          { "word": "Umwelt", "ar": "البيئة", "explanation": "الطبيعة من حولنا." },
-          { "word": "zu schützen", "ar": "حماية", "explanation": "المحافظة على." },
-          { "word": "gemeinsame Verantwortung", "ar": "مسؤوليتنا المشتركة", "explanation": "واجب علينا جميعاً." }
+          { "word": "Umwelt", "ar": "البيئة", "explanation": "الطبيعة من حولنا" },
+          { "word": "zu schützen", "ar": "حماية", "explanation": "المحافظة على" },
+          { "word": "gemeinsame Verantwortung", "ar": "مسؤوليتنا المشتركة", "explanation": "واجب علينا جميعاً" }
         ]
       },
       {
         "id": "b1-us2",
-        "de": "Plastikmüll verschmutzt die Meere und gefährdet Tiere.",
-        "ar": "النفايات البلاستيكية تلوث البحار وتهدد الحيوانات.",
+        "de": "Plastikmüll verschmutzt die Meere und gefährdet Tiere",
+        "ar": "النفايات البلاستيكية تلوث البحار وتهدد الحيوانات",
         "vocab": [
-          { "word": "Plastikmüll", "ar": "النفايات البلاستيكية", "explanation": "بقايا البلاستيك بعد الاستخدام." },
-          { "word": "verschmutzt", "ar": "تلوث", "explanation": "تجعل غير نظيفة." },
-          { "word": "Meere", "ar": "البحار", "explanation": "مسطحات مائية كبيرة." },
-          { "word": "gefährdet", "ar": "تهدد", "explanation": "تعرّض للخطر." }
+          { "word": "Plastikmüll", "ar": "النفايات البلاستيكية", "explanation": "بقايا البلاستيك بعد الاستخدام" },
+          { "word": "verschmutzt", "ar": "تلوث", "explanation": "تجعل غير نظيفة" },
+          { "word": "Meere", "ar": "البحار", "explanation": "مسطحات مائية كبيرة" },
+          { "word": "gefährdet", "ar": "تهدد", "explanation": "تعرّض للخطر" }
         ]
       },
       {
         "id": "b1-us3",
-        "de": "Wir sollten weniger Auto fahren und mehr zu Fuss gehen.",
-        "ar": "يجب أن نقود السيارة أقل ونمشي أكثر.",
+        "de": "Wir sollten weniger Auto fahren und mehr zu Fuss gehen",
+        "ar": "يجب أن نقود السيارة أقل ونمشي أكثر",
         "vocab": [
-          { "word": "weniger", "ar": "أقل", "explanation": "بمقدار أصغر." },
-          { "word": "Auto fahren", "ar": "نقود السيارة", "explanation": "استخدام السيارة للتنقل." },
-          { "word": "zu Fuss gehen", "ar": "نمشي", "explanation": "الانتقال بالمشي." }
+          { "word": "weniger", "ar": "أقل", "explanation": "بمقدار أصغر" },
+          { "word": "Auto fahren", "ar": "نقود السيارة", "explanation": "استخدام السيارة للتنقل" },
+          { "word": "zu Fuss gehen", "ar": "نمشي", "explanation": "الانتقال بالمشي" }
         ]
       },
       {
         "id": "b1-us4",
-        "de": "Das Recycling von Glas und Papier hilft der Umwelt.",
-        "ar": "إعادة تدوير الزجاج والورق يساعد البيئة.",
+        "de": "Das Recycling von Glas und Papier hilft der Umwelt",
+        "ar": "إعادة تدوير الزجاج والورق يساعد البيئة",
         "vocab": [
-          { "word": "Recycling", "ar": "إعادة تدوير", "explanation": "استخدام الأشياء مرة أخرى." },
-          { "word": "Glas", "ar": "الزجاج", "explanation": "مادة شفافة قابلة للتدوير." },
-          { "word": "Papier", "ar": "الورق", "explanation": "مادة من الأشجار." },
-          { "word": "hilft", "ar": "يساعد", "explanation": "يدعم ويحسن الوضع." }
+          { "word": "Recycling", "ar": "إعادة تدوير", "explanation": "استخدام الأشياء مرة أخرى" },
+          { "word": "Glas", "ar": "الزجاج", "explanation": "مادة شفافة قابلة للتدوير" },
+          { "word": "Papier", "ar": "الورق", "explanation": "مادة من الأشجار" },
+          { "word": "hilft", "ar": "يساعد", "explanation": "يدعم ويحسن الوضع" }
         ]
       },
       {
         "id": "b1-us5",
-        "de": "Jeder kann durch kleine Änderungen im Alltag beitragen.",
-        "ar": "كل شخص يمكنه المساهمة بتغييرات صغيرة في الحياة اليومية.",
+        "de": "Jeder kann durch kleine Änderungen im Alltag beitragen",
+        "ar": "كل شخص يمكنه المساهمة بتغييرات صغيرة في الحياة اليومية",
         "vocab": [
-          { "word": "kleine Änderungen", "ar": "تغييرات صغيرة", "explanation": "أمور بسيطة نقوم بها بشكل مختلف." },
-          { "word": "Alltag", "ar": "الحياة اليومية", "explanation": "روتيننا اليومي." },
-          { "word": "beitragen", "ar": "المساهمة", "explanation": "إعطاء جزء من الجهد." }
+          { "word": "kleine Änderungen", "ar": "تغييرات صغيرة", "explanation": "أمور بسيطة نقوم بها بشكل مختلف" },
+          { "word": "Alltag", "ar": "الحياة اليومية", "explanation": "روتيننا اليومي" },
+          { "word": "beitragen", "ar": "المساهمة", "explanation": "إعطاء جزء من الجهد" }
         ]
       },
       {
         "id": "b1-us6",
-        "de": "Bäume pflanzen verbessert die Luftqualität in Städten.",
-        "ar": "زراعة الأشجار تحسن جودة الهواء في المدن.",
+        "de": "Bäume pflanzen verbessert die Luftqualität in Städten",
+        "ar": "زراعة الأشجار تحسن جودة الهواء في المدن",
         "vocab": [
-          { "word": "Bäume pflanzen", "ar": "زراعة الأشجار", "explanation": "وضع بذور أو شتلات في الأرض." },
-          { "word": "verbessert", "ar": "تحسن", "explanation": "تجعل أفضل." },
-          { "word": "Luftqualität", "ar": "جودة الهواء", "explanation": "نظافة الهواء الذي نتنفسه." },
-          { "word": "Städten", "ar": "المدن", "explanation": "الأماكن المأهولة بالسكان." }
+          { "word": "Bäume pflanzen", "ar": "زراعة الأشجار", "explanation": "وضع بذور أو شتلات في الأرض" },
+          { "word": "verbessert", "ar": "تحسن", "explanation": "تجعل أفضل" },
+          { "word": "Luftqualität", "ar": "جودة الهواء", "explanation": "نظافة الهواء الذي نتنفسه" },
+          { "word": "Städten", "ar": "المدن", "explanation": "الأماكن المأهولة بالسكان" }
         ]
       }
     ]
@@ -679,63 +679,63 @@
     "lines": [
       {
         "id": "b1-bl1",
-        "de": "Die Wahl des richtigen Berufs ist eine wichtige Entscheidung.",
-        "ar": "اختيار المهنة المناسبة هو قرار مهم.",
+        "de": "Die Wahl des richtigen Berufs ist eine wichtige Entscheidung",
+        "ar": "اختيار المهنة المناسبة هو قرار مهم",
         "vocab": [
-          { "word": "Wahl", "ar": "اختيار", "explanation": "تحديد شيء من بين عدة خيارات." },
-          { "word": "richtigen Berufs", "ar": "المهنة المناسبة", "explanation": "العمل الذي يناسب مهاراتي." },
-          { "word": "wichtige Entscheidung", "ar": "قرار مهم", "explanation": "تحديد نهائي يؤثر على المستقبل." }
+          { "word": "Wahl", "ar": "اختيار", "explanation": "تحديد شيء من بين عدة خيارات" },
+          { "word": "richtigen Berufs", "ar": "المهنة المناسبة", "explanation": "العمل الذي يناسب مهاراتي" },
+          { "word": "wichtige Entscheidung", "ar": "قرار مهم", "explanation": "تحديد نهائي يؤثر على المستقبل" }
         ]
       },
       {
         "id": "b1-bl2",
-        "de": "Man sollte einen Job finden, der einem Freude bereitet.",
-        "ar": "يجب على المرء أن يجد وظيفة تمنحه السعادة.",
+        "de": "Man sollte einen Job finden, der einem Freude bereitet",
+        "ar": "يجب على المرء أن يجد وظيفة تمنحه السعادة",
         "vocab": [
-          { "word": "Job finden", "ar": "يجد وظيفة", "explanation": "يحصل على عمل." },
-          { "word": "Freude bereitet", "ar": "تمنح السعادة", "explanation": "تجلب الشعور الجيد." },
-          { "word": "sollte", "ar": "يجب على المرء", "explanation": "من الأفضل أن." }
+          { "word": "Job finden", "ar": "يجد وظيفة", "explanation": "يحصل على عمل" },
+          { "word": "Freude bereitet", "ar": "تمنح السعادة", "explanation": "تجلب الشعور الجيد" },
+          { "word": "sollte", "ar": "يجب على المرء", "explanation": "من الأفضل أن" }
         ]
       },
       {
         "id": "b1-bl3",
-        "de": "Kollegen können zu guten Freunden werden.",
-        "ar": "الزملاء يمكن أن يصبحوا أصدقاء جيدين.",
+        "de": "Kollegen können zu guten Freunden werden",
+        "ar": "الزملاء يمكن أن يصبحوا أصدقاء جيدين",
         "vocab": [
-          { "word": "Kollegen", "ar": "الزملاء", "explanation": "الأشخاص الذين يعملون معي." },
-          { "word": "können werden", "ar": "يمكن أن يصبحوا", "explanation": "من الممكن أن يتحولوا إلى." },
-          { "word": "guten Freunden", "ar": "أصدقاء جيدين", "explanation": "أشخاص نثق بهم." }
+          { "word": "Kollegen", "ar": "الزملاء", "explanation": "الأشخاص الذين يعملون معي" },
+          { "word": "können werden", "ar": "يمكن أن يصبحوا", "explanation": "من الممكن أن يتحولوا إلى" },
+          { "word": "guten Freunden", "ar": "أصدقاء جيدين", "explanation": "أشخاص نثق بهم" }
         ]
       },
       {
         "id": "b1-bl4",
-        "de": "Pünktlichkeit und Zuverlässigkeit werden von Chefs geschätzt.",
-        "ar": "الالتزام بالمواعيد والموثوقية يقدرهما الرؤساء.",
+        "de": "Pünktlichkeit und Zuverlässigkeit werden von Chefs geschätzt",
+        "ar": "الالتزام بالمواعيد والموثوقية يقدرهما الرؤساء",
         "vocab": [
-          { "word": "Pünktlichkeit", "ar": "الالتزام بالمواعيد", "explanation": "الحضور في الوقت المحدد." },
-          { "word": "Zuverlässigkeit", "ar": "الموثوقية", "explanation": "الاعتماد على الشخص." },
-          { "word": "Chefs", "ar": "الرؤساء", "explanation": "المديرين في العمل." },
-          { "word": "geschätzt", "ar": "يقدر", "explanation": "يعتبر ذو قيمة." }
+          { "word": "Pünktlichkeit", "ar": "الالتزام بالمواعيد", "explanation": "الحضور في الوقت المحدد" },
+          { "word": "Zuverlässigkeit", "ar": "الموثوقية", "explanation": "الاعتماد على الشخص" },
+          { "word": "Chefs", "ar": "الرؤساء", "explanation": "المديرين في العمل" },
+          { "word": "geschätzt", "ar": "يقدر", "explanation": "يعتبر ذو قيمة" }
         ]
       },
       {
         "id": "b1-bl5",
-        "de": "Man lernt nie aus, deshalb ist Weiterbildung wichtig.",
-        "ar": "لا يتوقف المرء عن التعلم أبداً، لذلك التعليم المستمر مهم.",
+        "de": "Man lernt nie aus, deshalb ist Weiterbildung wichtig",
+        "ar": "لا يتوقف المرء عن التعلم أبداً، لذلك التعليم المستمر مهم",
         "vocab": [
-          { "word": "lernt nie aus", "ar": "لا يتوقف عن التعلم", "explanation": "يكتسب معارف جديدة دائماً." },
-          { "word": "deshalb", "ar": "لذلك", "explanation": "لهذا السبب." },
-          { "word": "Weiterbildung", "ar": "التعليم المستمر", "explanation": "دورات لتحسين المهارات." }
+          { "word": "lernt nie aus", "ar": "لا يتوقف عن التعلم", "explanation": "يكتسب معارف جديدة دائماً" },
+          { "word": "deshalb", "ar": "لذلك", "explanation": "لهذا السبب" },
+          { "word": "Weiterbildung", "ar": "التعليم المستمر", "explanation": "دورات لتحسين المهارات" }
         ]
       },
       {
         "id": "b1-bl6",
-        "de": "Eine gute Work-Life-Balance ist für die Gesundheit wichtig.",
-        "ar": "التوازن الجيد بين العمل والحياة مهم للصحة.",
+        "de": "Eine gute Work-Life-Balance ist für die Gesundheit wichtig",
+        "ar": "التوازن الجيد بين العمل والحياة مهم للصحة",
         "vocab": [
-          { "word": "Work-Life-Balance", "ar": "التوازن بين العمل والحياة", "explanation": "تنظيم وقت العمل والراحة." },
-          { "word": "Gesundheit", "ar": "الصحة", "explanation": "حالة الجسم والعقل الجيدة." },
-          { "word": "wichtig", "ar": "مهم", "explanation": "ضروري للحفاظ على." }
+          { "word": "Work-Life-Balance", "ar": "التوازن بين العمل والحياة", "explanation": "تنظيم وقت العمل والراحة" },
+          { "word": "Gesundheit", "ar": "الصحة", "explanation": "حالة الجسم والعقل الجيدة" },
+          { "word": "wichtig", "ar": "مهم", "explanation": "ضروري للحفاظ على" }
         ]
       }
     ]
@@ -749,63 +749,63 @@
     "lines": [
       {
         "id": "b2-kw1",
-        "de": "Der Klimawandel ist eine der größten Herausforderungen unserer Zeit.",
-        "ar": "تغير المناخ هو أحد أكبر التحديات في عصرنا.",
+        "de": "Der Klimawandel ist eine der größten Herausforderungen unserer Zeit",
+        "ar": "تغير المناخ هو أحد أكبر التحديات في عصرنا",
         "vocab": [
-          { "word": "Klimawandel", "ar": "تغير المناخ", "explanation": "ارتفاع حرارة الأرض بسبب النشاط البشري." },
-          { "word": "größten Herausforderungen", "ar": "أكبر التحديات", "explanation": "أصعب المشاكل التي نواجهها." },
-          { "word": "unserer Zeit", "ar": "عصرنا", "explanation": "الفترة الحالية من التاريخ." }
+          { "word": "Klimawandel", "ar": "تغير المناخ", "explanation": "ارتفاع حرارة الأرض بسبب النشاط البشري" },
+          { "word": "größten Herausforderungen", "ar": "أكبر التحديات", "explanation": "أصعب المشاكل التي نواجهها" },
+          { "word": "unserer Zeit", "ar": "عصرنا", "explanation": "الفترة الحالية من التاريخ" }
         ]
       },
       {
         "id": "b2-kw2",
-        "de": "Die Erderwärmung führt zu extremen Wetterereignissen.",
-        "ar": "الاحتباس الحراري يؤدي إلى ظواهر جوية متطرفة.",
+        "de": "Die Erderwärmung führt zu extremen Wetterereignissen",
+        "ar": "الاحتباس الحراري يؤدي إلى ظواهر جوية متطرفة",
         "vocab": [
-          { "word": "Erderwärmung", "ar": "الاحتباس الحراري", "explanation": "زيادة حرارة الأرض بشكل مستمر." },
-          { "word": "führt zu", "ar": "يؤدي إلى", "explanation": "يسبب." },
-          { "word": "extremen Wetterereignissen", "ar": "ظواهر جوية متطرفة", "explanation": "فيضانات، جفاف، عواصف شديدة." }
+          { "word": "Erderwärmung", "ar": "الاحتباس الحراري", "explanation": "زيادة حرارة الأرض بشكل مستمر" },
+          { "word": "führt zu", "ar": "يؤدي إلى", "explanation": "يسبب" },
+          { "word": "extremen Wetterereignissen", "ar": "ظواهر جوية متطرفة", "explanation": "فيضانات، جفاف، عواصف شديدة" }
         ]
       },
       {
         "id": "b2-kw3",
-        "de": "Erneuerbare Energien sind die Hoffnung für eine saubere Zukunft.",
-        "ar": "الطاقات المتجددة هي الأمل لمستقبل نظيف.",
+        "de": "Erneuerbare Energien sind die Hoffnung für eine saubere Zukunft",
+        "ar": "الطاقات المتجددة هي الأمل لمستقبل نظيف",
         "vocab": [
-          { "word": "Erneuerbare Energien", "ar": "الطاقات المتجددة", "explanation": "طاقة الشمس والرياح والماء." },
-          { "word": "Hoffnung", "ar": "الأمل", "explanation": "ما نتمناه للمستقبل." },
-          { "word": "saubere Zukunft", "ar": "مستقبل نظيف", "explanation": "بيئة غير ملوثة." }
+          { "word": "Erneuerbare Energien", "ar": "الطاقات المتجددة", "explanation": "طاقة الشمس والرياح والماء" },
+          { "word": "Hoffnung", "ar": "الأمل", "explanation": "ما نتمناه للمستقبل" },
+          { "word": "saubere Zukunft", "ar": "مستقبل نظيف", "explanation": "بيئة غير ملوثة" }
         ]
       },
       {
         "id": "b2-kw4",
-        "de": "Jeder Einzelne kann durch bewussten Konsum etwas verändern.",
-        "ar": "كل فرد يمكنه تغيير شيء ما من خلال الاستهلاك الواعي.",
+        "de": "Jeder Einzelne kann durch bewussten Konsum etwas verändern",
+        "ar": "كل فرد يمكنه تغيير شيء ما من خلال الاستهلاك الواعي",
         "vocab": [
-          { "word": "jeder Einzelne", "ar": "كل فرد", "explanation": "أي شخص بمفرده." },
-          { "word": "bewussten Konsum", "ar": "الاستهلاك الواعي", "explanation": "شراء ما نحتاجه فقط وبشكل مسؤول." },
-          { "word": "verändern", "ar": "تغيير", "explanation": "جعل الأمور مختلفة للأفضل." }
+          { "word": "jeder Einzelne", "ar": "كل فرد", "explanation": "أي شخص بمفرده" },
+          { "word": "bewussten Konsum", "ar": "الاستهلاك الواعي", "explanation": "شراء ما نحتاجه فقط وبشكل مسؤول" },
+          { "word": "verändern", "ar": "تغيير", "explanation": "جعل الأمور مختلفة للأفضل" }
         ]
       },
       {
         "id": "b2-kw5",
-        "de": "Politik und Wirtschaft müssen gemeinsam nachhaltige Lösungen finden.",
-        "ar": "يجب على السياسة والاقتصاد إيجاد حلول مستدامة معاً.",
+        "de": "Politik und Wirtschaft müssen gemeinsam nachhaltige Lösungen finden",
+        "ar": "يجب على السياسة والاقتصاد إيجاد حلول مستدامة معاً",
         "vocab": [
-          { "word": "Politik", "ar": "السياسة", "explanation": "قرارات الحكومات." },
-          { "word": "Wirtschaft", "ar": "الاقتصاد", "explanation": "نظام الإنتاج والتجارة." },
-          { "word": "nachhaltige Lösungen", "ar": "حلول مستدامة", "explanation": "حلول تفيد الحاضر والمستقبل." }
+          { "word": "Politik", "ar": "السياسة", "explanation": "قرارات الحكومات" },
+          { "word": "Wirtschaft", "ar": "الاقتصاد", "explanation": "نظام الإنتاج والتجارة" },
+          { "word": "nachhaltige Lösungen", "ar": "حلول مستدامة", "explanation": "حلول تفيد الحاضر والمستقبل" }
         ]
       },
       {
         "id": "b2-kw6",
-        "de": "Bildung ist der Schlüssel, um das Bewusstsein für Umweltfragen zu schärfen.",
-        "ar": "التعليم هو المفتاح لزيادة الوعي بقضايا البيئة.",
+        "de": "Bildung ist der Schlüssel, um das Bewusstsein für Umweltfragen zu schärfen",
+        "ar": "التعليم هو المفتاح لزيادة الوعي بقضايا البيئة",
         "vocab": [
-          { "word": "Bildung", "ar": "التعليم", "explanation": "نشر المعرفة والتوعية." },
-          { "word": "Schlüssel", "ar": "المفتاح", "explanation": "الطريقة الأهم لتحقيق شيء." },
-          { "word": "Bewusstsein schärfen", "ar": "زيادة الوعي", "explanation": "جعل الناس أكثر فهماً للموضوع." },
-          { "word": "Umweltfragen", "ar": "قضايا البيئة", "explanation": "مواضيع متعلقة بحماية الطبيعة." }
+          { "word": "Bildung", "ar": "التعليم", "explanation": "نشر المعرفة والتوعية" },
+          { "word": "Schlüssel", "ar": "المفتاح", "explanation": "الطريقة الأهم لتحقيق شيء" },
+          { "word": "Bewusstsein schärfen", "ar": "زيادة الوعي", "explanation": "جعل الناس أكثر فهماً للموضوع" },
+          { "word": "Umweltfragen", "ar": "قضايا البيئة", "explanation": "مواضيع متعلقة بحماية الطبيعة" }
         ]
       }
     ]
@@ -819,64 +819,64 @@
     "lines": [
       {
         "id": "b2-dr1",
-        "de": "Die Digitalisierung hat unser Leben in den letzten Jahren stark verändert.",
-        "ar": "الرقمنة غيرت حياتنا بشكل كبير في السنوات الأخيرة.",
+        "de": "Die Digitalisierung hat unser Leben in den letzten Jahren stark verändert",
+        "ar": "الرقمنة غيرت حياتنا بشكل كبير في السنوات الأخيرة",
         "vocab": [
-          { "word": "Digitalisierung", "ar": "الرقمنة", "explanation": "تحويل كل شيء إلى التقنيات الرقمية." },
-          { "word": "stark verändert", "ar": "غيرت بشكل كبير", "explanation": "أحداث تغييرات جوهرية." },
-          { "word": "letzten Jahren", "ar": "السنوات الأخيرة", "explanation": "الفترة القريبة الماضية." }
+          { "word": "Digitalisierung", "ar": "الرقمنة", "explanation": "تحويل كل شيء إلى التقنيات الرقمية" },
+          { "word": "stark verändert", "ar": "غيرت بشكل كبير", "explanation": "أحداث تغييرات جوهرية" },
+          { "word": "letzten Jahren", "ar": "السنوات الأخيرة", "explanation": "الفترة القريبة الماضية" }
         ]
       },
       {
         "id": "b2-dr2",
-        "de": "Künstliche Intelligenz wird viele Arbeitsplätze automatisieren.",
-        "ar": "الذكاء الاصطناعي سيؤتمت العديد من الوظائف.",
+        "de": "Künstliche Intelligenz wird viele Arbeitsplätze automatisieren",
+        "ar": "الذكاء الاصطناعي سيؤتمت العديد من الوظائف",
         "vocab": [
-          { "word": "Künstliche Intelligenz", "ar": "الذكاء الاصطناعي", "explanation": "برامج تحاكي العقل البشري." },
-          { "word": "Arbeitsplätze", "ar": "الوظائف", "explanation": "أماكن العمل." },
-          { "word": "automatisieren", "ar": "سيؤتمت", "explanation": "ستؤدى بواسطة الآلات بدلاً من البشر." }
+          { "word": "Künstliche Intelligenz", "ar": "الذكاء الاصطناعي", "explanation": "برامج تحاكي العقل البشري" },
+          { "word": "Arbeitsplätze", "ar": "الوظائف", "explanation": "أماكن العمل" },
+          { "word": "automatisieren", "ar": "سيؤتمت", "explanation": "ستؤدى بواسطة الآلات بدلاً من البشر" }
         ]
       },
       {
         "id": "b2-dr3",
-        "de": "Soziale Medien beeinflussen unsere Meinungen und Entscheidungen.",
-        "ar": "وسائل التواصل الاجتماعي تؤثر على آرائنا وقراراتنا.",
+        "de": "Soziale Medien beeinflussen unsere Meinungen und Entscheidungen",
+        "ar": "وسائل التواصل الاجتماعي تؤثر على آرائنا وقراراتنا",
         "vocab": [
-          { "word": "Soziale Medien", "ar": "وسائل التواصل الاجتماعي", "explanation": "فيسبوك، إنستغرام، تويتر." },
-          { "word": "beeinflussen", "ar": "تؤثر على", "explanation": "تغير الطريقة التي نفكر بها." },
-          { "word": "Meinungen", "ar": "آرائنا", "explanation": "ما نعتقده." },
-          { "word": "Entscheidungen", "ar": "قراراتنا", "explanation": "ما نختاره." }
+          { "word": "Soziale Medien", "ar": "وسائل التواصل الاجتماعي", "explanation": "فيسبوك، إنستغرام، تويتر" },
+          { "word": "beeinflussen", "ar": "تؤثر على", "explanation": "تغير الطريقة التي نفكر بها" },
+          { "word": "Meinungen", "ar": "آرائنا", "explanation": "ما نعتقده" },
+          { "word": "Entscheidungen", "ar": "قراراتنا", "explanation": "ما نختاره" }
         ]
       },
       {
         "id": "b2-dr4",
-        "de": "Datenschutz wird zu einem immer wichtigeren Thema.",
-        "ar": "حماية البيانات تصبح موضوعاً أكثر أهمية دائماً.",
+        "de": "Datenschutz wird zu einem immer wichtigeren Thema",
+        "ar": "حماية البيانات تصبح موضوعاً أكثر أهمية دائماً",
         "vocab": [
-          { "word": "Datenschutz", "ar": "حماية البيانات", "explanation": "حماية المعلومات الشخصية من السرقة." },
-          { "word": "immer wichtigeren", "ar": "أكثر أهمية دائماً", "explanation": "يحتاج إلى اهتمام متزايد." },
-          { "word": "Thema", "ar": "موضوعاً", "explanation": "قضية يتم مناقشتها." }
+          { "word": "Datenschutz", "ar": "حماية البيانات", "explanation": "حماية المعلومات الشخصية من السرقة" },
+          { "word": "immer wichtigeren", "ar": "أكثر أهمية دائماً", "explanation": "يحتاج إلى اهتمام متزايد" },
+          { "word": "Thema", "ar": "موضوعاً", "explanation": "قضية يتم مناقشتها" }
         ]
       },
       {
         "id": "b2-dr5",
-        "de": "Online-Lernen ermöglicht flexibles und individuelles Studieren.",
-        "ar": "التعلم عبر الإنترنت يمكن من الدراسة المرنة والفردية.",
+        "de": "Online-Lernen ermöglicht flexibles und individuelles Studieren",
+        "ar": "التعلم عبر الإنترنت يمكن من الدراسة المرنة والفردية",
         "vocab": [
-          { "word": "Online-Lernen", "ar": "التعلم عبر الإنترنت", "explanation": "الدروس والمحاضرات على الإنترنت." },
-          { "word": "ermöglicht", "ar": "يمكن من", "explanation": "يجعل ممكناً." },
-          { "word": "flexibles", "ar": "مرنة", "explanation": "قابلة للتكيف مع الظروف." },
-          { "word": "individuelles Studieren", "ar": "دراسة فردية", "explanation": "حسب سرعة وقدرة كل شخص." }
+          { "word": "Online-Lernen", "ar": "التعلم عبر الإنترنت", "explanation": "الدروس والمحاضرات على الإنترنت" },
+          { "word": "ermöglicht", "ar": "يمكن من", "explanation": "يجعل ممكناً" },
+          { "word": "flexibles", "ar": "مرنة", "explanation": "قابلة للتكيف مع الظروف" },
+          { "word": "individuelles Studieren", "ar": "دراسة فردية", "explanation": "حسب سرعة وقدرة كل شخص" }
         ]
       },
       {
         "id": "b2-dr6",
-        "de": "Die digitale Kluft zwischen Arm und Reich muss überwunden werden.",
-        "ar": "يجب تجاوز الفجوة الرقمية بين الأغنياء والفقراء.",
+        "de": "Die digitale Kluft zwischen Arm und Reich muss überwunden werden",
+        "ar": "يجب تجاوز الفجوة الرقمية بين الأغنياء والفقراء",
         "vocab": [
-          { "word": "digitale Kluft", "ar": "الفجوة الرقمية", "explanation": "الفرق في الوصول للتكنولوجيا." },
-          { "word": "Arm und Reich", "ar": "الأغنياء والفقراء", "explanation": "الطبقات الاجتماعية المختلفة." },
-          { "word": "überwunden werden", "ar": "يتم تجاوزها", "explanation": "إيجاد حلول لهذه المشكلة." }
+          { "word": "digitale Kluft", "ar": "الفجوة الرقمية", "explanation": "الفرق في الوصول للتكنولوجيا" },
+          { "word": "Arm und Reich", "ar": "الأغنياء والفقراء", "explanation": "الطبقات الاجتماعية المختلفة" },
+          { "word": "überwunden werden", "ar": "يتم تجاوزها", "explanation": "إيجاد حلول لهذه المشكلة" }
         ]
       }
     ]
@@ -890,65 +890,65 @@
     "lines": [
       {
         "id": "b2-gl1",
-        "de": "Die Globalisierung verbindet Märkte und Kulturen weltweit.",
-        "ar": "العولمة تربط الأسواق والثقافات في جميع أنحاء العالم.",
+        "de": "Die Globalisierung verbindet Märkte und Kulturen weltweit",
+        "ar": "العولمة تربط الأسواق والثقافات في جميع أنحاء العالم",
         "vocab": [
-          { "word": "Globalisierung", "ar": "العولمة", "explanation": "تفاعل واندماج اقتصادات وثقافات العالم." },
-          { "word": "verbindet", "ar": "تربط", "explanation": "تجمع بين أشياء مختلفة." },
-          { "word": "Märkte", "ar": "الأسواق", "explanation": "أماكن التجارة." },
-          { "word": "Kulturen", "ar": "الثقافات", "explanation": "عادات وتقاليد الشعوب." }
+          { "word": "Globalisierung", "ar": "العولمة", "explanation": "تفاعل واندماج اقتصادات وثقافات العالم" },
+          { "word": "verbindet", "ar": "تربط", "explanation": "تجمع بين أشياء مختلفة" },
+          { "word": "Märkte", "ar": "الأسواق", "explanation": "أماكن التجارة" },
+          { "word": "Kulturen", "ar": "الثقافات", "explanation": "عادات وتقاليد الشعوب" }
         ]
       },
       {
         "id": "b2-gl2",
-        "de": "Internationaler Handel schafft Arbeitsplätze, aber auch Abhängigkeiten.",
-        "ar": "التجارة الدولية تخلق فرص عمل، ولكن أيضاً تبعيات.",
+        "de": "Internationaler Handel schafft Arbeitsplätze, aber auch Abhängigkeiten",
+        "ar": "التجارة الدولية تخلق فرص عمل، ولكن أيضاً تبعيات",
         "vocab": [
-          { "word": "Internationaler Handel", "ar": "التجارة الدولية", "explanation": "تبادل السلع بين الدول." },
-          { "word": "schafft", "ar": "تخلق", "explanation": "توجد." },
-          { "word": "Arbeitsplätze", "ar": "فرص عمل", "explanation": "وظائف." },
-          { "word": "Abhängigkeiten", "ar": "تبعيات", "explanation": "حاجة دولة لدولة أخرى." }
+          { "word": "Internationaler Handel", "ar": "التجارة الدولية", "explanation": "تبادل السلع بين الدول" },
+          { "word": "schafft", "ar": "تخلق", "explanation": "توجد" },
+          { "word": "Arbeitsplätze", "ar": "فرص عمل", "explanation": "وظائف" },
+          { "word": "Abhängigkeiten", "ar": "تبعيات", "explanation": "حاجة دولة لدولة أخرى" }
         ]
       },
       {
         "id": "b2-gl3",
-        "de": "Kultureller Austausch bereichert unsere Gesellschaft.",
-        "ar": "التبادل الثقافي يثري مجتمعنا.",
+        "de": "Kultureller Austausch bereichert unsere Gesellschaft",
+        "ar": "التبادل الثقافي يثري مجتمعنا",
         "vocab": [
-          { "word": "Kultureller Austausch", "ar": "التبادل الثقافي", "explanation": "تشارك العادات والتقاليد بين الثقافات." },
-          { "word": "bereichert", "ar": "يثري", "explanation": "يجعلها أغنى وأكثر تنوعاً." },
-          { "word": "Gesellschaft", "ar": "مجتمعنا", "explanation": "الناس الذين نعيش معهم." }
+          { "word": "Kultureller Austausch", "ar": "التبادل الثقافي", "explanation": "تشارك العادات والتقاليد بين الثقافات" },
+          { "word": "bereichert", "ar": "يثري", "explanation": "يجعلها أغنى وأكثر تنوعاً" },
+          { "word": "Gesellschaft", "ar": "مجتمعنا", "explanation": "الناس الذين نعيش معهم" }
         ]
       },
       {
         "id": "b2-gl4",
-        "de": "Multinationale Konzerne haben oft mehr Macht als Regierungen.",
-        "ar": "الشركات متعددة الجنسيات غالباً ما تملك سلطة أكبر من الحكومات.",
+        "de": "Multinationale Konzerne haben oft mehr Macht als Regierungen",
+        "ar": "الشركات متعددة الجنسيات غالباً ما تملك سلطة أكبر من الحكومات",
         "vocab": [
-          { "word": "Multinationale Konzerne", "ar": "شركات متعددة الجنسيات", "explanation": "شركات تعمل في عدة دول." },
-          { "word": "Macht", "ar": "سلطة", "explanation": "قدرة على التأثير واتخاذ القرارات." },
-          { "word": "Regierungen", "ar": "الحكومات", "explanation": "السلطات الحاكمة في الدول." }
+          { "word": "Multinationale Konzerne", "ar": "شركات متعددة الجنسيات", "explanation": "شركات تعمل في عدة دول" },
+          { "word": "Macht", "ar": "سلطة", "explanation": "قدرة على التأثير واتخاذ القرارات" },
+          { "word": "Regierungen", "ar": "الحكومات", "explanation": "السلطات الحاكمة في الدول" }
         ]
       },
       {
         "id": "b2-gl5",
-        "de": "Fairer Handel sollte die Lebensbedingungen in Entwicklungsländern verbessern.",
-        "ar": "التجارة العادلة يجب أن تحسن ظروف المعيشة في البلدان النامية.",
+        "de": "Fairer Handel sollte die Lebensbedingungen in Entwicklungsländern verbessern",
+        "ar": "التجارة العادلة يجب أن تحسن ظروف المعيشة في البلدان النامية",
         "vocab": [
-          { "word": "Fairer Handel", "ar": "التجارة العادلة", "explanation": "تجارة تحترم حقوق العمال والبيئة." },
-          { "word": "Lebensbedingungen", "ar": "ظروف المعيشة", "explanation": "مستوى الحياة والراحة." },
-          { "word": "Entwicklungsländern", "ar": "البلدان النامية", "explanation": "دول ذات اقتصاد أقل تقدماً." },
-          { "word": "verbessern", "ar": "تحسن", "explanation": "تجعل أفضل." }
+          { "word": "Fairer Handel", "ar": "التجارة العادلة", "explanation": "تجارة تحترم حقوق العمال والبيئة" },
+          { "word": "Lebensbedingungen", "ar": "ظروف المعيشة", "explanation": "مستوى الحياة والراحة" },
+          { "word": "Entwicklungsländern", "ar": "البلدان النامية", "explanation": "دول ذات اقتصاد أقل تقدماً" },
+          { "word": "verbessern", "ar": "تحسن", "explanation": "تجعل أفضل" }
         ]
       },
       {
         "id": "b2-gl6",
-        "de": "Migration ist ein weiteres Phänomen der globalisierten Welt.",
-        "ar": "الهجرة هي ظاهرة أخرى من ظواهر العالم المعولم.",
+        "de": "Migration ist ein weiteres Phänomen der globalisierten Welt",
+        "ar": "الهجرة هي ظاهرة أخرى من ظواهر العالم المعولم",
         "vocab": [
-          { "word": "Migration", "ar": "الهجرة", "explanation": "انتقال الناس بين الدول للعيش والعمل." },
-          { "word": "weiteres Phänomen", "ar": "ظاهرة أخرى", "explanation": "حدث آخر شائع." },
-          { "word": "globalisierten Welt", "ar": "العالم المعولم", "explanation": "العالم المترابط اقتصادياً وثقافياً." }
+          { "word": "Migration", "ar": "الهجرة", "explanation": "انتقال الناس بين الدول للعيش والعمل" },
+          { "word": "weiteres Phänomen", "ar": "ظاهرة أخرى", "explanation": "حدث آخر شائع" },
+          { "word": "globalisierten Welt", "ar": "العالم المعولم", "explanation": "العالم المترابط اقتصادياً وثقافياً" }
         ]
       }
     ]
@@ -962,65 +962,65 @@
     "lines": [
       {
         "id": "b2-gs1",
-        "de": "Ein gutes Gesundheitssystem ist Grundrecht für alle Bürger.",
-        "ar": "النظام الصحي الجيد هو حق أساسي لجميع المواطنين.",
+        "de": "Ein gutes Gesundheitssystem ist Grundrecht für alle Bürger",
+        "ar": "النظام الصحي الجيد هو حق أساسي لجميع المواطنين",
         "vocab": [
-          { "word": "Gesundheitssystem", "ar": "النظام الصحي", "explanation": "المستشفيات والخدمات الصحية في بلد ما." },
-          { "word": "Grundrecht", "ar": "حق أساسي", "explanation": "شيء يستحقه كل إنسان." },
-          { "word": "Bürger", "ar": "المواطنين", "explanation": "سكان الدولة." }
+          { "word": "Gesundheitssystem", "ar": "النظام الصحي", "explanation": "المستشفيات والخدمات الصحية في بلد ما" },
+          { "word": "Grundrecht", "ar": "حق أساسي", "explanation": "شيء يستحقه كل إنسان" },
+          { "word": "Bürger", "ar": "المواطنين", "explanation": "سكان الدولة" }
         ]
       },
       {
         "id": "b2-gs2",
-        "de": "Prävention ist besser und billiger als Behandlung von Krankheiten.",
-        "ar": "الوقاية أفضل وأرخص من علاج الأمراض.",
+        "de": "Prävention ist besser und billiger als Behandlung von Krankheiten",
+        "ar": "الوقاية أفضل وأرخص من علاج الأمراض",
         "vocab": [
-          { "word": "Prävention", "ar": "الوقاية", "explanation": "منع المرض قبل حدوثه." },
-          { "word": "besser", "ar": "أفضل", "explanation": "أكثر فائدة." },
-          { "word": "billiger", "ar": "أرخص", "explanation": "أقل تكلفة." },
-          { "word": "Behandlung", "ar": "علاج", "explanation": "تقديم الرعاية بعد المرض." }
+          { "word": "Prävention", "ar": "الوقاية", "explanation": "منع المرض قبل حدوثه" },
+          { "word": "besser", "ar": "أفضل", "explanation": "أكثر فائدة" },
+          { "word": "billiger", "ar": "أرخص", "explanation": "أقل تكلفة" },
+          { "word": "Behandlung", "ar": "علاج", "explanation": "تقديم الرعاية بعد المرض" }
         ]
       },
       {
         "id": "b2-gs3",
-        "de": "Der demografische Wandel belastet die Krankenkassen zunehmend.",
-        "ar": "التغير الديموغرافي يثقل كاهل صناديق التأمين الصحي بشكل متزايد.",
+        "de": "Der demografische Wandel belastet die Krankenkassen zunehmend",
+        "ar": "التغير الديموغرافي يثقل كاهل صناديق التأمين الصحي بشكل متزايد",
         "vocab": [
-          { "word": "demografische Wandel", "ar": "التغير الديموغرافي", "explanation": "شيخوخة السكان وزيادة كبار السن." },
-          { "word": "belastet", "ar": "يثقل كاهل", "explanation": "يضع ضغطاً مالياً كبيراً." },
-          { "word": "Krankenkassen", "ar": "صناديق التأمين الصحي", "explanation": "جهات تدفع تكاليف العلاج." },
-          { "word": "zunehmend", "ar": "بشكل متزايد", "explanation": "أكثر فأكثر مع الوقت." }
+          { "word": "demografische Wandel", "ar": "التغير الديموغرافي", "explanation": "شيخوخة السكان وزيادة كبار السن" },
+          { "word": "belastet", "ar": "يثقل كاهل", "explanation": "يضع ضغطاً مالياً كبيراً" },
+          { "word": "Krankenkassen", "ar": "صناديق التأمين الصحي", "explanation": "جهات تدفع تكاليف العلاج" },
+          { "word": "zunehmend", "ar": "بشكل متزايد", "explanation": "أكثر فأكثر مع الوقت" }
         ]
       },
       {
         "id": "b2-gs4",
-        "de": "Psychische Erkrankungen werden endlich ernster genommen.",
-        "ar": "الأمراض النفسية تؤخذ أخيراً على محمل الجد.",
+        "de": "Psychische Erkrankungen werden endlich ernster genommen",
+        "ar": "الأمراض النفسية تؤخذ أخيراً على محمل الجد",
         "vocab": [
-          { "word": "Psychische Erkrankungen", "ar": "الأمراض النفسية", "explanation": "مشاكل الصحة العقلية كالاكتئاب." },
-          { "word": "endlich", "ar": "أخيراً", "explanation": "بعد انتظار طويل." },
-          { "word": "ernster genommen", "ar": "تؤخذ على محمل الجد", "explanation": "يحصلون على الاهتمام والعلاج اللازمين." }
+          { "word": "Psychische Erkrankungen", "ar": "الأمراض النفسية", "explanation": "مشاكل الصحة العقلية كالاكتئاب" },
+          { "word": "endlich", "ar": "أخيراً", "explanation": "بعد انتظار طويل" },
+          { "word": "ernster genommen", "ar": "تؤخذ على محمل الجد", "explanation": "يحصلون على الاهتمام والعلاج اللازمين" }
         ]
       },
       {
         "id": "b2-gs5",
-        "de": "Fachkräftemangel im Pflegebereich ist eine grosse Herausforderung.",
-        "ar": "نقص العمالة الماهرة في مجال الرعاية هو تحدٍ كبير.",
+        "de": "Fachkräftemangel im Pflegebereich ist eine grosse Herausforderung",
+        "ar": "نقص العمالة الماهرة في مجال الرعاية هو تحدٍ كبير",
         "vocab": [
-          { "word": "Fachkräftemangel", "ar": "نقص العمالة الماهرة", "explanation": "عدد غير كافٍ من الممرضين والأطباء." },
-          { "word": "Pflegebereich", "ar": "مجال الرعاية", "explanation": "رعاية كبار السن والمرضى." },
-          { "word": "grosse Herausforderung", "ar": "تحدٍ كبير", "explanation": "مشكلة صعبة تحتاج حل." }
+          { "word": "Fachkräftemangel", "ar": "نقص العمالة الماهرة", "explanation": "عدد غير كافٍ من الممرضين والأطباء" },
+          { "word": "Pflegebereich", "ar": "مجال الرعاية", "explanation": "رعاية كبار السن والمرضى" },
+          { "word": "grosse Herausforderung", "ar": "تحدٍ كبير", "explanation": "مشكلة صعبة تحتاج حل" }
         ]
       },
       {
         "id": "b2-gs6",
-        "de": "Telemedizin wird die Zukunft der Gesundheitsversorgung verändern.",
-        "ar": "الطب عن بعد سيغير مستقبل الرعاية الصحية.",
+        "de": "Telemedizin wird die Zukunft der Gesundheitsversorgung verändern",
+        "ar": "الطب عن بعد سيغير مستقبل الرعاية الصحية",
         "vocab": [
-          { "word": "Telemedizin", "ar": "الطب عن بعد", "explanation": "استشارات طبية عبر الإنترنت." },
-          { "word": "Zukunft", "ar": "مستقبل", "explanation": "السنوات القادمة." },
-          { "word": "Gesundheitsversorgung", "ar": "الرعاية الصحية", "explanation": "تقديم الخدمات الطبية للمرضى." },
-          { "word": "verändern", "ar": "سيغير", "explanation": "سيجعل مختلفاً." }
+          { "word": "Telemedizin", "ar": "الطب عن بعد", "explanation": "استشارات طبية عبر الإنترنت" },
+          { "word": "Zukunft", "ar": "مستقبل", "explanation": "السنوات القادمة" },
+          { "word": "Gesundheitsversorgung", "ar": "الرعاية الصحية", "explanation": "تقديم الخدمات الطبية للمرضى" },
+          { "word": "verändern", "ar": "سيغير", "explanation": "سيجعل مختلفاً" }
         ]
       }
     ]

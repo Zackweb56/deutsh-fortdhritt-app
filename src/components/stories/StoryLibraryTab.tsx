@@ -1,5 +1,5 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { BookOpen, CircleCheckBig, Keyboard, Lock, Timer, Volume2 } from 'lucide-react';
+import React, { useEffect, useMemo, useRef, useState, useCallback } from 'react';
+import { BookOpen, CircleCheckBig, GraduationCap, Keyboard, Lock, Timer, Volume2 } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -134,6 +134,39 @@ const vocabTriggerButton = (vocabItem: StoryVocab, label: string, key: string) =
 
 const countWords = (text: string) => text.trim().split(/\s+/).filter(Boolean).length;
 
+// Helper to get audio URL with fallback
+const getAudioUrl = (src: string, useFallback = false) => {
+  if (useFallback) {
+    return `/src/data/stories/${src}`;
+  }
+  return `/${src}`;
+};
+
+// Preload audio with priority
+const preloadAudioFast = (url: string): Promise<HTMLAudioElement> => {
+  return new Promise((resolve, reject) => {
+    const audio = new Audio();
+    audio.preload = 'auto';
+    
+    const timeout = setTimeout(() => {
+      reject(new Error(`Timeout loading audio: ${url}`));
+    }, 3000);
+    
+    audio.addEventListener('canplaythrough', () => {
+      clearTimeout(timeout);
+      resolve(audio);
+    }, { once: true });
+    
+    audio.addEventListener('error', () => {
+      clearTimeout(timeout);
+      reject(new Error(`Failed to load audio: ${url}`));
+    }, { once: true });
+    
+    audio.src = url;
+    audio.load();
+  });
+};
+
 const StoryLibraryTab = () => {
   const [view, setView] = useState<StoryView>('library');
   const [selectedLevel, setSelectedLevel] = useState<'all' | StoryLevel>('A1');
@@ -147,6 +180,8 @@ const StoryLibraryTab = () => {
   const [lineCompleted, setLineCompleted] = useState(false);
   const typingInputRef = useRef<HTMLInputElement>(null);
   const activeAudioRef = useRef<HTMLAudioElement | null>(null);
+  const audioCacheRef = useRef<Map<string, HTMLAudioElement>>(new Map());
+  const preloadQueueRef = useRef<Set<string>>(new Set());
   const containerRef = useRef<HTMLDivElement>(null);
   const [cursorStyle, setCursorStyle] = useState({ left: 0, top: 0, width: 0, height: 0 });
 
@@ -158,6 +193,15 @@ const StoryLibraryTab = () => {
     }
     return storiesData.filter((s) => s.level === selectedLevel);
   }, [selectedLevel]);
+  
+  const levelCounts = useMemo(
+    () =>
+      levelOrder.reduce<Record<StoryLevel, number>>((acc, level) => {
+        acc[level] = storiesData.filter((story) => story.level === level).length;
+        return acc;
+      }, { A1: 0, A2: 0, B1: 0, B2: 0 }),
+    []
+  );
 
   const selectedStory = useMemo(
     () => storiesData.find((story) => story.id === selectedStoryId) || null,
@@ -168,33 +212,114 @@ const StoryLibraryTab = () => {
 
   const isStoryLocked = (story: StoryItem) => limited && !story.isFree;
 
-  const playLineVoice = (line: StoryLine | null) => {
+  // Preload audio with caching and fallback
+  const preloadAudioWithFallback = useCallback(async (src: string): Promise<HTMLAudioElement> => {
+    const primaryUrl = getAudioUrl(src, false);
+    const fallbackUrl = getAudioUrl(src, true);
+    
+    // Check cache first
+    if (audioCacheRef.current.has(primaryUrl)) {
+      return audioCacheRef.current.get(primaryUrl)!;
+    }
+    
+    // Check if already in preload queue
+    if (preloadQueueRef.current.has(primaryUrl)) {
+      return new Promise((resolve) => {
+        const checkInterval = setInterval(() => {
+          const cached = audioCacheRef.current.get(primaryUrl);
+          if (cached) {
+            clearInterval(checkInterval);
+            resolve(cached);
+          }
+        }, 50);
+      });
+    }
+    
+    preloadQueueRef.current.add(primaryUrl);
+    
+    try {
+      // Try primary URL first
+      const audio = await preloadAudioFast(primaryUrl);
+      audioCacheRef.current.set(primaryUrl, audio);
+      preloadQueueRef.current.delete(primaryUrl);
+      return audio;
+    } catch (error) {
+      console.warn(`Primary audio failed for ${src}, trying fallback`);
+      try {
+        // Try fallback URL
+        const fallbackAudio = await preloadAudioFast(fallbackUrl);
+        audioCacheRef.current.set(primaryUrl, fallbackAudio);
+        preloadQueueRef.current.delete(primaryUrl);
+        return fallbackAudio;
+      } catch (fallbackError) {
+        console.error(`Both audio sources failed for ${src}`);
+        preloadQueueRef.current.delete(primaryUrl);
+        throw fallbackError;
+      }
+    }
+  }, []);
+
+  // Play line voice instantly from cache
+  const playLineVoice = useCallback(async (line: StoryLine | null) => {
     if (!line?.voiceSrc) return;
 
+    // Stop current audio
     if (activeAudioRef.current) {
       activeAudioRef.current.pause();
+      activeAudioRef.current.currentTime = 0;
       activeAudioRef.current = null;
     }
 
-    // Preferred location (public): /voices/<LEVEL>/<LEVEL>_sX_pYY.mp3
-    // Temporary fallback for current files under src/data/stories/voices/...
-    const primary = `/${line.voiceSrc}`;
-    const fallback = `/src/data/stories/${line.voiceSrc}`;
+    try {
+      const audio = await preloadAudioWithFallback(line.voiceSrc);
+      activeAudioRef.current = audio;
+      audio.currentTime = 0;
+      await audio.play();
+    } catch (error) {
+      console.error('Failed to play line voice:', error);
+    }
+  }, [preloadAudioWithFallback]);
 
-    const audio = new Audio(primary);
-    activeAudioRef.current = audio;
-    audio.onerror = () => {
-      if (audio.src.endsWith(primary)) {
-        audio.src = fallback;
-        void audio.play().catch(() => {});
+  // Play completion sound instantly
+  const playPhraseCompleteSfx = useCallback(async () => {
+    const sfxSrc = 'voices/story_phrase_complete.mp3';
+    try {
+      const sfx = await preloadAudioWithFallback(sfxSrc);
+      sfx.currentTime = 0;
+      await sfx.play();
+    } catch (error) {
+      console.error('Failed to play completion sound:', error);
+    }
+  }, [preloadAudioWithFallback]);
+
+  // Preload all story audio in parallel
+  const preloadStoryAudio = useCallback(async (story: StoryItem) => {
+    const preloadPromises: Promise<any>[] = [];
+    
+    // Preload all line voices
+    for (const line of story.lines) {
+      if (line.voiceSrc) {
+        preloadPromises.push(
+          preloadAudioWithFallback(line.voiceSrc).catch(error => 
+            console.warn(`Failed to preload ${line.voiceSrc}:`, error)
+          )
+        );
       }
-    };
+    }
+    
+    // Preload completion sound
+    preloadPromises.push(
+      preloadAudioWithFallback('voices/story_phrase_complete.mp3').catch(error =>
+        console.warn('Failed to preload completion sound:', error)
+      )
+    );
+    
+    await Promise.allSettled(preloadPromises);
+  }, [preloadAudioWithFallback]);
 
-    void audio.play().catch(() => {});
-  };
-
-  const startStory = (story: StoryItem) => {
+  const startStory = useCallback((story: StoryItem) => {
     if (isStoryLocked(story)) return;
+    
     setSelectedStoryId(story.id);
     setView('reader');
     setLineIndex(0);
@@ -204,7 +329,10 @@ const StoryLibraryTab = () => {
     setLastWrongKey(null);
     setErrorCount(0);
     setLineCompleted(false);
-  };
+    
+    // Start preloading immediately
+    preloadStoryAudio(story);
+  }, [isStoryLocked, preloadStoryAudio]);
 
   useEffect(() => {
     if (view === 'reader') {
@@ -213,13 +341,35 @@ const StoryLibraryTab = () => {
     }
   }, [view, lineIndex]);
 
+  // Play voice for current line
   useEffect(() => {
     if (view !== 'reader' || !currentLine) return;
-    playLineVoice(currentLine);
+    
+    const timer = setTimeout(() => {
+      playLineVoice(currentLine);
+    }, 50);
+    
     return () => {
-      if (activeAudioRef.current) activeAudioRef.current.pause();
+      clearTimeout(timer);
+      if (activeAudioRef.current) {
+        activeAudioRef.current.pause();
+        activeAudioRef.current = null;
+      }
     };
-  }, [view, lineIndex, currentLine?.id]);
+  }, [view, lineIndex, currentLine, playLineVoice]);
+
+  // Preload next line proactively
+  useEffect(() => {
+    if (!selectedStory || view !== 'reader') return;
+    
+    const nextLineIndex = lineIndex + 1;
+    if (nextLineIndex < selectedStory.lines.length) {
+      const nextLine = selectedStory.lines[nextLineIndex];
+      if (nextLine?.voiceSrc) {
+        preloadAudioWithFallback(nextLine.voiceSrc).catch(console.warn);
+      }
+    }
+  }, [lineIndex, selectedStory, view, preloadAudioWithFallback]);
 
   // Update cursor position based on typed characters - handles line wrapping
   useEffect(() => {
@@ -323,6 +473,20 @@ const StoryLibraryTab = () => {
     setLineCompleted(false);
   };
 
+  const handleLineCompleted = useCallback(() => {
+    if (!selectedStory || lineCompleted) return;
+
+    const isLastLine = lineIndex >= selectedStory.lines.length - 1;
+    setLineCompleted(true);
+
+    // Play completion SFX only between phrases, not when story fully finishes.
+    if (!isLastLine) {
+      playPhraseCompleteSfx();
+    }
+
+    window.setTimeout(() => moveToNextLine(), 80);
+  }, [selectedStory, lineIndex, lineCompleted, playPhraseCompleteSfx]);
+
   const handleTypeKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (!currentLine || lineCompleted) return;
 
@@ -345,8 +509,7 @@ const StoryLibraryTab = () => {
         setTypedValue(nextValue);
         setLastWrongKey(null);
         if (nextValue === expected) {
-          setLineCompleted(true);
-          window.setTimeout(() => moveToNextLine(), 450);
+          handleLineCompleted();
         }
       } else {
         setErrorCount((prev) => prev + 1);
@@ -370,8 +533,7 @@ const StoryLibraryTab = () => {
       setLastWrongKey(null);
 
       if (nextValue === expected) {
-        setLineCompleted(true);
-        window.setTimeout(() => moveToNextLine(), 450);
+        handleLineCompleted();
       }
       return;
     }
@@ -580,6 +742,10 @@ const StoryLibraryTab = () => {
   };
 
   if (view === 'reader' && selectedStory && currentLine) {
+    const completedLines = Math.min(selectedStory.lines.length, lineIndex + (lineCompleted ? 1 : 0));
+    const progressPercent =
+      selectedStory.lines.length > 0 ? (completedLines / selectedStory.lines.length) * 100 : 0;
+
     return (
       <div className="min-h-[80vh] sm:min-h-[72vh] flex flex-col">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs sm:text-sm text-muted-foreground px-2 sm:px-4 py-2 sm:py-3">
@@ -592,6 +758,18 @@ const StoryLibraryTab = () => {
             <Badge variant={getLevelBadgeVariant(selectedStory.level)} className="text-xs">{selectedStory.level}</Badge>
           </div>
         </div>
+        <div className="px-2 sm:px-4 pb-2">
+          <div className="flex items-center justify-between text-[10px] sm:text-xs text-muted-foreground mb-1.5">
+            <span>تقدم القصة</span>
+            <span>{completedLines}/{selectedStory.lines.length}</span>
+          </div>
+          <div className="h-2 w-full rounded-full bg-muted overflow-hidden">
+            <div
+              className="h-full rounded-full bg-yellow-500 transition-all duration-500 ease-out"
+              style={{ width: `${progressPercent}%` }}
+            />
+          </div>
+        </div>
 
         <Card className="flex-1 bg-background border-border/60">
           <div className="h-full flex flex-col items-center justify-center text-center px-3 sm:px-6 md:px-12 lg:px-20 py-4 sm:py-8">
@@ -599,8 +777,8 @@ const StoryLibraryTab = () => {
               <div className="flex flex-wrap justify-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs text-muted-foreground">
                 <span className="inline-flex items-center gap-0.5 sm:gap-1">
                   <Keyboard className="h-3 w-3 sm:h-4 sm:w-4" />
-                  <span className="hidden sm:inline">اكتب نفس الجملة حرفا بحرف</span>
-                  <span className="sm:hidden">اكتب حرفا بحرف</span>
+                  <span className="hidden sm:inline">تمرين الكتابة: اكتب الجملة حرفا بحرف</span>
+                  <span className="sm:hidden">تمرين كتابة حرفا بحرف</span>
                 </span>
                 <span>•</span>
                 <span>المسافة <span className="text-amber-400">_</span></span>
@@ -724,7 +902,7 @@ const StoryLibraryTab = () => {
             <div>
               <h2 className="text-lg sm:text-2xl font-bold">مكتبة القصص</h2>
               <p className="text-xs sm:text-sm text-muted-foreground">
-                قصص ألمانية مع ترجمة عربية
+                تمارين قصص ألمانية: كتابة الجملة حرفا بحرف ضمن رحلة التعلم
               </p>
             </div>
           </div>
@@ -740,20 +918,28 @@ const StoryLibraryTab = () => {
           <Button
             variant={selectedLevel === 'all' ? 'default' : 'outline'}
             size="sm"
-            className="text-xs sm:text-sm"
+            className="text-xs sm:text-sm flex items-center gap-2"
             onClick={() => setSelectedLevel('all')}
           >
+            <BookOpen className="h-4 w-4" />
             الكل
+            <Badge variant="secondary" className="ml-1">
+              {storiesData.length}
+            </Badge>
           </Button>
           {levelOrder.map((level) => (
             <Button
               key={level}
               variant={selectedLevel === level ? 'default' : 'outline'}
               size="sm"
-              className="text-xs sm:text-sm"
+              className="text-xs sm:text-sm flex items-center gap-2"
               onClick={() => setSelectedLevel(level)}
             >
+              <GraduationCap className="h-4 w-4" />
               {level}
+              <Badge variant="secondary" className="ml-1">
+                {levelCounts[level]}
+              </Badge>
             </Button>
           ))}
         </div>

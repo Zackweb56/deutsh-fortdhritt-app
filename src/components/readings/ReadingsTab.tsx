@@ -21,6 +21,8 @@ import b2Data from '@/data/readings/b2.json';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+import { isLimitedAccess } from '@/lib/access';
+import LockOverlay from '@/components/ui/lock-overlay';
 
 interface Question {
   question: string;
@@ -60,6 +62,7 @@ const ReadingsTab = () => {
   const [selectedTextIndex, setSelectedTextIndex] = useState<number>(-1);
   const [searchTerm, setSearchTerm] = useState('');
   const [answers, setAnswers] = useState<Record<number, string>>({});
+  const limited = isLimitedAccess();
 
   const currentLevelData = readingsData[selectedLevel] || [];
   const hasData = currentLevelData.length > 0;
@@ -172,28 +175,43 @@ const ReadingsTab = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-4">
             {filteredTexts.map((text, index) => {
               const title = text.title || extractTitle(text.de_text);
+              const originalIndex = currentLevelData.indexOf(text);
+              const shouldLock = limited && originalIndex >= 2;
               return (
-                <Card
+                <LockOverlay
                   key={index}
-                  className="p-3 lg:p-4 cursor-pointer transition-all duration-200 hover:shadow-md hover:border-primary/50 active:scale-[0.98]"
-                  onClick={() => handleTextSelect(text, index)}
+                  isLocked={shouldLock}
+                  message="تمارين القراءة المحجوبة متاحة في الخطة المدفوعة."
                 >
-                  <div className="flex items-start gap-2 lg:gap-3">
-                    <div className="h-8 w-8 lg:h-10 lg:w-10 rounded-full bg-primary/10 flex items-center justify-center text-xs lg:text-sm font-bold text-primary flex-shrink-0">
-                      {index + 1}
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <h3 className="font-semibold mb-1 lg:mb-2 text-base lg:text-lg line-clamp-2">{title}</h3>
-                      <p className="text-xs lg:text-sm text-muted-foreground line-clamp-2 lg:line-clamp-3 mb-2">
-                        {text.de_text.substring(0, 120)}...
-                      </p>
-                      <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                        <FileText className="h-3 w-3" />
-                        <span>{text.questions.length} سؤال</span>
+                  <Card
+                    className="p-3 lg:p-4 cursor-pointer transition-all duration-200 hover:shadow-md hover:border-primary/50 active:scale-[0.98]"
+                    onClick={() => {
+                      if (shouldLock) return;
+                      handleTextSelect(text, index);
+                    }}
+                  >
+                    <div className="flex items-start gap-2 lg:gap-3">
+                      <div className="h-8 w-8 lg:h-10 lg:w-10 rounded-full bg-primary/10 flex items-center justify-center text-xs lg:text-sm font-bold text-primary flex-shrink-0">
+                        {index + 1}
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="font-semibold mb-1 lg:mb-2 text-base lg:text-lg line-clamp-2">{title}</h3>
+                        <p className="text-xs lg:text-sm text-muted-foreground line-clamp-2 lg:line-clamp-3 mb-2">
+                          {text.de_text.substring(0, 120)}...
+                        </p>
+                        <div className="flex items-center justify-between gap-2 text-xs text-muted-foreground">
+                          <span className="inline-flex items-center gap-2">
+                            <FileText className="h-3 w-3" />
+                            <span>{text.questions.length} سؤال</span>
+                          </span>
+                          <Badge variant={shouldLock ? 'outline' : 'secondary'}>
+                            {shouldLock ? 'مدفوع' : 'مجاني'}
+                          </Badge>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </Card>
+                  </Card>
+                </LockOverlay>
               );
             })}
           </div>
