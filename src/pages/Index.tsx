@@ -9,7 +9,7 @@ import ListeningTab from '@/components/listening/ListeningTab';
 import ReadingsTab from '@/components/readings/ReadingsTab';
 import StoryLibraryTab from '@/components/stories/StoryLibraryTab';
 import { ResourcesTab } from '@/components/resources/ResourcesTab';
-import { GrammarVerbsTab } from '@/components/grammar/GrammarVerbsTab';
+import { GrammarTab } from '@/components/grammar/GrammarTab';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Button } from '@/components/ui/button';
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog';
@@ -92,7 +92,7 @@ const AppContent = () => {
       <main className="container mx-auto px-4 py-6">
         {currentTab === 'schedule' && <ScheduleTab />}
         {currentTab === 'vocabulary' && <VocabularyTab />}
-        {currentTab === 'grammar' && <GrammarVerbsTab />}
+        {currentTab === 'grammar' && <GrammarTab />}
         {currentTab === 'lessons' && <LessonsTab />}
         {currentTab === 'listening' && <ListeningTab />}
         {currentTab === 'readings' && <ReadingsTab />}

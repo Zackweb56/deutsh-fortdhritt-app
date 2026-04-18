@@ -183,19 +183,19 @@ export const VocabularyLearning = ({ onScoreUpdate }: VocabularyLearningProps) =
   // Levels View
   if (viewMode === 'levels') {
     return (
-      <div className="space-y-6">
-        <Card className="card-gradient p-6">
+      <div className="space-y-4 sm:space-y-6">
+        <Card className="card-gradient p-4 sm:p-6">
           <div className="flex items-center gap-3 mb-6">
             <BookOpen className="h-6 w-6 text-primary" />
             <h2 className="text-2xl font-bold">اختر مستوى التعلم</h2>
           </div>
-          <div className="overflow-x-auto">
-            <div className="flex flex-nowrap md:flex-wrap gap-4 min-w-max md:min-w-0">
+          <div className="overflow-x-auto pb-1">
+            <div className="flex flex-nowrap md:flex-wrap gap-2 sm:gap-4 min-w-max md:min-w-0">
             {levels.map((level) => (
               <Button
                 key={level.level}
                 onClick={() => handleLevelSelect(level.level)}
-                className="h-20 min-w-[96px] text-lg font-bold bg-primary hover:bg-primary/90 text-primary-foreground"
+                className="h-14 sm:h-20 min-w-[84px] sm:min-w-[96px] text-base sm:text-lg font-bold bg-primary hover:bg-primary/90 text-primary-foreground"
                 variant="default"
               >
                 {level.level}
@@ -223,11 +223,11 @@ export const VocabularyLearning = ({ onScoreUpdate }: VocabularyLearningProps) =
     const limited = isLimitedAccess();
 
     return (
-      <div className="space-y-6">
-        <Card className="card-gradient p-6">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
-            <div className="flex items-center gap-3">
-              <h2 className="text-2xl font-bold">مستوى {selectedLevel} - اختر الفئة</h2>
+      <div className="space-y-4 sm:space-y-6">
+        <Card className="card-gradient p-4 sm:p-6">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 mb-4 sm:mb-6">
+            <div className="flex items-center gap-2 sm:gap-3">
+              <h2 className="text-xl sm:text-2xl font-bold">مستوى {selectedLevel} - اختر الفئة</h2>
             </div>
             <Button
               variant="ghost"
@@ -239,13 +239,13 @@ export const VocabularyLearning = ({ onScoreUpdate }: VocabularyLearningProps) =
               العودة
             </Button>
           </div>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
             {currentLevel.categories.map((category) => {
               const shouldLock = limited && category.id > 2;
               return (
                 <LockOverlay key={category.id} isLocked={shouldLock} message="فئات محجوبة — تواصل عبر واتساب لفتح الوصول الكامل">
                   <Card
-                    className="overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-200 hover:scale-105 w-fit max-w-xs"
+                    className="overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-200 sm:hover:scale-[1.02] w-full"
                     onClick={() => handleCategorySelect(category)}
                   >
                     {/* Card Header - Image Based Size */}
@@ -253,7 +253,7 @@ export const VocabularyLearning = ({ onScoreUpdate }: VocabularyLearningProps) =
                       <img
                         src={category.icon}
                         alt={category.name_arabic}
-                        className="w-auto h-48 object-contain"
+                        className="w-full h-36 sm:h-44 object-contain"
                         onError={(e) => {
                           e.currentTarget.style.display = 'none';
                           e.currentTarget.nextElementSibling?.classList.remove('hidden');
@@ -265,7 +265,7 @@ export const VocabularyLearning = ({ onScoreUpdate }: VocabularyLearningProps) =
                     </div>
 
                     {/* Card Body - Category Information */}
-                    <div className="p-4 text-center space-y-2 min-w-[200px]">
+                    <div className="p-3 sm:p-4 text-center space-y-2 min-w-0">
                       <h3 className="font-bold text-sm leading-tight">{category.name_arabic}</h3>
                       <p className="text-xs text-muted-foreground leading-tight">{category.name_german}</p>
                       <Badge variant="secondary" className="text-xs">
@@ -294,11 +294,11 @@ export const VocabularyLearning = ({ onScoreUpdate }: VocabularyLearningProps) =
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 sm:space-y-6">
       {/* Header with Back Button and Score */}
-      <Card className="card-gradient p-6">
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6">
-          <div className="flex items-center gap-4">
+      <Card className="card-gradient p-4 sm:p-6">
+        <div className="flex flex-col gap-3 sm:gap-4 mb-4 sm:mb-6">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-4">
             <Button
               variant="ghost"
               size="sm"
@@ -308,17 +308,17 @@ export const VocabularyLearning = ({ onScoreUpdate }: VocabularyLearningProps) =
               <ArrowLeft className="h-4 w-4" />
               العودة
             </Button>
-            <div>
-              <h2 className="text-lg font-bold">{selectedCategory.name_arabic}</h2>
-              <p className="text-sm text-muted-foreground">{selectedCategory.name_german}</p>
+            <div className="min-w-0">
+              <h2 className="text-base sm:text-lg font-bold truncate">{selectedCategory.name_arabic}</h2>
+              <p className="text-xs sm:text-sm text-muted-foreground truncate">{selectedCategory.name_german}</p>
             </div>
-            <Badge variant="secondary" className="text-sm">
+            <Badge variant="secondary" className="text-xs sm:text-sm">
               {currentCardIndex + 1} / {shuffledCards.length}
             </Badge>
           </div>
           
-          <div className="flex items-center gap-4">
-            <div className="text-sm text-muted-foreground">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div className="text-xs sm:text-sm text-muted-foreground">
               النتيجة: {score.correct} / {score.total}
             </div>
             <Button
@@ -343,21 +343,21 @@ export const VocabularyLearning = ({ onScoreUpdate }: VocabularyLearningProps) =
       </Card>
 
       {/* Learning Card */}
-      <Card className="card-gradient p-8 min-h-[400px] flex items-center justify-center">
-        <div className="w-full max-w-md">
+      <Card className="card-gradient p-4 sm:p-6 lg:p-8 min-h-[360px] sm:min-h-[400px] flex items-center justify-center">
+        <div className="w-full max-w-xl">
           {/* Card Container */}
-          <div className="relative w-full h-64 perspective-1000">
+          <div className="relative w-full h-[280px] sm:h-64 perspective-1000">
             <div 
               className={`relative w-full h-full transition-transform duration-700 transform-style-preserve-3d ${
                 isFlipped ? 'rotate-y-180' : ''
               }`}
             >
               {/* Front of Card (Arabic) */}
-              <div className="absolute inset-0 w-full h-full backface-hidden bg-card rounded-lg border-2 border-border flex flex-col items-center justify-center p-6">
-                <div className="text-center">
+              <div className="absolute inset-0 w-full h-full backface-hidden bg-card rounded-lg border-2 border-border flex flex-col items-center justify-center p-4 sm:p-6">
+                <div className="text-center w-full">
                   <h3
                     dir="rtl"
-                    className="text-2xl font-bold text-card-foreground mb-4 text-right"
+                    className="text-xl sm:text-2xl font-bold text-card-foreground mb-3 sm:mb-4 text-center sm:text-right break-words"
                     style={{ unicodeBidi: "bidi-override" }}
                   >
                     {currentCard?.arabic}
@@ -371,10 +371,10 @@ export const VocabularyLearning = ({ onScoreUpdate }: VocabularyLearningProps) =
               </div>
 
               {/* Back of Card (German + Details) */}
-              <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180 bg-card rounded-lg border-2 border-border flex flex-col items-center justify-center p-6">
-                <div className="text-center">
-                  <div className="flex items-center justify-center gap-2 mb-4">
-                    <h3 className="text-2xl font-bold text-card-foreground">
+              <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180 bg-card rounded-lg border-2 border-border flex flex-col items-center justify-center p-4 sm:p-6">
+                <div className="text-center w-full">
+                  <div className="flex items-center justify-center gap-2 mb-3 sm:mb-4">
+                    <h3 className="text-xl sm:text-2xl font-bold text-card-foreground break-words">
                       {currentCard?.german}
                     </h3>
                     <Button
@@ -392,18 +392,18 @@ export const VocabularyLearning = ({ onScoreUpdate }: VocabularyLearningProps) =
                     </Button>
                   </div>
                   
-                  <p className="text-lg text-muted-foreground mb-2">
+                  <p className="text-base sm:text-lg text-muted-foreground mb-2 break-words">
                     {currentCard?.arabic}
                   </p>
                   
                   {currentCard?.pronunciation_ar && (
-                    <p className="text-sm text-muted-foreground mb-4">
+                    <p className="text-xs sm:text-sm text-muted-foreground mb-4 break-words">
                       {currentCard.pronunciation_ar}
                     </p>
                   )}
                   
                   {currentCard?.notes && (
-                    <p className="text-sm text-muted-foreground bg-muted p-2 rounded">
+                    <p className="text-xs sm:text-sm text-muted-foreground bg-muted p-2 rounded break-words">
                       {currentCard.notes}
                     </p>
                   )}
@@ -416,7 +416,7 @@ export const VocabularyLearning = ({ onScoreUpdate }: VocabularyLearningProps) =
                       ) : (
                         <XCircle className="h-6 w-6 text-destructive" />
                       )}
-                      <span className={`text-sm font-medium ${
+                      <span className={`text-xs sm:text-sm font-medium ${
                         isCorrect ? 'text-green-500' : 'text-destructive'
                       }`}>
                         {isCorrect ? 'صحيح!' : 'خطأ'}
@@ -444,7 +444,7 @@ export const VocabularyLearning = ({ onScoreUpdate }: VocabularyLearningProps) =
           </div>
 
           {/* Input and Controls */}
-          <div className="mt-8 space-y-4">
+          <div className="mt-6 sm:mt-8 space-y-3 sm:space-y-4">
             {!isFlipped ? (
               <div className="space-y-4">
                 <Input
@@ -452,7 +452,7 @@ export const VocabularyLearning = ({ onScoreUpdate }: VocabularyLearningProps) =
                   onChange={(e) => setUserGuess(e.target.value)}
                   onKeyPress={handleKeyPress}
                   placeholder="اكتب تخمينك هنا..."
-                  className="text-center text-lg"
+                  className="text-center text-base sm:text-lg"
                   dir="ltr"
                 />
                 <Button 

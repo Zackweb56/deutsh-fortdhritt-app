@@ -27,7 +27,7 @@ export const TabNavigation = () => {
   const tabs = [
     { id: 'schedule' as const, label: 'الجدول الزمني', icon: Calendar },
     { id: 'vocabulary' as const, label: 'المفردات', icon: BookOpen },
-    { id: 'grammar' as const, label: 'القواعد والأفعال', icon: PenTool },
+    { id: 'grammar' as const, label: 'القواعد', icon: PenTool },
     { id: 'lessons' as const, label: 'الدروس', icon: GraduationCap },
     { id: 'listening' as const, label: 'الاستماع', icon: Headphones },
     { id: 'readings' as const, label: 'القراءة', icon: FileText },
