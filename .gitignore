@@ -22,3 +22,13 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Sensitive / private files - DO NOT COMMIT
+access_codes.txt
+.env
+.env.*
+!.env.example
+
+# Auto-generated build output / temp files
+lint_output.txt
+*.txt.bak
