@@ -12,28 +12,28 @@ export const VocabularyTab = () => {
   return (
     <div className="space-y-6">
       <Tabs defaultValue="learning" className="w-full" dir="rtl">
-        <TabsList className="grid h-auto w-full grid-cols-2 gap-2 p-2 sm:grid-cols-4">
+        <TabsList className="flex flex-wrap h-auto w-full gap-1.5 p-1.5 justify-start sm:justify-center rounded-lg bg-muted/50">
           <TabsTrigger
             value="learning"
-            className="h-auto min-h-12 whitespace-normal px-3 py-3 text-center text-xs leading-5 sm:min-h-10 sm:text-sm"
+            className="flex-auto sm:flex-1 h-auto min-h-9 whitespace-nowrap px-3 py-2 text-center text-[8px] sm:text-sm rounded-lg data-[state=active]:bg-background data-[state=active]:shadow-sm transition-all"
           >
             تعلم المفردات
           </TabsTrigger>
           <TabsTrigger
             value="quiz"
-            className="h-auto min-h-12 whitespace-normal px-3 py-3 text-center text-xs leading-5 sm:min-h-10 sm:text-sm"
+            className="flex-auto sm:flex-1 h-auto min-h-9 whitespace-nowrap px-3 py-2 text-center text-[8px] sm:text-sm rounded-lg data-[state=active]:bg-background data-[state=active]:shadow-sm transition-all"
           >
             اختبار أدوات التعريف
           </TabsTrigger>
           <TabsTrigger
             value="add"
-            className="h-auto min-h-12 whitespace-normal px-3 py-3 text-center text-xs leading-5 sm:min-h-10 sm:text-sm"
+            className="flex-auto sm:flex-1 h-auto min-h-9 whitespace-nowrap px-3 py-2 text-center text-[8px] sm:text-sm rounded-lg data-[state=active]:bg-background data-[state=active]:shadow-sm transition-all"
           >
             إضافة مفردة جديدة
           </TabsTrigger>
           <TabsTrigger
             value="list"
-            className="h-auto min-h-12 whitespace-normal px-3 py-3 text-center text-xs leading-5 sm:min-h-10 sm:text-sm"
+            className="flex-auto sm:flex-1 h-auto min-h-9 whitespace-nowrap px-3 py-2 text-center text-[8px] sm:text-sm rounded-lg data-[state=active]:bg-background data-[state=active]:shadow-sm transition-all"
           >
             قائمة المفردات
           </TabsTrigger>

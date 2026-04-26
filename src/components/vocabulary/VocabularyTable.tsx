@@ -38,7 +38,7 @@ export const VocabularyTable = () => {
   const [deleteId, setDeleteId] = useState<string | null>(null);
 
   const filteredAndSorted = useMemo(() => {
-    let filtered = vocabulary.filter(item =>
+    const filtered = vocabulary.filter(item =>
       item.german.toLowerCase().includes(search.toLowerCase()) ||
       item.pronunciation.toLowerCase().includes(search.toLowerCase()) ||
       item.translation.toLowerCase().includes(search.toLowerCase())

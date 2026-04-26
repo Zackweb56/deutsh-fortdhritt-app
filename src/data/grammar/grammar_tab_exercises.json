@@ -1,311 +1,1060 @@
 [
     {
       "grammar_topic": "Bestimmter Artikel (Nominativ)",
-      "questions": [
+      "exercises": [
         {
-          "question": "Der Junge hat einen Vater. Das ist der Vater ___ Jungen.",
-          "choices": ["das", "des", "dem", "der"],
-          "correct": "des",
-          "explanation_ar": "هنا نستخدم 'des' لأنها حالة المضاف إليه (Genitiv) للتعبير عن الملكية: والد الولد."
+          "exercise_type": "multiple_choice",
+          "instruction_ar": "اختر artikel الصحيح من بين الخيارات",
+          "instruction_de": "Wählen Sie den richtigen bestimmten Artikel aus",
+          "questions": [
+            {
+              "question": "Der Junge hat einen Vater. Das ist der Vater ___ Jungen.",
+              "choices": ["das", "des", "dem", "der"],
+              "correct": "des",
+              "explanation_ar": "هنا نستخدم 'des' لأنها حالة المضاف إليه (Genitiv) للتعبير عن الملكية: والد الولد."
+            },
+            {
+              "question": "Das Kind hat einen Ball. Der Ball gehört ___ Kind.",
+              "choices": ["den", "des", "das", "dem"],
+              "correct": "dem",
+              "explanation_ar": "بعد فعل 'gehören' نستخدم حالة المجرور (Dativ)، و'Kind' محايد لذا تصبح 'dem Kind'."
+            },
+            {
+              "question": "Der Omar ist gut in Sport. Ich wähle ___ Omar in meine Mannschaft.",
+              "choices": ["dem", "der", "des", "den"],
+              "correct": "den",
+              "explanation_ar": "فعل 'wählen' يأخذ مفعولاً به في حالة النصب (Akkusativ)، و'Omar' مذكر لذا 'den Omar'."
+            }
+          ]
         },
         {
-          "question": "Das Kind hat einen Ball. Der Ball gehört ___ Kind.",
-          "choices": ["den", "des", "das", "dem"],
-          "correct": "dem",
-          "explanation_ar": "بعد فعل 'gehören' نستخدم حالة المجرور (Dativ)، و'Kind' محايد لذا تصبح 'dem Kind'."
+          "exercise_type": "fill_in_blank",
+          "instruction_ar": "اكتب artikel الصحيح في الفراغ (der / die / das / den / dem / des)",
+          "instruction_de": "Schreiben Sie den richtigen Artikel in die Lücke",
+          "questions": [
+            {
+              "question_sentence": "Ich habe einen Kuchen für die Tante gebacken. Ich bringe ___ Tante den Kuchen.",
+              "correct": "der",
+              "explanation_ar": "فعل 'bringen' يأخذ مفعولين، والمفعول به الشخص يأتي في حالة المجرور (Dativ)، و'Tante' مؤنث لذا 'der Tante'."
+            },
+            {
+              "question_sentence": "Die Lehrerin trägt eine Brille. Das ist die Brille ___ Lehrerin.",
+              "correct": "der",
+              "explanation_ar": "هنا حالة المضاف إليه (Genitiv) للمؤنث: Brille der Lehrerin (نظارة المعلمة)."
+            },
+            {
+              "question_sentence": "Es ist laut. Das ist der Motor ___ Autos.",
+              "correct": "des",
+              "explanation_ar": "حالة المضاف إليه (Genitiv) للمفرد المحايد: Motor des Autos (محرك السيارة)."
+            },
+            {
+              "question_sentence": "Das Haus hat ein Dach. Das ist das Dach ___ Hauses.",
+              "correct": "des",
+              "explanation_ar": "حالة المضاف إليه (Genitiv) للمفرد المحايد مع إضافة 'es': Dach des Hauses."
+            },
+            {
+              "question_sentence": "Ich suche ___ Museum. Es ist irgendwo in der Stadt.",
+              "correct": "das",
+              "explanation_ar": "فعل 'suchen' يأخذ مفعولاً به في حالة النصب، و'Museum' محايد لذا 'das Museum'."
+            }
+          ]
         },
         {
-          "question": "Ich habe einen Kuchen für die Tante gebacken. Ich bringe ___ Tante den Kuchen.",
-          "choices": ["den", "die", "dem", "das"],
-          "correct": "der",
-          "explanation_ar": "فعل 'bringen' يأخذ مفعولين، والمفعول به الشخص يأتي في حالة المجرور (Dativ)، و'Tante' مؤنث لذا 'der Tante'."
+          "exercise_type": "drag_drop_match",
+          "instruction_ar": "اسحب artikel الصحيح وأسقطه أمام الاسم المناسب حسب الحالة (Nominativ / Akkusativ / Dativ / Genitiv)",
+          "instruction_de": "Ziehen Sie den richtigen Artikel und lassen Sie ihn vor dem passenden Nomen fallen",
+          "items": [
+            {
+              "noun_phrase": "___ Vater (Nominativ, maskulin)",
+              "correct_drop": "der",
+              "distractors": ["den", "dem", "des"],
+              "explanation_ar": "في حالة الرفع (Nominativ) للمذكر: der Vater"
+            },
+            {
+              "noun_phrase": "___ Kind (Dativ, neutral)",
+              "correct_drop": "dem",
+              "distractors": ["das", "den", "des"],
+              "explanation_ar": "في حالة المجرور (Dativ) للمحايد: dem Kind"
+            },
+            {
+              "noun_phrase": "___ Lehrerin (Genitiv, feminin)",
+              "correct_drop": "der",
+              "distractors": ["die", "den", "des"],
+              "explanation_ar": "في حالة المضاف إليه (Genitiv) للمؤنث: der Lehrerin"
+            },
+            {
+              "noun_phrase": "___ Jungen (Genitiv, maskulin, schwache Deklination)",
+              "correct_drop": "des",
+              "distractors": ["der", "dem", "den"],
+              "explanation_ar": "مع الأسماء الضعيفة مثل 'Junge' في Genitiv: des Jungen"
+            },
+            {
+              "noun_phrase": "___ Tisch (Akkusativ, maskulin)",
+              "correct_drop": "den",
+              "distractors": ["der", "dem", "des"],
+              "explanation_ar": "في حالة النصب (Akkusativ) للمذكر: den Tisch"
+            }
+          ]
         },
         {
-          "question": "Die Lehrerin trägt eine Brille. Das ist die Brille ___ Lehrerin.",
-          "choices": ["die", "den", "dem", "der"],
-          "correct": "der",
-          "explanation_ar": "هنا حالة المضاف إليه (Genitiv) للمؤنث: Brille der Lehrerin (نظارة المعلمة)."
-        },
-        {
-          "question": "Der Omar ist gut in Sport. Ich wähle ___ Omar in meine Mannschaft.",
-          "choices": ["dem", "der", "des", "den"],
-          "correct": "den",
-          "explanation_ar": "فعل 'wählen' يأخذ مفعولاً به في حالة النصب (Akkusativ)، و'Omar' مذكر لذا 'den Omar'."
-        },
-        {
-          "question": "Es ist laut. Das ist der Motor ___ Autos.",
-          "choices": ["den", "das", "des", "die"],
-          "correct": "des",
-          "explanation_ar": "حالة المضاف إليه (Genitiv) للمفرد المحايد: Motor des Autos (محرك السيارة)."
-        },
-        {
-          "question": "Der Nachbar hat einen Hund. Das ist der Hund ___ Nachbarn.",
-          "choices": ["das", "dem", "der", "den"],
-          "correct": "des",
-          "explanation_ar": "هنا 'Nachbar' اسم ضعيف يضاف إليه 'n' في حالة المضاف إليه: Hund des Nachbarn."
-        },
-        {
-          "question": "Das Haus hat ein Dach. Das ist das Dach ___ Hauses.",
-          "choices": ["das", "dem", "der", "den"],
-          "correct": "des",
-          "explanation_ar": "حالة المضاف إليه (Genitiv) للمفرد المحايد مع إضافة 'es': Dach des Hauses."
-        },
-        {
-          "question": "Ich besuche ___ Mutter jede Woche.",
-          "choices": ["dem", "das", "die", "den"],
-          "correct": "die",
-          "explanation_ar": "فعل 'besuchen' يأخذ مفعولاً به في حالة النصب (Akkusativ)، و'Mutter' مؤنث لذا 'die Mutter'."
-        },
-        {
-          "question": "Ich suche ___ Museum. Es ist irgendwo in der Stadt.",
-          "choices": ["die", "das", "dem", "der"],
-          "correct": "das",
-          "explanation_ar": "فعل 'suchen' يأخذ مفعولاً به في حالة النصب، و'Museum' محايد لذا 'das Museum'."
+          "exercise_type": "sentence_reconstruction",
+          "instruction_ar": "أعد ترتيب الكلمات لتكوين جملة صحيحة باستخدام artikel المناسب",
+          "instruction_de": "Ordnen Sie die Wörter zu einem korrekten Satz mit dem richtigen Artikel",
+          "questions": [
+            {
+              "scrambled_words": ["gehört", "Ball", "Kind", "der", "dem", "Der"],
+              "correct_sentence": "Der Ball gehört dem Kind.",
+              "explanation_ar": "الفاعل 'Der Ball' (مذكر Nominativ)، الفعل 'gehört' يطلب Dativ: 'dem Kind'."
+            },
+            {
+              "scrambled_words": ["Lehrerin", "die", "Brille", "ist", "der", "Das", "Brille", "der"],
+              "correct_sentence": "Das ist die Brille der Lehrerin.",
+              "explanation_ar": "الملكية في Genitiv: 'die Brille der Lehrerin' (نظارة المعلمة)."
+            },
+            {
+              "scrambled_words": ["Motor", "ist", "laut", "Autos", "Das", "des"],
+              "correct_sentence": "Das ist der Motor des Autos.",
+              "explanation_ar": "Genitiv للمفرد المحايد: 'des Autos'."
+            },
+            {
+              "scrambled_words": ["wähle", "Mannschaft", "den", "Omar", "Ich", "meine", "in"],
+              "correct_sentence": "Ich wähle den Omar in meine Mannschaft.",
+              "explanation_ar": "فعل 'wählen' مع مفعول به مذكر في Akkusativ: 'den Omar'."
+            }
+          ]
         }
       ]
     },
     {
       "grammar_topic": "Possessivpronomen (Nominativ & Akkusativ)",
-      "questions": [
+      "exercises": [
         {
-          "question": "___ Bruder ist sehr nett. (ich)",
-          "choices": ["Mein", "Meine", "Meinen", "Meinem"],
-          "correct": "Mein",
-          "explanation_ar": "الملكية للمتكلم مع اسم مذكر في حالة الرفع (Nominativ): Mein Bruder."
+          "exercise_type": "multiple_choice",
+          "instruction_ar": "اختر ضمير الملكية الصحيح من بين الخيارات",
+          "instruction_de": "Wählen Sie das richtige Possessivpronomen aus",
+          "questions": [
+            {
+              "question": "___ Bruder ist sehr nett. (ich)",
+              "choices": ["Mein", "Meine", "Meinen", "Meinem"],
+              "correct": "Mein",
+              "explanation_ar": "الملكية للمتكلم مع اسم مذكر في حالة الرفع (Nominativ): Mein Bruder."
+            },
+            {
+              "question": "Das ist ___ Katze. (wir)",
+              "choices": ["unser", "unsere", "unseren", "unserem"],
+              "correct": "unsere",
+              "explanation_ar": "ملكية 'نحن' مع اسم مؤنث في حالة الرفع: unsere Katze."
+            },
+            {
+              "question": "Wo ist ___ Mutter? (ihr - formal Sie)",
+              "choices": ["Ihr", "Ihre", "Ihren", "Ihrem"],
+              "correct": "Ihre",
+              "explanation_ar": "الملكية للمخاطب بصيغة الاحترام مع اسم مؤنث في الرفع: Ihre Mutter."
+            }
+          ]
         },
         {
-          "question": "Hast du ___ Schlüssel gesehen? (du)",
-          "choices": ["dein", "deine", "deinen", "deinem"],
-          "correct": "deinen",
-          "explanation_ar": "فعل 'sehen' مع مفعول به مذكر في النصب (Akkusativ): deinen Schlüssel."
+          "exercise_type": "fill_in_blank",
+          "instruction_ar": "اكتب ضمير الملكية الصحيح في الفراغ (استخدم mein/dein/sein/ihr/unser/euer/ihr/Ihr في الصيغة المناسبة)",
+          "instruction_de": "Schreiben Sie das richtige Possessivpronomen in die Lücke",
+          "questions": [
+            {
+              "question_sentence": "Hast du ___ Schlüssel gesehen? (du)",
+              "correct": "deinen",
+              "explanation_ar": "فعل 'sehen' مع مفعول به مذكر في النصب (Akkusativ): deinen Schlüssel."
+            },
+            {
+              "question_sentence": "Ich gebe ___ Freund ein Geschenk. (ich)",
+              "correct": "meinem",
+              "explanation_ar": "فعل 'geben' يحتاج إلى مفعول به غير مباشر في حالة المجرور (Dativ) للمذكر: meinem Freund."
+            },
+            {
+              "question_sentence": "___ Eltern sind sehr stolz auf dich. (wir)",
+              "correct": "Unsere",
+              "explanation_ar": "جمع 'Eltern' مع 'wir' في حالة الرفع: Unsere Eltern."
+            },
+            {
+              "question_sentence": "Sie besucht ___ Großmutter jedes Wochenende. (sie - sie, Singular)",
+              "correct": "ihre",
+              "explanation_ar": "ضمير الملكية لـ 'هي' مع اسم مؤنث في النصب: ihre Großmutter."
+            },
+            {
+              "question_sentence": "Habt ihr ___ Hausaufgaben gemacht? (ihr - Plural)",
+              "correct": "eure",
+              "explanation_ar": "ملكية 'أنتم' مع جمع 'Hausaufgaben' في النصب: eure Hausaufgaben."
+            }
+          ]
         },
         {
-          "question": "Das ist ___ Katze. (wir)",
-          "choices": ["unser", "unsere", "unseren", "unserem"],
-          "correct": "unsere",
-          "explanation_ar": "ملكية 'نحن' مع اسم مؤنث في حالة الرفع: unsere Katze."
+          "exercise_type": "drag_drop_match",
+          "instruction_ar": "اسحب ضمير الملكية الصحيح وأسقطه أمام الاسم حسب الفاعل والحالة (Nominativ أو Akkusativ أو Dativ)",
+          "instruction_de": "Ziehen Sie das richtige Possessivpronomen und lassen Sie es vor das Nomen fallen",
+          "items": [
+            {
+              "noun_phrase": "___ Bruder (ich, Nominativ, maskulin)",
+              "correct_drop": "Mein",
+              "distractors": ["Meine", "Meinen", "Meinem"],
+              "explanation_ar": "المتكلم 'ich' + مذكر + Nominativ = mein"
+            },
+            {
+              "noun_phrase": "___ Mutter (du, Nominativ, feminin)",
+              "correct_drop": "Deine",
+              "distractors": ["Dein", "Deinen", "Deinem"],
+              "explanation_ar": "المخاطب 'du' + مؤنث + Nominativ = deine"
+            },
+            {
+              "noun_phrase": "___ Auto (er, Akkusativ, neutral)",
+              "correct_drop": "sein",
+              "distractors": ["seine", "seinen", "seinem"],
+              "explanation_ar": "هو 'er' + محايد + Akkusativ = sein Auto"
+            },
+            {
+              "noun_phrase": "___ Lehrer (wir, Dativ, maskulin)",
+              "correct_drop": "unserem",
+              "distractors": ["unser", "unsere", "unseren"],
+              "explanation_ar": "نحن 'wir' + مذكر + Dativ = unserem Lehrer"
+            },
+            {
+              "noun_phrase": "___ Tasche (sie - sie, Akkusativ, feminin)",
+              "correct_drop": "ihre",
+              "distractors": ["ihr", "ihren", "ihrem"],
+              "explanation_ar": "هي 'sie' + مؤنث + Akkusativ = ihre Tasche"
+            }
+          ]
         },
         {
-          "question": "Ich gebe ___ Freund ein Geschenk. (ich)",
-          "choices": ["mein", "meine", "meinen", "meinem"],
-          "correct": "meinem",
-          "explanation_ar": "فعل 'geben' يحتاج إلى مفعول به غير مباشر في حالة المجرور (Dativ) للمذكر: meinem Freund."
-        },
-        {
-          "question": "Wo ist ___ Mutter? (ihr - formal Sie)",
-          "choices": ["Ihr", "Ihre", "Ihren", "Ihrem"],
-          "correct": "Ihre",
-          "explanation_ar": "الملكية للمخاطب بصيغة الاحترام مع اسم مؤنث في الرفع: Ihre Mutter."
+          "exercise_type": "sentence_reconstruction",
+          "instruction_ar": "أعد ترتيب الكلمات لتكوين جملة صحيحة باستخدام ضمير الملكية المناسب",
+          "instruction_de": "Ordnen Sie die Wörter zu einem korrekten Satz mit dem richtigen Possessivpronomen",
+          "questions": [
+            {
+              "scrambled_words": ["Freund", "ist", "meinem", "Ich", "gehe", "mit", "spazieren"],
+              "correct_sentence": "Ich gehe mit meinem Freund spazieren.",
+              "explanation_ar": "حرف الجر 'mit' يطلب Dativ: meinem Freund."
+            },
+            {
+              "scrambled_words": ["sucht", "Schlüssel", "ihren", "Sie", "verlorenen"],
+              "correct_sentence": "Sie sucht ihren verlorenen Schlüssel.",
+              "explanation_ar": "فعل 'suchen' مع Akkusativ: ihren Schlüssel (مذكر + نصب)."
+            },
+            {
+              "scrambled_words": ["Eltern", "Unseren", "helfen", "wir", "oft", ""],
+              "correct_sentence": "Wir helfen unseren Eltern oft.",
+              "explanation_ar": "فعل 'helfen' يطلب Dativ: unseren Eltern (جمع + Dativ)."
+            },
+            {
+              "scrambled_words": ["Hund", "ist", "sein", "Das", "braun", ""],
+              "correct_sentence": "Das ist sein brauner Hund.",
+              "explanation_ar": "ملكية 'er' مع مذكر في Nominativ: sein Hund."
+            }
+          ]
         }
       ]
     },
     {
       "grammar_topic": "Präpositionen mit Dativ",
-      "questions": [
+      "exercises": [
         {
-          "question": "Ich wohne ___ meinen Eltern.",
-          "choices": ["bei", "mit", "nach", "zu"],
-          "correct": "bei",
-          "explanation_ar": "حرف الجر 'bei' يعني 'عند' ويتبعه دائماً حالة المجرور (Dativ)."
+          "exercise_type": "multiple_choice",
+          "instruction_ar": "اختر حرف الجر الصحيح الذي يتبعه Dativ",
+          "instruction_de": "Wählen Sie die richtige Präposition, die Dativ verlangt",
+          "questions": [
+            {
+              "question": "Ich wohne ___ meinen Eltern.",
+              "choices": ["bei", "mit", "nach", "zu"],
+              "correct": "bei",
+              "explanation_ar": "حرف الجر 'bei' يعني 'عند' ويتبعه دائماً حالة المجرور (Dativ)."
+            },
+            {
+              "question": "Das Buch liegt ___ dem Tisch.",
+              "choices": ["auf", "über", "unter", "neben"],
+              "correct": "auf",
+              "explanation_ar": "حروف الجر المكانية التي تتبع Dativ عندما تشير إلى مكان ثابت: auf dem Tisch."
+            },
+            {
+              "question": "Er kommt ___ der Schule.",
+              "choices": ["aus", "von", "seit", "außer"],
+              "correct": "aus",
+              "explanation_ar": "حرف الجر 'aus' يعني 'من' (داخل إلى خارج) ويتبعه Dativ: aus der Schule."
+            }
+          ]
         },
         {
-          "question": "Wir fahren ___ dem Zug.",
-          "choices": ["mit", "ohne", "für", "durch"],
-          "correct": "mit",
-          "explanation_ar": "حرف الجر 'mit' يعني 'بواسطة/مع' ويتبعه Dativ: mit dem Zug."
+          "exercise_type": "fill_in_blank",
+          "instruction_ar": "اكتب حرف الجر الصحيح في الفراغ (aus / außer / bei / gegenüber / mit / nach / seit / von / zu)",
+          "instruction_de": "Schreiben Sie die richtige Präposition in die Lücke",
+          "questions": [
+            {
+              "question_sentence": "Wir fahren ___ dem Zug.",
+              "correct": "mit",
+              "explanation_ar": "حرف الجر 'mit' يعني 'بواسطة/مع' ويتبعه Dativ: mit dem Zug."
+            },
+            {
+              "question_sentence": "Ich bin ___ Hause.",
+              "correct": "zu",
+              "explanation_ar": "التعبير الثابت 'zu Hause' يعني 'في المنزل'، و'zu' تتبع Dativ."
+            },
+            {
+              "question_sentence": "___ dem Kino ist eine Schule.",
+              "correct": "Gegenüber",
+              "explanation_ar": "'gegenüber' تعني 'مقابل' وتأتي بعد الاسم أو قبله وتطلب Dativ: Gegenüber dem Kino."
+            },
+            {
+              "question_sentence": "Ich lerne ___ drei Jahren Deutsch.",
+              "correct": "seit",
+              "explanation_ar": "'seit' تعني 'منذ' وتستخدم مع الزمن وتتبع Dativ: seit drei Jahren."
+            },
+            {
+              "question_sentence": "___ mir ist niemand im Raum.",
+              "correct": "Außer",
+              "explanation_ar": "'außer' تعني 'باستثناء' وتتبع Dativ: Außer mir."
+            }
+          ]
         },
         {
-          "question": "Das Buch liegt ___ dem Tisch.",
-          "choices": ["auf", "über", "unter", "neben"],
-          "correct": "auf",
-          "explanation_ar": "حروف الجر المكانية التي تتبع Dativ عندما تشير إلى مكان ثابت: auf dem Tisch."
+          "exercise_type": "drag_drop_match",
+          "instruction_ar": "اسحب حرف الجر الصحيح وأسقطه أمام العبارة لتكوين تعبير صحيح مع Dativ",
+          "instruction_de": "Ziehen Sie die richtige Präposition und lassen Sie sie vor den Ausdruck fallen",
+          "items": [
+            {
+              "noun_phrase": "___ dem Supermarkt (مكان ثابت - بمعنى 'عند')",
+              "correct_drop": "bei",
+              "distractors": ["mit", "nach", "von"],
+              "explanation_ar": "'bei dem Supermarkt' تعني 'عند السوبر ماركت' (مكان قريب)"
+            },
+            {
+              "noun_phrase": "___ dem Arzt (اتجاه شخص - 'إلى')",
+              "correct_drop": "zu",
+              "distractors": ["nach", "aus", "seit"],
+              "explanation_ar": "'zum Arzt' (zu + dem) تعني 'إلى الطبيب'"
+            },
+            {
+              "noun_phrase": "___ dem Bahnhof (مكان منشأ - 'من')",
+              "correct_drop": "vom",
+              "distractors": ["beim", "zum", "nach"],
+              "explanation_ar": "'vom Bahnhof' (von + dem) تعني 'من محطة القطار'"
+            },
+            {
+              "noun_phrase": "___ Deutschland (اتجاه دولة دون أداة)",
+              "correct_drop": "nach",
+              "distractors": ["zu", "in", "aus"],
+              "explanation_ar": "مع أسماء الدول بدون أداة نستخدم 'nach': nach Deutschland"
+            },
+            {
+              "noun_phrase": "___ dem Fenster (مكان ثابت - 'بواسطة')",
+              "correct_drop": "am",
+              "distractors": ["beim", "zum", "vom"],
+              "explanation_ar": "'am Fenster' (an + dem) تعني 'بجانب النافذة'"
+            }
+          ]
         },
         {
-          "question": "Ich bin ___ Hause.",
-          "choices": ["nach", "zu", "bei", "aus"],
-          "correct": "zu",
-          "explanation_ar": "التعبير الثابت 'zu Hause' يعني 'في المنزل'، و'zu' تتبع Dativ."
-        },
-        {
-          "question": "Er kommt ___ der Schule.",
-          "choices": ["aus", "von", "seit", "außer"],
-          "correct": "aus",
-          "explanation_ar": "حرف الجر 'aus' يعني 'من' (داخل إلى خارج) ويتبعه Dativ: aus der Schule."
+          "exercise_type": "sentence_reconstruction",
+          "instruction_ar": "أعد ترتيب الكلمات لتكوين جملة صحيحة باستخدام حرف جر مع Dativ",
+          "instruction_de": "Ordnen Sie die Wörter zu einem korrekten Satz mit einer Dativ-Präposition",
+          "questions": [
+            {
+              "scrambled_words": ["wohne", "Eltern", "bei", "meinen", "Ich", "ich"],
+              "correct_sentence": "Ich wohne bei meinen Eltern.",
+              "explanation_ar": "'bei' تطلب Dativ: bei meinen Eltern."
+            },
+            {
+              "scrambled_words": ["fährt", "Zug", "dem", "Er", "mit"],
+              "correct_sentence": "Er fährt mit dem Zug.",
+              "explanation_ar": "'mit' تطلب Dativ: mit dem Zug."
+            },
+            {
+              "scrambled_words": ["Jahren", "Deutschland", "lebe", "seit", "in", "drei", "Ich"],
+              "correct_sentence": "Ich lebe seit drei Jahren in Deutschland.",
+              "explanation_ar": "'seit' تطلب Dativ: seit drei Jahren."
+            },
+            {
+              "scrambled_words": ["komme", "der", "aus", "Türkei", "Ich"],
+              "correct_sentence": "Ich komme aus der Türkei.",
+              "explanation_ar": "'aus' تطلب Dativ: aus der Türkei (مؤنث مع أداة)."
+            },
+            {
+              "scrambled_words": ["Spaziergang", "machen", "Wetter", "trotz", "wir", "schlechten", "einen"],
+              "correct_sentence": "Trotz des schlechten Wetters machen wir einen Spaziergang.",
+              "explanation_ar": "ملاحظة: 'trotz' تطلب Genitiv (وليس Dativ) في اللغة الرسمية: trotz des schlechten Wetters."
+            }
+          ]
         }
       ]
     },
     {
       "grammar_topic": "Präpositionen mit Akkusativ",
-      "questions": [
+      "exercises": [
         {
-          "question": "Ich gehe ___ den Park.",
-          "choices": ["in", "an", "auf", "durch"],
-          "correct": "in",
-          "explanation_ar": "حرف الجر 'in' مع حركة نحو الداخل يأخذ Akkusativ: in den Park."
+          "exercise_type": "multiple_choice",
+          "instruction_ar": "اختر حرف الجر الصحيح الذي يتبعه Akkusativ",
+          "instruction_de": "Wählen Sie die richtige Präposition, die Akkusativ verlangt",
+          "questions": [
+            {
+              "question": "Ich gehe ___ den Park.",
+              "choices": ["in", "an", "auf", "durch"],
+              "correct": "in",
+              "explanation_ar": "حرف الجر 'in' مع حركة نحو الداخل يأخذ Akkusativ: in den Park."
+            },
+            {
+              "question": "Er fährt ___ die Stadt.",
+              "choices": ["durch", "für", "gegen", "um"],
+              "correct": "durch",
+              "explanation_ar": "حرف الجر 'durch' يعني 'عبر/خلال' ويتبعه دائماً Akkusativ."
+            },
+            {
+              "question": "Wir kämpfen ___ unsere Rechte.",
+              "choices": ["für", "ohne", "wider", "bis"],
+              "correct": "für",
+              "explanation_ar": "حرف الجر 'für' يعني 'من أجل' ويتبعه Akkusativ: für unsere Rechte."
+            }
+          ]
         },
         {
-          "question": "Das Bild hängen wir ___ die Wand.",
-          "choices": ["an", "neben", "zwischen", "über"],
-          "correct": "an",
-          "explanation_ar": "فعل 'hängen' مع حركة الاتجاه يأخذ Akkusativ: an die Wand."
+          "exercise_type": "fill_in_blank",
+          "instruction_ar": "اكتب حرف الجر الصحيح في الفراغ (bis / durch / entlang / für / gegen / ohne / um / wider)",
+          "instruction_de": "Schreiben Sie die richtige Präposition in die Lücke",
+          "questions": [
+            {
+              "question_sentence": "Das Bild hängen wir ___ die Wand.",
+              "correct": "an",
+              "explanation_ar": "فعل 'hängen' مع حركة الاتجاه يأخذ Akkusativ: an die Wand."
+            },
+            {
+              "question_sentence": "Leg das Buch ___ den Tisch.",
+              "choices": ["auf", "unter", "vor", "hinter"],
+              "correct": "auf",
+              "explanation_ar": "حركة وضع الشيء على سطح تأخذ Akkusativ: auf den Tisch."
+            },
+            {
+              "question_sentence": "Wir gehen ___ den Fluss spazieren.",
+              "correct": "entlang",
+              "explanation_ar": "'entlang' تعني 'على طول' وتأتي بعد الاسم في Akkusativ: den Fluss entlang."
+            },
+            {
+              "question_sentence": "___ den Wind ist das Segeln schwer.",
+              "correct": "Gegen",
+              "explanation_ar": "'gegen' تعني 'ضد' وتتبع Akkusativ: Gegen den Wind."
+            },
+            {
+              "question_sentence": "___ mich hat niemand gewartet.",
+              "correct": "Außer",
+              "explanation_ar": "ملاحظة: 'außer' تأخذ Dativ، هذه جملة اختبارية - الإجابة الصحيحة هي 'Außer' مع Dativ: Außer mir."
+            }
+          ]
         },
         {
-          "question": "Er fährt ___ die Stadt.",
-          "choices": ["durch", "für", "gegen", "um"],
-          "correct": "durch",
-          "explanation_ar": "حرف الجر 'durch' يعني 'عبر/خلال' ويتبعه دائماً Akkusativ."
+          "exercise_type": "drag_drop_match",
+          "instruction_ar": "اسحب حرف الجر الصحيح وأسقطه أمام العبارة لتكوين تعبير صحيح مع Akkusativ",
+          "instruction_de": "Ziehen Sie die richtige Präposition und lassen Sie sie vor den Ausdruck fallen",
+          "items": [
+            {
+              "noun_phrase": "___ den Park (حركة نحو الداخل)",
+              "correct_drop": "in",
+              "distractors": ["an", "auf", "hinter"],
+              "explanation_ar": "حركة نحو الداخل: in + Akkusativ = in den Park"
+            },
+            {
+              "noun_phrase": "___ die Wand (حركة التصاق)",
+              "correct_drop": "an",
+              "distractors": ["in", "auf", "unter"],
+              "explanation_ar": "حركة الالتصاق بالجدار: an + Akkusativ = an die Wand"
+            },
+            {
+              "noun_phrase": "___ den Tisch (حركة وضع على سطح)",
+              "correct_drop": "auf",
+              "distractors": ["unter", "neben", "hinter"],
+              "explanation_ar": "وضع شيء على الطاولة: auf + Akkusativ = auf den Tisch"
+            },
+            {
+              "noun_phrase": "___ das Haus (حركة إلى داخل - بديل)",
+              "correct_drop": "ins",
+              "distractors": ["ans", "aufs", "hinters"],
+              "explanation_ar": "'ins Haus' هي اختصار 'in das Haus' (حركة نحو الداخل)"
+            },
+            {
+              "noun_phrase": "___ das Kino (حركة اتجاه مكان)",
+              "correct_drop": "ins",
+              "distractors": ["ans", "aufs", "unters"],
+              "explanation_ar": "في حالة السينما عادة نقول 'ins Kino gehen' (دخول)"
+            }
+          ]
         },
         {
-          "question": "Wir kämpfen ___ unsere Rechte.",
-          "choices": ["für", "ohne", "wider", "bis"],
-          "correct": "für",
-          "explanation_ar": "حرف الجر 'für' يعني 'من أجل' ويتبعه Akkusativ: für unsere Rechte."
-        },
-        {
-          "question": "Leg das Buch ___ den Tisch.",
-          "choices": ["auf", "unter", "vor", "hinter"],
-          "correct": "auf",
-          "explanation_ar": "حركة وضع الشيء على سطح تأخذ Akkusativ: auf den Tisch."
+          "exercise_type": "sentence_reconstruction",
+          "instruction_ar": "أعد ترتيب الكلمات لتكوين جملة صحيحة باستخدام حرف جر مع Akkusativ",
+          "instruction_de": "Ordnen Sie die Wörter zu einem korrekten Satz mit einer Akkusativ-Präposition",
+          "questions": [
+            {
+              "scrambled_words": ["gehe", "Park", "den", "in", "Ich", "heute"],
+              "correct_sentence": "Ich gehe heute in den Park.",
+              "explanation_ar": "'in' مع حركة + Akkusativ: in den Park."
+            },
+            {
+              "scrambled_words": ["fährt", "Stadt", "die", "durch", "Er"],
+              "correct_sentence": "Er fährt durch die Stadt.",
+              "explanation_ar": "'durch' تطلب Akkusativ دائماً: durch die Stadt."
+            },
+            {
+              "scrambled_words": ["kämpfen", "unsere", "wir", "für", "Rechte", ""],
+              "correct_sentence": "Wir kämpfen für unsere Rechte.",
+              "explanation_ar": "'für' تطلب Akkusativ: für unsere Rechte."
+            },
+            {
+              "scrambled_words": ["geht", "die", "sie", "ohne", "Hilfe", "Es"],
+              "correct_sentence": "Es geht ohne ihre Hilfe.",
+              "explanation_ar": "'ohne' تطلب Akkusativ: ohne ihre Hilfe."
+            },
+            {
+              "scrambled_words": ["Baum", "rennt", "den", "gegen", "Das", "Auto"],
+              "correct_sentence": "Das Auto rennt gegen den Baum.",
+              "explanation_ar": "'gegen' تعني 'ضد/في' وتطلب Akkusativ: gegen den Baum."
+            }
+          ]
         }
       ]
     },
     {
       "grammar_topic": "Wechselpräpositionen (Dativ vs. Akkusativ)",
-      "questions": [
+      "exercises": [
         {
-          "question": "Das Bild hängt ___ der Wand.",
-          "choices": ["an", "auf", "in", "unter"],
-          "correct": "an",
-          "explanation_ar": "مكان ثابت (لا حركة) يأخذ Dativ: an der Wand."
+          "exercise_type": "multiple_choice",
+          "instruction_ar": "اختر الحالة الصحيحة (Dativ أو Akkusativ) بعد حرف الجر حسب المعنى (مكان ثابت أو حركة)",
+          "instruction_de": "Wählen Sie den richtigen Fall (Dativ oder Akkusativ) nach der Präposition je nach Bedeutung (Ort vs. Richtung)",
+          "questions": [
+            {
+              "question": "Das Bild hängt ___ der Wand.",
+              "choices": ["an", "auf", "in", "unter"],
+              "correct": "an",
+              "explanation_ar": "مكان ثابت (لا حركة) يأخذ Dativ: an der Wand. السؤال يختبر معرفة أن 'an' هنا مع Dativ لأنها تدل على مكان وليس اتجاه."
+            },
+            {
+              "question": "Ich stelle die Vase ___ den Tisch.",
+              "choices": ["auf", "neben", "zwischen", "vor"],
+              "correct": "auf",
+              "explanation_ar": "حركة وضع (اتجاه) تأخذ Akkusativ: auf den Tisch."
+            },
+            {
+              "question": "Die Katze schläft ___ dem Bett.",
+              "choices": ["unter", "über", "hinter", "vor"],
+              "correct": "unter",
+              "explanation_ar": "مكان ثابت (نوم) يأخذ Dativ: unter dem Bett."
+            }
+          ]
         },
         {
-          "question": "Ich stelle die Vase ___ den Tisch.",
-          "choices": ["auf", "neben", "zwischen", "vor"],
-          "correct": "auf",
-          "explanation_ar": "حركة وضع (اتجاه) تأخذ Akkusativ: auf den Tisch."
+          "exercise_type": "fill_in_blank",
+          "instruction_ar": "اكتب artikel الصحيح في الفراغ (der/die/das/den/dem) بعد اختيار الحالة المناسبة",
+          "instruction_de": "Schreiben Sie den richtigen Artikel in die Lücke nach Wahl des passenden Falls",
+          "questions": [
+            {
+              "question_sentence": "Wir gehen ___ ___ Kino. (in + das)",
+              "correct": "ins",
+              "explanation_ar": "حركة دخول (اتجاه) تأخذ Akkusativ: in das Kino → ins Kino."
+            },
+            {
+              "question_sentence": "Sie sitzt ___ ___ mir. (neben + ich)",
+              "correct": "neben mir",
+              "explanation_ar": "مكان ثابت (جلوس) يأخذ Dativ: neben mir."
+            },
+            {
+              "question_sentence": "Leg das Heft ___ ___ Tisch. (auf + der)",
+              "correct": "auf den",
+              "explanation_ar": "حركة وضع (اتجاه) تأخذ Akkusativ: auf den Tisch."
+            },
+            {
+              "question_sentence": "Das Buch liegt ___ ___ Tisch. (auf + der)",
+              "correct": "auf dem",
+              "explanation_ar": "مكان ثابت (موجود بالفعل) يأخذ Dativ: auf dem Tisch."
+            },
+            {
+              "question_sentence": "Ich hänge das Bild ___ ___ Wand. (an + die)",
+              "correct": "an die",
+              "explanation_ar": "حركة تعليق (اتجاه) تأخذ Akkusativ: an die Wand."
+            },
+            {
+              "question_sentence": "Das Bild hängt ___ ___ Wand. (an + die)",
+              "correct": "an der",
+              "explanation_ar": "مكان ثابت (معلق بالفعل) يأخذ Dativ: an der Wand."
+            }
+          ]
         },
         {
-          "question": "Die Katze schläft ___ dem Bett.",
-          "choices": ["unter", "über", "hinter", "vor"],
-          "correct": "unter",
-          "explanation_ar": "مكان ثابت (نوم) يأخذ Dativ: unter dem Bett."
+          "exercise_type": "drag_drop_match",
+          "instruction_ar": "اسحب حرف الجر + artikel الصحيح وأسقطه في الجملة حسب المعنى (WO? = Dativ / WOHIN? = Akkusativ)",
+          "instruction_de": "Ziehen Sie die richtige Präposition + Artikel und lassen Sie sie in den Satz fallen (WO? = Dativ / WOHIN? = Akkusativ)",
+          "items": [
+            {
+              "noun_phrase": "Das Kind spielt ___ ___ Garten. (in + der, مكان ثابت)",
+              "correct_drop": "im",
+              "distractors": ["ins", "an den", "auf dem"],
+              "explanation_ar": "سؤال 'WO?' = Dativ: in dem Garten → im Garten."
+            },
+            {
+              "noun_phrase": "Das Kind läuft ___ ___ Garten. (in + der, حركة إلى الداخل)",
+              "correct_drop": "in den",
+              "distractors": ["im", "auf den", "unter dem"],
+              "explanation_ar": "سؤال 'WOHIN?' = Akkusativ: in den Garten."
+            },
+            {
+              "noun_phrase": "Die Brille liegt ___ ___ Tisch. (auf + der, مكان ثابت)",
+              "correct_drop": "auf dem",
+              "distractors": ["auf den", "unter dem", "neben den"],
+              "explanation_ar": "سؤال 'WO?' = Dativ: auf dem Tisch."
+            },
+            {
+              "noun_phrase": "Ich setze mich ___ ___ Tisch. (an + der, حركة إلى جانب)",
+              "correct_drop": "an den",
+              "distractors": ["an dem", "auf den", "neben dem"],
+              "explanation_ar": "سؤال 'WOHIN?' = Akkusativ: an den Tisch."
+            },
+            {
+              "noun_phrase": "Der Stuhl steht ___ ___ Tür. (hinter + die, مكان ثابت)",
+              "correct_drop": "hinter der",
+              "distractors": ["hinter die", "vor der", "neben die"],
+              "explanation_ar": "سؤال 'WO?' = Dativ: hinter der Tür."
+            }
+          ]
         },
         {
-          "question": "Wir gehen ___ das Kino.",
-          "choices": ["in", "an", "auf", "hinter"],
-          "correct": "in",
-          "explanation_ar": "حركة دخول (اتجاه) تأخذ Akkusativ: in das Kino."
-        },
-        {
-          "question": "Sie sitzt ___ mir.",
-          "choices": ["neben", "zwischen", "vor", "hinter"],
-          "correct": "neben",
-          "explanation_ar": "مكان ثابت (جلوس) يأخذ Dativ: neben mir."
+          "exercise_type": "sentence_reconstruction",
+          "instruction_ar": "أعد ترتيب الكلمات لتكوين جملة صحيحة مع حرف جر متغير، مع الانتباه إلى WO? (Dativ) أو WOHIN? (Akkusativ)",
+          "instruction_de": "Ordnen Sie die Wörter zu einem korrekten Satz mit einer Wechselpräposition und achten Sie auf WO? (Dativ) oder WOHIN? (Akkusativ)",
+          "questions": [
+            {
+              "scrambled_words": ["liegt", "dem", "Buch", "Tisch", "auf", "Das"],
+              "correct_sentence": "Das Buch liegt auf dem Tisch.",
+              "explanation_ar": "مكان ثابت (WO?) → Dativ: auf dem Tisch."
+            },
+            {
+              "scrambled_words": ["lege", "Buch", "Tisch", "ich", "das", "auf", "den"],
+              "correct_sentence": "Ich lege das Buch auf den Tisch.",
+              "explanation_ar": "حركة وضع (WOHIN?) → Akkusativ: auf den Tisch."
+            },
+            {
+              "scrambled_words": ["hängt", "Wand", "Bild", "der", "Das", "an"],
+              "correct_sentence": "Das Bild hängt an der Wand.",
+              "explanation_ar": "مكان ثابت (WO?) → Dativ: an der Wand."
+            },
+            {
+              "scrambled_words": ["hänge", "Wand", "ich", "Bild", "die", "das", "an"],
+              "correct_sentence": "Ich hänge das Bild an die Wand.",
+              "explanation_ar": "حركة تعليق (WOHIN?) → Akkusativ: an die Wand."
+            },
+            {
+              "scrambled_words": ["schwimmt", "Fisch", "Wasser", "im", "Der"],
+              "correct_sentence": "Der Fisch schwimmt im Wasser.",
+              "explanation_ar": "مكان ثابت (WO?) → Dativ: in dem Wasser = im Wasser."
+            },
+            {
+              "scrambled_words": ["springt", "Fisch", "Wasser", "der", "ins", "Der"],
+              "correct_sentence": "Der Fisch springt ins Wasser.",
+              "explanation_ar": "حركة قفز إلى الداخل (WOHIN?) → Akkusativ: in das Wasser = ins Wasser."
+            }
+          ]
         }
       ]
     },
     {
       "grammar_topic": "Personalpronomen im Akkusativ",
-      "questions": [
+      "exercises": [
         {
-          "question": "Ich sehe ___ im Spiegel. (mich)",
-          "choices": ["mich", "dich", "sich", "uns"],
-          "correct": "mich",
-          "explanation_ar": "الفاعل 'أنا' والمفعول به 'نفسي' في حالة النصب: mich."
+          "exercise_type": "multiple_choice",
+          "instruction_ar": "اختر ضمير النصب الصحيح (mich / dich / ihn / sie / es / uns / euch / sie / Sie)",
+          "instruction_de": "Wählen Sie das richtige Personalpronomen im Akkusativ",
+          "questions": [
+            {
+              "question": "Ich sehe ___ im Spiegel.",
+              "choices": ["mich", "dich", "sich", "uns"],
+              "correct": "mich",
+              "explanation_ar": "الفاعل 'أنا' والمفعول به 'نفسي' في حالة النصب: mich."
+            },
+            {
+              "question": "Kannst du ___ hören? (ich)",
+              "choices": ["mich", "mir", "mich", "dich"],
+              "correct": "mich",
+              "explanation_ar": "الفعل 'hören' يحتاج إلى مفعول به في النصب: mich."
+            },
+            {
+              "question": "Wir laden ___ ein. (du)",
+              "choices": ["dich", "dir", "euch", "uns"],
+              "correct": "dich",
+              "explanation_ar": "فعل 'einladen' مع المخاطب المفرد: dich."
+            }
+          ]
         },
         {
-          "question": "Kannst du ___ hören? (ich -> mich)",
-          "choices": ["mich", "mir", "mich", "dich"],
-          "correct": "mich",
-          "explanation_ar": "الفعل 'hören' يحتاج إلى مفعول به في النصب: mich."
+          "exercise_type": "fill_in_blank",
+          "instruction_ar": "اكتب ضمير النصب الصحيح في الفراغ (mich / dich / ihn / sie / es / uns / euch / sie / Sie)",
+          "instruction_de": "Schreiben Sie das richtige Personalpronomen im Akkusativ in die Lücke",
+          "questions": [
+            {
+              "question_sentence": "Er ruft ___ an. (wir)",
+              "correct": "uns",
+              "explanation_ar": "فعل 'anrufen' مع 'نحن' في النصب: uns."
+            },
+            {
+              "question_sentence": "Ich mag ___ sehr. (meine Schwester - sie)",
+              "correct": "sie",
+              "explanation_ar": "ضمير 'هي' في حالة النصب: sie."
+            },
+            {
+              "question_sentence": "Kannst du ___ bitte sehen? (der Hund - er)",
+              "correct": "ihn",
+              "explanation_ar": "ضمير 'هو' للمذكر في النصب: ihn."
+            },
+            {
+              "question_sentence": "Wir sehen ___ morgen wieder. (ihr - Plural)",
+              "correct": "euch",
+              "explanation_ar": "ضمير 'أنتم' في النصب: euch."
+            },
+            {
+              "question_sentence": "Herr Schmidt, ich rufe ___ später an.",
+              "correct": "Sie",
+              "explanation_ar": "صيغة الاحترام 'Sie' في النصب تبقى 'Sie' (بحرف S كبير)."
+            },
+            {
+              "question_sentence": "Das Kind ist süß. Ich liebe ___ sehr.",
+              "correct": "es",
+              "explanation_ar": "ضمير 'هو' للمحايد (das Kind) في النصب: es."
+            }
+          ]
         },
         {
-          "question": "Wir laden ___ ein. (du -> dich)",
-          "choices": ["dich", "dir", "euch", "uns"],
-          "correct": "dich",
-          "explanation_ar": "فعل 'einladen' مع المخاطب المفرد: dich."
+          "exercise_type": "drag_drop_match",
+          "instruction_ar": "اسحب ضمير النصب الصحيح وأسقطه ليحل محل الاسم الموجود بين قوسين",
+          "instruction_de": "Ziehen Sie das richtige Akkusativpronomen und lassen Sie es fallen, um das eingeklammerte Nomen zu ersetzen",
+          "items": [
+            {
+              "noun_phrase": "Ich liebe (meine Mutter) → Ich liebe ___",
+              "correct_drop": "sie",
+              "distractors": ["ihn", "es", "mich"],
+              "explanation_ar": "Mutter مؤنث مفرد → sie im Akkusativ."
+            },
+            {
+              "noun_phrase": "Siehst du (den Lehrer) → Siehst du ___?",
+              "correct_drop": "ihn",
+              "distractors": ["sie", "es", "dich"],
+              "explanation_ar": "Lehrer مذكر مفرد → ihn im Akkusativ."
+            },
+            {
+              "noun_phrase": "Wir besuchen (das Museum) → Wir besuchen ___",
+              "correct_drop": "es",
+              "distractors": ["ihn", "sie", "uns"],
+              "explanation_ar": "Museum محايد مفرد → es im Akkusativ."
+            },
+            {
+              "noun_phrase": "Ich sehe (dich) im Spiegel → Ich sehe ___ im Spiegel",
+              "correct_drop": "mich",
+              "distractors": ["dich", "sich", "uns"],
+              "explanation_ar": "هنا الفاعل هو 'أنا' والمفعول به هو 'نفسي' → mich."
+            },
+            {
+              "noun_phrase": "Er kennt (unsere Kinder) → Er kennt ___",
+              "correct_drop": "sie",
+              "distractors": ["euch", "uns", "ihnen"],
+              "explanation_ar": "Kinder جمع → sie (هم) im Akkusativ."
+            }
+          ]
         },
         {
-          "question": "Er ruft ___ an. (wir -> uns)",
-          "choices": ["uns", "euch", "sie", "ihn"],
-          "correct": "uns",
-          "explanation_ar": "فعل 'anrufen' مع 'نحن' في النصب: uns."
-        },
-        {
-          "question": "Sie hilft ___ nicht. (ich -> mir) - ملاحظة: helfen مع Dativ",
-          "choices": ["mir", "mich", "sich", "ihr"],
-          "correct": "mir",
-          "explanation_ar": "الفعل 'helfen' يأخذ مفعولاً به في حالة المجرور (Dativ) وليس النصب: mir."
+          "exercise_type": "sentence_reconstruction",
+          "instruction_ar": "أعد ترتيب الكلمات لتكوين جملة صحيحة مع ضمير النصب المناسب",
+          "instruction_de": "Ordnen Sie die Wörter zu einem korrekten Satz mit dem richtigen Akkusativpronomen",
+          "questions": [
+            {
+              "scrambled_words": ["mag", "ich", "nicht", "Kaffee", "ihn", "den"],
+              "correct_sentence": "Ich mag ihn nicht. (oder: Den Kaffee mag ich nicht.)",
+              "explanation_ar": "الضمير 'ihn' يحل محل 'den Kaffee' (مذكر) في النصب."
+            },
+            {
+              "scrambled_words": ["sie", "ein", "laden", "wir", "Party", "zur", "heute"],
+              "correct_sentence": "Wir laden sie heute zur Party ein.",
+              "explanation_ar": "فعل منفصل 'einladen' مع ضمير النصب 'sie' (مؤنث مفرد أو جمع)."
+            },
+            {
+              "scrambled_words": ["dich", "oft", "denke", "ich", "an"],
+              "correct_sentence": "Ich denke oft an dich.",
+              "explanation_ar": "حرف الجر 'an' + Akkusativ مع المخاطب 'dich'."
+            },
+            {
+              "scrambled_words": ["helfen", "kann", "uns", "niemand", "leider"],
+              "correct_sentence": "Leider kann uns niemand helfen.",
+              "explanation_ar": "ملاحظة: 'helfen' يأخذ **Dativ** وليس Akkusativ! 'uns' هنا في Dativ. هذه جملة اختبارية للانتباه."
+            },
+            {
+              "scrambled_words": ["euch", "sehen", "morgen", "wir", "wieder"],
+              "correct_sentence": "Wir sehen euch morgen wieder.",
+              "explanation_ar": "ضمير المخاطب الجمع 'euch' في النصب بعد فعل 'sehen'."
+            }
+          ]
         }
       ]
     },
     {
       "grammar_topic": "Personalpronomen im Dativ",
-      "questions": [
+      "exercises": [
         {
-          "question": "Gib ___ bitte das Buch. (ich)",
-          "choices": ["mir", "mich", "dir", "sich"],
-          "correct": "mir",
-          "explanation_ar": "فعل 'geben' مع المفعول به غير المباشر (لمن؟) يأخذ Dativ: mir."
+          "exercise_type": "multiple_choice",
+          "instruction_ar": "اختر ضمير المجرور الصحيح (mir / dir / ihm / ihr / ihm / uns / euch / ihnen / Ihnen)",
+          "instruction_de": "Wählen Sie das richtige Personalpronomen im Dativ",
+          "questions": [
+            {
+              "question": "Gib ___ bitte das Buch. (ich)",
+              "choices": ["mir", "mich", "dir", "sich"],
+              "correct": "mir",
+              "explanation_ar": "فعل 'geben' مع المفعول به غير المباشر (لمن؟) يأخذ Dativ: mir."
+            },
+            {
+              "question": "Ich danke ___ für die Hilfe. (du)",
+              "choices": ["dir", "dich", "euch", "Sie"],
+              "correct": "dir",
+              "explanation_ar": "الفعل 'danken' يأخذ دائماً Dativ: dir."
+            },
+            {
+              "question": "Es gefällt ___ hier gut. (wir)",
+              "choices": ["uns", "euch", "ihnen", "mir"],
+              "correct": "uns",
+              "explanation_ar": "الفعل 'gefallen' يحتاج إلى Dativ: uns."
+            }
+          ]
         },
         {
-          "question": "Ich danke ___ für die Hilfe. (du)",
-          "choices": ["dir", "dich", "euch", "Sie"],
-          "correct": "dir",
-          "explanation_ar": "الفعل 'danken' يأخذ دائماً Dativ: dir."
+          "exercise_type": "fill_in_blank",
+          "instruction_ar": "اكتب ضمير المجرور الصحيح في الفراغ (mir / dir / ihm / ihr / ihm / uns / euch / ihnen / Ihnen)",
+          "instruction_de": "Schreiben Sie das richtige Personalpronomen im Dativ in die Lücke",
+          "questions": [
+            {
+              "question_sentence": "Ich helfe ___ morgen. (ihr - sie, Singular)",
+              "correct": "ihr",
+              "explanation_ar": "الفعل 'helfen' مع ضمير المؤنث المفرد في Dativ: ihr."
+            },
+            {
+              "question_sentence": "Gehört dieses Auto ___? (Sie - formal)",
+              "correct": "Ihnen",
+              "explanation_ar": "صيغة الاحترام 'Sie' في حالة Dativ تصبح 'Ihnen'."
+            },
+            {
+              "question_sentence": "Der Lehrer erklärt ___ die Grammatik. (wir)",
+              "correct": "uns",
+              "explanation_ar": "الفعل 'erklären' يحتاج إلى Dativ للمفعول به غير المباشر: uns."
+            },
+            {
+              "question_sentence": "Kannst du ___ bitte helfen? (ich)",
+              "correct": "mir",
+              "explanation_ar": "الفعل 'helfen' + Dativ: mir."
+            },
+            {
+              "question_sentence": "Wir haben ___ schon lange nicht geschrieben. (ihr - Plural)",
+              "correct": "euch",
+              "explanation_ar": "الفعل 'schreiben' مع المفعول به غير المباشر (لكم) يأخذ Dativ: euch."
+            },
+            {
+              "question_sentence": "Es tut ___ leid. (ich)",
+              "correct": "mir",
+              "explanation_ar": "التعبير الثابت 'Es tut mir leid' (أنا آسف) يأخذ Dativ: mir."
+            }
+          ]
         },
         {
-          "question": "Es gefällt ___ hier gut. (wir)",
-          "choices": ["uns", "euch", "ihnen", "mir"],
-          "correct": "uns",
-          "explanation_ar": "الفعل 'gefallen' يحتاج إلى Dativ: uns."
+          "exercise_type": "drag_drop_match",
+          "instruction_ar": "اسحب ضمير المجرور الصحيح وأسقطه ليحل محل الاسم أو الضمير الموجود بين قوسين",
+          "instruction_de": "Ziehen Sie das richtige Dativpronomen und lassen Sie es fallen, um das eingeklammerte Nomen oder Pronomen zu ersetzen",
+          "items": [
+            {
+              "noun_phrase": "Ich gebe (meinem Bruder) das Buch → Ich gebe ___ das Buch",
+              "correct_drop": "ihm",
+              "distractors": ["ihr", "dir", "mir"],
+              "explanation_ar": "Bruder مذكر مفرد → ihm im Dativ."
+            },
+            {
+              "noun_phrase": "Sie hilft (ihrer Freundin) → Sie hilft ___",
+              "correct_drop": "ihr",
+              "distractors": ["ihm", "uns", "euch"],
+              "explanation_ar": "Freundin مؤنث مفرد → ihr im Dativ."
+            },
+            {
+              "noun_phrase": "Das Buch gehört (mir) → Das Buch gehört ___",
+              "correct_drop": "mir",
+              "distractors": ["mich", "dir", "ihm"],
+              "explanation_ar": "الملكية للمتكلم: 'mir' في Dativ مع فعل 'gehören'."
+            },
+            {
+              "noun_phrase": "Ich danke (unseren Eltern) → Ich danke ___",
+              "correct_drop": "ihnen",
+              "distractors": ["uns", "euch", "Ihnen"],
+              "explanation_ar": "Eltern جمع → ihnen (لهم) في Dativ."
+            },
+            {
+              "noun_phrase": "Kannst du (den Kindern) helfen? → Kannst du ___ helfen?",
+              "correct_drop": "ihnen",
+              "distractors": ["ihm", "ihr", "euch"],
+              "explanation_ar": "Kindern (جمع Dativ) → ihnen."
+            }
+          ]
         },
         {
-          "question": "Ich helfe ___ morgen. (ihr - sie, Singular)",
-          "choices": ["ihr", "sie", "ihnen", "dir"],
-          "correct": "ihr",
-          "explanation_ar": "الفعل 'helfen' مع ضمير المؤنث المفرد في Dativ: ihr."
-        },
-        {
-          "question": "Gehört dieses Auto ___ ? (Sie - formal)",
-          "choices": ["Ihnen", "dir", "euch", "ihm"],
-          "correct": "Ihnen",
-          "explanation_ar": "صيغة الاحترام 'Sie' في حالة Dativ تصبح 'Ihnen'."
+          "exercise_type": "sentence_reconstruction",
+          "instruction_ar": "أعد ترتيب الكلمات لتكوين جملة صحيحة مع ضمير المجرور المناسب",
+          "instruction_de": "Ordnen Sie die Wörter zu einem korrekten Satz mit dem richtigen Dativpronomen",
+          "questions": [
+            {
+              "scrambled_words": ["danke", "helfen", "für", "dir", "ich", "deine", "Hilfe", "für"],
+              "correct_sentence": "Ich danke dir für deine Hilfe.",
+              "explanation_ar": "الفعل 'danken' يطلب Dativ: dir."
+            },
+            {
+              "scrambled_words": ["schmeckt", "mir", "Das", "Essen"],
+              "correct_sentence": "Das Essen schmeckt mir.",
+              "explanation_ar": "الفعل 'schmecken' يحتاج إلى Dativ للمتذوق: mir."
+            },
+            {
+              "scrambled_words": ["gehört", "Hund", "dieser", "uns", ""],
+              "correct_sentence": "Dieser Hund gehört uns.",
+              "explanation_ar": "فعل 'gehören' يطلب Dativ: uns."
+            },
+            {
+              "scrambled_words": ["fehlt", "Heft", "mir", "Mein"],
+              "correct_sentence": "Mein Heft fehlt mir.",
+              "explanation_ar": "الفعل 'fehlen' يعني 'ينقصني' ويأخذ Dativ: mir."
+            },
+            {
+              "scrambled_words": ["passiert", "Ist", "ihm", "was", "?"],
+              "correct_sentence": "Ist ihm was passiert?",
+              "explanation_ar": "الفعل 'passieren' (يحدث) يأخذ Dativ للمتضرر: ihm."
+            }
+          ]
         }
       ]
     },
     {
       "grammar_topic": "Trennbare Verben (Präsens)",
-      "questions": [
+      "exercises": [
         {
-          "question": "Ich ___ um 7 Uhr ___ . (aufstehen)",
-          "choices": ["stehe ... auf", "aufstehe ...", "stehe ... an", "steh ... auf"],
-          "correct": "stehe ... auf",
-          "explanation_ar": "الفعل المنفصل 'aufstehen' في المضارع: البادئة في نهاية الجملة."
+          "exercise_type": "multiple_choice",
+          "instruction_ar": "اختر الشكل الصحيح للفعل المنفصل في المضارع مع وضع البادئة في المكان المناسب",
+          "instruction_de": "Wählen Sie die richtige Form des trennbaren Verbs im Präsens mit der trennbaren Vorsilbe an der richtigen Position",
+          "questions": [
+            {
+              "question": "Ich ___ um 7 Uhr ___. (aufstehen)",
+              "choices": ["stehe ... auf", "aufstehe ...", "stehe ... an", "steh ... auf"],
+              "correct": "stehe ... auf",
+              "explanation_ar": "الفعل المنفصل 'aufstehen' في المضارع: البادئة في نهاية الجملة والفعل مصروف مع الفاعل 'ich' → stehe auf."
+            },
+            {
+              "question": "Wann ___ du heute ___? (ankommen)",
+              "choices": ["kommst ... an", "ankommst ...", "komme ... an", "kommt ... an"],
+              "correct": "kommst ... an",
+              "explanation_ar": "مع الفاعل 'du'، الفعل 'ankommen' يصبح 'kommst ... an'."
+            },
+            {
+              "question": "Er ___ das Fenster ___. (zumachen)",
+              "choices": ["macht ... zu", "zumacht ...", "mache ... zu", "machst ... zu"],
+              "correct": "macht ... zu",
+              "explanation_ar": "مع 'er'، الفعل 'zumachen' ينفصل: macht ... zu."
+            }
+          ]
         },
         {
-          "question": "Wann ___ du heute ___ ? (ankommen)",
-          "choices": ["kommst ... an", "ankommst ...", "komme ... an", "kommt ... an"],
-          "correct": "kommst ... an",
-          "explanation_ar": "مع الفاعل 'du'، الفعل 'ankommen' يصبح 'kommst ... an'."
+          "exercise_type": "fill_in_blank",
+          "instruction_ar": "اكتب الفعل المنفصل في الشكل الصحيح مع وضع البادئة في نهاية الجملة",
+          "instruction_de": "Schreiben Sie das trennbare Verb in der richtigen Form mit der Vorsilbe am Satzende",
+          "questions": [
+            {
+              "question_sentence": "Wir ___ den Ausflug ___. (absagen)",
+              "correct": "sagen ... ab",
+              "explanation_ar": "مع 'wir' يبقى الفعل على حاله والبادئة في النهاية: sagen ... ab."
+            },
+            {
+              "question_sentence": "___ du mir dein Buch ___? (mitbringen)",
+              "correct": "Bringst ... mit",
+              "explanation_ar": "سؤال مع 'du'، الفعل 'mitbringen' ينفصل: Bringst ... mit."
+            },
+            {
+              "question_sentence": "Die Sonne ___ am Morgen ___. (aufgehen)",
+              "correct": "geht ... auf",
+              "explanation_ar": "مع 'die Sonne' (مؤنث مفرد)، 'aufgehen' → geht ... auf."
+            },
+            {
+              "question_sentence": "Ich ___ meine Hausaufgaben immer vor dem Abendessen ___. (machen)",
+              "correct": "mache ...",
+              "explanation_ar": "الفعل 'machen' ليس منفصلاً. إذا أردت استخدام فعل منفصل، قل: 'Ich mache meine Hausaufgaben immer fertig.' (fertigmachen = ينهي)."
+            },
+            {
+              "question_sentence": "Er ___ den Fernseher ___ und ___ ins Bett ___. (ausmachen + gehen)",
+              "correct": "macht ... aus, geht ...",
+              "explanation_ar": "جملة مركبة: 'ausmachen' → macht ... aus، و 'ins Bett gehen' → geht ... ins Bett (هنا 'gehen' منفصل مع 'ins' اختصار 'in das')."
+            }
+          ]
         },
         {
-          "question": "Er ___ das Fenster ___ . (zumachen)",
-          "choices": ["macht ... zu", "zumacht ...", "mache ... zu", "machst ... zu"],
-          "correct": "macht ... zu",
-          "explanation_ar": "مع 'er'، الفعل 'zumachen' ينفصل: macht ... zu."
+          "exercise_type": "drag_drop_match",
+          "instruction_ar": "اسحب البادئة الصحيحة وأسقطها في نهاية الجملة، ثم اربط الفعل بالشكل المناسب",
+          "instruction_de": "Ziehen Sie die richtige Vorsilbe und lassen Sie sie am Satzende fallen, dann verbinden Sie das Verb mit der richtigen Form",
+          "items": [
+            {
+              "noun_phrase": "Ich (aufstehen) um 7 Uhr ___.",
+              "correct_drop": "auf",
+              "distractors": ["an", "aus", "ein"],
+              "explanation_ar": "aufstehen → البادئة 'auf' في النهاية: Ich stehe um 7 Uhr auf."
+            },
+            {
+              "noun_phrase": "Du (anrufen) deine Mutter ___.",
+              "correct_drop": "an",
+              "distractors": ["auf", "aus", "mit"],
+              "explanation_ar": "anrufen → البادئة 'an': Du rufst deine Mutter an."
+            },
+            {
+              "noun_phrase": "Wir (einladen) unsere Freunde ___.",
+              "correct_drop": "ein",
+              "distractors": ["aus", "an", "mit"],
+              "explanation_ar": "einladen → البادئة 'ein': Wir laden unsere Freunde ein."
+            },
+            {
+              "noun_phrase": "Er (ausgehen) mit seinen Freunden ___.",
+              "correct_drop": "aus",
+              "distractors": ["ein", "an", "auf"],
+              "explanation_ar": "ausgehen → البادئة 'aus': Er geht mit seinen Freunden aus."
+            },
+            {
+              "noun_phrase": "Sie (mitkommen) ins Kino ___.",
+              "correct_drop": "mit",
+              "distractors": ["ein", "aus", "an"],
+              "explanation_ar": "mitkommen → البادئة 'mit': Sie kommt ins Kino mit."
+            }
+          ]
         },
         {
-          "question": "Wir ___ den Ausflug ___ . (absagen)",
-          "choices": ["sagen ... ab", "absagen ...", "sagst ... ab", "sagt ... ab"],
-          "correct": "sagen ... ab",
-          "explanation_ar": "مع 'wir' يبقى الفعل على حاله والبادئة في النهاية: sagen ... ab."
-        },
-        {
-          "question": "___ du mir dein Buch ___ ? (mitbringen)",
-          "choices": ["Bringst ... mit", "Mitbringst ...", "Bringe ... mit", "Bringt ... mit"],
-          "correct": "Bringst ... mit",
-          "explanation_ar": "سؤال مع 'du'، الفعل 'mitbringen' ينفصل: Bringst ... mit."
+          "exercise_type": "sentence_reconstruction",
+          "instruction_ar": "أعد ترتيب الكلمات لتكوين جملة صحيحة مع فعل منفصل (تذكر أن البادئة تذهب إلى نهاية الجملة)",
+          "instruction_de": "Ordnen Sie die Wörter zu einem korrekten Satz mit einem trennbaren Verb (die Vorsilbe kommt ans Satzende)",
+          "questions": [
+            {
+              "scrambled_words": ["um", "stehe", "jeden", "Ich", "auf", "Tag", "7", "Uhr"],
+              "correct_sentence": "Ich stehe jeden Tag um 7 Uhr auf.",
+              "explanation_ar": "aufstehen: الجزء المصرف 'stehe' في الموضع 2، البادئة 'auf' في النهاية."
+            },
+            {
+              "scrambled_words": ["kommst", "Kino", "ins", "mit", "du", "Heute"],
+              "correct_sentence": "Kommst du heute ins Kino mit?",
+              "explanation_ar": "mitkommen: 'kommst' مع 'du'، البادئة 'mit' في النهاية."
+            },
+            {
+              "scrambled_words": ["ein", "lade", "Party", "dich", "meine", "Ich", "zu", "ein"],
+              "correct_sentence": "Ich lade dich zu meiner Party ein.",
+              "explanation_ar": "einladen: 'lade' مصروف مع 'ich'، البادئة 'ein' في النهاية."
+            },
+            {
+              "scrambled_words": ["ab", "sagt", "Lehrer", "Der", "Test", "den", ""],
+              "correct_sentence": "Der Lehrer sagt den Test ab.",
+              "explanation_ar": "absagen: 'sagt' مع 'der Lehrer'، البادئة 'ab' في النهاية."
+            },
+            {
+              "scrambled_words": ["aus", "wieder", "Freundin", "sich", "mit", "Er", "seiner", "versöhnt", "?"],
+              "correct_sentence": "Versöhnt er sich wieder mit seiner Freundin aus?",
+              "explanation_ar": "sich versöhnen (يتصالح) هو فعل منفصل: 'versöhnt' في الموضع 2، البادئة 'aus' في النهاية، والجزء 'sich' في الموضع 3."
+            }
+          ]
         }
       ]
     },
@@ -345,177 +1094,723 @@
       ]
     },
     {
+      "grammar_topic": "Modalverben (können, müssen, wollen)",
+      "exercises": [
+        {
+          "exercise_type": "multiple_choice",
+          "instruction_ar": "اختر الشكل الصحيح للفعل الناقص (Modalverb) حسب الفاعل",
+          "instruction_de": "Wählen Sie die richtige Form des Modalverbs je nach Subjekt",
+          "questions": [
+            {
+              "question": "Ich ___ Deutsch sprechen.",
+              "choices": ["kann", "kannst", "können", "könnt"],
+              "correct": "kann",
+              "explanation_ar": "فعل 'können' مع 'ich' في المضارع: kann."
+            },
+            {
+              "question": "Du ___ heute früher nach Hause gehen.",
+              "choices": ["musst", "muss", "müssen", "müsst"],
+              "correct": "musst",
+              "explanation_ar": "فعل 'müssen' مع 'du' يصبح 'musst'."
+            },
+            {
+              "question": "Wir ___ einen neuen Lehrer bekommen.",
+              "choices": ["wollen", "will", "willst", "wollt"],
+              "correct": "wollen",
+              "explanation_ar": "فعل 'wollen' مع 'wir' يبقى 'wollen' (نفس صيغة المصدر)."
+            }
+          ]
+        },
+        {
+          "exercise_type": "fill_in_blank",
+          "instruction_ar": "اكتب الفعل الناقص الصحيح في الفراغ بالشكل المناسب (kann, kann, mag, muss, soll, will, darf, etc.)",
+          "instruction_de": "Schreiben Sie das richtige Modalverb in der korrekten Form in die Lücke",
+          "questions": [
+            {
+              "question_sentence": "___ ihr mir helfen? (können)",
+              "correct": "Könnt",
+              "explanation_ar": "فعل 'können' مع 'ihr' يصبح 'könnt'."
+            },
+            {
+              "question_sentence": "Sie (formell) ___ das nicht machen. (dürfen)",
+              "correct": "dürfen",
+              "explanation_ar": "مع صيغة الاحترام 'Sie'، الفعل 'dürfen' يبقى 'dürfen'."
+            },
+            {
+              "question_sentence": "Meine Mutter ___ sehr gut kochen. (können)",
+              "correct": "kann",
+              "explanation_ar": "مع 'Meine Mutter' (هي) → kann."
+            },
+            {
+              "question_sentence": "___ du mir bitte das Salz geben? (können - höfliche Frage)",
+              "correct": "Kannst",
+              "explanation_ar": "طلب مهذب مع 'du' → kannst."
+            },
+            {
+              "question_sentence": "Er ___ unbedingt Arzt werden. (wollen - starke Absicht)",
+              "correct": "will",
+              "explanation_ar": "مع 'er'، 'wollen' → will."
+            },
+            {
+              "question_sentence": "Ihr ___ nicht so viel Lärm machen. (sollen - Verbot/Empfehlung)",
+              "correct": "sollt",
+              "explanation_ar": "مع 'ihr'، 'sollen' → sollt (يجب/ينبغي)."
+            }
+          ]
+        },
+        {
+          "exercise_type": "drag_drop_match",
+          "instruction_ar": "اسحب الفعل الناقص في الشكل الصحيح وأسقطه في الجملة حسب الفاعل والمعنى",
+          "instruction_de": "Ziehen Sie das richtige Modalverb in der korrekten Form und lassen Sie es in den Satz fallen",
+          "items": [
+            {
+              "noun_phrase": "Ich ___ heute früher gehen. (ممنوع - لا أستطيع بسبب مانع)",
+              "correct_drop": "kann nicht",
+              "distractors": ["muss nicht", "will nicht", "darf nicht"],
+              "explanation_ar": "'nicht können' تعني 'لا أستطيع' (عدم القدرة)."
+            },
+            {
+              "noun_phrase": "Du ___ deine Hausaufgaben machen. (إلزام/واجب)",
+              "correct_drop": "musst",
+              "distractors": ["kannst", "willst", "darfst"],
+              "explanation_ar": "'müssen' تعبر عن الإلزام: musst."
+            },
+            {
+              "noun_phrase": "Er ___ ins Kino gehen. (رغبة)",
+              "correct_drop": "will",
+              "distractors": ["muss", "kann", "darf"],
+              "explanation_ar": "'wollen' تعبر عن الرغبة: will."
+            },
+            {
+              "noun_phrase": "Ihr ___ hier nicht rauchen. (ممنوع - إذن سلبي)",
+              "correct_drop": "dürft nicht",
+              "distractors": ["könnt nicht", "müsst nicht", "wollt nicht"],
+              "explanation_ar": "'nicht dürfen' تعني 'ممنوع' (لا يُسمح)."
+            },
+            {
+              "noun_phrase": "Sie ___ bitte lauter sprechen. (طلب مهذب)",
+              "correct_drop": "können",
+              "distractors": ["müssen", "wollen", "dürfen"],
+              "explanation_ar": "طلب مهذب مع 'Sie' ('أنتم' بصيغة الاحترام) → können Sie bitte."
+            }
+          ]
+        },
+        {
+          "exercise_type": "sentence_reconstruction",
+          "instruction_ar": "أعد ترتيب الكلمات لتكوين جملة صحيحة مع فعل ناقص (Modalverb) + فعل أساسي في المصدر في نهاية الجملة",
+          "instruction_de": "Ordnen Sie die Wörter zu einem korrekten Satz mit einem Modalverb + Vollverb im Infinitiv am Satzende",
+          "questions": [
+            {
+              "scrambled_words": ["kann", "gut", "schwimmen", "Ich"],
+              "correct_sentence": "Ich kann gut schwimmen.",
+              "explanation_ar": "Modalverb 'kann' في الموضع 2، الفعل الأساسي 'schwimmen' في المصدر في النهاية."
+            },
+            {
+              "scrambled_words": ["früher", "müssen", "wir", "heute", "gehen", "?"],
+              "correct_sentence": "Müssen wir heute früher gehen?",
+              "explanation_ar": "في السؤال: 'müssen' في الموضع 1، الفاعل 'wir'، والفعل 'gehen' في النهاية."
+            },
+            {
+              "scrambled_words": ["will", "Arzt", "werden", "Er", "unbedingt"],
+              "correct_sentence": "Er will unbedingt Arzt werden.",
+              "explanation_ar": "'will' (Modalverb) + 'werden' (فعل أساسي) في المصدر في النهاية."
+            },
+            {
+              "scrambled_words": ["nicht", "dürfen", "du", "das", "tun"],
+              "correct_sentence": "Du darfst das nicht tun.",
+              "explanation_ar": "النفي 'nicht' يأتي قبل الفعل الأساسي 'tun' في النهاية."
+            },
+            {
+              "scrambled_words": ["sollen", "wir", "um", "kommen", "?", "8", "Uhr"],
+              "correct_sentence": "Sollen wir um 8 Uhr kommen?",
+              "explanation_ar": "سؤال مع 'sollen' (سؤال عن نصيحة/اقتراح)."
+            },
+            {
+              "scrambled_words": ["Können", "morgen", "Sie", "mir", "helfen"],
+              "correct_sentence": "Können Sie mir morgen helfen?",
+              "explanation_ar": "طلب مهذب مع صيغة الاحترام 'Sie'."
+            }
+          ]
+        }
+      ]
+    },
+    {
       "grammar_topic": "Perfekt mit 'haben' oder 'sein'",
-      "questions": [
+      "exercises": [
         {
-          "question": "Ich ___ gestern einen Film gesehen.",
-          "choices": ["habe", "bin", "hat", "ist"],
-          "correct": "habe",
-          "explanation_ar": "الفعل 'sehen' يتعدى إلى مفعول به، لذا يُصاغ Perfekt مع 'haben'."
+          "exercise_type": "multiple_choice",
+          "instruction_ar": "اختر الفعل المساعد الصحيح (haben أو sein) لبناء زمن Perfekt",
+          "instruction_de": "Wählen Sie das richtige Hilfsverb (haben oder sein) für das Perfekt",
+          "questions": [
+            {
+              "question": "Ich ___ gestern einen Film gesehen.",
+              "choices": ["habe", "bin", "hat", "ist"],
+              "correct": "habe",
+              "explanation_ar": "الفعل 'sehen' يتعدى إلى مفعول به، لذا يُصاغ Perfekt مع 'haben'."
+            },
+            {
+              "question": "Er ___ nach Berlin gefahren.",
+              "choices": ["ist", "hat", "sind", "haben"],
+              "correct": "ist",
+              "explanation_ar": "أفعال الحركة من مكان إلى آخر (fahren) تأخذ 'sein' في Perfekt."
+            },
+            {
+              "question": "Wir ___ im Park geblieben.",
+              "choices": ["sind", "haben", "seid", "hat"],
+              "correct": "sind",
+              "explanation_ar": "الفعل 'bleiben' يدل على تغيير حالة وليس حركة، لكنه يأخذ 'sein'."
+            }
+          ]
         },
         {
-          "question": "Er ___ nach Berlin gefahren.",
-          "choices": ["ist", "hat", "sind", "haben"],
-          "correct": "ist",
-          "explanation_ar": "أفعال الحركة من مكان إلى آخر (fahren) تأخذ 'sein' في Perfekt."
+          "exercise_type": "fill_in_blank",
+          "instruction_ar": "اكتب الفعل المساعد الصحيح في الفراغ (habe / hast / hat / haben / habt / bin / bist / ist / sind / seid)",
+          "instruction_de": "Schreiben Sie das richtige Hilfsverb in die Lücke",
+          "questions": [
+            {
+              "question_sentence": "Du ___ viel gearbeitet.",
+              "correct": "hast",
+              "explanation_ar": "الفعل 'arbeiten' لا يدل على حركة أو تغير حالة، لذا 'haben' مع 'du' → hast."
+            },
+            {
+              "question_sentence": "Sie (Plural) ___ gestern angekommen.",
+              "correct": "sind",
+              "explanation_ar": "الفعل 'ankommen' يدل على حركة وصول، لذا يأخذ 'sein' مع الجمع → sind."
+            },
+            {
+              "question_sentence": "Was ___ du gestern gemacht?",
+              "correct": "hast",
+              "explanation_ar": "الفعل 'machen' متعدٍ (يأخذ مفعولاً به) → 'haben' مع 'du' → hast."
+            },
+            {
+              "question_sentence": "Das Kind ___ schnell eingeschlafen.",
+              "correct": "ist",
+              "explanation_ar": "الفعل 'einschlafen' يدل على تغيير حالة (من يقظة إلى نوم) → sein: ist eingeschlafen."
+            },
+            {
+              "question_sentence": "Wir ___ den ganzen Tag im Park gespielt.",
+              "correct": "haben",
+              "explanation_ar": "الفعل 'spielen' لا يدل على حركة أو تغير حالة → haben: haben gespielt."
+            },
+            {
+              "question_sentence": "Ihr ___ gestern nicht im Büro gewesen.",
+              "correct": "seid",
+              "explanation_ar": "الفعل 'sein' نفسه يأخذ 'sein' كمساعد في Perfekt: seid gewesen."
+            },
+            {
+              "question_sentence": "Die Blumen ___ wunderschön geblüht.",
+              "correct": "haben",
+              "explanation_ar": "الفعل 'blühen' (يزهر) لا يدل على حركة مكانية → haben geblüht."
+            }
+          ]
         },
         {
-          "question": "Wir ___ im Park geblieben.",
-          "choices": ["sind", "haben", "seid", "hat"],
-          "correct": "sind",
-          "explanation_ar": "الفعل 'bleiben' يدل على تغيير حالة وليس حركة، لكنه يأخذ 'sein'."
+          "exercise_type": "drag_drop_match",
+          "instruction_ar": "اسحب الفعل المساعد الصحيح (haben أو sein) وأسقطه مع تصريفه المناسب للفاعل",
+          "instruction_de": "Ziehen Sie das richtige Hilfsverb (haben oder sein) und lassen Sie es in konjugierter Form fallen",
+          "items": [
+            {
+              "noun_phrase": "Ich ___ aufgestanden. (stehen → تغيير وضعية)",
+              "correct_drop": "bin",
+              "distractors": ["habe", "ist", "hat"],
+              "explanation_ar": "فعل 'aufstehen' يدل على تغيير وضعية → sein مع 'ich': bin."
+            },
+            {
+              "noun_phrase": "Er ___ das Buch gelesen. (lesen + مفعول به)",
+              "correct_drop": "hat",
+              "distractors": ["ist", "bin", "sind"],
+              "explanation_ar": "الفعل المتعدي (يأخذ مفعولاً به) → haben: hat gelesen."
+            },
+            {
+              "noun_phrase": "Wir ___ schwimmen gewesen. (غاية/نشاط)",
+              "correct_drop": "sind",
+              "distractors": ["haben", "seid", "hat"],
+              "explanation_ar": "'schwimmen gewesen' (ذهبنا للسباحة) → sein: sind gewesen."
+            },
+            {
+              "noun_phrase": "Sie ___ 10 Kilometer gelaufen. (رياضة/حركة)",
+              "correct_drop": "ist",
+              "distractors": ["hat", "sind", "habe"],
+              "explanation_ar": "فعل الحركة 'laufen' يأخذ 'sein' مع المفرد → ist gelaufen."
+            },
+            {
+              "noun_phrase": "Ihr ___ mich nicht verstanden.",
+              "correct_drop": "habt",
+              "distractors": ["seid", "hast", "sind"],
+              "explanation_ar": "الفعل 'verstehen' متعدٍ (يأخذ مفعولاً به 'mich') → haben مع 'ihr': habt."
+            }
+          ]
         },
         {
-          "question": "Du ___ viel gearbeitet.",
-          "choices": ["hast", "bist", "habe", "bin"],
-          "correct": "hast",
-          "explanation_ar": "الفعل 'arbeiten' لا يدل على حركة أو تغير حالة، لذا 'haben'."
-        },
-        {
-          "question": "Sie (Plural) ___ gestern angekommen.",
-          "choices": ["sind", "haben", "seid", "habt"],
-          "correct": "sind",
-          "explanation_ar": "الفعل 'ankommen' يدل على حركة وصول، لذا يأخذ 'sein'."
+          "exercise_type": "sentence_reconstruction",
+          "instruction_ar": "أعد ترتيب الكلمات لتكوين جملة في زمن Perfekt مع اختيار الفعل المساعد الصحيح",
+          "instruction_de": "Ordnen Sie die Wörter zu einem korrekten Satz im Perfekt mit dem richtigen Hilfsverb",
+          "questions": [
+            {
+              "scrambled_words": ["gestern", "habe", "ich", "einen", "gesehen", "Film"],
+              "correct_sentence": "Ich habe gestern einen Film gesehen.",
+              "explanation_ar": "sehen (متعدٍ) → haben: habe gesehen. ترتيب Perfekt: haben + Partizip II في النهاية."
+            },
+            {
+              "scrambled_words": ["nach", "ist", "Berlin", "gefahren", "Er"],
+              "correct_sentence": "Er ist nach Berlin gefahren.",
+              "explanation_ar": "fahren (حركة من مكان إلى آخر) → sein: ist gefahren."
+            },
+            {
+              "scrambled_words": ["geblieben", "zuhause", "sind", "wir"],
+              "correct_sentence": "Wir sind zuhause geblieben.",
+              "explanation_ar": "bleiben (تغيير حالة - بقاء في المكان) → sein: sind geblieben."
+            },
+            {
+              "scrambled_words": ["geschlafen", "hat", "heute", "lange", "Der", "Hund"],
+              "correct_sentence": "Der Hund hat heute lange geschlafen.",
+              "explanation_ar": "schlafen (لا حركة، لا مفعول به مباشر لكنه فعل لازم غير حركي في هذا السياق) → haben: hat geschlafen."
+            },
+            {
+              "scrambled_words": ["gestorben", "ist", "letztes", "Opa", "Jahr", "Mein"],
+              "correct_sentence": "Mein Opa ist letztes Jahr gestorben.",
+              "explanation_ar": "sterben (تغيير حالة جذري - حياة إلى موت) → sein: ist gestorben."
+            },
+            {
+              "scrambled_words": ["geworden", "Lehrerin", "ist", "sehr", "Sie", "gute", "eine"],
+              "correct_sentence": "Sie ist eine sehr gute Lehrerin geworden.",
+              "explanation_ar": "werden (تغيير حالة - تحول) → sein: ist geworden."
+            }
+          ]
         }
       ]
     },
     {
       "grammar_topic": "Nebensätze mit 'dass'",
-      "questions": [
+      "exercises": [
         {
-          "question": "Ich weiß, ___ du recht hast.",
-          "choices": ["dass", "das", "daß", "dass"],
-          "correct": "dass",
-          "explanation_ar": "حرف العطف 'dass' يربط جملة رئيسية بجملة ثانوية (أن)."
+          "exercise_type": "multiple_choice",
+          "instruction_ar": "اختر الرابط الصحيح (dass أو das) لإكمال الجملة",
+          "instruction_de": "Wählen Sie die richtige Konjunktion (dass oder das) für den Satz",
+          "questions": [
+            {
+              "question": "Ich weiß, ___ du recht hast.",
+              "choices": ["dass", "das", "daß", "dass"],
+              "correct": "dass",
+              "explanation_ar": "حرف العطف 'dass' يربط جملة رئيسية بجملة ثانوية (أن)."
+            },
+            {
+              "question": "Er sagt, ___ er morgen kommt.",
+              "choices": ["dass", "das", "die", "der"],
+              "correct": "dass",
+              "explanation_ar": "بعد أفعال القول يأتي 'dass' لربط الجملة المذكورة."
+            },
+            {
+              "question": "___ ist mein Buch.",
+              "choices": ["Das", "Dass", "Daß", "Das"],
+              "correct": "Das",
+              "explanation_ar": "هنا 'das' اسم إشارة (هذا) وليس حرف عطف."
+            }
+          ]
         },
         {
-          "question": "Er sagt, ___ er morgen kommt.",
-          "choices": ["dass", "das", "die", "der"],
-          "correct": "dass",
-          "explanation_ar": "بعد أفعال القول يأتي 'dass' لربط الجملة المذكورة."
+          "exercise_type": "fill_in_blank",
+          "instruction_ar": "اكتب 'dass' في الفراغ إذا كانت الجملة تحتاج إلى حرف عطف، أو 'das' إذا كانت اسم إشارة أو أداة تعريف",
+          "instruction_de": "Schreiben Sie 'dass' in die Lücke, wenn eine Konjunktion benötigt wird, oder 'das', wenn es sich um ein Demonstrativ- oder Relativpronomen handelt",
+          "questions": [
+            {
+              "question_sentence": "Es ist schade, ___ du nicht kommen kannst.",
+              "correct": "dass",
+              "explanation_ar": "التعبير 'Es ist schade, dass...' يعني 'من المؤسف أن...'."
+            },
+            {
+              "question_sentence": "Ich hoffe, ___ alles gut wird.",
+              "correct": "dass",
+              "explanation_ar": "بعد فعل 'hoffen' نستخدم 'dass' للتعبير عن الأمل."
+            },
+            {
+              "question_sentence": "___ Wetter ist heute schön.",
+              "correct": "Das",
+              "explanation_ar": "هنا 'Das' أداة تعريف (الطقس) أو اسم إشارة (هذا الطقس)."
+            },
+            {
+              "question_sentence": "Ich glaube nicht, ___ er die Wahrheit sagt.",
+              "correct": "dass",
+              "explanation_ar": "بعد فعل 'glauben' مع نفي: 'dass' تقدم جملة ثانوية."
+            },
+            {
+              "question_sentence": "Sie freut sich, ___ du gekommen bist.",
+              "correct": "dass",
+              "explanation_ar": "بعد 'sich freuen' (يفرح بأن) نستخدم 'dass'."
+            },
+            {
+              "question_sentence": "Weißt du, ___ ich meine Tasche gelassen habe?",
+              "correct": "wo",
+              "explanation_ar": "ملاحظة: هذه الجملة تحتاج إلى كلمة استفهام غير مباشر 'wo' (أين) وليس 'dass'."
+            }
+          ]
         },
         {
-          "question": "Es ist schade, ___ du nicht kommen kannst.",
-          "choices": ["dass", "das", "denn", "weil"],
-          "correct": "dass",
-          "explanation_ar": "التعبير 'Es ist schade, dass...' يعني 'من المؤسف أن...'."
+          "exercise_type": "drag_drop_match",
+          "instruction_ar": "اسحب 'dass' أو 'das' وأسقطه في المكان المناسب في الجملة",
+          "instruction_de": "Ziehen Sie 'dass' oder 'das' und lassen Sie es an die richtige Stelle im Satz fallen",
+          "items": [
+            {
+              "noun_phrase": "Ich denke, ___ du recht hast.",
+              "correct_drop": "dass",
+              "distractors": ["das", "die", "der"],
+              "explanation_ar": "بعد 'denken' + جملة ثانوية → dass."
+            },
+            {
+              "noun_phrase": "___ ist genau ___ Problem.",
+              "correct_drop": "Das, das",
+              "distractors": ["Dass, dass", "Das, dass", "Dass, das"],
+              "explanation_ar": "الأولى اسم إشارة 'Das' (هذا)، الثانية أداة تعريف 'das Problem' (المشكلة)."
+            },
+            {
+              "noun_phrase": "Er bedauert, ___ er zu spät gekommen ist.",
+              "correct_drop": "dass",
+              "distractors": ["das", "ob", "weil"],
+              "explanation_ar": "بعد 'bedauern' (يندم على أن) → dass."
+            },
+            {
+              "noun_phrase": "___ Haus, ___ dort steht, ist sehr alt.",
+              "correct_drop": "Das, das",
+              "distractors": ["Dass, dass", "Das, dass", "Dass, das"],
+              "explanation_ar": "'Das Haus' (أداة تعريف)، 'das dort steht' (اسم موصول)."
+            },
+            {
+              "noun_phrase": "Es ist wichtig, ___ du pünktlich bist.",
+              "correct_drop": "dass",
+              "distractors": ["das", "ob", "wenn"],
+              "explanation_ar": "التعبير 'Es ist wichtig, dass...' (من المهم أن...)."
+            }
+          ]
         },
         {
-          "question": "Ich hoffe, ___ alles gut wird.",
-          "choices": ["dass", "das", "ob", "wenn"],
-          "correct": "dass",
-          "explanation_ar": "بعد فعل 'hoffen' نستخدم 'dass' للتعبير عن الأمل."
-        },
-        {
-          "question": "___ ist mein Buch.",
-          "choices": ["Das", "Dass", "Daß", "Das"],
-          "correct": "Das",
-          "explanation_ar": "هنا 'das' اسم إشارة (هذا) وليس حرف عطف."
+          "exercise_type": "sentence_reconstruction",
+          "instruction_ar": "أعد ترتيب الكلمات لتكوين جملة صحيحة تحتوي على جملة ثانوية مع 'dass' (تذكر أن الفعل في الجملة الثانوية يذهب إلى النهاية)",
+          "instruction_de": "Ordnen Sie die Wörter zu einem korrekten Satz mit einem 'dass'-Nebensatz (das Verb im Nebensatz kommt ans Ende)",
+          "questions": [
+            {
+              "scrambled_words": ["dass", "Ich", "weiß", "recht", "hast", "du"],
+              "correct_sentence": "Ich weiß, dass du recht hast.",
+              "explanation_ar": "الجملة الرئيسية 'Ich weiß'، ثم 'dass'، ثم الجملة الثانوية الفعل 'hast' في النهاية."
+            },
+            {
+              "scrambled_words": ["morgen", "sagt", "dass", "Er", "er", "kommt"],
+              "correct_sentence": "Er sagt, dass er morgen kommt.",
+              "explanation_ar": "الفعل 'sagt' في الجملة الرئيسية، الجملة الثانوية مع 'dass' والفعل 'kommt' في النهاية."
+            },
+            {
+              "scrambled_words": ["nicht", "schade", "ist", "Es", "dass", "kommst", "du"],
+              "correct_sentence": "Es ist schade, dass du nicht kommst.",
+              "explanation_ar": "الجملة الرئيسية 'Es ist schade'، ثم 'dass'، الجملة الثانوية 'du nicht kommst' (الفعل 'kommst' في النهاية)."
+            },
+            {
+              "scrambled_words": ["dass", "Ich", "bin", "glücklich", "da", "bist", "du"],
+              "correct_sentence": "Ich bin glücklich, dass du da bist.",
+              "explanation_ar": "بعد 'glücklich sein' → dass + جملة ثانوية، الفعل 'bist' في النهاية."
+            },
+            {
+              "scrambled_words": ["glaubst", "dass", "er", "das", "kann", "Du", "?"],
+              "correct_sentence": "Glaubst du, dass er das kann?",
+              "explanation_ar": "سؤال مع 'glaubst du'، ثم 'dass'، الجملة الثانوية 'er das kann' (الفعل 'kann' في النهاية)."
+            },
+            {
+              "scrambled_words": ["ist", "dass", "Problem", "wir", "haben", "keine", "Zeit", "Das"],
+              "correct_sentence": "Das Problem ist, dass wir keine Zeit haben.",
+              "explanation_ar": "الجملة الرئيسية 'Das Problem ist'، ثم 'dass'، الجملة الثانوية 'wir keine Zeit haben' (الفعل 'haben' في النهاية)."
+            }
+          ]
         }
       ]
     },
     {
       "grammar_topic": "Relativpronomen (Nominativ)",
-      "questions": [
+      "exercises": [
         {
-          "question": "Der Mann, ___ dort steht, ist mein Lehrer.",
-          "choices": ["der", "die", "das", "den"],
-          "correct": "der",
-          "explanation_ar": "الاسم الموصول يعود على 'Mann' (مذكر) في حالة الرفع: der."
+          "exercise_type": "multiple_choice",
+          "instruction_ar": "اختر الاسم الموصول الصحيح في حالة الرفع (Nominativ) حسب الاسم الذي يسبقه",
+          "instruction_de": "Wählen Sie das richtige Relativpronomen im Nominativ je nach Bezugswort",
+          "questions": [
+            {
+              "question": "Der Mann, ___ dort steht, ist mein Lehrer.",
+              "choices": ["der", "die", "das", "den"],
+              "correct": "der",
+              "explanation_ar": "الاسم الموصول يعود على 'Mann' (مذكر) في حالة الرفع: der."
+            },
+            {
+              "question": "Die Frau, ___ ich meine, ist Ärztin.",
+              "choices": ["die", "der", "den", "das"],
+              "correct": "die",
+              "explanation_ar": "يعود على 'Frau' (مؤنث) في حالة الرفع: die."
+            },
+            {
+              "question": "Das Kind, ___ weint, ist müde.",
+              "choices": ["das", "der", "die", "den"],
+              "correct": "das",
+              "explanation_ar": "يعود على 'Kind' (محايد) في الرفع: das."
+            }
+          ]
         },
         {
-          "question": "Die Frau, ___ ich meine, ist Ärztin.",
-          "choices": ["die", "der", "den", "das"],
-          "correct": "die",
-          "explanation_ar": "يعود على 'Frau' (مؤنث) في حالة الرفع: die."
+          "exercise_type": "fill_in_blank",
+          "instruction_ar": "اكتب الاسم الموصول الصحيح في الفراغ (der / die / das / die) حسب الاسم المذكور",
+          "instruction_de": "Schreiben Sie das richtige Relativpronomen in die Lücke (der / die / das / die)",
+          "questions": [
+            {
+              "question_sentence": "Die Leute, ___ hier wohnen, sind freundlich.",
+              "correct": "die",
+              "explanation_ar": "جمع 'Leute' في الرفع يأخذ 'die' كاسم موصول."
+            },
+            {
+              "question_sentence": "Der Hund, ___ mir gehört, ist braun.",
+              "correct": "der",
+              "explanation_ar": "يعود على 'Hund' (مذكر) في حالة الرفع (الفاعل): der."
+            },
+            {
+              "question_sentence": "Das Mädchen, ___ lacht, ist meine Schwester.",
+              "correct": "das",
+              "explanation_ar": "'Mädchen' محايد (على الرغم من معناه مؤنث) في الرفع: das."
+            },
+            {
+              "question_sentence": "Die Blumen, ___ im Garten wachsen, sind schön.",
+              "correct": "die",
+              "explanation_ar": "جمع مؤنث 'Blumen' في الرفع: die."
+            },
+            {
+              "question_sentence": "Der Professor, ___ die Vorlesung hält, ist berühmt.",
+              "correct": "der",
+              "explanation_ar": "'Professor' مذكر في الرفع: der."
+            },
+            {
+              "question_sentence": "Das Buch, ___ auf dem Tisch liegt, ist neu.",
+              "correct": "das",
+              "explanation_ar": "'Buch' محايد في الرفع: das."
+            }
+          ]
         },
         {
-          "question": "Das Kind, ___ weint, ist müde.",
-          "choices": ["das", "der", "die", "den"],
-          "correct": "das",
-          "explanation_ar": "يعود على 'Kind' (محايد) في الرفع: das."
+          "exercise_type": "drag_drop_match",
+          "instruction_ar": "اسحب الاسم الموصول الصحيح وأسقطه لربط الجملة الثانوية بالاسم الرئيسي",
+          "instruction_de": "Ziehen Sie das richtige Relativpronomen und lassen Sie es fallen, um den Nebensatz mit dem Bezugswort zu verbinden",
+          "items": [
+            {
+              "noun_phrase": "Der Lehrer, ___ uns unterrichtet, kommt aus Berlin.",
+              "correct_drop": "der",
+              "distractors": ["die", "das", "den"],
+              "explanation_ar": "'Lehrer' (مذكر) هو فاعل الجملة الثانوية → Nominativ: der."
+            },
+            {
+              "noun_phrase": "Die Katze, ___ auf dem Dach sitzt, ist weiße.",
+              "correct_drop": "die",
+              "distractors": ["der", "das", "den"],
+              "explanation_ar": "'Katze' (مؤنث) فاعل في الجملة الثانوية → die."
+            },
+            {
+              "noun_phrase": "Das Kind, ___ gerade einschläft, ist erst 2 Jahre alt.",
+              "correct_drop": "das",
+              "distractors": ["der", "die", "den"],
+              "explanation_ar": "'Kind' (محايد) فاعل → das."
+            },
+            {
+              "noun_phrase": "Die Studenten, ___ die Prüfung bestehen, bekommen ein Zertifikat.",
+              "correct_drop": "die",
+              "distractors": ["der", "das", "welche"],
+              "explanation_ar": "جمع 'Studenten' في الرفع → die."
+            },
+            {
+              "noun_phrase": "Der Junge, ___ den Ball geworfen hat, ist mein Bruder.",
+              "correct_drop": "der",
+              "distractors": ["die", "den", "dem"],
+              "explanation_ar": "'Junge' (مذكر) فاعل في الجملة الثانوية → der (ملاحظة: 'Junge' ضعيف لكن في Nominativ يبقى 'der Junge')."
+            }
+          ]
         },
         {
-          "question": "Die Leute, ___ hier wohnen, sind freundlich.",
-          "choices": ["die", "der", "denen", "die"],
-          "correct": "die",
-          "explanation_ar": "جمع 'Leute' في الرفع يأخذ 'die' كاسم موصول."
-        },
-        {
-          "question": "Der Hund, ___ mir gehört, ist braun.",
-          "choices": ["der", "den", "dem", "die"],
-          "correct": "der",
-          "explanation_ar": "الموصول يعود على 'Hund' مذكر في الرفع (الفاعل): der."
+          "exercise_type": "sentence_reconstruction",
+          "instruction_ar": "أعد ترتيب الكلمات لتكوين جملة صحيحة تحتوي على جملة موصولة (Relativsatz) مع اسم موصول في حالة الرفع",
+          "instruction_de": "Ordnen Sie die Wörter zu einem korrekten Satz mit einem Relativsatz im Nominativ",
+          "questions": [
+            {
+              "scrambled_words": ["Mann", "da", "der", "steht", "Lehrer", "Der", "ist", "mein"],
+              "correct_sentence": "Der Mann, der da steht, ist mein Lehrer.",
+              "explanation_ar": "الاسم الموصول 'der' يعود على 'Mann' (مذكر) وهو فاعل الجملة الثانوية 'der da steht'."
+            },
+            {
+              "scrambled_words": ["weint", "das", "Kind", "ist", "müde", "Das"],
+              "correct_sentence": "Das Kind, das weint, ist müde.",
+              "explanation_ar": "'das' يعود على 'Kind' (محايد) كفاعل للجملة الثانوية 'das weint'."
+            },
+            {
+              "scrambled_words": ["wohnen", "Die", "Leute", "hier", "sind", "freundlich", "die"],
+              "correct_sentence": "Die Leute, die hier wohnen, sind freundlich.",
+              "explanation_ar": "جمع 'Leute' + 'die' كاسم موصول جمع في الرفع."
+            },
+            {
+              "scrambled_words": ["hört", "Studentin", "die", "gut", "Die", "Musik", "heißt", "Lea"],
+              "correct_sentence": "Die Studentin, die gut Musik hört, heißt Lea.",
+              "explanation_ar": "'Studentin' (مؤنث) + 'die' كاسم موصول في الرفع."
+            },
+            {
+              "scrambled_words": ["schmeckt", "das", "Kuchen", "lecker", "Der", "mir"],
+              "correct_sentence": "Der Kuchen, der mir schmeckt, ist lecker.",
+              "explanation_ar": "'Kuchen' (مذكر) + 'der' كاسم موصول في الرفع (فاعل 'schmeckt')."
+            },
+            {
+              "scrambled_words": ["gehört", "Das", "mir", "ist", "Haus", "groß", "das"],
+              "correct_sentence": "Das Haus, das mir gehört, ist groß.",
+              "explanation_ar": "'Haus' (محايد) + 'das' كاسم موصول في الرفع (فاعل 'gehört'؟ لا، الفعل 'gehört' يحتاج إلى Dativ لكن الاسم الموصول هنا فاعل الجملة الثانوية هو 'das' الذي يعود على 'Haus')."
+            }
+          ]
         }
       ]
     },
     {
       "grammar_topic": "Vergleiche mit 'als' und 'wie'",
-      "questions": [
+      "exercises": [
         {
-          "question": "Mein Bruder ist älter ___ ich.",
-          "choices": ["als", "wie", "denn", "so"],
-          "correct": "als",
-          "explanation_ar": "للمقارنة بين شيئين مختلفين نستخدم 'als' (أطول من)."
+          "exercise_type": "multiple_choice",
+          "instruction_ar": "اختر الكلمة الصحيحة للمقارنة ('als' أو 'wie')",
+          "instruction_de": "Wählen Sie das richtige Vergleichswort ('als' oder 'wie')",
+          "questions": [
+            {
+              "question": "Mein Bruder ist älter ___ ich.",
+              "choices": ["als", "wie", "denn", "so"],
+              "correct": "als",
+              "explanation_ar": "للمقارنة بين شيئين مختلفين نستخدم 'als' (أطول من)."
+            },
+            {
+              "question": "Sie singt genauso gut ___ ihre Mutter.",
+              "choices": ["wie", "als", "so", "denn"],
+              "correct": "wie",
+              "explanation_ar": "للمساواة نستخدم 'wie' (مثل/كما)."
+            },
+            {
+              "question": "Heute ist es wärmer ___ gestern.",
+              "choices": ["als", "wie", "denn", "so"],
+              "correct": "als",
+              "explanation_ar": "مقارنة تفاضل بين اليوم والأمس: 'als'."
+            }
+          ]
         },
         {
-          "question": "Sie singt genauso gut ___ ihre Mutter.",
-          "choices": ["wie", "als", "so", "denn"],
-          "correct": "wie",
-          "explanation_ar": "للمساواة نستخدم 'wie' (مثل/كما)."
+          "exercise_type": "fill_in_blank",
+          "instruction_ar": "اكتب 'als' أو 'wie' في الفراغ حسب نوع المقارنة",
+          "instruction_de": "Schreiben Sie 'als' oder 'wie' in die Lücke je nach Vergleichsart",
+          "questions": [
+            {
+              "question_sentence": "Er rennt so schnell ___ ein Profi.",
+              "correct": "wie",
+              "explanation_ar": "'so + Adjektiv + wie' تعني 'بنفس... مثل'."
+            },
+            {
+              "question_sentence": "Das Haus ist größer, ___ ich dachte.",
+              "correct": "als",
+              "explanation_ar": "مقارنة مع ما كان متوقعاً: 'als'."
+            },
+            {
+              "question_sentence": "Meine Schwester ist genauso alt ___ ich.",
+              "correct": "wie",
+              "explanation_ar": "مساواة في العمر: 'genauso alt wie'."
+            },
+            {
+              "question_sentence": "Dieser Film ist interessanter ___ der andere.",
+              "correct": "als",
+              "explanation_ar": "مقارنة تفاضل مع Komparativ: 'interessanter als'."
+            },
+            {
+              "question_sentence": "Du arbeitest viel besser ___ dein Kollege.",
+              "correct": "als",
+              "explanation_ar": "Komparativ 'besser' + 'als'."
+            },
+            {
+              "question_sentence": "Nichts ist schöner ___ die Natur.",
+              "correct": "als",
+              "explanation_ar": "النفي + Komparativ + 'als' (لا شيء أجمل من الطبيعة)."
+            },
+            {
+              "question_sentence": "Er sieht ___ ein Rockstar aus.",
+              "correct": "wie",
+              "explanation_ar": "تشبيه بدون Komparativ: 'Er sieht wie ein Rockstar aus' (يبدو مثل نجم روك)."
+            }
+          ]
         },
         {
-          "question": "Heute ist es wärmer ___ gestern.",
-          "choices": ["als", "wie", "denn", "so"],
-          "correct": "als",
-          "explanation_ar": "مقارنة تفاضل بين اليوم والأمس: 'als'."
+          "exercise_type": "drag_drop_match",
+          "instruction_ar": "اسحب 'als' أو 'wie' وأسقطه في الجملة حسب نوع المقارنة (تفاضل أو مساواة)",
+          "instruction_de": "Ziehen Sie 'als' oder 'wie' und lassen Sie es in den Satz fallen (Komparativ vs. Gleichheit)",
+          "items": [
+            {
+              "noun_phrase": "Ich bin älter ___ du.",
+              "correct_drop": "als",
+              "distractors": ["wie", "denn", "so"],
+              "explanation_ar": "Komparativ 'älter' → 'als'."
+            },
+            {
+              "noun_phrase": "Sie ist genauso groß ___ ihre Mutter.",
+              "correct_drop": "wie",
+              "distractors": ["als", "denn", "so"],
+              "explanation_ar": "'genauso + Adjektiv' → 'wie' للمساواة."
+            },
+            {
+              "noun_phrase": "Das Wetter ist heute besser ___ gestern.",
+              "correct_drop": "als",
+              "distractors": ["wie", "denn", "als ob"],
+              "explanation_ar": "Komparativ 'besser' → 'als'."
+            },
+            {
+              "noun_phrase": "Deine Haare sind so lang ___ meine.",
+              "correct_drop": "wie",
+              "distractors": ["als", "denn", "so"],
+              "explanation_ar": "'so + Adjektiv' → 'wie' للمساواة."
+            },
+            {
+              "noun_phrase": "Er verdient mehr ___ sein Chef.",
+              "correct_drop": "als",
+              "distractors": ["wie", "denn", "so"],
+              "explanation_ar": "Komparativ 'mehr' → 'als'."
+            },
+            {
+              "noun_phrase": "Sie kocht anders ___ ihre Mutter.",
+              "correct_drop": "als",
+              "distractors": ["wie", "denn", "so"],
+              "explanation_ar": "'anders als' = يختلف عن (حالة خاصة)."
+            }
+          ]
         },
         {
-          "question": "Er rennt so schnell ___ ein Profi.",
-          "choices": ["wie", "als", "denn", "so"],
-          "correct": "wie",
-          "explanation_ar": "'so + Adjektiv + wie' تعني 'بنفس... مثل'."
-        },
-        {
-          "question": "Das Haus ist größer, ___ ich dachte.",
-          "choices": ["als", "wie", "denn", "so"],
-          "correct": "als",
-          "explanation_ar": "مقارنة مع ما كان متوقعاً: 'als'."
-        }
-      ]
-    },
-    {
-      "grammar_topic": "Konjunktiv II (würde + Infinitiv)",
-      "questions": [
-        {
-          "question": "Ich ___ gerne nach Deutschland reisen.",
-          "choices": ["würde", "würdest", "würden", "würdet"],
-          "correct": "würde",
-          "explanation_ar": "Konjunktiv II للتعبير عن الرغبة أو الاحتمال مع 'ich': würde."
-        },
-        {
-          "question": "Was ___ du an meiner Stelle tun?",
-          "choices": ["würdest", "würde", "würden", "würdet"],
-          "correct": "würdest",
-          "explanation_ar": "مع 'du' في صيغة المؤدبة للسؤال عن الرأي: würdest."
-        },
-        {
-          "question": "Wir ___ mehr Zeit haben, wenn wir früher aufgestanden wären.",
-          "choices": ["würden", "würde", "würdest", "würdet"],
-          "correct": "würden",
-          "explanation_ar": "مع 'wir' في جملة شرطية غير حقيقية: würden."
-        },
-        {
-          "question": "___ Sie mir bitte helfen?",
-          "choices": ["Würden", "Würde", "Würdest", "Würdet"],
-          "correct": "Würden",
-          "explanation_ar": "صيغة الاحترام 'Sie' في الطلب المهذب: Würden."
-        },
-        {
-          "question": "Es ___ schön sein, wenn die Sonne schiene.",
-          "choices": ["würde", "würden", "wär", "wärest"],
-          "correct": "würde",
-          "explanation_ar": "مع الفاعل المحايد 'es' نستخدم 'würde'."
+          "exercise_type": "sentence_reconstruction",
+          "instruction_ar": "أعد ترتيب الكلمات لتكوين جملة مقارنة صحيحة مع 'als' أو 'wie'",
+          "instruction_de": "Ordnen Sie die Wörter zu einem korrekten Vergleichssatz mit 'als' oder 'wie'",
+          "questions": [
+            {
+              "scrambled_words": ["als", "Bruder", "jünger", "Meine", "ist", "Schwester", "mein"],
+              "correct_sentence": "Meine Schwester ist jünger als mein Bruder.",
+              "explanation_ar": "Komparativ 'jünger' + 'als' للمقارنة بين الأخت والأخ."
+            },
+            {
+              "scrambled_words": ["wie", "gut", "Ich", "Fußball", "genauso", "spiele", "mein", "Freund"],
+              "correct_sentence": "Ich spiele genauso gut Fußball wie mein Freund.",
+              "explanation_ar": "'genauso + Adjektiv' + 'wie' للمساواة."
+            },
+            {
+              "scrambled_words": ["als", "Das", "teurer", "ist", "gedacht", "Auto", "ich"],
+              "correct_sentence": "Das Auto ist teurer, als ich gedacht habe.",
+              "explanation_ar": "Komparativ 'teurer' + 'als' + جملة ثانوية (مع الفعل 'habe' في النهاية)."
+            },
+            {
+              "scrambled_words": ["Niagara", "Wie", "ist", "die", "Wasserfälle", "Cataratas", "del", "Iguazu", "so", "sehen", "schön", "wie"],
+              "correct_sentence": "Die Iguazu-Wasserfälle sind genauso schön wie die Niagara-Wasserfälle.",
+              "explanation_ar": "هذا المثال أطول لمقارنة مساواة."
+            },
+            {
+              "scrambled_words": ["als", "rien", "Nichts", "lieber", "ist", "dem", "L", "Freizeit", "als"],
+              "correct_sentence": "Nichts ist lieber als Freizeit.",
+              "explanation_ar": "النفي 'nichts' + Komparativ 'lieber' + 'als'."
+            },
+            {
+              "scrambled_words": ["erwartet", "Die", "länger", "Party", "als", "dauerte", "wir"],
+              "correct_sentence": "Die Party dauerte länger, als wir erwartet haben.",
+              "explanation_ar": "Komparativ 'länger' + 'als' + جملة ثانوية."
+            }
+          ]
         }
       ]
     }

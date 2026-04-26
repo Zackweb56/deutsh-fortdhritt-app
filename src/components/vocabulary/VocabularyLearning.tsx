@@ -189,19 +189,17 @@ export const VocabularyLearning = ({ onScoreUpdate }: VocabularyLearningProps) =
             <BookOpen className="h-6 w-6 text-primary" />
             <h2 className="text-2xl font-bold">اختر مستوى التعلم</h2>
           </div>
-          <div className="overflow-x-auto pb-1">
-            <div className="flex flex-nowrap md:flex-wrap gap-2 sm:gap-4 min-w-max md:min-w-0">
+          <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-6 gap-2 sm:gap-4">
             {levels.map((level) => (
               <Button
                 key={level.level}
                 onClick={() => handleLevelSelect(level.level)}
-                className="h-14 sm:h-20 min-w-[84px] sm:min-w-[96px] text-base sm:text-lg font-bold bg-primary hover:bg-primary/90 text-primary-foreground"
+                className="h-14 sm:h-20 text-base sm:text-lg font-bold bg-primary hover:bg-primary/90 text-primary-foreground w-full rounded-xl sm:rounded-2xl shadow-sm hover:shadow-md transition-all"
                 variant="default"
               >
                 {level.level}
               </Button>
             ))}
-            </div>
           </div>
         </Card>
       </div>
@@ -239,21 +237,37 @@ export const VocabularyLearning = ({ onScoreUpdate }: VocabularyLearningProps) =
               العودة
             </Button>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+          <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
             {currentLevel.categories.map((category) => {
               const shouldLock = limited && category.id > 2;
               return (
-                <LockOverlay key={category.id} isLocked={shouldLock} message="فئات محجوبة — تواصل عبر واتساب لفتح الوصول الكامل">
+                <LockOverlay key={category.id} isLocked={shouldLock} message="فئات محجوبة">
                   <Card
-                    className="overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-200 sm:hover:scale-[1.02] w-full"
+                    className="overflow-hidden cursor-pointer hover:shadow-md transition-all duration-200 sm:hover:scale-[1.02] w-full flex flex-row sm:flex-col items-center sm:items-stretch"
                     onClick={() => handleCategorySelect(category)}
                   >
-                    {/* Card Header - Image Based Size */}
-                    <div className="bg-primary/10 relative flex items-center justify-center">
+                    {/* Mobile Image */}
+                    <div className="sm:hidden bg-primary/10 w-16 h-16 sm:w-full sm:h-44 flex items-center justify-center shrink-0">
                       <img
                         src={category.icon}
                         alt={category.name_arabic}
-                        className="w-full h-36 sm:h-44 object-contain"
+                        className="w-10 h-10 object-contain"
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none';
+                          e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                        }}
+                      />
+                      <div className="absolute inset-0 w-full h-full bg-primary/10 items-center justify-center hidden">
+                        <BookOpen className="w-6 h-6 text-primary" />
+                      </div>
+                    </div>
+
+                    {/* Desktop Image */}
+                    <div className="hidden sm:flex bg-primary/10 relative items-center justify-center">
+                      <img
+                        src={category.icon}
+                        alt={category.name_arabic}
+                        className="w-full h-44 object-contain"
                         onError={(e) => {
                           e.currentTarget.style.display = 'none';
                           e.currentTarget.nextElementSibling?.classList.remove('hidden');
@@ -265,12 +279,14 @@ export const VocabularyLearning = ({ onScoreUpdate }: VocabularyLearningProps) =
                     </div>
 
                     {/* Card Body - Category Information */}
-                    <div className="p-3 sm:p-4 text-center space-y-2 min-w-0">
-                      <h3 className="font-bold text-sm leading-tight">{category.name_arabic}</h3>
-                      <p className="text-xs text-muted-foreground leading-tight">{category.name_german}</p>
-                      <Badge variant="secondary" className="text-xs">
-                        {category.vocab.length} مفردة
-                      </Badge>
+                    <div className="p-3 sm:p-4 text-right sm:text-center space-y-1 sm:space-y-2 flex-1 min-w-0">
+                      <h3 className="font-bold text-sm sm:text-base leading-tight truncate">{category.name_arabic}</h3>
+                      <p className="text-xs text-muted-foreground leading-tight truncate">{category.name_german}</p>
+                      <div className="pt-1 sm:pt-0">
+                        <Badge variant="secondary" className="text-[10px] sm:text-xs">
+                          {category.vocab.length} مفردة
+                        </Badge>
+                      </div>
                     </div>
                   </Card>
                 </LockOverlay>

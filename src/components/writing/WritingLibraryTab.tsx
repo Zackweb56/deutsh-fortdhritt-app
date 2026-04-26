@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState, useCallback } from 'react';
-import { BookOpen, CircleCheckBig, GraduationCap, Keyboard, Lock, Timer, Volume2 } from 'lucide-react';
+import { FileText, CircleCheckBig, GraduationCap, Keyboard, Lock, Timer, Volume2 } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -7,25 +7,25 @@ import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover
 import LockOverlay from '@/components/ui/lock-overlay';
 import { isLimitedAccess } from '@/lib/access';
 import {
-  storiesDataWithVoices as storiesData,
-  type StoryItem,
-  type StoryLevel,
-  type StoryLine,
-  type StoryVocab,
-} from '@/data/stories/storiesData';
+  writingDataWithVoices as writingData,
+  type WritingItem,
+  type WritingLevel,
+  type WritingLine,
+  type WritingVocab,
+} from '@/data/writing/writingData';
 
-type StoryView = 'library' | 'reader' | 'results';
+type WritingView = 'library' | 'reader' | 'results';
 
-interface StoryResults {
+interface WritingResults {
   linesCompleted: number;
   wordsCompleted: number;
   wpm: number;
   accuracy: number;
 }
 
-const levelOrder: StoryLevel[] = ['A1', 'A2', 'B1', 'B2'];
+const levelOrder: WritingLevel[] = ['A1', 'A2', 'B1', 'B2'];
 
-const getLevelBadgeVariant = (level: StoryLevel): 'default' | 'secondary' | 'destructive' | 'outline' => {
+const getLevelBadgeVariant = (level: WritingLevel): 'default' | 'secondary' | 'destructive' | 'outline' => {
   if (level === 'A1' || level === 'A2') return 'secondary';
   if (level === 'B1') return 'outline';
   return 'default';
@@ -68,10 +68,10 @@ const matchScatterAt = (tokens: string[], start: number, parts: string[]): numbe
 };
 
 type ResolvedVocabMatch =
-  | { kind: 'range'; from: number; to: number; vocab: StoryVocab }
-  | { kind: 'scatter'; indices: number[]; vocab: StoryVocab };
+  | { kind: 'range'; from: number; to: number; vocab: WritingVocab }
+  | { kind: 'scatter'; indices: number[]; vocab: WritingVocab };
 
-const findLeftmostVocabMatch = (tokens: string[], vocab: StoryVocab): ResolvedVocabMatch | null => {
+const findLeftmostVocabMatch = (tokens: string[], vocab: WritingVocab): ResolvedVocabMatch | null => {
   const parts = vocabWordParts(vocab.word);
   if (parts.length === 0) return null;
 
@@ -99,7 +99,7 @@ const matchTokenCount = (m: ResolvedVocabMatch): number =>
 const matchCoversIndex = (m: ResolvedVocabMatch, i: number): boolean =>
   m.kind === 'range' ? i >= m.from && i <= m.to : m.indices.includes(i);
 
-const popoverInner = (vocabItem: StoryVocab) => (
+const popoverInner = (vocabItem: WritingVocab) => (
   <div className="space-y-1">
     <p className="font-semibold text-sm sm:text-base" dir="ltr">
       {vocabItem.word}
@@ -115,7 +115,7 @@ const popoverInner = (vocabItem: StoryVocab) => (
   </div>
 );
 
-const vocabTriggerButton = (vocabItem: StoryVocab, label: string, key: string) => (
+const vocabTriggerButton = (vocabItem: WritingVocab, label: string, key: string) => (
   <Popover key={key}>
     <PopoverTrigger asChild>
       <button
@@ -134,12 +134,12 @@ const vocabTriggerButton = (vocabItem: StoryVocab, label: string, key: string) =
 
 const countWords = (text: string) => text.trim().split(/\s+/).filter(Boolean).length;
 
-const bundledStoryAudio = import.meta.glob('/src/data/stories/voices/**/*.mp3', {
+const bundledWritingAudio = import.meta.glob('/src/data/writing/voices/**/*.mp3', {
   eager: true,
   import: 'default',
 }) as Record<string, string>;
 
-const bundledAudioByVoiceSrc = Object.entries(bundledStoryAudio).reduce<Record<string, string>>((acc, [path, url]) => {
+const bundledAudioByVoiceSrc = Object.entries(bundledWritingAudio).reduce<Record<string, string>>((acc, [path, url]) => {
   const marker = '/voices/';
   const markerIndex = path.indexOf(marker);
   if (markerIndex !== -1) {
@@ -152,7 +152,7 @@ const getAudioUrls = (src: string): string[] => {
   const bundled = bundledAudioByVoiceSrc[src];
   if (bundled) return [bundled];
   // Keep runtime fallbacks for existing environments.
-  return [`/${src}`, `/src/data/stories/${src}`];
+  return [`/${src}`, `/src/data/writing/${src}`];
 };
 
 // Preload audio with priority
@@ -184,13 +184,13 @@ const preloadAudioFast = (url: string): Promise<HTMLAudioElement> => {
   });
 };
 
-const StoryLibraryTab = () => {
-  const [view, setView] = useState<StoryView>('library');
-  const [selectedLevel, setSelectedLevel] = useState<'all' | StoryLevel>('A1');
-  const [selectedStoryId, setSelectedStoryId] = useState<string | null>(null);
+const WritingLibraryTab = () => {
+  const [view, setView] = useState<WritingView>('library');
+  const [selectedLevel, setSelectedLevel] = useState<'all' | WritingLevel>('A1');
+  const [selectedWritingId, setSelectedWritingId] = useState<string | null>(null);
   const [lineIndex, setLineIndex] = useState(0);
   const [startedAt, setStartedAt] = useState<number | null>(null);
-  const [result, setResult] = useState<StoryResults | null>(null);
+  const [result, setResult] = useState<WritingResults | null>(null);
   const [typedValue, setTypedValue] = useState('');
   const [lastWrongKey, setLastWrongKey] = useState<string | null>(null);
   const [errorCount, setErrorCount] = useState(0);
@@ -205,30 +205,30 @@ const StoryLibraryTab = () => {
 
   const limited = isLimitedAccess();
 
-  const filteredStories = useMemo(() => {
+  const filteredWriting = useMemo(() => {
     if (selectedLevel === 'all') {
-      return [...storiesData].sort((a, b) => levelOrder.indexOf(a.level) - levelOrder.indexOf(b.level));
+      return [...writingData].sort((a, b) => levelOrder.indexOf(a.level) - levelOrder.indexOf(b.level));
     }
-    return storiesData.filter((s) => s.level === selectedLevel);
+    return writingData.filter((s) => s.level === selectedLevel);
   }, [selectedLevel]);
   
   const levelCounts = useMemo(
     () =>
-      levelOrder.reduce<Record<StoryLevel, number>>((acc, level) => {
-        acc[level] = storiesData.filter((story) => story.level === level).length;
+      levelOrder.reduce<Record<WritingLevel, number>>((acc, level) => {
+        acc[level] = writingData.filter((writing) => writing.level === level).length;
         return acc;
       }, { A1: 0, A2: 0, B1: 0, B2: 0 }),
     []
   );
 
-  const selectedStory = useMemo(
-    () => storiesData.find((story) => story.id === selectedStoryId) || null,
-    [selectedStoryId]
+  const selectedWriting = useMemo(
+    () => writingData.find((writing) => writing.id === selectedWritingId) || null,
+    [selectedWritingId]
   );
 
-  const currentLine = selectedStory?.lines[lineIndex] || null;
+  const currentLine = selectedWriting?.lines[lineIndex] || null;
 
-  const isStoryLocked = (story: StoryItem) => limited && !story.isFree;
+  const isWritingLocked = (writing: WritingItem) => limited && !writing.isFree;
 
   // Preload audio with caching and fallback
   const preloadAudioWithFallback = useCallback(async (src: string): Promise<HTMLAudioElement> => {
@@ -265,7 +265,7 @@ const StoryLibraryTab = () => {
   }, []);
 
   // Play line voice instantly from cache
-  const playLineVoice = useCallback(async (line: StoryLine | null) => {
+  const playLineVoice = useCallback(async (line: WritingLine | null) => {
     if (!line?.voiceSrc) return;
 
     // Stop current audio
@@ -300,7 +300,7 @@ const StoryLibraryTab = () => {
 
   // Play completion sound instantly
   const playPhraseCompleteSfx = useCallback(async () => {
-    const sfxSrc = 'voices/story_phrase_complete.mp3';
+    const sfxSrc = 'voices/writing_phrase_complete.mp3';
     try {
       const sfx = await preloadAudioWithFallback(sfxSrc);
       sfx.currentTime = 0;
@@ -320,12 +320,12 @@ const StoryLibraryTab = () => {
     }
   }, [preloadAudioWithFallback]);
 
-  // Preload all story audio in parallel
-  const preloadStoryAudio = useCallback(async (story: StoryItem) => {
+  // Preload all writing audio in parallel
+  const preloadWritingAudio = useCallback(async (writing: WritingItem) => {
     const preloadPromises: Promise<any>[] = [];
     
     // Preload all line voices
-    for (const line of story.lines) {
+    for (const line of writing.lines) {
       if (line.voiceSrc) {
         preloadPromises.push(
           preloadAudioWithFallback(line.voiceSrc).catch(error => 
@@ -337,7 +337,7 @@ const StoryLibraryTab = () => {
     
     // Preload completion sound
     preloadPromises.push(
-      preloadAudioWithFallback('voices/story_phrase_complete.mp3').catch(error =>
+      preloadAudioWithFallback('voices/writing_phrase_complete.mp3').catch(error =>
         console.warn('Failed to preload completion sound:', error)
       )
     );
@@ -345,10 +345,10 @@ const StoryLibraryTab = () => {
     await Promise.allSettled(preloadPromises);
   }, [preloadAudioWithFallback]);
 
-  const startStory = useCallback((story: StoryItem) => {
-    if (isStoryLocked(story)) return;
+  const startWriting = useCallback((writing: WritingItem) => {
+    if (isWritingLocked(writing)) return;
     
-    setSelectedStoryId(story.id);
+    setSelectedWritingId(writing.id);
     setView('reader');
     setLineIndex(0);
     setStartedAt(Date.now());
@@ -359,8 +359,8 @@ const StoryLibraryTab = () => {
     setLineCompleted(false);
     
     // Start preloading immediately
-    preloadStoryAudio(story);
-  }, [isStoryLocked, preloadStoryAudio]);
+    preloadWritingAudio(writing);
+  }, [isWritingLocked, preloadWritingAudio]);
 
   useEffect(() => {
     if (view === 'reader') {
@@ -411,16 +411,16 @@ const StoryLibraryTab = () => {
 
   // Preload next line proactively
   useEffect(() => {
-    if (!selectedStory || view !== 'reader') return;
+    if (!selectedWriting || view !== 'reader') return;
     
     const nextLineIndex = lineIndex + 1;
-    if (nextLineIndex < selectedStory.lines.length) {
-      const nextLine = selectedStory.lines[nextLineIndex];
+    if (nextLineIndex < selectedWriting.lines.length) {
+      const nextLine = selectedWriting.lines[nextLineIndex];
       if (nextLine?.voiceSrc) {
         preloadAudioWithFallback(nextLine.voiceSrc).catch(console.warn);
       }
     }
-  }, [lineIndex, selectedStory, view, preloadAudioWithFallback]);
+  }, [lineIndex, selectedWriting, view, preloadAudioWithFallback]);
 
   // Update cursor position based on typed characters - handles line wrapping
   useEffect(() => {
@@ -444,8 +444,8 @@ const StoryLibraryTab = () => {
         const containerRect = container.getBoundingClientRect();
         
         // Calculate position relative to container
-        let left = rect.left - containerRect.left;
-        let top = rect.bottom - containerRect.top;
+        const left = rect.left - containerRect.left;
+        const top = rect.bottom - containerRect.top;
         
         // Get the computed styles to find actual font metrics
         const computedStyle = window.getComputedStyle(currentCharSpan);
@@ -492,14 +492,14 @@ const StoryLibraryTab = () => {
     };
   }, [typedValue, currentLine, lineCompleted]);
 
-  const finishStory = () => {
-    if (!selectedStory || !startedAt) return;
-    const linesCompleted = selectedStory.lines.length;
-    const wordsCompleted = selectedStory.lines.reduce((acc, line) => acc + countWords(line.de), 0);
+  const finishWriting = () => {
+    if (!selectedWriting || !startedAt) return;
+    const linesCompleted = selectedWriting.lines.length;
+    const wordsCompleted = selectedWriting.lines.reduce((acc, line) => acc + countWords(line.de), 0);
     const minutes = Math.max((Date.now() - startedAt) / 60000, 1 / 60);
     const wpm = Math.round(wordsCompleted / minutes);
 
-    const totalTypedChars = selectedStory.lines.reduce((acc, line) => acc + line.de.length, 0);
+    const totalTypedChars = selectedWriting.lines.reduce((acc, line) => acc + line.de.length, 0);
     const accuracy =
       totalTypedChars > 0 ? Math.max(0, Math.round(((totalTypedChars - errorCount) / totalTypedChars) * 100)) : 100;
 
@@ -513,9 +513,9 @@ const StoryLibraryTab = () => {
   };
 
   const moveToNextLine = () => {
-    if (!selectedStory) return;
-    if (lineIndex >= selectedStory.lines.length - 1) {
-      finishStory();
+    if (!selectedWriting) return;
+    if (lineIndex >= selectedWriting.lines.length - 1) {
+      finishWriting();
       return;
     }
     setLineIndex((prev) => prev + 1);
@@ -525,18 +525,18 @@ const StoryLibraryTab = () => {
   };
 
   const handleLineCompleted = useCallback(() => {
-    if (!selectedStory || lineCompleted) return;
+    if (!selectedWriting || lineCompleted) return;
 
-    const isLastLine = lineIndex >= selectedStory.lines.length - 1;
+    const isLastLine = lineIndex >= selectedWriting.lines.length - 1;
     setLineCompleted(true);
 
-    // Play completion SFX only between phrases, not when story fully finishes.
+    // Play completion SFX only between phrases, not when writing fully finishes.
     if (!isLastLine) {
       playPhraseCompleteSfx();
     }
 
     window.setTimeout(() => moveToNextLine(), 80);
-  }, [selectedStory, lineIndex, lineCompleted, playPhraseCompleteSfx]);
+  }, [selectedWriting, lineIndex, lineCompleted, playPhraseCompleteSfx]);
 
   const handleTypingInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (!currentLine || lineCompleted) return;
@@ -570,24 +570,24 @@ const StoryLibraryTab = () => {
     }
   };
 
-  const continueToNextStory = () => {
-    if (!selectedStory) {
+  const continueToNextWriting = () => {
+    if (!selectedWriting) {
       setView('library');
       return;
     }
 
-    const currentIndex = storiesData.findIndex((story) => story.id === selectedStory.id);
-    const nextStory = storiesData[currentIndex + 1];
+    const currentIndex = writingData.findIndex((writing) => writing.id === selectedWriting.id);
+    const nextWriting = writingData[currentIndex + 1];
 
-    if (!nextStory || isStoryLocked(nextStory)) {
+    if (!nextWriting || isWritingLocked(nextWriting)) {
       setView('library');
       return;
     }
 
-    startStory(nextStory);
+    startWriting(nextWriting);
   };
 
-  const renderLineWithVocab = (line: StoryLine) => {
+  const renderLineWithVocab = (line: WritingLine) => {
     const tokens = tokenizeLine(line.de);
     const candidates: ResolvedVocabMatch[] = [];
 
@@ -823,27 +823,27 @@ const StoryLibraryTab = () => {
     );
   };
 
-  if (view === 'reader' && selectedStory && currentLine) {
-    const completedLines = Math.min(selectedStory.lines.length, lineIndex + (lineCompleted ? 1 : 0));
+  if (view === 'reader' && selectedWriting && currentLine) {
+    const completedLines = Math.min(selectedWriting.lines.length, lineIndex + (lineCompleted ? 1 : 0));
     const progressPercent =
-      selectedStory.lines.length > 0 ? (completedLines / selectedStory.lines.length) * 100 : 0;
+      selectedWriting.lines.length > 0 ? (completedLines / selectedWriting.lines.length) * 100 : 0;
 
     return (
       <div className="min-h-[80vh] sm:min-h-[72vh] flex flex-col">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs sm:text-sm text-muted-foreground px-2 sm:px-4 py-2 sm:py-3">
           <div className="inline-flex items-center gap-2">
-            <BookOpen className="h-3 w-3 sm:h-4 sm:w-4" />
-            <span className="truncate max-w-[200px] sm:max-w-none">{selectedStory.titleDe}</span>
+            <FileText className="h-3 w-3 sm:h-4 sm:w-4" />
+            <span className="truncate max-w-[200px] sm:max-w-none">{selectedWriting.titleDe}</span>
           </div>
           <div className="inline-flex items-center gap-2">
-            <span className="text-xs sm:text-sm">{lineIndex + 1}/{selectedStory.lines.length}</span>
-            <Badge variant={getLevelBadgeVariant(selectedStory.level)} className="text-xs">{selectedStory.level}</Badge>
+            <span className="text-xs sm:text-sm">{lineIndex + 1}/{selectedWriting.lines.length}</span>
+            <Badge variant={getLevelBadgeVariant(selectedWriting.level)} className="text-xs">{selectedWriting.level}</Badge>
           </div>
         </div>
         <div className="px-2 sm:px-4 pb-2">
           <div className="flex items-center justify-between text-[10px] sm:text-xs text-muted-foreground mb-1.5">
-            <span>تقدم القصة</span>
-            <span>{completedLines}/{selectedStory.lines.length}</span>
+            <span>تقدم الكتابة</span>
+            <span>{completedLines}/{selectedWriting.lines.length}</span>
           </div>
           <div className="h-2 w-full rounded-full bg-muted overflow-hidden">
             <div
@@ -949,11 +949,11 @@ const StoryLibraryTab = () => {
     );
   }
 
-  if (view === 'results' && selectedStory && result) {
+  if (view === 'results' && selectedWriting && result) {
     return (
       <div className="max-w-3xl mx-auto px-3 sm:px-4 space-y-4 sm:space-y-6">
         <Card className="p-4 sm:p-6 md:p-8 text-center space-y-6 sm:space-y-8">
-          <Badge className="mx-auto w-fit text-xs sm:text-sm">اكتملت القصة</Badge>
+          <Badge className="mx-auto w-fit text-xs sm:text-sm">اكتمل التمرين</Badge>
 
           <div className="grid grid-cols-2 gap-4 sm:gap-6">
             <div>
@@ -977,7 +977,7 @@ const StoryLibraryTab = () => {
             </div>
           </div>
 
-          <Button className="w-full sm:w-auto sm:px-10" onClick={continueToNextStory}>
+          <Button className="w-full sm:w-auto sm:px-10" onClick={continueToNextWriting}>
             التالي
           </Button>
         </Card>
@@ -991,18 +991,18 @@ const StoryLibraryTab = () => {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4">
           <div className="flex items-center gap-3">
             <div className="h-9 w-9 sm:h-11 sm:w-11 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-              <BookOpen className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
+              <FileText className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
             </div>
             <div>
-              <h2 className="text-lg sm:text-2xl font-bold">مكتبة القصص</h2>
+              <h2 className="text-lg sm:text-2xl font-bold">مكتبة الكتابة</h2>
               <p className="text-xs sm:text-sm text-muted-foreground">
-                تمارين قصص ألمانية: كتابة الجملة حرفا بحرف ضمن رحلة التعلم
+                تمارين كتابة ألمانية: كتابة الجملة حرفا بحرف ضمن رحلة التعلم
               </p>
             </div>
           </div>
           <div className="text-[10px] sm:text-xs text-muted-foreground flex items-center gap-2">
             <Lock className="h-3 w-3 sm:h-4 sm:w-4" />
-            {limited ? 'مجاني: قصص تجريبية' : 'مدفوع: جميع القصص'}
+            {limited ? 'مجاني: تمارين تجريبية' : 'مدفوع: جميع التمارين'}
           </div>
         </div>
       </Card>
@@ -1015,10 +1015,10 @@ const StoryLibraryTab = () => {
             className="text-xs sm:text-sm flex items-center gap-2"
             onClick={() => setSelectedLevel('all')}
           >
-            <BookOpen className="h-4 w-4" />
+            <FileText className="h-4 w-4" />
             الكل
             <Badge variant="secondary" className="ml-1">
-              {storiesData.length}
+              {writingData.length}
             </Badge>
           </Button>
           {levelOrder.map((level) => (
@@ -1040,28 +1040,28 @@ const StoryLibraryTab = () => {
       </Card>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
-        {filteredStories.map((story) => {
-          const locked = isStoryLocked(story);
-          const wordCount = story.lines.reduce((acc, line) => acc + countWords(line.de), 0);
+        {filteredWriting.map((writing) => {
+          const locked = isWritingLocked(writing);
+          const wordCount = writing.lines.reduce((acc, line) => acc + countWords(line.de), 0);
           const content = (
             <Card
               className="p-3 sm:p-5 h-full cursor-pointer border-border/70 hover:border-primary/40 transition-colors"
-              onClick={() => startStory(story)}
+              onClick={() => startWriting(writing)}
             >
               <div className="flex items-start justify-between gap-2 mb-2 sm:mb-3">
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-sm sm:text-base md:text-lg font-semibold truncate">{story.titleDe}</h3>
-                  <p className="text-xs sm:text-sm text-muted-foreground truncate">{story.titleAr}</p>
+                  <h3 className="text-sm sm:text-base md:text-lg font-semibold truncate">{writing.titleDe}</h3>
+                  <p className="text-xs sm:text-sm text-muted-foreground truncate">{writing.titleAr}</p>
                 </div>
                 <div className="flex flex-col items-end gap-1 sm:gap-2 flex-shrink-0">
-                  {story.isFree ? <Badge variant="secondary" className="text-[10px] sm:text-xs">مجاني</Badge> : <Badge variant="outline" className="text-[10px] sm:text-xs">مدفوع</Badge>}
-                  <Badge variant={getLevelBadgeVariant(story.level)} className="text-[10px] sm:text-xs">{story.level}</Badge>
+                  {writing.isFree ? <Badge variant="secondary" className="text-[10px] sm:text-xs">مجاني</Badge> : <Badge variant="outline" className="text-[10px] sm:text-xs">مدفوع</Badge>}
+                  <Badge variant={getLevelBadgeVariant(writing.level)} className="text-[10px] sm:text-xs">{writing.level}</Badge>
                 </div>
               </div>
 
               <div className="flex items-center gap-3 sm:gap-4 text-[10px] sm:text-xs text-muted-foreground mt-3 sm:mt-6">
                 <span className="inline-flex items-center gap-1">
-                  <CircleCheckBig className="h-3 w-3 sm:h-3.5 sm:w-3.5" /> {story.lines.length} سطر
+                  <CircleCheckBig className="h-3 w-3 sm:h-3.5 sm:w-3.5" /> {writing.lines.length} سطر
                 </span>
                 <span className="inline-flex items-center gap-1">
                   <Timer className="h-3 w-3 sm:h-3.5 sm:w-3.5" /> {wordCount} كلمة
@@ -1070,11 +1070,11 @@ const StoryLibraryTab = () => {
             </Card>
           );
 
-          if (!locked) return <div key={story.id}>{content}</div>;
+          if (!locked) return <div key={writing.id}>{content}</div>;
 
           return (
-            <div key={story.id}>
-              <LockOverlay isLocked message="هذه القصة متاحة في النسخة المدفوعة فقط.">
+            <div key={writing.id}>
+              <LockOverlay isLocked message="هذا التمرين متاح في النسخة المدفوعة فقط.">
                 {content}
               </LockOverlay>
             </div>
@@ -1085,4 +1085,4 @@ const StoryLibraryTab = () => {
   );
 };
 
-export default StoryLibraryTab;
+export default WritingLibraryTab;

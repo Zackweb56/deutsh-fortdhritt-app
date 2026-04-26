@@ -21,7 +21,11 @@ const EXAM_SIMULATIONS = [
   { level: 'B2', title: 'Goethe — Practice materials B2', url: 'https://www.goethe.de/ins/mm/en/spr/prf/gzb2/ue9.html' },
 ];
 
-export const TabNavigation = () => {
+interface TabNavigationProps {
+  onSelect?: () => void;
+}
+
+export const TabNavigation = ({ onSelect }: TabNavigationProps = {}) => {
   const { currentTab, setCurrentTab } = useApp();
 
   const tabs = [
@@ -29,9 +33,8 @@ export const TabNavigation = () => {
     { id: 'vocabulary' as const, label: 'المفردات', icon: BookOpen },
     { id: 'grammar' as const, label: 'القواعد', icon: PenTool },
     { id: 'lessons' as const, label: 'الدروس', icon: GraduationCap },
-    { id: 'listening' as const, label: 'الاستماع', icon: Headphones },
-    { id: 'readings' as const, label: 'القراءة', icon: FileText },
-    { id: 'stories' as const, label: 'القصص', icon: Library },
+    { id: 'listening' as const, label: 'الاستماع والقراءة', icon: Headphones },
+    { id: 'writing' as const, label: 'الكتابة', icon: FileText },
     { id: 'resources' as const, label: 'المصادر', icon: Globe },
   ];
 
@@ -103,7 +106,10 @@ export const TabNavigation = () => {
           return (
             <Button
               key={tab.id}
-              onClick={() => setCurrentTab(tab.id)}
+              onClick={() => {
+                setCurrentTab(tab.id);
+                onSelect?.();
+              }}
               variant="ghost"
               className={`
                 flex-1 gap-2 justify-center

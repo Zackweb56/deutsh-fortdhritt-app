@@ -6,13 +6,14 @@ import { ScheduleTab } from '@/components/schedule/ScheduleTab';
 import { VocabularyTab } from '@/components/vocabulary/VocabularyTab';
 import LessonsTab from '@/components/lessons/LessonsTab';
 import ListeningTab from '@/components/listening/ListeningTab';
-import ReadingsTab from '@/components/readings/ReadingsTab';
-import StoryLibraryTab from '@/components/stories/StoryLibraryTab';
+
+import WritingLibraryTab from '@/components/writing/WritingLibraryTab';
 import { ResourcesTab } from '@/components/resources/ResourcesTab';
 import { GrammarTab } from '@/components/grammar/GrammarTab';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Button } from '@/components/ui/button';
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { GraduationCap, RefreshCw, Info, Shield, Menu, X } from 'lucide-react';
 
 const AppContent = () => {
@@ -34,7 +35,7 @@ const AppContent = () => {
   }
 
   return (
-    <div className="min-h-screen pb-8">
+    <div className="flex flex-col min-h-screen pb-0">
       <header className="bg-card/95 border-b border-border sticky top-0 z-50 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-4 relative">
           {/* Desktop reset button */}
@@ -56,15 +57,40 @@ const AppContent = () => {
             </div>
             {/* Mobile burger toggle */}
             <div className="sm:hidden">
-              <Button
-                variant="outline"
-                className="h-10 w-10 p-0 grid place-items-center"
-                onClick={() => setMobileNavOpen(v => !v)}
-                aria-label="Toggle navigation"
-                aria-expanded={mobileNavOpen}
-              >
-                {mobileNavOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-              </Button>
+              <Sheet open={mobileNavOpen} onOpenChange={setMobileNavOpen}>
+                <SheetTrigger asChild>
+                  <Button
+                    variant="outline"
+                    className="h-10 w-10 p-0 grid place-items-center"
+                    aria-label="Toggle navigation"
+                  >
+                    <Menu className="h-5 w-5" />
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="right" className="w-[85vw] max-w-[350px] p-0 bg-card/95 backdrop-blur-xl border-l-border" dir="rtl">
+                  <div className="p-6 h-full flex flex-col">
+                    <div className="flex items-center gap-3 mb-8">
+                      <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+                        <GraduationCap className="h-6 w-6 text-white" />
+                      </div>
+                      <div>
+                        <h2 className="text-lg font-bold">تعلم الألمانية بنفسك</h2>
+                      </div>
+                    </div>
+                    
+                    <div className="mb-6">
+                      <Button onClick={() => { setConfirmOpen(true); setMobileNavOpen(false); }} className="w-full h-10 bg-primary text-primary-foreground hover:bg-primary/90">
+                        <RefreshCw className="h-5 w-5 ml-2" />
+                        <span>إعادة التعيين</span>
+                      </Button>
+                    </div>
+                    
+                    <div className="flex-1 overflow-y-auto pb-6">
+                      <TabNavigation onSelect={() => setMobileNavOpen(false)} />
+                    </div>
+                  </div>
+                </SheetContent>
+              </Sheet>
             </div>
           </div>
           {/* Desktop navigation */}
@@ -74,29 +100,16 @@ const AppContent = () => {
         </div>
       </header>
 
-      {/* Mobile collapsible nav */}
-      {mobileNavOpen && (
-        <div className="sm:hidden border-b border-border bg-card/70 backdrop-blur px-4 py-3">
-          <div className="container mx-auto">
-            <div className="mb-3">
-              <Button onClick={() => setConfirmOpen(true)} className="w-full h-10 bg-primary text-primary-foreground hover:bg-primary/90">
-                <RefreshCw className="h-5 w-5 ml-2" />
-                <span>إعادة التعيين</span>
-              </Button>
-            </div>
-            <TabNavigation />
-          </div>
-        </div>
-      )}
-
-      <main className="container mx-auto px-4 py-6">
+      {/* Mobile collapsible nav - replaced by Sheet */}
+      
+      <main className="flex-1 container mx-auto px-4 py-6">
         {currentTab === 'schedule' && <ScheduleTab />}
         {currentTab === 'vocabulary' && <VocabularyTab />}
         {currentTab === 'grammar' && <GrammarTab />}
         {currentTab === 'lessons' && <LessonsTab />}
         {currentTab === 'listening' && <ListeningTab />}
-        {currentTab === 'readings' && <ReadingsTab />}
-        {currentTab === 'stories' && <StoryLibraryTab />}
+
+        {currentTab === 'writing' && <WritingLibraryTab />}
         {currentTab === 'resources' && <ResourcesTab />}
       </main>
       
@@ -143,7 +156,7 @@ const AppContent = () => {
                 <Shield className="h-4 w-4" />
                 سياسة الخصوصية
               </Link>
-              <span className="text-xs text-muted-foreground">v1.2.1</span>
+              <span className="text-xs text-muted-foreground">v1.3.0</span>
             </div>
           </div>
           

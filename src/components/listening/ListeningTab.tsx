@@ -3,33 +3,48 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
-import { 
-  Headphones, 
-  Search, 
-  Play, 
-  Pause, 
-  Volume2, 
+import {
+  Headphones,
+  Search,
+  Play,
+  Pause,
+  Volume2,
   VolumeX,
   GraduationCap,
   Clock,
-  Languages
+  Languages,
+  Check,
+  X,
+  HelpCircle,
+  AlertCircle,
+  ArrowRight
 } from 'lucide-react';
-import listeningData from '@/data/listening/listening-data.json';
+import listeningData from '@/data/listening_reading/data.json';
 import { isLimitedAccess } from '@/lib/access';
 import LockOverlay from '@/components/ui/lock-overlay';
 import { Slider } from '@/components/ui/slider';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+import { Label } from '@/components/ui/label';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+
+interface Question {
+  question: string;
+  options: string[];
+  correct_answer: string;
+}
 
 interface ListeningExercise {
   id: string;
   title: string;
-  german: string;
-  arabic: string;
+  de_text: string;
+  ar_text_translation: string;
   audio_url: string;
+  exercises: Question[];
 }
 
 interface LevelData {
   level_description: string;
-  exercises: ListeningExercise[];
+  texts: ListeningExercise[];
 }
 
 interface WordTiming {
@@ -53,7 +68,8 @@ const ListeningTab = () => {
   const [playbackRate, setPlaybackRate] = useState(1);
   const [currentWordIndex, setCurrentWordIndex] = useState(-1);
   const [wordTimings, setWordTimings] = useState<WordTiming[]>([]);
-  
+  const [answers, setAnswers] = useState<Record<number, string>>({});
+
   const audioRef = useRef<HTMLAudioElement>(null);
   const progressRef = useRef<HTMLDivElement>(null);
   const germanTextRef = useRef<HTMLDivElement>(null);
@@ -63,9 +79,9 @@ const ListeningTab = () => {
   const limited = isLimitedAccess();
 
   // Filter exercises based on search term
-  const filteredExercises = currentLevelData.exercises.filter(exercise =>
+  const filteredExercises = currentLevelData.texts.filter(exercise =>
     exercise.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    exercise.german.toLowerCase().includes(searchTerm.toLowerCase())
+    exercise.de_text.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   // Reset when exercise changes
@@ -74,6 +90,7 @@ const ListeningTab = () => {
       setCurrentWordIndex(-1);
       setWordTimings([]);
       setCurrentTime(0);
+      setAnswers({}); // Reset answers
     }
   }, [selectedExercise]);
 
@@ -85,16 +102,16 @@ const ListeningTab = () => {
     const handleLoadedMetadata = () => {
       const actualDuration = audio.duration;
       setDuration(actualDuration);
-      initializeWordTimings(selectedExercise.german, actualDuration);
+      initializeWordTimings(selectedExercise.de_text, actualDuration);
     };
 
     audio.addEventListener('loadedmetadata', handleLoadedMetadata);
-    
+
     // If metadata is already loaded
     if (audio.duration) {
       handleLoadedMetadata();
     }
-    
+
     return () => {
       audio.removeEventListener('loadedmetadata', handleLoadedMetadata);
     };
@@ -104,18 +121,18 @@ const ListeningTab = () => {
   const splitTextIntoParagraphsAndWords = (text: string): { paragraphs: string[][], words: string[] } => {
     // Split into paragraphs
     const paragraphs = text.split(/\.\s+/).filter(p => p.length > 0);
-    
+
     const paragraphWords: string[][] = [];
     const allWords: string[] = [];
-    let wordIndex = 0;
+    const wordIndex = 0;
 
     paragraphs.forEach((paragraph, paraIndex) => {
       // Add period back to the last sentence of each paragraph except the last one
       const paragraphText = paraIndex < paragraphs.length - 1 ? paragraph + '.' : paragraph;
-      
+
       // Split paragraph into words with punctuation
       const words = paragraphText.split(/(\s+)/).filter(part => part.trim().length > 0);
-      
+
       paragraphWords.push(words);
       allWords.push(...words);
     });
@@ -127,11 +144,11 @@ const ListeningTab = () => {
   const initializeWordTimings = (text: string, audioDuration: number) => {
     const { paragraphs, words } = splitTextIntoParagraphsAndWords(text);
     const estimatedTimings: WordTiming[] = [];
-    
+
     // More sophisticated timing estimation
     const totalCharacters = text.replace(/\s/g, '').length;
     const charactersPerSecond = totalCharacters / audioDuration;
-    
+
     let currentTime = 0;
     let wordIndex = 0;
 
@@ -139,20 +156,20 @@ const ListeningTab = () => {
       paragraphWords.forEach((word) => {
         // Estimate time based on word complexity (length + punctuation)
         let wordDuration = (word.length / charactersPerSecond) * 0.8; // Base duration
-        
+
         // Adjust for punctuation and word complexity
         if (word.match(/[.,!?;:]/)) {
           wordDuration *= 1.3; // Pause for punctuation
         }
-        
+
         // Adjust for long words
         if (word.length > 8) {
           wordDuration *= 1.2;
         }
-        
+
         // Minimum duration
         wordDuration = Math.max(wordDuration, 0.3);
-        
+
         estimatedTimings.push({
           word,
           startTime: currentTime,
@@ -160,11 +177,11 @@ const ListeningTab = () => {
           index: wordIndex,
           paragraphIndex
         });
-        
+
         currentTime += wordDuration;
         wordIndex++;
       });
-      
+
       // Add a small pause between paragraphs
       if (paragraphIndex < paragraphs.length - 1) {
         currentTime += 0.5; // 0.5 second pause between paragraphs
@@ -174,7 +191,7 @@ const ListeningTab = () => {
     // Normalize to fit actual audio duration
     const totalEstimatedTime = currentTime;
     const scaleFactor = audioDuration / totalEstimatedTime;
-    
+
     const normalizedTimings = estimatedTimings.map(timing => ({
       ...timing,
       startTime: timing.startTime * scaleFactor,
@@ -192,13 +209,13 @@ const ListeningTab = () => {
     const handleTimeUpdate = () => {
       const time = audio.currentTime;
       setCurrentTime(time);
-      
+
       // Find the current word based on timing
       if (wordTimings.length > 0) {
         const currentWord = wordTimings.find(
           timing => time >= timing.startTime && time < timing.endTime
         );
-        
+
         if (currentWord && currentWord.index !== currentWordIndex) {
           setCurrentWordIndex(currentWord.index);
         } else if (!currentWord && currentWordIndex !== -1) {
@@ -278,7 +295,7 @@ const ListeningTab = () => {
     const clickX = e.clientX - rect.left;
     const percentage = clickX / rect.width;
     const newTime = percentage * duration;
-    
+
     audio.currentTime = newTime;
     setCurrentTime(newTime);
   };
@@ -286,7 +303,7 @@ const ListeningTab = () => {
   const handleVolumeChange = (newVolume: number) => {
     const audio = audioRef.current;
     if (!audio) return;
-    
+
     setVolume(newVolume);
     setIsMuted(newVolume === 0);
     audio.volume = newVolume;
@@ -308,7 +325,7 @@ const ListeningTab = () => {
   const handlePlaybackRateChange = (rate: number) => {
     const audio = audioRef.current;
     if (!audio) return;
-    
+
     setPlaybackRate(rate);
     audio.playbackRate = rate;
   };
@@ -318,6 +335,22 @@ const ListeningTab = () => {
     const minutes = Math.floor(time / 60);
     const seconds = Math.floor(time % 60);
     return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+  };
+
+  const handleAnswerChange = (questionIndex: number, answer: string) => {
+    setAnswers(prev => ({
+      ...prev,
+      [questionIndex]: answer
+    }));
+  };
+
+  const getAnsweredCount = () => {
+    if (!selectedExercise?.exercises) return 0;
+    return Object.keys(answers).length;
+  };
+
+  const getTotalQuestions = () => {
+    return selectedExercise?.exercises?.length || 0;
   };
 
   // Render German text with word highlighting in paragraphs
@@ -334,7 +367,7 @@ const ListeningTab = () => {
               textAlign: 'left',
             }}
           >
-            {selectedExercise?.german}
+            {selectedExercise?.de_text}
           </p>
         </div>
       );
@@ -355,7 +388,7 @@ const ListeningTab = () => {
         dir="ltr"
         style={{
           direction: 'ltr',
-          unicodeBidi: 'isolate', // key difference here!
+          unicodeBidi: 'isolate',
         }}
       >
         <div className="space-y-5">
@@ -377,13 +410,12 @@ const ListeningTab = () => {
                 return (
                   <span
                     key={timing.index}
-                    className={`word-highlight transition-all duration-300 mx-0.5 inline-block ${
-                      isCurrent
-                        ? 'bg-yellow-400 text-gray-900 font-bold px-2 py-1 rounded-md shadow-lg scale-110 ring-2 ring-yellow-500 ring-offset-1'
-                        : isPast
+                    className={`word-highlight transition-all duration-300 mx-0.5 inline-block ${isCurrent
+                      ? 'bg-yellow-400 text-gray-900 font-bold px-2 py-1 rounded-md shadow-lg scale-110 ring-2 ring-yellow-500 ring-offset-1'
+                      : isPast
                         ? 'text-neutral-400 opacity-70 font-medium'
                         : 'text-neutral-100 font-medium'
-                    }`}
+                      }`}
                     style={{
                       direction: 'ltr',
                       unicodeBidi: 'isolate',
@@ -402,6 +434,64 @@ const ListeningTab = () => {
 
   const progressPercentage = duration > 0 ? (currentTime / duration) * 100 : 0;
 
+  // Helper function to get audio duration from URL
+  const getAudioDuration = (url: string): Promise<number> => {
+    return new Promise((resolve) => {
+      const audio = new Audio(url);
+      audio.addEventListener('loadedmetadata', () => {
+        resolve(audio.duration);
+      });
+      audio.addEventListener('error', () => {
+        resolve(0);
+      });
+    });
+  };
+
+  // State to store durations for exercises
+  const [audioDurations, setAudioDurations] = useState<Record<string, number>>({});
+
+  // Effect to load all audio durations when component mounts or levels change
+  useEffect(() => {
+    const loadAllDurations = async () => {
+      const durations: Record<string, number> = {};
+      
+      for (const level of levels) {
+        const levelData = listeningData[level] as LevelData;
+        for (const exercise of levelData.texts) {
+          if (!durations[exercise.id]) {
+            try {
+              const duration = await getAudioDuration(exercise.audio_url);
+              durations[exercise.id] = duration;
+            } catch (error) {
+              console.error(`Failed to load duration for ${exercise.id}:`, error);
+              durations[exercise.id] = 0;
+            }
+          }
+        }
+      }
+      
+      setAudioDurations(durations);
+    };
+    
+    loadAllDurations();
+  }, []);
+
+  // Format duration function
+  const formatDurationFromUrl = (audioUrl: string) => {
+    // Find exercise by audio URL to get its duration
+    const exercise = Object.values(listeningData)
+      .flatMap((level: any) => level.texts)
+      .find((ex: any) => ex.audio_url === audioUrl);
+    
+    const duration = exercise ? audioDurations[exercise.id] : 0;
+    
+    if (!duration || duration === 0) return '0:00';
+    
+    const minutes = Math.floor(duration / 60);
+    const seconds = Math.floor(duration % 60);
+    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+  };
+
   return (
     <div className="space-y-6">
       {/* Header and other components remain the same */}
@@ -412,9 +502,9 @@ const ListeningTab = () => {
               <Headphones className="h-6 w-6 text-white" />
             </div>
             <div>
-              <h2 className="text-2xl font-bold">الاستماع</h2>
+              <h2 className="text-2xl font-bold">الاستماع والقراءة</h2>
               <p className="text-muted-foreground">
-                {currentLevelData.exercises.length} تمرين • {currentLevelData.level_description}
+                {currentLevelData.texts.length} تمرين • {currentLevelData.level_description}
               </p>
             </div>
           </div>
@@ -434,7 +524,7 @@ const ListeningTab = () => {
               <GraduationCap className="h-4 w-4" />
               {level}
               <Badge variant="secondary" className="ml-1">
-                {listeningData[level].exercises.length}
+                {listeningData[level as keyof typeof listeningData].texts.length}
               </Badge>
             </Button>
           ))}
@@ -446,7 +536,7 @@ const ListeningTab = () => {
         <div className="relative">
           <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           <Input
-            placeholder="ابحث في تمارين الاستماع..."
+            placeholder="ابحث في التمارين..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="pr-10"
@@ -454,151 +544,201 @@ const ListeningTab = () => {
         </div>
       </Card>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Exercises List */}
-        <div className="lg:col-span-1">
-          <Card className="p-4">
-            <h3 className="font-semibold mb-4 flex items-center gap-2">
-              <Headphones className="h-4 w-4" />
-              تمارين الاستماع - {selectedLevel}
-            </h3>
-            <div className="space-y-2 max-h-96 overflow-y-auto">
+      <div className="min-h-[400px]">
+        {/* Exercises List - Dashboard View */}
+        {!selectedExercise ? (
+          <div className="space-y-6">
+            <div className="flex items-center justify-between">
+              <h3 className="font-semibold flex items-center gap-2 text-xl">
+                <Headphones className="h-5 w-5 text-primary" />
+                قائمة التمارين - {selectedLevel}
+              </h3>
+              <Badge variant="outline" className="px-3 py-1">
+                {filteredExercises.length} تمرين متاح
+              </Badge>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {filteredExercises.map((exercise) => {
-                const originalIndex = currentLevelData.exercises.findIndex(ex => ex.id === exercise.id);
+                const originalIndex = currentLevelData.texts.findIndex(ex => ex.id === exercise.id);
                 const shouldLock = limited && originalIndex >= 2;
                 return (
                   <LockOverlay key={exercise.id} isLocked={shouldLock} message="تمارين محجوبة — تواصل عبر واتساب لفتح الوصول الكامل">
-                    <div
-                      className={`p-3 rounded-lg border cursor-pointer transition-all duration-200 hover:shadow-md ${
-                        selectedExercise?.id === exercise.id
-                          ? 'border-primary bg-primary/10 shadow-lg'
-                          : 'border-border hover:border-primary/50'
-                      }`}
+                    <Card
+                      className={`group relative overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border-2 ${selectedExercise?.id === exercise.id
+                        ? 'border-primary bg-primary/5 shadow-lg shadow-primary/10'
+                        : 'border-transparent hover:border-primary/30'
+                        }`}
                       onClick={() => setSelectedExercise(exercise)}
                     >
-                      <div className="flex items-center gap-3">
-                        <div className={`h-8 w-8 rounded-full flex items-center justify-center text-sm font-bold ${
-                          selectedExercise?.id === exercise.id
-                            ? 'bg-primary text-white'
-                            : 'bg-muted text-muted-foreground'
-                        }`}>
-                          {originalIndex + 1}
+                      <div className="p-5 space-y-4">
+                        <div className="flex items-start justify-between">
+                          <div className={`h-10 w-10 rounded-xl flex items-center justify-center text-sm font-bold transition-colors ${selectedExercise?.id === exercise.id
+                            ? 'bg-primary text-white shadow-md shadow-primary/30'
+                            : 'bg-muted text-muted-foreground group-hover:bg-primary/10 group-hover:text-primary'
+                            }`}>
+                            {originalIndex + 1}
+                          </div>
+                          {shouldLock && <div className="p-1 rounded bg-amber-500/10 text-amber-500"><GraduationCap className="h-4 w-4" /></div>}
                         </div>
-                        <div className="flex-1 min-w-0">
-                          <h4 className="font-medium text-sm truncate">{exercise.title}</h4>
-                          <p className="text-xs text-muted-foreground line-clamp-2">
-                            {exercise.german.substring(0, 100)}...
+
+                        <div className="space-y-2">
+                          <h4 className="font-bold text-base leading-tight line-clamp-1 group-hover:text-primary transition-colors">
+                            {exercise.title}
+                          </h4>
+                          <p className="text-xs text-muted-foreground line-clamp-2 leading-relaxed">
+                            {exercise.de_text.substring(0, 80)}...
                           </p>
                         </div>
+
+                        <div className="pt-2 flex items-center justify-between text-xs font-medium text-muted-foreground border-t border-border/50">
+                          <span className="flex items-center gap-1">
+                            <Clock className="h-3 w-3" />
+                            {exercise.audio_url && exercise.audio_url !== '#' ? formatDurationFromUrl(exercise.audio_url) : (
+                              <span className="text-yellow-600 font-bold">قريباً</span>
+                            )}
+                          </span>
+                          <span className="flex items-center gap-1 group-hover:text-primary transition-colors">
+                            ابدأ الآن <ArrowRight className="h-3 w-3 mr-1" />
+                          </span>
+                        </div>
                       </div>
-                    </div>
+                    </Card>
                   </LockOverlay>
                 );
               })}
             </div>
-          </Card>
-        </div>
 
-        {/* Audio Player */}
-        <div className="lg:col-span-2">
-          {selectedExercise ? (
-            <Card className="p-6">
-              <div className="space-y-6">
-                {/* Exercise Header */}
-                <div>
-                  <h3 className="text-xl font-bold mb-2">{selectedExercise.title}</h3>
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                    <div className="flex items-center gap-1">
-                      <Clock className="h-4 w-4" />
-                      {formatTime(duration)}
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Languages className="h-4 w-4" />
-                      ألماني - عربي
-                    </div>
-                  </div>
+            {filteredExercises.length === 0 && (
+              <Card className="p-12 text-center border-dashed">
+                <div className="mx-auto w-16 h-16 rounded-full bg-muted flex items-center justify-center mb-4">
+                  <Search className="h-8 w-8 text-muted-foreground opacity-50" />
                 </div>
+                <h3 className="text-lg font-semibold mb-2">لا توجد نتائج</h3>
+                <p className="text-muted-foreground max-w-xs mx-auto">لم يتم العثور على أي تمارين تطابق "{searchTerm}" في هذا المستوى.</p>
+                <Button variant="link" onClick={() => setSearchTerm('')} className="mt-2 text-primary">
+                  مسح البحث
+                </Button>
+              </Card>
+            )}
+          </div>
+        ) : (
+          /* Exercise Active View - 2 Column Layout */
+          <div className="space-y-6">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setSelectedExercise(null)}
+              className="flex items-center gap-2 hover:bg-primary/10 hover:text-primary transition-all pr-4 pl-2 mb-2"
+            >
+              <ArrowRight className="h-4 w-4" />
+              العودة لقائمة التمارين
+            </Button>
 
-                {/* Audio Player */}
-                <div className="space-y-4">
-                  <audio
-                    ref={audioRef}
-                    src={selectedExercise.audio_url}
-                    preload="metadata"
-                    onError={(e) => {
-                      console.error('Audio error:', e);
-                      console.error('Audio src:', selectedExercise.audio_url);
-                    }}
-                  />
-
-                  {/* Progress Bar */}
-                  <div className="space-y-2">
-                    <div
-                      ref={progressRef}
-                      className="w-full h-2 bg-muted rounded-full cursor-pointer"
-                      onClick={handleSeek}
-                    >
-                      <div
-                        className="h-full bg-primary rounded-full transition-all duration-200"
-                        style={{ width: `${progressPercentage}%` }}
-                      />
-                    </div>
-                    <div className="flex justify-between text-xs text-muted-foreground">
-                      <span>{formatTime(currentTime)}</span>
-                      <span>{formatTime(duration)}</span>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              {/* Column 1: Audio & Text (8/12) */}
+              <div className="lg:col-span-8 space-y-6">
+                <Card className="p-0 overflow-hidden border-2 border-primary/10 shadow-lg bg-card">
+                  {/* Header section with specific styling */}
+                  <div className="bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 p-6 border-b border-primary/20">
+                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                      <div>
+                        <Badge className="mb-3 bg-primary/20 text-primary hover:bg-primary/30 border-none px-3">تمرين الاستماع والقراءة</Badge>
+                        <h3 className="text-2xl font-black tracking-tight">{selectedExercise.title}</h3>
+                        <div className="flex items-center gap-4 mt-2 text-sm text-muted-foreground font-medium">
+                          <span className="flex items-center gap-1.5"><Clock className="h-4 w-4 text-primary" /> {formatTime(duration)}</span>
+                          <span className="flex items-center gap-1.5"><Languages className="h-4 w-4 text-primary" /> ألماني - عربي</span>
+                        </div>
+                      </div>
+                      <div className="flex gap-2">
+                        <Button
+                          variant={showCaptions ? "default" : "outline"}
+                          size="sm"
+                          onClick={() => setShowCaptions(!showCaptions)}
+                          className="rounded-full shadow-sm"
+                        >
+                          <Languages className="h-4 w-4 ml-2" />
+                          {showCaptions ? "إخفاء الترجمة" : "إظهار الترجمة"}
+                        </Button>
+                      </div>
                     </div>
                   </div>
 
-                  {/* Controls */}
-                  <div className="backdrop-blur-lg bg-black/20 border border-white/10 rounded-2xl p-4 shadow-xl">
-                    <div className="flex flex-col items-center gap-4">
-                      <Button
-                        size="lg"
-                        onClick={togglePlayPause}
-                        className="h-14 w-14 rounded-full backdrop-blur-sm bg-white/20 hover:bg-white/30 border border-white/30 shadow-lg"
-                      >
-                        {isPlaying ? <Pause className="h-6 w-6" /> : <Play className="h-6 w-6" />}
-                      </Button>
+                  <div className="p-6 md:p-8 space-y-8">
+                    {/* Audio Player Component */}
+                    {selectedExercise.audio_url && selectedExercise.audio_url !== '#' ? (
+                      <div className="space-y-6 p-6 rounded-3xl bg-neutral-900 border border-neutral-800 shadow-inner">
+                        <audio
+                          ref={audioRef}
+                          src={selectedExercise.audio_url}
+                          preload="metadata"
+                        />
 
-                      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 w-full">
-                        <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
-                          {/* Volume Control */}
-                          <div className="flex items-center gap-3 w-full sm:w-auto">
-                            <Button
-                              variant="ghost"
-                              size="sm"
-                              onClick={toggleMute}
-                              className="rounded-full h-10 w-10 p-0 backdrop-blur-sm bg-white/20 hover:bg-white/30 border border-white/30"
+                        <div className="space-y-4">
+                          {/* Progress Bar */}
+                          <div className="space-y-2">
+                            <div
+                              ref={progressRef}
+                              className="w-full h-3 bg-neutral-800 rounded-full cursor-pointer relative group overflow-hidden"
+                              onClick={handleSeek}
                             >
-                              {isMuted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
-                            </Button>
-                            <div className="flex-1 sm:w-32 min-w-0">
-                              <Slider
-                                value={[isMuted ? 0 : volume]}
-                                min={0}
-                                max={1}
-                                step={0.1}
-                                onValueChange={(v) => handleVolumeChange(v[0] ?? 0)}
-                                className="w-full"
-                              />
+                              <div
+                                className="h-full bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-full transition-all duration-300 relative"
+                                style={{ width: `${progressPercentage}%` }}
+                              >
+                                <div className="absolute right-0 top-0 h-full w-4 bg-yellow-300/20 blur-sm animate-pulse" />
+                              </div>
+                            </div>
+                            <div className="flex justify-between text-[10px] uppercase tracking-widest font-bold text-neutral-500">
+                              <span>{formatTime(currentTime)}</span>
+                              <span>{formatTime(duration)}</span>
                             </div>
                           </div>
 
-                          {/* Speed Control */}
-                          <div className="flex flex-col sm:flex-row items-center gap-2 w-full sm:w-auto">
-                            <span className="text-sm text-white/80 font-medium whitespace-nowrap">السرعة:</span>
-                            <div className="flex gap-1 flex-wrap justify-center sm:justify-start">
+                          {/* Controls */}
+                          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                            <div className="flex items-center gap-4">
+                              <Button
+                                size="icon"
+                                onClick={togglePlayPause}
+                                className="h-14 w-14 rounded-full bg-red-600 hover:bg-red-700 text-white transition-transform hover:scale-105 active:scale-95"
+                              >
+                                {isPlaying ? <Pause className="h-8 w-8" /> : <Play className="h-8 w-8 ml-1" />}
+                              </Button>
+
+                              <div className="flex flex-col gap-1.5">
+                                <div className="flex items-center gap-2">
+                                  <Button
+                                    variant="ghost"
+                                    size="icon"
+                                    onClick={toggleMute}
+                                    className="h-8 w-8 text-neutral-400 hover:text-red-500"
+                                  >
+                                    {isMuted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
+                                  </Button>
+                                  <Slider
+                                    value={[isMuted ? 0 : volume]}
+                                    min={0}
+                                    max={1}
+                                    step={0.1}
+                                    onValueChange={(v) => handleVolumeChange(v[0] ?? 0)}
+                                    className="w-24 md:w-32"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+
+                            <div className="flex items-center gap-2 bg-neutral-800/50 p-1 rounded-full border border-neutral-700">
                               {[0.5, 0.75, 1, 1.25, 1.5].map((rate) => (
                                 <Button
                                   key={rate}
-                                  variant={playbackRate === rate ? "default" : "outline"}
+                                  variant={playbackRate === rate ? "default" : "ghost"}
                                   size="sm"
                                   onClick={() => handlePlaybackRateChange(rate)}
-                                  className={`h-9 w-12 text-xs rounded-full ${
-                                    playbackRate === rate 
-                                      ? 'bg-primary text-primary-foreground shadow-lg' 
-                                      : 'backdrop-blur-sm bg-white/20 hover:bg-white/30 border-white/30 text-white hover:text-white'
-                                  }`}
+                                  className={`h-8 w-10 text-[10px] font-bold rounded-full transition-all ${playbackRate === rate
+                                    ? 'bg-yellow-500 text-white shadow-lg hover:bg-yellow-600'
+                                    : 'text-neutral-400 hover:text-yellow-500 hover:bg-neutral-700'
+                                    }`}
                                 >
                                   {rate}x
                                 </Button>
@@ -606,64 +746,179 @@ const ListeningTab = () => {
                             </div>
                           </div>
                         </div>
+                      </div>
+                    ) : (
+                      <div className="p-10 rounded-3xl bg-neutral-900 border-2 border-dashed border-neutral-800 text-center space-y-4 animate-in fade-in zoom-in duration-500">
+                        <div className="h-20 w-20 bg-yellow-500/10 rounded-full flex items-center justify-center mx-auto shadow-[0_0_30px_rgba(234,179,8,0.1)]">
+                          <Clock className="h-10 w-10 text-yellow-500" />
+                        </div>
+                        <div className="space-y-2">
+                          <h4 className="text-2xl font-black text-white tracking-tight">التسجيل الصوتي سيتوفر قريباً</h4>
+                          <p className="text-neutral-400 max-w-sm mx-auto leading-relaxed">
+                            نحن نقوم حالياً بتجهيز التسجيل الصوتي الاحترافي لهذا النص. ترقبوا التحديث القادم!
+                          </p>
+                        </div>
+                        <div className="pt-2">
+                          <Badge variant="outline" className="text-yellow-500 border-yellow-500/30 px-4 py-1">
+                            قيد العمل (Coming Soon)
+                          </Badge>
+                        </div>
+                      </div>
+                    )}
 
-                        <Button
-                          variant={showCaptions ? "default" : "outline"}
-                          size="sm"
-                          onClick={() => setShowCaptions(!showCaptions)}
-                          className={`rounded-full px-4 py-2 ${
-                            showCaptions 
-                              ? 'bg-primary text-primary-foreground shadow-lg' 
-                              : 'backdrop-blur-sm bg-white/20 hover:bg-white/30 border-white/30 text-white hover:text-white'
-                          }`}
-                        >
-                          <Languages className="h-4 w-4 mr-2" />
-                          الترجمة
-                        </Button>
+                    {/* German Text with Highlighting */}
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="h-1.5 w-8 bg-red-600 rounded-full"></div>
+                        <h4 className="font-bold text-lg text-red-600 uppercase tracking-wider">النص الألماني</h4>
+                      </div>
+                      <div ref={germanTextRef}>
+                        {renderGermanText()}
                       </div>
                     </div>
-                  </div>
-                </div>
 
-                {/* German Text with Highlighting */}
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold mb-2 text-primary">النص الألماني</h4>
-                    {renderGermanText()}
+                    {/* Arabic Translation */}
+                    {showCaptions && (
+                      <div className="space-y-4 pt-4 border-t border-border/50">
+                        <div className="flex items-center gap-2 mb-2 justify-end">
+                          <h4 className="font-bold text-lg text-secondary uppercase tracking-wider">الترجمة العربية</h4>
+                          <div className="h-1.5 w-8 bg-secondary rounded-full"></div>
+                        </div>
+                        <div className="p-6 bg-secondary/5 rounded-2xl border border-secondary/20 shadow-sm">
+                          <p className="text-lg leading-relaxed text-right whitespace-pre-line font-medium text-neutral-700 dark:text-neutral-300">
+                            {selectedExercise.ar_text_translation}
+                          </p>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </Card>
+              </div>
+
+              {/* Column 2: Questions (4/12) - IMPROVED VERSION */}
+              <div className="lg:col-span-4 space-y-6">
+                <Card className="border-2 border-red-600/20 shadow-lg overflow-hidden sticky top-6">
+                  <div className="bg-red-600/10 p-6 border-b border-red-600/20">
+                    <h3 className="text-xl font-bold flex items-center gap-2">
+                      <GraduationCap className="h-5 w-5 text-red-600" />
+                      اختبر فهمك
+                    </h3>
+                    <p className="text-sm text-muted-foreground mt-1 font-medium">أجب على الأسئلة بناءً على ما قرأت واستمعت إليه</p>
                   </div>
 
-                  {/* Arabic Translation */}
-                  {showCaptions && (
-                    <div>
-                      <h4 className="font-semibold mb-2 text-secondary">الترجمة العربية</h4>
-                      <div className="p-4 bg-secondary/10 rounded-lg border border-secondary/20">
-                        <p className="text-sm leading-relaxed text-right whitespace-pre-line">
-                          {selectedExercise.arabic}
-                        </p>
+                  <div className="p-6 space-y-8 max-h-[calc(100vh-250px)] overflow-y-auto custom-scrollbar">
+                    {selectedExercise.exercises && selectedExercise.exercises.length > 0 ? (
+                      selectedExercise.exercises.map((question, qIndex) => {
+                        const selectedAnswer = answers[qIndex];
+                        const isCorrect = selectedAnswer === question.correct_answer;
+                        const hasAnswered = selectedAnswer !== undefined;
+
+                        return (
+                          <div key={qIndex} className="space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-500" style={{ animationDelay: `${qIndex * 100}ms` }}>
+                            <div className="flex items-start gap-3">
+                              <div className="h-7 w-7 rounded-lg bg-gray-600/20 flex items-center justify-center text-gray-400 font-bold text-xs flex-shrink-0 mt-0.5 border border-gray-600/30 shadow-sm">
+                                {qIndex + 1}
+                              </div>
+                              {/* Question - Force LTR for German, RTL for Arabic */}
+                              <div className="flex-1">
+                                <p 
+                                  className="font-bold text-base leading-snug"
+                                  style={{ 
+                                    direction: 'ltr',
+                                    textAlign: 'left',
+                                    unicodeBidi: 'isolate'
+                                  }}
+                                >
+                                  {question.question}
+                                </p>
+                              </div>
+                            </div>
+
+                            <RadioGroup
+                              value={selectedAnswer || ''}
+                              onValueChange={(value) => handleAnswerChange(qIndex, value)}
+                              className="grid gap-2"
+                            >
+                              {question.options.map((option, oIndex) => {
+                                const isSelected = selectedAnswer === option;
+                                const isThisCorrect = option === question.correct_answer;
+                                const showAsIncorrect = hasAnswered && isSelected && !isCorrect;
+                                const showAsCorrect = hasAnswered && isThisCorrect;
+
+                                return (
+                                  <div
+                                    key={oIndex}
+                                    className={`group relative flex items-center gap-3 p-3 rounded-xl border-2 transition-all duration-200 ${
+                                      showAsCorrect
+                                        ? 'bg-green-500/5 border-green-500/50 shadow-sm'
+                                        : showAsIncorrect
+                                          ? 'bg-red-500/5 border-red-500/50 shadow-sm'
+                                          : isSelected
+                                            ? 'border-yellow-500 bg-yellow-500/5'
+                                            : 'hover:bg-muted/50 border-transparent bg-muted/30'
+                                    }`}
+                                  >
+                                    <RadioGroupItem
+                                      value={option}
+                                      id={`q${qIndex}-o${oIndex}`}
+                                      className="h-4 w-4 border-2 border-yellow-500 text-yellow-600 flex-shrink-0"
+                                      disabled={hasAnswered}
+                                    />
+                                    <Label
+                                      htmlFor={`q${qIndex}-o${oIndex}`}
+                                      className={`text-sm font-medium cursor-pointer flex-1 leading-relaxed flex justify-between items-center ${
+                                        showAsIncorrect ? 'text-red-600' :
+                                        showAsCorrect ? 'text-green-600 font-bold' : ''
+                                      }`}
+                                    >
+                                      <span 
+                                        style={{ 
+                                          direction: 'ltr',
+                                          textAlign: 'left',
+                                          unicodeBidi: 'isolate',
+                                          display: 'inline-block',
+                                          width: '100%'
+                                        }}
+                                      >
+                                        {option}
+                                      </span>
+                                      {showAsCorrect && <Check className="h-4 w-4 text-green-500 animate-in zoom-in duration-300 flex-shrink-0 ml-2" />}
+                                      {showAsIncorrect && <X className="h-4 w-4 text-red-500 animate-in zoom-in duration-300 flex-shrink-0 ml-2" />}
+                                    </Label>
+                                  </div>
+                                );
+                              })}
+                            </RadioGroup>
+                          </div>
+                        );
+                      })
+                    ) : (
+                      <div className="py-12 text-center text-muted-foreground italic">
+                        لا توجد أسئلة لهذا التمرين.
+                      </div>
+                    )}
+                  </div>
+
+                  {selectedExercise.exercises && selectedExercise.exercises.length > 0 && (
+                    <div className="p-6 bg-muted/30 border-t border-border">
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-xs font-bold uppercase tracking-widest text-muted-foreground">التقدم</span>
+                        <span className="text-sm font-black text-yellow-600">{getAnsweredCount()}/{getTotalQuestions()}</span>
+                      </div>
+                      <div className="h-2 w-full bg-muted rounded-full overflow-hidden">
+                        <div
+                          className="h-full bg-gradient-to-r from-yellow-400 to-yellow-500 transition-all duration-700 ease-out shadow-[0_0_10px_rgba(234,179,8,0.5)]"
+                          style={{ width: `${(getAnsweredCount() / getTotalQuestions()) * 100}%` }}
+                        />
                       </div>
                     </div>
                   )}
-                </div>
+                </Card>
               </div>
-            </Card>
-          ) : (
-            <Card className="p-8 text-center">
-              <Headphones className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-              <h3 className="text-lg font-semibold mb-2">اختر تمرين للاستماع</h3>
-              <p className="text-muted-foreground">اختر تمرين من القائمة لبدء الاستماع</p>
-            </Card>
-          )}
-        </div>
+            </div>
+          </div>
+        )}
       </div>
-
-      {/* Empty State */}
-      {filteredExercises.length === 0 && (
-        <Card className="p-8 text-center">
-          <Headphones className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-          <h3 className="text-lg font-semibold mb-2">لا توجد تمارين</h3>
-          <p className="text-muted-foreground">لم يتم العثور على تمارين تطابق البحث "{searchTerm}"</p>
-        </Card>
-      )}
     </div>
   );
 };
