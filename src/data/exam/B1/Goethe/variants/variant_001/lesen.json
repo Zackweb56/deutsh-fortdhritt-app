@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "module": "Lesen",
+    "timeMinutes": 65,
+    "totalRawPoints": 30,
+    "passingRaw": 18,
+    "scoringFormula": "rawPoints / 30 * 100"
+  },
+  "teil1": {
+    "type": "richtig_falsch",
+    "points": 6,
+    "arbeitszeitMinutes": 10,
+    "instructions": "Lesen Sie den Text und die Aufgaben 1 bis 6. Wählen Sie: Richtig oder Falsch?",
+    "textType": "Blog/Brief/E-Mail",
+    "text": {
+      "title": "Mein erstes Jahr in Berlin",
+      "source": "aus einem Internet-Blog",
+      "content": "Hallo zusammen! Jetzt lebe ich schon genau ein Jahr in Berlin. Am Anfang war es gar nicht so einfach. Die Stadt ist riesig und man braucht lange, um von A nach B zu kommen. Aber mittlerweile habe ich mich gut eingelebt. Ich habe einen tollen Job in einer kleinen Marketing-Agentur gefunden. Meine Kollegen sind super nett und wir gehen oft nach der Arbeit zusammen etwas trinken. Was mich am meisten überrascht hat: Berlin ist viel grüner, als ich dachte. Es gibt so viele Parks! Am Wochenende fahre ich oft mit dem Fahrrad in den Tiergarten. Nächste Woche kommen meine Eltern aus München zu Besuch. Ich freue mich sehr darauf, ihnen meine Lieblingsorte zu zeigen. Wir wollen auch eine Bootstour auf der Spree machen, das habe ich selbst noch nie gemacht."
+    },
+    "items": [
+      { "id": 0, "text": "Der Autor lebt seit zwölf Monaten in Berlin.", "correct": "Richtig", "isExample": true },
+      { "id": 1, "text": "Der Anfang in Berlin war für den Autor unproblematisch.", "correct": "Falsch" },
+      { "id": 2, "text": "Die Kollegen des Autors unternehmen auch privat etwas zusammen.", "correct": "Richtig" },
+      { "id": 3, "text": "Der Autor ist der Meinung, dass es in Berlin zu wenig Natur gibt.", "correct": "Falsch" },
+      { "id": 4, "text": "Der Autor verbringt seine Freizeit oft sportlich im Park.", "correct": "Richtig" },
+      { "id": 5, "text": "Die Eltern des Autors wohnen aktuell in Berlin.", "correct": "Falsch" },
+      { "id": 6, "text": "Der Autor hat bereits viele Bootstouren in Berlin gemacht.", "correct": "Falsch" }
+    ]
+  },
+  "teil2": {
+    "type": "mehrfachauswahl",
+    "points": 6,
+    "arbeitszeitMinutes": 20,
+    "instructions": "Lesen Sie die Texte. Wählen Sie bei jeder Aufgabe a, b oder c.",
+    "texts": [
+      {
+        "id": "A",
+        "title": "Nachhaltiger Tourismus in den Alpen",
+        "source": "aus einer deutschen Zeitung",
+        "content": "Immer mehr Urlauber in den Alpen achten auf die Umwelt. Hotels reagieren darauf und investieren in Solarenergie und regionale Produkte. Eine Studie zeigt, dass Gäste bereit sind, für ökologische Standards mehr zu bezahlen. Besonders beliebt sind geführte Wanderungen, bei denen die Natur erklärt wird, anstatt Skipisten mit Kunstschnee zu nutzen.",
+        "items": [
+          { "id": 7, "text": "In den Alpen gibt es einen Trend zu...", "options": [{"value":"a","label":"billigeren Unterkünften."},{"value":"b","label":"umweltfreundlichem Reisen."},{"value":"c","label":"neuen Skipisten."}], "correct": "b" },
+          { "id": 8, "text": "Viele Hotelgäste akzeptieren...", "options": [{"value":"a","label":"höhere Preise für Öko-Angebote."},{"value":"b","label":"dass es kein warmes Wasser gibt."},{"value":"c","label":"nur noch vegetarisches Essen."}], "correct": "a" },
+          { "id": 9, "text": "Die Urlauber interessieren sich besonders für...", "options": [{"value":"a","label":"Wintersport bei jedem Wetter."},{"value":"b","label":"Wellness-Angebote."},{"value":"c","label":"Informationen über die Alpen-Natur."}], "correct": "c" }
+        ]
+      },
+      {
+        "id": "B",
+        "title": "Windenergie in Urlaubsregionen",
+        "source": "aus einer Schweizer Broschüre",
+        "content": "Windräder sind wichtig für die Energiewende, aber sie verändern das Landschaftsbild. In der Ferienregion Graubünden gibt es Diskussionen. Einige Anwohner fürchten, dass weniger Touristen kommen, wenn die Berge mit Windrädern bebaut werden. Die Tourismusbehörde betont jedoch, dass moderne Urlauber Windkraft als Symbol für Fortschritt sehen.",
+        "items": [
+          { "id": 10, "text": "Die Landschaft in Graubünden soll durch Windräder...", "options": [{"value":"a","label":"schöner werden."},{"value":"b","label":"verändert werden."},{"value":"c","label":"geschützt werden."}], "correct": "b" },
+          { "id": 11, "text": "Manche Leute in der Region haben Angst...", "options": [{"value":"a","label":"vor sinkenden Besucherzahlen."},{"value":"b","label":"vor zu viel Lärm."},{"value":"c","label":"dass die Strompreise steigen."}], "correct": "a" },
+          { "id": 12, "text": "Laut der Tourismusbehörde finden Urlauber Windräder...", "options": [{"value":"a","label":"hässlich."},{"value":"b","label":"langweilig."},{"value":"c","label":"positiv und modern."}], "correct": "c" }
+        ]
+      }
+    ]
+  },
+  "teil3": {
+    "type": "zuordnung",
+    "points": 7,
+    "arbeitszeitMinutes": 10,
+    "instructions": "Lesen Sie die Situationen 13–19 und die Anzeigen A–J. Welche Anzeige passt? Jede Anzeige nur einmal. Eine Situation hat keine passende Anzeige → schreiben Sie 0.",
+    "context": "Sie suchen einen Deutschkurs für Freunde oder sich selbst.",
+    "example": { "id": 0, "text": "Markus möchte am Samstagvormittag Deutsch lernen.", "correct": "i" },
+    "ads": [
+      { "id": "a", "title": "Abendkurs für Berufstätige", "content": "Deutsch B1/B2, Mo + Mi 18:00 - 20:00 Uhr. Zentrale Lage." },
+      { "id": "b", "title": "Grammatik-Intensiv", "content": "Wochenendkurs für Fortgeschrittene (B2-C1). Freitagabend und Samstag." },
+      { "id": "c", "title": "Deutsch für Mediziner", "content": "Fachsprachkurs für Ärzte und Pflegekräfte. Anmeldung jederzeit." },
+      { "id": "d", "title": "Konversation am Vormittag", "content": "Sprechen lernen in lockerer Atmosphäre. Di + Do 10:00 Uhr." },
+      { "id": "e", "title": "Prüfungsvorbereitung B1", "content": "Intensivtraining für Goethe-Zertifikat. 2 Wochen täglich." },
+      { "id": "f", "title": "Wirtschaftsdeutsch", "content": "Lernen Sie Verhandlungen und Korrespondenz auf Deutsch." },
+      { "id": "g", "title": "Einzelunterricht flexibel", "content": "Wir kommen zu Ihnen nach Hause oder ins Büro." },
+      { "id": "h", "title": "Deutsch für Kinder (6-10 J.)", "content": "Spielerisch die Sprache entdecken. Nachmittagsbetreuung." },
+      { "id": "i", "title": "Samstagskurs A1-B1", "content": "Ideal für alle, die unter der Woche arbeiten. 9-13 Uhr.", "isExample": true },
+      { "id": "j", "title": "Online-Akademie", "content": "Deutsch lernen per Video-Chat. Rund um die Uhr verfügbar." }
+    ],
+    "situations": [
+      { "id": 13, "text": "Klara möchte vor allem ihr Sprechen verbessern und hat unter der Woche vormittags Zeit.", "correct": "d" },
+      { "id": 14, "text": "Lukas sucht einen Kurs für seine 15-jährige Tochter in den Ferien.", "correct": "0" },
+      { "id": 15, "text": "Thomas arbeitet in einer Firma und muss professionelle E-Mails schreiben lernen.", "correct": "f" },
+      { "id": 16, "text": "Maria braucht dringend Hilfe bei schwierigen Grammatikregeln auf Niveau B2.", "correct": "b" },
+      { "id": 17, "text": "Stefan arbeitet Vollzeit bis 17 Uhr und möchte zweimal pro Woche abends lernen.", "correct": "a" },
+      { "id": 18, "text": "Dr. Miller ist Neurologe und möchte sich auf seine Fachsprachprüfung vorbereiten.", "correct": "c" },
+      { "id": 19, "text": "Anna möchte, dass ihr 8-jähriger Sohn nach der Schule Deutsch lernt.", "correct": "h" }
+    ]
+  },
+  "teil4": {
+    "type": "ja_nein",
+    "points": 7,
+    "arbeitszeitMinutes": 15,
+    "instructions": "Lesen Sie die Texte 20–26. Ist die Person für ein Verbot? Ja oder Nein?",
+    "topic": "Verbot von gewalttätigen Computerspielen ('Killerspiele')",
+    "context": "In einer Zeitschrift lesen Sie Kommentare zu einem Artikel über das Verbot von gewalttätigen Computerspielen.",
+    "example": { "id": 0, "author": "Tobias", "text": "Diese Spiele machen Kinder aggressiv. Wir müssen unsere Jugend schützen und solche Inhalte komplett verbieten.", "correct": "Ja" },
+    "items": [
+      { "id": 20, "author": "Manfred", "age": 52, "city": "Köln", "text": "Ich sehe das kritisch. Verbote bringen nichts, man sollte lieber die Medienkompetenz der Eltern stärken. Die Jugendlichen finden sowieso einen Weg, die Spiele zu spielen.", "correct": "Nein" },
+      { "id": 21, "author": "Sabine", "age": 41, "city": "München", "text": "Ich habe selbst Kinder und mache mir Sorgen. Wer stundenlang virtuell tötet, verliert den Bezug zur Realität. Ein gesetzliches Verbot ist der einzige Weg.", "correct": "Ja" },
+      { "id": 22, "author": "Christian", "age": 23, "city": "Hamburg", "text": "Das ist Zensur! Die meisten Spieler sind erwachsen und können zwischen Spiel und Realität unterscheiden. Warum sollen wir bestraft werden?", "correct": "Nein" },
+      { "id": 23, "author": "Ute", "age": 60, "city": "Berlin", "text": "Diese Gewalt in den Wohnzimmern ist schrecklich. Früher haben wir draußen gespielt. Ich bin absolut für ein strenges Verbot dieser Spiele.", "correct": "Ja" },
+      { "id": 24, "author": "Peter", "age": 35, "city": "Leipzig", "text": "Studien zeigen, dass es keinen direkten Zusammenhang gibt. Spiele sind Kunst. Ein Verbot wäre ein Rückschritt für unsere Freiheit.", "correct": "Nein" },
+      { "id": 25, "author": "Heike", "age": 48, "city": "Stuttgart", "text": "Wozu braucht man solche Spiele? Sie dienen nur der Gewaltverherrlichung. Der Staat muss hier endlich hart durchgreifen und sie vom Markt nehmen.", "correct": "Ja" },
+      { "id": 26, "author": "Sven", "age": 19, "city": "Dresden", "text": "Völliger Quatsch. Es ist ein Hobby wie jedes andere auch. Man sollte lieber gegen echte Gewalt auf der Straße vorgehen anstatt gegen Pixel.", "correct": "Nein" }
+    ]
+  },
+  "teil5": {
+    "type": "mehrfachauswahl",
+    "points": 4,
+    "arbeitszeitMinutes": 10,
+    "instructions": "Lesen Sie den Text und die Aufgaben 27–30. Wählen Sie a, b oder c.",
+    "textType": "Hausordnung/Regeltext",
+    "context": "Regeln für die Nutzung des Computerraums an einer Abendschule.",
+    "text": {
+      "title": "NUTZUNGSORDNUNG COMPUTERRAUM",
+      "content": "Der Computerraum steht allen Schülern werktags von 8:00 bis 20:00 Uhr zur Verfügung. Das Essen und Trinken an den Arbeitsplätzen ist streng untersagt, um die Geräte zu schützen. Drucker dürfen nur für schulische Zwecke genutzt werden; private Ausdrucke sind kostenpflichtig (10 Cent pro Seite). Bitte verlassen Sie den Platz sauber und schalten Sie den Monitor nach der Benutzung aus. Der Computer selbst bleibt an, da abends automatische Updates installiert werden."
+    },
+    "items": [
+      { "id": 27, "text": "Wann ist der Computerraum geöffnet?", "options": [{"value":"a","label":"Nur vormittags."},{"value":"b","label":"Auch am Wochenende."},{"value":"c","label":"Von Montag bis Freitag."}], "correct": "c" },
+      { "id": 28, "text": "Was ist im Computerraum verboten?", "options": [{"value":"a","label":"Das Mitbringen von Lebensmitteln am Platz."},{"value":"b","label":"Das Benutzen der Computer nach 18 Uhr."},{"value":"c","label":"Das Sprechen mit Mitschülern."}], "correct": "a" },
+      { "id": 29, "text": "Was gilt für das Drucken?", "options": [{"value":"a","label":"Es ist immer kostenlos."},{"value":"b","label":"Privates Drucken ist verboten."},{"value":"c","label":"Für Hausaufgaben muss man nichts bezahlen."}], "correct": "c" },
+      { "id": 30, "text": "Was soll ein Schüler vor dem Gehen tun?", "options": [{"value":"a","label":"Den Monitor ausschalten."},{"value":"b","label":"Den PC komplett herunterfahren."},{"value":"c","label":"Den Raum abschließen."}], "correct": "a" }
+    ]
+  }
+}

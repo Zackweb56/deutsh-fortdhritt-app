@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "module": "Schreiben",
+    "timeMinutes": 60,
+    "totalPoints": 100,
+    "passingScore": 60
+  },
+  "scoringRubric": {
+    "grades": { "A": 1.0, "B": 0.75, "C": 0.5, "D": 0.25, "E": 0 },
+    "criteria": ["Erfuellung", "Kohaerenz", "Wortschatz", "Strukturen"],
+    "note": "Erfuellung=E → gesamte Aufgabe = 0 Punkte"
+  },
+  "aufgabe1": {
+    "timeMinutes": 25,
+    "maxPoints": 40,
+    "wordCount": 80,
+    "type": "email_persoenlich",
+    "instructions": "Schreiben Sie eine E-Mail (ca. 80 Wörter). Schreiben Sie zu allen 3 Punkten. Achten Sie auf Anrede, Einleitung, Reihenfolge, Schluss.",
+    "situation": "Sie haben am Wochenende Ihren Geburtstag gefeiert, aber Ihr Freund Patrick konnte nicht kommen.",
+    "pointsToCover": [
+      "Beschreiben Sie die Feier.",
+      "Begründen Sie: Warum war Patrick nicht dabei?",
+      "Machen Sie einen Vorschlag für ein Treffen."
+    ],
+    "sampleAnswer": "Lieber Patrick, wie schade, dass du am Samstag nicht bei meiner Geburtstagsparty sein konntest! Die Feier war wirklich toll. Wir haben im Garten gegrillt und es waren fast alle unsere Freunde da. Das Essen war super und wir haben bis spät in die Nacht getanzt. Ich habe gehört, dass du leider arbeiten musstest, das ist echt blöd. Hast du vielleicht nächsten Freitag Zeit? Ich würde dich gerne auf einen Kaffee einladen und dir die Fotos zeigen. Viele Grüße, dein Zack",
+    "scoringWeights": { "Erfuellung": 10, "Kohaerenz": 10, "Wortschatz": 10, "Strukturen": 10 }
+  },
+  "aufgabe2": {
+    "timeMinutes": 25,
+    "maxPoints": 40,
+    "wordCount": 80,
+    "type": "diskussionsbeitrag",
+    "instructions": "Schreiben Sie Ihre Meinung zum Thema (ca. 80 Wörter).",
+    "topic": "Internet und soziale Kontakte",
+    "onlineComment": { 
+      "author": "Markus", 
+      "text": "Ich finde, dass wir durch das Internet immer einsamer werden. Man trifft sich kaum noch persönlich, sondern schreibt nur noch Nachrichten. Das ist doch kein echtes Leben mehr!" 
+    },
+    "task": "Reagieren Sie auf den Kommentar. Geben Sie Ihre Meinung und Begründung.",
+    "sampleAnswer": "Hallo zusammen, ich habe den Kommentar von Markus gelesen und möchte auch etwas dazu sagen. Ich stimme ihm teilweise zu. Es stimmt, dass viele Leute nur noch auf ihr Handy schauen. Aber das Internet hilft uns auch, Kontakt zu halten. Ich habe zum Beispiel Freunde im Ausland, mit denen ich oft telefoniere. Ohne das Internet wäre das viel schwieriger. Wichtig ist, dass man die Balance findet und sich trotzdem noch im echten Leben trifft. Was meint ihr dazu?",
+    "scoringWeights": { "Erfuellung": 10, "Kohaerenz": 10, "Wortschatz": 10, "Strukturen": 10 }
+  },
+  "aufgabe3": {
+    "timeMinutes": 10,
+    "maxPoints": 20,
+    "wordCount": 40,
+    "type": "email_formell",
+    "instructions": "Schreiben Sie eine E-Mail (ca. 40 Wörter). Vergessen Sie nicht Anrede und Gruß.",
+    "situation": "Sie nehmen an einem Deutschkurs teil. Heute können Sie nicht zum Unterricht kommen, weil Sie einen wichtigen Termin haben.",
+    "pointsToCover": [
+      "Entschuldigen Sie sich höflich.",
+      "Berichten Sie, warum Sie nicht kommen können."
+    ],
+    "sampleAnswer": "Sehr geehrte Frau Müller, leider kann ich heute nicht zum Deutschkurs kommen. Ich habe einen wichtigen Termin bei einer Behörde, den ich nicht verschieben konnte. Bitte entschuldigen Sie mein Fehlen. Ich werde die Hausaufgaben nachholen. Mit freundlichen Grüßen, Zack Dev",
+    "scoringWeights": { "Erfuellung": 5, "Kohaerenz": 5, "Wortschatz": 5, "Strukturen": 5 }
+  }
+}

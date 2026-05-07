@@ -119,8 +119,8 @@ export const ArtikelQuiz = () => {
 
   // Category selection screen
   if (!quizStarted) {
-  return (
-    <div className="space-y-6">
+    return (
+      <div className="space-y-6">
         <Card className="card-gradient">
           <CardHeader>
             <CardTitle className="text-2xl text-center">اختبار أدوات التعريف</CardTitle>
@@ -257,22 +257,19 @@ export const ArtikelQuiz = () => {
             <div className="space-y-8">
               <div className="text-center">
                 {/* Result Icon */}
-                <div className={`inline-flex items-center justify-center w-24 h-24 sm:w-28 sm:h-28 rounded-full mb-6 border-4 ${
-                  isCorrect ? 'border-green-500 bg-green-900/20' : 'border-red-500 bg-red-900/20'
-                }`}>
-                  <div className={`text-5xl sm:text-6xl font-bold ${
-                    isCorrect ? 'text-green-400' : 'text-red-400'
+                <div className={`inline-flex items-center justify-center w-24 h-24 sm:w-28 sm:h-28 rounded-full mb-6 border-4 ${isCorrect ? 'border-green-500 bg-green-900/20' : 'border-red-500 bg-red-900/20'
                   }`}>
+                  <div className={`text-5xl sm:text-6xl font-bold ${isCorrect ? 'text-green-400' : 'text-red-400'
+                    }`}>
                     {isCorrect ? '✓' : '✗'}
                   </div>
                 </div>
-                
-                <h3 className={`text-2xl sm:text-3xl font-bold mb-6 ${
-                  isCorrect ? 'text-green-400' : 'text-red-400'
-                }`}>
+
+                <h3 className={`text-2xl sm:text-3xl font-bold mb-6 ${isCorrect ? 'text-green-400' : 'text-red-400'
+                  }`}>
                   {isCorrect ? 'إجابة صحيحة!' : 'إجابة خاطئة'}
                 </h3>
-                
+
                 {/* Word Display - Artikel + Noun together */}
                 <div className="bg-neutral-800 p-6 sm:p-8 rounded-lg border border-neutral-700 mb-6 max-w-md mx-auto">
                   <div className="text-xl sm:text-2xl mb-3 flex items-center justify-center gap-3 flex-wrap">
@@ -283,7 +280,7 @@ export const ArtikelQuiz = () => {
                   </div>
                   <div className="text-lg sm:text-xl text-neutral-400 font-medium text-center">{currentWord?.arabic}</div>
                 </div>
-                
+
                 {/* User Answer Feedback */}
                 {!isCorrect && (
                   <div className="bg-red-900/20 p-5 rounded-lg border border-red-800 max-w-md mx-auto">
@@ -296,7 +293,7 @@ export const ArtikelQuiz = () => {
                     </div>
                   </div>
                 )}
-                
+
                 {/* Encouragement Message */}
                 {isCorrect && (
                   <div className="bg-green-900/20 p-5 rounded-lg border border-green-800 max-w-md mx-auto">
@@ -306,9 +303,9 @@ export const ArtikelQuiz = () => {
               </div>
 
               <div className="text-center pt-4">
-                <Button 
-                  onClick={handleNext} 
-                  size="lg" 
+                <Button
+                  onClick={handleNext}
+                  size="lg"
                   className="w-full sm:w-64 h-12 text-lg font-semibold bg-green-500 hover:bg-green-600 text-white border-0"
                 >
                   {currentIndex + 1 < quizWords.length ? 'الكلمة التالية' : 'إعادة الاختبار'}
@@ -347,16 +344,16 @@ export const ArtikelQuiz = () => {
 
       {/* Control Buttons */}
       <div className="flex flex-col sm:flex-row gap-3 justify-center pb-8">
-        <Button 
-          variant="outline" 
-          onClick={handleRestart} 
-          className="w-full sm:w-auto h-12 px-6 text-base border-2 border-neutral-600 text-white hover:text-white hover:border-red-500 hover:bg-red-800"
+        <Button
+          variant="outline"
+          onClick={handleRestart}
+          className="w-full sm:w-auto h-12 px-6 text-base border-2 border-neutral-600 text-white hover:text-white hover:border-red-500 hover:primary"
         >
           إعادة الاختبار
         </Button>
-        <Button 
-          variant="outline" 
-          onClick={() => setQuizStarted(false)} 
+        <Button
+          variant="outline"
+          onClick={() => setQuizStarted(false)}
           className="w-full sm:w-auto h-12 px-6 text-base border-2 border-neutral-600 text-white hover:text-white hover:border-yellow-500 hover:bg-yellow-800"
         >
           تغيير الفئة

@@ -38,12 +38,20 @@ interface AppState {
   days: Day[];
   vocabulary: VocabularyItem[];
   resources: Resource[];
-  currentTab: 'schedule' | 'vocabulary' | 'grammar' | 'lessons' | 'listening' | 'writing' | 'resources';
+  currentTab: 'schedule' | 'vocabulary' | 'grammar' | 'lessons' | 'listening' | 'writing' | 'resources' | 'preparation';
+  preparationState: {
+    step: 'level' | 'institute' | 'module' | 'teil' | 'topic' | 'preview';
+    level: string | null;
+    institute: string | null;
+    module: string | null;
+    teilId: string | null;
+    topicId: string | null;
+  };
   isLoaded: boolean;
 }
 
 interface AppContextType extends AppState {
-  setCurrentTab: (tab: 'schedule' | 'vocabulary' | 'grammar' | 'lessons' | 'listening' | 'writing' | 'resources') => void;
+  setCurrentTab: (tab: 'schedule' | 'vocabulary' | 'grammar' | 'lessons' | 'listening' | 'writing' | 'resources' | 'preparation') => void;
   toggleHourComplete: (dayId: string, hourId: string) => void;
   updateTimer: (dayId: string, hourId: string, seconds: number, running: boolean) => void;
   addVocabulary: (item: Omit<VocabularyItem, 'id' | 'dateAdded'>) => void;
@@ -52,6 +60,7 @@ interface AppContextType extends AppState {
   deleteResource: (id: string) => void;
   // reset everything: progress, vocabulary, resources, and current tab
   resetAll: () => void;
+  setPreparationState: (state: Partial<AppState['preparationState']>) => void;
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
@@ -115,11 +124,25 @@ const migrateResourceCategories = (resources: Resource[]): Resource[] => {
     '✍️ Writing': 'Schreiben',
     '💬 Grammar in Arabic': 'Grammatik auf Arabisch',
     '🎓 Courses (structured)': 'Hören', // Map old courses to listening for now
+    'Prüfung - Goethe': 'Prüfung',
+    'Prüfung - TELC': 'Prüfung',
+    'Goethe Prüfung': 'Prüfung',
+    'TELC Prüfung': 'Prüfung',
+  };
+
+  const normalizeCategory = (category: string) => {
+    if (!category) return category;
+    if (categoryMapping[category]) return categoryMapping[category];
+    const lower = category.toLowerCase();
+    if (lower.includes('prüfung') || lower.includes('goethe') || lower.includes('telc')) {
+      return 'Prüfung';
+    }
+    return category;
   };
 
   return resources.map(resource => ({
     ...resource,
-    category: categoryMapping[resource.category] || resource.category
+    category: normalizeCategory(resource.category),
   }));
 };
 
@@ -300,45 +323,103 @@ const createDefaultResources = (): Resource[] => {
       url: 'https://deutsch-lernen.com/schreiben',
       isDefault: true,
     },
+    // Goethe Prüfung
+    {
+      id: 'default-25',
+      category: 'Prüfung',
+      title: 'Goethe Prüfung A1 – Übungsmaterialien',
+      url: 'https://www.goethe.de/ins/mm/en/spr/prf/gzsd1/ueb.html',
+      isDefault: true,
+    },
+    {
+      id: 'default-26',
+      category: 'Prüfung',
+      title: 'Goethe Prüfung A2 – Übungsmaterialien',
+      url: 'https://www.goethe.de/ins/de/en/prf/prf/gzsd2/ub2.html',
+      isDefault: true,
+    },
+    {
+      id: 'default-27',
+      category: 'Prüfung',
+      title: 'Goethe Prüfung B1 – Übungsmaterialien',
+      url: 'https://www.goethe.de/ins/mm/en/spr/prf/gzb1/ueb.html',
+      isDefault: true,
+    },
+    {
+      id: 'default-28',
+      category: 'Prüfung',
+      title: 'Goethe Prüfung B2 – Übungsmaterialien',
+      url: 'https://www.goethe.de/ins/mm/en/spr/prf/gzb2/ue9.html',
+      isDefault: true,
+    },
+    // Telc Prüfung
+    {
+      id: 'default-29',
+      category: 'Prüfung',
+      title: 'TELC Prüfung A1 – Prüfungsinformationen',
+      url: 'https://www.telc.net/en/language-examinations/certificate-exams/german/start-german1-telc-german-a1/',
+      isDefault: true,
+    },
+    {
+      id: 'default-30',
+      category: 'Prüfung',
+      title: 'TELC Prüfung A2 – Prüfungsinformationen',
+      url: 'https://www.telc.net/en/language-examinations/certificate-exams/german/start-german-2-telc-german-a2/',
+      isDefault: true,
+    },
+    {
+      id: 'default-31',
+      category: 'Prüfung',
+      title: 'TELC Prüfung B1 – Prüfungsinformationen',
+      url: 'https://www.telc.net/en/language-examinations/certificate-exams/german/start-german-3-telc-german-b1/',
+      isDefault: true,
+    },
+    {
+      id: 'default-32',
+      category: 'Prüfung',
+      title: 'TELC Prüfung B2 – Prüfungsinformationen',
+      url: 'https://www.telc.net/en/language-examinations/certificate-exams/german/start-german-4-telc-german-b2/',
+      isDefault: true,
+    },
     
     // Grammatik auf Arabisch
     {
-      id: 'default-25',
+      id: 'default-33',
       category: 'Grammatik auf Arabisch',
       title: 'Deutsch Mit Marwa (YouTube) - Arabic Explanations',
       url: 'https://www.youtube.com/@DeutschMitMarwa',
       isDefault: true,
     },
     {
-      id: 'default-26',
+      id: 'default-34',
       category: 'Grammatik auf Arabisch',
       title: 'تعلم الألمانية - Arabic German Learning',
       url: 'https://www.youtube.com/results?search_query=تعلم+الالمانية+بالعربية',
       isDefault: true,
     },
     {
-      id: 'default-27',
+      id: 'default-35',
       category: 'Grammatik auf Arabisch',
       title: 'Goethe Institut Arabic - Grammar PDFs',
       url: 'https://www.goethe.de/ins/ae/ar/spr/kur/dtz.html',
       isDefault: true,
     },
     {
-      id: 'default-28',
+      id: 'default-36',
       category: 'Grammatik auf Arabisch',
       title: 'German Grammar in Arabic - YouTube Channel',
       url: 'https://www.youtube.com/results?search_query=قواعد+اللغة+الالمانية+بالعربية',
       isDefault: true,
     },
     {
-      id: 'default-29',
+      id: 'default-37',
       category: 'Grammatik auf Arabisch',
       title: 'Arabic-German Grammar Guide - PDF Resources',
       url: 'https://www.goethe.de/ins/ae/ar/spr/ueb.html',
       isDefault: true,
     },
     {
-      id: 'default-30',
+      id: 'default-38',
       category: 'Grammatik auf Arabisch',
       title: 'تعلم الألمانية من الصفر - Complete Arabic Guide',
       url: 'https://www.youtube.com/results?search_query=تعلم+الالمانية+من+الصفر+بالعربية',
@@ -353,6 +434,14 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
     vocabulary: [],
     resources: [],
     currentTab: 'schedule',
+    preparationState: {
+      step: 'level',
+      level: null,
+      institute: null,
+      module: null,
+      teilId: null,
+      topicId: null,
+    },
     isLoaded: false,
   });
 
@@ -368,15 +457,33 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
         
         // Migrate old category names to new German ones
         const migratedResources = migrateResourceCategories(existingResources);
-        
-        // Create a map of existing resources by id to avoid duplicates
-        const existingResourceIds = new Set(migratedResources.map((r: Resource) => r.id));
-        
-        // Add default resources that don't already exist
-        const newDefaultResources = defaultResources.filter(r => !existingResourceIds.has(r.id));
-        const allResources = [...migratedResources, ...newDefaultResources];
-        
-        setState({ ...parsed, resources: allResources, isLoaded: true });
+
+        // Replace stale default resources with the latest default entry when IDs match.
+        const defaultResourceById = new Map(defaultResources.map((r) => [r.id, r]));
+        const normalizedResources = migratedResources.map((resource) => {
+          if (resource.isDefault && defaultResourceById.has(resource.id)) {
+            return defaultResourceById.get(resource.id)!;
+          }
+          return resource;
+        });
+
+        // Add any default resources that are missing entirely.
+        const normalizedIds = new Set(normalizedResources.map((r: Resource) => r.id));
+        const newDefaultResources = defaultResources.filter(
+          (r) => !normalizedIds.has(r.id)
+        );
+        const allResources = [...normalizedResources, ...newDefaultResources];
+
+        const existingPreparationState = parsed.preparationState || {
+          step: 'level',
+          level: null,
+          institute: null,
+          module: null,
+          teilId: null,
+          topicId: null,
+        };
+
+        setState({ ...parsed, resources: allResources, preparationState: existingPreparationState, isLoaded: true });
       } catch (e) {
         console.error('Failed to parse stored data', e);
         setState({
@@ -384,6 +491,14 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
           vocabulary: [],
           resources: createDefaultResources(),
           currentTab: 'schedule',
+          preparationState: {
+            step: 'level',
+            level: null,
+            institute: null,
+            module: null,
+            teilId: null,
+            topicId: null,
+          },
           isLoaded: true,
         });
       }
@@ -393,6 +508,14 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
         vocabulary: [],
         resources: createDefaultResources(),
         currentTab: 'schedule',
+        preparationState: {
+          step: 'level',
+          level: null,
+          institute: null,
+          module: null,
+          teilId: null,
+          topicId: null,
+        },
         isLoaded: true,
       });
     }
@@ -405,8 +528,15 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
     }
   }, [state]);
 
-  const setCurrentTab = (tab: 'schedule' | 'vocabulary' | 'grammar' | 'lessons' | 'listening' | 'writing' | 'resources') => {
+  const setCurrentTab = (tab: 'schedule' | 'vocabulary' | 'grammar' | 'lessons' | 'listening' | 'writing' | 'resources' | 'preparation') => {
     setState(prev => ({ ...prev, currentTab: tab }));
+  };
+  
+  const setPreparationState = (update: Partial<AppState['preparationState']>) => {
+    setState(prev => ({
+      ...prev,
+      preparationState: { ...prev.preparationState, ...update }
+    }));
   };
 
   const toggleHourComplete = (dayId: string, hourId: string) => {
@@ -614,6 +744,14 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
       vocabulary: [],
       resources: createDefaultResources(),
       currentTab: 'schedule',
+      preparationState: {
+        step: 'level',
+        level: null,
+        institute: null,
+        module: null,
+        teilId: null,
+        topicId: null,
+      },
     }));
     try {
       // Also clear lessons completion (both new and legacy keys)
@@ -634,6 +772,7 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
         addResource,
         deleteResource,
         resetAll,
+        setPreparationState,
       }}
     >
       {children}

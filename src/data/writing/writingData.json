@@ -60,7 +60,7 @@
     "titleDe": "Meine Familie",
     "titleAr": "عائلتي",
     "level": "A1",
-    "isFree": true,
+    "isFree": false,
     "lines": [
       {
         "id": "a1-mf1",
@@ -221,11 +221,336 @@
     ]
   },
   {
+    "id": "a1-das-wetter",
+    "titleDe": "Das Wetter",
+    "titleAr": "الطقس",
+    "level": "A1",
+    "isFree": false,
+    "lines": [
+      {
+        "id": "a1-dw1",
+        "de": "Heute ist die Sonne warm",
+        "ar": "الشمس دافئة اليوم",
+        "vocab": [
+          { "word": "heute", "ar": "اليوم", "explanation": "dieser Tag" },
+          { "word": "Sonne", "ar": "الشمس", "explanation": "der helle Stern am Himmel" },
+          { "word": "warm", "ar": "دافئة", "explanation": "nicht kalt, angenehm" }
+        ]
+      },
+      {
+        "id": "a1-dw2",
+        "de": "Der Himmel ist blau",
+        "ar": "السماء زرقاء",
+        "vocab": [
+          { "word": "Himmel", "ar": "السماء", "explanation": "oben über uns" },
+          { "word": "blau", "ar": "زرقاء", "explanation": "Farbe wie das Meer" }
+        ]
+      },
+      {
+        "id": "a1-dw3",
+        "de": "Es regnet nicht",
+        "ar": "لا تمطر",
+        "vocab": [
+          { "word": "regnet", "ar": "تمطر", "explanation": "Wasser fällt vom Himmel" },
+          { "word": "nicht", "ar": "لا", "explanation": "Verneinung" }
+        ]
+      },
+      {
+        "id": "a1-dw4",
+        "de": "Der Wind ist stark",
+        "ar": "الرياح قوية",
+        "vocab": [
+          { "word": "Wind", "ar": "الرياح", "explanation": "bewegte Luft" },
+          { "word": "stark", "ar": "قوية", "explanation": "viel Kraft" }
+        ]
+      },
+      {
+        "id": "a1-dw5",
+        "de": "Das Wetter ist schön",
+        "ar": "الطقس جميل",
+        "vocab": [
+          { "word": "Wetter", "ar": "الطقس", "explanation": "Zustand der Luft" },
+          { "word": "schön", "ar": "جميل", "explanation": "gut, angenehm" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "a1-meine-kleidung",
+    "titleDe": "Meine Kleidung",
+    "titleAr": "ملابسي",
+    "level": "A1",
+    "isFree": false,
+    "lines": [
+      {
+        "id": "a1-mk1",
+        "de": "Ich ziehe ein Hemd an",
+        "ar": "أرتدي قميصاً",
+        "vocab": [
+          { "word": "ziehe an", "ar": "أرتدي", "explanation": "Kleidung anziehen" },
+          { "word": "Hemd", "ar": "قميص", "explanation": "Kleidung für den Oberkörper" }
+        ]
+      },
+      {
+        "id": "a1-mk2",
+        "de": "Meine Hose ist blau",
+        "ar": "بنطالي أزرق",
+        "vocab": [
+          { "word": "Hose", "ar": "بنطال", "explanation": "Kleidung für die Beine" },
+          { "word": "blau", "ar": "أزرق", "explanation": "Farbe" }
+        ]
+      },
+      {
+        "id": "a1-mk3",
+        "de": "Ich habe schwarze Schuhe",
+        "ar": "لدي حذاء أسود",
+        "vocab": [
+          { "word": "schwarze", "ar": "أسود", "explanation": "Farbe der Nacht" },
+          { "word": "Schuhe", "ar": "حذاء", "explanation": "Kleidung für die Füße" }
+        ]
+      },
+      {
+        "id": "a1-mk4",
+        "de": "Meine Mütze ist rot",
+        "ar": "قبعتي حمراء",
+        "vocab": [
+          { "word": "Mütze", "ar": "قبعة", "explanation": "Kleidung für den Kopf" },
+          { "word": "rot", "ar": "حمراء", "explanation": "Farbe wie Feuer" }
+        ]
+      },
+      {
+        "id": "a1-mk5",
+        "de": "Die Jacke ist zu warm",
+        "ar": "السترة دافئة جداً",
+        "vocab": [
+          { "word": "Jacke", "ar": "سترة", "explanation": "warme Kleidung" },
+          { "word": "zu", "ar": "جداً", "explanation": "mehr als nötig" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "a1-im-beruf",
+    "titleDe": "Im Beruf",
+    "titleAr": "في العمل",
+    "level": "A1",
+    "isFree": false,
+    "lines": [
+      {
+        "id": "a1-ib1",
+        "de": "Ich arbeite von acht bis vier",
+        "ar": "أعمل من الثامنة إلى الرابعة",
+        "vocab": [
+          { "word": "arbeite", "ar": "أعمل", "explanation": "meine Aufgabe machen" },
+          { "word": "von ... bis", "ar": "من ... إلى", "explanation": "Zeitraum" }
+        ]
+      },
+      {
+        "id": "a1-ib2",
+        "de": "Mein Kollege ist nett",
+        "ar": "زميلي لطيف",
+        "vocab": [
+          { "word": "Kollege", "ar": "زميل", "explanation": "Person am gleichen Arbeitsplatz" },
+          { "word": "nett", "ar": "لطيف", "explanation": "freundlich" }
+        ]
+      },
+      {
+        "id": "a1-ib3",
+        "de": "Ich schreibe eine E-Mail",
+        "ar": "أكتب بريداً إلكترونياً",
+        "vocab": [
+          { "word": "schreibe", "ar": "أكتب", "explanation": "Wörter auf Papier oder PC machen" },
+          { "word": "E-Mail", "ar": "بريد إلكتروني", "explanation": "Nachricht im Internet" }
+        ]
+      },
+      {
+        "id": "a1-ib4",
+        "de": "Der Computer funktioniert gut",
+        "ar": "الكمبيوتر يعمل بشكل جيد",
+        "vocab": [
+          { "word": "Computer", "ar": "كمبيوتر", "explanation": "elektronische Maschine" },
+          { "word": "funktioniert", "ar": "يعمل", "explanation": "macht, was es soll" },
+          { "word": "gut", "ar": "جيد", "explanation": "ohne Probleme" }
+        ]
+      },
+      {
+        "id": "a1-ib5",
+        "de": "Mittags mache ich Pause",
+        "ar": "في الظهيرة آخذ استراحة",
+        "vocab": [
+          { "word": "mittags", "ar": "في الظهيرة", "explanation": "um 12 Uhr" },
+          { "word": "Pause", "ar": "استراحة", "explanation": "kurze Zeit ohne Arbeit" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "a1-zum-fruehstueck",
+    "titleDe": "Zum Frühstück",
+    "titleAr": "على الإفطار",
+    "level": "A1",
+    "isFree": false,
+    "lines": [
+      {
+        "id": "a1-zf1",
+        "de": "Zum Frühstück esse ich einen Apfel",
+        "ar": "على الإفطار آكل تفاحة",
+        "vocab": [
+          { "word": "Frühstück", "ar": "الإفطار", "explanation": "erste Mahlzeit am Tag" },
+          { "word": "Apfel", "ar": "تفاحة", "explanation": "rundes Obst" }
+        ]
+      },
+      {
+        "id": "a1-zf2",
+        "de": "Ich trinke heisse Milch",
+        "ar": "أشرب حليباً ساخناً",
+        "vocab": [
+          { "word": "trinke", "ar": "أشرب", "explanation": "Flüssigkeit zu mir nehmen" },
+          { "word": "heisse", "ar": "ساخناً", "explanation": "nicht kalt, warm" }
+        ]
+      },
+      {
+        "id": "a1-zf3",
+        "de": "Das Ei ist weichgekocht",
+        "ar": "البيضة مسلوقة نصف استواء",
+        "vocab": [
+          { "word": "Ei", "ar": "بيضة", "explanation": "von Huhn" },
+          { "word": "weichgekocht", "ar": "مسلوقة نصف استواء", "explanation": "innen noch flüssig" }
+        ]
+      },
+      {
+        "id": "a1-zf4",
+        "de": "Ich mag keine Wurst",
+        "ar": "لا أحب النقانق",
+        "vocab": [
+          { "word": "mag", "ar": "أحب", "explanation": "mögen" },
+          { "word": "Wurst", "ar": "نقانق", "explanation": "Fleischprodukt" }
+        ]
+      },
+      {
+        "id": "a1-zf5",
+        "de": "Das Frühstück ist fertig",
+        "ar": "الإفطار جاهز",
+        "vocab": [
+          { "word": "fertig", "ar": "جاهز", "explanation": "bereit zum Essen" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "a1-in-der-stadt",
+    "titleDe": "In der Stadt",
+    "titleAr": "في المدينة",
+    "level": "A1",
+    "isFree": false,
+    "lines": [
+      {
+        "id": "a1-is1",
+        "de": "Die Stadt ist laut und bunt",
+        "ar": "المدينة صاخبة وملونة",
+        "vocab": [
+          { "word": "Stadt", "ar": "المدينة", "explanation": "großer Ort mit vielen Häusern" },
+          { "word": "laut", "ar": "صاخبة", "explanation": "viel Lärm" },
+          { "word": "bunt", "ar": "ملونة", "explanation": "viele Farben" }
+        ]
+      },
+      {
+        "id": "a1-is2",
+        "de": "Hier gibt es eine Schule",
+        "ar": "يوجد هنا مدرسة",
+        "vocab": [
+          { "word": "es gibt", "ar": "يوجد", "explanation": "da ist" },
+          { "word": "Schule", "ar": "مدرسة", "explanation": "Ort zum Lernen" }
+        ]
+      },
+      {
+        "id": "a1-is3",
+        "de": "Die Ampel ist rot",
+        "ar": "إشارة المرور حمراء",
+        "vocab": [
+          { "word": "Ampel", "ar": "إشارة مرور", "explanation": "Lichtzeichen für Autos" },
+          { "word": "rot", "ar": "حمراء", "explanation": "Farbe" }
+        ]
+      },
+      {
+        "id": "a1-is4",
+        "de": "Das Kino ist geschlossen",
+        "ar": "السينما مغلقة",
+        "vocab": [
+          { "word": "Kino", "ar": "سينما", "explanation": "Ort für Filme" },
+          { "word": "geschlossen", "ar": "مغلقة", "explanation": "nicht offen" }
+        ]
+      },
+      {
+        "id": "a1-is5",
+        "de": "Ich gehe zur Bushaltestelle",
+        "ar": "أذهب إلى موقف الباص",
+        "vocab": [
+          { "word": "Bushaltestelle", "ar": "موقف باص", "explanation": "Ort, wo der Bus hält" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "a1-meine-hobbys",
+    "titleDe": "Meine Hobbys",
+    "titleAr": "هواياتي",
+    "level": "A1",
+    "isFree": false,
+    "lines": [
+      {
+        "id": "a1-mh1",
+        "de": "Mein Hobby ist Fussball",
+        "ar": "هوايتي كرة القدم",
+        "vocab": [
+          { "word": "Hobby", "ar": "هواية", "explanation": "was ich gerne tue" },
+          { "word": "Fussball", "ar": "كرة القدم", "explanation": "Sport mit Ball" }
+        ]
+      },
+      {
+        "id": "a1-mh2",
+        "de": "Ich spiele gerne Klavier",
+        "ar": "أعزف البيانو بسرور",
+        "vocab": [
+          { "word": "spiele", "ar": "أعزف", "explanation": "Musik machen" },
+          { "word": "Klavier", "ar": "بيانو", "explanation": "Instrument mit Tasten" }
+        ]
+      },
+      {
+        "id": "a1-mh3",
+        "de": "Ich lese ein Buch",
+        "ar": "أقرأ كتاباً",
+        "vocab": [
+          { "word": "lese", "ar": "أقرأ", "explanation": "Wörter sehen und verstehen" },
+          { "word": "Buch", "ar": "كتاب", "explanation": "viele Seiten mit Text" }
+        ]
+      },
+      {
+        "id": "a1-mh4",
+        "de": "Nach der Arbeit bin ich müde",
+        "ar": "بعد العمل أنا متعب",
+        "vocab": [
+          { "word": "nach", "ar": "بعد", "explanation": "später als" },
+          { "word": "müde", "ar": "متعب", "explanation": "keine Energie mehr" }
+        ]
+      },
+      {
+        "id": "a1-mh5",
+        "de": "Am Wochenende habe ich Zeit",
+        "ar": "في نهاية الأسبوع لدي وقت",
+        "vocab": [
+          { "word": "Wochenende", "ar": "نهاية الأسبوع", "explanation": "Samstag und Sonntag" },
+          { "word": "Zeit", "ar": "وقت", "explanation": "Minuten und Stunden" }
+        ]
+      }
+    ]
+  },
+  {
     "id": "a2-gesunde-ernaehrung",
     "titleDe": "Gesunde Ernährung",
     "titleAr": "التغذية الصحية",
     "level": "A2",
-    "isFree": true,
+    "isFree": false,
     "lines": [
       {
         "id": "a2-ge1",
@@ -459,11 +784,286 @@
     ]
   },
   {
+    "id": "a2-meine-wohnung",
+    "titleDe": "Meine Wohnung",
+    "titleAr": "شقتي",
+    "level": "A2",
+    "isFree": true,
+    "lines": [
+      {
+        "id": "a2-mw1",
+        "de": "Meine Wohnung liegt im dritten Stock",
+        "ar": "شقتي تقع في الطابق الثالث",
+        "vocab": [
+          { "word": "liegt", "ar": "تقع", "explanation": "sich befindet an einem Ort" },
+          { "word": "dritten Stock", "ar": "الطابق الثالث", "explanation": "drei Ebenen über dem Erdgeschoss" }
+        ]
+      },
+      {
+        "id": "a2-mw2",
+        "de": "Sie hat zwei Schlafzimmer und ein grosses Wohnzimmer",
+        "ar": "لديها غرفتا نوم وغرفة معيشة كبيرة",
+        "vocab": [
+          { "word": "Schlafzimmer", "ar": "غرف نوم", "explanation": "Räume zum Schlafen" },
+          { "word": "Wohnzimmer", "ar": "غرفة معيشة", "explanation": "Raum für den Alltag und Gäste" }
+        ]
+      },
+      {
+        "id": "a2-mw3",
+        "de": "Die Küche ist klein aber modern",
+        "ar": "المطبخ صغير لكن حديث",
+        "vocab": [
+          { "word": "Küche", "ar": "المطبخ", "explanation": "Raum zum Kochen" },
+          { "word": "modern", "ar": "حديث", "explanation": "mit neuer Technik und Design" }
+        ]
+      },
+      {
+        "id": "a2-mw4",
+        "de": "Von meinem Balkon sehe ich die Stadt",
+        "ar": "من شرفتي أرى المدينة",
+        "vocab": [
+          { "word": "Balkon", "ar": "شرفة", "explanation": "kleine Terrasse an der Wohnung" },
+          { "word": "sehe", "ar": "أرى", "explanation": "mit den Augen wahrnehmen" }
+        ]
+      },
+      {
+        "id": "a2-mw5",
+        "de": "Die Miete ist nicht zu teuer",
+        "ar": "الإيجار ليس غالياً جداً",
+        "vocab": [
+          { "word": "Miete", "ar": "الإيجار", "explanation": "Geld, das ich monatlich zahle" },
+          { "word": "teuer", "ar": "غالياً", "explanation": "viel Geld kostend" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "a2-einkaufen-auf-dem-markt",
+    "titleDe": "Einkaufen auf dem Markt",
+    "titleAr": "التسوق في السوق",
+    "level": "A2",
+    "isFree": false,
+    "lines": [
+      {
+        "id": "a2-em1",
+        "de": "Auf dem Wochenmarkt gibt es frisches Obst",
+        "ar": "في السوق الأسبوعي يوجد فواكه طازجة",
+        "vocab": [
+          { "word": "Wochenmarkt", "ar": "السوق الأسبوعي", "explanation": "Markt, der einmal pro Woche stattfindet" },
+          { "word": "frisches", "ar": "طازجة", "explanation": "neu geerntet, nicht alt" }
+        ]
+      },
+      {
+        "id": "a2-em2",
+        "de": "Der Händler ruft: Apfel drei Euro das Kilo",
+        "ar": "البائع ينادي: التفاح ثلاثة يورو للكيلو",
+        "vocab": [
+          { "word": "Händler", "ar": "البائع", "explanation": "Person, die Waren verkauft" },
+          { "word": "ruft", "ar": "ينادي", "explanation": "laut spricht" },
+          { "word": "Kilo", "ar": "كيلو", "explanation": "1000 Gramm" }
+        ]
+      },
+      {
+        "id": "a2-em3",
+        "de": "Ich handle gerne um den Preis",
+        "ar": "أتفاوض بسعادة على السعر",
+        "vocab": [
+          { "word": "handle", "ar": "أتفاوض", "explanation": "über den Preis sprechen" },
+          { "word": "Preis", "ar": "السعر", "explanation": "Kosten einer Ware" }
+        ]
+      },
+      {
+        "id": "a2-em4",
+        "de": "Am Ende bekomme ich einen guten Rabatt",
+        "ar": "في النهاية أحصل على خصم جيد",
+        "vocab": [
+          { "word": "bekomme", "ar": "أحصل على", "explanation": "erhalte" },
+          { "word": "Rabatt", "ar": "خصم", "explanation": "weniger Geld bezahlen" }
+        ]
+      },
+      {
+        "id": "a2-em5",
+        "de": "Der Markt ist nur am Vormittag geöffnet",
+        "ar": "السوق مفتوح فقط في فترة ما قبل الظهيرة",
+        "vocab": [
+          { "word": "Vormittag", "ar": "فترة ما قبل الظهيرة", "explanation": "Zeit zwischen 9 und 12 Uhr" },
+          { "word": "geöffnet", "ar": "مفتوح", "explanation": "kann man betreten und kaufen" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "a2-beim-arzt",
+    "titleDe": "Beim Arzt",
+    "titleAr": "عند الطبيب",
+    "level": "A2",
+    "isFree": false,
+    "lines": [
+      {
+        "id": "a2-ba1",
+        "de": "Seit drei Tagen habe ich starke Kopfschmerzen",
+        "ar": "منذ ثلاثة أيام أعاني من صداع شديد",
+        "vocab": [
+          { "word": "seit", "ar": "منذ", "explanation": "Zeitpunkt in der Vergangenheit bis jetzt" },
+          { "word": "starke Kopfschmerzen", "ar": "صداع شديد", "explanation": "heftiger Schmerz im Kopf" }
+        ]
+      },
+      {
+        "id": "a2-ba2",
+        "de": "Der Arzt misst zuerst meine Temperatur",
+        "ar": "الطبيب يقيس درجة حرارتي أولاً",
+        "vocab": [
+          { "word": "misst", "ar": "يقيس", "explanation": "mit einem Gerät prüfen" },
+          { "word": "Temperatur", "ar": "درجة حرارة", "explanation": "wie warm mein Körper ist" }
+        ]
+      },
+      {
+        "id": "a2-ba3",
+        "de": "Sie sagt, ich habe eine leichte Grippe",
+        "ar": "تقول إن لدي إنفلونزا خفيفة",
+        "vocab": [
+          { "word": "Grippe", "ar": "إنفلونزا", "explanation": "Krankheit mit Fieber und Husten" },
+          { "word": "leichte", "ar": "خفيفة", "explanation": "nicht sehr schlimm" }
+        ]
+      },
+      {
+        "id": "a2-ba4",
+        "de": "Ich soll drei Tage im Bett bleiben",
+        "ar": "يجب أن أبقى في السرير ثلاثة أيام",
+        "vocab": [
+          { "word": "soll", "ar": "يجب أن", "explanation": "der Arzt sagt mir, was ich tun muss" },
+          { "word": "im Bett bleiben", "ar": "أبقى في السرير", "explanation": "nicht aufstehen, sich ausruhen" }
+        ]
+      },
+      {
+        "id": "a2-ba5",
+        "de": "In der Apotheke kaufe ich Hustensaft",
+        "ar": "في الصيدلية أشتري شراب السعال",
+        "vocab": [
+          { "word": "Apotheke", "ar": "الصيدلية", "explanation": "Laden für Medikamente" },
+          { "word": "Hustensaft", "ar": "شراب السعال", "explanation": "flüssige Medizin gegen Husten" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "a2-geburtstag-feiern",
+    "titleDe": "Geburtstag feiern",
+    "titleAr": "الاحتفال بعيد الميلاد",
+    "level": "A2",
+    "isFree": true,
+    "lines": [
+      {
+        "id": "a2-gf1",
+        "de": "Nächste Woche habe ich meinen dreissigsten Geburtstag",
+        "ar": "الأسبوع القادم سيكون عيد ميلادي الثلاثين",
+        "vocab": [
+          { "word": "dreissigsten", "ar": "الثلاثين", "explanation": "die Zahl 30" },
+          { "word": "Geburtstag", "ar": "عيد ميلاد", "explanation": "Tag, an dem ich geboren wurde" }
+        ]
+      },
+      {
+        "id": "a2-gf2",
+        "de": "Ich lade alle meine Freunde zu einer Party ein",
+        "ar": "أدعو كل أصدقائي إلى حفلة",
+        "vocab": [
+          { "word": "lade ein", "ar": "أدعو", "explanation": "jemanden zu etwas einladen" },
+          { "word": "Party", "ar": "حفلة", "explanation": "Fest mit mehreren Gästen" }
+        ]
+      },
+      {
+        "id": "a2-gf3",
+        "de": "Meine Mutter backt einen Schokoladenkuchen",
+        "ar": "أمي تخبز كعكة شوكولاتة",
+        "vocab": [
+          { "word": "backt", "ar": "تخبز", "explanation": "im Ofen zubereiten" },
+          { "word": "Schokoladenkuchen", "ar": "كعكة شوكولاتة", "explanation": "Kuchen mit Schokoladengeschmack" }
+        ]
+      },
+      {
+        "id": "a2-gf4",
+        "de": "Wir werden Musik hören und tanzen",
+        "ar": "سوف نستمع للموسيقى ونرقص",
+        "vocab": [
+          { "word": "werden", "ar": "سوف", "explanation": "Zukunft beschreiben" },
+          { "word": "tanzen", "ar": "نرقص", "explanation": "sich rhythmisch zur Musik bewegen" }
+        ]
+      },
+      {
+        "id": "a2-gf5",
+        "de": "Ich freue mich schon sehr auf die Geschenke",
+        "ar": "أنا متحمس جداً للهدايا",
+        "vocab": [
+          { "word": "freue mich", "ar": "أنا متحمس", "explanation": "voll Vorfreude sein" },
+          { "word": "Geschenke", "ar": "الهدايا", "explanation": "Dinge, die man bekommt" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "a2-umwelt-schuetzen",
+    "titleDe": "Umwelt schützen",
+    "titleAr": "حماية البيئة",
+    "level": "A2",
+    "isFree": false,
+    "lines": [
+      {
+        "id": "a2-us1",
+        "de": "Ich versuche, weniger Plastik zu benutzen",
+        "ar": "أحاول استخدام بلاستيك أقل",
+        "vocab": [
+          { "word": "versuche", "ar": "أحاول", "explanation": "mir Mühe geben" },
+          { "word": "weniger", "ar": "أقل", "explanation": "nicht so viel" },
+          { "word": "Plastik", "ar": "بلاستيك", "explanation": "künstliches Material" }
+        ]
+      },
+      {
+        "id": "a2-us2",
+        "de": "Im Supermarkt nehme ich meine eigene Tasche mit",
+        "ar": "في السوبرماركت آخذ حقيبتي الخاصة معي",
+        "vocab": [
+          { "word": "eigene", "ar": "خاصتي", "explanation": "mir gehörend, nicht neu gekauft" },
+          { "word": "Tasche", "ar": "حقيبة", "explanation": "Behältnis aus Stoff" },
+          { "word": "mitnehmen", "ar": "آخذ معي", "explanation": "von zu Hause mitbringen" }
+        ]
+      },
+      {
+        "id": "a2-us3",
+        "de": "Ich trenne meinen Müll: Papier, Glas und Restmüll",
+        "ar": "أفصل نفاياتي: ورق، زجاج، وباقي النفايات",
+        "vocab": [
+          { "word": "trenne", "ar": "أفصل", "explanation": "in verschiedene Gruppen sortieren" },
+          { "word": "Müll", "ar": "نفايات", "explanation": "Dinge, die ich wegwerfe" },
+          { "word": "Restmüll", "ar": "باقي النفايات", "explanation": "alles, was nicht recycelt wird" }
+        ]
+      },
+      {
+        "id": "a2-us4",
+        "de": "Mit dem Bus zu fahren ist besser als mit dem Auto",
+        "ar": "الذهاب بالحافلة أفضل من السيارة",
+        "vocab": [
+          { "word": "besser", "ar": "أفضل", "explanation": "positiver Vergleich" },
+          { "word": "Auto", "ar": "سيارة", "explanation": "Fahrzeug mit Motor" }
+        ]
+      },
+      {
+        "id": "a2-us5",
+        "de": "Jede kleine Aktion hilft unserer Erde",
+        "ar": "كل فعل صغير يساعد أرضنا",
+        "vocab": [
+          { "word": "Aktion", "ar": "فعل", "explanation": "was ich tue" },
+          { "word": "hilft", "ar": "يساعد", "explanation": "unterstützt" },
+          { "word": "Erde", "ar": "أرض", "explanation": "unser Planet" }
+        ]
+      }
+    ]
+  },
+  {
     "id": "b1-erfolg-durch-disziplin",
     "titleDe": "Erfolg durch Disziplin",
     "titleAr": "النجاح بالانضباط",
     "level": "B1",
-    "isFree": true,
+    "isFree": false,
     "lines": [
       {
         "id": "b1-ed1",
@@ -533,7 +1133,7 @@
     "titleDe": "Wahre Freundschaft",
     "titleAr": "الصداقة الحقيقية",
     "level": "B1",
-    "isFree": true,
+    "isFree": false,
     "lines": [
       {
         "id": "b1-wf1",
@@ -745,7 +1345,7 @@
     "titleDe": "Klimawandel",
     "titleAr": "تغير المناخ",
     "level": "B2",
-    "isFree": true,
+    "isFree": false,
     "lines": [
       {
         "id": "b2-kw1",
@@ -815,7 +1415,7 @@
     "titleDe": "Digitale Revolution",
     "titleAr": "الثورة الرقمية",
     "level": "B2",
-    "isFree": true,
+    "isFree": false,
     "lines": [
       {
         "id": "b2-dr1",

@@ -1,0 +1,407 @@
+{
+  "institut": "Goethe-Institut",
+  "level": "B2",
+  "module": "Sprechen",
+  "meta": {
+    "totalPunkte": 100,
+    "totalPunkteMax": 100,
+    "bestehensgrenzeProzent": 60,
+    "totalZeit": "15 Minuten",
+    "vorbereitungszeit": "15 Minuten",
+    "teileCount": 2,
+    "description": "Das Modul Sprechen hat zwei Teile. In Teil 1 halten Sie einen kurzen Vortrag, in Teil 2 führen Sie eine Diskussion. Vor der Prüfung haben Sie 15 Minuten Zeit zur Vorbereitung.",
+    "bewertungskriterien": "Aufgabenerfüllung + Interaktion + Wortschatz + Strukturen + Aussprache. Scoring: A=höchste, B, C, D, E=0 Punkte."
+  },
+  "teile": [
+    {
+      "id": "teil-1",
+      "label": "Teil 1",
+      "nummer": 1,
+      "arbeitszeit": "4 Minuten",
+      "dauer": "circa 4 Minuten pro Person",
+      "pruefungsziel": "Produktion/Interaktion — Vortrag halten",
+      "aufgabentyp": "vortrag",
+      "punkte": 50,
+      "title": "Einen Vortrag halten",
+      "titleAr": "تقديم عرض تقديمي",
+      "instructions": "Sie sollen Ihren Partnern ein Thema präsentieren. Sie haben ca. 4 Minuten Zeit. Strukturieren Sie Ihren Vortrag mit einer Einleitung, einem Hauptteil und einem Schluss. Gehen Sie auf alle drei Leitpunkte ein. Anschließend beantworten Sie Fragen Ihres Partners und des Prüfers.",
+      "description": "Ein strukturierter Vortrag (Einleitung, Hauptteil, Schluss) mit 3 Leitpunkten (z.B. Alternativen beschreiben, Vor-/Nachteile). Partner/Prüfer stellt danach Fragen.",
+      "themen": [
+        {
+          "id": "t1-studium-gesundheit",
+          "kandidat": "A",
+          "thema1": {
+            "title": "Finanzierung des Studiums",
+            "titleAr": "تمويل الدراسة",
+            "leitpunkte": [
+              "Beschreiben Sie mehrere Möglichkeiten, wie Studierende ihr Studium finanzieren können.",
+              "Nennen Sie Vor- und Nachteile und bewerten Sie diese.",
+              "Beschreiben Sie eine Möglichkeit genauer."
+            ]
+          },
+          "thema2": {
+            "title": "Gesund leben im Alltag",
+            "titleAr": "العيش الصحي في الحياة اليومية",
+            "leitpunkte": [
+              "Beschreiben Sie mehrere Möglichkeiten, wie man im Alltag gesund leben kann.",
+              "Nennen Sie Vor- und Nachteile und bewerten Sie diese.",
+              "Beschreiben Sie eine Möglichkeit genauer."
+            ]
+          },
+          "fragen_beispiele": [
+            "Welche dieser Möglichkeiten ist in Ihrem Heimatland besonders beliebt?",
+            "Glauben Sie, dass das Thema in Zukunft wichtiger wird?",
+            "Welche Schwierigkeiten sehen Sie bei der Umsetzung?"
+          ]
+        },
+        {
+          "id": "t1-freundschaft-ernaehrung",
+          "kandidat": "B",
+          "thema1": {
+            "title": "Freundschaften pflegen",
+            "titleAr": "الحفاظ على الصداقات",
+            "leitpunkte": [
+              "Beschreiben Sie mehrere Formen, wie man heutzutage Kontakt zu Freunden hält.",
+              "Nennen Sie Vor- und Nachteile und bewerten Sie diese.",
+              "Beschreiben Sie eine Form der Kontaktpflege genauer."
+            ]
+          },
+          "thema2": {
+            "title": "Ernährung am Arbeitsplatz",
+            "titleAr": "التغذية في مكان العمل",
+            "leitpunkte": [
+              "Beschreiben Sie mehrere Möglichkeiten, wie sich Menschen während der Arbeit ernähren.",
+              "Nennen Sie Vor- und Nachteile und bewerten Sie diese.",
+              "Beschreiben Sie eine Möglichkeit genauer."
+            ]
+          },
+          "fragen_beispiele": [
+            "Wie handhaben Sie das persönlich?",
+            "Denken Sie, die modernen Medien haben unser Verhalten verändert?",
+            "Was würden Sie jemandem raten, der wenig Zeit hat?"
+          ]
+        },
+        {
+          "id": "t1-mobilitaet-umwelt",
+          "kandidat": "A",
+          "thema1": {
+            "title": "Mobilität in der Stadt",
+            "titleAr": "التنقل في المدينة",
+            "leitpunkte": [
+              "Beschreiben Sie mehrere Verkehrsmittel für die Fortbewegung in der Stadt.",
+              "Nennen Sie Vor- und Nachteile und bewerten Sie diese.",
+              "Beschreiben Sie eine Möglichkeit genauer."
+            ]
+          },
+          "thema2": {
+            "title": "Umweltschutz im Alltag",
+            "titleAr": "حماية البيئة في الحياة اليومية",
+            "leitpunkte": [
+              "Beschreiben Sie mehrere Bereiche, in denen jeder im Alltag die Umwelt schützen kann.",
+              "Nennen Sie Vor- und Nachteile und bewerten Sie diese.",
+              "Beschreiben Sie einen Bereich genauer."
+            ]
+          },
+          "fragen_beispiele": [
+            "Wie ist die Situation in Ihrer Heimatstadt?",
+            "Sind die Menschen bereit, für den Umweltschutz auf Komfort zu verzichten?",
+            "Welche Maßnahmen finden Sie am effektivsten?"
+          ]
+        },
+        {
+          "id": "t1-beruf-wohnen",
+          "kandidat": "B",
+          "thema1": {
+            "title": "Berufswahl",
+            "titleAr": "اختيار المهنة",
+            "leitpunkte": [
+              "Beschreiben Sie mehrere Kriterien, nach denen junge Menschen heute ihren Beruf wählen.",
+              "Nennen Sie Vor- und Nachteile und bewerten Sie diese.",
+              "Beschreiben Sie ein Kriterium genauer."
+            ]
+          },
+          "thema2": {
+            "title": "Wohnen — allein oder mit anderen",
+            "titleAr": "السكن — وحيداً أم مع آخرين",
+            "leitpunkte": [
+              "Beschreiben Sie mehrere Wohnformen für junge Erwachsene.",
+              "Nennen Sie Vor- und Nachteile und bewerten Sie diese.",
+              "Beschreiben Sie eine Wohnform genauer."
+            ]
+          },
+          "fragen_beispiele": [
+            "Hat sich das in den letzten Jahren verändert?",
+            "Was ist für Sie das Wichtigste bei dieser Entscheidung?",
+            "Welche Rolle spielt das Finanzielle dabei?"
+          ]
+        },
+        {
+          "id": "t1-social-family",
+          "kandidat": "A",
+          "thema1": {
+            "title": "Soziale Medien",
+            "titleAr": "وسائل التواصل الاجتماعي",
+            "leitpunkte": [
+              "Beschreiben Sie mehrere Arten der Nutzung sozialer Netzwerke.",
+              "Nennen Sie Vor- und Nachteile und bewerten Sie diese.",
+              "Beschreiben Sie eine Nutzungsart genauer."
+            ]
+          },
+          "thema2": {
+            "title": "Familie und Gesellschaft",
+            "titleAr": "الأسرة والمجتمع",
+            "leitpunkte": [
+              "Beschreiben Sie mehrere Lebens- und Familienmodelle in der heutigen Gesellschaft.",
+              "Nennen Sie Vor- und Nachteile und bewerten Sie diese.",
+              "Beschreiben Sie ein Modell genauer."
+            ]
+          },
+          "fragen_beispiele": [
+            "Wie stehen ältere Menschen in Ihrer Heimat zu diesem Thema?",
+            "Was denken Sie über die Entwicklung in der Zukunft?",
+            "Beeinflussen diese Entwicklungen unser Zusammenleben?"
+          ]
+        },
+        {
+          "id": "t1-tourismus-hobby",
+          "kandidat": "B",
+          "thema1": {
+            "title": "Reisen und Tourismus",
+            "titleAr": "السفر والسياحة",
+            "leitpunkte": [
+              "Beschreiben Sie mehrere Arten von Urlaub und Reisen.",
+              "Nennen Sie Vor- und Nachteile und bewerten Sie diese.",
+              "Beschreiben Sie eine Art zu reisen genauer."
+            ]
+          },
+          "thema2": {
+            "title": "Freizeit und Hobbys",
+            "titleAr": "أوقات الفراغ والهوايات",
+            "leitpunkte": [
+              "Beschreiben Sie mehrere Möglichkeiten, die Freizeit sinnvoll zu gestalten.",
+              "Nennen Sie Vor- und Nachteile und bewerten Sie diese.",
+              "Beschreiben Sie ein Hobby/eine Aktivität genauer."
+            ]
+          },
+          "fragen_beispiele": [
+            "Haben Sie diese Möglichkeit selbst schon einmal ausprobiert?",
+            "Glauben Sie, dass Menschen heute zu wenig Freizeit haben?",
+            "Sind diese Aktivitäten sehr teuer?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teil-2",
+      "label": "Teil 2",
+      "nummer": 2,
+      "arbeitszeit": "5 Minuten",
+      "dauer": "circa 5 Minuten insgesamt",
+      "pruefungsziel": "Interaktion — Diskussion führen",
+      "aufgabentyp": "diskussion",
+      "punkte": 50,
+      "title": "Diskussion über ein kontroverses Thema",
+      "titleAr": "نقاش حول موضوع مثير للجدل",
+      "instructions": "Beide Kandidaten diskutieren eine kontroverse Frage. Tauschen Sie Standpunkte und Argumente aus, reagieren Sie auf Ihren Partner und fassen Sie am Ende zusammen (dafür oder dagegen).",
+      "description": "Standpunkte austauschen, auf Argumente reagieren, am Ende zusammenfassen. Stichpunkte zur Hilfe sind gegeben.",
+      "themen": [
+        {
+          "id": "t2-prof-beurteilung",
+          "title": "Beurteilung von Professoren",
+          "titleAr": "تقييم الأساتذة الجامعيين",
+          "frage": "Sollen Studierende ihre Professorinnen und Professoren beurteilen?",
+          "aufgaben": [
+            "Tauschen Sie Ihren Standpunkt und Ihre Argumente aus.",
+            "Reagieren Sie auf die Argumente Ihrer Gesprächspartnerin/Ihres Gesprächspartners.",
+            "Fassen Sie am Ende zusammen: Sind Sie dafür oder dagegen?"
+          ],
+          "stichpunkte": [
+            "Motivation nimmt zu/ab?",
+            "Fairness ist gegeben?",
+            "Qualität der Lehre",
+            "Konsequenzen bei schlechter Beurteilung?"
+          ],
+          "argumente_pro": [
+            "Professoren bekommen direktes Feedback und können ihre Lehre verbessern.",
+            "Die Qualität der Universität steigt, wenn schlechte Vorlesungen erkannt werden.",
+            "Studierende fühlen sich ernster genommen und haben mehr Mitspracherecht."
+          ],
+          "argumente_contra": [
+            "Studierende bewerten oft nach Sympathie oder Noten, nicht objektiv.",
+            "Professoren könnten die Prüfungen leichter machen, um bessere Bewertungen zu bekommen.",
+            "Es setzt die Lehrkräfte stark unter Druck."
+          ],
+          "musterdiskussion_ausschnitt": "A: Ich finde die Idee sehr gut. Durch das Feedback wissen die Dozenten genau, was sie besser machen können.\nB: Da bin ich anderer Meinung. Ich befürchte, dass Studenten Dozenten schlecht bewerten, nur weil eine Klausur schwer war.\nA: Das kann passieren, aber meistens ist das Feedback doch konstruktiv. Man könnte anonyme Fragebögen verwenden.\nB: Ein Problem sehe ich auch in der Konsequenz. Was passiert, wenn ein Professor schlecht abschneidet? Wird er entlassen?\nA: Es geht ja nicht um Bestrafung, sondern um Weiterbildung."
+        },
+        {
+          "id": "t2-tempolimit",
+          "title": "Tempolimit auf Autobahnen",
+          "titleAr": "تحديد السرعة على الطرق السريعة",
+          "frage": "Soll es ein generelles Tempolimit auf deutschen Autobahnen geben?",
+          "aufgaben": [
+            "Tauschen Sie Ihren Standpunkt und Ihre Argumente aus.",
+            "Reagieren Sie auf die Argumente Ihrer Gesprächspartnerin/Ihres Gesprächspartners.",
+            "Fassen Sie am Ende zusammen: Sind Sie dafür oder dagegen?"
+          ],
+          "stichpunkte": [
+            "Umweltschutz / CO2",
+            "Verkehrssicherheit / Unfälle",
+            "Persönliche Freiheit",
+            "Zeitverlust?"
+          ],
+          "argumente_pro": [
+            "Es reduziert den CO2-Ausstoß deutlich und schützt das Klima.",
+            "Es gibt weniger schwere Unfälle auf den Autobahnen.",
+            "Der Verkehrsfluss ist gleichmäßiger und es gibt weniger Staus."
+          ],
+          "argumente_contra": [
+            "Es ist ein Einschnitt in die persönliche Freiheit der Autofahrer.",
+            "Die modernen Autos sind sicher genug für höhere Geschwindigkeiten.",
+            "Bei langen Strecken verliert man viel Zeit."
+          ],
+          "musterdiskussion_ausschnitt": "A: Ich bin absolut für ein Tempolimit. Der Klimaschutz ist momentan das wichtigste Thema, und wir sparen so enorm viel CO2 ein.\nB: Natürlich ist Klimaschutz wichtig, aber ein Tempolimit bringt laut Studien nur relativ wenig CO2-Ersparnis. Wir sollten eher auf E-Autos setzen.\nA: Selbst wenn es nur wenig ist, jeder Beitrag zählt. Und denken Sie an die Sicherheit!\nB: Die deutschen Autobahnen gehören schon jetzt zu den sichersten Straßen der Welt. Ich finde, die Freiheit des Fahrers ist ein wichtiges Gut."
+        },
+        {
+          "id": "t2-smartphones-schule",
+          "title": "Smartphones in Schulen",
+          "titleAr": "الهواتف الذكية في المدارس",
+          "frage": "Sollten Smartphones in Schulen komplett verboten werden?",
+          "aufgaben": [
+            "Tauschen Sie Ihren Standpunkt und Ihre Argumente aus.",
+            "Reagieren Sie auf die Argumente Ihrer Gesprächspartnerin/Ihres Gesprächspartners.",
+            "Fassen Sie am Ende zusammen: Sind Sie dafür oder dagegen?"
+          ],
+          "stichpunkte": [
+            "Konzentration im Unterricht",
+            "Kommunikation in den Pausen",
+            "Digitale Kompetenz",
+            "Mobbing im Internet"
+          ],
+          "argumente_pro": [
+            "Ohne Smartphones können sich die Schüler viel besser auf den Unterricht konzentrieren.",
+            "In den Pausen reden die Kinder wieder miteinander statt auf Bildschirme zu starren.",
+            "Cybermobbing während der Schulzeit kann eingedämmt werden."
+          ],
+          "argumente_contra": [
+            "Ein komplettes Verbot ist realitätsfern; Smartphones sind Teil des Lebens.",
+            "Man sollte Schülern beibringen, verantwortungsvoll damit umzugehen (Medienkompetenz).",
+            "Smartphones können sinnvoll im Unterricht zur Recherche eingesetzt werden."
+          ],
+          "musterdiskussion_ausschnitt": "A: Ein Verbot wäre das Beste. Die Kinder können sich gar nicht mehr konzentrieren, wenn das Handy ständig vibriert.\nB: Ich finde ein komplettes Verbot übertrieben. Wir leben im digitalen Zeitalter. Die Schule muss den Kindern doch beibringen, wie man Handys vernünftig nutzt.\nA: In den Pausen redet niemand mehr miteinander. Das finde ich sehr traurig.\nB: Das stimmt teilweise, aber man könnte ja Regeln aufstellen: Im Unterricht aus, in der Pause okay. Ein striktes Verbot macht die Handys nur noch interessanter."
+        },
+        {
+          "id": "t2-studiengebuehren",
+          "title": "Kostenpflichtiges Studium",
+          "titleAr": "الدراسة الجامعية المدفوعة",
+          "frage": "Soll das Studium in Deutschland kostenpflichtig werden?",
+          "aufgaben": [
+            "Tauschen Sie Ihren Standpunkt und Ihre Argumente aus.",
+            "Reagieren Sie auf die Argumente Ihrer Gesprächspartnerin/Ihres Gesprächspartners.",
+            "Fassen Sie am Ende zusammen: Sind Sie dafür oder dagegen?"
+          ],
+          "stichpunkte": [
+            "Qualität der Universitäten",
+            "Chancengleichheit",
+            "Ausstattung und Betreuung",
+            "Verschuldung der Studierenden"
+          ],
+          "argumente_pro": [
+            "Mit den Gebühren könnten die Universitäten ihre Ausstattung verbessern.",
+            "Die Betreuung durch Professoren wäre besser (kleinere Kurse).",
+            "Wer später gut verdient, kann auch für seine Ausbildung bezahlen."
+          ],
+          "argumente_contra": [
+            "Es zerstört die Chancengleichheit, wenn nur Reiche studieren können.",
+            "Junge Leute starten mit riesigen Schulden ins Berufsleben.",
+            "Bildung sollte ein Grundrecht sein und vom Staat finanziert werden."
+          ],
+          "musterdiskussion_ausschnitt": "A: Ich denke, moderate Studiengebühren wären sinnvoll. Unsere Unis brauchen dringend mehr Geld für moderne Computer und gute Bibliotheken.\nB: Aber Bildung darf doch nicht vom Geldbeutel der Eltern abhängen! Jeder sollte die gleichen Chancen haben, egal wie arm er ist.\nA: Es gibt ja Modelle wie BAföG oder Kredite, die man später zurückzahlt, wenn man einen guten Job hat.\nB: Ich finde es trotzdem falsch, junge Leute direkt nach dem Studium in einen Schuldenberg zu treiben."
+        },
+        {
+          "id": "t2-frauenquote",
+          "title": "Frauenquote in Unternehmen",
+          "titleAr": "حصة النساء في الشركات",
+          "frage": "Sollten Unternehmen verpflichtet werden, mindestens 50% Frauen in Führungspositionen zu haben?",
+          "aufgaben": [
+            "Tauschen Sie Ihren Standpunkt und Ihre Argumente aus.",
+            "Reagieren Sie auf die Argumente Ihrer Gesprächspartnerin/Ihres Gesprächspartners.",
+            "Fassen Sie am Ende zusammen: Sind Sie dafür oder dagegen?"
+          ],
+          "stichpunkte": [
+            "Gleichberechtigung",
+            "Qualifikation",
+            "Familie und Karriere",
+            "Staatliche Eingriffe"
+          ],
+          "argumente_pro": [
+            "Ohne gesetzliche Quote ändert sich freiwillig nichts in den Unternehmen.",
+            "Gemischte Teams arbeiten nachweislich erfolgreicher und kreativer.",
+            "Frauen sind genauso gut ausgebildet wie Männer, kommen aber seltener nach oben."
+          ],
+          "argumente_contra": [
+            "Es sollte nur die Qualifikation zählen, nicht das Geschlecht.",
+            "Eine Quote kann für Frauen auch diskriminierend wirken ('Quotenfrau').",
+            "Unternehmen sollten frei entscheiden dürfen, wen sie einstellen."
+          ],
+          "musterdiskussion_ausschnitt": "A: Ich bin klar für die Quote. Wir warten schon so lange auf Gleichberechtigung, und freiwillig machen die Unternehmen zu wenig.\nB: Ich sehe das kritisch. Es sollte immer der oder die Beste den Job bekommen. Die Qualifikation muss entscheiden, nicht das Geschlecht.\nA: Das Problem ist doch, dass hochqualifizierte Frauen oft übergangen werden, weil Männer sich gegenseitig befördern.\nB: Das mag sein, aber als Frau möchte ich doch wegen meiner Leistung Chefin werden und nicht, weil eine Quote erfüllt werden muss."
+        },
+        {
+          "id": "t2-wahlalter",
+          "title": "Wahlalter ab 16",
+          "titleAr": "سن الاقتراع من 16",
+          "frage": "Soll das Wahlalter auf 16 Jahre gesenkt werden?",
+          "aufgaben": [
+            "Tauschen Sie Ihren Standpunkt und Ihre Argumente aus.",
+            "Reagieren Sie auf die Argumente Ihrer Gesprächspartnerin/Ihres Gesprächspartners.",
+            "Fassen Sie am Ende zusammen: Sind Sie dafür oder dagegen?"
+          ],
+          "stichpunkte": [
+            "Politisches Interesse der Jugend",
+            "Politische Reife / Erfahrung",
+            "Zukunftsthemen (Klima, Bildung)",
+            "Einfluss der Eltern"
+          ],
+          "argumente_pro": [
+            "Jugendliche sind sehr an Politik interessiert (z.B. Fridays for Future).",
+            "Es geht bei Wahlen um ihre Zukunft, also sollten sie auch mitbestimmen dürfen.",
+            "Es zwingt Politiker, auch die Interessen junger Menschen ernst zu nehmen."
+          ],
+          "argumente_contra": [
+            "Mit 16 fehlt oft noch die politische Reife und Lebenserfahrung.",
+            "Jugendliche sind leichter durch soziale Medien oder ihre Eltern manipulierbar.",
+            "Mit 16 ist man rechtlich noch nicht voll geschäftsfähig, warum dann wahlberechtigt?"
+          ],
+          "musterdiskussion_ausschnitt": "A: Ich finde es wichtig, dass 16-Jährige wählen dürfen. Sie sind politisch informiert und engagieren sich für das Klima.\nB: Ich glaube, mit 16 ist man oft noch zu leicht beeinflussbar. Man hat noch nicht genug Lebenserfahrung, um komplexe wirtschaftliche Zusammenhänge zu verstehen.\nA: Aber Erwachsene wählen auch oft nur aus Gewohnheit. Und es geht ja um die Zukunft der Jugend, also sollten sie mitentscheiden dürfen.\nB: Da hast du einen Punkt. Aber man ist mit 16 noch nicht volljährig, das passt rechtlich irgendwie nicht zusammen."
+        },
+        {
+          "id": "t2-fleischsteuer",
+          "title": "Besteuerung von Fleischkonsum",
+          "titleAr": "فرض ضرائب على استهلاك اللحوم",
+          "frage": "Sollte Fleischkonsum stark besteuert werden?",
+          "aufgaben": [
+            "Tauschen Sie Ihren Standpunkt und Ihre Argumente aus.",
+            "Reagieren Sie auf die Argumente Ihrer Gesprächspartnerin/Ihres Gesprächspartners.",
+            "Fassen Sie am Ende zusammen: Sind Sie dafür oder dagegen?"
+          ],
+          "stichpunkte": [
+            "Klimawandel / CO2",
+            "Tierwohl",
+            "Lebensmittelpreise / soziale Gerechtigkeit",
+            "Gesundheit"
+          ],
+          "argumente_pro": [
+            "Es schützt das Klima, da Massentierhaltung sehr viele Treibhausgase verursacht.",
+            "Weniger Fleischkonsum führt zu besseren Bedingungen für die Tiere.",
+            "Das zusätzliche Steuergeld könnte genutzt werden, um Landwirte beim Umbau zu unterstützen."
+          ],
+          "argumente_contra": [
+            "Es ist sozial ungerecht, da sich dann nur noch Reiche Fleisch leisten können.",
+            "Viele kleine Bauernhöfe könnten dadurch bankrott gehen.",
+            "Die Politik sollte den Leuten nicht vorschreiben, was sie essen dürfen."
+          ],
+          "musterdiskussion_ausschnitt": "A: Eine Fleischsteuer wäre ein starkes Signal für den Klimaschutz. Die Massentierhaltung ist eine Katastrophe für die Umwelt.\nB: Das verstehe ich, aber eine Steuer trifft vor allem Familien mit wenig Geld. Fleisch wird dann zum Luxusgut für Reiche.\nA: Man könnte mit den Steuereinnahmen ja gesundes Obst und Gemüse billiger machen. Es geht auch um das Tierwohl.\nB: Man sollte eher die Landwirte unterstützen, auf Bio umzustellen, anstatt einfach alles teurer zu machen und die Bürger zu bevormunden."
+        }
+      ]
+    }
+  ]
+}

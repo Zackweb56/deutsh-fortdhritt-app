@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "module": "Sprechen",
+    "prepTimeMinutes": 15,
+    "examTimeMinutesPerPair": 15,
+    "totalPoints": 100,
+    "passingScore": 60,
+    "note": "Das Modul Sprechen besteht aus drei Aufgaben. Sie bereiten sich allein vor (15 Min.)."
+  },
+  "teil1": {
+    "durationMinutes": 3,
+    "type": "gemeinsam_planen",
+    "instructions": "Planen und entscheiden Sie gemeinsam, was Sie tun möchten. Sprechen Sie über alle Punkte unten.",
+    "situation": "Ein Teilnehmer aus dem Deutschkurs hatte einen Unfall und liegt im Krankenhaus. Diese Woche möchten Sie ihn besuchen und ein Geschenk von der ganzen Gruppe mitbringen. Nächste Woche kann er das Krankenhaus verlassen. Da er allein lebt, wird er Hilfe brauchen. Überlegen Sie, wie Sie ihn unterstützen können.",
+    "leitpunkte": [
+      "Wann besuchen? (Tag, Uhrzeit?)",
+      "Wie hinkommen?",
+      "Was mitnehmen?",
+      "Wie kann man helfen? (einkaufen, abholen...)"
+    ],
+    "userSuggestion": "Sie möchten Dienstag um 15 Uhr mit dem Bus fahren und Blumen mitbringen. Außerdem können Sie für ihn einkaufen.",
+    "partnerSuggestion": "Ihr Partner möchte Mittwoch um 11 Uhr mit dem Auto fahren und ein Buch mitbringen. Er möchte ihn vom Krankenhaus abholen.",
+    "partnerResponses": [
+      {
+        "leitpunkt": "Wann besuchen?",
+        "partnerSays": "Ich denke, Mittwoch wäre besser für mich. Dienstag habe ich bis 14 Uhr Arbeit. Passt dir Mittwoch um 11 Uhr?"
+      },
+      {
+        "leitpunkt": "Wie hinkommen?",
+        "partnerSays": "Ich kann mit dem Auto fahren, dann können wir auch mehr Sachen mitnehmen. Was meinst du?"
+      },
+      {
+        "leitpunkt": "Was mitnehmen?",
+        "partnerSays": "Vielleicht ein Buch? Im Krankenhaus hat man viel Zeit zum Lesen. Oder hast du eine andere Idee?"
+      },
+      {
+        "leitpunkt": "Wie helfen?",
+        "partnerSays": "Ich könnte ihn am Montag vom Krankenhaus abholen. Könntest du vielleicht das Einkaufen übernehmen?"
+      }
+    ],
+    "decisionOptions": [
+      { "id": "A", "text": "Dienstag 15 Uhr, Bus, Blumen (Ihr Vorschlag)" },
+      { "id": "B", "text": "Mittwoch 11 Uhr, Auto, Buch (Partner-Vorschlag)" },
+      { "id": "C", "text": "Mittwoch 15 Uhr, Auto, Blumen + Einkaufen (Kompromiss)" }
+    ]
+  },
+  "teil2": {
+    "durationMinutes": 3,
+    "type": "thema_praesentieren",
+    "instructions": "Präsentieren Sie ein aktuelles Thema. Folgen Sie den 5 Folien. Sprechen Sie frei.",
+    "folienStruktur": [
+      {
+        "folie": 1,
+        "title": "Einleitung & Struktur",
+        "instruction": "Stellen Sie Ihr Thema vor. Erklären Sie den Inhalt und die Struktur Ihrer Präsentation."
+      },
+      {
+        "folie": 2,
+        "title": "Persönliche Erfahrung",
+        "instruction": "Berichten Sie von Ihrer Situation oder einem Erlebnis im Zusammenhang mit dem Thema."
+      },
+      {
+        "folie": 3,
+        "title": "Heimatland",
+        "instruction": "Berichten Sie von der Situation in Ihrem Heimatland und geben Sie Beispiele."
+      },
+      {
+        "folie": 4,
+        "title": "Vor- und Nachteile",
+        "instruction": "Nennen Sie Vor- und Nachteile und sagen Sie dazu Ihre Meinung. Geben Sie Beispiele."
+      },
+      {
+        "folie": 5,
+        "title": "Abschluss & Dank",
+        "instruction": "Beenden Sie Ihre Präsentation und bedanken Sie sich bei den Zuhörern."
+      }
+    ],
+    "thema1": {
+      "title": "Aufgabe 2 A: Handys für Kinder",
+      "headline": "'Papa, ich will ein Handy!'",
+      "subheadline": "Brauchen Kinder Mobiltelefone?",
+      "slides": [
+        { "folie": 1, "content": "Thema: Brauchen Kinder Mobiltelefone? Struktur: Eigene Erfahrung, Situation im Heimatland, Vor- und Nachteile, meine Meinung." },
+        { "folie": 2, "content": "Mein Neffe hat mit 8 Jahren sein erstes Handy bekommen. Er spielt viel damit, aber er kann auch seine Eltern jederzeit anrufen." },
+        { "folie": 3, "content": "In Deutschland haben fast alle Kinder ab 10 Jahren ein Smartphone. In meinem Heimatland ist es noch nicht so verbreitet." },
+        { "folie": 4, "content": "Vorteil: Sicherheit, Erreichbarkeit. Nachteil: Ablenkung, Suchtgefahr. Meine Meinung: Erst ab 12 Jahren mit festen Regeln." },
+        { "folie": 5, "content": "Vielen Dank für Ihre Aufmerksamkeit! Haben Sie noch Fragen?" }
+      ],
+      "prueferFragen": [
+        "Ab welchem Alter würden Sie Ihrem Kind ein Handy kaufen und warum?",
+        "Sollten Schulen Handys im Unterricht komplett verbieten?",
+        "Was ist die größte Gefahr bei Smartphones für Kinder?"
+      ],
+      "feedbackStarter": [
+        "Deine Präsentation über Kinder und Handys war sehr interessant, besonders...",
+        "Ich stimme dir zu, dass Sicherheit wichtig ist, aber findest du nicht...",
+        "In meinem Heimatland ist das ganz anders als du beschrieben hast..."
+      ],
+      "suggestedQuestions": [
+        "Glaubst du, dass Handys die Konzentration in der Schule verschlechtern?",
+        "Was ist für dich wichtiger: Dass ein Kind erreichbar ist oder dass es weniger spielt?"
+      ]
+    },
+    "thema2": {
+      "title": "Aufgabe 2 B: Fernsehen für Kinder",
+      "headline": "'Mama, nur noch 5 Minuten!'",
+      "subheadline": "Sehen Kinder zu viel fern?",
+      "slides": [
+        { "folie": 1, "content": "Thema: Sehen Kinder zu viel fern? Struktur: Eigene Kindheit, Situation im Land, Pro/Contra, Fazit." },
+        { "folie": 2, "content": "Als Kind durfte ich nur eine Stunde am Tag fernsehen. Heute finde ich, dass das eine sehr gute Regel war." },
+        { "folie": 3, "content": "In meiner Heimat schauen Kinder oft den ganzen Nachmittag fern, da beide Eltern meistens arbeiten." },
+        { "folie": 4, "content": "Pro: Bildungsprogramme. Contra: Bewegungsmangel, Konzentrationsschwäche. Meinung: Maximal 1 Stunde pro Tag." },
+        { "folie": 5, "content": "Ich danke Ihnen für Ihr Interesse und freue mich auf Ihre Fragen." }
+      ],
+      "prueferFragen": [
+        "Gibt es Ihrer Meinung nach Fernsehprogramme, die wirklich lehrreich für Kinder sind?",
+        "Wie können Eltern kontrollieren, was ihre Kinder im Fernsehen schauen?",
+        "Ist YouTube heute gefährlicher als traditionelles Fernsehen?"
+      ],
+      "feedbackStarter": [
+        "Dein Vortrag über das Fernsehen war sehr klar strukturiert, besonders gut fand ich...",
+        "Ich war überrascht zu hören, dass in deiner Heimat Kinder so viel fernsehen...",
+        "Glaubst du wirklich, dass eine Stunde Fernsehen am Tag genug ist?"
+      ],
+      "suggestedQuestions": [
+        "Was ist deiner Meinung nach schlimmer: zu viel Fernsehen oder zu viel Handy?",
+        "Sollten Eltern öfter zusammen mit ihren Kindern fernsehen?"
+      ]
+    }
+  },
+  "teil3": {
+    "durationMinutes": 2,
+    "type": "feedback_und_frage",
+    "instructions": "Geben Sie Rückmeldung und reagieren Sie auf Fragen."
+  }
+}

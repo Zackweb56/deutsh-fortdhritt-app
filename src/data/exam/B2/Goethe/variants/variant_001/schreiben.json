@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "module": "Schreiben",
+    "timeMinutes": 75,
+    "totalRawPoints": 100,
+    "passingRaw": 60,
+    "scoringFormula": "rawPoints"
+  },
+  "teil1": {
+    "type": "essay",
+    "points": 50,
+    "arbeitszeitMinutes": 50,
+    "instructions": "Schreiben Sie einen Forumsbeitrag zu einem aktuellen Thema. Bearbeiten Sie alle vier Leitpunkte.",
+    "thema": "Homeoffice — Fluch oder Segen?",
+    "situation": "Sie haben im Internet einen Artikel zum Thema 'Homeoffice' gelesen...",
+    "aufgabenpunkte": [
+      "Äußern Sie Ihre Meinung zum Arbeiten von zu Hause aus.",
+      "Nennen Sie Gründe, warum Homeoffice immer beliebter wird.",
+      "Nennen Sie Vorteile oder Nachteile dieser Arbeitsform.",
+      "Nennen Sie Möglichkeiten zur Trennung von Privatem und Beruflichem."
+    ],
+    "minWords": 150
+  },
+  "teil2": {
+    "type": "formelle_nachricht",
+    "points": 50,
+    "arbeitszeitMinutes": 25,
+    "instructions": "Schreiben Sie eine formelle Nachricht an Ihren Vorgesetzten.",
+    "thema": "Anfrage zu einer Fortbildung",
+    "situation": "Sie möchten an einer Fortbildung teilnehmen...",
+    "aufgabenpunkte": [
+      "Begründen Sie Ihren Wunsch.",
+      "Vorschlag für die Vertretung.",
+      "Bitten Sie um ein Gespräch."
+    ],
+    "minWords": 100
+  }
+}

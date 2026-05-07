@@ -639,7 +639,7 @@ export const GrammarExercisesTab = () => {
               const shouldLock = limited && originalIndex >= 2;
               
               return (
-                <LockOverlay key={topic.grammar_topic} isLocked={shouldLock} message="دروس محجوبة">
+                <LockOverlay key={`${topic.grammar_topic}-${idx}`} isLocked={shouldLock} message="دروس محجوبة">
                   <Card
                     className={`p-3 lg:p-4 transition-all duration-200 ${shouldLock ? '' : 'cursor-pointer hover:shadow-md hover:border-primary/50 active:scale-[0.98]'}`}
                     onClick={() => {

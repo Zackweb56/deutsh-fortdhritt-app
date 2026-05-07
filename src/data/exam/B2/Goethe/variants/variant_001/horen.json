@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "module": "Hören",
+    "timeMinutes": 40,
+    "totalRawPoints": 30,
+    "passingRaw": 18,
+    "scoringFormula": "rawPoints / 30 * 100"
+  },
+  "teil1": {
+    "type": "richtig_falsch_mehrfachauswahl",
+    "points": 10,
+    "instructions": "Sie hören fünf kurze Texte. Zu jedem Text gibt es zwei Aufgaben.",
+    "audioTexts": [
+      {
+        "id": "1",
+        "title": "Text 1: Wetterbericht",
+        "transkript": "Guten Abend. Hier ist der Wetterbericht für morgen... [etc]",
+        "items": [
+          { "id": "1", "text": "Morgen wird es in ganz Deutschland regnen.", "type": "richtig_falsch", "correct": "Falsch" },
+          { "id": "2", "text": "Was wird für den Norden vorhergesagt?", "options": ["a", "b", "c"], "correct": "b" }
+        ]
+      }
+    ]
+  },
+  "teil2": {
+    "type": "mehrfachauswahl",
+    "points": 6,
+    "instructions": "Sie hören ein Interview. Wählen Sie a, b oder c.",
+    "text": {
+      "title": "Erfolg beim Sprachenlernen",
+      "transkript": "Moderator: Herzlich willkommen... [etc]"
+    },
+    "items": [
+      { "id": "11", "text": "Frau Dr. Miller meint...", "options": ["a", "b", "c"], "correct": "b" }
+    ]
+  },
+  "teil3": {
+    "type": "zuordnung_person",
+    "points": 6,
+    "instructions": "Wer sagt was? Ordnen Sie die Aussagen den Personen zu.",
+    "text": {
+      "title": "Gedruckte Zeitungen",
+      "transkript": "Moderator: Guten Tag... [etc]"
+    },
+    "items": [
+      { "id": "17", "text": "Printmedien bieten eine haptische Erfahrung.", "correct": "a" }
+    ],
+    "options": [
+      { "value": "a", "label": "Sprecher A" },
+      { "value": "b", "label": "Sprecher B" },
+      { "value": "c", "label": "Sprecher C" }
+    ]
+  },
+  "teil4": {
+    "type": "mehrfachauswahl",
+    "points": 8,
+    "instructions": "Sie hören einen Vortrag. Wählen Sie a, b oder c.",
+    "text": {
+      "title": "Nachhaltiger Tourismus",
+      "transkript": "Guten Tag... [etc]"
+    },
+    "items": [
+      { "id": "23", "text": "Hauptproblem laut Sprecher?", "options": ["a", "b", "c"], "correct": "b" }
+    ]
+  }
+}

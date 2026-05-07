@@ -29,6 +29,63 @@ async function playAudioFromBlob(blob: Blob): Promise<void> {
   });
 }
 
+// Helper for browser fallback
+function fallbackBrowserTTS(text: string): Promise<boolean> {
+  return new Promise((resolve) => {
+    if (!('speechSynthesis' in window)) {
+      resolve(false);
+      return;
+    }
+    
+    // Ensure voices are loaded
+    let hasSpoken = false;
+    const loadVoicesAndSpeak = () => {
+      if (hasSpoken) return;
+      hasSpoken = true;
+
+      const voices = window.speechSynthesis.getVoices();
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'de-DE'; // Force German
+      
+      const germanVoice = voices.find(v => v.lang.startsWith('de') && (v.name.includes('Google') || v.name.includes('Microsoft') || v.name.includes('Siri')));
+      if (germanVoice) {
+        utterance.voice = germanVoice;
+      }
+
+      utterance.onend = () => resolve(true);
+      utterance.onerror = () => resolve(false);
+
+      window.speechSynthesis.speak(utterance);
+    };
+
+    if (window.speechSynthesis.getVoices().length > 0) {
+      loadVoicesAndSpeak();
+    } else {
+      window.speechSynthesis.onvoiceschanged = loadVoicesAndSpeak;
+      setTimeout(loadVoicesAndSpeak, 1000);
+    }
+  });
+}
+
+// Helper for Google Translate Free TTS (High Quality)
+function playGoogleTTS(text: string): Promise<boolean> {
+  return new Promise((resolve) => {
+    try {
+      // Split text if it's too long (Google TTS limit is usually ~200 chars per request)
+      // For short conversational sentences, this is fine.
+      const url = `https://translate.google.com/translate_tts?ie=UTF-8&tl=de&client=tw-ob&q=${encodeURIComponent(text.substring(0, 200))}`;
+      const audio = new Audio(url);
+      
+      audio.onended = () => resolve(true);
+      audio.onerror = () => resolve(false);
+      
+      audio.play().catch(() => resolve(false));
+    } catch (e) {
+      resolve(false);
+    }
+  });
+}
+
 async function secureTTS(text: string, voiceId?: string): Promise<boolean> {
   const trimmed = text.trim();
   if (!trimmed) return false;
@@ -56,11 +113,13 @@ async function secureTTS(text: string, voiceId?: string): Promise<boolean> {
     });
 
     if (!response.ok) {
-      const errorData = await response.json().catch(() => ({ error: 'Unknown error' }));
-      toast.error('تعذر تشغيل الصوت', { 
-        description: errorData.message || `HTTP ${response.status}: ${errorData.error}` 
-      });
-      return false;
+      // Try Google TTS first (Better quality)
+      const googleSuccess = await playGoogleTTS(trimmed);
+      if (googleSuccess) return true;
+      
+      // Ultimate fallback
+      console.warn('Backend TTS failed, falling back to browser TTS');
+      return await fallbackBrowserTTS(trimmed);
     }
 
     // Get audio blob and cache it
@@ -74,11 +133,11 @@ async function secureTTS(text: string, voiceId?: string): Promise<boolean> {
     return true;
 
   } catch (error) {
-    console.error('TTS error:', error);
-    toast.error('حدث خطأ أثناء تشغيل الصوت', { 
-      description: 'تأكد من اتصال الإنترنت وحاول مرة أخرى.' 
-    });
-    return false;
+    console.warn('TTS fetch error, trying Google TTS:', error);
+    const googleSuccess = await playGoogleTTS(trimmed);
+    if (googleSuccess) return true;
+    
+    return await fallbackBrowserTTS(trimmed);
   }
 }
 

@@ -1,0 +1,281 @@
+{
+  "institut": "Goethe-Institut",
+  "level": "B1",
+  "module": "Schreiben",
+  "meta": {
+    "totalZeit": "60 Minuten",
+    "teileCount": 3,
+    "maxPunkte": 100,
+    "bestehensgrenze": 60,
+    "bestehensgrenzeProzent": 60,
+    "wordRange": {
+      "min": 40,
+      "max": 80,
+      "teil1": 80,
+      "teil2": 80,
+      "teil3": 40
+    },
+    "description": "Das Modul Schreiben besteht aus drei Teilen. In den Aufgaben 1 und 3 schreiben Sie E-Mails. In Aufgabe 2 schreiben Sie einen Diskussionsbeitrag.",
+    "gradingCriteria": {
+      "description": "Bewertung durch zwei unabhängige Prüfer nach folgenden Kriterien (je 0–5 Punkte pro Kriterium, max. 100 Punkte). Eine Drittbewertung erfolgt, wenn eine Bewertung unter 60 und die andere über 60 liegt, und der Durchschnitt unter 60 ist.",
+      "kriterien": [
+        {
+          "name": "Aufgabenerfüllung",
+          "nameAr": "إنجاز المهمة",
+          "maxPunkte": 25,
+          "description": "Wurden alle Punkte der Aufgabenstellung behandelt?"
+        },
+        {
+          "name": "Kohärenz",
+          "nameAr": "التماسك",
+          "maxPunkte": 25,
+          "description": "Logischer Aufbau, Verknüpfungen, Absätze"
+        },
+        {
+          "name": "Wortschatz",
+          "nameAr": "المفردات",
+          "maxPunkte": 25,
+          "description": "Reichhaltigkeit, Genauigkeit, situationsangemessen"
+        },
+        {
+          "name": "Strukturen",
+          "nameAr": "التراكيب",
+          "maxPunkte": 25,
+          "description": "Grammatik, Satzbau, Flexion"
+        }
+      ]
+    }
+  },
+  "teile": [
+    {
+      "id": "teil-1",
+      "label": "Aufgabe 1",
+      "nummer": 1,
+      "arbeitszeit": "20 Minuten",
+      "aufgabenNummern": "1",
+      "pruefungsziel": "Interaktion — Persönliche Mitteilung zur Kontaktpflege",
+      "aufgabentyp": "Freies Schreiben (beschreiben, begründen, einen Vorschlag machen)",
+      "woerter": "circa 80 Wörter",
+      "minWords": 80,
+      "maxWords": 100,
+      "officialName": "Interaktion — Persönliche Mitteilung zur Kontaktpflege",
+      "officialNameAr": "تفاعل — رسالة شخصية للتواصل الاجتماعي",
+      "title": "E-Mail an einen Freund/eine Freundin",
+      "titleAr": "كتابة رسالة إلكترونية لشخص صديق",
+      "themen": [
+        {
+          "id": "w1-geburtstagsfeier",
+          "title": "Geburtstagsfeier — Freund konnte nicht kommen",
+          "titleAr": "حفلة عيد ميلاد — صديق لم يستطع الحضور",
+          "situation": "Sie haben vor einer Woche Ihren Geburtstag gefeiert. Ein Freund/eine Freundin konnte nicht kommen, weil er/sie krank war.",
+          "minWords": 80,
+          "aufgabenpunkte": [
+            "Beschreiben Sie: Wie war die Feier?",
+            "Begründen Sie: Welches Geschenk finden Sie besonders toll und warum?",
+            "Machen Sie einen Vorschlag für ein Treffen."
+          ],
+          "beispielantwort": "Liebe Anna,\n\nwie geht es dir? Bist du wieder gesund?\n\nOhne dich war meine Feier nicht so lustig! Wir feierten auf einem Schiff. Ich habe viele Geschenke bekommen, aber ein selbstgeschriebenes Lied von Nikolay war besonders toll. Die Musik ist wunderbar!\n\nMöchtest du am Wochenende mit mir ins Kino gehen? Ich würde dich gern sehen.\n\nBis bald!\nDeine Lisa"
+        },
+        {
+          "id": "w1-umzug-neue-wohnung",
+          "title": "Umzug — Freund/in konnte nicht helfen",
+          "titleAr": "انتقال — صديق لم يستطع المساعدة",
+          "situation": "Sie sind letzte Woche in eine neue Wohnung umgezogen. Ein Freund/eine Freundin wollte helfen, wurde aber krank.",
+          "minWords": 80,
+          "aufgabenpunkte": [
+            "Beschreiben Sie: Wie war der Umzug?",
+            "Begründen Sie: Was gefällt Ihnen an der neuen Wohnung am besten?",
+            "Machen Sie einen Vorschlag für ein Treffen."
+          ]
+        },
+        {
+          "id": "w1-urlaubserlebnis",
+          "title": "Urlaubserlebnis — Freund/in war nicht dabei",
+          "titleAr": "تجربة عطلة — صديق لم يكن موجوداً",
+          "situation": "Sie sind vor zwei Wochen aus dem Urlaub zurück. Ihr Freund/Ihre Freundin konnte nicht mitkommen.",
+          "minWords": 80,
+          "aufgabenpunkte": [
+            "Beschreiben Sie: Wie war Ihr Urlaub?",
+            "Begründen Sie: Was war das schönste Erlebnis?",
+            "Machen Sie einen Vorschlag für einen gemeinsamen Kurzurlaub."
+          ]
+        },
+        {
+          "id": "w1-kochkurs",
+          "title": "Kochkurs — Freund/in hat den Kurs verpasst",
+          "titleAr": "دورة طبخ — صديق فاتته الدورة",
+          "situation": "Sie haben gemeinsam einen Kochkurs besucht. Ihr Freund/Ihre Freundin konnte am letzten Tag nicht kommen.",
+          "minWords": 80,
+          "aufgabenpunkte": [
+            "Beschreiben Sie: Was haben Sie gekocht?",
+            "Begründen Sie: Welches Gericht hat am besten geschmeckt?",
+            "Machen Sie einen Vorschlag zum Nachkochen."
+          ]
+        },
+        {
+          "id": "w1-sprachkurs-abschluss",
+          "title": "Sprachkursabschluss — Freund/in fehlte",
+          "titleAr": "نهاية دورة اللغة — صديق كان غائباً",
+          "situation": "Sie haben Ihren Deutschkurs abgeschlossen. Ihr Freund/Ihre Freundin war am letzten Tag krank.",
+          "minWords": 80,
+          "aufgabenpunkte": [
+            "Beschreiben Sie: Wie war die Abschlussfeier?",
+            "Begründen Sie: Was hat Ihnen im Kurs am besten gefallen?",
+            "Machen Sie einen Vorschlag zum Weiterlernen."
+          ]
+        },
+        {
+          "id": "w1-konzertbesuch",
+          "title": "Konzertbesuch — Freund/in verpasst das Konzert",
+          "titleAr": "حضور حفلة موسيقية — صديق فاتته الحفلة",
+          "situation": "Sie waren auf einem Konzert. Ihr Freund/Ihre Freundin hatte auch eine Karte, konnte aber nicht kommen.",
+          "minWords": 80,
+          "aufgabenpunkte": [
+            "Beschreiben Sie: Wie war das Konzert?",
+            "Begründen Sie: Welcher Song hat am besten gefallen?",
+            "Machen Sie einen Vorschlag für ein nächstes Konzert."
+          ]
+        },
+        {
+          "id": "w1-neuer-job",
+          "title": "Neuer Job — Freund/in gratulieren",
+          "titleAr": "وظيفة جديدة — تهنئة صديق",
+          "situation": "Ihr Freund/Ihre Freundin hat einen neuen Job bekommen. Sie haben sich noch nicht getroffen.",
+          "minWords": 80,
+          "aufgabenpunkte": [
+            "Gratulieren Sie zum neuen Job.",
+            "Begründen Sie: Warum ist dieser Job perfekt?",
+            "Machen Sie einen Vorschlag zum Feiern."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teil-2",
+      "label": "Aufgabe 2",
+      "nummer": 2,
+      "arbeitszeit": "25 Minuten",
+      "aufgabenNummern": "2",
+      "pruefungsziel": "Produktion — Persönliche Meinung äußern",
+      "aufgabentyp": "Freies Schreiben (beschreiben, begründen, erläutern, vergleichen, Meinung äußern, usw.)",
+      "woerter": "circa 80 Wörter",
+      "minWords": 80,
+      "maxWords": 100,
+      "officialName": "Produktion — Persönliche Meinung in einem Forumsbeitrag äußern",
+      "officialNameAr": "إنتاج — التعبير عن الرأي الشخصي في منتدى",
+      "title": "Meinung zu einem Thema schreiben",
+      "titleAr": "كتابة رأي حول موضوع",
+      "themen": [
+        {
+          "id": "w2-internet-kontakte",
+          "title": "Persönliche Kontakte und Internet",
+          "titleAr": "الاتصالات الشخصية والإنترنت",
+          "minWords": 80,
+          "ausgangsmeinung": "Tania: 'Früher traf man sich öfter persönlich. Heute schreibt man nur noch Nachrichten. Das Internet ersetzt keine echten Freundschaften!'",
+          "beispielantwort": "Tania hat teilweise recht. Persönliche Treffen sind seltener geworden, das ist schade. Aber das Internet ersetzt keine Freundschaften. Im Gegenteil: Durch WhatsApp bleibe ich mit Freunden in Kontakt, die weit weg wohnen. Man sollte beides kombinieren."
+        },
+        {
+          "id": "w2-smartphone-schule",
+          "title": "Smartphones im Unterricht",
+          "titleAr": "الهواتف الذكية في الفصل",
+          "minWords": 80,
+          "ausgangsmeinung": "Herr Schmidt (Lehrer): 'Schüler sollten Smartphones im Unterricht komplett ausschalten. Die Geräte lenken nur ab!'"
+        },
+        {
+          "id": "w2-tierversuche",
+          "title": "Tierversuche verbieten?",
+          "titleAr": "حظر التجارب على الحيوانات؟",
+          "minWords": 80,
+          "ausgangsmeinung": "Katrin: 'Tierversuche sind Tierquälerei und müssen verboten werden. Es gibt moderne Alternativen!'"
+        },
+        {
+          "id": "w2-fleischkonsum",
+          "title": "Vegetarisch leben?",
+          "titleAr": "العيش كنباتي؟",
+          "minWords": 80,
+          "ausgangsmeinung": "Max: 'Wer die Umwelt liebt, sollte aufhören, Fleisch zu essen. Vegetarisch leben ist die einzige Lösung!'"
+        },
+        {
+          "id": "w2-handyverbot-familie",
+          "title": "Handyverbot beim Essen",
+          "titleAr": "حظر الهاتف عند الأكل",
+          "minWords": 80,
+          "ausgangsmeinung": "Frau Wagner: 'Während des Essens sollten Handys verboten sein! Die Familie muss wieder mehr miteinander reden.'"
+        },
+        {
+          "id": "w2-homeoffice",
+          "title": "Zukunft Homeoffice",
+          "titleAr": "مستقبل العمل من المنزل",
+          "minWords": 80,
+          "ausgangsmeinung": "Herr Thomas (Arbeitgeber): 'Homeoffice ist nichts für die Zukunft. Alle sollen wieder ins Büro zurückkommen!'"
+        }
+      ]
+    },
+    {
+      "id": "teil-3",
+      "label": "Aufgabe 3",
+      "nummer": 3,
+      "arbeitszeit": "15 Minuten",
+      "aufgabenNummern": "3",
+      "pruefungsziel": "Interaktion — Persönliche Mitteilung zur Handlungsregulierung",
+      "aufgabentyp": "Freies Schreiben (sich entschuldigen, um etwas bitten, o. Ä.)",
+      "woerter": "circa 40 Wörter",
+      "minWords": 40,
+      "maxWords": 60,
+      "officialName": "Interaktion — Persönliche Mitteilung zur Handlungsregulierung (Absage/Entschuldigung)",
+      "officialNameAr": "تفاعل — رسالة شخصية للاعتذار وإلغاء موعد",
+      "title": "E-Mail — Absage und Entschuldigung",
+      "titleAr": "رسالة إلكترونية — اعتذار وإلغاء",
+      "themen": [
+        {
+          "id": "w3-lehrergespraech",
+          "title": "Absage Lehrergespräch",
+          "titleAr": "اعتذار عن مقابلة معلم",
+          "minWords": 40,
+          "situation": "Ihre Kursleiterin, Frau Müller, hat Sie zu einem Gespräch über Ihre Lernziele eingeladen. Sie können nicht kommen.",
+          "beispielantwort": "Liebe Frau Müller,\n\nvielen Dank für die Einladung. Leider kann ich am Dienstag nicht kommen, weil ich arbeiten muss. Könnten wir einen neuen Termin machen?\n\nMit freundlichen Grüßen\nJennifer"
+        },
+        {
+          "id": "w3-bewerbungsgespraech",
+          "title": "Absage Bewerbungsgespräch",
+          "titleAr": "اعتذار عن مقابلة عمل",
+          "minWords": 40,
+          "situation": "Sie haben eine Einladung zum Bewerbungsgespräch. Sie sind an dem Tag krank.",
+          "aufgabenpunkte": ["Entschuldigen Sie sich", "Berichten Sie warum", "Bitten Sie um neuen Termin"]
+        },
+        {
+          "id": "w3-geburztagseinladung",
+          "title": "Absage Geburtstagseinladung",
+          "titleAr": "اعتذار عن دعوة عيد ميلاد",
+          "minWords": 40,
+          "situation": "Ihr Freund Mark feiert Geburtstag. Sie können nicht kommen, weil Sie Ihre Großeltern besuchen.",
+          "aufgabenpunkte": ["Bedanken Sie sich", "Entschuldigen Sie sich", "Berichten Sie warum"]
+        },
+        {
+          "id": "w3-klassenfahrt",
+          "title": "Absage Klassenfahrt",
+          "titleAr": "اعتذار عن رحلة مدرسية",
+          "minWords": 40,
+          "situation": "Ihre Klasse fährt nach Berlin. Sie können nicht mitfahren, weil Sie eine Prüfung haben.",
+          "aufgabenpunkte": ["Bedanken Sie sich", "Entschuldigen Sie sich", "Berichten Sie warum"]
+        },
+        {
+          "id": "w3-arzttermin",
+          "title": "Absage Arzttermin",
+          "titleAr": "اعتذار عن موعد طبيب",
+          "minWords": 40,
+          "situation": "Sie haben einen Zahnarzttermin. Sie müssen absagen, weil Sie Fieber haben.",
+          "aufgabenpunkte": ["Entschuldigen Sie sich", "Berichten Sie warum", "Bitten Sie um neuen Termin"]
+        },
+        {
+          "id": "w3-projektarbeit",
+          "title": "Absage Projektarbeit",
+          "titleAr": "اعتذار عن عمل مشروع",
+          "minWords": 40,
+          "situation": "Sie haben sich mit Ihrer Kommilitonin Julia verabredet. Sie müssen absagen.",
+          "aufgabenpunkte": ["Entschuldigen Sie sich", "Berichten Sie warum", "Schlagen Sie neuen Termin vor"]
+        }
+      ]
+    }
+  ]
+}

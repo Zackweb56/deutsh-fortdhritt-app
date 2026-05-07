@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "module": "Sprechen",
+    "prepTimeMinutes": 15,
+    "examTimeMinutesPerPair": 15,
+    "totalPoints": 100,
+    "passingScore": 60,
+    "note": "15 Minuten Vorbereitung allein, dann 3 Teile mit Partner und Prüfer"
+  },
+  "teil1": {
+    "durationMinutes": 3,
+    "type": "gemeinsam_planen",
+    "instructions": "Planen Sie gemeinsam mit Ihrem Partner. Sprechen Sie über alle Leitpunkte und einigen Sie sich.",
+    "situation": "Ein Kollege geht in Rente. Sie möchten gemeinsam ein Abschiedsgeschenk planen.",
+    "leitpunkte": [
+      "Was schenken?",
+      "Wie viel Geld ausgeben?",
+      "Wer macht was?",
+      "Wann übergeben?"
+    ],
+    "userSuggestion": "Sie möchten einen Reisegutschein schenken und schlagen vor, dass jeder 10 Euro gibt.",
+    "partnerSuggestion": "Ihr Partner möchte lieber einen Präsentkorb kaufen und schlägt vor, eine Karte zu schreiben.",
+    "partnerResponses": [
+      {
+        "leitpunkt": "Was schenken?",
+        "partnerSays": "Ein Reisegutschein ist teuer. Ein Präsentkorb mit Wein und Käse ist doch netter, oder?"
+      },
+      {
+        "leitpunkt": "Wie viel Geld ausgeben?",
+        "partnerSays": "10 Euro sind zu viel. Vielleicht reichen auch 5 Euro von jedem?"
+      },
+      {
+        "leitpunkt": "Wer macht was?",
+        "partnerSays": "Ich kann den Korb besorgen, und du schreibst die Karte?"
+      },
+      {
+        "leitpunkt": "Wann übergeben?",
+        "partnerSays": "Am letzten Arbeitstag in der Mittagspause wäre perfekt."
+      }
+    ],
+    "decisionOptions": [
+      { "id": "A", "text": "Reisegutschein, 10 Euro pro Person (Ihr Vorschlag)" },
+      { "id": "B", "text": "Präsentkorb, 5 Euro pro Person + Karte (Partner-Vorschlag)" },
+      { "id": "C", "text": "Kleinerer Gutschein + Präsentkorb (Kompromiss)" }
+    ]
+  },
+  "teil2": {
+    "durationMinutes": 3,
+    "type": "thema_praesentieren",
+    "instructions": "Präsentieren Sie Ihr Thema. Folgen Sie den 5 Folien. Sprechen Sie frei — Ihre Notizen sind nur zur Hilfe.",
+    "folienStruktur": [
+      {
+        "folie": 1,
+        "title": "Einleitung",
+        "instruction": "Stellen Sie Ihr Thema vor. Erklären Sie, worüber Sie sprechen werden."
+      },
+      {
+        "folie": 2,
+        "title": "Persönliche Erfahrung",
+        "instruction": "Berichten Sie von Ihrer eigenen Situation oder einem Erlebnis zu diesem Thema."
+      },
+      {
+        "folie": 3,
+        "title": "Situation im Heimatland",
+        "instruction": "Wie ist die Situation in Ihrem Heimatland? Geben Sie Beispiele."
+      },
+      {
+        "folie": 4,
+        "title": "Vor- und Nachteile",
+        "instruction": "Nennen Sie Vor- und Nachteile. Sagen Sie Ihre Meinung dazu."
+      },
+      {
+        "folie": 5,
+        "title": "Abschluss",
+        "instruction": "Fassen Sie kurz zusammen. Bedanken Sie sich bei den Zuhörern."
+      }
+    ],
+    "thema1": {
+      "title": "Sport und Gesundheit",
+      "headline": "\"Ich fühle mich viel fitter!\"",
+      "subheadline": "Ist Sport wirklich so wichtig für ein langes Leben?",
+      "slides": [
+        { "folie": 1, "content": "Thema: Sport & Gesundheit — Der Schlüssel zu einem besseren Leben?" },
+        { "folie": 2, "content": "Ich gehe dreimal pro Woche joggen und fühle mich dadurch viel fitter und habe weniger Stress." },
+        { "folie": 3, "content": "In meiner Heimat spielen viele junge Leute Fußball im Park, aber ältere Menschen machen wenig Sport." },
+        { "folie": 4, "content": "Vorteile: Gesundheit, Energie, Stressabbau. Nachteile: Verletzungsgefahr, Zeitaufwand. Meinung: Sport ist unverzichtbar." },
+        { "folie": 5, "content": "Fazit: Ein gesunder Geist wohnt in einem gesunden Körper. Vielen Dank für Ihre Aufmerksamkeit!" }
+      ],
+      "prueferFragen": [
+        "Machen Sie selbst regelmäßig Sport?",
+        "Ist Sport in Ihrem Land im Alltag wichtig?",
+        "Was ist wichtiger: Ernährung oder Sport?"
+      ],
+      "feedbackStarter": [
+        "Deine Präsentation war sehr motivierend, ich finde gut dass du...",
+        "Ich stimme dir zu, dass Sport wichtig ist, aber was sagst du zu...",
+        "Besonders interessant fand ich deine Erfahrung mit..."
+      ],
+      "suggestedQuestions": [
+        "Welche Sportart würdest du jemandem empfehlen, der gerade erst anfängt?",
+        "Glaubst du, dass Profisportler ein gutes Vorbild für Kinder sind?"
+      ]
+    },
+    "thema2": {
+      "title": "Mobilität in der Stadt",
+      "headline": "\"Warum stehe ich schon wieder im Stau?\"",
+      "subheadline": "Auto oder Fahrrad: Wie sieht die Zukunft unserer Städte aus?",
+      "slides": [
+        { "folie": 1, "content": "Thema: Mobilität in der Stadt — Wie kommen wir in Zukunft von A nach B?" },
+        { "folie": 2, "content": "In der Stadt nutze ich fast nur das Fahrrad, weil es schneller ist und ich keinen Parkplatz suchen muss." },
+        { "folie": 3, "content": "In meiner Heimatstadt gibt es leider fast keine Radwege, daher fahren fast alle mit dem Auto oder Bus." },
+        { "folie": 4, "content": "Auto: Bequem aber Stau und Abgase. Fahrrad: Gesund, günstig aber wetterabhängig. Meinung: ÖPNV und Radwege ausbauen." },
+        { "folie": 5, "content": "Zusammenfassung: Wir brauchen weniger Autos in den Innenstädten für mehr Lebensqualität. Danke fürs Zuhören!" }
+      ],
+      "prueferFragen": [
+        "Nutzen Sie öffentliche Verkehrsmittel?",
+        "Sollte das Parken in der Stadt teurer werden?",
+        "Was ist das größte Problem im Verkehr Ihrer Stadt?"
+      ],
+      "feedbackStarter": [
+        "Du hast die Probleme gut analysiert, besonders der Punkt mit...",
+        "In meinem Heimatland ist die Situation ganz anders, dort...",
+        "Ich finde deine Idee mit den Radwegen sehr gut, weil..."
+      ],
+      "suggestedQuestions": [
+        "Denkst du, dass der öffentliche Nahverkehr in Zukunft kostenlos sein sollte?",
+        "Würdest du auch im Winter mit dem Fahrrad fahren?"
+      ]
+    }
+  },
+  "teil3": {
+    "durationMinutes": 2,
+    "type": "feedback_und_frage",
+    "instructions": "Geben Sie Rückmeldung zur Präsentation Ihres Partners und stellen Sie eine Frage."
+  }
+}

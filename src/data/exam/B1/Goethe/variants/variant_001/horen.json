@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "module": "Hören",
+    "timeMinutes": 40,
+    "totalRawPoints": 30,
+    "passingRaw": 18,
+    "scoringFormula": "rawPoints / 30 * 100",
+    "baseAudioPath": "/src/data/exam/B1/Goethe/variants/variant_001/horen/"
+  },
+  "teil1": {
+    "type": "richtig_falsch_plus_mehrfach",
+    "points": 10,
+    "plays": 2,
+    "prepSeconds": 10,
+    "instructions": "Sie hören 5 kurze Texte. Jeden Text ZWEIMAL. Pro Text: 1 Richtig/Falsch + 1 Mehrfachauswahl.",
+    "textType": "Anrufbeantworter / Durchsage / Radiomeldung",
+    "example": {
+      "audioFile": "beispiel.mp3",
+      "transcript": "Hier ist die Praxis von Dr. Wagner. Wir sind heute wegen einer Fortbildung geschlossen. In dringenden Fällen wenden Sie sich bitte an die Notfallpraxis im Klinikum Nord. Morgen ab 8 Uhr sind wir wieder für Sie da.",
+      "q1": { "id": "01", "text": "Die Praxis ist heute offen.", "correct": "Falsch" },
+      "q2": { "id": "02", "text": "Morgen öffnet die Praxis...", "options": [{"value":"a","label":"um 7:00 Uhr."},{"value":"b","label":"um 8:00 Uhr."},{"value":"c","label":"gar nicht."}], "correct": "b" }
+    },
+    "texts": [
+      {
+        "id": 1, "audioFile": "text1.m4a", "transcript": "Guten Tag, hier ist der automatische Ansagedienst der Deutschen Bahn. Wegen Bauarbeiten auf der Strecke München-Nürnberg kommt es heute zu Verspätungen von ca. 20 Minuten. Der ICE 582 fährt heute von Gleis 12 statt Gleis 4 ab. Wir bitten um Entschuldigung.",
+        "q1": { "id": 1, "text": "Die Züge fahren heute pünktlich.", "correct": "Falsch" },
+        "q2": { "id": 2, "text": "Der ICE 582 fährt ab...", "options": [{"value":"a","label":"Gleis 4."},{"value":"b","label":"Gleis 20."},{"value":"c","label":"Gleis 12."}], "correct": "c" }
+      },
+      {
+        "id": 2, "audioFile": "text2.mp3", "transcript": "Hallo Sarah, hier ist Jan. Ich wollte fragen, ob wir heute Abend ins Kino gehen. Der Film startet um 20:15 Uhr. Ich hole dich mit dem Auto um halb acht ab, okay? Ruf mich kurz zurück!",
+        "q1": { "id": 3, "text": "Jan möchte Sarah abholen.", "correct": "Richtig" },
+        "q2": { "id": 4, "text": "Wann treffen sie sich?", "options": [{"value":"a","label":"Um 19:30 Uhr."},{"value":"b","label":"Um 20:15 Uhr."},{"value":"c","label":"Um 20:00 Uhr."}], "correct": "a" }
+      },
+      {
+        "id": 3, "audioFile": "text3.m4a", "transcript": "Und hier das Wetter für morgen: In ganz Deutschland bleibt es sonnig und trocken. Die Temperaturen steigen auf bis zu 25 Grad. Erst am Wochenende müssen wir mit Regen rechnen.",
+        "q1": { "id": 5, "text": "Morgen regnet es.", "correct": "Falsch" },
+        "q2": { "id": 6, "text": "Das Wetter am Wochenende wird...", "options": [{"value":"a","label":"heiß."},{"value":"b","label":"schön."},{"value":"c","label":"nass."}], "correct": "c" }
+      },
+      {
+        "id": 4, "audioFile": "text4.m4a", "transcript": "Achtung, eine Durchsage im Supermarkt: Die kleine Marie sucht ihre Mutter. Marie ist 4 Jahre alt und trägt eine rote Jacke. Die Mutter möchte bitte zur Information im Erdgeschoss kommen.",
+        "q1": { "id": 7, "text": "Die Mutter sucht ihre Tochter.", "correct": "Falsch" },
+        "q2": { "id": 8, "text": "Wo soll die Mutter hingehen?", "options": [{"value":"a","label":"Zum Ausgang."},{"value":"b","label":"Zur Information."},{"value":"c","label":"In die Kinderabteilung."}], "correct": "b" }
+      },
+      {
+        "id": 5, "audioFile": "text5.m4a", "transcript": "Sie hören Radio Pop. Unser Gewinnspiel geht weiter! Wer als Erster anruft und das Lied erkennt, gewinnt zwei Karten für das Konzert von Mark Forster nächsten Freitag.",
+        "q1": { "id": 9, "text": "Man kann Konzertkarten gewinnen.", "correct": "Richtig" },
+        "q2": { "id": 10, "text": "Wann ist das Konzert?", "options": [{"value":"a","label":"Diesen Freitag."},{"value":"b","label":"Morgen."},{"value":"c","label":"Nächsten Freitag."}], "correct": "c" }
+      }
+    ]
+  },
+  "teil2": {
+    "type": "mehrfachauswahl",
+    "points": 5,
+    "plays": 1,
+    "prepSeconds": 60,
+    "audioFile": "teil2.mp3",
+    "instructions": "Sie hören einen Text EINMAL. Wählen Sie a, b oder c.",
+    "textType": "Museumsführung",
+    "transcript": "Herzlich willkommen im Stadtmuseum! Mein Name ist Müller und ich begleite Sie heute. Unser Museum zeigt die Geschichte der Stadt von der Gründung bis heute. Wir beginnen im Erdgeschoss mit den alten Handwerken. Wussten Sie, dass hier früher viel Silber verarbeitet wurde? Im ersten Stock finden Sie dann die Abteilung für moderne Kunst. Bitte beachten Sie: Das Fotografieren mit Blitz ist nicht erlaubt. Nach der Führung können Sie in unserem Café im Garten ein Stück Kuchen genießen. Die Führung dauert etwa 45 Minuten.",
+    "items": [
+      { "id": 11, "text": "Herr Müller zeigt den Besuchern heute...", "options": [{"value":"a","label":"nur moderne Kunst."},{"value":"b","label":"die Geschichte der Stadt."},{"value":"c","label":"alte Silbermünzen."}], "correct": "b" },
+      { "id": 12, "text": "Was war früher in der Stadt wichtig?", "options": [{"value":"a","label":"Der Tourismus."},{"value":"b","label":"Die Silberverarbeitung."},{"value":"c","label":"Das Backen von Kuchen."}], "correct": "b" },
+      { "id": 13, "text": "Im ersten Stock gibt es...", "options": [{"value":"a","label":"moderne Bilder."},{"value":"b","label":"alte Werkzeuge."},{"value":"c","label":"ein Café."}], "correct": "a" },
+      { "id": 14, "text": "Beim Fotografieren muss man...", "options": [{"value":"a","label":"eine Gebühr bezahlen."},{"value":"b","label":"die Kamera ausschalten."},{"value":"c","label":"den Blitz auslassen."}], "correct": "c" },
+      { "id": 15, "text": "Wie lange dauert der Rundgang?", "options": [{"value":"a","label":"Eine Stunde."},{"value":"b","label":"45 Minuten."},{"value":"c","label":"30 Minuten."}], "correct": "b" }
+    ]
+  },
+  "teil3": {
+    "type": "richtig_falsch",
+    "points": 7,
+    "plays": 1,
+    "prepSeconds": 60,
+    "audioFile": "teil3.mp3",
+    "instructions": "Sie hören ein Gespräch EINMAL. Richtig oder Falsch?",
+    "textType": "Alltagsgespräch zwischen zwei Personen",
+    "transcript": "Mann: Hallo Julia, tolles Fest, oder? Frau: Ja, echt super. Schön, dass du auch da bist, Mark. Mann: Ich habe gehört, du fängst nächste Woche einen neuen Job an? Frau: Genau, bei einer großen Versicherung in der Innenstadt. Mann: Musst du da weit fahren? Frau: Nein, zum Glück nur 15 Minuten mit dem Fahrrad. Mann: Das ist ja praktisch. Ich muss jeden Tag eine Stunde mit dem Zug pendeln. Frau: Oh weh, das wäre nichts für mich. Aber sag mal, hast du schon was gegessen? Das Buffet ist fantastisch! Mann: Nein, noch nicht. Ich habe nur was getrunken. Ich hole mir jetzt mal einen Teller.",
+    "items": [
+      { "id": 16, "text": "Mark und Julia sind auf einer Party.", "correct": "Richtig" },
+      { "id": 17, "text": "Julia arbeitet schon lange bei der Versicherung.", "correct": "Falsch" },
+      { "id": 18, "text": "Julia fährt mit dem Rad zur Arbeit.", "correct": "Richtig" },
+      { "id": 19, "text": "Mark wohnt sehr nah an seiner Arbeitsstelle.", "correct": "Falsch" },
+      { "id": 20, "text": "Julia findet Marks Arbeitsweg gut.", "correct": "Falsch" },
+      { "id": 21, "text": "Mark hat schon vom Buffet probiert.", "correct": "Falsch" },
+      { "id": 22, "text": "Julia empfiehlt das Essen.", "correct": "Richtig" }
+    ]
+  },
+  "teil4": {
+    "type": "zuordnung_personen",
+    "points": 8,
+    "plays": 2,
+    "prepSeconds": 60,
+    "audioFile": "teil4.mp3",
+    "instructions": "Sie hören eine Diskussion ZWEIMAL. Wer sagt was? Moderator=a, Person1=b (Frau Bauer), Person2=c (Herr Meyer).",
+    "textType": "Radio-Diskussion zu einem gesellschaftlichen Thema",
+    "transcript": "Moderator: Willkommen bei unserer Sendung 'Stadtgespräch'. Heute diskutieren wir über Kinderkrippen. Bei uns sind Frau Bauer, Mutter von zwei Kindern, und Herr Meyer, der meint, Kinder sollten zu Hause betreut werden. Frau Bauer, warum ist eine Krippe wichtig? Frau Bauer: Also, ich finde, Kinder lernen in der Krippe viel früher, sozial zu sein. Na ja, und für uns Frauen ist es auch wichtig, schnell wieder in den Beruf zurückzukehren. Herr Meyer: Da muss ich widersprechen. Ich meine, ein kleines Kind braucht in den ersten drei Jahren vor allem die Mutter oder den Vater. In einer Krippe ist es nur eine Nummer. Moderator: Das ist ein interessanter Punkt. Wie sehen Sie die Kosten? Frau Bauer: Genau, die Kosten sind hoch, aber der Staat sollte mehr investieren. Herr Meyer: Na ja, das Geld könnte man direkt den Familien geben, damit sie zu Hause bleiben können. Moderator: Also, die Meinungen gehen hier weit auseinander...",
+    "speakers": { "a": "Moderator", "b": "Frau Bauer", "c": "Herr Meyer" },
+    "topic": "Kinderbetreuung in Krippen",
+    "example": { "id": 0, "text": "Begrüßt die Gäste und stellt das Thema vor.", "correct": "a" },
+    "items": [
+      { "id": 23, "text": "Glaubt, dass Kinder in der Krippe wichtiges Sozialverhalten lernen.", "correct": "b" },
+      { "id": 24, "text": "Ist der Meinung, dass Kleinkinder am besten bei den Eltern aufgehoben sind.", "correct": "c" },
+      { "id": 25, "text": "Betont die Bedeutung der beruflichen Rückkehr für Mütter.", "correct": "b" },
+      { "id": 26, "text": "Fasst die unterschiedlichen Positionen am Ende zusammen.", "correct": "a" },
+      { "id": 27, "text": "Findet, dass Kinder in großen Gruppen zu wenig Aufmerksamkeit bekommen.", "correct": "c" },
+      { "id": 28, "text": "Fordert mehr finanzielle Unterstützung vom Staat für Krippenplätze.", "correct": "b" },
+      { "id": 29, "text": "Schlägt vor, das Geld lieber direkt an die Eltern auszuzahlen.", "correct": "c" },
+      { "id": 30, "text": "Leitet die Diskussion über die Kosten der Betreuung ein.", "correct": "a" }
+    ]
+  }
+}

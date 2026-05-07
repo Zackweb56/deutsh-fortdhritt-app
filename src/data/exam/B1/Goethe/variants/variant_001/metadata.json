@@ -1,0 +1,18 @@
+{
+  "variantId": "001",
+  "title": "Goethe B1 - Simulation 1",
+  "description": "Vollständige Prüfungssimulation für das Goethe-Zertifikat B1. Enthält alle vier Module: Lesen, Hören, Schreiben und Sprechen mit authentischen Inhalten und offizieller Punktegewichtung.",
+  "difficulty": "Mittel",
+  "modules": ["lesen", "horen", "schreiben", "sprechen"],
+  "moduleOrder": ["lesen", "horen", "schreiben", "sprechen"],
+  "timeLimits": { "lesen": 65, "horen": 40, "schreiben": 60, "sprechen": 15 },
+  "rawPoints": { "lesen": 30, "horen": 30 },
+  "directPoints": { "schreiben": 100, "sprechen": 100 },
+  "passingScore": 60,
+  "themes": {
+    "lesen": ["Alltag/Erlebnis", "Energie & Tourismus", "Deutschkurse", "Killerspiele-Verbot", "Hausordnung Schule"],
+    "horen": ["Durchsagen Alltag", "Museumsführung", "Festgespräch", "Diskussion Kinderkrippe"],
+    "schreiben": ["Geburtstagsfeier", "Internet & Kontakte", "Absage Kursleiterin"],
+    "sprechen": ["Krankenbesuch planen", "Handys für Kinder", "Fernsehen für Kinder"]
+  }
+}

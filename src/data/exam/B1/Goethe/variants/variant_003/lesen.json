@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "module": "Lesen",
+    "timeMinutes": 65,
+    "totalRawPoints": 30,
+    "passingRaw": 18,
+    "scoringFormula": "rawPoints / 30 * 100"
+  },
+  "teil1": {
+    "type": "richtig_falsch",
+    "points": 6,
+    "arbeitszeitMinutes": 10,
+    "instructions": "Lesen Sie den Text und die Aufgaben 1 bis 6. Wählen Sie: Richtig oder Falsch?",
+    "textType": "Blog Reise",
+    "text": {
+      "title": "Abenteuer Island",
+      "source": "aus einem Internet-Blog",
+      "content": "Letzten Monat habe ich mir einen Traum erfüllt: zwei Wochen Island mit dem Wohnmobil. Es war unglaublich! Die Natur dort ist so wild und unberührt. Man sieht Wasserfälle an jeder Ecke. Was man aber wissen muss: Es ist sehr teuer. Ein einfacher Kaffee kostet oft fünf Euro. Wir haben meistens selbst im Camper gegocht, um Geld zu sparen. Das Wetter war wechselhaft, aber mit der richtigen Kleidung kein Problem. Am besten hat mir das Baden in den heißen Quellen gefallen, während es draußen gestürmt hat. Ich kann diese Reise jedem empfehlen, der Ruhe und Natur sucht."
+    },
+    "items": [
+      { "id": 0, "text": "Der Autor war zwei Wochen in Island.", "correct": "Richtig", "isExample": true },
+      { "id": 1, "text": "Die Reise fand im letzten Jahr statt.", "correct": "Falsch" },
+      { "id": 2, "text": "Island ist ein günstiges Reiseland.", "correct": "Falsch" },
+      { "id": 3, "text": "Der Autor hat oft im Restaurant gegessen.", "correct": "Falsch" },
+      { "id": 4, "text": "Das Wetter war die ganze Zeit schlecht.", "correct": "Falsch" },
+      { "id": 5, "text": "Das Baden in den Quellen war ein Highlight.", "correct": "Richtig" },
+      { "id": 6, "text": "Der Autor rät anderen von der Reise ab.", "correct": "Falsch" }
+    ]
+  },
+  "teil2": {
+    "type": "mehrfachauswahl",
+    "points": 6,
+    "arbeitszeitMinutes": 20,
+    "instructions": "Lesen Sie die Texte. Wählen Sie bei jeder Aufgabe a, b oder c.",
+    "texts": [
+      {
+        "id": "A",
+        "title": "Klimawandel in den Städten",
+        "source": "aus einer deutschen Zeitung",
+        "content": "Städte heizen sich im Sommer immer stärker auf. Um das Klima zu verbessern, pflanzen viele Kommunen mehr Bäume und legen Dachgärten an. Diese grünen Oasen kühlen die Luft und bieten Lebensraum für Vögel. Eine Studie zeigt, dass Menschen in grünen Vierteln gesünder sind und weniger Stress haben.",
+        "items": [
+          { "id": 7, "text": "Was ist das Problem in den Städten?", "options": [{"value":"a","label":"Zu viel Regen."},{"value":"b","label":"Hohe Temperaturen im Sommer."},{"value":"c","label":"Zu viele Vögel."}], "correct": "b" },
+          { "id": 8, "text": "Was tun die Städte dagegen?", "options": [{"value":"a","label":"Sie bauen mehr Straßen."},{"value":"b","label":"Sie schaffen mehr Grünflächen."},{"value":"c","label":"Sie verbieten Autos."}], "correct": "b" },
+          { "id": 9, "text": "Grünflächen sind gut für...", "options": [{"value":"a","label":"die Gesundheit der Bewohner."},{"value":"b","label":"den Autoverkehr."},{"value":"c","label":"das Internet."}], "correct": "a" }
+        ]
+      },
+      {
+        "id": "B",
+        "title": "Stadtentwicklung und Wohnen",
+        "source": "aus einer Broschüre",
+        "content": "Moderner Städtebau setzt auf kurze Wege. Wohnen, Arbeiten und Einkaufen sollen nah beieinander liegen. Das reduziert den Verkehr und erhöht die Lebensqualität. Viele alte Fabrikgelände werden heute zu Wohnungen umgebaut. Dabei ist es wichtig, dass auch bezahlbarer Wohnraum für Familien entsteht.",
+        "items": [
+          { "id": 10, "text": "Modernes Wohnen bedeutet...", "options": [{"value":"a","label":"dass man weit fahren muss."},{"value":"b","label":"dass alles in der Nähe ist."},{"value":"c","label":"dass man nur noch arbeitet."}], "correct": "b" },
+          { "id": 11, "text": "Alte Fabriken werden heute...", "options": [{"value":"a","label":"abgerissen."},{"value":"b","label":"als Museen genutzt."},{"value":"c","label":"zu Wohnraum."}], "correct": "c" },
+          { "id": 12, "text": "Wichtig beim Städtebau ist...", "options": [{"value":"a","label":"dass die Wohnungen sehr teuer sind."},{"value":"b","label":"dass Familien sich die Miete leisten können."},{"value":"c","label":"dass es keine Geschäfte gibt."}], "correct": "b" }
+        ]
+      }
+    ]
+  },
+  "teil3": {
+    "type": "zuordnung",
+    "points": 7,
+    "arbeitszeitMinutes": 10,
+    "instructions": "Lesen Sie die Situationen 13–19 und die Anzeigen A–J. Welche Anzeige passt?",
+    "context": "Personen suchen einen passenden Sprachkurs.",
+    "example": { "id": 0, "text": "Markus sucht einen Tandem-Partner für Spanisch.", "correct": "i" },
+    "ads": [
+      { "id": "a", "title": "Spanisch für den Urlaub", "content": "Kompaktkurs am Wochenende für Anfänger." },
+      { "id": "b", "title": "Business English", "content": "Fokus auf Verhandlungen und Präsentationen." },
+      { "id": "c", "title": "Deutsch als Fremdsprache", "content": "Niveau A1-C1, tägliche Intensivkurse." },
+      { "id": "d", "title": "Französisch Kochkurs", "content": "Sprache lernen beim gemeinsamen Kochen." },
+      { "id": "e", "title": "Italienisch für Senioren", "content": "Lernen ohne Stress, Vormittagstermine." },
+      { "id": "f", "title": "Japanisch online", "content": "Live-Unterricht per Video-Chat." },
+      { "id": "g", "title": "Chinesisch für Kinder", "content": "Spielerischer Einstieg ab 5 Jahren." },
+      { "id": "h", "title": "Latein für Schüler", "content": "Gezielte Hilfe bei Hausaufgaben und Prüfungen." },
+      { "id": "i", "title": "Tandem-Börse", "content": "Finde deinen Sprachpartner in deiner Stadt.", "isExample": true },
+      { "id": "j", "title": "Sprachreise London", "content": "2 Wochen Intensivkurs inklusive Unterkunft." }
+    ],
+    "situations": [
+      { "id": 13, "text": "Paul möchte in den Ferien sein Englisch verbessern und gleichzeitig verreisen.", "correct": "j" },
+      { "id": 14, "text": "Frau Meier ist 70 und möchte Italienisch lernen, aber nicht zu schnell.", "correct": "e" },
+      { "id": 15, "text": "Tim braucht Hilfe für seine Deutschnote in der 6. Klasse.", "correct": "0" },
+      { "id": 16, "text": "Julia will Japanisch lernen, hat aber kein Auto für den Weg zur Schule.", "correct": "f" },
+      { "id": 17, "text": "Herr Schmidt muss beruflich oft auf Englisch verhandeln.", "correct": "b" },
+      { "id": 18, "text": "Carlos ist neu in Deutschland und will jeden Tag Deutsch lernen.", "correct": "c" },
+      { "id": 19, "text": "Sandra möchte Spanisch lernen, hat aber nur samstags Zeit.", "correct": "a" }
+    ]
+  },
+  "teil4": {
+    "type": "ja_nein",
+    "points": 7,
+    "arbeitszeitMinutes": 15,
+    "instructions": "Lesen Sie die Texte 20–26. Ist die Person für ein Verbot? Ja oder Nein?",
+    "topic": "Verbot von Plastiktüten in Supermärkten",
+    "context": "Leserbriefe zu einem Artikel über die Umweltbelastung durch Plastik.",
+    "example": { "id": 0, "author": "Greta", "text": "Unsere Ozeane ersticken im Plastik. Wir müssen Plastiktüten sofort verbieten!", "correct": "Ja" },
+    "items": [
+      { "id": 20, "author": "Bernd", "age": 55, "city": "Linz", "text": "Papier ist auch nicht immer besser für die Umwelt. Man sollte die Leute selbst entscheiden lassen und nicht alles reglementieren.", "correct": "Nein" },
+      { "id": 21, "author": "Anja", "age": 28, "city": "Kassel", "text": "Ein Verbot ist der einzige Weg, um die Müllberge zu reduzieren. Es gibt genug Alternativen wie Stofftaschen oder Körbe.", "correct": "Ja" },
+      { "id": 22, "author": "Mark", "age": 44, "city": "Zürich", "text": "Das ist wieder typisch Gängelung durch den Staat. Ich finde Plastiktüten praktisch für meinen Müll zu Hause. Warum also verbieten?", "correct": "Nein" },
+      { "id": 23, "author": "Karin", "age": 62, "city": "Wien", "text": "Ich bringe seit Jahren meinen eigenen Korb mit. Ein gesetzliches Verbot wäre ein wichtiges Signal für den Naturschutz weltweit.", "correct": "Ja" },
+      { "id": 24, "author": "Udo", "age": 39, "city": "Bremen", "text": "Plastik ist ein wichtiger Werkstoff. Wir sollten lieber das Recycling verbessern anstatt alles zu verbieten, was bequem ist.", "correct": "Nein" },
+      { "id": 25, "author": "Susanne", "age": 33, "city": "Passau", "text": "Plastikmüll ist eine Katastrophe für Tiere. Wer braucht diese Tüten für fünf Minuten Tragezeit? Absolut für ein Verbot.", "correct": "Ja" },
+      { "id": 26, "author": "Felix", "age": 21, "city": "Leipzig", "text": "Oft vergisst man seine Tasche zu Hause. Dann ist eine Plastiktüte die Rettung. Ein komplettes Verbot wäre für viele Kunden einfach nur nervig.", "correct": "Nein" }
+    ]
+  },
+  "teil5": {
+    "type": "mehrfachauswahl",
+    "points": 4,
+    "arbeitszeitMinutes": 10,
+    "instructions": "Lesen Sie den Text und die Aufgaben 27–30. Wählen Sie a, b oder c.",
+    "textType": "VHS-Hausordnung",
+    "context": "Regeln für Kursteilnehmer an der Volkshochschule.",
+    "text": {
+      "title": "HAUSORDNUNG VOLKSHOCHSCHULE",
+      "content": "Das Rauchen im gesamten Gebäude ist untersagt. Handys sind während des Unterrichts auszuschalten oder lautlos zu stellen. Die Kursräume müssen nach Unterrichtsende sauber hinterlassen werden. Bei Verlust von Garderobe übernimmt die Volkshochschule keine Haftung. Parkplätze stehen im Innenhof nur für Dozenten zur Verfügung; Kursteilnehmer nutzen bitte das öffentliche Parkhaus gegenüber."
+    },
+    "items": [
+      { "id": 27, "text": "Was gilt für Mobiltelefone?", "options": [{"value":"a","label":"Sie dürfen nicht benutzt werden."},{"value":"b","label":"Sie müssen im Auto bleiben."},{"value":"c","label":"Man darf nur leise telefonieren."}], "correct": "a" },
+      { "id": 28, "text": "Was passiert bei Diebstahl von Kleidung?", "options": [{"label":"Die VHS bezahlt den Schaden.","value":"a"},{"label":"Die Kursteilnehmer sind selbst verantwortlich.","value":"b"},{"label":"Die Versicherung der Stadt haftet.","value":"c"}], "correct": "b" },
+      { "id": 29, "text": "Wo können Schüler parken?", "options": [{"value":"a","label":"Im Innenhof."},{"value":"b","label":"Auf der Straße."},{"value":"c","label":"Im Parkhaus gegenüber."}], "correct": "c" },
+      { "id": 30, "text": "Was müssen die Teilnehmer vor dem Gehen tun?", "options": [{"value":"a","label":"Die Fenster putzen."},{"value":"b","label":"Den Raum aufräumen."},{"value":"c","label":"Das Licht anlassen."}], "correct": "b" }
+    ]
+  }
+}

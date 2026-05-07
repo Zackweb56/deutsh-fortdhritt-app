@@ -1,0 +1,4462 @@
+{
+  "institut": "Goethe-Institut",
+  "level": "B2",
+  "module": "Lesen",
+  "meta": {
+    "totalPunkte": 30,
+    "totalPunkteMax": 30,
+    "bestehensgrenzeMesspunkte": 18,
+    "bestehensgrenzeProzent": 60,
+    "gesamtergebnis": 100,
+    "totalZeit": "65 Minuten",
+    "teileCount": 5,
+    "description": "Das Modul Lesen hat fünf Teile. Sie lesen mehrere Texte und lösen Aufgaben dazu. Für jede Aufgabe gibt es nur eine richtige Lösung."
+  },
+  "teile": [
+    {
+      "id": "teil-1",
+      "label": "Teil 1",
+      "nummer": 1,
+      "arbeitszeit": "18 Minuten",
+      "pruefungsziel": "Einstellungen/Haltungen verstehen",
+      "aufgabentyp": "zuordnung-personen",
+      "punkte": 9,
+      "itemCount": 9,
+      "aufgabenNummern": "1–9",
+      "answerType": "zuordnung-person",
+      "title": "Einstellungen zum Lebensstil verstehen",
+      "titleAr": "فهم المواقف تجاه نمط الحياة",
+      "instructions": "Sie lesen in einem Forum, wie Menschen über ein bestimmtes Thema denken. Auf welche der vier Personen treffen die einzelnen Aussagen zu? Die Personen können mehrmals gewählt werden.",
+      "description": "Vier Personen (a, b, c, d) äußern sich. Neun Aussagen müssen den Personen zugeordnet werden.",
+      "themen": [
+        {
+          "id": "t1-minimalismus",
+          "title": "Minimalismus im Alltag",
+          "titleAr": "بساطة العيش في الحياة اليومية",
+          "context": "Sie lesen in einem Forum, wie Menschen über Minimalismus im täglichen Leben denken.",
+          "personen": [
+            {
+              "id": "a",
+              "name": "Erik",
+              "text": "In der heutigen Gesellschaft wird leider nur noch konsumiert. Es zählen Besitz und Leistung; das ist den Menschen wichtig. Ich sehe das anders, denn ich habe nur Sachen, die ich wirklich brauche. Ein Autokauf käme mir zum Beispiel nicht in den Sinn, ich bevorzuge das Rad oder gehe zu Fuß. Meine Einzimmerwohnung ist fast leer: Bett, Tisch, Stuhl. Einen Kühlschrank brauche ich nicht. Wenn ich reise, dann mit Rucksack und Zelt, ohne Schnickschnack. Das hat nichts mit Geiz zu tun – das einfache Leben ist, was ich will."
+            },
+            {
+              "id": "b",
+              "name": "Katharina",
+              "text": "Die Debatte über die richtige Lebensweise nervt mich: Warum auf etwas verzichten? Dinge können die schönste Nebensache der Welt sein! Am Abend kehre ich gern in meine Wohnung heim und lade Freunde ein, um Bilder vom Urlaub zu zeigen. Viel brauche ich nicht, um mich wohlzufühlen: ein bisschen Luxus im Hotel und schick essen gehen. Mein Auto nutze ich beruflich. Bescheidenheit ist doch nur etwas für die Leute, die sich nichts leisten können."
+            },
+            {
+              "id": "c",
+              "name": "Franzi",
+              "text": "Für mich ist es wichtig, gut zur Umwelt zu sein. Im Alltag versuche ich auf Fleisch zu verzichten und baue Kräuter an. Ich genieße es, mit Freunden essen zu gehen, und esse ab und zu auch Fleisch. Zur Arbeit nehme ich das Rad – das ist umweltfreundlich. Mit Geld hat das nichts zu tun. Es besteht ein Unterschied zwischen Urlaub und Reisen: Im Urlaub gönne ich mir ein Sterne-Hotel. Auf Reisen will ich Neues auf Wanderungen entdecken."
+            },
+            {
+              "id": "d",
+              "name": "Nils",
+              "text": "Geld ist nicht alles, aber kann nicht schaden; z. B. für Bio-Produkte. Der Versuch, einfach zu leben, ist bei der Ernährung leider nicht immer kostengünstig. Das Thema Auto sehe ich nicht ideologisch: Für mich ist es ein Fortbewegungsmittel, manchmal auch nur bequem. Ich habe eine schöne Wohnung in der Innenstadt. Für Reisen habe ich ein Wohnmobil mit Luxus. Da ist man frei und hat immer alles dabei!"
+            }
+          ],
+          "beispiel": {
+            "id": "0",
+            "text": "Wer will nur die wirklich notwendigen Dinge haben?",
+            "correct": "a"
+          },
+          "items": [
+            {
+              "id": "1",
+              "text": "Wer sieht im Auto einen Gebrauchsgegenstand?",
+              "correct": "d"
+            },
+            {
+              "id": "2",
+              "text": "Wer empfindet Besitz als unwichtig?",
+              "correct": "a"
+            },
+            {
+              "id": "3",
+              "text": "Wer verzichtet auf Fleisch?",
+              "correct": "c"
+            },
+            {
+              "id": "4",
+              "text": "Für wen spielt die Lage der Wohnung eine große Rolle?",
+              "correct": "d"
+            },
+            {
+              "id": "5",
+              "text": "Für wen ist der Naturschutz bei Entscheidungen wichtig?",
+              "correct": "c"
+            },
+            {
+              "id": "6",
+              "text": "Wer denkt, einfach lebende Personen hätten zu wenig Geld?",
+              "correct": "b"
+            },
+            {
+              "id": "7",
+              "text": "Wer nimmt auf Reisen nichts Überflüssiges mit?",
+              "correct": "a"
+            },
+            {
+              "id": "8",
+              "text": "Für wen zählt beim Essen allein, etwas zu genießen?",
+              "correct": "b"
+            },
+            {
+              "id": "9",
+              "text": "Wer mag sowohl Luxus als auch das einfache Leben?",
+              "correct": "c"
+            }
+          ]
+        },
+        {
+          "id": "t1-social-media",
+          "title": "Leben ohne Social Media",
+          "titleAr": "الحياة بدون وسائل التواصل الاجتماعي",
+          "context": "Sie lesen in einem Blog, wie verschiedene Menschen zu einem Leben ohne soziale Netzwerke stehen.",
+          "personen": [
+            {
+              "id": "a",
+              "name": "Markus",
+              "text": "Ich habe vor zwei Jahren alle meine Accounts gelöscht. Der ständige Druck, perfekt inszenierte Bilder posten zu müssen, hat mich einfach nur noch gestresst. Seitdem ich offline bin, habe ich viel mehr Zeit für echte Hobbys gefunden. Ich lese wieder Bücher und lerne Gitarre. Zwar kriege ich manche Neuigkeiten aus dem Freundeskreis jetzt später mit, aber das ist es mir wert. Wahre Freunde rufen mich sowieso an oder kommen vorbei."
+            },
+            {
+              "id": "b",
+              "name": "Julia",
+              "text": "Für mich wäre ein Leben ohne Social Media unvorstellbar und auch beruflich ein Nachteil. Ich arbeite im Marketing und muss wissen, was die Trends von morgen sind. Auch privat finde ich es toll, mit Leuten aus der ganzen Welt in Kontakt zu bleiben. Natürlich gibt es auch negative Seiten wie Cybermobbing, aber man muss eben lernen, damit umzugehen und sich abzugrenzen. Wer alles löscht, verschließt die Augen vor der Realität."
+            },
+            {
+              "id": "c",
+              "name": "Tobias",
+              "text": "Ich nutze Netzwerke eigentlich nur passiv. Ich poste fast nie eigene Bilder, weil mir meine Privatsphäre heilig ist. Aber ich schaue mir gerne an, was andere machen, oder hole mir Inspirationen für meine nächste Reise. Komplett darauf verzichten möchte ich nicht, weil in meiner Sportgruppe das ganze Training über WhatsApp organisiert wird. Ohne Smartphone wäre ich da völlig außen vor. Es ist eben ein praktisches Werkzeug."
+            },
+            {
+              "id": "d",
+              "name": "Sarah",
+              "text": "Ich habe einen Mittelweg für mich gefunden. Unter der Woche bleiben Instagram und Co. bei mir strengstens verboten. Das lenkt mich bei der Arbeit viel zu sehr ab und raubt mir den Schlaf. Aber am Wochenende nehme ich mir gerne ein bis zwei Stunden Zeit, um zu schauen, was meine Freunde so posten und um selbst ein schönes Foto hochzuladen. Diese bewusste Nutzung tut mir sehr gut."
+            }
+          ],
+          "beispiel": {
+            "id": "0",
+            "text": "Wer nutzt Social Media für den Beruf?",
+            "correct": "b"
+          },
+          "items": [
+            {
+              "id": "1",
+              "text": "Wer teilt ungern private Dinge im Internet?",
+              "correct": "c"
+            },
+            {
+              "id": "2",
+              "text": "Wer hat durch den Verzicht neue Freizeitaktivitäten entdeckt?",
+              "correct": "a"
+            },
+            {
+              "id": "3",
+              "text": "Wer nutzt Social Media nur an bestimmten Tagen?",
+              "correct": "d"
+            },
+            {
+              "id": "4",
+              "text": "Wer glaubt, dass echte Freunde andere Wege zur Kommunikation nutzen?",
+              "correct": "a"
+            },
+            {
+              "id": "5",
+              "text": "Wer findet, dass man Probleme im Netz aushalten muss?",
+              "correct": "b"
+            },
+            {
+              "id": "6",
+              "text": "Für wen sind die Netzwerke wichtig, um Termine zu koordinieren?",
+              "correct": "c"
+            },
+            {
+              "id": "7",
+              "text": "Wer hält eine eingeschränkte Nutzung für am gesündesten?",
+              "correct": "d"
+            },
+            {
+              "id": "8",
+              "text": "Wer befürchtet Nachteile im Job, wenn man offline ist?",
+              "correct": "b"
+            },
+            {
+              "id": "9",
+              "text": "Wer nutzt die Plattformen vor allem, um Ideen zu sammeln?",
+              "correct": "c"
+            }
+          ]
+        },
+        {
+          "id": "t1-ernaehrung",
+          "title": "Bewusste Ernährung",
+          "titleAr": "التغذية الواعية",
+          "context": "Sie lesen in einer Online-Zeitschrift, wie vier Personen über ihre Essgewohnheiten sprechen.",
+          "personen": [
+            {
+              "id": "a",
+              "name": "Felix",
+              "text": "Ich mache seit einem Jahr Intervallfasten. Ich esse nur noch zwischen 12 Uhr mittags und 20 Uhr abends. Am Anfang war das Weglassen des Frühstücks hart, aber mittlerweile fühle ich mich morgens viel energiegeladener als früher. In den acht Stunden, in denen ich esse, achte ich aber nicht auf Kalorien oder darauf, ob es Low-Carb ist. Ich esse ganz normal, auch mal eine Pizza oder Schokolade."
+            },
+            {
+              "id": "b",
+              "name": "Lisa",
+              "text": "Für mich ist Essen in erster Linie Genuss und Gemeinschaft. Ich koche jeden Abend frisch für meine Familie und lade oft Freunde ein. Diäten oder Ernährungspläne halte ich für völligen Unsinn, sie verderben nur den Spaß am Leben. Ich kaufe allerdings sehr bewusst ein, am liebsten auf dem Markt bei den Bauern aus der Umgebung. Qualität ist mir wichtiger als der Preis."
+            },
+            {
+              "id": "c",
+              "name": "Simon",
+              "text": "Ich ernähre mich strikt vegan und berechne meine Makronährstoffe ganz genau, weil ich viel Kraftsport mache. Die meisten Leute denken, Muskelaufbau funktioniert nicht ohne Fleisch, aber das ist ein Irrtum. Man muss sich nur gut mit pflanzlichen Proteinquellen wie Linsen oder Soja auskennen. Es kostet zwar Zeit, sich immer das Essen für die Arbeit vorzukochen, aber für meine Gesundheit ist es mir das wert."
+            },
+            {
+              "id": "d",
+              "name": "Anna",
+              "text": "Ich bin durch eine Lebensmittelallergie gezwungen, sehr aufzupassen. Ich darf kein Gluten und keine Laktose essen. Früher war das extrem anstrengend, besonders beim Essen im Restaurant. Aber heute gibt es in jedem Supermarkt tolle Ersatzprodukte. Dadurch, dass ich oft die Zutatenlisten lesen muss, lebe ich insgesamt viel gesünder und esse weniger industriell verarbeitete Dinge. Kochen ist für mich eher eine Notwendigkeit als ein Hobby."
+            }
+          ],
+          "beispiel": {
+            "id": "0",
+            "text": "Wer muss aus gesundheitlichen Gründen auf bestimmte Lebensmittel verzichten?",
+            "correct": "d"
+          },
+          "items": [
+            {
+              "id": "1",
+              "text": "Wer verzichtet auf Frühstück?",
+              "correct": "a"
+            },
+            {
+              "id": "2",
+              "text": "Wer plant sein Essen genau für den Sport?",
+              "correct": "c"
+            },
+            {
+              "id": "3",
+              "text": "Wer kauft bevorzugt regionale Produkte?",
+              "correct": "b"
+            },
+            {
+              "id": "4",
+              "text": "Wer kocht das Essen für unterwegs meistens vor?",
+              "correct": "c"
+            },
+            {
+              "id": "5",
+              "text": "Wer interessiert sich nicht für Kalorien oder Diäten?",
+              "correct": "a"
+            },
+            {
+              "id": "6",
+              "text": "Für wen ist Kochen eine eher lästige Pflicht?",
+              "correct": "d"
+            },
+            {
+              "id": "7",
+              "text": "Wer verbindet Essen stark mit sozialen Kontakten?",
+              "correct": "b"
+            },
+            {
+              "id": "8",
+              "text": "Wer verzichtet komplett auf tierische Produkte?",
+              "correct": "c"
+            },
+            {
+              "id": "9",
+              "text": "Wer hat durch seine Einschränkungen gelernt, gesünder zu essen?",
+              "correct": "d"
+            }
+          ]
+        },
+        {
+          "id": "t1-reisen",
+          "title": "Nachhaltig Reisen",
+          "titleAr": "السفر المستدام",
+          "context": "In einem Reiseforum diskutieren vier Personen darüber, wie sie ihre Urlaube verbringen und welche Verkehrsmittel sie wählen.",
+          "personen": [
+            {
+              "id": "a",
+              "name": "Jonas",
+              "text": "Ich habe beschlossen, nicht mehr zu fliegen. Der CO2-Ausstoß ist einfach nicht mehr vertretbar. Stattdessen reise ich fast nur noch mit dem Zug quer durch Europa. Das dauert zwar länger und ist manchmal auch teurer, aber der Weg ist für mich schon das Ziel. Man sieht, wie sich die Landschaft langsam verändert. Letztes Jahr bin ich mit der Bahn bis nach Süditalien gefahren – ein fantastisches Erlebnis."
+            },
+            {
+              "id": "b",
+              "name": "Elena",
+              "text": "Ich liebe Fernreisen und entdecke gerne asiatische oder südamerikanische Kulturen. Das geht nun mal nicht ohne Flugzeug. Um mein Gewissen zu beruhigen, zahle ich bei jedem Flug einen CO2-Ausgleich, der in Klimaschutzprojekte fließt. Vor Ort achte ich dann sehr darauf, dass das Geld bei den Einheimischen ankommt. Ich wohne nicht in großen Hotelketten, sondern in kleinen, privat geführten Pensionen."
+            },
+            {
+              "id": "c",
+              "name": "Matthias",
+              "text": "Wir machen als Familie meistens Urlaub in Deutschland. Wir haben uns einen Wohnwagen gekauft und fahren damit von Campingplatz zu Campingplatz. Wir lieben diese Freiheit und die Kinder sind den ganzen Tag draußen in der Natur. Wenn wir das Auto nutzen, ist es für uns als vierköpfige Familie billiger und flexibler als die Bahn. Eine Flugreise mit zwei kleinen Kindern wäre uns sowieso viel zu stressig."
+            },
+            {
+              "id": "d",
+              "name": "Laura",
+              "text": "Mein Ansatz ist, gar nicht mehr weit wegzufahren. Das nennt man 'Micro-Adventures', also kleine Abenteuer vor der Haustür. Am Wochenende packe ich meinen Rucksack, schnappe mir mein Fahrrad und fahre einfach in die Umgebung, zelte im Wald oder schlafe unter freiem Himmel. Man glaubt gar nicht, wie viel unentdeckte Natur es im Umkreis von 50 Kilometern gibt. Das kostet nichts und ist absolut umweltfreundlich."
+            }
+          ],
+          "beispiel": {
+            "id": "0",
+            "text": "Wer spendet Geld für den Klimaschutz, wenn er fliegt?",
+            "correct": "b"
+          },
+          "items": [
+            {
+              "id": "1",
+              "text": "Wer verbringt den Urlaub am liebsten im eigenen Land auf Campingplätzen?",
+              "correct": "c"
+            },
+            {
+              "id": "2",
+              "text": "Wer genießt lange Zugfahrten als Teil der Erholung?",
+              "correct": "a"
+            },
+            {
+              "id": "3",
+              "text": "Wer sucht nach Abenteuern ganz in der Nähe des Wohnorts?",
+              "correct": "d"
+            },
+            {
+              "id": "4",
+              "text": "Wer unterstützt im Urlaub gerne kleine, lokale Betriebe?",
+              "correct": "b"
+            },
+            {
+              "id": "5",
+              "text": "Wer findet das Flugzeug für die Familie zu anstrengend?",
+              "correct": "c"
+            },
+            {
+              "id": "6",
+              "text": "Wer übernachtet auch mal draußen in der freien Natur?",
+              "correct": "d"
+            },
+            {
+              "id": "7",
+              "text": "Wer meidet das Flugzeug aus ökologischen Gründen komplett?",
+              "correct": "a"
+            },
+            {
+              "id": "8",
+              "text": "Wer findet das Auto praktischer und billiger?",
+              "correct": "c"
+            },
+            {
+              "id": "9",
+              "text": "Wer nutzt das Fahrrad für seine Ausflüge?",
+              "correct": "d"
+            }
+          ]
+        },
+        {
+          "id": "t1-studium-ausbildung",
+          "title": "Studium oder Ausbildung?",
+          "titleAr": "الدراسة الجامعية أم التدريب المهني؟",
+          "context": "In einem Berufsforum diskutieren junge Leute über die Entscheidung zwischen Studium und Ausbildung.",
+          "personen": [
+            {
+              "id": "a",
+              "name": "Lukas",
+              "text": "Ich habe mich für ein Studium entschieden, weil ich später in einer Führungsposition arbeiten möchte. Viele gute Jobs setzen heute einen Bachelor oder Master voraus. Außerdem verdient man mit Studium langfristig mehr Geld. Ja, die Studienzeit war hart, und ich hatte oft finanzielle Sorgen. Aber jetzt im dritten Jahr merke ich, wie viel ich gelernt habe. Die theoretische Tiefe im Studium bringt mich weiter als eine reine Praxisausbildung."
+            },
+            {
+              "id": "b",
+              "name": "Nadine",
+              "text": "Ich bin im dritten Lehrjahr und sehr zufrieden. Ich verdiene mein eigenes Geld, habe tolle Kollegen und lerne praktische Fähigkeiten. Viele meiner Freunde an der Uni sind unglücklich: zu viel Theorie, zu wenig Praxis, finanzielle Probleme. Nach der Ausbildung kann ich immer noch studieren, wenn ich will. Aber mit einem abgeschlossenen Studium kann man nicht einfach so in eine Ausbildung wechseln. Für mich war die Ausbildung die richtige Wahl."
+            },
+            {
+              "id": "c",
+              "name": "Jonas",
+              "text": "Ich habe beides gemacht: erst eine Ausbildung als Elektroniker, dann ein Studium der Elektrotechnik. Das war die beste Entscheidung. Die Ausbildung gab mir praktische Erfahrung, die mir im Studium sehr geholfen hat. Jetzt als Ingenieur profitiere ich von beidem. Ich kann komplexe Theorien verstehen und weiß gleichzeitig, wie es in der Werkstatt aussieht. Das duale System ist ideal. Leider ist der Weg lang und anstrengend."
+            },
+            {
+              "id": "d",
+              "name": "Sandra",
+              "text": "Als Personalreferentin sehe ich täglich Bewerbungen. Die richtige Wahl hängt vom Berufsziel ab. Für klassische Bürojobs ist ein Studium oft Pflicht. Aber im Handwerk oder in technischen Berufen sind gut ausgebildete Fachkräfte mit einer Ausbildung genauso gefragt. Wichtig ist, dass man nicht nur den Abschluss sieht. Praktische Erfahrung durch Praktika oder Werkstudentenjobs ist oft entscheidender als der Titel. Am besten kombiniert man beides."
+            }
+          ],
+          "beispiel": {
+            "id": "0",
+            "text": "Wer hat sowohl eine Ausbildung als auch ein Studium absolviert?",
+            "correct": "c"
+          },
+          "items": [
+            {
+              "id": "1",
+              "text": "Wer betont die finanzielle Unsicherheit während des Studiums?",
+              "correct": "a"
+            },
+            {
+              "id": "2",
+              "text": "Wer sieht die Kombination aus Theorie und Praxis als ideal?",
+              "correct": "c"
+            },
+            {
+              "id": "3",
+              "text": "Wer spricht über die Perspektive einer Personalabteilung?",
+              "correct": "d"
+            },
+            {
+              "id": "4",
+              "text": "Wer erwähnt die Möglichkeit, nach der Ausbildung zu studieren?",
+              "correct": "b"
+            },
+            {
+              "id": "5",
+              "text": "Wer ist der Meinung, dass Studium für Führungspositionen notwendig ist?",
+              "correct": "a"
+            },
+            {
+              "id": "6",
+              "text": "Wer hat positive Erfahrungen mit eigenem Einkommen während der Ausbildung?",
+              "correct": "b"
+            },
+            {
+              "id": "7",
+              "text": "Wer betont die Wichtigkeit praktischer Erfahrung neben dem Abschluss?",
+              "correct": "d"
+            },
+            {
+              "id": "8",
+              "text": "Wer spricht über die theoretische Tiefe des Studiums?",
+              "correct": "a"
+            },
+            {
+              "id": "9",
+              "text": "Wer erwähnt das duale System als vorbildlich?",
+              "correct": "c"
+            }
+          ]
+        },
+        {
+          "id": "t1-ehrenamt",
+          "title": "Ehrenamtliches Engagement",
+          "titleAr": "العمل التطوعي",
+          "context": "In einem Online-Forum diskutieren Menschen über ihre Erfahrungen mit ehrenamtlicher Arbeit.",
+          "personen": [
+            {
+              "id": "a",
+              "name": "Laura",
+              "text": "Ich engagiere mich seit drei Jahren in der Flüchtlingshilfe. Es ist die erfüllendste Erfahrung meines Lebens. Ich helfe bei Behördengängen, gebe Deutschunterricht und bin einfach da als Ansprechpartnerin. Natürlich kostet das Zeit – etwa acht Stunden pro Woche. Aber das Gefühl, wirklich etwas zu bewirken, ist unbezahlbar. Außerdem habe ich viele neue Freunde gewonnen. Ehrenamt sollte viel mehr geschätzt werden in unserer Gesellschaft."
+            },
+            {
+              "id": "b",
+              "name": "Markus",
+              "text": "Ich habe ein Jahr lang im Tierheim ausgeholfen. Ehrlich gesagt, war es nicht immer leicht. Die Hunde brauchen auch an Weihnachten oder bei Regen Gassi gehen. Und man muss mit den traurigen Schicksalen umgehen können. Aber wenn ein ängstlicher Hund nach Monaten endlich Vertrauen fasst, ist das ein tolles Gefühl. Leider musste ich aufhören, weil mein neuer Job zu viel Zeit beansprucht. Aber ich spende jetzt monatlich Geld."
+            },
+            {
+              "id": "c",
+              "name": "Kerstin",
+              "text": "Ich arbeite in der Tafel und verteile Lebensmittel an Bedürftige. Es ist schockierend zu sehen, wie viele Menschen trotz Arbeit am Monatsende kaum über die Runden kommen. Die Tafel ist ein wichtiger Ort der Begegnung. Aber ich bin ehrlich: Manchmal ist es auch frustrierend, weil die Spenden weniger werden und die Zahl der Hilfesuchenden steigt. Freiwillige sind überall Mangelware. Die Politik tut zu wenig."
+            },
+            {
+              "id": "d",
+              "name": "Thomas",
+              "text": "Ich bin vor zwei Jahren in den Gemeinderat gewählt worden – ein Ehrenamt, das oft unterschätzt wird. Wir entscheiden über neue Spielplätze, Straßenbau oder die nächste Kita. Das ist oft undankbar, weil man es nie allen recht machen kann. Aber es ist wichtig, dass sich Bürger engagieren. Allerdings sollte man nicht vergessen, dass solche Ämter viel Zeit und auch Nerven kosten. Nicht jeder ist dafür geeignet."
+            }
+          ],
+          "beispiel": {
+            "id": "0",
+            "text": "Wer arbeitet mit Menschen, die wenig Geld haben?",
+            "correct": "c"
+          },
+          "items": [
+            {
+              "id": "1",
+              "text": "Wer hat durch das Ehrenamt viele neue Kontakte geknüpft?",
+              "correct": "a"
+            },
+            {
+              "id": "2",
+              "text": "Wer musste sein Ehrenamt aus beruflichen Gründen aufgeben?",
+              "correct": "b"
+            },
+            {
+              "id": "3",
+              "text": "Wer spricht über die Politik und die Arbeit im Gemeinderat?",
+              "correct": "d"
+            },
+            {
+              "id": "4",
+              "text": "Wer kritisiert, dass die Regierung nicht genug gegen Armut tut?",
+              "correct": "c"
+            },
+            {
+              "id": "5",
+              "text": "Wer findet seine Tätigkeit sehr erfüllend, aber zeitintensiv?",
+              "correct": "a"
+            },
+            {
+              "id": "6",
+              "text": "Wer hat mit traurigen Schicksalen von Tieren zu tun?",
+              "correct": "b"
+            },
+            {
+              "id": "7",
+              "text": "Wer ist der Meinung, dass nicht jeder für sein Ehrenamt geeignet ist?",
+              "correct": "d"
+            },
+            {
+              "id": "8",
+              "text": "Wer hat finanzielle Probleme der Hilfesuchenden erwähnt?",
+              "correct": "c"
+            },
+            {
+              "id": "9",
+              "text": "Wer spendet jetzt Geld, weil keine Zeit mehr für aktive Arbeit bleibt?",
+              "correct": "b"
+            }
+          ]
+        },
+        {
+          "id": "t1-fast-fashion",
+          "title": "Fast Fashion und Konsumverhalten",
+          "titleAr": "الموضة السريعة وسلوك الاستهلاك",
+          "context": "In einem Modeblog diskutieren Menschen über ihren Kleidungskauf und die Auswirkungen auf die Umwelt.",
+          "personen": [
+            {
+              "id": "a",
+              "name": "Sophie",
+              "text": "Früher habe ich mir jeden Monat neue Klamotten gekauft – bei H&M oder Zara. Aber dann habe ich eine Dokumentation über die Arbeitsbedingungen in Bangladesch gesehen. Das hat mich schockiert. Heute kaufe ich fast nur noch Second Hand oder tausche mit Freunden. Die Kleidung ist oft besserer Qualität und viel günstiger. Und ich habe ein gutes Gewissen. Wer neu kauft, sollte auf nachhaltige Siegel achten."
+            },
+            {
+              "id": "b",
+              "name": "Kevin",
+              "text": "Mode ist für mich Ausdruck meiner Persönlichkeit. Ich will die neusten Trends tragen, und die gibt es nun mal bei den großen Ketten am billigsten. Klar, die Qualität ist nicht immer gut, aber dafür kann ich öfter was Neues haben. Dass die Arbeiter dort schlecht bezahlt werden, ist nicht meine Schuld. Die Firmen müssen sich ändern, nicht ich. Ich habe nicht das Geld für teure nachhaltige Marken."
+            },
+            {
+              "id": "c",
+              "name": "Clara",
+              "text": "Ich kaufe sehr bewusst ein und investiere lieber in teure, zeitlose Stücke, die Jahre halten. Eine gute Lederjacke oder einen Wollmantel trägt man zehn Jahre. Das ist auf Dauer sogar billiger, als alle paar Monate neue billige Sachen zu kaufen. Außerdem repariere ich kaputte Kleidung oder lasse sie ändern. Wegwerfmentalität finde ich schrecklich. Wir müssen wieder lernen, Dinge wertzuschätzen."
+            },
+            {
+              "id": "d",
+              "name": "Mona",
+              "text": "Ich bin relativ pragmatisch. Wenn ich etwas Schönes sehe und es mir leisten kann, kaufe ich es. Marke und Preis sind mir egal. Mir geht es um den Stil. Aber ich hasse es, wenn die Nähte nach drei Mal Waschen aufgehen. Deswegen kaufe ich eher bei Mittelklasse-Marken. Second Hand ist mir oft zu mühsam, weil man lange suchen muss. Was anderes Leute mit ihrer Kleidung machen, ist mir eigentlich egal."
+            }
+          ],
+          "beispiel": {
+            "id": "0",
+            "text": "Wer kauft fast nur noch gebrauchte Kleidung?",
+            "correct": "a"
+          },
+          "items": [
+            {
+              "id": "1",
+              "text": "Wer hat sein Konsumverhalten nach einem Film geändert?",
+              "correct": "a"
+            },
+            {
+              "id": "2",
+              "text": "Wer gibt den Firmen die Schuld an schlechten Arbeitsbedingungen?",
+              "correct": "b"
+            },
+            {
+              "id": "3",
+              "text": "Wer investiert lieber in teure, langlebige Kleidung?",
+              "correct": "c"
+            },
+            {
+              "id": "4",
+              "text": "Wer findet Second Hand zu zeitaufwendig?",
+              "correct": "d"
+            },
+            {
+              "id": "5",
+              "text": "Wer repariert kaputte Kleidung, statt sie wegzuwerfen?",
+              "correct": "c"
+            },
+            {
+              "id": "6",
+              "text": "Wer findet, dass nachhaltige Marken zu teuer sind?",
+              "correct": "b"
+            },
+            {
+              "id": "7",
+              "text": "Wer tauscht Kleidung mit Freunden?",
+              "correct": "a"
+            },
+            {
+              "id": "8",
+              "text": "Wer ist die Qualität der Kleidung wichtig, aber sucht nicht lange?",
+              "correct": "d"
+            },
+            {
+              "id": "9",
+              "text": "Wer kritisiert die Wegwerfmentalität der Gesellschaft?",
+              "correct": "c"
+            }
+          ]
+        },
+        {
+          "id": "t1-fruehrente",
+          "title": "Frührente oder länger arbeiten?",
+          "titleAr": "التقاعد المبكر أم العمل لفترة أطول؟",
+          "context": "In einem Seniorenforum diskutieren Menschen darüber, ob man früher in Rente gehen sollte oder länger arbeiten.",
+          "personen": [
+            {
+              "id": "a",
+              "name": "Wolfgang",
+              "text": "Ich bin mit 63 in Rente gegangen, freiwillig. Ich hätte noch zwei Jahre arbeiten können, aber ich wollte die Zeit nutzen, solange ich gesund bin. Jetzt reise ich, verbringe Zeit mit den Enkeln und gehe meinen Hobbys nach. Die Rente ist zwar etwas niedriger, aber das ist es mir wert. Geld ist nicht alles im Leben. Ich bereue nichts."
+            },
+            {
+              "id": "b",
+              "name": "Ingrid",
+              "text": "Ich arbeite mit 67 immer noch, obwohl ich es nicht müsste. Meine Arbeit als Ärztin erfüllt mich. Meine Patienten brauchen mich, und ich fühle mich nützlich. Zuhause würde mir langweilig werden. Klar, ich könnte auch weniger Stunden arbeiten, aber solange die Gesundheit mitmacht, mache ich weiter. Jeder sollte selbst entscheiden können, wann Schluss ist."
+            },
+            {
+              "id": "c",
+              "name": "Helmut",
+              "text": "Ich musste mit 60 aufhören wegen meiner Knie. Meine Arbeit als Fliesenleger war körperlich zu anstrengend. Die Rente reicht nicht mal für die Miete. Ich ärgere mich, dass ich nicht früher was zurückgelegt habe. Wer körperlich arbeitet, sollte früher in Rente können, ohne Abschläge. Das ist ungerecht gegenüber Büroarbeitern."
+            },
+            {
+              "id": "d",
+              "name": "Monika",
+              "text": "Ich habe Teilzeit-Rente gewählt. Ich arbeite nur noch drei Tage die Woche. So habe ich mehr Freizeit, aber auch noch Kontakt zu Kollegen. Das ist der perfekte Mittelweg für mich. Man sollte nicht von 100 auf 0 gehen, das ist ein zu großer Bruch. Langsam aus dem Berufsleben auszusteigen, ist psychologisch viel gesünder."
+            }
+          ],
+          "beispiel": {
+            "id": "0",
+            "text": "Wer arbeitet freiwillig weiter, weil der Beruf erfüllend ist?",
+            "correct": "b"
+          },
+          "items": [
+            {
+              "id": "1",
+              "text": "Wer ist freiwillig früher in Rente gegangen?",
+              "correct": "a"
+            },
+            {
+              "id": "2",
+              "text": "Wer musste aus gesundheitlichen Gründen aufhören?",
+              "correct": "c"
+            },
+            {
+              "id": "3",
+              "text": "Wer hat einen Teilzeit-Ruhestand gewählt?",
+              "correct": "d"
+            },
+            {
+              "id": "4",
+              "text": "Wer findet, dass man sich langsam verabschieden sollte?",
+              "correct": "d"
+            },
+            {
+              "id": "5",
+              "text": "Wer hat finanzielle Probleme wegen der niedrigen Rente?",
+              "correct": "c"
+            },
+            {
+              "id": "6",
+              "text": "Wer findet, dass er nützlich bleibt durch die Arbeit?",
+              "correct": "b"
+            },
+            {
+              "id": "7",
+              "text": "Wer genießt die Zeit mit der Familie im Ruhestand?",
+              "correct": "a"
+            },
+            {
+              "id": "8",
+              "text": "Wer kritisiert das Rentensystem als unfair für Arbeiter?",
+              "correct": "c"
+            },
+            {
+              "id": "9",
+              "text": "Wer findet, dass Geld nicht alles im Leben ist?",
+              "correct": "a"
+            }
+          ]
+        },
+        {
+          "id": "t1-ki-alltag",
+          "title": "Künstliche Intelligenz im Alltag",
+          "titleAr": "الذكاء الاصطناعي في الحياة اليومية",
+          "context": "In einem Technologieforum diskutieren Menschen über die Vor- und Nachteile von KI im täglichen Leben.",
+          "personen": [
+            {
+              "id": "a",
+              "name": "Felix",
+              "text": "Ich nutze KI ständig, oft ohne es zu merken. Sprachassistenten wie Alexa machen das Leben leichter, Navis umfahren Staus, Streaming-Dienste schlagen mir Filme vor, die mir gefallen. Früher musste ich selbst suchen. Das spart so viel Zeit. Ich verstehe die Angst vor KI nicht. Es ist ein Werkzeug wie das Internet. Man muss nur wissen, wie man es nutzt."
+            },
+            {
+              "id": "b",
+              "name": "Nina",
+              "text": "Mir macht die Überwachung Angst. Unsere Geräte hören ständig mit. Alexa schickt Sprachaufnahmen an Server, Handys speichern Standorte. KI ist ein Trojanisches Pferd für die Privatsphäre. Außerdem werden Algorithmen immer besser darin, uns zu manipulieren. Social Media zeigt uns nur noch das, was wir hören wollen. Das ist gefährlich für die Demokratie."
+            },
+            {
+              "id": "c",
+              "name": "Robert",
+              "text": "Ich habe keine Angst vor der Technik, aber ich mache mir Sorgen um meinen Job. Ich arbeite in der Buchhaltung. Viele meiner Aufgaben könnte eine KI schon heute erledigen. Die Firma wird mich irgendwann nicht mehr brauchen. Klar, es entstehen auch neue Jobs, aber ich bin 52. Wer stellt mich noch um? Die Politik muss Weiterbildung fördern."
+            },
+            {
+              "id": "d",
+              "name": "Maja",
+              "text": "Ich bin total begeistert von KI in der Medizin. Letztes Jahr wurde bei meiner Mutter Krebs früh erkannt, weil eine KI die MRT-Bilder analysiert hat. Der Arzt hätte es übersehen. Das hat ihr das Leben gerettet. Wenn KI das kann, soll sie ruhig mehr Daten von mir haben. Gesundheit geht vor Datenschutz. Die Chancen überwiegen die Risiken bei Weitem."
+            }
+          ],
+          "beispiel": {
+            "id": "0",
+            "text": "Wer hat durch KI in der Medizin persönlich profitiert?",
+            "correct": "d"
+          },
+          "items": [
+            {
+              "id": "1",
+              "text": "Wer nutzt KI im Alltag für Komfort und Zeitersparnis?",
+              "correct": "a"
+            },
+            {
+              "id": "2",
+              "text": "Wer hat Angst vor Manipulation durch Algorithmen?",
+              "correct": "b"
+            },
+            {
+              "id": "3",
+              "text": "Wer fürchtet um den eigenen Arbeitsplatz durch KI?",
+              "correct": "c"
+            },
+            {
+              "id": "4",
+              "text": "Wer findet, dass Gesundheit wichtiger ist als Datenschutz?",
+              "correct": "d"
+            },
+            {
+              "id": "5",
+              "text": "Wer kritisiert, dass soziale Medien Filterblasen erzeugen?",
+              "correct": "b"
+            },
+            {
+              "id": "6",
+              "text": "Wer findet, dass KI ein Werkzeug wie das Internet ist?",
+              "correct": "a"
+            },
+            {
+              "id": "7",
+              "text": "Wer fordert mehr staatliche Unterstützung für Weiterbildung?",
+              "correct": "c"
+            },
+            {
+              "id": "8",
+              "text": "Wer hat Bedenken wegen Sprachaufnahmen und Standorten?",
+              "correct": "b"
+            },
+            {
+              "id": "9",
+              "text": "Wer argumentiert, dass die Vorteile der KI größer sind als die Risiken?",
+              "correct": "d"
+            }
+          ]
+        },
+        {
+          "id": "t1-stress",
+          "title": "Stress und Work-Life-Balance",
+          "titleAr": "الضغط النفسي والتوازن بين العمل والحياة",
+          "context": "In einem Gesundheitsforum diskutieren Menschen über Stress im Berufsleben und wie sie damit umgehen.",
+          "personen": [
+            {
+              "id": "a",
+              "name": "Jana",
+              "text": "Ich habe vor zwei Jahren einen Burnout gehabt. Ich war immer erreichbar, habe Wochenenden durchgearbeitet. Der Körper macht dann irgendwann nicht mehr mit. Heute habe ich gelernt, Nein zu sagen. Nach 18 Uhr ist das Handy aus. Mittagspause nehme ich mir konsequent. Mir ist klar geworden, dass kein Job es wert ist, krank zu werden."
+            },
+            {
+              "id": "b",
+              "name": "Stefan",
+              "text": "Stress gehört für mich zum Berufsleben dazu. Ich bin selbstständig und muss jeden Auftrag annehmen, sonst kommt die Konkurrenz. Klar, es ist anstrengend, aber ohne Druck wird man auch nicht besser. Man muss lernen, damit umzugehen. Sport hilft mir, abzuschalten. Ich mache dreimal die Woche Kickboxen. Das baut perfekt ab."
+            },
+            {
+              "id": "c",
+              "name": "Lisa",
+              "text": "Mein Arbeitgeber bietet Yoga-Kurse an und hat eine Massage-Ecke eingerichtet. Das ist nett, aber das löst das Problem nicht. Die Arbeitsbelastung ist einfach zu hoch. Wir haben zu wenig Personal, und die Chefs wollen immer mehr Umsatz. Solange sich an der Arbeitsmenge nichts ändert, helfen keine Wellness-Angebote. Da müsste die Politik strengere Regeln machen."
+            },
+            {
+              "id": "d",
+              "name": "Tom",
+              "text": "Ich bin vor einem Jahr in eine 4-Tage-Woche gewechselt. 20 Prozent weniger Gehalt, aber 50 Prozent mehr Lebensqualität. Freitags gehört mir ganz. Ich fahre dann oft in die Natur, treffe Freunde oder mache einen langen Spaziergang. Die anderen vier Tage arbeite ich fokussierter. Viel besser als früher mit fünf Tagen."
+            }
+          ],
+          "beispiel": {
+            "id": "0",
+            "text": "Wer hat durch Überarbeitung eine ernsthafte Erkrankung erlitten?",
+            "correct": "a"
+          },
+          "items": [
+            {
+              "id": "1",
+              "text": "Wer hat gelernt, private Grenzen zu setzen (Handy aus nach 18 Uhr)?",
+              "correct": "a"
+            },
+            {
+              "id": "2",
+              "text": "Wer nutzt Kampfsport, um Stress abzubauen?",
+              "correct": "b"
+            },
+            {
+              "id": "3",
+              "text": "Wer kritisiert Wellness-Angebote als reine Symptombekämpfung?",
+              "correct": "c"
+            },
+            {
+              "id": "4",
+              "text": "Wer hat sich für weniger Gehalt aber mehr Freizeit entschieden?",
+              "correct": "d"
+            },
+            {
+              "id": "5",
+              "text": "Wer findet, dass man Druck aushalten lernen muss?",
+              "correct": "b"
+            },
+            {
+              "id": "6",
+              "text": "Wer fordert gesetzliche Regelungen zur Arbeitsbelastung?",
+              "correct": "c"
+            },
+            {
+              "id": "7",
+              "text": "Wer macht regelmäßig Pausen zur Mittagszeit?",
+              "correct": "a"
+            },
+            {
+              "id": "8",
+              "text": "Wer nutzt freie Tage für Natur und Freunde?",
+              "correct": "d"
+            },
+            {
+              "id": "9",
+              "text": "Wer hat Angst, Aufträge an die Konkurrenz zu verlieren?",
+              "correct": "b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teil-2",
+      "label": "Teil 2",
+      "nummer": 2,
+      "arbeitszeit": "12 Minuten",
+      "pruefungsziel": "Informationen verstehen — Satzergänzung",
+      "aufgabentyp": "satzergaenzung",
+      "punkte": 6,
+      "itemCount": 6,
+      "aufgabenNummern": "10–15",
+      "answerType": "zuordnung-satz-luecke",
+      "title": "Satzergänzung in einem Lückentext",
+      "titleAr": "إكمال الجمل في نص يحتوي على فراغات",
+      "instructions": "Sie lesen einen Artikel. Welche Sätze passen in die Lücken? Zwei Sätze passen nicht.",
+      "description": "Ein Sachtext mit 6 Lücken. Aus 8 vorgegebenen Sätzen (a-h) wählen Sie die passenden.",
+      "themen": [
+        {
+          "id": "t2-reisen",
+          "title": "Die Geschichte des Reisens",
+          "titleAr": "تاريخ السفر",
+          "text": "Über eine Milliarde Menschen reisen jährlich in ein anderes Land. Ob von Deutschland nach Italien oder von Japan nach Australien. Noch nie waren so viele Menschen unterwegs. Kaum ein Wirtschaftszweig wächst so schnell wie der Tourismus. [...10...]\n\nSchon in der Antike gingen Menschen an andere Orte. Oft zu Fuß oder mit dem Pferd. Das dauerte jedoch lange und war mühsam. Nur wenige konnten es sich leisten, in einer Kutsche zu reisen. [...11...] Erst als die Eisenbahn und das Dampfschiff erfunden wurden, änderte sich das.\n\nDie Reisen, wie wir sie heute kennen, verdanken wir vor allem dem Briten Thomas Cook. Er organisierte 1841 eine Zugfahrt mit Blasmusik, Tee und Broten in eine 20 km entfernte Stadt. [...0...] Damit erfand der Brite die erste Pauschalreise.\n\nDie meisten Reisen blieben jedoch lange ein Luxus. An sechs Tagen der Woche und zehn Stunden am Tag zu arbeiten, war um 1900 normal. [...12...] Dies änderte sich im 20. Jahrhundert, als die Arbeiter mehr Freizeit bekamen und die Löhne stiegen.\n\nDie derzeit beliebtesten Reiseziele weltweit sind Frankreich, die USA und Spanien. Aber auch Deutschland zieht immer mehr Reisende an. Am liebsten fahren die Touristen in die großen Städte wie Berlin oder München. [...13...]\n\nDer Tourismus hat das Aussehen vieler Orte stark verändert. [...14...] So entstand das Bild, das man heute an vielen Orten sieht: blaues Meer, Sandstrand und riesige Hochhäuser. Auch die Städte verändern sich. [...15...] Vor allem Anwohner ärgern sich oft darüber.",
+          "sentences": [
+            {
+              "id": "a",
+              "text": "Dort gibt es neben vielen Bars auch hervorragende Kulturangebote."
+            },
+            {
+              "id": "b",
+              "text": "Hotels und Häuserblocks mit Urlaubswohnungen prägen heute vielerorts das Bild."
+            },
+            {
+              "id": "c",
+              "text": "Diese Veränderungen, wie teurere Cafés, gefallen natürlich nicht jedem."
+            },
+            {
+              "id": "d",
+              "text": "Alle Leistungen gab es zu einem geringen Gesamtpreis."
+            },
+            {
+              "id": "e",
+              "text": "Denn immer mehr Menschen können es sich leisten, in den Urlaub zu fliegen."
+            },
+            {
+              "id": "f",
+              "text": "Besonders schnell oder bequem war eine Fahrt mit der Kutsche allerdings auch nicht."
+            },
+            {
+              "id": "g",
+              "text": "Die Menschen hatten oft nur drei Tage Urlaub im Jahr und kein Geld für Reisen."
+            },
+            {
+              "id": "h",
+              "text": "Trotzdem fahren heute die meisten Urlauber am liebsten aufs Land."
+            }
+          ],
+          "beispiel": {
+            "id": "0",
+            "correct": "d"
+          },
+          "items": [
+            {
+              "id": "10",
+              "correct": "e"
+            },
+            {
+              "id": "11",
+              "correct": "f"
+            },
+            {
+              "id": "12",
+              "correct": "g"
+            },
+            {
+              "id": "13",
+              "correct": "a"
+            },
+            {
+              "id": "14",
+              "correct": "b"
+            },
+            {
+              "id": "15",
+              "correct": "c"
+            }
+          ]
+        },
+        {
+          "id": "t2-kaffee",
+          "title": "Die Kaffee-Kultur im Wandel",
+          "titleAr": "ثقافة القهوة في حالة تغير",
+          "text": "Kaffee ist das mit Abstand beliebteste Getränk der Deutschen. Jeder Erwachsene trinkt im Durchschnitt über 160 Liter im Jahr – das ist mehr als Wasser oder Bier. [...10...]\n\nDoch die Art, wie Kaffee getrunken wird, hat sich in den letzten Jahrzehnten stark verändert. Während früher der einfache Filterkaffee dominiert hat, bevorzugen heute viele Menschen Espresso, Cappuccino oder Latte Macchiato. [...11...] Das hat zu einem Boom von kleinen Röstereien und spezialisierten Cafés geführt.\n\nAuch das Bewusstsein für die Herkunft der Bohnen wächst. [...0...] Die Kunden möchten wissen, wo der Kaffee angebaut wird und ob die Kaffeebauern fair bezahlt werden. Fairtrade-Kaffee und Bio-Produkte haben deshalb ihren Nischenstatus längst verloren.\n\nAllerdings steht die Kaffeeproduktion weltweit vor großen Problemen. Durch den Klimawandel wird es in vielen Anbauregionen zu heiß und zu trocken. [...12...] Forscher arbeiten deshalb fieberhaft daran, neue Kaffeesorten zu züchten, die Hitze besser vertragen.\n\nEin weiterer Aspekt der modernen Kaffeekultur ist der Coffee-to-go. Millionen von Einwegbechern landen jeden Tag nach kurzem Gebrauch im Müll. [...13...] Einige Städte testen bereits erfolgreiche Pfandsysteme für Mehrwegbecher.\n\nWer Kaffee nicht nur als Wachmacher, sondern als Genussmittel betrachtet, investiert oft viel Geld in teure Maschinen für zu Hause. [...14...] Für einen perfekten Espresso braucht man neben der Maschine auch das nötige Wissen über Mahlgrad, Wassertemperatur und Druck. [...15...]",
+          "sentences": [
+            {
+              "id": "a",
+              "text": "Qualität und Vielfalt spielen eine immer größere Rolle beim Kaffeekonsum."
+            },
+            {
+              "id": "b",
+              "text": "Das Zubereiten wird so fast schon zu einer kleinen Wissenschaft."
+            },
+            {
+              "id": "c",
+              "text": "Trotzdem ist Tee weltweit noch beliebter als Kaffee."
+            },
+            {
+              "id": "d",
+              "text": "Für viele Menschen beginnt der Tag erst nach der ersten Tasse Kaffee richtig."
+            },
+            {
+              "id": "e",
+              "text": "Dies ist ein massives Umweltproblem, gegen das langsam vorgegangen wird."
+            },
+            {
+              "id": "f",
+              "text": "Es drohen Ernteausfälle, die den Kaffee in Zukunft deutlich teurer machen könnten."
+            },
+            {
+              "id": "g",
+              "text": "Immer mehr Konsumenten achten auf nachhaltigen Anbau."
+            },
+            {
+              "id": "h",
+              "text": "Eine gute Siebträgermaschine kann schnell über tausend Euro kosten."
+            }
+          ],
+          "beispiel": {
+            "id": "0",
+            "correct": "g"
+          },
+          "items": [
+            {
+              "id": "10",
+              "correct": "d"
+            },
+            {
+              "id": "11",
+              "correct": "a"
+            },
+            {
+              "id": "12",
+              "correct": "f"
+            },
+            {
+              "id": "13",
+              "correct": "e"
+            },
+            {
+              "id": "14",
+              "correct": "h"
+            },
+            {
+              "id": "15",
+              "correct": "b"
+            }
+          ]
+        },
+        {
+          "id": "t2-wald",
+          "title": "Der Wald als Lebensraum",
+          "titleAr": "الغابة كموئل",
+          "text": "Wälder bedecken rund ein Drittel der Landfläche Deutschlands und haben eine enorme Bedeutung für Mensch und Natur. Sie sind nicht nur Lieferant für Holz, sondern auch ein wichtiger Erholungsraum. [...10...]\n\nDoch der deutsche Wald ist krank. Stürme, extreme Trockenheit und der Borkenkäfer haben in den letzten Jahren große Schäden angerichtet. Besonders Fichten und Kiefern leiden unter dem Klimawandel. [...0...] Mischwälder mit Laubbäumen wie Eichen und Buchen sind wesentlich robuster.\n\nDie Förster stehen vor einer gewaltigen Aufgabe. Sie müssen den Wald so umbauen, dass er den kommenden klimatischen Bedingungen standhält. [...11...] Bäume, die Trockenheit gut vertragen, sollen in Zukunft verstärkt angepflanzt werden. Doch bis ein Baum ausgewachsen ist, vergehen Jahrzehnte.\n\nFür den Klimaschutz ist der Wald unverzichtbar. Bäume filtern Schadstoffe aus der Luft und speichern riesige Mengen an Kohlenstoffdioxid (CO2). [...12...] Ein gesunder Wald kühlt zudem seine Umgebung und sorgt für ein feuchtes Mikroklima.\n\nAuch als Lebensraum für Tiere ist der Wald enorm wichtig. [...13...] Wenn große Waldgebiete absterben oder gerodet werden, verlieren diese Arten ihr Zuhause.\n\nUm den Wald zu schützen, sind auch die Besucher gefragt. [...14...] Das bedeutet, auf den Wegen zu bleiben, keinen Müll zu hinterlassen und im Sommer auf gar keinen Fall Feuer zu machen. [...15...]",
+          "sentences": [
+            {
+              "id": "a",
+              "text": "Viele Menschen suchen hier an den Wochenenden Ruhe vom stressigen Alltag."
+            },
+            {
+              "id": "b",
+              "text": "Ein Funke reicht oft schon aus, um einen verheerenden Waldbrand auszulösen."
+            },
+            {
+              "id": "c",
+              "text": "Diese Nadelbäume haben flache Wurzeln und kommen bei Dürre nicht an tiefes Wasser."
+            },
+            {
+              "id": "d",
+              "text": "Dazu wird intensiv erforscht, welche Baumarten am besten geeignet sind."
+            },
+            {
+              "id": "e",
+              "text": "Deshalb ist der Wald unsere wichtigste Waffe im Kampf gegen die Erderwärmung."
+            },
+            {
+              "id": "f",
+              "text": "Tausende von Insekten, Vögeln und Säugetieren finden hier Nahrung und Schutz."
+            },
+            {
+              "id": "g",
+              "text": "Die Holzindustrie profitiert enorm von den vielen toten Bäumen."
+            },
+            {
+              "id": "h",
+              "text": "Ein respektvoller Umgang mit der Natur sollte selbstverständlich sein."
+            }
+          ],
+          "beispiel": {
+            "id": "0",
+            "correct": "c"
+          },
+          "items": [
+            {
+              "id": "10",
+              "correct": "a"
+            },
+            {
+              "id": "11",
+              "correct": "d"
+            },
+            {
+              "id": "12",
+              "correct": "e"
+            },
+            {
+              "id": "13",
+              "correct": "f"
+            },
+            {
+              "id": "14",
+              "correct": "h"
+            },
+            {
+              "id": "15",
+              "correct": "b"
+            }
+          ]
+        },
+        {
+          "id": "t2-sport",
+          "title": "E-Sports auf dem Vormarsch",
+          "titleAr": "الرياضة الإلكترونية في تقدم",
+          "text": "Videospiele sind längst kein Nischenhobby mehr für Jugendliche im dunklen Kinderzimmer. E-Sports, also das wettbewerbsmäßige Spielen von Videogames, füllt heute ganze Stadien. [...10...]\n\nDie professionellen Spieler trainieren hart. [...11...] Reaktionsgeschwindigkeit, strategisches Denken und Teamwork sind auf höchstem Niveau gefordert. Viele Top-Teams haben deshalb eigene Ernährungsberater, Psychologen und Fitnesscoaches.\n\nDoch ist E-Sports wirklich ein echter Sport? Darüber wird heftig diskutiert. Kritiker bemängeln die fehlende körperliche Bewegung. [...0...] Die Befürworter hingegen weisen darauf hin, dass auch Schach oder Darts als Sport anerkannt sind, obwohl sie wenig körperlich anstrengend sind.\n\nEin großes Problem der E-Sports-Szene ist das Alter der Spieler. [...12...] Der extreme Stress und der Druck der Wettbewerbe führen oft zu einem frühen Karriereende.\n\nFür Sponsoren ist die Branche extrem attraktiv geworden. Die Zielgruppe ist jung, technikaffin und schwer über klassisches Fernsehen zu erreichen. [...13...] Die Preisgelder bei den größten Turnieren der Welt gehen mittlerweile in die Millionen.\n\nTrotz des Erfolgs gibt es auch Schattenseiten. Spielsucht ist ein ernstes Thema, das durch den Hype um E-Sports oft verharmlost wird. [...14...] Eltern sind oft überfordert, wenn ihre Kinder stundenlang vor dem Bildschirm sitzen. [...15...]",
+          "sentences": [
+            {
+              "id": "a",
+              "text": "Millionen von Zuschauern verfolgen die großen Turniere live im Internet oder vor Ort."
+            },
+            {
+              "id": "b",
+              "text": "Sie verbringen acht bis zwölf Stunden täglich vor dem Bildschirm, um ihre Fähigkeiten zu perfektionieren."
+            },
+            {
+              "id": "c",
+              "text": "Das permanente Sitzen vor dem Bildschirm gilt nicht als sportliche Leistung."
+            },
+            {
+              "id": "d",
+              "text": "Es fehlt an Aufklärung über die Risiken des exzessiven Spielens."
+            },
+            {
+              "id": "e",
+              "text": "Es ist wichtig, klare Regeln für die Mediennutzung in der Familie aufzustellen."
+            },
+            {
+              "id": "f",
+              "text": "Deshalb fließen enorme Werbegelder von großen Unternehmen in die Teams und Turniere."
+            },
+            {
+              "id": "g",
+              "text": "Bereits mit Mitte Zwanzig gelten viele als zu langsam für die Weltspitze."
+            },
+            {
+              "id": "h",
+              "text": "Neue Computerspiele sind oft extrem teuer in der Herstellung."
+            }
+          ],
+          "beispiel": {
+            "id": "0",
+            "correct": "c"
+          },
+          "items": [
+            {
+              "id": "10",
+              "correct": "a"
+            },
+            {
+              "id": "11",
+              "correct": "b"
+            },
+            {
+              "id": "12",
+              "correct": "g"
+            },
+            {
+              "id": "13",
+              "correct": "f"
+            },
+            {
+              "id": "14",
+              "correct": "d"
+            },
+            {
+              "id": "15",
+              "correct": "e"
+            }
+          ]
+        },
+        {
+          "id": "t2-gesundheit-digital",
+          "title": "Digitalisierung im Gesundheitswesen",
+          "titleAr": "التحول الرقمي في نظام الرعاية الصحية",
+          "text": "Die elektronische Patientenakte (ePA) soll ab 2025 für alle gesetzlich Versicherten kommen. Die Debatte darüber ist hitzig. [...10...]\n\nBefürworter sehen große Vorteile. Ärzte könnten schnell auf alle wichtigen Daten zugreifen, Doppeluntersuchungen würden wegfallen, im Notfall wären Medikamentenlisten sofort verfügbar. [...0...]\n\nDoch Kritiker warnen vor Risiken. Die größte Sorge ist der Datenschutz. [...11...] Auch technische Probleme sind nicht auszuschließen. Ältere Menschen haben oft Angst vor der digitalen Welt.\n\nDie Bundesregierung investiert vier Milliarden Euro in die Krankenhausdigitalisierung. [...12...] Kliniken sollen bessere IT-Systeme bekommen, um Daten sicher zu übertragen.\n\nAuch die Telemedizin gewinnt an Bedeutung. Besonders in ländlichen Regionen können Patienten so schneller einen Facharzttermin bekommen. [...13...] Das spart lange Fahrten.\n\nEin weiteres Problem ist die Akzeptanz bei Ärzten. Viele Praxen arbeiten noch mit Papierakten. [...14...] Die Umstellung ist teuer und zeitaufwendig. [...15...] Ohne Schulungen wird die ePA scheitern, warnen Experten.",
+          "sentences": [
+            {
+              "id": "a",
+              "text": "Die Ärzte müssen geschult werden, damit sie das System richtig nutzen können."
+            },
+            {
+              "id": "b",
+              "text": "Denn wenn Hacker Zugriff auf Patientendaten bekommen, wäre das eine Katastrophe."
+            },
+            {
+              "id": "c",
+              "text": "Sie befürchten hohe Kosten und zusätzliche Bürokratie."
+            },
+            {
+              "id": "d",
+              "text": "Die Versicherten können selbst entscheiden, welche Daten gespeichert werden dürfen."
+            },
+            {
+              "id": "e",
+              "text": "Eine Videosprechstunde ersetzt nicht immer den persönlichen Besuch."
+            },
+            {
+              "id": "f",
+              "text": "Das Ziel ist, dass alle Informationen digital und sicher verfügbar sind."
+            },
+            {
+              "id": "g",
+              "text": "Doch das allein reicht nicht, um die Digitalisierung voranzutreiben."
+            },
+            {
+              "id": "h",
+              "text": "Damit sollen Prozesse effizienter und die Versorgung besser werden."
+            }
+          ],
+          "beispiel": {
+            "id": "0",
+            "correct": "f"
+          },
+          "items": [
+            {
+              "id": "10",
+              "correct": "h"
+            },
+            {
+              "id": "11",
+              "correct": "b"
+            },
+            {
+              "id": "12",
+              "correct": "g"
+            },
+            {
+              "id": "13",
+              "correct": "e"
+            },
+            {
+              "id": "14",
+              "correct": "c"
+            },
+            {
+              "id": "15",
+              "correct": "a"
+            }
+          ]
+        },
+        {
+          "id": "t2-homeoffice",
+          "title": "Homeoffice: Segen oder Fluch?",
+          "titleAr": "العمل من المنزل: نعمة أم نقمة؟",
+          "text": "Die Pandemie hat das Arbeiten von zu Hause für Millionen Menschen normal gemacht. Doch was bleibt nach der Krise? [...10...]\n\nViele Arbeitnehmer schätzen die Flexibilität. Kein Pendeln, mehr Zeit für Familie, konzentrierteres Arbeiten. [...0...] Auch die Umwelt profitiert von weniger Autoverkehr.\n\nArbeitgeber sehen das ambivalent. Einerseits sparen sie Bürokosten, andererseits leidet die Zusammenarbeit. [...11...] Kreative Prozesse kommen oft ins Stocken, wenn man sich nicht persönlich trifft.\n\nDie größte Herausforderung ist die Grenze zwischen Arbeit und Privatleben. [...12...] Viele Beschäftigte arbeiten länger als im Büro und haben Probleme, abzuschalten.\n\nEine Studie der Uni Mannheim zeigt, dass die Produktivität im Homeoffice um 15 Prozent steigen kann. [...13...] Voraussetzung ist aber gute Führung und die richtige technische Ausstattung.\n\nDie Politik diskutiert jetzt über ein Recht auf Homeoffice. [...14...] Der Gesetzentwurf sieht vor, dass Arbeitgeber mobile Arbeit anbieten müssen, wenn es betrieblich möglich ist. [...15...]",
+          "sentences": [
+            {
+              "id": "a",
+              "text": "Denn viele fühlen sich isoliert und vermissen den Austausch mit Kollegen."
+            },
+            {
+              "id": "b",
+              "text": "Die Unternehmen müssen also umdenken und neue Führungsstrukturen schaffen."
+            },
+            {
+              "id": "c",
+              "text": "Das Telefon klingelt auch nach Feierabend, die E-Mails hören nie auf."
+            },
+            {
+              "id": "d",
+              "text": "Gewerkschaften fordern klare Regeln, um Arbeitnehmer zu schützen."
+            },
+            {
+              "id": "e",
+              "text": "Die Mehrheit der Deutschen möchte mindestens zwei Tage pro Woche zu Hause arbeiten."
+            },
+            {
+              "id": "f",
+              "text": "Doch Fachleute warnen vor einem zu starren Gesetz."
+            },
+            {
+              "id": "g",
+              "text": "Die IT-Ausstattung muss den Anforderungen entsprechen."
+            },
+            {
+              "id": "h",
+              "text": "Diese Ersparnis überwiegt oft die Nachteile."
+            }
+          ],
+          "beispiel": {
+            "id": "0",
+            "correct": "e"
+          },
+          "items": [
+            {
+              "id": "10",
+              "correct": "h"
+            },
+            {
+              "id": "11",
+              "correct": "a"
+            },
+            {
+              "id": "12",
+              "correct": "c"
+            },
+            {
+              "id": "13",
+              "correct": "b"
+            },
+            {
+              "id": "14",
+              "correct": "d"
+            },
+            {
+              "id": "15",
+              "correct": "f"
+            }
+          ]
+        },
+        {
+          "id": "t2-co2-fussabdruck",
+          "title": "Den eigenen CO2-Fußabdruck reduzieren",
+          "titleAr": "تقليل البصمة الكربونية الشخصية",
+          "text": "Immer mehr Menschen wollen etwas gegen den Klimawandel tun. Doch wo fängt man an? [...10...]\n\nDer größte Hebel im Alltag ist die Ernährung. Ein Kilo Rindfleisch verursacht so viel CO2 wie eine Autofahrt von 100 Kilometern. [...0...] Wer auf Fleisch verzichtet, spart enorm.\n\nAuch der Verkehr ist ein großer Faktor. Das Flugzeug hat den schlimmsten Fußabdruck. [...11...] Die Bahn ist hier die bessere Wahl.\n\nZu Hause lässt sich am meisten mit der Heizung sparen. Schon ein Grad weniger spart sechs Prozent Energie. [...12...] Auch Ökostrom ist inzwischen oft günstiger als konventioneller Strom.\n\nViele Menschen fühlen sich jedoch überfordert. [...13...] Sie wissen nicht, wo sie anfangen sollen oder glauben, dass ihr Beitrag nichts ändert.\n\nApps und Online-Rechner helfen dabei, den eigenen Fußabdruck zu berechnen. [...14...] Sie zeigen, wo die größten Einsparpotenziale liegen. [...15...]",
+          "sentences": [
+            {
+              "id": "a",
+              "text": "Denn eine vegane Ernährung ist nicht automatisch klimafreundlich – Avocados aus Übersee haben auch eine schlechte Bilanz."
+            },
+            {
+              "id": "b",
+              "text": "Ein Hin und Her nach Mallorca verursacht so viel CO2 wie ein Jahr Autofahren."
+            },
+            {
+              "id": "c",
+              "text": "Die Politik muss größere Klimaschutzmaßnahmen ergreifen."
+            },
+            {
+              "id": "d",
+              "text": "Doch man muss nicht perfekt sein – schon kleine Änderungen helfen."
+            },
+            {
+              "id": "e",
+              "text": "Das ist mehr als alle privaten Autofahrten zusammen produzieren."
+            },
+            {
+              "id": "f",
+              "text": "Selbst wer nur eine Stufe runterdreht, spart bares Geld."
+            },
+            {
+              "id": "g",
+              "text": "Das senkt nicht nur die Emissionen, sondern schont auch den Geldbeutel."
+            },
+            {
+              "id": "h",
+              "text": "Mit konkreten Tipps kann jeder seinen Alltag klimafreundlicher gestalten."
+            }
+          ],
+          "beispiel": {
+            "id": "0",
+            "correct": "e"
+          },
+          "items": [
+            {
+              "id": "10",
+              "correct": "h"
+            },
+            {
+              "id": "11",
+              "correct": "b"
+            },
+            {
+              "id": "12",
+              "correct": "f"
+            },
+            {
+              "id": "13",
+              "correct": "d"
+            },
+            {
+              "id": "14",
+              "correct": "a"
+            },
+            {
+              "id": "15",
+              "correct": "g"
+            }
+          ]
+        },
+        {
+          "id": "t2-ki-arbeit",
+          "title": "Künstliche Intelligenz verändert die Arbeit",
+          "titleAr": "الذكاء الاصطناعي يغير العمل",
+          "text": "Künstliche Intelligenz ist nicht mehr nur Science-Fiction. Sie hält Einzug in die Arbeitswelt. [...10...]\n\nBesonders betroffen sind repetitive Tätigkeiten in der Buchhaltung, im Kundenservice und in der Logistik. [...0...] Bis zu 20 Prozent der heutigen Jobs könnten sich drastisch verändern.\n\nDoch KI schafft auch neue Berufe. Prompt Engineer, KI-Trainer oder Ethik-Berater heißt die neue Jobtitel. [...11...] Die Nachfrage nach IT-Sicherheitsexperten wächst rasant.\n\nÄltere Arbeitnehmer haben oft Angst, den Anschluss zu verlieren. [...12...] Lebenslanges Lernen ist daher wichtiger denn je.\n\nUnternehmen investieren massiv in Weiterbildungsprogramme. [...13...] Denn wer seine Mitarbeiter nicht qualifiziert, verliert im Wettbewerb.\n\nDie Gewerkschaften fordern gesetzliche Regelungen. [...14...] KI-Entscheidungen in sensiblen Bereichen wie der Personalauswahl müssen kontrollierbar bleiben. [...15...]",
+          "sentences": [
+            {
+              "id": "a",
+              "text": "Ohne die nötige Qualifikation droht Arbeitslosigkeit."
+            },
+            {
+              "id": "b",
+              "text": "Denn nur so bleiben sie wettbewerbsfähig."
+            },
+            {
+              "id": "c",
+              "text": "Sie fürchten, dass Algorithmen Menschen unfair behandeln könnten."
+            },
+            {
+              "id": "d",
+              "text": "Maschinen übernehmen Aufgaben, die früher Menschen machten."
+            },
+            {
+              "id": "e",
+              "text": "Das erfordert völlig neue Fähigkeiten und Denkweisen."
+            },
+            {
+              "id": "f",
+              "text": "In Deutschland ist die KI-Nutzung international nur im Mittelfeld."
+            },
+            {
+              "id": "g",
+              "text": "Besonders ältere Arbeitnehmer ohne digitale Vorkenntnisse sind gefährdet."
+            },
+            {
+              "id": "h",
+              "text": "Das bestätigt eine aktuelle Studie des Arbeitsmarktforschungsinstituts."
+            }
+          ],
+          "beispiel": {
+            "id": "0",
+            "correct": "d"
+          },
+          "items": [
+            {
+              "id": "10",
+              "correct": "h"
+            },
+            {
+              "id": "11",
+              "correct": "e"
+            },
+            {
+              "id": "12",
+              "correct": "a"
+            },
+            {
+              "id": "13",
+              "correct": "b"
+            },
+            {
+              "id": "14",
+              "correct": "c"
+            },
+            {
+              "id": "15",
+              "correct": "g"
+            }
+          ]
+        },
+        {
+          "id": "t2-fachkraeftemangel",
+          "title": "Fachkräftemangel – eine Gefahr für die Wirtschaft",
+          "titleAr": "نقص العمالة الماهرة – خطر على الاقتصاد",
+          "text": "In Deutschland fehlen immer mehr qualifizierte Arbeitskräfte. Besonders in der Pflege, im Handwerk und in der IT sind Stellen kaum zu besetzen. [...10...]\n\nDie Bundesregierung hat daher ein neues Einwanderungsgesetz verabschiedet. [...0...] Künftig reicht eine anerkannte Berufsausbildung, ein Hochschulabschluss ist nicht mehr zwingend.\n\nKritiker bemängeln, dass die Anerkennung ausländischer Abschlüsse immer noch zu lange dauert. [...11...] Bisher können Monate zwischen Antrag und Entscheidung vergehen.\n\nDie Wirtschaft fordert zudem bessere Sprachförderung und eine echte Willkommenskultur. [...12...] Viele ausländische Fachkräfte fühlen sich in Deutschland nicht willkommen.\n\nDie Bundesagentur für Arbeit will mehr ältere Menschen und Frauen in den Arbeitsmarkt integrieren. [...13...] Auch Teilzeitmodelle sollen attraktiver werden.\n\nEine Studie des IW zeigt, dass der Fachkräftemangel die Wirtschaftsleistung um 30 Milliarden Euro pro Jahr drückt. [...14...] Bis 2030 könnte sich die Lücke verdoppeln. [...15...]",
+          "sentences": [
+            {
+              "id": "a",
+              "text": "Sie müssen Deutsch lernen, um sich im Alltag und Beruf zurechtzufinden."
+            },
+            {
+              "id": "b",
+              "text": "Das senkt die Attraktivität für internationale Bewerber enorm."
+            },
+            {
+              "id": "c",
+              "text": "Das kostet Zeit, die dringend benötigt wird."
+            },
+            {
+              "id": "d",
+              "text": "Denn jeder zweite Betrieb kann offene Stellen nicht besetzen."
+            },
+            {
+              "id": "e",
+              "text": "Das wäre eine riesige Belastung für die Wirtschaft."
+            },
+            {
+              "id": "f",
+              "text": "Ziel ist es, qualifizierte Einwanderung aus Nicht-EU-Staaten zu erleichtern."
+            },
+            {
+              "id": "g",
+              "text": "Ohne Gegenmaßnahmen wird die Situation immer schlimmer."
+            },
+            {
+              "id": "h",
+              "text": "Vor allem im ländlichen Raum ist die Lage bereits dramatisch."
+            }
+          ],
+          "beispiel": {
+            "id": "0",
+            "correct": "f"
+          },
+          "items": [
+            {
+              "id": "10",
+              "correct": "d"
+            },
+            {
+              "id": "11",
+              "correct": "b"
+            },
+            {
+              "id": "12",
+              "correct": "a"
+            },
+            {
+              "id": "13",
+              "correct": "h"
+            },
+            {
+              "id": "14",
+              "correct": "g"
+            },
+            {
+              "id": "15",
+              "correct": "e"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teil-3",
+      "label": "Teil 3",
+      "nummer": 3,
+      "arbeitszeit": "12 Minuten",
+      "pruefungsziel": "Informationen verstehen",
+      "aufgabentyp": "multiple-choice-abc",
+      "punkte": 6,
+      "itemCount": 6,
+      "aufgabenNummern": "16–21",
+      "answerType": "multiple-choice-abc",
+      "title": "Detailverstehen — Zeitungsartikel",
+      "titleAr": "فهم التفاصيل — مقال صحفي",
+      "instructions": "Sie lesen einen Artikel in einer Zeitung. Wählen Sie bei jeder Aufgabe die richtige Lösung a, b oder c.",
+      "description": "Ein Zeitungsartikel (ca. 400-600 Wörter). 6 Multiple-Choice-Fragen (a/b/c).",
+      "themen": [
+        {
+          "id": "t3-doktor-google",
+          "title": "Doktor Google im Wartezimmer",
+          "titleAr": "دكتور جوجل في غرفة الانتظار",
+          "text": "Das Wartezimmer ist voll. Bevor sich jemand zusätzliche Viren ins Gesicht husten lässt, sucht er oft Rat beim 'Doktor' im Netz. Von den Deutschen suchen 38 Prozent bei Gesundheitsfragen zuerst im Internet. Nur in Schweden und Finnland ist das Interesse in Europa noch größer. Oft gesucht: Leiden, über die viele nicht gerne sprechen, auch nicht mit dem Arzt.\n\nJe mehr das Googeln von Krankheiten zum Volkssport wird, desto stärker stellt sich für Mediziner die Frage nach der Qualität. Denn die ist oft miserabel. Häufig gibt es lückenhafte Informationen. Manchmal dienen die Texte nur dazu, Werbung für teure, wirkungslose Medikamente zu machen. Wer sich stundenlang durch Ergebnislisten klickt, landet in dubiosen Foren von Hobbyratgebern.\n\nDie Ärzteschaft ist keineswegs grundsätzlich dagegen, wenn Patienten sich online informieren. \"Die Frage ist nur, wo sie suchen\", sagt Dr. Becker vom Institut für Qualität in der Medizin. Sie hält es für falsch, Symptome per Suchmaschine selbst zu diagnostizieren. \"Wenn Patienten aber gute, wissenschaftliche Informationen haben, vereinfacht das vieles.\" Ziel ist nicht das Verständnis tiefer fachlicher Details, sondern dass Patienten dem Arzt später die richtigen Fragen stellen können.\n\nWer Informationen unkritisch aufnimmt, bringt sich in Gefahr. Nicht wenige Versprechen auf schnelle Heilung sind purer Betrug. Auch Foren für den Austausch zwischen Patienten sollten mit Vorsicht genossen werden. Es ist zwar schön, wenn Betroffene anonym Erfahrungen teilen können. Andererseits wissen sie nie, mit wem sie da über hochsensible Dinge reden. Die Gefahr besteht vor allem dann, wenn in Foren persönliche Daten wie E-Mail-Adressen oder ganze Krankengeschichten abgefragt werden. Oft wird man danach pausenlos mit Werbemails für Medikamente bombardiert.",
+          "beispiel": {
+            "id": "0",
+            "text": "Immer mehr Kranke in Deutschland …",
+            "options": [
+              {
+                "label": "lassen sich lieber zu Hause behandeln.",
+                "value": "a"
+              },
+              {
+                "label": "vertrauen auf Hilfe im Internet.",
+                "value": "b"
+              },
+              {
+                "label": "werden in Wartezimmern krank.",
+                "value": "c"
+              }
+            ],
+            "correct": "b"
+          },
+          "items": [
+            {
+              "id": "16",
+              "text": "Das Interesse der Patienten richtet sich im Netz häufig auf Krankheiten, …",
+              "options": [
+                {
+                  "label": "die auch Ärzte überfordern.",
+                  "value": "a"
+                },
+                {
+                  "label": "für die man sich schämt.",
+                  "value": "b"
+                },
+                {
+                  "label": "die besonders schmerzhaft sind.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "17",
+              "text": "Was ist am Internet-Angebot zu Gesundheit oft so schlecht?",
+              "options": [
+                {
+                  "label": "Das Angebot ist zu klein.",
+                  "value": "a"
+                },
+                {
+                  "label": "Die Fachbegriffe sind zu schwer.",
+                  "value": "b"
+                },
+                {
+                  "label": "Die Informationen sind falsch oder unvollständig.",
+                  "value": "c"
+                }
+              ],
+              "correct": "c"
+            },
+            {
+              "id": "18",
+              "text": "Dr. Becker findet, dass Patienten sich im Internet …",
+              "options": [
+                {
+                  "label": "auf das Gespräch mit dem Arzt vorbereiten sollten.",
+                  "value": "a"
+                },
+                {
+                  "label": "ihre Krankheit selbst diagnostizieren können.",
+                  "value": "b"
+                },
+                {
+                  "label": "detailliertes Fachwissen anlesen müssen.",
+                  "value": "c"
+                }
+              ],
+              "correct": "a"
+            },
+            {
+              "id": "19",
+              "text": "Dr. Becker warnt Patienten vor …",
+              "options": [
+                {
+                  "label": "dem Austausch mit echten Ärzten.",
+                  "value": "a"
+                },
+                {
+                  "label": "Selbstdiagnosen durch Suchmaschinen.",
+                  "value": "b"
+                },
+                {
+                  "label": "dem Lesen von wissenschaftlichen Artikeln.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "20",
+              "text": "Ein Problem von Online-Foren ist, dass man …",
+              "options": [
+                {
+                  "label": "dort nicht anonym bleiben darf.",
+                  "value": "a"
+                },
+                {
+                  "label": "nie sicher weiß, mit wem man schreibt.",
+                  "value": "b"
+                },
+                {
+                  "label": "dort Geld für Ratschläge bezahlen muss.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "21",
+              "text": "Ratsuchende sollten vorsichtig sein, in Foren …",
+              "options": [
+                {
+                  "label": "ihre Krankheitssymptome zu beschreiben.",
+                  "value": "a"
+                },
+                {
+                  "label": "persönliche Daten wie die E-Mail-Adresse preiszugeben.",
+                  "value": "b"
+                },
+                {
+                  "label": "sich mit anderen Betroffenen auszutauschen.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            }
+          ]
+        },
+        {
+          "id": "t3-stadtbaeume",
+          "title": "Bäume als Klimaretter in der Stadt",
+          "titleAr": "الأشجار كمنقذين للمناخ في المدينة",
+          "text": "Die Sommer in deutschen Städten werden immer heißer. Wenn der Asphalt sich aufheizt und kein Wind weht, leiden die Stadtbewohner unter den tropischen Temperaturen. Eine der effektivsten Lösungen gegen den Hitzestress ist erstaunlich einfach: Mehr Bäume.\n\nBäume sind die perfekten natürlichen Klimaanlagen. Sie spenden nicht nur Schatten, sondern kühlen ihre Umgebung aktiv ab, indem sie Wasser über ihre Blätter verdunsten. Ein großer Straßenbaum kann an einem heißen Tag hunderte Liter Wasser an die Luft abgeben. Dadurch kann die gefühlte Temperatur in einer baumreichen Straße im Sommer um bis zu vier Grad kühler sein als in einer Straße ohne Bäume.\n\nDoch das Leben als Stadtbaum ist hart. Zu wenig Platz für die Wurzeln, verdichteter Boden, Streusalz im Winter und Abgase machen den Bäumen zu schaffen. Viele alte Kastanien und Linden sterben derzeit langsam ab. Deshalb suchen Botaniker weltweit nach sogenannten 'Klimabäumen'. Das sind Baumarten, oft aus südlicheren Ländern, die Trockenheit und Hitze besser vertragen. Der chinesische Ginkgo oder die amerikanische Roteiche werden heute in Städten wie Frankfurt oder München viel häufiger gepflanzt als einheimische Arten.\n\nNaturschützer sehen diesen Trend kritisch. Sie warnen davor, dass fremde Baumarten keinen Lebensraum für heimische Insekten und Vögel bieten. Eine Roteiche nützt dem deutschen Buntspecht nur wenig, da er dort seine gewohnten Insekten nicht findet. Die Naturschutzverbände fordern stattdessen, die Lebensbedingungen für einheimische Bäume in der Stadt zu verbessern, etwa durch größere Beete und besseres Regenwassermanagement.\n\nDie Stadtplaner stehen vor einem Dilemma. Einerseits müssen sie die Städte schnell an den Klimawandel anpassen, um die Gesundheit der Bewohner zu schützen. Andererseits wollen sie die lokale Artenvielfalt nicht gefährden. Ein Kompromiss scheint unausweichlich: Eine Mischung aus robusten Exoten an schwierigen Straßenstandorten und einheimischen Bäumen in großen, geschützten Parks.",
+          "beispiel": {
+            "id": "0",
+            "text": "Was ist eine einfache Lösung gegen Hitze in der Stadt?",
+            "options": [
+              {
+                "label": "Der Einbau von Klimaanlagen in Wohnungen.",
+                "value": "a"
+              },
+              {
+                "label": "Das Pflanzen von Bäumen.",
+                "value": "b"
+              },
+              {
+                "label": "Der Bau von neuen Parks.",
+                "value": "c"
+              }
+            ],
+            "correct": "b"
+          },
+          "items": [
+            {
+              "id": "16",
+              "text": "Wie kühlen Bäume die Luft in den Straßen ab?",
+              "options": [
+                {
+                  "label": "Indem sie CO2 aufnehmen.",
+                  "value": "a"
+                },
+                {
+                  "label": "Durch den Schatten und die Verdunstung von Wasser.",
+                  "value": "b"
+                },
+                {
+                  "label": "Indem sie den Wind verstärken.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "17",
+              "text": "Warum haben es Bäume in der Stadt schwer?",
+              "options": [
+                {
+                  "label": "Weil es zu viel regnet.",
+                  "value": "a"
+                },
+                {
+                  "label": "Wegen schlechter Bodenbedingungen und Schadstoffen.",
+                  "value": "b"
+                },
+                {
+                  "label": "Weil sie von Insekten gefressen werden.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "18",
+              "text": "Was ist das Besondere an sogenannten 'Klimabäumen'?",
+              "options": [
+                {
+                  "label": "Sie kommen gut mit Hitze und Trockenheit zurecht.",
+                  "value": "a"
+                },
+                {
+                  "label": "Sie reinigen die Luft besonders gut.",
+                  "value": "b"
+                },
+                {
+                  "label": "Sie wachsen viel schneller als deutsche Bäume.",
+                  "value": "c"
+                }
+              ],
+              "correct": "a"
+            },
+            {
+              "id": "19",
+              "text": "Welche Baumarten werden neuerdings häufiger in deutschen Städten gepflanzt?",
+              "options": [
+                {
+                  "label": "Einheimische Arten wie Kastanien und Linden.",
+                  "value": "a"
+                },
+                {
+                  "label": "Exotische Arten wie der Ginkgo oder die Roteiche.",
+                  "value": "b"
+                },
+                {
+                  "label": "Kleine Sträucher statt großer Bäume.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "20",
+              "text": "Warum kritisieren Naturschützer die fremden Baumarten?",
+              "options": [
+                {
+                  "label": "Sie sind zu teuer in der Anschaffung.",
+                  "value": "a"
+                },
+                {
+                  "label": "Sie werfen im Herbst zu viel Laub ab.",
+                  "value": "b"
+                },
+                {
+                  "label": "Heimische Tiere finden in ihnen keine Nahrung.",
+                  "value": "c"
+                }
+              ],
+              "correct": "c"
+            },
+            {
+              "id": "21",
+              "text": "Wie könnte ein Kompromiss für die Stadtplaner aussehen?",
+              "options": [
+                {
+                  "label": "Nur noch in Parks Bäume zu pflanzen.",
+                  "value": "a"
+                },
+                {
+                  "label": "Heimische Bäume im Park und Exoten an den Straßen.",
+                  "value": "b"
+                },
+                {
+                  "label": "Alte Bäume durch künstliche Sonnenschirme zu ersetzen.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            }
+          ]
+        },
+        {
+          "id": "t3-arbeitszeit",
+          "title": "Die 4-Tage-Woche als Modell der Zukunft?",
+          "titleAr": "أسبوع العمل من 4 أيام كنموذج للمستقبل؟",
+          "text": "In einigen europäischen Ländern wird momentan ein Konzept getestet, das viele Arbeitnehmer begeistert: die 4-Tage-Woche. Das Prinzip ist meistens einfach: Man arbeitet anstatt fünf nur noch vier Tage, bekommt aber weiterhin das volle Gehalt. Unternehmen, die dieses Modell ausprobieren, versprechen sich davon motiviertere Mitarbeiter und weniger Krankheitstage.\n\nIn einem Pilotprojekt in Island, das über mehrere Jahre lief, wurden die Ergebnisse genau analysiert. Das Resultat war überwältigend positiv. Die Produktivität der Mitarbeiter blieb nicht nur gleich, sondern stieg in vielen Fällen sogar an. Der Grund: Die Beschäftigten waren durch das lange Wochenende erholter und arbeiteten an den vier verbleibenden Tagen konzentrierter. Zudem fielen lange, oft unproduktive Meetings weg, weil die Arbeitszeit effizienter genutzt werden musste.\n\nAuch in Deutschland wagen immer mehr, meist kleinere Start-ups und Agenturen, den Schritt. Geschäftsführerin Lisa Meyer aus Berlin, die in ihrer Firma den freien Freitag eingeführt hat, berichtet: \"Unsere Leute sind viel entspannter. Früher hatten wir viele Ausfälle durch Stress und Burnout. Das ist stark zurückgegangen. Außerdem bekommen wir auf offene Stellen nun doppelt so viele Bewerbungen wie zuvor.\"\n\nDoch Kritiker warnen vor einer Romantisierung der 4-Tage-Woche. Der Chef des Arbeitgeberverbandes betont, dass dieses Modell nicht für alle Branchen geeignet sei. In der Pflege, im Krankenhaus oder in der Industrie, wo Maschinen rund um die Uhr laufen müssen, sei eine Reduzierung der Arbeitszeit ohne Gehaltsverlust wirtschaftlich nicht darstellbar. Dort würde das Modell nur den Personalmangel verschärfen.\n\nZudem warnen einige Experten vor einer Verdichtung der Arbeit. Wenn das Arbeitspensum von fünf Tagen in vier Tage gepresst wird, kann der Stress an diesen Tagen massiv steigen. Längere Arbeitszeiten pro Tag könnten zu Ermüdung und einer höheren Fehlerquote führen. Ob die 4-Tage-Woche also das Modell der Zukunft wird, hängt stark davon ab, wie intelligent Unternehmen die Arbeitsprozesse anpassen.",
+          "beispiel": {
+            "id": "0",
+            "text": "Was beinhaltet das Prinzip der 4-Tage-Woche meistens?",
+            "options": [
+              {
+                "label": "Weniger Arbeitstage für weniger Gehalt.",
+                "value": "a"
+              },
+              {
+                "label": "Vier Arbeitstage bei vollem Gehalt.",
+                "value": "b"
+              },
+              {
+                "label": "Vier Tage Arbeit und ein Tag Fortbildung.",
+                "value": "c"
+              }
+            ],
+            "correct": "b"
+          },
+          "items": [
+            {
+              "id": "16",
+              "text": "Was zeigte das Pilotprojekt in Island?",
+              "options": [
+                {
+                  "label": "Die Produktivität der Mitarbeiter stieg häufig an.",
+                  "value": "a"
+                },
+                {
+                  "label": "Die Firmen machten große finanzielle Verluste.",
+                  "value": "b"
+                },
+                {
+                  "label": "Die Mitarbeiter waren noch gestresster.",
+                  "value": "c"
+                }
+              ],
+              "correct": "a"
+            },
+            {
+              "id": "17",
+              "text": "Warum arbeiteten die Isländer effizienter?",
+              "options": [
+                {
+                  "label": "Weil sie Angst um ihren Job hatten.",
+                  "value": "a"
+                },
+                {
+                  "label": "Weil sie erholter waren und unnötige Meetings strichen.",
+                  "value": "b"
+                },
+                {
+                  "label": "Weil sie bessere Computer bekamen.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "18",
+              "text": "Welchen positiven Nebeneffekt erlebte die Chefin aus Berlin?",
+              "options": [
+                {
+                  "label": "Ihre Firma verkauft jetzt mehr Produkte.",
+                  "value": "a"
+                },
+                {
+                  "label": "Sie erhält viel mehr Bewerbungen für offene Jobs.",
+                  "value": "b"
+                },
+                {
+                  "label": "Ihre Mitarbeiter machen freiwillig Überstunden.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "19",
+              "text": "Warum ist das Modell laut Kritikern nicht überall umsetzbar?",
+              "options": [
+                {
+                  "label": "Weil die Gewerkschaften dagegen sind.",
+                  "value": "a"
+                },
+                {
+                  "label": "In Schichtbetrieben oder Kliniken fehlt oft schon jetzt das Personal.",
+                  "value": "b"
+                },
+                {
+                  "label": "Die Mitarbeiter wollen lieber fünf Tage arbeiten.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "20",
+              "text": "Welche Gefahr sehen einige Experten durch die 4-Tage-Woche?",
+              "options": [
+                {
+                  "label": "Dass Arbeitnehmer weniger Freizeit haben.",
+                  "value": "a"
+                },
+                {
+                  "label": "Dass die Qualität der Arbeit besser wird.",
+                  "value": "b"
+                },
+                {
+                  "label": "Dass der Stress durch verdichtete Arbeit an den vier Tagen zu hoch wird.",
+                  "value": "c"
+                }
+              ],
+              "correct": "c"
+            },
+            {
+              "id": "21",
+              "text": "Wovon hängt der Erfolg des Modells laut dem Text letztlich ab?",
+              "options": [
+                {
+                  "label": "Vom Gehalt der Mitarbeiter.",
+                  "value": "a"
+                },
+                {
+                  "label": "Von der intelligenten Anpassung der Arbeitsprozesse.",
+                  "value": "b"
+                },
+                {
+                  "label": "Vom Gesetzgeber.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            }
+          ]
+        },
+        {
+          "id": "t3-plastik",
+          "title": "Der Kampf gegen die Plastikflut",
+          "titleAr": "مكافحة طوفان البلاستيك",
+          "text": "Plastik ist überall. Es ist leicht, billig, bruchsicher und langlebig. Genau diese Langlebigkeit ist jedoch zum größten Problem für unseren Planeten geworden. Jeden Tag gelangen weltweit Millionen Tonnen Plastikmüll in die Meere. Dort zersetzen sich die Tüten und Flaschen langsam zu Mikroplastik, das von Fischen gefressen wird und so letztlich auf unseren eigenen Tellern landet.\n\nUm dieses Problem zu lösen, hat die Europäische Union ein Gesetz erlassen, das den Verkauf von Einwegplastik verbietet. Trinkhalme, Wattestäbchen oder Plastikbesteck dürfen nicht mehr verkauft werden. Das Gesetz ist ein wichtiger symbolischer Schritt, doch Experten warnen, dass es bei Weitem nicht ausreicht. Der Großteil des Plastikmülls entsteht nicht beim Endverbraucher durch einen Strohhalm, sondern in der Industrie bei der Verpackung von Lebensmitteln und Transportgütern.\n\nVerpackungsfreie Supermärkte erfreuen sich zwar in vielen Großstädten großer Beliebtheit, bleiben aber ein Nischenphänomen. Für die breite Masse ist das Einkaufen ohne Verpackung zu unpraktisch und zeitraubend, da man eigene Gefäße mitbringen und abwiegen muss. Zudem argumentiert die Lebensmittelindustrie, dass Plastikverpackungen notwendig seien, um Gurken oder Fleisch frisch zu halten und somit Lebensmittelverschwendung zu vermeiden.\n\nDie Forschung arbeitet unter Hochdruck an biologisch abbaubarem Plastik. Solche Biokunststoffe werden nicht aus Erdöl, sondern aus Maisstärke oder Zuckerrohr hergestellt. Doch auch hier gibt es einen Haken: Viele dieser Bio-Plastiktüten verrotten in der freien Natur überhaupt nicht, sondern nur unter speziellen Bedingungen in industriellen Kompostieranlagen. Werfen Verbraucher diese Tüten einfach in den Wald, richten sie denselben Schaden an wie herkömmliches Plastik.\n\nDie beste Lösung, so sind sich Umweltschützer einig, ist die Vermeidung von Verpackungen und ein funktionierendes Mehrwegsystem. Wenn Flaschen oder Behälter viele Male gespült und neu befüllt werden, sinkt der Müllberg dramatisch. Dafür müssen Verbraucher jedoch bereit sein, auf Bequemlichkeit zu verzichten.",
+          "beispiel": {
+            "id": "0",
+            "text": "Was ist der größte Nachteil von Plastik für die Umwelt?",
+            "options": [
+              {
+                "label": "Es ist zu teuer.",
+                "value": "a"
+              },
+              {
+                "label": "Es ist langlebig und baut sich nicht ab.",
+                "value": "b"
+              },
+              {
+                "label": "Es ist schwer und unpraktisch.",
+                "value": "c"
+              }
+            ],
+            "correct": "b"
+          },
+          "items": [
+            {
+              "id": "16",
+              "text": "Wie kommt das Plastik in die menschliche Nahrungskette?",
+              "options": [
+                {
+                  "label": "Menschen essen versehentlich Plastiktüten.",
+                  "value": "a"
+                },
+                {
+                  "label": "Fische fressen Mikroplastik, und der Mensch isst den Fisch.",
+                  "value": "b"
+                },
+                {
+                  "label": "Plastik löst sich im Trinkwasser auf.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "17",
+              "text": "Was kritisiert man am EU-Verbot für Einwegplastik?",
+              "options": [
+                {
+                  "label": "Es verbietet die falschen Dinge.",
+                  "value": "a"
+                },
+                {
+                  "label": "Es schadet der Wirtschaft zu sehr.",
+                  "value": "b"
+                },
+                {
+                  "label": "Es reicht nicht, da die Industrie der größte Verursacher ist.",
+                  "value": "c"
+                }
+              ],
+              "correct": "c"
+            },
+            {
+              "id": "18",
+              "text": "Warum gehen viele Menschen nicht im verpackungsfreien Supermarkt einkaufen?",
+              "options": [
+                {
+                  "label": "Weil es ihnen zu umständlich ist.",
+                  "value": "a"
+                },
+                {
+                  "label": "Weil die Lebensmittel dort verdorben sind.",
+                  "value": "b"
+                },
+                {
+                  "label": "Weil sie keine eigenen Dosen haben.",
+                  "value": "c"
+                }
+              ],
+              "correct": "a"
+            },
+            {
+              "id": "19",
+              "text": "Mit welchem Argument verteidigt die Industrie das Plastik?",
+              "options": [
+                {
+                  "label": "Es sieht im Regal besser aus.",
+                  "value": "a"
+                },
+                {
+                  "label": "Es schützt das Essen vor dem Verderben.",
+                  "value": "b"
+                },
+                {
+                  "label": "Es lässt sich billig produzieren.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "20",
+              "text": "Was ist das Problem an heute verfügbarem 'Bioplastik'?",
+              "options": [
+                {
+                  "label": "Es ist giftig.",
+                  "value": "a"
+                },
+                {
+                  "label": "Es verrottet in der normalen Natur meistens nicht.",
+                  "value": "b"
+                },
+                {
+                  "label": "Es schmilzt, wenn es warm wird.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "21",
+              "text": "Was ist laut Umweltschützern die beste Lösung?",
+              "options": [
+                {
+                  "label": "Besseres Recycling von Müll.",
+                  "value": "a"
+                },
+                {
+                  "label": "Der komplette Verzicht auf Lebensmittel.",
+                  "value": "b"
+                },
+                {
+                  "label": "Systeme, bei denen Behälter mehrfach benutzt werden.",
+                  "value": "c"
+                }
+              ],
+              "correct": "c"
+            }
+          ]
+        },
+        {
+          "id": "t3-pflegenotstand",
+          "title": "Pflegenotstand - Wer hilft unseren Alten?",
+          "titleAr": "أزمة التمريض - من يساعد كبار السن؟",
+          "text": "Deutschland altert, doch immer weniger junge Menschen wollen in der Pflege arbeiten. Die Folgen sind dramatisch. In vielen Altenheimen ist die Betreuung nicht mehr sichergestellt. Pflegekräfte arbeiten am Limit, Überstunden sind an der Tagesordnung. Die Politik spricht seit Jahren von Reformen, doch passiert ist wenig.\n\nEin Hauptproblem ist die schlechte Bezahlung. Pflegekräfte verdienen oft nur knapp über dem Mindestlohn, obwohl sie eine anspruchsvolle Ausbildung haben. Viele wechseln daher in besser bezahlte Branchen oder gehen ins Ausland, wo ihre Arbeit mehr wertgeschätzt wird.\n\nAuch die Arbeitsbedingungen sind hart. Schichtarbeit, körperliche Belastung durch Heben von Patienten und emotionaler Druck durch Sterbebegleitung fordern ihren Tribut. Die Zahl der Pflegekräfte mit Burnout steigt jährlich. Die Politik muss hier dringend handeln, warnen Experten.\n\nEine Lösung könnte die verstärkte Anwerbung von Pflegekräften aus dem Ausland sein. Die Bundesregierung hat bereits Erleichterungen bei der Visavergabe geschaffen. Doch Kritiker bemängeln, dass dies nur ein Tropfen auf den heißen Stein sei. Zudem fehle es an bezahlbarem Wohnraum für die neuen Mitarbeiter.\n\nAuch technische Lösungen werden diskutiert. Pflegeroboter könnten einfache Aufgaben wie das Servieren von Essen oder die Dokumentation übernehmen. Das würde die Fachkräfte entlasten. Kosten und Akzeptanz sind jedoch noch Hürden. Bis Roboter in der Pflege alltäglich sind, wird es wohl noch Jahre dauern.",
+          "beispiel": {
+            "id": "0",
+            "text": "Warum verlassen viele Pflegekräfte ihren Beruf?",
+            "options": [
+              {
+                "label": "a",
+                "value": "Weil sie keine Ausbildung haben."
+              },
+              {
+                "label": "b",
+                "value": "Wegen schlechter Bezahlung und Arbeitsbedingungen."
+              },
+              {
+                "label": "c",
+                "value": "Weil es zu wenige Patienten gibt."
+              }
+            ],
+            "correct": "b"
+          },
+          "items": [
+            {
+              "id": "16",
+              "text": "Was ist eine Folge des Pflegenotstands?",
+              "options": [
+                {
+                  "label": "a",
+                  "value": "Mehr junge Menschen werden Pfleger."
+                },
+                {
+                  "label": "b",
+                  "value": "Die Betreuung in Heimen ist nicht mehr immer gesichert."
+                },
+                {
+                  "label": "c",
+                  "value": "Altenheime werden geschlossen."
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "17",
+              "text": "Welche körperliche Belastung wird für Pflegekräfte genannt?",
+              "options": [
+                {
+                  "label": "a",
+                  "value": "Langes Sitzen am Computer."
+                },
+                {
+                  "label": "b",
+                  "value": "Schichtarbeit und Heben von Patienten."
+                },
+                {
+                  "label": "c",
+                  "value": "Arbeiten mit gefährlichen Chemikalien."
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "18",
+              "text": "Was tut die Bundesregierung gegen den Fachkräftemangel?",
+              "options": [
+                {
+                  "label": "a",
+                  "value": "Sie erhöht die Gehälter für Pfleger."
+                },
+                {
+                  "label": "b",
+                  "value": "Sie wirbt Pflegekräfte aus dem Ausland an."
+                },
+                {
+                  "label": "c",
+                  "value": "Sie schließt unnötige Altenheime."
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "19",
+              "text": "Was kritisieren Gegner der Ausländeranwerbung?",
+              "options": [
+                {
+                  "label": "a",
+                  "value": "Dass ausländische Pfleger keine gute Ausbildung haben."
+                },
+                {
+                  "label": "b",
+                  "value": "Dass die Maßnahme nicht ausreicht."
+                },
+                {
+                  "label": "c",
+                  "value": "Dass Deutsche bevorzugt werden sollten."
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "20",
+              "text": "Welche technische Hilfe wird im Text erwähnt?",
+              "options": [
+                {
+                  "label": "a",
+                  "value": "Pflegeroboter für einfache Aufgaben."
+                },
+                {
+                  "label": "b",
+                  "value": "KI-Diagnosesysteme für Ärzte."
+                },
+                {
+                  "label": "c",
+                  "value": "Smarte Betten mit Herzmonitor."
+                }
+              ],
+              "correct": "a"
+            },
+            {
+              "id": "21",
+              "text": "Was ist noch eine Hürde für technische Lösungen?",
+              "options": [
+                {
+                  "label": "a",
+                  "value": "Die hohen Kosten und fehlende Akzeptanz."
+                },
+                {
+                  "label": "b",
+                  "value": "Die mangelnde technische Entwicklung."
+                },
+                {
+                  "label": "c",
+                  "value": "Datenschutzprobleme."
+                }
+              ],
+              "correct": "a"
+            }
+          ]
+        },
+        {
+          "id": "t3-elektroautos",
+          "title": "Elektroautos - Die Zukunft der Mobilität?",
+          "titleAr": "السيارات الكهربائية - مستقبل التنقل؟",
+          "text": "Immer mehr Autofahrer steigen auf Elektroautos um. Die Verkaufszahlen steigen rasant. Doch ist die Elektromobilität wirklich die Lösung für unsere Klimaprobleme? Die Meinungen gehen auseinander.\n\nBefürworter betonen die Vorteile: E-Autos stoßen lokal kein CO2 aus, sind leise und haben niedrigere Betriebskosten. In Norwegen sind bereits über 80 Prozent der Neuwagen Elektroautos. Das zeigt, dass es funktioniert. Die Technologie wird zudem immer besser, die Reichweiten steigen.\n\nKritiker verweisen auf die Probleme: Die Herstellung der Batterien ist umweltschädlich, die Rohstoffe sind begrenzt. Zudem ist die Ladeinfrastruktur noch unzureichend. Wer keine eigene Wallbox hat, ist auf öffentliche Ladesäulen angewiesen – und die sind oft belegt oder defekt.\n\nDie Bundesregierung fördert den Umstieg mit hohen Prämien. Bis zu 6.000 Euro Zuschuss sind beim Kauf möglich. Das ist ein starkes Argument für viele Käufer. Doch die Förderung soll schrittweise auslaufen, was Kritiker für verfrüht halten.\n\nEin weiterer Kritikpunkt ist der hohe Stromverbrauch. Wenn alle Autos elektrisch fahren, steigt der Bedarf massiv. Die erneuerbaren Energien müssen daher massiv ausgebaut werden. Sonst wird der Strom aus Kohle erzeugt, und der Umwelt ist nicht geholfen.\n\nDie Zukunft gehört wohl einer Mischung: E-Autos für Kurzstrecken, Wasserstoff-Lkw für den Güterverkehr und die Bahn für die Langstrecke. Das wäre das ideale Gesamtkonzept für eine klimafreundliche Mobilität.",
+          "beispiel": {
+            "id": "0",
+            "text": "Welches Land hat den höchsten Anteil an E-Auto-Neuwagen?",
+            "options": [
+              {
+                "label": "a",
+                "value": "Deutschland"
+              },
+              {
+                "label": "b",
+                "value": "Schweden"
+              },
+              {
+                "label": "c",
+                "value": "Norwegen"
+              }
+            ],
+            "correct": "c"
+          },
+          "items": [
+            {
+              "id": "16",
+              "text": "Was ist laut Befürwortern ein Vorteil von E-Autos?",
+              "options": [
+                {
+                  "label": "a",
+                  "value": "Sie sind viel billiger in der Anschaffung."
+                },
+                {
+                  "label": "b",
+                  "value": "Sie verursachen vor Ort keine CO2-Emissionen."
+                },
+                {
+                  "label": "c",
+                  "value": "Sie haben unbegrenzte Reichweite."
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "17",
+              "text": "Welches Problem wird von Kritikern genannt?",
+              "options": [
+                {
+                  "label": "a",
+                  "value": "E-Autos sind zu langsam."
+                },
+                {
+                  "label": "b",
+                  "value": "Die Batterieherstellung belastet die Umwelt."
+                },
+                {
+                  "label": "c",
+                  "value": "E-Autos sind lauter als Benziner."
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "18",
+              "text": "Wie hoch ist die staatliche Förderung für E-Autos?",
+              "options": [
+                {
+                  "label": "a",
+                  "value": "Bis zu 3.000 Euro"
+                },
+                {
+                  "label": "b",
+                  "value": "Bis zu 6.000 Euro"
+                },
+                {
+                  "label": "c",
+                  "value": "Bis zu 10.000 Euro"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "19",
+              "text": "Was kritisieren Fachleute am steigenden Stromverbrauch?",
+              "options": [
+                {
+                  "label": "a",
+                  "value": "Dass der Strom dann teurer wird."
+                },
+                {
+                  "label": "b",
+                  "value": "Dass erneuerbare Energien ausgebaut werden müssen."
+                },
+                {
+                  "label": "c",
+                  "value": "Dass die Stromnetze überlastet sind."
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "20",
+              "text": "Was wäre laut dem Text eine ideale Zukunftslösung?",
+              "options": [
+                {
+                  "label": "a",
+                  "value": "Nur noch E-Autos auf den Straßen."
+                },
+                {
+                  "label": "b",
+                  "value": "Eine Mischung aus verschiedenen Technologien."
+                },
+                {
+                  "label": "c",
+                  "value": "Rückkehr zu Benzinern mit Filtern."
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "21",
+              "text": "Warum ist die Ladeinfrastruktur ein Problem?",
+              "options": [
+                {
+                  "label": "a",
+                  "value": "Es gibt zu wenige Ladesäulen, und viele sind defekt."
+                },
+                {
+                  "label": "b",
+                  "value": "Das Laden dauert mehrere Tage."
+                },
+                {
+                  "label": "c",
+                  "value": "Die Ladesäulen sind nur für Firmen nutzbar."
+                }
+              ],
+              "correct": "a"
+            }
+          ]
+        },
+        {
+          "id": "t3-wohnungsmangel",
+          "title": "Wohnungsmangel in Großstädten - Wer kann sich Mieten noch leisten?",
+          "titleAr": "نقص المساكن في المدن الكبرى - من يستطيع تحمل الإيجارات؟",
+          "text": "Die Mieten in deutschen Großstädten explodieren. In München, Berlin, Hamburg und Frankfurt zahlen Mieter Rekordpreise. Viele Normalverdiener können sich eine eigene Wohnung kaum noch leisten. Woran liegt das?\n\nExperten sehen mehrere Ursachen: Zu wenig Neubauten, steigende Nachfrage durch Zuzug und Investoren, die Wohnungen als Geldanlage kaufen und leer stehen lassen. Besonders problematisch ist die Gentrifizierung: Einst günstige Viertel werden durch den Zuzug von Besserverdienenden teurer, alte Bewohner müssen wegziehen.\n\nDie Politik versucht gegenzusteuern. Die Mietpreisbremse soll exorbitante Steigerungen verhindern. Doch Kritiker sagen, sie helfe wenig, weil Vermieter oft Ausnahmen nutzen. Auch der soziale Wohnungsbau wurde in den letzten Jahren vernachlässigt.\n\nEine Lösung könnten Genossenschaften sein. Sie bieten bezahlbaren Wohnraum, weil sie nicht gewinnorientiert arbeiten. Die Mitglieder zahlen einen Anteil und haben dann ein Recht auf eine günstige Wohnung. Allerdings sind die Wartelisten lang.\n\nAuch das Bauen in die Höhe wird diskutiert. In Städten wie Tokio oder New York sind Hochhäuser längst normal. In Deutschland sträuben sich viele dagegen. Dabei könnte man durch dichtere Bebauung mehr Wohnraum schaffen, ohne die grüne Umgebung zu opfern.\n\nDie Lage ist ernst. Ohne entschlossenes Handeln der Politik wird sich der Wohnungsmangel weiter verschärfen. Besonders Familien mit Kindern leiden darunter und ziehen oft aufs Land. Das verändert die ganze Stadtstruktur.",
+          "beispiel": {
+            "id": "0",
+            "text": "Was versteht man unter Gentrifizierung?",
+            "options": [
+              {
+                "label": "a",
+                "value": "Der Bau neuer Wohnungen."
+              },
+              {
+                "label": "b",
+                "value": "Die Verdrängung alter Bewohner durch Zuzug von Besserverdienenden."
+              },
+              {
+                "label": "c",
+                "value": "Die Sanierung alter Gebäude."
+              }
+            ],
+            "correct": "b"
+          },
+          "items": [
+            {
+              "id": "16",
+              "text": "Welche deutsche Stadt wird als besonders teuer genannt?",
+              "options": [
+                {
+                  "label": "a",
+                  "value": "Dresden"
+                },
+                {
+                  "label": "b",
+                  "value": "Essen"
+                },
+                {
+                  "label": "c",
+                  "value": "München"
+                }
+              ],
+              "correct": "c"
+            },
+            {
+              "id": "17",
+              "text": "Was ist eine Ursache für steigende Mieten?",
+              "options": [
+                {
+                  "label": "a",
+                  "value": "Zu wenig Neubauten."
+                },
+                {
+                  "label": "b",
+                  "value": "Zu viele Arbeitsplätze."
+                },
+                {
+                  "label": "c",
+                  "value": "Sinkende Bevölkerungszahlen."
+                }
+              ],
+              "correct": "a"
+            },
+            {
+              "id": "18",
+              "text": "Was kritisiert man an der Mietpreisbremse?",
+              "options": [
+                {
+                  "label": "a",
+                  "value": "Sie gilt nur für Luxuswohnungen."
+                },
+                {
+                  "label": "b",
+                  "value": "Vermieter können sie leicht umgehen."
+                },
+                {
+                  "label": "c",
+                  "value": "Sie ist zu streng für Vermieter."
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "19",
+              "text": "Welchen Vorteil bieten Wohnungsgenossenschaften?",
+              "options": [
+                {
+                  "label": "a",
+                  "value": "Sie sind extrem teuer."
+                },
+                {
+                  "label": "b",
+                  "value": "Sie arbeiten ohne Gewinnstreben und sind günstig."
+                },
+                {
+                  "label": "c",
+                  "value": "Man kann dort sofort einziehen."
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "20",
+              "text": "Was ist ein Nachteil von Genossenschaften?",
+              "options": [
+                {
+                  "label": "a",
+                  "value": "Man muss einen teuren Anteil zahlen und lange warten."
+                },
+                {
+                  "label": "b",
+                  "value": "Die Wohnungen sind sehr schlecht."
+                },
+                {
+                  "label": "c",
+                  "value": "Man darf keine Haustiere halten."
+                }
+              ],
+              "correct": "a"
+            },
+            {
+              "id": "21",
+              "text": "Welche Lösung wird auch diskutiert?",
+              "options": [
+                {
+                  "label": "a",
+                  "value": "Das Verbot von Mietwohnungen."
+                },
+                {
+                  "label": "b",
+                  "value": "Höheres Bauen mit Hochhäusern."
+                },
+                {
+                  "label": "c",
+                  "value": "Umzug aller Menschen aufs Land."
+                }
+              ],
+              "correct": "b"
+            }
+          ]
+        },
+        {
+          "id": "t3-schule-digital",
+          "title": "Digitale Schulen - Sind Tablets die Lösung?",
+          "titleAr": "المدارس الرقمية - هل الأجهزة اللوحية هي الحل؟",
+          "text": "Die Digitalisierung der Schulen kommt nur langsam voran. Der Digitalpakt der Bundesregierung stellte fünf Milliarden Euro für bessere Ausstattung bereit. Doch viele Schulen klagen über mangelndes WLAN, veraltete Hardware und zu wenig qualifizierte Lehrkräfte.\n\nEine Studie zeigt, dass nur 14 Prozent der deutschen Lehrer den Einsatz digitaler Medien im Unterricht als 'gut' bewerten. In skandinavischen Ländern sind es über 60 Prozent. Finnland macht es vor: Dort müssen angehende Lehrer Programmieren und Datenanalyse lernen.\n\nBesonders kritisch ist die Lage an Grundschulen. Während Gymnasien oft Tablet-Klassen haben, fehlen in Grundschulen altersgerechte Lern-Apps. Experten fordern daher einen 'Digitalführerschein' für Viertklässler.\n\nBefürworter der Digitalisierung betonen die Vorteile. Lern-Apps passen sich dem Niveau der Schüler an. Schwächere werden gefördert, Stärkere gefordert. Zudem spart man Papier und Gewicht. Ein Tablet wiegt weniger als zehn schwere Schulbücher.\n\nGegner warnen vor zu viel Bildschirmzeit. Sie schadet den Augen und der Konzentration. Zudem können Schüler nicht richtig schreiben lernen, wenn sie nur noch tippen. Handschrift fördert die Gedächtnisleistung, so Studien.\n\nDie Lösung heißt wohl Mittelweg. Tablets für bestimmte Fächer, aber auch weiterhin Bücher und handschriftliche Notizen. Weder totale Digitalisierung noch kompletter Verzicht sind der richtige Weg.",
+          "beispiel": {
+            "id": "0",
+            "text": "Wie viel Geld stellte der Digitalpakt bereit?",
+            "options": [
+              {
+                "label": "a",
+                "value": "Eine Milliarde Euro"
+              },
+              {
+                "label": "b",
+                "value": "Fünf Milliarden Euro"
+              },
+              {
+                "label": "c",
+                "value": "Zehn Milliarden Euro"
+              }
+            ],
+            "correct": "b"
+          },
+          "items": [
+            {
+              "id": "16",
+              "text": "Wie viel Prozent der deutschen Lehrer bewerten den Einsatz digitaler Medien als gut?",
+              "options": [
+                {
+                  "label": "a",
+                  "value": "14 Prozent"
+                },
+                {
+                  "label": "b",
+                  "value": "30 Prozent"
+                },
+                {
+                  "label": "c",
+                  "value": "60 Prozent"
+                }
+              ],
+              "correct": "a"
+            },
+            {
+              "id": "17",
+              "text": "Welches Land wird als Vorbild für die Lehrerausbildung genannt?",
+              "options": [
+                {
+                  "label": "a",
+                  "value": "Schweden"
+                },
+                {
+                  "label": "b",
+                  "value": "Finnland"
+                },
+                {
+                  "label": "c",
+                  "value": "Norwegen"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "18",
+              "text": "Was fordern Experten für Viertklässler?",
+              "options": [
+                {
+                  "label": "a",
+                  "value": "Ein eigenes Tablet"
+                },
+                {
+                  "label": "b",
+                  "value": "Einen Digitalführerschein"
+                },
+                {
+                  "label": "c",
+                  "value": "Ein Handyverbot"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "19",
+              "text": "Was ist laut Befürwortern ein Vorteil von Lern-Apps?",
+              "options": [
+                {
+                  "label": "a",
+                  "value": "Sie kosten nichts."
+                },
+                {
+                  "label": "b",
+                  "value": "Sie passen sich dem Lernniveau der Schüler an."
+                },
+                {
+                  "label": "c",
+                  "value": "Sie machen die Lehrer überflüssig."
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "20",
+              "text": "Was sagen Gegner der Digitalisierung über Handschrift?",
+              "options": [
+                {
+                  "label": "a",
+                  "value": "Sie ist zu langsam."
+                },
+                {
+                  "label": "b",
+                  "value": "Sie fördert die Gedächtnisleistung."
+                },
+                {
+                  "label": "c",
+                  "value": "Sie ist nicht mehr zeitgemäß."
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "21",
+              "text": "Was ist laut dem Artikel die beste Lösung?",
+              "options": [
+                {
+                  "label": "a",
+                  "value": "Komplette Digitalisierung aller Fächer."
+                },
+                {
+                  "label": "b",
+                  "value": "Kompletter Verzicht auf Tablets."
+                },
+                {
+                  "label": "c",
+                  "value": "Ein Mittelweg aus digitalen und analogen Methoden."
+                }
+              ],
+              "correct": "c"
+            }
+          ]
+        },
+        {
+          "id": "t3-vier-tage-woche",
+          "title": "Die 4-Tage-Woche - Ein Modell für alle?",
+          "titleAr": "أسبوع العمل أربعة أيام - نموذج للجميع؟",
+          "text": "Die 4-Tage-Woche ist in aller Munde. Immer mehr Unternehmen testen das Modell, bei dem die Mitarbeiter bei vollem Lohnausgleich einen Tag weniger arbeiten. Doch ist das für alle Branchen geeignet?\n\nEin großes Pilotprojekt in Island mit 2.500 Arbeitnehmern zeigte positive Ergebnisse. Die Produktivität blieb gleich oder stieg sogar. Die Arbeitsbelastung sank, die Work-Life-Balance verbesserte sich. Die Mitarbeiter waren ausgeruhter und motivierter.\n\nWie ist das möglich bei 20 Prozent weniger Arbeitszeit? Die Antwort: Effizienzsteigerung. Meetings wurden kürzer, Pausen planvoller, Ablenkungen reduziert. In einer 5-Tage-Woche arbeiten wir oft nur 3-4 Stunden wirklich produktiv.\n\nEine britische Studie mit 33 Unternehmen kam zu ähnlichen Ergebnissen. 92 Prozent der Firmen behielten die 4-Tage-Woche bei. Die Krankenstände gingen um 65 Prozent zurück. Die Mitarbeiter glücklicher, die Firmen profitieren.\n\nAllerdings gibt es Branchen, wo das nicht funktioniert, etwa im Einzelhandel, im Gesundheitswesen oder in der Produktion. Dort müsste man mehr Personal einstellen, was teuer ist. Kritiker sagen, die 4-Tage-Woche sei nur für Bürojobs geeignet.\n\nDie Politik ist zurückhaltend. Während die Linke sich für eine gesetzliche 4-Tage-Woche einsetzt, warnen Arbeitgeberverbände vor Wettbewerbsnachteilen. Meiner Meinung nach ist die 4-Tage-Woche kein Allheilmittel, aber ein wichtiges Modell für die Zukunft.",
+          "beispiel": {
+            "id": "0",
+            "text": "Was zeigte die Studie in Island?",
+            "options": [
+              {
+                "label": "a",
+                "value": "Die Produktivität sank um 20 Prozent."
+              },
+              {
+                "label": "b",
+                "value": "Die Produktivität blieb gleich oder stieg."
+              },
+              {
+                "label": "c",
+                "value": "Die Mitarbeiter wurden unzufrieden."
+              }
+            ],
+            "correct": "b"
+          },
+          "items": [
+            {
+              "id": "16",
+              "text": "Wie viel Prozent weniger Arbeitszeit hat die 4-Tage-Woche?",
+              "options": [
+                {
+                  "label": "a",
+                  "value": "10 Prozent"
+                },
+                {
+                  "label": "b",
+                  "value": "20 Prozent"
+                },
+                {
+                  "label": "c",
+                  "value": "30 Prozent"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "17",
+              "text": "Wie erreicht man trotz weniger Zeit die gleiche Produktivität?",
+              "options": [
+                {
+                  "label": "a",
+                  "value": "Durch Überstunden an den anderen Tagen."
+                },
+                {
+                  "label": "b",
+                  "value": "Durch Effizienzsteigerung und weniger Ablenkung."
+                },
+                {
+                  "label": "c",
+                  "value": "Durch neue Computer."
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "18",
+              "text": "Wie viele britische Firmen behielten die 4-Tage-Woche bei?",
+              "options": [
+                {
+                  "label": "a",
+                  "value": "65 Prozent"
+                },
+                {
+                  "label": "b",
+                  "value": "80 Prozent"
+                },
+                {
+                  "label": "c",
+                  "value": "92 Prozent"
+                }
+              ],
+              "correct": "c"
+            },
+            {
+              "id": "19",
+              "text": "Um wie viel Prozent gingen die Krankenstände zurück?",
+              "options": [
+                {
+                  "label": "a",
+                  "value": "Um 30 Prozent"
+                },
+                {
+                  "label": "b",
+                  "value": "Um 50 Prozent"
+                },
+                {
+                  "label": "c",
+                  "value": "Um 65 Prozent"
+                }
+              ],
+              "correct": "c"
+            },
+            {
+              "id": "20",
+              "text": "In welchen Branchen ist die 4-Tage-Woche schwer umsetzbar?",
+              "options": [
+                {
+                  "label": "a",
+                  "value": "In der IT-Branche"
+                },
+                {
+                  "label": "b",
+                  "value": "Im Einzelhandel und Gesundheitswesen"
+                },
+                {
+                  "label": "c",
+                  "value": "In der Werbung"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "21",
+              "text": "Wie ist die Haltung der Arbeitgeberverbände?",
+              "options": [
+                {
+                  "label": "a",
+                  "value": "Sie fordern eine gesetzliche Regelung."
+                },
+                {
+                  "label": "b",
+                  "value": "Sie unterstützen die 4-Tage-Woche."
+                },
+                {
+                  "label": "c",
+                  "value": "Sie warnen vor Wettbewerbsnachteilen."
+                }
+              ],
+              "correct": "c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teil-4",
+      "label": "Teil 4",
+      "nummer": 4,
+      "arbeitszeit": "12 Minuten",
+      "pruefungsziel": "Standpunkte verstehen",
+      "aufgabentyp": "zuordnung-ueberschriften",
+      "punkte": 6,
+      "itemCount": 6,
+      "aufgabenNummern": "22–27",
+      "answerType": "zuordnung-ueberschrift",
+      "title": "Meinungsäußerungen zuordnen",
+      "titleAr": "ربط الآراء بالعناوين",
+      "instructions": "Sie lesen in einer Zeitschrift Äußerungen zu einem Thema. Welche Äußerung passt zu welcher Überschrift? Eine Äußerung passt nicht. Die Äußerung a ist das Beispiel und kann nicht verwendet werden.",
+      "description": "8 kurze Kommentare (a-h) zu 6 Überschriften (22-27).",
+      "themen": [
+        {
+          "id": "t4-digitale-nomaden",
+          "title": "Arbeiten als Digitaler Nomade",
+          "titleAr": "العمل كبدو رقمي",
+          "contextText": "Sie lesen in einer Zeitschrift Meinungsäußerungen zu dem Lebensmodell ‚digitale Nomaden‘.",
+          "beispiel": {
+            "id": "0",
+            "text": "a",
+            "correct": "a"
+          },
+          "ueberschriften": [
+            {
+              "id": "22",
+              "text": "Sich an einem Ort zu Hause zu fühlen, ist wichtig"
+            },
+            {
+              "id": "23",
+              "text": "Moderne Arbeitsgeräte ermöglichen neue Lebensweisen"
+            },
+            {
+              "id": "24",
+              "text": "Arbeiten ohne einen Vorgesetzten bringt Herausforderungen"
+            },
+            {
+              "id": "25",
+              "text": "Leben als digitaler Nomade eignet sich besonders für Singles"
+            },
+            {
+              "id": "26",
+              "text": "Wichtig ist der Austausch mit Kollegen auch außerhalb der Arbeit"
+            },
+            {
+              "id": "27",
+              "text": "Qualitätssteigerung durch das Feedback von Kollegen"
+            }
+          ],
+          "comments": [
+            {
+              "id": "a",
+              "author": "Amelie",
+              "text": "Gerade für berufstätige Eltern hat das digitale Nomadentum Pluspunkte: Man kann seinen Kindern die Welt zeigen und sich tagsüber die Zeit für sie nehmen; gearbeitet wird dann nachts.",
+              "isBeispiel": true
+            },
+            {
+              "id": "b",
+              "author": "Eva",
+              "text": "Jede Arbeit braucht Struktur und das Gespräch mit Experten, um herauszufinden, ob man richtig liegt. Wenn jeder immer nur allein am Laptop arbeitet, fehlt der Vergleich und man macht mehr Fehler."
+            },
+            {
+              "id": "c",
+              "author": "Inga",
+              "text": "Auch wenn es heutzutage Mode ist – wieso möchte keiner mehr fest an einem Ort verankert sein? Woher weiß man denn sonst, wohin man gehört und wo die eigenen Wurzeln sind?"
+            },
+            {
+              "id": "d",
+              "author": "Steven",
+              "text": "Kaum jemand will ständig allein am Computer arbeiten. Das Arbeiten in flexiblen Büros, sogenannten Coworking-Spaces, wäre eine Möglichkeit, einen Austausch möglich zu machen, aber weiterzuziehen, wenn man will."
+            },
+            {
+              "id": "e",
+              "author": "Jan",
+              "text": "Diese Arbeitsform funktioniert nur ohne familiäre Verantwortung. Wer hat schon einen Partner, der ständig umziehen will? Sobald eine gute Schule für den Nachwuchs gesichert werden muss, hat das Modell Nachteile."
+            },
+            {
+              "id": "f",
+              "author": "Sarah",
+              "text": "Es darf nicht vergessen werden, dass auch das Berufsleben aus mehr als nur Arbeit besteht: Mit wem wird die Mittagspause verbracht? Wer hat schon die Kraft, sich alle paar Wochen neue Freunde zu suchen?"
+            },
+            {
+              "id": "g",
+              "author": "Janice",
+              "text": "Zeit- und raumflexibel zu arbeiten, vom Smartphone oder Tablet aus – das ist das einzige dem 21. Jahrhundert angemessene Arbeitsmodell. Früher waren wir an den Schreibtisch gefesselt, heute sind wir frei."
+            },
+            {
+              "id": "h",
+              "author": "Katharina",
+              "text": "Bei allen Vorzügen besteht die Gefahr, zu wenig zu schaffen. Es ist letztlich alles eine Frage des Charakters: Um sein eigener Chef zu sein, ist ein hohes Maß an Selbstdisziplin notwendig."
+            }
+          ],
+          "items": [
+            {
+              "id": "22",
+              "correct": "c"
+            },
+            {
+              "id": "23",
+              "correct": "g"
+            },
+            {
+              "id": "24",
+              "correct": "h"
+            },
+            {
+              "id": "25",
+              "correct": "e"
+            },
+            {
+              "id": "26",
+              "correct": "f"
+            },
+            {
+              "id": "27",
+              "correct": "b"
+            }
+          ]
+        },
+        {
+          "id": "t4-vegan",
+          "title": "Vegan leben",
+          "titleAr": "حياة نباتية",
+          "contextText": "Sie lesen Meinungsäußerungen zum Thema vegane Ernährung und Lebensweise.",
+          "beispiel": {
+            "id": "0",
+            "text": "a",
+            "correct": "a"
+          },
+          "ueberschriften": [
+            {
+              "id": "22",
+              "text": "Veganes Essen im Restaurant ist oft enttäuschend"
+            },
+            {
+              "id": "23",
+              "text": "Für Spitzensportler ist Fleisch unverzichtbar"
+            },
+            {
+              "id": "24",
+              "text": "Vegane Ernährung ist nicht automatisch gesund"
+            },
+            {
+              "id": "25",
+              "text": "Pflanzliche Ernährung hilft massiv beim Umweltschutz"
+            },
+            {
+              "id": "26",
+              "text": "Kinder sollten nicht streng vegan ernährt werden"
+            },
+            {
+              "id": "27",
+              "text": "Tierleid ist der wichtigste Grund für den Verzicht"
+            }
+          ],
+          "comments": [
+            {
+              "id": "a",
+              "author": "Tim",
+              "text": "Ich ernähre mich schon lange vegan, einfach weil ich mich dadurch fitter und leichter fühle. Mein Arzt war erst skeptisch, aber meine Blutwerte sind absolut top.",
+              "isBeispiel": true
+            },
+            {
+              "id": "b",
+              "author": "Lisa",
+              "text": "Ich finde es bedenklich, wenn Eltern ihre Babys komplett ohne tierische Produkte aufziehen. Im Wachstum brauchen Kinder bestimmte Nährstoffe, die aus Pflanzen schwer zu bekommen sind. Das kann gefährlich sein."
+            },
+            {
+              "id": "c",
+              "author": "Mark",
+              "text": "Viele Leute denken, wenn 'vegan' draufsteht, sei es gut für den Körper. Aber auch Chips und Cola sind vegan. Wer sich nur von fertigen Fleischersatzprodukten ernährt, nimmt viel zu viel Zucker und Fett zu sich."
+            },
+            {
+              "id": "d",
+              "author": "Sophie",
+              "text": "Ich liebe es zu kochen, aber wenn wir auswärts essen gehen, ist es ein Krampf. Oft gibt es für mich nur einen langweiligen Beilagensalat oder trockene Nudeln. Die Gastronomie in Deutschland hängt da noch sehr hinterher."
+            },
+            {
+              "id": "e",
+              "author": "Hannes",
+              "text": "Das Hauptargument für mich ist ganz klar das Klima. Die Massentierhaltung produziert mehr Treibhausgase als alle Autos und Flugzeuge zusammen. Jeder, der auf Fleisch verzichtet, rettet aktiv unseren Planeten."
+            },
+            {
+              "id": "f",
+              "author": "Clara",
+              "text": "Ich mache Bodybuilding und war anfangs unsicher. Aber ich baue meine Muskeln jetzt nur noch mit Linsen und Bohnen auf. Das Gerücht, man bräuchte Fleisch für viel Kraft, ist längst widerlegt."
+            },
+            {
+              "id": "g",
+              "author": "Tom",
+              "text": "Seitdem ich gesehen habe, unter welchen furchtbaren Bedingungen Schweine und Hühner in den Mastanlagen leben müssen, bringe ich keinen Bissen Fleisch mehr hinunter. Kein Lebewesen hat es verdient, so behandelt zu werden."
+            },
+            {
+              "id": "h",
+              "author": "Mia",
+              "text": "Ich achte darauf, nur Kleidung ohne Tierprodukte zu kaufen. Kein Leder, keine Wolle. Es gibt heutzutage großartige Lederalternativen aus Kork oder Ananasblättern, die super aussehen und lange halten."
+            }
+          ],
+          "items": [
+            {
+              "id": "22",
+              "correct": "d"
+            },
+            {
+              "id": "23",
+              "correct": "f"
+            },
+            {
+              "id": "24",
+              "correct": "c"
+            },
+            {
+              "id": "25",
+              "correct": "e"
+            },
+            {
+              "id": "26",
+              "correct": "b"
+            },
+            {
+              "id": "27",
+              "correct": "g"
+            }
+          ]
+        },
+        {
+          "id": "t4-autofrei",
+          "title": "Autofreie Innenstädte",
+          "titleAr": "مراكز المدن خالية من السيارات",
+          "contextText": "Sie lesen Kommentare zu der Idee, Autos aus den Stadtzentren zu verbannen.",
+          "beispiel": {
+            "id": "0",
+            "text": "a",
+            "correct": "a"
+          },
+          "ueberschriften": [
+            {
+              "id": "22",
+              "text": "Ein Verbot schadet den Geschäften in der Stadt"
+            },
+            {
+              "id": "23",
+              "text": "Mehr Lebensqualität für die Bewohner ohne Lärm"
+            },
+            {
+              "id": "24",
+              "text": "Pendler brauchen bessere öffentliche Verkehrsmittel"
+            },
+            {
+              "id": "25",
+              "text": "Für Familien ist ein Auto beim Einkaufen notwendig"
+            },
+            {
+              "id": "26",
+              "text": "Elektroautos lösen die Verkehrsprobleme nicht"
+            },
+            {
+              "id": "27",
+              "text": "Handwerker und Lieferanten brauchen Ausnahmeregeln"
+            }
+          ],
+          "comments": [
+            {
+              "id": "a",
+              "author": "Bernd",
+              "text": "Wir wohnen am Stadtrand und haben uns extra E-Bikes gekauft. Damit sind wir viel schneller im Zentrum als früher mit dem Auto.",
+              "isBeispiel": true
+            },
+            {
+              "id": "b",
+              "author": "Sandra",
+              "text": "Ich bin Buchhändlerin im Zentrum. Wenn die Kunden nicht mehr mit dem Auto vorfahren können, kaufen sie ihre Bücher bequem im Internet. Die Innenstädte werden aussterben, wenn die Parkplätze wegfallen."
+            },
+            {
+              "id": "c",
+              "author": "Lukas",
+              "text": "Es reicht nicht, einfach Straßen zu sperren. Ich arbeite in der Stadt, wohne aber auf dem Dorf. Bevor man das Auto verbietet, muss der Bus öfter als zweimal am Tag fahren und darf nicht so teuer sein."
+            },
+            {
+              "id": "d",
+              "author": "Petra",
+              "text": "Ich habe drei Kinder. Wir müssen einmal pro Woche Großeinkauf machen. Wie soll ich Getränkekisten und Lebensmittel für fünf Personen im Bus transportieren? Eine autofreie Stadt diskriminiert Mütter."
+            },
+            {
+              "id": "e",
+              "author": "Jürgen",
+              "text": "Es ist herrlich! In Madrid gibt es Zonen ohne Autos. Man kann in Ruhe draußen Kaffee trinken, die Kinder können auf der Straße spielen, man atmet gute Luft und hört die Vögel singen statt Motorenlärm."
+            },
+            {
+              "id": "f",
+              "author": "Klaus",
+              "text": "Ich habe eine Installationsfirma. Meine Werkzeuge und Ersatzteile wiegen 100 Kilo. Ich kann nicht mit der U-Bahn zum Kunden fahren. Für Berufe wie meinen muss die Zufahrt zwingend erlaubt bleiben."
+            },
+            {
+              "id": "g",
+              "author": "Tanja",
+              "text": "Einige sagen ja, E-Mobilität sei die Lösung. Aber das stimmt nicht. Ein E-Auto verstopft die Straße beim Parken genauso wie ein Benziner und verursacht beim Fahren gefährlichen Feinstaub durch den Reifenabrieb."
+            },
+            {
+              "id": "h",
+              "author": "Miriam",
+              "text": "Das Geld, das wir durch den Wegfall von Parkhäusern sparen, könnten wir super in Grünflächen und Parks investieren. Das macht die Stadt kühler und schöner."
+            }
+          ],
+          "items": [
+            {
+              "id": "22",
+              "correct": "b"
+            },
+            {
+              "id": "23",
+              "correct": "e"
+            },
+            {
+              "id": "24",
+              "correct": "c"
+            },
+            {
+              "id": "25",
+              "correct": "d"
+            },
+            {
+              "id": "26",
+              "correct": "g"
+            },
+            {
+              "id": "27",
+              "correct": "f"
+            }
+          ]
+        },
+        {
+          "id": "t4-schuluniform",
+          "title": "Schuluniformen in Deutschland",
+          "titleAr": "الزي المدرسي في ألمانيا",
+          "contextText": "Sie lesen Meinungen von Eltern und Schülern zum Thema Einführung von Schuluniformen.",
+          "beispiel": {
+            "id": "0",
+            "text": "a",
+            "correct": "a"
+          },
+          "ueberschriften": [
+            {
+              "id": "22",
+              "text": "Einheitliche Kleidung reduziert Mobbing wegen Markenkleidung"
+            },
+            {
+              "id": "23",
+              "text": "Uniformen unterdrücken die persönliche Entfaltung"
+            },
+            {
+              "id": "24",
+              "text": "Es spart morgens viel Zeit und Stress"
+            },
+            {
+              "id": "25",
+              "text": "Die Anschaffung ist für arme Familien zu teuer"
+            },
+            {
+              "id": "26",
+              "text": "Das Gemeinschaftsgefühl der Schüler wird gestärkt"
+            },
+            {
+              "id": "27",
+              "text": "Es gibt keine Lösung für die warmen Sommermonate"
+            }
+          ],
+          "comments": [
+            {
+              "id": "a",
+              "author": "Sabine",
+              "text": "Ich habe im Ausland studiert und trug dort eine Uniform. Ich fand sie sehr bequem und praktisch für den Alltag.",
+              "isBeispiel": true
+            },
+            {
+              "id": "b",
+              "author": "Jens",
+              "text": "Als Vater von zwei pubertierenden Töchtern wäre ich sehr dafür. Die Diskussion jeden Morgen, was angezogen wird und ob das T-Shirt cool genug ist, kostet uns unheimlich viel Nerven. Mit Uniform wäre das vom Tisch."
+            },
+            {
+              "id": "c",
+              "author": "Leyla",
+              "text": "Kleidung ist für uns Jugendliche enorm wichtig, um zu zeigen, wer wir sind. Ein Punk zieht sich anders an als jemand, der Hip-Hop hört. Wenn wir alle das Gleiche tragen müssen, nimmt man uns unsere Individualität."
+            },
+            {
+              "id": "d",
+              "author": "Frau Müller",
+              "text": "Leider sehen wir oft, dass Kinder ausgelacht werden, weil sie Klamotten vom Discounter tragen. Wer nicht die neusten Turnschuhe hat, gehört nicht dazu. Eine Uniform würde diesen ständigen Konkurrenzkampf sofort stoppen."
+            },
+            {
+              "id": "e",
+              "author": "Herr Schmidt",
+              "text": "Wenn die Schule einheitliche Pullover oder Sakkos vorschreibt, müssen Eltern diese kaufen. Solche speziellen Anfertigungen kosten oft richtig viel Geld. Das ist für Familien, die jeden Cent umdrehen müssen, ein riesiges Problem."
+            },
+            {
+              "id": "f",
+              "author": "Moritz",
+              "text": "Ich war beim Schüleraustausch in England. Durch die Uniform fühlten wir uns alle verbunden, egal aus welchem Elternhaus man kam. Man war einfach Teil der Schule, wie in einer großen Fußballmannschaft."
+            },
+            {
+              "id": "g",
+              "author": "Klara",
+              "text": "Unser Schulgebäude ist alt und im Sommer unfassbar heiß. Wenn die Mädchen dann dicke Kniestrümpfe und die Jungs lange Hosen oder Hemden tragen müssen, leiden sie extrem unter der Hitze. Das ist nicht gesund."
+            },
+            {
+              "id": "h",
+              "author": "David",
+              "text": "Ich finde die Farbe der vorgeschlagenen Schulkleidung einfach schrecklich. Dunkelblau macht so blass. Wenn schon Uniform, dann sollte sie wenigstens modisch aussehen."
+            }
+          ],
+          "items": [
+            {
+              "id": "22",
+              "correct": "d"
+            },
+            {
+              "id": "23",
+              "correct": "c"
+            },
+            {
+              "id": "24",
+              "correct": "b"
+            },
+            {
+              "id": "25",
+              "correct": "e"
+            },
+            {
+              "id": "26",
+              "correct": "f"
+            },
+            {
+              "id": "27",
+              "correct": "g"
+            }
+          ]
+        },
+        {
+          "id": "t4-wohnen",
+          "title": "Wohnformen der Zukunft - Wie wollen wir leben?",
+          "titleAr": "أشكال السكن في المستقبل - كيف نريد أن نعيش؟",
+          "contextText": "Sie lesen in einer Wohnzeitschrift Meinungsäußerungen zu verschiedenen Wohnkonzepten und Wohnformen.",
+          "beispiel": {
+            "id": "0",
+            "text": "a",
+            "correct": "a"
+          },
+          "ueberschriften": [
+            {
+              "id": "22",
+              "text": "Gemeinschaftliches Wohnen ist für mich die ideale Lösung"
+            },
+            {
+              "id": "23",
+              "text": "Alleinsein ist ein Luxus, den ich mir leisten möchte"
+            },
+            {
+              "id": "24",
+              "text": "Minimalistisch leben bringt mehr Freiheit"
+            },
+            {
+              "id": "25",
+              "text": "Das Alter hat eigene Wohnbedürfnisse"
+            },
+            {
+              "id": "26",
+              "text": "Die Stadt zieht mich trotz hoher Mieten an"
+            },
+            {
+              "id": "27",
+              "text": "Probleme mit Nachbarn verderben das Wohnvergnügen"
+            }
+          ],
+          "comments": [
+            {
+              "id": "a",
+              "author": "Mia, 28",
+              "text": "Ich wohne in einer WG mit drei anderen. Wir teilen Küche und Bad, jeder hat sein eigenes Zimmer. Das spart nicht nur Geld, sondern man hat immer jemanden zum Reden. Die anfänglichen Probleme mit Ordnung haben wir durch einen Putzplan gelöst. Für mich ist das ideal, ich könnte nicht allein wohnen.",
+              "isBeispiel": true
+            },
+            {
+              "id": "b",
+              "author": "Herr Schmidt, 67",
+              "text": "Nach dem Tod meiner Frau war die Wohnung auf einmal viel zu groß. Ich bin dann in eine Senioren-WG gezogen. Wir sind vier Rentner, jeder hat sein eigenes Zimmer, aber wir essen zusammen und helfen uns gegenseitig. Besser als im Altenheim, und ich bin nicht mehr so allein."
+            },
+            {
+              "id": "c",
+              "author": "Frau Weber, 45",
+              "text": "Wir wohnen im Mehrgenerationenhaus. Meine Eltern unten, wir mit den Kindern oben. Das ist manchmal laut, aber die Kinder lieben es, bei Oma und Opa zu sein. Und wenn wir abends weggehen, passen die Großeltern auf. So stelle ich mir ein gelungenes Familienleben vor."
+            },
+            {
+              "id": "d",
+              "author": "Klaus, 34",
+              "text": "Ich bin vor zwei Jahren in ein Tiny House aufs Land gezogen. 25 Quadratmeter, alles, was ich brauche. Keine Schulden, keine überflüssigen Dinge, viel Natur. Klar, der Weg zur Arbeit ist länger, aber das ist es mir wert. Besitz macht nicht glücklich, Freiheit schon."
+            },
+            {
+              "id": "e",
+              "author": "Frau Klein, 52",
+              "text": "Meine Wohnung ist mein Rückzugsort. Nach einem langen Arbeitstag will ich meine Ruhe. Keine Kompromisse, keine Diskussionen über Lautstärke oder Putzen. Allein wohnen ist ein Luxus, den ich mir gönne. Die höhere Miete nehme ich dafür in Kauf."
+            },
+            {
+              "id": "f",
+              "author": "Lena, 26",
+              "text": "Ich bin vor einem Jahr nach Berlin gezogen. Die Miete ist extrem hoch, aber die Stadt bietet mir kulturell so viel. Konzerte, Ausstellungen, nette Cafés – das alles habe ich auf dem Dorf nicht. Meine kleine Wohnung ist teuer, aber für die Lebensqualität in der Stadt zahle ich gern."
+            },
+            {
+              "id": "g",
+              "author": "Herr Koch, 58",
+              "text": "Früher habe ich gerne und oft eingeladen. Aber seitdem über mir ein junges Paar eingezogen ist, das ständig feiert und laut Musik hört, ist es vorbei. Mehrere Beschwerden beim Vermieter haben nichts gebracht. Ich überlege, auszuziehen. Schade, ich wohnte gerne hier."
+            },
+            {
+              "id": "h",
+              "author": "Jana, 31",
+              "text": "Ich wohne in einer Ökosiedlung am Stadtrand. Solarpanels auf dem Dach, Regenwassernutzung, gemeinsamer Garten. Die Gemeinschaft ist sehr engagiert, wir helfen uns gegenseitig. Ist zwar teurer im Bau, aber die Nebenkosten sind fast null. Ein tolles Konzept für die Zukunft."
+            }
+          ],
+          "items": [
+            {
+              "id": "22",
+              "correct": "c"
+            },
+            {
+              "id": "23",
+              "correct": "e"
+            },
+            {
+              "id": "24",
+              "correct": "d"
+            },
+            {
+              "id": "25",
+              "correct": "b"
+            },
+            {
+              "id": "26",
+              "correct": "f"
+            },
+            {
+              "id": "27",
+              "correct": "g"
+            }
+          ]
+        },
+        {
+          "id": "t4-umwelt-alltag",
+          "title": "Umweltschutz im Alltag - Was kann jeder tun?",
+          "titleAr": "حماية البيئة في الحياة اليومية - ماذا يمكن لكل فرد أن يفعل؟",
+          "contextText": "Sie lesen in einem Umweltforum Meinungen darüber, wie man im Alltag die Umwelt schonen kann.",
+          "beispiel": {
+            "id": "0",
+            "text": "a",
+            "correct": "a"
+          },
+          "ueberschriften": [
+            {
+              "id": "22",
+              "text": "Energiesparen zu Hause ist einfach und effektiv"
+            },
+            {
+              "id": "23",
+              "text": "Autofreies Leben in der Stadt funktioniert gut"
+            },
+            {
+              "id": "24",
+              "text": "Plastik vermeiden ist eine Herausforderung"
+            },
+            {
+              "id": "25",
+              "text": "Bewusster Fleischkonsum schützt das Klima"
+            },
+            {
+              "id": "26",
+              "text": "Secondhand ist die nachhaltige Alternative"
+            },
+            {
+              "id": "27",
+              "text": "Selbst anbauen macht Spaß und schont die Umwelt"
+            }
+          ],
+          "comments": [
+            {
+              "id": "a",
+              "author": "Tim, 29",
+              "text": "Ich heize nur noch auf 19 Grad, lüfte richtig und habe auf Ökostrom umgestellt. Die Heizkosten sind um 20 Prozent gesunken. Das schont nicht nur die Umwelt, sondern auch den Geldbeutel. Jeder kann das!",
+              "isBeispiel": true
+            },
+            {
+              "id": "b",
+              "author": "Laura, 34",
+              "text": "Fleischkonsum ist der größte Klimakiller in meiner Ernährung. Seitdem ich nur noch einmal pro Woche Fleisch esse, fühle ich mich fitter, und mein ökologischer Fußabdruck ist viel kleiner. Die vegetarischen Alternativen schmecken mir auch gut."
+            },
+            {
+              "id": "c",
+              "author": "Herr Meier, 52",
+              "text": "Ich habe mein Auto verkauft und fahre jetzt nur noch Fahrrad oder Bahn. In der Großstadt geht das gut. Ja, der Einkauf ist manchmal mühsam, aber ich bin fitter und spare eine Menge Geld. Das muss man einfach wollen."
+            },
+            {
+              "id": "d",
+              "author": "Klara, 41",
+              "text": "Ich habe einen großen Garten und baue mein eigenes Gemüse an. Das ist Arbeit, aber die Tomaten schmecken so viel besser. Und ich weiß genau, was drin ist. Kein Pestizide, keine langen Transportwege. So sollte jeder mit Balkon zumindest Kräuter anpflanzen."
+            },
+            {
+              "id": "e",
+              "author": "Sophie, 26",
+              "text": "Ich versuche, plastikfrei zu leben. Unverpackt-Laden, eigene Behälter, Stofftaschen. Am Anfang war es schwer, jetzt ist es Routine. Manchmal vergesse ich aber meine Taschen und ärgere mich dann. Perfekt bin ich nicht, aber jeder kleine Schritt zählt."
+            },
+            {
+              "id": "f",
+              "author": "Frau Berg, 48",
+              "text": "Ich kaufe fast nur noch Second Hand. Kleidung, Möbel, sogar Geschirr. Warum neu kaufen, wenn gebraucht oft wie neu ist? Das spart Geld und Ressourcen. Nur Unterwäsche und Matratzen kaufe ich neu. Das sollte mehr Leute machen."
+            },
+            {
+              "id": "g",
+              "author": "Tom, 33",
+              "text": "Ich fliege nicht mehr in den Urlaub. Stattdessen fahre ich mit der Bahn an die Ostsee oder in die Alpen. Ja, die Fahrt dauert länger, aber die Landschaft ist wunderschön. Und ich habe kein schlechtes Gewissen mehr. Flugscham war für mich der Anlass."
+            },
+            {
+              "id": "h",
+              "author": "Mona, 23",
+              "text": "Ich habe ein Stofftaschentuch und benutze Menstruationstasse statt Wegwerfprodukten. Das ist nicht für jede, aber ich bin begeistert. Kein Müll mehr, und es ist günstiger. Man muss sich nur trauen, Neues auszuprobieren."
+            }
+          ],
+          "items": [
+            {
+              "id": "22",
+              "correct": "a"
+            },
+            {
+              "id": "23",
+              "correct": "c"
+            },
+            {
+              "id": "24",
+              "correct": "e"
+            },
+            {
+              "id": "25",
+              "correct": "b"
+            },
+            {
+              "id": "26",
+              "correct": "f"
+            },
+            {
+              "id": "27",
+              "correct": "d"
+            }
+          ]
+        },
+        {
+          "id": "t4-arbeit-wandel",
+          "title": "Arbeit im Wandel - Wie wollen wir in Zukunft arbeiten?",
+          "titleAr": "العمل في تغير مستمر - كيف نريد العمل في المستقبل؟",
+          "contextText": "Sie lesen in einem Wirtschaftsmagazin Kommentare von Arbeitnehmern über neue Arbeitsmodelle.",
+          "beispiel": {
+            "id": "0",
+            "text": "a",
+            "correct": "a"
+          },
+          "ueberschriften": [
+            {
+              "id": "22",
+              "text": "Homeoffice spart Zeit und Nerven"
+            },
+            {
+              "id": "23",
+              "text": "Vier Tage Arbeit sind genug"
+            },
+            {
+              "id": "24",
+              "text": "Flexible Arbeitszeiten helfen der Familie"
+            },
+            {
+              "id": "25",
+              "text": "Das Büro als Ort der Begegnung ist wichtig"
+            },
+            {
+              "id": "26",
+              "text": "Teilzeit ist die beste Lösung für mich"
+            },
+            {
+              "id": "27",
+              "text": "Jobsharing macht Arbeit leichter"
+            }
+          ],
+          "comments": [
+            {
+              "id": "a",
+              "author": "Nina, 31",
+              "text": "Seit der Pandemie arbeite ich drei Tage die Woche von zu Hause. Keine Stunde Pendeln mehr, mittags gehe ich mit dem Hund, abends bin ich nicht mehr so erschöpft. Die Arbeit erledige ich konzentrierter, weil mich keine Kollegen ständig unterbrechen. Zurück ins volle Büro möchte ich nie wieder.",
+              "isBeispiel": true
+            },
+            {
+              "id": "b",
+              "author": "Felix, 29",
+              "text": "Wir haben in der Firma einen Jobsharing-Versuch gestartet. Meine Kollegin und ich teilen uns eine Stelle. Jeder arbeitet 20 Stunden, wir stimmen uns täglich ab. Die Stelle ist immer besetzt, selbst wenn einer krank ist. Und wir haben Zeit für Familie und Hobbys. Ein Traum!"
+            },
+            {
+              "id": "c",
+              "author": "Herr Wagner, 55",
+              "text": "Ich bin jetzt in Altersteilzeit und arbeite nur noch 25 Stunden pro Woche. Das ist die perfekte Vorbereitung auf die Rente. Die jungen Kollegen übernehmen mehr Verantwortung, und ich habe Zeit für meine Enkel. So soll es sein!"
+            },
+            {
+              "id": "d",
+              "author": "Lisa, 37",
+              "text": "Mein Arbeitgeber bietet Gleitzeit. Ich kann kommen und gehen, wann ich will, solange die Arbeit erledigt ist. Das ist ideal mit zwei kleinen Kindern. Morgens bringe ich sie in die Kita und fange später an. Kein Stress mehr. Das sollte Standard sein."
+            },
+            {
+              "id": "e",
+              "author": "Thomas, 42",
+              "text": "Ich arbeite seit einem Jahr in einer 4-Tage-Woche. Freitags ist frei. Das große Wochenende ist so erholsam, dass ich an den vier Arbeitstagen viel produktiver bin. Das Gleitzeitkonto ist immer im Plus. Ich kann es nur empfehlen."
+            },
+            {
+              "id": "f",
+              "author": "Clara, 25",
+              "text": "Mir fehlt der persönliche Austausch im Homeoffice. Die schnellen Fragen an den Nachbarn, die Ideen beim Mittagessen – das geht online nicht. Deshalb gehe ich freiwillig an drei Tagen ins Büro. Die Mischung ist perfekt für mich."
+            },
+            {
+              "id": "g",
+              "author": "Frau Schmidt, 49",
+              "text": "Ich bin vor zwei Jahren auf 30 Stunden runtergegangen. Das Gehalt reicht immer noch, und ich habe mehr Zeit für meine alternden Eltern. Teilzeit war die beste Entscheidung meines Berufslebens. Weniger Stress, mehr Lebensqualität."
+            },
+            {
+              "id": "h",
+              "author": "Max, 33",
+              "text": "Ich arbeite Vollzeit, aber mit Vertrauensarbeitszeit. Kein Stechen, keine Kontrolle. Mein Chef vertraut mir, dass ich meine Arbeit mache. Das motiviert ungemein. Und wenn die Kinder krank sind, kann ich flexibel reagieren. So stelle ich mir moderne Arbeitskultur vor."
+            }
+          ],
+          "items": [
+            {
+              "id": "22",
+              "correct": "a"
+            },
+            {
+              "id": "23",
+              "correct": "e"
+            },
+            {
+              "id": "24",
+              "correct": "d"
+            },
+            {
+              "id": "25",
+              "correct": "f"
+            },
+            {
+              "id": "26",
+              "correct": "g"
+            },
+            {
+              "id": "27",
+              "correct": "b"
+            }
+          ]
+        },
+        {
+          "id": "t4-fast-fashion",
+          "title": "Fast Fashion - Der billige Preis der Mode",
+          "titleAr": "الموضة السريعة - الثمن البخس للموضة",
+          "contextText": "Sie lesen in einem Modeblog Meinungen über schnelle Mode und nachhaltige Alternativen.",
+          "beispiel": {
+            "id": "0",
+            "text": "a",
+            "correct": "a"
+          },
+          "ueberschriften": [
+            {
+              "id": "22",
+              "text": "Billige Mode geht auf Kosten der Umwelt"
+            },
+            {
+              "id": "23",
+              "text": "Nachhaltige Mode ist mir zu teuer"
+            },
+            {
+              "id": "24",
+              "text": "Kleidung tauschen macht Spaß"
+            },
+            {
+              "id": "25",
+              "text": "Second Hand ist die beste Alternative"
+            },
+            {
+              "id": "26",
+              "text": "Qualität statt Quantität"
+            },
+            {
+              "id": "27",
+              "text": "Die Modeindustrie muss sich ändern"
+            }
+          ],
+          "comments": [
+            {
+              "id": "a",
+              "author": "Jana, 24",
+              "text": "Ich habe nach einer Dokumentation über die Arbeitsbedingungen in Bangladesch mein Kaufverhalten komplett geändert. Heute kaufe ich fast nur noch Second Hand. Die Qualität ist oft besser, und ich habe ein gutes Gewissen.",
+              "isBeispiel": true
+            },
+            {
+              "id": "b",
+              "author": "Laura, 19",
+              "text": "Ich habe nicht viel Geld. Wo soll ich sonst kaufen als bei H&M oder Primark? Da bekomme ich drei T-Shirts für den Preis von einem nachhaltigen. Die Firmen müssen sich ändern, nicht ich."
+            },
+            {
+              "id": "c",
+              "author": "Sophie, 34",
+              "text": "Ich kaufe lieber teure, zeitlose Stücke, die Jahre halten. Ein guter Wollmantel, eine Lederjacke – das trägt man ewig. Am Ende spare ich sogar Geld, weil ich nicht ständig neue billige Sachen kaufen muss."
+            },
+            {
+              "id": "d",
+              "author": "Emma, 22",
+              "text": "Ich organisiere mit Freundinnen Kleidertauschpartys. Jeder bringt Sachen mit, die er nicht mehr trägt, und nimmt etwas anderes mit. Das ist wie neu einkaufen, aber umsonst und nachhaltig."
+            },
+            {
+              "id": "e",
+              "author": "Herr Klein, 45",
+              "text": "Die Modeindustrie ist einer der größten Umweltverschmutzer. Die Regierung muss strenge Auflagen machen, wie in der Textilindustrie produziert wird. Solange nichts passiert, wird sich nichts ändern."
+            },
+            {
+              "id": "f",
+              "author": "Mia, 28",
+              "text": "Ich repariere meine Kleidung, statt sie wegzuwerfen. Löcher stopfen, Knöpfe annähen, Hosen kürzen. Das ist gar nicht so schwer. Man ist stolz auf das Ergebnis, und die Umwelt freut sich."
+            },
+            {
+              "id": "g",
+              "author": "Lena, 31",
+              "text": "Ich habe aufgehört, Trends zu folgen. Ich kaufe nur noch, was mir wirklich gefällt und gut aussieht. Egal, ob es diese Saison modern ist oder nicht. So habe ich viel weniger Klamotten, aber die mag ich alle."
+            },
+            {
+              "id": "h",
+              "author": "Frau Weber, 52",
+              "text": "Ich bin schockiert, wie viel Kleidung meine Tochter wegwirft. Nach drei Mal tragen kommt es in den Container. Dabei ist noch alles gut. Wir müssen wieder lernen, Dinge wertzuschätzen. Das Bewusstsein für Verschwendung fehlt völlig."
+            }
+          ],
+          "items": [
+            {
+              "id": "22",
+              "correct": "a"
+            },
+            {
+              "id": "23",
+              "correct": "b"
+            },
+            {
+              "id": "24",
+              "correct": "d"
+            },
+            {
+              "id": "25",
+              "correct": "a"
+            },
+            {
+              "id": "26",
+              "correct": "c"
+            },
+            {
+              "id": "27",
+              "correct": "e"
+            }
+          ]
+        },
+        {
+          "id": "t4-gesundheit",
+          "title": "Gesundheitsvorsorge - Eigene Verantwortung oder Aufgabe des Staates?",
+          "titleAr": "الرعاية الصحية الوقائية - مسؤولية الفرد أم الدولة؟",
+          "contextText": "Sie lesen in einem Gesundheitsforum Meinungen über Vorsorgeuntersuchungen und Prävention.",
+          "beispiel": {
+            "id": "0",
+            "text": "a",
+            "correct": "a"
+          },
+          "ueberschriften": [
+            {
+              "id": "22",
+              "text": "Regelmäßige Vorsorge rettet Leben"
+            },
+            {
+              "id": "23",
+              "text": "Gesund leben ist eigene Pflicht"
+            },
+            {
+              "id": "24",
+              "text": "Die Krankenkassen müssen mehr zahlen"
+            },
+            {
+              "id": "25",
+              "text": "Angst vor dem Arzt hält mich ab"
+            },
+            {
+              "id": "26",
+              "text": "Prävention ist besser als teure Behandlung"
+            },
+            {
+              "id": "27",
+              "text": "Aufklärung in Schulen ist entscheidend"
+            }
+          ],
+          "comments": [
+            {
+              "id": "a",
+              "author": "Frau Schulz, 58",
+              "text": "Bei meiner Vorsorgeuntersuchung wurde Darmkrebs im Frühstadium entdeckt. Die Ärzte sagten, wenn ich noch ein Jahr gewartet hätte, wäre es zu spät gewesen. Gehen Sie hin, es kann Ihr Leben retten.",
+              "isBeispiel": true
+            },
+            {
+              "id": "b",
+              "author": "Tom, 28",
+              "text": "Ich gehe nicht zum Arzt, es sei denn, ich bin wirklich krank. So eine Vorsorge ist Zeitverschwendung. Ich fühle mich gesund, und solange nichts wehtut, ist alles in Ordnung."
+            },
+            {
+              "id": "c",
+              "author": "Herr Wagner, 62",
+              "text": "Ich habe Angst vor der Krebsvorsorge. Vor der Diagnose habe ich mehr Angst als vor der Krankheit selbst. Deshalb gehe ich seit Jahren nicht mehr hin. Meine Frau sagt, das ist kindisch, aber ich kann nicht anders."
+            },
+            {
+              "id": "d",
+              "author": "Prof. Dr. Klein",
+              "text": "Aus medizinischer Sicht ist Prävention das A und O. Krankheiten früh zu erkennen, spart nicht nur Leben, sondern auch Milliarden an Behandlungskosten. Die Politik muss mehr in Vorsorge investieren."
+            },
+            {
+              "id": "e",
+              "author": "Lisa, 34",
+              "text": "Ich ernähre mich gesund, treibe Sport und gehe zur Vorsorge. Jeder ist für seine Gesundheit selbst verantwortlich. Man kann nicht immer den Staat oder die Krankenkassen verklagen."
+            },
+            {
+              "id": "f",
+              "author": "Klara, 41",
+              "text": "In der Schule lernt man nichts über Vorsorge. Dabei wäre es so wichtig, junge Leute aufzuklären. Ich musste mich selbst informieren, welche Untersuchungen in meinem Alter sinnvoll sind. Das sollte Lehrplan werden."
+            },
+            {
+              "id": "g",
+              "author": "Frau Meier, 55",
+              "text": "Meine Krankenkasse zahlt nicht alle Vorsorgeuntersuchungen, die ich gerne hätte. Die Gesundheitspolitik spart am falschen Ende. Prävention ist billiger als eine teure Chemotherapie. Das muss sich ändern."
+            },
+            {
+              "id": "h",
+              "author": "Herr Fuchs, 47",
+              "text": "Ich gehe jedes Jahr zur Vorsorge. Zahnarzt, Hautarzt, Prostata – alles. Lieber eine Stunde investieren als später schwer krank sein. Viele Männer in meinem Alter denken da anders, leider."
+            }
+          ],
+          "items": [
+            {
+              "id": "22",
+              "correct": "a"
+            },
+            {
+              "id": "23",
+              "correct": "e"
+            },
+            {
+              "id": "24",
+              "correct": "g"
+            },
+            {
+              "id": "25",
+              "correct": "c"
+            },
+            {
+              "id": "26",
+              "correct": "d"
+            },
+            {
+              "id": "27",
+              "correct": "f"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teil-5",
+      "label": "Teil 5",
+      "nummer": 5,
+      "arbeitszeit": "6 Minuten",
+      "pruefungsziel": "Regeln/Instruktionen verstehen",
+      "aufgabentyp": "zuordnung-paragrafen",
+      "punkte": 3,
+      "itemCount": 3,
+      "aufgabenNummern": "28–30",
+      "answerType": "multiple-choice-abc",
+      "title": "Vorschriften und Regeln",
+      "titleAr": "لوائح وقواعد",
+      "instructions": "Sie lesen eine Hausordnung / Studienordnung. Welche Überschrift passt zu welchem Paragrafen? Vier Überschriften werden nicht gebraucht.",
+      "description": "3 Gesetzestexte / Regeln (§). Aus 8 Überschriften (a-h) die 3 passenden auswählen.",
+      "themen": [
+        {
+          "id": "t5-hausordnung",
+          "title": "Hausordnung eines Mehrfamilienhauses",
+          "titleAr": "النظام الداخلي لمبنى سكني",
+          "context": "Sie sind in eine neue Wohnung gezogen und lesen die Hausordnung.",
+          "beispiel": {
+            "id": "0",
+            "correct": "c"
+          },
+          "text": {
+            "title": "Allgemeine Hausordnung",
+            "ueberschriften": [
+              {
+                "id": "a",
+                "text": "Müllentsorgung"
+              },
+              {
+                "id": "b",
+                "text": "Haustierhaltung"
+              },
+              {
+                "id": "c",
+                "text": "Ruhezeiten"
+              },
+              {
+                "id": "d",
+                "text": "Nutzung des Waschkellers"
+              },
+              {
+                "id": "e",
+                "text": "Sicherheit und Haustüren"
+              },
+              {
+                "id": "f",
+                "text": "Grillen auf dem Balkon"
+              },
+              {
+                "id": "g",
+                "text": "Treppenhausreinigung"
+              },
+              {
+                "id": "h",
+                "text": "Abstellen von Fahrzeugen"
+              }
+            ],
+            "paragraphen": [
+              {
+                "id": "28",
+                "title": "§ 4",
+                "content": "Zur Vermeidung von Diebstählen und zum Schutz der Bewohner ist die Hauseingangstür in der Zeit von 22:00 Uhr bis 06:00 Uhr stets verschlossen zu halten. Das Offenhalten der Tür durch Keile ist auch tagsüber strengstens untersagt."
+              },
+              {
+                "id": "29",
+                "title": "§ 5",
+                "content": "Hunde und Katzen dürfen nur mit vorheriger schriftlicher Zustimmung des Vermieters gehalten werden. Kleintiere (wie Hamster oder Vögel) benötigen keine Erlaubnis. Hunde sind auf dem gesamten Grundstück an der Leine zu führen."
+              },
+              {
+                "id": "30",
+                "title": "§ 6",
+                "content": "Fahrräder dürfen ausschließlich in den dafür vorgesehenen Fahrradständern im Hof oder im Fahrradkeller abgestellt werden. Das Abstellen im Flur oder im Treppenhaus ist wegen der Fluchtwege feuerpolizeilich verboten."
+              }
+            ]
+          },
+          "items": [
+            {
+              "id": "28",
+              "correct": "e"
+            },
+            {
+              "id": "29",
+              "correct": "b"
+            },
+            {
+              "id": "30",
+              "correct": "h"
+            }
+          ]
+        },
+        {
+          "id": "t5-studienordnung",
+          "title": "Studienordnung Universität",
+          "titleAr": "لائحة الدراسة في الجامعة",
+          "context": "Sie möchten an der Uni studieren und lesen Auszüge aus der Prüfungsordnung.",
+          "beispiel": {
+            "id": "0",
+            "correct": "e"
+          },
+          "text": {
+            "title": "Allgemeine Studienordnung",
+            "ueberschriften": [
+              {
+                "id": "a",
+                "text": "Anmeldung zu Prüfungen"
+              },
+              {
+                "id": "b",
+                "text": "Täuschungsversuche und Plagiate"
+              },
+              {
+                "id": "c",
+                "text": "Wiederholung von Prüfungen"
+              },
+              {
+                "id": "d",
+                "text": "Auslandssemester"
+              },
+              {
+                "id": "e",
+                "text": "Regelstudienzeit"
+              },
+              {
+                "id": "f",
+                "text": "Versäumnis und Krankheit"
+              },
+              {
+                "id": "g",
+                "text": "Korrekturfristen der Dozenten"
+              },
+              {
+                "id": "h",
+                "text": "Zulassungsvoraussetzungen"
+              }
+            ],
+            "paragraphen": [
+              {
+                "id": "28",
+                "title": "§ 12",
+                "content": "Wer zu einem Klausurtermin nicht erscheint, erhält die Note 'nicht ausreichend' (5,0). Dies gilt nicht, wenn triftige Gründe für das Fehlen unverzüglich schriftlich angezeigt werden. Bei gesundheitlichen Gründen ist ein ärztliches Attest spätestens drei Tage nach der Klausur im Sekretariat einzureichen."
+              },
+              {
+                "id": "29",
+                "title": "§ 13",
+                "content": "Nicht bestandene Modulprüfungen können zweimal wiederholt werden. Die erste Wiederholungsprüfung muss im unmittelbar folgenden Semester abgelegt werden. Eine dritte Wiederholung ist nur auf gesonderten Härtefallantrag beim Prüfungsausschuss möglich."
+              },
+              {
+                "id": "30",
+                "title": "§ 14",
+                "content": "Benutzt ein Kandidat unerlaubte Hilfsmittel (z.B. Handys, Spickzettel) oder reicht er fremde Texte als eigene Leistung ein, wird die Prüfung sofort mit 'nicht ausreichend' (5,0) bewertet. In schweren Fällen kann der Studierende von der Universität exmatrikuliert werden."
+              }
+            ]
+          },
+          "items": [
+            {
+              "id": "28",
+              "correct": "f"
+            },
+            {
+              "id": "29",
+              "correct": "c"
+            },
+            {
+              "id": "30",
+              "correct": "b"
+            }
+          ]
+        },
+        {
+          "id": "t5-bibliothek",
+          "title": "Benutzungsordnung der Bibliothek",
+          "titleAr": "نظام استخدام المكتبة",
+          "context": "Sie melden sich in der Stadtbibliothek an und lesen die Nutzungsregeln.",
+          "beispiel": {
+            "id": "0",
+            "correct": "a"
+          },
+          "text": {
+            "title": "Benutzungsordnung Stadtbibliothek",
+            "ueberschriften": [
+              {
+                "id": "a",
+                "text": "Anmeldung und Ausweis"
+              },
+              {
+                "id": "b",
+                "text": "Leihfristen"
+              },
+              {
+                "id": "c",
+                "text": "Mahngebühren"
+              },
+              {
+                "id": "d",
+                "text": "Verhalten in den Lesesälen"
+              },
+              {
+                "id": "e",
+                "text": "Fernleihe"
+              },
+              {
+                "id": "f",
+                "text": "Verlust oder Beschädigung"
+              },
+              {
+                "id": "g",
+                "text": "Verlängerung der Ausleihe"
+              },
+              {
+                "id": "h",
+                "text": "Nutzung des Internets"
+              }
+            ],
+            "paragraphen": [
+              {
+                "id": "28",
+                "title": "§ 5",
+                "content": "Bücher und Zeitschriften können für die Dauer von 28 Tagen entliehen werden. DVDs und Videospiele müssen bereits nach 14 Tagen zurückgegeben werden. Präsenzbestand aus dem Lesesaal darf das Gebäude nicht verlassen."
+              },
+              {
+                "id": "29",
+                "title": "§ 6",
+                "content": "Sollte ein Medium nicht fristgerecht zurückgebracht werden, fallen pro Woche und Medium 2,50 Euro an. Die erste schriftliche Erinnerung wird drei Tage nach Ablauf der Frist verschickt. Ab der dritten Woche wird das Konto gesperrt."
+              },
+              {
+                "id": "30",
+                "title": "§ 7",
+                "content": "In allen Räumen der Bibliothek ist auf Ruhe zu achten. Das Telefonieren, Essen und Trinken (außer Wasser aus verschließbaren Flaschen) ist strikt untersagt. Jacken und Taschen sind in den Schließfächern im Erdgeschoss zu verstauen."
+              }
+            ]
+          },
+          "items": [
+            {
+              "id": "28",
+              "correct": "b"
+            },
+            {
+              "id": "29",
+              "correct": "c"
+            },
+            {
+              "id": "30",
+              "correct": "d"
+            }
+          ]
+        },
+        {
+          "id": "t5-fitnessstudio",
+          "title": "Vertragsbedingungen Fitnessstudio",
+          "titleAr": "شروط عقد صالة الألعاب الرياضية",
+          "context": "Sie unterschreiben einen Vertrag im Fitnessstudio und prüfen die Bedingungen.",
+          "beispiel": {
+            "id": "0",
+            "correct": "h"
+          },
+          "text": {
+            "title": "Allgemeine Geschäftsbedingungen",
+            "ueberschriften": [
+              {
+                "id": "a",
+                "text": "Kündigung des Vertrags"
+              },
+              {
+                "id": "b",
+                "text": "Zahlung des Beitrags"
+              },
+              {
+                "id": "c",
+                "text": "Hygiene und Kleidung"
+              },
+              {
+                "id": "d",
+                "text": "Haftung bei Diebstahl"
+              },
+              {
+                "id": "e",
+                "text": "Ruhendstellung bei Krankheit"
+              },
+              {
+                "id": "f",
+                "text": "Nutzung der Sauna"
+              },
+              {
+                "id": "g",
+                "text": "Mitbringen von Getränken"
+              },
+              {
+                "id": "h",
+                "text": "Öffnungszeiten"
+              }
+            ],
+            "paragraphen": [
+              {
+                "id": "28",
+                "title": "§ 3",
+                "content": "Der monatliche Beitrag wird am Ersten jedes Monats per Lastschrift eingezogen. Bei Rücklastschriften durch mangelnde Kontodeckung hat das Mitglied die anfallenden Bankgebühren von 5 Euro selbst zu tragen."
+              },
+              {
+                "id": "29",
+                "title": "§ 4",
+                "content": "Die Laufzeit beträgt mindestens 12 Monate. Wenn der Vertrag nicht drei Monate vor Ablauf schriftlich (per Brief oder Mail) beendet wird, verlängert er sich automatisch um ein weiteres Jahr."
+              },
+              {
+                "id": "30",
+                "title": "§ 5",
+                "content": "Das Studio übernimmt keine Verantwortung für den Verlust von Wertsachen, Kleidung oder Handys aus den Spinden der Umkleidekabinen. Wir empfehlen, keine Wertgegenstände zum Training mitzubringen."
+              }
+            ]
+          },
+          "items": [
+            {
+              "id": "28",
+              "correct": "b"
+            },
+            {
+              "id": "29",
+              "correct": "a"
+            },
+            {
+              "id": "30",
+              "correct": "d"
+            }
+          ]
+        },
+        {
+          "id": "t5-arbeitsvertrag",
+          "title": "Auszüge aus einem Arbeitsvertrag",
+          "titleAr": "مقتطفات من عقد العمل",
+          "context": "Sie beginnen eine neue Stelle und lesen Ihren Arbeitsvertrag genau durch.",
+          "beispiel": {
+            "id": "0",
+            "correct": "c"
+          },
+          "text": {
+            "title": "Arbeitsvertrag der Musterfirma GmbH",
+            "ueberschriften": [
+              {
+                "id": "a",
+                "text": "Verschwiegenheitspflicht"
+              },
+              {
+                "id": "b",
+                "text": "Urlaubsanspruch"
+              },
+              {
+                "id": "c",
+                "text": "Arbeitszeit und Überstunden"
+              },
+              {
+                "id": "d",
+                "text": "Kündigungsfristen"
+              },
+              {
+                "id": "e",
+                "text": "Nebentätigkeiten"
+              },
+              {
+                "id": "f",
+                "text": "Bonuszahlungen"
+              },
+              {
+                "id": "g",
+                "text": "Probezeit"
+              },
+              {
+                "id": "h",
+                "text": "Arbeitsort"
+              }
+            ],
+            "paragraphen": [
+              {
+                "id": "28",
+                "title": "§ 4",
+                "content": "Der Arbeitnehmer ist verpflichtet, über alle ihm bekannt gewordenen Betriebs- und Geschäftsgeheimnisse Stillschweigen zu bewahren. Dies gilt auch für Kundenlisten, Produktionsverfahren und unveröffentlichte Finanzdaten. Die Pflicht besteht über das Ende des Arbeitsverhältnisses hinaus. Bei Zuwiderhandlung droht eine fristlose Kündigung."
+              },
+              {
+                "id": "29",
+                "title": "§ 5",
+                "content": "Der Arbeitnehmer darf eine Nebentätigkeit nur mit vorheriger schriftlicher Zustimmung des Arbeitgebers ausüben. Die Zustimmung darf nur verweigert werden, wenn die Nebentätigkeit die Leistungsfähigkeit des Arbeitnehmers beeinträchtigt, in Konkurrenz zum Arbeitgeber steht oder gegen gesetzliche Arbeitszeitregelungen verstößt."
+              },
+              {
+                "id": "30",
+                "title": "§ 6",
+                "content": "Die regelmäßige wöchentliche Arbeitszeit beträgt 40 Stunden. Überstunden sind mit dem Gehalt abgegolten, soweit sie 10 Stunden pro Monat nicht überschreiten. Darüber hinausgehende Überstunden werden mit einem Zuschlag von 25 Prozent vergütet oder durch Freizeit ausgeglichen."
+              }
+            ]
+          },
+          "items": [
+            {
+              "id": "28",
+              "correct": "a"
+            },
+            {
+              "id": "29",
+              "correct": "e"
+            },
+            {
+              "id": "30",
+              "correct": "c"
+            }
+          ]
+        },
+        {
+          "id": "t5-bahn",
+          "title": "Beförderungsbedingungen der Deutschen Bahn",
+          "titleAr": "شروط النقل الخاصة بالسكك الحديدية الألمانية",
+          "context": "Sie reisen häufig mit der Bahn und lesen die Fahrgastrechte.",
+          "beispiel": {
+            "id": "0",
+            "correct": "c"
+          },
+          "text": {
+            "title": "Beförderungsbedingungen - Auszug",
+            "ueberschriften": [
+              {
+                "id": "a",
+                "text": "Fahrradmitnahme"
+              },
+              {
+                "id": "b",
+                "text": "Reisegepäck und Haftung"
+              },
+              {
+                "id": "c",
+                "text": "Fahrgastrechte bei Verspätung"
+              },
+              {
+                "id": "d",
+                "text": "Haustierbeförderung"
+              },
+              {
+                "id": "e",
+                "text": "Reservierungspflicht"
+              },
+              {
+                "id": "f",
+                "text": "Ticketarten und Gültigkeit"
+              },
+              {
+                "id": "g",
+                "text": "Schwarzfahren - Konsequenzen"
+              },
+              {
+                "id": "h",
+                "text": "Beförderungsausschluss"
+              }
+            ],
+            "paragraphen": [
+              {
+                "id": "28",
+                "title": "§ 8",
+                "content": "Bei einer Verspätung am Zielbahnhof von 60 Minuten oder mehr erhalten Fahrgäste 25 Prozent des Fahrpreises zurück. Bei einer Verspätung von 120 Minuten oder mehr beträgt die Entschädigung 50 Prozent des gezahlten Fahrpreises. Der Anspruch muss innerhalb von sieben Tagen nach Reiseende geltend gemacht werden."
+              },
+              {
+                "id": "29",
+                "title": "§ 9",
+                "content": "Die Deutsche Bahn haftet bis zu einem Höchstbetrag von 1.000 Euro für Verlust oder Beschädigung von Reisegepäck, es sei denn, der Schaden wurde vorsätzlich oder grob fahrlässig verursacht. Wertgegenstände wie Geld, Schmuck oder elektronische Geräte sind von der Haftung ausgeschlossen."
+              },
+              {
+                "id": "30",
+                "title": "§ 10",
+                "content": "Die Fahrradmitnahme ist in den meisten Fernverkehrszügen reservierungspflichtig. Die Reservierung kostet 9 Euro pro Fahrrad und Strecke. Im Nahverkehr ist die Fahrradmitnahme ohne Reservierung möglich, solange Platz vorhanden ist. Die Kosten für ein Fahrradticket variieren je nach Verkehrsverbund."
+              }
+            ]
+          },
+          "items": [
+            {
+              "id": "28",
+              "correct": "c"
+            },
+            {
+              "id": "29",
+              "correct": "b"
+            },
+            {
+              "id": "30",
+              "correct": "a"
+            }
+          ]
+        },
+        {
+          "id": "t5-verein",
+          "title": "Satzung eines Sportvereins",
+          "titleAr": "النظام الأساسي لنادي رياضي",
+          "context": "Sie treten einem Sportverein bei und lesen die Satzung.",
+          "beispiel": {
+            "id": "0",
+            "correct": "b"
+          },
+          "text": {
+            "title": "Satzung des SV Beispiel 1890 e.V.",
+            "ueberschriften": [
+              {
+                "id": "a",
+                "text": "Mitgliedsbeiträge"
+              },
+              {
+                "id": "b",
+                "text": "Austritt und Ausschluss"
+              },
+              {
+                "id": "c",
+                "text": "Ehrenamtliche Tätigkeiten"
+              },
+              {
+                "id": "d",
+                "text": "Satzungsänderungen"
+              },
+              {
+                "id": "e",
+                "text": "Mitgliederversammlung"
+              },
+              {
+                "id": "f",
+                "text": "Aufnahme neuer Mitglieder"
+              },
+              {
+                "id": "g",
+                "text": "Vorstandswahlen"
+              },
+              {
+                "id": "h",
+                "text": "Trainer-Ausbildung"
+              }
+            ],
+            "paragraphen": [
+              {
+                "id": "28",
+                "title": "§ 7",
+                "text": "Die ordentliche Mitgliederversammlung findet einmal jährlich statt. Sie wird vom Vorstand mit einer Frist von vier Wochen einberufen. Die Tagesordnung muss bekannt gegeben werden. Anträge zur Tagesordnung müssen mindestens zwei Wochen vor der Versammlung schriftlich beim Vorstand eingehen. Die Mitgliederversammlung ist beschlussfähig, wenn mindestens 20 Prozent der Mitglieder anwesend sind."
+              },
+              {
+                "id": "29",
+                "title": "§ 8",
+                "text": "Der Austritt ist jederzeit mit einer Frist von zwei Monaten zum Quartalsende möglich. Der Austritt muss schriftlich gegenüber dem Vorstand erklärt werden. Ein Ausschluss eines Mitglieds ist nur aus wichtigem Grund möglich, etwa bei grober Verletzung der Vereinsordnung oder bei Nichtzahlung der Beiträge über einen Zeitraum von sechs Monaten."
+              },
+              {
+                "id": "30",
+                "title": "§ 9",
+                "text": "Der monatliche Mitgliedsbeitrag beträgt für Erwachsene 15 Euro, für Jugendliche (14-17 Jahre) 8 Euro und für Kinder (bis 13 Jahre) 5 Euro. Familien zahlen einen ermäßigten Satz von 30 Euro pro Monat. Der Beitrag wird per Lastschrift eingezogen. Sonderspenden sind jederzeit willkommen."
+              }
+            ]
+          },
+          "items": [
+            {
+              "id": "28",
+              "correct": "e"
+            },
+            {
+              "id": "29",
+              "correct": "b"
+            },
+            {
+              "id": "30",
+              "correct": "a"
+            }
+          ]
+        },
+        {
+          "id": "t5-pruefungsordnung",
+          "title": "Prüfungsordnung der gymnasialen Oberstufe",
+          "titleAr": "لائحة الامتحانات للمرحلة الثانوية العليا",
+          "context": "Sie bereiten sich auf das Abitur vor und lesen die Prüfungsordnung.",
+          "beispiel": {
+            "id": "0",
+            "correct": "d"
+          },
+          "text": {
+            "title": "Prüfungsordnung für die gymnasiale Oberstufe",
+            "ueberschriften": [
+              {
+                "id": "a",
+                "text": "Notenstufen und Bewertungsschlüssel"
+              },
+              {
+                "id": "b",
+                "text": "Prüfungstermine"
+              },
+              {
+                "id": "c",
+                "text": "Nachteilsausgleich"
+              },
+              {
+                "id": "d",
+                "text": "Krankmeldung bei Prüfungen"
+              },
+              {
+                "id": "e",
+                "text": "Wahl der Prüfungsfächer"
+              },
+              {
+                "id": "f",
+                "text": "Zulassung zur Abiturprüfung"
+              },
+              {
+                "id": "g",
+                "text": "Täuschungsversuche"
+              },
+              {
+                "id": "h",
+                "text": "Mündliche Nachprüfungen"
+              }
+            ],
+            "paragraphen": [
+              {
+                "id": "28",
+                "title": "§ 9",
+                "text": "Täuschungsversuche werden mit der Note 'ungenügend' bewertet. Die Prüfungsarbeit wird nicht gewertet. Bei besonders schweren Fällen kann der Schüler von der weiteren Prüfung ausgeschlossen werden. Dazu gehören das Verwenden von Spickzetteln, das Abschreiben von anderen oder die Nutzung unerlaubter elektronischer Geräte wie Smartwatches."
+              },
+              {
+                "id": "29",
+                "title": "§ 10",
+                "text": "Bei Krankheit muss der Schüler vor Prüfungsbeginn das Sekretariat informieren. Eine ärztliche Bescheinigung muss spätestens drei Tage nach der Prüfung vorgelegt werden. Bei ärztlich bescheinigter Prüfungsunfähigkeit gilt die Prüfung als nicht geschrieben. Der Nachschreibetermin findet innerhalb von vier Wochen statt."
+              },
+              {
+                "id": "30",
+                "title": "§ 11",
+                "text": "Schüler mit nachgewiesener Lese-Rechtschreib-Schwäche (LRS) oder anderen Beeinträchtigungen haben Anspruch auf Nachteilsausgleich. Dies kann bedeuten: Zeitverlängerung von 30 Prozent, Nutzung eines Computers oder ein separater, ruhiger Prüfungsraum. Die Beantragung erfolgt über den Schulpsychologischen Dienst."
+              }
+            ]
+          },
+          "items": [
+            {
+              "id": "28",
+              "correct": "g"
+            },
+            {
+              "id": "29",
+              "correct": "d"
+            },
+            {
+              "id": "30",
+              "correct": "c"
+            }
+          ]
+        },
+        {
+          "id": "t5-mietvertrag2",
+          "title": "Mietvertrag - Weitere wichtige Klauseln",
+          "titleAr": "عقد الإيجار - بنود هامة إضافية",
+          "context": "Sie beziehen eine neue Wohnung und lesen den Mietvertrag sorgfältig.",
+          "beispiel": {
+            "id": "0",
+            "correct": "b"
+          },
+          "text": {
+            "title": "Mietvertrag (Standard) - Auszug",
+            "ueberschriften": [
+              {
+                "id": "a",
+                "text": "Schönheitsreparaturen"
+              },
+              {
+                "id": "b",
+                "text": "Untervermietung"
+              },
+              {
+                "id": "c",
+                "text": "Besichtigungen durch den Vermieter"
+              },
+              {
+                "id": "d",
+                "text": "Betriebskostenabrechnung"
+              },
+              {
+                "id": "e",
+                "text": "Mieterhöhungen"
+              },
+              {
+                "id": "f",
+                "text": "Eigenbedarfskündigung"
+              },
+              {
+                "id": "g",
+                "text": "Hausordnung"
+              },
+              {
+                "id": "h",
+                "text": "Wohnungsübergabe und Protokoll"
+              }
+            ],
+            "paragraphen": [
+              {
+                "id": "28",
+                "title": "§ 11",
+                "text": "Der Mieter ist verpflichtet, die Kosten für Schönheitsreparaturen (Streichen von Wänden, Decken, Heizkörpern und Türen) zu tragen. Diese müssen in der Regel alle fünf Jahre in Küche und Bad, alle acht Jahre in Wohn- und Schlafzimmern durchgeführt werden. Bei Auszug müssen die Räume fachgerecht renoviert sein."
+              },
+              {
+                "id": "29",
+                "title": "§ 12",
+                "text": "Die Untervermietung von Teilen der Wohnung bedarf der vorherigen schriftlichen Zustimmung des Vermieters. Der Vermieter darf die Zustimmung nur verweigern, wenn ein wichtiger Grund vorliegt, etwa dass die Wohnung überbelegt würde oder der Untermieter bereits negativ aufgefallen ist. Ein Rechtsanspruch auf Untermiete besteht nicht."
+              },
+              {
+                "id": "30",
+                "title": "§ 13",
+                "text": "Der Vermieter darf die Wohnung besichtigen, wenn ein berechtigtes Interesse vorliegt (z.B. geplanter Verkauf, Begutachtung von Schäden). Er muss den Besuch mindestens eine Woche vorher ankündigen. Bei dringenden Gefahren (Wasserrohrbruch) ist der Vermieter auch ohne Ankündigung berechtigt, die Wohnung zu betreten."
+              }
+            ]
+          },
+          "items": [
+            {
+              "id": "28",
+              "correct": "a"
+            },
+            {
+              "id": "29",
+              "correct": "b"
+            },
+            {
+              "id": "30",
+              "correct": "c"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

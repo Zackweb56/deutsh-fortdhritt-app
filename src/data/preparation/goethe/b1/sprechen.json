@@ -1,0 +1,354 @@
+{
+  "institut": "Goethe-Institut",
+  "level": "B1",
+  "module": "Sprechen",
+  "meta": {
+    "vorbereitungszeit": "15 Minuten",
+    "teileCount": 3,
+    "maxPunkte": 100,
+    "bestehensgrenze": 60,
+    "bestehensgrenzeProzent": 60,
+    "pruefungsformate": [
+      {
+        "name": "Paarprüfung",
+        "nameAr": "امتحان ثنائي",
+        "gesamtDauer": "circa 15 Minuten",
+        "introDauer": "1 Minute",
+        "teil1Dauer": "2-3 Minuten",
+        "teil2Dauer": "3-4 Minuten pro Person",
+        "teil3Dauer": "1-2 Minuten pro Person"
+      },
+      {
+        "name": "Einzelprüfung",
+        "nameAr": "امتحان فردي",
+        "gesamtDauer": "circa 10 Minuten",
+        "anmerkung": "Ein Prüfer übernimmt die Rolle des Gesprächspartners",
+        "introDauer": "1 Minute",
+        "teil1Dauer": "2-3 Minuten (mit Prüfer als Partner)",
+        "teil2Dauer": "3-4 Minuten (nur der Teilnehmer präsentiert)",
+        "teil3Dauer": "1-2 Minuten (nur Prüfer fragt)"
+      }
+    ],
+    "description": "Das Modul Sprechen besteht aus drei Teilen. Teil 1: Gemeinsam etwas planen. Teil 2: Ein Thema präsentieren (Sie wählen aus zwei Themen). Teil 3: Rückmeldung geben und Fragen beantworten.",
+    "gradingCriteria": {
+      "description": "Bewertung durch zwei unabhängige Prüfer nach folgenden Kriterien (je 0–5 Punkte pro Kriterium, max. 100 Punkte). Das Einleitungsgespräch wird nicht bewertet.",
+      "kriterien": [
+        {
+          "name": "Aufgabenerfüllung",
+          "nameAr": "إنجاز المهمة",
+          "maxPunkte": 25,
+          "description": "Wurden alle Teile der Aufgabenstellung bearbeitet?"
+        },
+        {
+          "name": "Kohärenz & Flüssigkeit",
+          "nameAr": "التماسك والطلاقة",
+          "maxPunkte": 25,
+          "description": "Logischer Aufbau, Zusammenhänge, flüssiges Sprechen"
+        },
+        {
+          "name": "Wortschatz",
+          "nameAr": "المفردات",
+          "maxPunkte": 25,
+          "description": "Reichhaltigkeit, Genauigkeit, situationsangemessen"
+        },
+        {
+          "name": "Strukturen & Aussprache",
+          "nameAr": "التراكيب والنطق",
+          "maxPunkte": 25,
+          "description": "Grammatik, Satzbau, Aussprache, Intonation"
+        }
+      ]
+    }
+  },
+  "teile": [
+    {
+      "id": "teil-1",
+      "label": "Teil 1",
+      "nummer": 1,
+      "dauer": "2-3 Minuten",
+      "dauerSekundenMin": 120,
+      "dauerSekundenMax": 180,
+      "dauerBeschreibung": "2-3 Minuten insgesamt für beide Teilnehmer",
+      "arbeitszeit": "3 Minuten",
+      "aufgabenNummern": "1",
+      "pruefungsziel": "Gemeinsam etwas planen — Interaktion",
+      "aufgabentyp": "Teilnehmende planen etwas, wobei sie sich an 4 Leitpunkte halten",
+      "officialName": "Gemeinsam etwas planen",
+      "officialNameAr": "التخطيط لشيء ما معاً",
+      "title": "Gemeinsam etwas planen",
+      "titleAr": "التخطيط لشيء ما معاً",
+      "description": "Sie planen zusammen mit Ihrem Partner/Ihrer Partnerin eine Aktivität. Sie haben 15 Minuten Vorbereitungszeit. Die Prüfenden begrüßen Sie und führen ein kurzes Kennenlerngespräch (ca. 1 Minute, wird nicht bewertet).",
+      "themen": [
+        {
+          "id": "s1-krankenhausbesuch",
+          "title": "Krankenhausbesuch und Hilfe planen",
+          "titleAr": "زيارة المستشفى والتخطيط للمساعدة",
+          "situation": "Ein Teilnehmer aus dem Deutschkurs hatte einen Unfall und liegt im Krankenhaus. Diese Woche möchten Sie ihn besuchen. Nächste Woche kann er das Krankenhaus verlassen. Da er allein lebt, wird er Hilfe brauchen.",
+          "punkte": ["Wann besuchen?", "Wie hinkommen?", "Was mitnehmen?", "Wie kann man helfen?"]
+        },
+        {
+          "id": "s1-abschiedsfeier",
+          "title": "Abschiedsfeier für einen Kollegen",
+          "titleAr": "حفلة وداع لزميل",
+          "situation": "Ihr Kollege Herr Weber verlässt die Firma. Sie möchten eine Abschiedsfeier organisieren.",
+          "punkte": ["Wann?", "Wo?", "Was essen/trinken?", "Was schenken?", "Wer kümmert sich um was?"]
+        },
+        {
+          "id": "s1-geburtstagsgeschenk",
+          "title": "Gemeinsames Geburtstagsgeschenk für die Mutter",
+          "titleAr": "هدية عيد ميلاد مشتركة للأم",
+          "situation": "Sie möchten Ihrer Mutter zum 60. Geburtstag ein Geschenk machen. Budget: 150 Euro.",
+          "punkte": ["Was wünscht sie sich?", "Ein großes oder mehrere kleine?", "Wer sucht aus?", "Wie viel gibt jeder?", "Karte oder persönliche Note?"]
+        },
+        {
+          "id": "s1-urlaubsplanung",
+          "title": "Gemeinsamen Urlaub planen",
+          "titleAr": "تخطيط عطلة مشتركة",
+          "situation": "Sie möchten nächsten Sommer gemeinsam eine Woche Urlaub machen.",
+          "punkte": ["Wohin?", "Welche Unterkunft?", "Anreise?", "Aktivitäten?", "Budget?"]
+        },
+        {
+          "id": "s1-fitnessstudio",
+          "title": "Gemeinsam ins Fitnessstudio gehen",
+          "titleAr": "الذهاب إلى صالة الألعاب الرياضية معاً",
+          "situation": "Sie möchten gemeinsam mit dem Sport anfangen.",
+          "punkte": ["Welches Studio?", "Mitgliedschaft?", "Wie oft pro Woche?", "Kurse oder allein?", "Alternativen?"]
+        },
+        {
+          "id": "s1-picknick",
+          "title": "Ein Picknick organisieren",
+          "titleAr": "تنظيم نزهة",
+          "situation": "Sie möchten am Wochenende ein Picknick mit Freunden organisieren.",
+          "punkte": ["Wo?", "Wann?", "Was mitbringen?", "Wer bringt was mit?", "Spiele oder Aktivitäten?"]
+        },
+        {
+          "id": "s1-wohnungssuche",
+          "title": "Gemeinsam eine Wohnung suchen",
+          "titleAr": "البحث عن شقة معاً",
+          "situation": "Sie und Ihr Partner/Ihre Partnerin suchen eine neue Wohnung in der Stadt.",
+          "punkte": ["Welche Lage?", "Wie viele Zimmer?", "Maximale Miete?", "Balkon oder Garten?", "Wer sucht wo?"]
+        }
+      ]
+    },
+    {
+      "id": "teil-2",
+      "label": "Teil 2",
+      "nummer": 2,
+      "dauer": "3-4 Minuten pro Teilnehmer",
+      "dauerSekundenMin": 180,
+      "dauerSekundenMax": 240,
+      "dauerBeschreibung": "Jeder Teilnehmer präsentiert einzeln. Die Zeit gilt pro Person. Insgesamt bei Paarprüfung: 6-8 Minuten.",
+      "arbeitszeit": "3-4 Minuten pro Person",
+      "aufgabenNummern": "2",
+      "pruefungsziel": "Ein Thema präsentieren — Monolog",
+      "aufgabentyp": "Teilnehmende tragen eine Präsentation zu 5 vorgegebenen Folien vor",
+      "officialName": "Ein Thema präsentieren (Auswahl aus zwei Themen)",
+      "officialNameAr": "تقديم موضوع (اختيار من موضوعين)",
+      "title": "Ein Thema präsentieren",
+      "titleAr": "تقديم موضوع",
+      "description": "Sie erhalten zwei Themen zur Auswahl. Präsentieren Sie eines davon. Sie haben 15 Minuten Vorbereitungszeit. Nutzen Sie die Folienstruktur für Ihre Präsentation.",
+      "auswahl": "Sie erhalten zwei Themen zur Auswahl. Präsentieren Sie eines davon.",
+      "folien": {
+        "folie1": "Was ist das Thema? (z. B.: Bedeutung, Definition, Einführung)",
+        "folie2": "Meine persönliche Erfahrung oder Beispiele aus meinem Leben",
+        "folie3": "Vor- und Nachteile oder verschiedene Perspektiven",
+        "folie4": "Situation in meinem Heimatland (Vergleich)",
+        "folie5": "Meine Meinung und ein Ausblick / Zukunft"
+      },
+      "themen": [
+        {
+          "id": "p2-mobilitaet",
+          "title": "Mobilität in der Stadt",
+          "titleAr": "التنقل في المدينة",
+          "vorschlaege": [
+            "Auto, Fahrrad, öffentliche Verkehrsmittel – was ist am besten?",
+            "Vor- und Nachteile von Autos in der Stadt",
+            "Wie könnte die Mobilität in Zukunft aussehen?"
+          ]
+        },
+        {
+          "id": "p2-gesunde-ernaehrung",
+          "title": "Gesunde Ernährung",
+          "titleAr": "التغذية الصحية",
+          "vorschlaege": [
+            "Was bedeutet gesunde Ernährung für mich?",
+            "Fast Food vs. selbst gekochtes Essen",
+            "Sollten Schulen gesünderes Essen anbieten?"
+          ]
+        },
+        {
+          "id": "p2-umweltschutz",
+          "title": "Umweltschutz im Alltag",
+          "titleAr": "حماية البيئة في الحياة اليومية",
+          "vorschlaege": [
+            "Was kann jeder Einzelne für die Umwelt tun?",
+            "Plastikmüll vermeiden – ist das möglich?",
+            "Wie wichtig ist Recycling für dich?"
+          ]
+        },
+        {
+          "id": "p2-berufswahl",
+          "title": "Berufswahl",
+          "titleAr": "اختيار المهنة",
+          "vorschlaege": [
+            "Wie habe ich meinen Beruf gewählt?",
+            "Geld oder Erfüllung – was ist wichtiger?",
+            "Sollten Eltern bei der Berufswahl mitentscheiden?"
+          ]
+        },
+        {
+          "id": "p2-wohnen",
+          "title": "Wohnen – allein oder mit anderen?",
+          "titleAr": "السكن – بمفردي أم مع آخرين؟",
+          "vorschlaege": [
+            "Vorteile und Nachteile von WG vs. allein wohnen",
+            "Meine Erfahrungen mit verschiedenen Wohnformen",
+            "Wie finde ich die richtige Wohnung?"
+          ]
+        },
+        {
+          "id": "p2-reisen",
+          "title": "Reisen und Tourismus",
+          "titleAr": "السفر والسياحة",
+          "vorschlaege": [
+            "Mein schönstes Reiseerlebnis",
+            "Nachhaltiges Reisen – geht das?",
+            "Warum reisen Menschen gerne?"
+          ]
+        },
+        {
+          "id": "p2-freizeit",
+          "title": "Freizeit und Hobbys",
+          "titleAr": "وقت الفراغ والهوايات",
+          "vorschlaege": [
+            "Mein Lieblingshobby und warum",
+            "Wie verbringe ich meine Freizeit am liebsten?",
+            "Sollten Kinder mehr Freizeitaktivitäten haben?"
+          ]
+        },
+        {
+          "id": "p2-familie",
+          "title": "Familie und Zusammenleben",
+          "titleAr": "الأسرة والتعايش",
+          "vorschlaege": [
+            "Die Bedeutung der Familie in meinem Leben",
+            "Großfamilie vs. kleine Familie – was ist besser?",
+            "Wie hat sich das Familienbild verändert?"
+          ]
+        },
+        {
+          "id": "p2-medien",
+          "title": "Soziale Medien",
+          "titleAr": "وسائل التواصل الاجتماعي",
+          "vorschlaege": [
+            "Wie nutze ich soziale Medien?",
+            "Vor- und Nachteile von Instagram, TikTok & Co.",
+            "Sollten Kinder soziale Medien nutzen dürfen?"
+          ]
+        },
+        {
+          "id": "p2-gesundheit",
+          "title": "Sport und Gesundheit",
+          "titleAr": "الرياضة والصحة",
+          "vorschlaege": [
+            "Wie wichtig ist Sport für mich?",
+            "Welche Sportart mache ich gerne und warum?",
+            "Sollte Arbeitgeber Sportangebote machen?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teil-3",
+      "label": "Teil 3",
+      "nummer": 3,
+      "dauer": "1-2 Minuten pro Teilnehmer",
+      "dauerSekundenMin": 60,
+      "dauerSekundenMax": 120,
+      "dauerBeschreibung": "Jeder Teilnehmer: Feedback geben + Frage stellen (nach Präsentation des Partners) und Fragen beantworten (nach eigener Präsentation). Insgesamt bei Paarprüfung: 2-4 Minuten.",
+      "arbeitszeit": "1-2 Minuten pro Person",
+      "aufgabenNummern": "3",
+      "pruefungsziel": "Über ein Thema sprechen — Reaktion und Interaktion",
+      "aufgabentyp": "Teilnehmende geben einander Feedback zur Präsentation bzw. reagieren darauf und stellen einander je eine Frage bzw. reagieren darauf",
+      "officialName": "Rückmeldung geben und Fragen beantworten",
+      "officialNameAr": "إعطاء تعليق والإجابة عن الأسئلة",
+      "title": "Über ein Thema sprechen",
+      "titleAr": "التحدث عن موضوع",
+      "description": "Nach Ihrer Präsentation: Reagieren Sie auf Feedback und Fragen. Nach der Präsentation Ihres Partners: Geben Sie Feedback und stellen Sie eine Frage.",
+      "ablauf": {
+        "feedbackGeben": "Nach der Präsentation des Partners: Geben Sie kurzes Feedback (z. B. 'Besonders interessant fand ich ...') und stellen Sie eine Frage zum Thema.",
+        "fragenBeantworten": "Nach Ihrer eigenen Präsentation: Beantworten Sie die Frage des zweiten Prüfers (bei Einzelprüfung) oder die Fragen des Partners und des zweiten Prüfers (bei Paarprüfung)."
+      },
+      "beispiele": {
+        "feedback": "Vielen Dank für Ihre Präsentation. Besonders interessant fand ich Ihre Erfahrungen in der Heimat. Eine Frage: Glauben Sie, dass die Menschen in Zukunft mehr Fahrrad fahren werden?",
+        "antwort": "Danke für die Frage. Ja, in meiner Stadt hat man neue Radwege gebaut und seitdem fahren mehr Leute Fahrrad."
+      },
+      "themen": [
+        {
+          "id": "s3-einkaufen-internet",
+          "title": "Einkaufen im Internet",
+          "titleAr": "التسوق عبر الإنترنت",
+          "presentationTranscript": "Ich kaufe fast alles online wegen der Bequemlichkeit. Vorteil: Zeitersparnis. Nachteil: Man kann die Qualität nicht prüfen. In meinem Heimatland kaufen Junge online, Ältere im Geschäft.",
+          "suggestedQuestion": "Glaubst du, dass kleine Geschäfte bald schließen müssen, wenn alle nur online kaufen?",
+          "situation": "Ihr Partner hat seine Präsentation beendet. Geben Sie Feedback und stellen Sie eine Frage."
+        },
+        {
+          "id": "s3-fremdsprachen-kindergarten",
+          "title": "Fremdsprachen im Kindergarten",
+          "titleAr": "اللغات الأجنبية في الحضانة",
+          "presentationTranscript": "Kinder lernen Sprachen spielerisch. In meiner Kindheit habe ich erst in der Schule Englisch gelernt. Vorteil: frühe Förderung. Nachteil: möglicher Stress. In meinem Heimatland gibt es immer mehr bilinguale Kindergärten.",
+          "suggestedQuestion": "Findest du nicht, dass Kinder zuerst ihre Muttersprache perfekt beherrschen sollten, bevor sie eine zweite Sprache lernen?",
+          "situation": "Ihr Partner hat seine Präsentation beendet. Geben Sie Feedback und stellen Sie eine Frage."
+        },
+        {
+          "id": "s3-haustiere-stadtwohnung",
+          "title": "Haustiere in der Stadtwohnung",
+          "titleAr": "الحيوانات الأليفة في شقة المدينة",
+          "presentationTranscript": "Ich habe eine Katze in meiner Berliner Wohnung. Vorteile: man ist nicht allein, lernt Verantwortung. Nachteile: wenig Platz für große Hunde, Lärm für Nachbarn. Kleine Tiere sind für die Stadt okay.",
+          "suggestedQuestion": "Ist es Tierquälerei, einen großen Hund in einer kleinen 2-Zimmer-Wohnung zu halten?",
+          "situation": "Ihr Partner hat seine Präsentation beendet. Geben Sie Feedback und stellen Sie eine Frage."
+        },
+        {
+          "id": "s3-berufswahl",
+          "title": "Berufswahl und Eltern",
+          "titleAr": "اختيار المهنة والوالدين",
+          "presentationTranscript": "Die Berufswahl ist eine schwierige Entscheidung. Viele Eltern wollen, dass ihre Kinder einen sicheren Job wählen. Ich wollte Koch werden, aber meine Eltern fanden das nicht gut. In meinem Heimatland entscheiden oft die Eltern mit.",
+          "suggestedQuestion": "Sollten Eltern bei der Berufswahl ihrer Kinder mitentscheiden oder ist das allein die Entscheidung der Kinder?",
+          "situation": "Ihr Partner hat seine Präsentation beendet. Geben Sie Feedback und stellen Sie eine Frage."
+        },
+        {
+          "id": "s3-reisen-nachhaltig",
+          "title": "Nachhaltiges Reisen",
+          "titleAr": "السفر المستدام",
+          "presentationTranscript": "Reisen ist schön, aber schadet oft der Umwelt. Fliegen verursacht viel CO2. Ich versuche, mit der Bahn zu fahren. In meinem Heimatland gibt es immer mehr Angebote für Öko-Tourismus.",
+          "suggestedQuestion": "Verzichtest du manchmal auf eine Reise, weil sie zu umweltschädlich ist?",
+          "situation": "Ihr Partner hat seine Präsentation beendet. Geben Sie Feedback und stellen Sie eine Frage."
+        },
+        {
+          "id": "s3-soziale-medien",
+          "title": "Soziale Medien und Selbstwertgefühl",
+          "titleAr": "وسائل التواصل الاجتماعي واحترام الذات",
+          "presentationTranscript": "Soziale Medien zeigen oft nur schöne Seiten des Lebens. Das kann Druck machen. Viele vergleichen sich mit anderen und fühlen sich schlecht. Man sollte nicht alles glauben, was man sieht.",
+          "suggestedQuestion": "Denkst du, dass soziale Medien bei Jugendlichen zu Depressionen führen können?",
+          "situation": "Ihr Partner hat seine Präsentation beendet. Geben Sie Feedback und stellen Sie eine Frage."
+        },
+        {
+          "id": "s3-vegan-ernaehrung",
+          "title": "Vegane Ernährung",
+          "titleAr": "التغذية النباتية",
+          "presentationTranscript": "Immer mehr Menschen ernähren sich vegan. Gründe sind Tierschutz und Umwelt. In meinem Heimatland ist vegan noch nicht so verbreitet. Ich selbst esse wenig Fleisch, aber komplett vegan wäre schwer.",
+          "suggestedQuestion": "Kann jeder Mensch vegan leben oder brauchen manche Menschen tierische Produkte aus gesundheitlichen Gründen?",
+          "situation": "Ihr Partner hat seine Präsentation beendet. Geben Sie Feedback und stellen Sie eine Frage."
+        },
+        {
+          "id": "s3-kulturvergleich",
+          "title": "Leben im Ausland",
+          "titleAr": "العيش في الخارج — مقارنة ثقافية",
+          "presentationTranscript": "Ich lebe jetzt seit zwei Jahren in Deutschland. Die Kultur ist anders: Die Deutschen sind pünktlich, direkt und ordentlich. In meinem Heimatland ist man lockerer. Man muss sich anpassen, aber man darf auch seine eigene Kultur bewahren.",
+          "suggestedQuestion": "Was war die größte kulturelle Überraschung für dich in Deutschland?",
+          "situation": "Ihr Partner hat seine Präsentation beendet. Geben Sie Feedback und stellen Sie eine Frage."
+        }
+      ]
+    }
+  ]
+}

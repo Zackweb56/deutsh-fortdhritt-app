@@ -1,0 +1,8 @@
+{
+  "id": "goethe-b2-001",
+  "name": "Goethe-Zertifikat B2 - Modellsatz 01",
+  "level": "B2",
+  "institute": "Goethe",
+  "description": "Vollständiger B2 Modellsatz für die Prüfungsvorbereitung.",
+  "modules": ["lesen", "horen", "schreiben", "sprechen"]
+}

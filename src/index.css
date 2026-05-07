@@ -9,8 +9,10 @@
 @layer base {
   :root {
     /* Dark neutral theme (more neutral/gray instead of slate-blue) */
-    --background: 210 6% 6%; /* near black, neutral */
-    --foreground: 210 12% 96%; /* near white text */
+    --background: 210 6% 6%;
+    /* near black, neutral */
+    --foreground: 210 12% 96%;
+    /* near white text */
 
     --card: 210 6% 8%;
     --card-foreground: 210 12% 96%;
@@ -18,20 +20,24 @@
     --popover: 210 6% 8%;
     --popover-foreground: 210 12% 96%;
 
-  /* German flag colors used as accents */
-  /* Primary = German red (used for active/tabs/buttons) */
-  --primary: 357 84% 45%; /* vivid red */
-  --primary-foreground: 210 12% 96%;
-  --primary-glow: 357 84% 55%;
+    /* German flag colors used as accents */
+    /* Primary = German red (used for active/tabs/buttons) */
+    --primary: 357 84% 45%;
+    /* vivid red */
+    --primary-foreground: 210 12% 96%;
+    --primary-glow: 357 84% 55%;
 
-  /* Secondary (supporting) = darker neutral/near-black where needed) */
-  --secondary: 210 6% 8%; /* dark neutral */
-  --secondary-foreground: 210 12% 96%;
-  --secondary-glow: 0 0% 18%;
+    /* Secondary (supporting) = darker neutral/near-black where needed) */
+    --secondary: 210 6% 8%;
+    /* dark neutral */
+    --secondary-foreground: 210 12% 96%;
+    --secondary-glow: 0 0% 18%;
 
     /* Gold / Yellow (Bundesflagge gold) */
-    --accent: 45 100% 50%; /* bright gold/yellow */
-    --accent-foreground: 210 6% 6%; /* dark text on yellow */
+    --accent: 45 100% 50%;
+    /* bright gold/yellow */
+    --accent-foreground: 210 6% 6%;
+    /* dark text on yellow */
 
     --muted: 210 8% 20%;
     --muted-foreground: 210 12% 72%;
@@ -50,7 +56,8 @@
     --success-foreground: 210 12% 96%;
 
     /* Progress bar (dark but visible on the dark background) */
-    --progress: 210 9% 18%; /* dark gray with enough contrast */
+    --progress: 210 9% 18%;
+    /* dark gray with enough contrast */
 
     /* Gradients using German flag palette */
     --gradient-primary: linear-gradient(135deg, hsl(0 0% 8%), hsl(0 0% 18%));
@@ -66,7 +73,6 @@
 @layer base {
   * {
     @apply border-border;
-    direction: rtl;
   }
 
   body {
@@ -87,6 +93,7 @@
 }
 
 @layer components {
+
   /* Card variants */
   .card-gradient {
     background: var(--gradient-card);
@@ -128,20 +135,81 @@
   .text-end {
     text-align: left;
   }
-/* Card flip animations */
-.perspective-1000 {
-  perspective: 1000px;
+
+  /* Card flip animations */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .transform-style-preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+
+  /* Exam LTR Override */
+  .exam-container,
+  .exam-container *,
+  .exam-container [dir="ltr"],
+  .exam-container [dir="ltr"] * {
+    direction: ltr !important;
+    text-align: left !important;
+  }
+
+  /* Fix specific alignment issues in LTR mode */
+  .exam-container .text-center {
+    text-align: center !important;
+  }
+
+  .exam-container .text-right {
+    text-align: right !important;
+  }
+
+  .exam-container .justify-end {
+    justify-content: flex-end !important;
+  }
 }
 
-.transform-style-preserve-3d {
-  transform-style: preserve-3d;
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
 }
 
-.backface-hidden {
-  backface-visibility: hidden;
+.animate-shimmer {
+  animation: shimmer 2s infinite;
 }
 
-.rotate-y-180 {
-  transform: rotateY(180deg);
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
 }
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
 }

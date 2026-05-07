@@ -1,25 +1,7 @@
-import { Calendar, BookOpen, GraduationCap, Globe, PenTool, Headphones, FileText, Library } from 'lucide-react';
+import { Calendar, BookOpen, GraduationCap, Globe, PenTool, Headphones, FileText, Library, ArrowRight } from 'lucide-react';
 import { useApp } from '@/contexts/AppContext';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import {
-  Dialog,
-  DialogTrigger,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogFooter,
-} from '@/components/ui/dialog';
-
-// Exam simulation links (Goethe official practice pages)
-const EXAM_SIMULATIONS = [
-  { level: 'A1', title: 'Goethe — Practice materials A1', url: 'https://www.goethe.de/ins/mm/en/spr/prf/gzsd1/ueb.html' },
-  { level: 'A2', title: 'Goethe — Exam training A2', url: 'https://www.goethe.de/ins/us/en/spr/prf/ueb/pa2.html' },
-  { level: 'A2', title: 'Goethe — Practice materials A2', url: 'https://www.goethe.de/ins/de/en/prf/prf/gzsd2/ub2.html' },
-  { level: 'B1', title: 'Goethe — Exam training B1', url: 'https://www.goethe.de/ins/us/en/spr/prf/ueb/pb1.html' },
-  { level: 'B1', title: 'Goethe — Practice materials B1', url: 'https://www.goethe.de/ins/mm/en/spr/prf/gzb1/ueb.html' },
-  { level: 'B2', title: 'Goethe — Exam training B2', url: 'https://www.goethe.de/ins/us/en/spr/prf/ueb/pb2.html' },
-  { level: 'B2', title: 'Goethe — Practice materials B2', url: 'https://www.goethe.de/ins/mm/en/spr/prf/gzb2/ue9.html' },
-];
 
 interface TabNavigationProps {
   onSelect?: () => void;
@@ -27,6 +9,7 @@ interface TabNavigationProps {
 
 export const TabNavigation = ({ onSelect }: TabNavigationProps = {}) => {
   const { currentTab, setCurrentTab } = useApp();
+  const navigate = useNavigate();
 
   const tabs = [
     { id: 'schedule' as const, label: 'الجدول الزمني', icon: Calendar },
@@ -36,6 +19,7 @@ export const TabNavigation = ({ onSelect }: TabNavigationProps = {}) => {
     { id: 'listening' as const, label: 'الاستماع والقراءة', icon: Headphones },
     { id: 'writing' as const, label: 'الكتابة', icon: FileText },
     { id: 'resources' as const, label: 'المصادر', icon: Globe },
+    { id: 'preparation' as const, label: 'التحضير للامتحان', icon: Library },
   ];
 
   return (
@@ -47,55 +31,7 @@ export const TabNavigation = ({ onSelect }: TabNavigationProps = {}) => {
         w-full
       "
     >
-      {/* Exam simulations dialog trigger */}
-      <Dialog>
-        <DialogTrigger asChild>
-          <Button
-            variant="outline"
-            className="
-              flex-none w-full sm:w-auto
-              justify-center
-            "
-          >
-            محاكاة الامتحان
-          </Button>
-        </DialogTrigger>
-        <DialogContent className="max-h-[80vh] overflow-y-auto">
-          <DialogHeader>
-            <DialogTitle>محاكاة الامتحان - نماذج رسمية</DialogTitle>
-          </DialogHeader>
-          <div className="space-y-2">
-            {EXAM_SIMULATIONS.map((s) => (
-              <div
-                key={s.url}
-                className="
-                  p-2 rounded border border-border
-                  flex flex-col sm:flex-row
-                  sm:items-center sm:justify-between
-                  gap-2
-                "
-              >
-                <div>
-                  <div className="font-medium text-sm sm:text-base">
-                    {s.level} — {s.title}
-                  </div>
-                </div>
-                <div>
-                  <a
-                    href={s.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-primary underline"
-                  >
-                    افتح المحاكاة
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-          <DialogFooter />
-        </DialogContent>
-      </Dialog>
+      {/* Exam resources were moved to the resources tab */}
 
       {/* Tabs navigation */}
       <div className="flex-1 flex flex-wrap sm:flex-nowrap gap-2">

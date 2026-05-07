@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useApp } from '@/contexts/AppContext';
+import { useApp, type Resource } from '@/contexts/AppContext';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -25,6 +25,7 @@ export const ResourcesTab = () => {
     { id: 'Lesen', title: 'Lesen', icon: BookOpen, color: 'bg-purple-500' },
     { id: 'Sprechen', title: 'Sprechen', icon: Mic, color: 'bg-orange-500' },
     { id: 'Schreiben', title: 'Schreiben', icon: PenTool, color: 'bg-red-500' },
+    { id: 'Prüfung', title: 'Prüfung', icon: GraduationCap, color: 'bg-blue-500' },
     { id: 'Grammatik auf Arabisch', title: 'Grammatik auf Arabisch', icon: MessageSquare, color: 'bg-indigo-500' },
   ];
 
@@ -248,14 +249,14 @@ export const ResourcesTab = () => {
                 <div className="p-3 sm:p-4 border-t border-border">
                   {categoryResources.length > 0 ? (
                     <div className="space-y-2 sm:space-y-3">
-                  {categoryResources.map(resource => (
+                      {categoryResources.map(resource => (
                         <div
                           key={resource.id}
                           className="flex flex-col sm:flex-row sm:items-center gap-3 p-3 sm:p-4 rounded-lg border border-border hover:border-primary transition-all duration-200 hover:shadow-md"
                         >
                           <div className="flex items-center gap-2 sm:gap-3 flex-1 min-w-0">
                             <div className={`p-1.5 sm:p-2 rounded-lg ${getCategoryColor(resource.category)} text-white flex-shrink-0`}>
-                              {React.createElement(getCategoryIcon(resource.category), { className: "h-3 w-3 sm:h-4 sm:w-4" })}
+                              {React.createElement(getCategoryIcon(resource.category), { className: 'h-3 w-3 sm:h-4 sm:w-4' })}
                             </div>
                             <div className="flex-1 min-w-0">
                               <LockOverlay
@@ -276,7 +277,7 @@ export const ResourcesTab = () => {
                               </LockOverlay>
                             </div>
                           </div>
-                          
+
                           <div className="flex items-center justify-between sm:justify-end gap-2 sm:gap-2">
                             <div className="flex items-center gap-2">
                               {resource.isDefault && (

@@ -1,0 +1,556 @@
+{
+  "institut": "Goethe-Institut",
+  "level": "B1",
+  "module": "Hören",
+  "meta": {
+    "totalZeit": "40 Minuten",
+    "uebertragungszeit": "5 Minuten nach dem Hörverstehen",
+    "teileCount": 4,
+    "totalMesspunkte": 30,
+    "bestehensgrenzeMesspunkte": 18,
+    "bestehensgrenzeProzent": 60,
+    "audioBaseUrl": "/media/audio/goethe/horen/b1/",
+    "description": "Das Modul Hören besteht aus vier Teilen. Sie hören mehrere Texte und lösen Aufgaben dazu. Lesen Sie jeweils zuerst die Aufgaben und hören Sie dann den Text dazu. Für jede Aufgabe gibt es nur eine richtige Lösung. Vergessen Sie nicht, Ihre Lösungen auf den Antwortbogen zu übertragen."
+  },
+  "teile": [
+    {
+      "id": "teil-1",
+      "label": "Teil 1",
+      "nummer": 1,
+      "dauer": "ca. 8 Minuten",
+      "arbeitszeit": "8 Minuten",
+      "pruefungsziel": "Ankündigungen, Durchsagen und Anweisungen verstehen",
+      "aufgabentyp": "Richtig/Falsch und Mehrfachauswahl (3-gliedrig)",
+      "answerType": "mixed-rf-mc",
+      "itemCount": 10,
+      "aufgabenNummern": "1–10",
+      "maxPlays": 2,
+      "title": "Kurze Alltagstexte verstehen",
+      "titleAr": "فهم نصوص يومية قصيرة",
+      "description": "Sie hören nun fünf kurze Texte. Sie hören jeden Text zweimal. Zu jedem Text lösen Sie zwei Aufgaben.",
+      "howItWorks": {
+        "textCount": 5,
+        "itemsPerText": 2,
+        "aufgabenTypen": "Ein Richtig/Falsch, eine Multiple-Choice-Frage (a/b/c) pro Text",
+        "wiederholung": "Jeder Text wird zweimal gespielt",
+        "beispiel": "Eine Beispielaufgabe (Text 0) zeigt das Format"
+      },
+      "themen": [
+        {
+          "id": "h1-alltag-nachrichten",
+          "title": "Alltagsnachrichten und Durchsagen",
+          "titleAr": "رسائل وإعلانات يومية",
+          "description": "Fünf verschiedene Alltagssituationen: Terminverschiebung, Versicherung, Verkehr, Bahnhof, Wetter",
+          "audioTexts": [
+            {
+              "id": "text-1",
+              "title": "Praxis-Terminverschiebung",
+              "titleAr": "تأجيل موعد في العيادة",
+              "transkript": "Hallo Frau Stein, hier ist die Praxis Dr. Becker. Es geht um Ihre Grippe-Impfung. Frau Dr. Becker muss zu einer Operation. Könnten Sie vielleicht auch am Freitag um 14 Uhr kommen? Das ist dann noch in diesem Quartal. Sie müssten also die zehn Euro Praxisgebühr nicht zahlen. Geben Sie mir bitte heute noch Bescheid, ob Sie Zeit haben? Ach, und noch etwas. Ihre Chipkarte ist bei uns, Sie haben sie letztes Mal bei uns vergessen. Danke und auf Wiederhören.",
+              "audio": "teil1/thema1_text1.mp3",
+              "items": [
+                { "id": "1", "text": "Der Termin von Frau Stein wird verschoben.", "type": "richtig-falsch", "correct": "Richtig" },
+                { "id": "2", "text": "Frau Stein soll …", "type": "multiple-choice", "options": ["die Chipkarte mitbringen.", "zehn Euro bezahlen.", "zurückrufen."], "correct": "zurückrufen." }
+              ]
+            },
+            {
+              "id": "text-2",
+              "title": "Versicherungsnachricht",
+              "titleAr": "رسالة تأمين",
+              "transkript": "Hallo Frau Brahms, Ulf Thomas hier von der HGB-Versicherung. Sie haben sich bei uns als Verkaufsleiterin beworben, doch leider fehlen in Ihren Unterlagen zwei Zeugnisse. Es geht um die Zertifikate für die besuchten Computer- und Englischkurse. Ich bitte Sie, diese Unterlagen so schnell wie möglich an uns zu schicken oder mich bei Rückfragen anzurufen. Vielen Dank!",
+              "audio": "teil1/thema1_text2.mp3",
+              "items": [
+                { "id": "3", "text": "Herr Thomas informiert Frau Brahms über neue Versicherungstarife.", "type": "richtig-falsch", "correct": "Falsch" },
+                { "id": "4", "text": "Herr Thomas …", "type": "multiple-choice", "options": ["möchte einen neuen Vertrag abschließen.", "braucht Zeugnisse von Frau Brahms.", "ruft später noch einmal an."], "correct": "braucht Zeugnisse von Frau Brahms." }
+              ]
+            },
+            {
+              "id": "text-3",
+              "title": "Verkehrsdurchsage",
+              "titleAr": "إعلان حركة المرور",
+              "transkript": "Achtung Autofahrer. Auf der A8 zwischen Eschenried and Dachau hat sich ein Unfall ereignet. Der rechte Fahrstreifen ist blockiert. 12 Kilometer Stau. Im Stadtgebiet München Behinderungen durch Berufsverkehr. Stau auch am Richard-Strauss-Tunnel wegen einer Baustelle.",
+              "audio": "teil1/thema1_text3.mp3",
+              "items": [
+                { "id": "5", "text": "Sie hören Veranstaltungstipps für München.", "type": "richtig-falsch", "correct": "Falsch" },
+                { "id": "6", "text": "Auf der Autobahn gibt es Stau wegen …", "type": "multiple-choice", "options": ["einer Baustelle.", "des Berufsverkehrs.", "eines Unfalls."], "correct": "eines Unfalls." }
+              ]
+            },
+            {
+              "id": "text-4",
+              "title": "Bahnhofsdurchsage",
+              "titleAr": "إعلان المحطة",
+              "transkript": "Gleis 13, Einfahrt des Interregios 114 nach Bern, Abfahrt 08:34. Eine wichtige Information für die Passagiere nach Genf: Der Intercity um 08:45 fällt wegen einer Weichenstörung aus. Die nächste Verbindung nach Genf ist über Lausanne um 09:45 von Gleis 11.",
+              "audio": "teil1/thema1_text4.mp3",
+              "items": [
+                { "id": "7", "text": "Sie hören eine Information für eine Reisegruppe.", "type": "richtig-falsch", "correct": "Falsch" },
+                { "id": "8", "text": "Welcher Zug fällt aus? Der Zug nach …", "type": "multiple-choice", "options": ["Bern.", "Genf.", "Lausanne."], "correct": "Genf." }
+              ]
+            },
+            {
+              "id": "text-5",
+              "title": "Wetterbericht",
+              "titleAr": "تقرير الطقس",
+              "transkript": "In der Nacht zum Freitag ist es im Westen meist trocken. Sonst ziehen von Süddeutschland her kräftige Regengüsse und Gewitter von Thüringen bis an die Elbe. Dort kann es zu schweren Unwettern kommen. Temperaturen sinken auf 17 bis 12 Grad.",
+              "audio": "teil1/thema1_text5.mp3",
+              "items": [
+                { "id": "9", "text": "Das Wetter wird im Osten Deutschlands besser.", "type": "richtig-falsch", "correct": "Falsch" },
+                { "id": "10", "text": "Vorausgesagt werden …", "type": "multiple-choice", "options": ["Gewitter an der Elbe.", "Temperaturen unter 10 Grad.", "starke Regenfälle im Westen."], "correct": "Gewitter an der Elbe." }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "h1-service-ansagen",
+          "title": "Service- und Informationsansagen",
+          "titleAr": "إعلانات الخدمات والمعلومات",
+          "description": "Fünf verschiedene Service-Ansagen: Flughafen, Arztpraxis, Kino, Schwimmbad, Bibliothek",
+          "audioTexts": [
+            {
+              "id": "text-1",
+              "title": "Flughafen-Durchsage Verspätung",
+              "titleAr": "إعلان مطار عن تأخير",
+              "transkript": "Achtung, Flughafen Frankfurt, Gate C23. Der Flug LH 402 nach Rom verspätet sich um zwei Stunden. Grund sind technische Probleme. Passagiere gebeten, sich am Service-Schalter zu melden, um Ersatzflüge zu buchen.",
+              "audio": "teil1/thema2_text1.mp3",
+              "items": [
+                { "id": "1", "text": "Der Flug nach Rom hat Verspätung.", "type": "richtig-falsch", "correct": "Richtig" },
+                { "id": "2", "text": "Die Passagiere sollen …", "type": "multiple-choice", "options": ["zum Gate C23 kommen.", "sich am Service-Schalter melden.", "das Boarding abwarten."], "correct": "sich am Service-Schalter melden." }
+              ]
+            },
+            {
+              "id": "text-2",
+              "title": "Arztpraxis-Erinnerung",
+              "titleAr": "تذكير من عيادة طبيب",
+              "transkript": "Guten Tag Frau Schmidt, hier spricht die Praxis Dr. Weber. Wir erinnern Sie an Ihren Termin zur Vorsorgeuntersuchung morgen um 14:30 Uhr. Bitte bringen Sie Ihre Versichertenkarte mit. Bei Verhinderung rufen Sie uns bitte an. Vielen Dank.",
+              "audio": "teil1/thema2_text2.mp3",
+              "items": [
+                { "id": "3", "text": "Frau Schmidt hat morgen einen Zahnarzttermin.", "type": "richtig-falsch", "correct": "Falsch" },
+                { "id": "4", "text": "Was soll Frau Schmidt mitbringen?", "type": "multiple-choice", "options": ["ihre Brille", "ihre Versichertenkarte", "ein Überweisungsformular"], "correct": "ihre Versichertenkarte" }
+              ]
+            },
+            {
+              "id": "text-3",
+              "title": "Kinocenter-Ansage",
+              "titleAr": "إعلان مركز سينما",
+              "transkript": "Liebe Gäste des Cineplex, der Film 'Mission Berlin' beginnt in 5 Minuten in Saal 4. Der Einlass hat bereits begonnen. Wir wünschen Ihnen ein spannendes Filmerlebnis. Bitte schalten Sie Ihre Handys aus.",
+              "audio": "teil1/thema2_text3.mp3",
+              "items": [
+                { "id": "5", "text": "Der Film beginnt in Saal 5.", "type": "richtig-falsch", "correct": "Falsch" },
+                { "id": "6", "text": "Was sollen die Gäste tun?", "type": "multiple-choice", "options": ["ihre Handys ausschalten", "Popcorn kaufen", "Plätze reservieren"], "correct": "ihre Handys ausschalten" }
+              ]
+            },
+            {
+              "id": "text-4",
+              "title": "Schwimmbad-Regeln",
+              "titleAr": "قواعد المسبح",
+              "transkript": "Achtung liebe Badegäste. Das große Becken ist wegen technischer Störung geschlossen. Das kleinere Becken und die Rutschen sind geöffnet. Bitte duschen Sie vor dem Schwimmen. Badekappen sind im Schwimmerbereich Pflicht. Vielen Dank.",
+              "audio": "teil1/thema2_text4.mp3",
+              "items": [
+                { "id": "7", "text": "Das große Becken ist wegen Reinigung geschlossen.", "type": "richtig-falsch", "correct": "Falsch" },
+                { "id": "8", "text": "Was ist im Schwimmerbereich Pflicht?", "type": "multiple-choice", "options": ["Badeschuhe", "Badekappen", "Schwimmbrille"], "correct": "Badekappen" }
+              ]
+            },
+            {
+              "id": "text-5",
+              "title": "Bibliothek-Öffnungszeiten",
+              "titleAr": "أوقات عمل المكتبة",
+              "transkript": "Die Stadtbibliothek hat heute von 10 bis 18 Uhr geöffnet. Bitte beachten Sie: Am Samstag schließen wir bereits um 14 Uhr. Aufgrund des Feiertags bleibt die Bibliothek am Dienstag geschlossen. Besuchen Sie unsere Webseite für digitale Angebote.",
+              "audio": "teil1/thema2_text5.mp3",
+              "items": [
+                { "id": "9", "text": "Die Bibliothek schließt am Samstag um 14 Uhr.", "type": "richtig-falsch", "correct": "Richtig" },
+                { "id": "10", "text": "Wann bleibt die Bibliothek geschlossen?", "type": "multiple-choice", "options": ["am Sonntag", "am Dienstag", "am Donnerstag"], "correct": "am Dienstag" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "h1-arbeit-studium",
+          "title": "Arbeit und Studium",
+          "titleAr": "العمل والدراسة",
+          "description": "Fünf Texte zu Beruf, Bewerbung und Studium",
+          "audioTexts": [
+            {
+              "id": "text-1",
+              "title": "Vorstellungsgespräch-Erinnerung",
+              "titleAr": "تذكير بمقابلة عمل",
+              "transkript": "Guten Tag Herr Müller, hier ist die Firma Meier GmbH. Wir bestätigen Ihr Vorstellungsgespräch für die Stelle als Verkäufer. Bitte kommen Sie am Donnerstag um 10 Uhr in unsere Zentrale. Bringen Sie Lebenslauf und Zeugnisse im Original mit.",
+              "audio": "teil1/thema3_text1.mp3",
+              "items": [
+                { "id": "1", "text": "Das Vorstellungsgespräch ist am Donnerstag.", "type": "richtig-falsch", "correct": "Richtig" },
+                { "id": "2", "text": "Was soll Herr Müller mitbringen?", "type": "multiple-choice", "options": ["ein Foto", "Lebenslauf und Zeugnisse", "ein Gesundheitszeugnis"], "correct": "Lebenslauf und Zeugnisse" }
+              ]
+            },
+            {
+              "id": "text-2",
+              "title": "Uni-Vorlesungsausfall",
+              "titleAr": "إلغاء محاضرة في الجامعة",
+              "transkript": "Liebe Studierende, die Vorlesung 'Einführung in die BWL' bei Professor Schmidt fällt heute aus. Grund ist Krankheit. Die Vorlesung wird am Freitag um 10 Uhr in Raum C12 nachgeholt. Die Slides sind auf der Lernplattform verfügbar.",
+              "audio": "teil1/thema3_text2.mp3",
+              "items": [
+                { "id": "3", "text": "Die Vorlesung fällt wegen Raumproblems aus.", "type": "richtig-falsch", "correct": "Falsch" },
+                { "id": "4", "text": "Wann wird die Vorlesung nachgeholt?", "type": "multiple-choice", "options": ["am Donnerstag", "am Freitag", "am Montag"], "correct": "am Freitag" }
+              ]
+            },
+            {
+              "id": "text-3",
+              "title": "Praktikumszusage",
+              "titleAr": "قبول فترة تدريب",
+              "transkript": "Hallo Frau Wagner, hier spricht Herr Klein von der Stadtwerke AG. Wir freuen uns, Ihnen mitzuteilen, dass wir Sie für das dreimonatige Praktikum in der Marketingabteilung angenommen haben. Bitte melden Sie sich bis Freitag, um den Vertrag zu unterschreiben.",
+              "audio": "teil1/thema3_text3.mp3",
+              "items": [
+                { "id": "5", "text": "Frau Wagner bekommt eine Absage.", "type": "richtig-falsch", "correct": "Falsch" },
+                { "id": "6", "text": "Wo macht Frau Wagner das Praktikum?", "type": "multiple-choice", "options": ["in der Buchhaltung", "in der Marketingabteilung", "in der Personalabteilung"], "correct": "in der Marketingabteilung" }
+              ]
+            },
+            {
+              "id": "text-4",
+              "title": "Weiterbildungsangebot",
+              "titleAr": "عرض تدريب مهني",
+              "transkript": "Liebe Mitarbeiter, die Firma bietet ab September einen kostenlosen Englischkurs für Fortgeschrittene an. Der Kurs findet immer dienstags von 17 bis 18:30 Uhr statt. Die Anmeldung läuft über das Intranet. Bitte melden Sie sich bis zum 15. August an.",
+              "audio": "teil1/thema3_text4.mp3",
+              "items": [
+                { "id": "7", "text": "Der Englischkurs ist für Anfänger.", "type": "richtig-falsch", "correct": "Falsch" },
+                { "id": "8", "text": "Bis wann kann man sich anmelden?", "type": "multiple-choice", "options": ["bis 15. August", "bis 1. September", "bis 15. September"], "correct": "bis 15. August" }
+              ]
+            },
+            {
+              "id": "text-5",
+              "title": "Jobcenter-Termin",
+              "titleAr": "موعد مركز العمل",
+              "transkript": "Guten Tag Herr Bauer, hier ist das Jobcenter. Wir haben Ihren Beratungstermin auf Donnerstag, den 12. Mai um 9:30 Uhr geändert. Bitte bringen Sie Ihre Bewerbungsunterlagen mit. Bei Fragen rufen Sie uns an.",
+              "audio": "teil1/thema3_text5.mp3",
+              "items": [
+                { "id": "9", "text": "Der Termin wurde verschoben.", "type": "richtig-falsch", "correct": "Richtig" },
+                { "id": "10", "text": "Was soll Herr Bauer mitbringen?", "type": "multiple-choice", "options": ["seinen Pass", "seine Bewerbungsunterlagen", "sein Zeugnis"], "correct": "seine Bewerbungsunterlagen" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "h1-freizeit-familie",
+          "title": "Freizeit und Familie",
+          "titleAr": "وقت الفراغ والأسرة",
+          "description": "Fünf Texte zu Hobbys, Familie und Freizeitaktivitäten",
+          "audioTexts": [
+            {
+              "id": "text-1",
+              "title": "Schwimmkurs für Kinder",
+              "titleAr": "دورة سباحة للأطفال",
+              "transkript": "Hallo, hier spricht die Schwimmschule 'Seepferdchen'. Wir möchten Sie daran erinnern, dass der Schwimmkurs für Ihre Tochter morgen um 15 Uhr beginnt. Bitte denken Sie an Badekappe, Handtuch und eine kleine Brotzeit. Der Kurs findet im Hallenbad Süd statt.",
+              "audio": "teil1/thema4_text1.mp3",
+              "items": [
+                { "id": "1", "text": "Der Schwimmkurs beginnt um 14 Uhr.", "type": "richtig-falsch", "correct": "Falsch" },
+                { "id": "2", "text": "Was soll das Kind mitbringen?", "type": "multiple-choice", "options": ["Schwimmflügel", "Badekappe und Handtuch", "eine Taucherbrille"], "correct": "Badekappe und Handtuch" }
+              ]
+            },
+            {
+              "id": "text-2",
+              "title": "Elternabend-Einladung",
+              "titleAr": "دعوة لأمسية الآباء",
+              "transkript": "Liebe Eltern, die Grundschule am Park lädt ein zum Elternabend am 20. März um 19 Uhr in der Aula. Themen sind die Klassenfahrt nach Berlin und die Projektwoche im Mai. Wir freuen uns auf Ihr Kommen.",
+              "audio": "teil1/thema4_text2.mp3",
+              "items": [
+                { "id": "3", "text": "Der Elternabend findet in der Aula statt.", "type": "richtig-falsch", "correct": "Richtig" },
+                { "id": "4", "text": "Welches Thema wird besprochen?", "type": "multiple-choice", "options": ["die Einschulung", "die Klassenfahrt", "die Zeugnisse"], "correct": "die Klassenfahrt" }
+              ]
+            },
+            {
+              "id": "text-3",
+              "title": "Vereinsausflug-Ansage",
+              "titleAr": "إعلان رحلة النادي",
+              "transkript": "Liebe Mitglieder des Sportvereins, der diesjährige Ausflug führt uns nach Heidelberg am 15. Juni. Abfahrt ist um 8 Uhr am Vereinsheim. Bitte melden Sie sich bis zum 1. Juni an. Mitglieder zahlen 20 Euro, Gäste 30 Euro.",
+              "audio": "teil1/thema4_text3.mp3",
+              "items": [
+                { "id": "5", "text": "Der Ausflug geht nach München.", "type": "richtig-falsch", "correct": "Falsch" },
+                { "id": "6", "text": "Wie viel zahlen Mitglieder?", "type": "multiple-choice", "options": ["10 Euro", "20 Euro", "30 Euro"], "correct": "20 Euro" }
+              ]
+            },
+            {
+              "id": "text-4",
+              "title": "Geburtstagseinladung",
+              "titleAr": "دعوة عيد ميلاد",
+              "transkript": "Hallo Julia, hier ist deine Tante Maria. Ich möchte dich zu meinem 60. Geburtstag am Samstag, den 8. Juli, einladen. Wir feiern ab 15 Uhr im Garten. Bitte sag mir bis nächste Woche Bescheid, ob du kommen kannst. Dein Onkel Stefan grillt für uns.",
+              "audio": "teil1/thema4_text4.mp3",
+              "items": [
+                { "id": "7", "text": "Tante Maria feiert ihren 50. Geburtstag.", "type": "richtig-falsch", "correct": "Falsch" },
+                { "id": "8", "text": "Was wird auf der Feier gegessen?", "type": "multiple-choice", "options": ["Kuchen und Kaffee", "Grillen", "Buffet"], "correct": "Grillen" }
+              ]
+            },
+            {
+              "id": "text-5",
+              "title": "Konzert-Ansage",
+              "titleAr": "إعلان حفلة موسيقية",
+              "transkript": "Achtung Besucher des Open Air Konzerts. Aufgrund des Regenwetters findet das Konzert heute Abend in der Stadthalle statt. Die Bands spielen ab 19 Uhr. Bereits gekaufte Tickets behalten ihre Gültigkeit. Wir bitten um Verständnis.",
+              "audio": "teil1/thema4_text5.mp3",
+              "items": [
+                { "id": "9", "text": "Das Konzert findet wegen Regen in der Stadthalle statt.", "type": "richtig-falsch", "correct": "Richtig" },
+                { "id": "10", "text": "Wann beginnt das Konzert?", "type": "multiple-choice", "options": ["um 18 Uhr", "um 19 Uhr", "um 20 Uhr"], "correct": "um 19 Uhr" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teil-2",
+      "label": "Teil 2",
+      "nummer": 2,
+      "dauer": "ca. 6 Minuten",
+      "arbeitszeit": "6 Minuten",
+      "pruefungsziel": "Als Zuschauer/Zuhörer im Publikum verstehen",
+      "aufgabentyp": "Mehrfachauswahl (3-gliedrig)",
+      "answerType": "multiple-choice-abc",
+      "itemCount": 5,
+      "aufgabenNummern": "11–15",
+      "maxPlays": 1,
+      "title": "Führung oder Vortrag verstehen",
+      "titleAr": "فهم جولة أو محاضرة",
+      "description": "Sie hören einen längeren Text einmal. Dazu lösen Sie fünf Multiple-Choice-Aufgaben.",
+      "howItWorks": {
+        "textType": "Führung, Vortrag, Präsentation (ca. 2–3 Minuten)",
+        "task": "5 Fragen (11–15) mit je 3 Antwortoptionen",
+        "wiederholung": "Der Text wird nur einmal gespielt",
+        "vorbereitungszeit": "60 Sekunden"
+      },
+      "themen": [
+        {
+          "id": "h2-museum",
+          "title": "Führung durch das Münchner Stadtmuseum",
+          "titleAr": "جولة في متحف مدينة ميونيخ",
+          "audio": "teil2/thema1.mp3",
+          "transkript": "Ich freue mich, Sie heute zu dieser Führung begrüßen zu dürfen. Wir haben Glück, wegen des schönen Wetters sind die meisten Leute im Biergarten, wir haben das Museum fast ganz für uns. Normalerweise herrscht hier Gedränge.\n\nUnser Rundgang dauert zweieinhalb Stunden. Wir besuchen zuerst die Hauptausstellung. Danach haben Sie Gelegenheit, die Sonderausstellung im 2. Stock zu besuchen. Um 16 Uhr treffen wir uns wieder im Eingangsbereich.\n\nViele verbinden mit München Oktoberfest und Biergärten, aber die Stadt hat viel mehr zu bieten. Wir wollen heute der Frage historisch nachgehen, wie München zu dem wurde, was es ist.\n\nIm Anschluss empfehle ich einen Besuch in einem der schönen Biergärten. Die Cafés und Restaurants hier ums Museum finden Sie in jeder Stadt.",
+          "items": [
+            { "id": "11", "text": "Das Museum ist ...", "options": ["sehr voll.", "teilweise geschlossen.", "ziemlich leer."], "correct": "ziemlich leer." },
+            { "id": "12", "text": "Was zeigt der Museumsführer zuerst?", "options": ["alle Ausstellungen", "die Hauptausstellung", "die Sonderausstellungen"], "correct": "die Hauptausstellung" },
+            { "id": "13", "text": "Wo ist der Treffpunkt am Nachmittag?", "options": ["am Eingang", "an der Garderobe", "im Café"], "correct": "am Eingang" },
+            { "id": "14", "text": "Womit beschäftigt sich die Ausstellung hauptsächlich?", "options": ["dem Oktoberfest", "der bayerischen Küche", "der Geschichte Münchens"], "correct": "der Geschichte Münchens" },
+            { "id": "15", "text": "Was empfiehlt der Führer zum Abschluss?", "options": ["einen Restaurantbesuch", "einen Cafébesuch", "einen Biergartenbesuch"], "correct": "einen Biergartenbesuch" }
+          ]
+        },
+        {
+          "id": "h2-stadtfuehrung-berlin",
+          "title": "Stadtführung durch Berlin",
+          "titleAr": "جولة في مدينة برلين",
+          "audio": "teil2/thema2.mp3",
+          "transkript": "Guten Tag, mein Name ist Klaus Weber. Wir starten am Brandenburger Tor. Wir sehen heute das Brandenburger Tor, den Reichstag, die East Side Gallery und den Berliner Dom.\n\nAm Reichstag gibt es eine Sicherheitskontrolle. Bitte halten Sie Ihren Ausweis bereit. Leider ist der Reichstag heute innen nicht zu besichtigen, weil eine Sitzung stattfindet.\n\nNach einer Stunde machen wir eine 15-minütige Pause am Gendarmenmarkt. Bitte achten Sie auf Ihre Wertsachen, denn in der Nähe des Bahnhofs sind manchmal Taschendiebe unterwegs.\n\nUm 16 Uhr sind wir wieder hier am Brandenburger Tor. Dann haben Sie noch eine halbe Stunde für Fragen.",
+          "items": [
+            { "id": "11", "text": "Wo beginnt die Stadtführung?", "options": ["am Reichstag", "am Brandenburger Tor", "am Gendarmenmarkt"], "correct": "am Brandenburger Tor" },
+            { "id": "12", "text": "Warum kann man den Reichstag nicht von innen besichtigen?", "options": ["Renovierung", "Sicherheitskontrolle", "eine Sitzung findet statt"], "correct": "eine Sitzung findet statt" },
+            { "id": "13", "text": "Wie lange dauert die Pause?", "options": ["10 Minuten", "15 Minuten", "30 Minuten"], "correct": "15 Minuten" },
+            { "id": "14", "text": "Wovor warnt der Stadtführer?", "options": ["vor Taschendieben", "vor dem Verkehr", "vor geschlossenen Cafés"], "correct": "vor Taschendieben" },
+            { "id": "15", "text": "Wie lange gibt es am Ende Zeit für Fragen?", "options": ["10 Minuten", "20 Minuten", "30 Minuten"], "correct": "30 Minuten" }
+          ]
+        },
+        {
+          "id": "h2-gesundheitsvortrag",
+          "title": "Vortrag über gesunde Ernährung",
+          "titleAr": "محاضرة عن التغذية الصحية",
+          "audio": "teil2/thema3.mp3",
+          "transkript": "Guten Abend, ich bin Dr. Schmidt. Heute spreche ich über gesunde Ernährung.\n\nDie Deutsche Gesellschaft für Ernährung empfiehlt: fünf Portionen Obst und Gemüse am Tag, 1,5 Liter Wasser, Vollkornprodukte, Fleisch nur zwei- bis dreimal pro Woche.\n\nEin Fehler ist zu hungern. Diäten mit Hungern bringen langfristig nichts. Besser ist ausgewogene Ernährung und Bewegung. Schon 30 Minuten Spazierengehen pro Tag helfen.\n\nSuperfoods wie Chia-Samen sind teuer, aber nicht besser als heimische Produkte wie Leinsamen und Äpfel.\n\nEine ausgewogene Ernährung ist keine Diät, sondern eine langfristige Entscheidung für die Gesundheit.",
+          "items": [
+            { "id": "11", "text": "Wie viel Obst und Gemüse werden täglich empfohlen?", "options": ["drei Portionen", "fünf Portionen", "sieben Portionen"], "correct": "fünf Portionen" },
+            { "id": "12", "text": "Was sagt Dr. Schmidt über Diäten mit Hungern?", "options": ["Sie helfen schnell", "Sie sind langfristig nicht erfolgreich", "Sie sind sehr gesund"], "correct": "Sie sind langfristig nicht erfolgreich" },
+            { "id": "13", "text": "Was sind günstige Alternativen zu Superfoods?", "options": ["exotische Früchte", "Nahrungsergänzungsmittel", "Leinsamen und Äpfel"], "correct": "Leinsamen und Äpfel" },
+            { "id": "14", "text": "Wie viel Bewegung wird empfohlen?", "options": ["60 Minuten Sport täglich", "30 Minuten Spazierengehen täglich", "3 Stunden Training pro Woche"], "correct": "30 Minuten Spazierengehen täglich" },
+            { "id": "15", "text": "Was ist die zentrale Botschaft?", "options": ["Man muss Superfoods essen", "Gesunde Ernährung ist eine langfristige Entscheidung", "Fleisch ist komplett ungesund"], "correct": "Gesunde Ernährung ist eine langfristige Entscheidung" }
+          ]
+        },
+        {
+          "id": "h2-unternehmenspraesentation",
+          "title": "Vortrag über ein Unternehmen",
+          "titleAr": "محاضرة عن شركة",
+          "audio": "teil2/thema4.mp3",
+          "transkript": "Guten Morgen, ich bin Frau Dr. Wagner, Leiterin der Personalabteilung. Herzlich willkommen bei der Solar AG.\n\nUnser Unternehmen wurde 1998 gegründet und beschäftigt heute über 500 Mitarbeiter. Wir produzieren Solarmodule für Privathaushalte und Firmen.\n\nWir bieten jährlich 20 Ausbildungsplätze an. Besonders suchen wir Elektroniker und Industriekaufleute. Die Ausbildung dauert dreieinhalb Jahre. Unsere Auszubildenden arbeiten in modernen Werkstätten.\n\nNach der Ausbildung übernehmen wir 90 Prozent der Absolventen. Bewerbungen nehmen wir bis zum 31. Oktober entgegen. Besuchen Sie unsere Webseite für mehr Informationen.",
+          "items": [
+            { "id": "11", "text": "Wie viele Mitarbeiter hat die Solar AG?", "options": ["etwa 200", "etwa 500", "etwa 1000"], "correct": "etwa 500" },
+            { "id": "12", "text": "Was produziert die Firma?", "options": ["Autos", "Solarmodule", "Computer"], "correct": "Solarmodule" },
+            { "id": "13", "text": "Wie lange dauert die Ausbildung?", "options": ["2 Jahre", "3 Jahre", "3,5 Jahre"], "correct": "3,5 Jahre" },
+            { "id": "14", "text": "Wie viele Absolventen werden übernommen?", "options": ["50 Prozent", "70 Prozent", "90 Prozent"], "correct": "90 Prozent" },
+            { "id": "15", "text": "Wann ist die Bewerbungsfrist?", "options": ["31. August", "30. September", "31. Oktober"], "correct": "31. Oktober" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teil-3",
+      "label": "Teil 3",
+      "nummer": 3,
+      "dauer": "ca. 5 Minuten",
+      "arbeitszeit": "5 Minuten",
+      "pruefungsziel": "Gespräche zwischen Muttersprachlern verstehen",
+      "aufgabentyp": "Richtig/Falsch",
+      "answerType": "richtig-falsch",
+      "itemCount": 7,
+      "aufgabenNummern": "16–22",
+      "maxPlays": 1,
+      "title": "Alltagsgespräch verstehen",
+      "titleAr": "فهم محادثة يومية",
+      "description": "Sie hören ein Gespräch einmal. Dazu lösen Sie sieben Richtig/Falsch-Aufgaben.",
+      "howItWorks": {
+        "textType": "Alltagsgespräch, Dialog (ca. 2–3 Minuten)",
+        "personenCount": 2,
+        "task": "7 Aussagen (16–22) als Richtig oder Falsch markieren",
+        "wiederholung": "Das Gespräch wird nur einmal gespielt",
+        "vorbereitungszeit": "60 Sekunden"
+      },
+      "themen": [
+        {
+          "id": "h3-fest",
+          "title": "Gespräch über ein Fest",
+          "titleAr": "محادثة حول حفلة",
+          "audio": "teil3/thema1.mp3",
+          "transkript": "Florian: Hallo Nadia!\nNadia: Hallo! Hab ein aufregendes Wochenende hinter mir.\nFlorian: Du warst auf einem Fest?\nNadia: Ja, Anna, die Freundin meiner Mutter, wurde 50. Ihr Mann ist Diplomat. Sie wohnen in einem Traumhaus mit großer Eingangshalle und riesiger Terrasse.\nFlorian: War deine Mutter auch da?\nNadia: Ja, und sie musste mich vorstellen: 'Meine Tochter studiert Medienwissenschaft und will später zum Fernsehen.' Peinlich.\nFlorian: Und das Essen?\nNadia: Vom Feinsten! Kaltes Buffet, Hauptgerichte, Nachspeisen.\nFlorian: Und die Musik?\nNadia: Ein genialer Klavierspieler! Er hat mich gefragt, ob ich auch Musik mache. Ich spiele Klavier als Hobby. Dann brauchte er eine Pause und ich sollte spielen! Ich habe klassische Lieder gespielt, dann wollte jemand Jazz hören - zum Glück kam der Pianist zurück.\nFlorian: Und am Sonntag?\nNadia: Lange geschlafen, dann Ausflug in die Berge. Ah, da kommt mein Bus, bis morgen!",
+          "items": [
+            { "id": "16", "text": "Bei dem Fest wurde der Geburtstag von Annas Mann gefeiert.", "correct": "Falsch" },
+            { "id": "17", "text": "Nadia ist vom Haus der Gastgeber begeistert.", "correct": "Richtig" },
+            { "id": "18", "text": "Nadia arbeitet beim Fernsehen.", "correct": "Falsch" },
+            { "id": "19", "text": "Das Essen war ausgezeichnet.", "correct": "Richtig" },
+            { "id": "20", "text": "Nadia hat zusammen mit dem Musiker gespielt.", "correct": "Falsch" },
+            { "id": "21", "text": "Nadia hat auch Jazz gespielt.", "correct": "Falsch" },
+            { "id": "22", "text": "Das Fest dauerte bis nach 12 Uhr nachts.", "correct": "Richtig" }
+          ]
+        },
+        {
+          "id": "h3-wohnungssuche",
+          "title": "Gespräch über Wohnungssuche",
+          "titleAr": "محادثة حول البحث عن شقة",
+          "audio": "teil3/thema2.mp3",
+          "transkript": "Anna: Hallo Markus, wie läuft die Wohnungssuche?\nMarkus: Katastrophe! Drei Monate suche ich schon.\nAnna: So schlimm?\nMarkus: Eine Einzimmerwohnung kostet mindestens 800 Euro warm.\nAnna: Hast du eine WG versucht?\nMarkus: Ja, 15 Bewerbungen, drei Besichtigungen, keine Zusage.\nAnna: Was suchst du genau?\nMarkus: Eigene kleine Wohnung, max. 700 Euro warm, mit Balkon, U-Bahn nicht zu weit. Unmöglich.\nAnna: Was ist mit eBay Kleinanzeigen?\nMarkus: Viele Betrüger. Die verlangen Kaution im Voraus.\nAnna: Weiß vielleicht ein Kollege etwas?\nMarkus: Frau Schmidt kennt jemanden, der im November auszieht.\nAnna: Das ist noch drei Monate.\nMarkus: Ja, bis dahin wohne ich bei meinen Eltern auf dem Sofa. Mit 32!",
+          "items": [
+            { "id": "16", "text": "Markus sucht schon seit zwei Monaten eine Wohnung.", "correct": "Falsch" },
+            { "id": "17", "text": "Eine Einzimmerwohnung in München ist für Markus zu teuer.", "correct": "Richtig" },
+            { "id": "18", "text": "Markus wurde zu drei WG-Besichtigungen eingeladen.", "correct": "Richtig" },
+            { "id": "19", "text": "Markus möchte unbedingt in einer WG wohnen.", "correct": "Falsch" },
+            { "id": "20", "text": "Markus hat auf eBay Kleinanzeigen nach Wohnungen gesucht.", "correct": "Richtig" },
+            { "id": "21", "text": "Eine Kollegin kennt eine sofort verfügbare Wohnung.", "correct": "Falsch" },
+            { "id": "22", "text": "Markus wohnt derzeit bei seinen Eltern.", "correct": "Richtig" }
+          ]
+        },
+        {
+          "id": "h3-nebenjob",
+          "title": "Gespräch über Nebenjobs",
+          "titleAr": "محادثة حول الوظائف الجانبية",
+          "audio": "teil3/thema3.mp3",
+          "transkript": "Lisa: Hi Tom, du siehst müde aus.\nTom: Ich kellnere seit zwei Wochen in einer Bar, drei Abende pro Woche bis 2 Uhr nachts.\nLisa: Und dein Studium?\nTom: Leidet ein bisschen.\nLisa: Mein Bruder gab Nachhilfe in Mathe, 20 Euro pro Stunde, nur vier Stunden pro Woche, also 80 Euro.\nTom: Das klingt gut!\nLisa: Er hat die Schüler über eine Online-Plattform gefunden. Du könntest auch als studentische Hilfskraft an der Uni arbeiten.\nTom: Gute Idee. Danke!",
+          "items": [
+            { "id": "16", "text": "Tom arbeitet seit zwei Wochen in einer Bar.", "correct": "Richtig" },
+            { "id": "17", "text": "Tom arbeitet fünf Abende pro Woche.", "correct": "Falsch" },
+            { "id": "18", "text": "Das Studium leidet unter Toms Nebenjob.", "correct": "Richtig" },
+            { "id": "19", "text": "Lisas Bruder verdiente als Nachhilfelehrer weniger als als Kellner.", "correct": "Falsch" },
+            { "id": "20", "text": "Tom war in der Schule gut in Mathe.", "correct": "Falsch" },
+            { "id": "21", "text": "Lisa empfiehlt Tom, an der Uni zu arbeiten.", "correct": "Richtig" },
+            { "id": "22", "text": "Tom möchte in der Bar weiterarbeiten.", "correct": "Falsch" }
+          ]
+        },
+        {
+          "id": "h3-reiseplanung",
+          "title": "Gespräch über Urlaubsplanung",
+          "titleAr": "محادثة حول تخطيط العطلة",
+          "audio": "teil3/thema4.mp3",
+          "transkript": "Claudia: Hast du schon Urlaub gebucht?\nPaul: Ja, wir fahren nach Kroatien, ans Meer. Zwei Wochen, all inclusive.\nClaudia: Das klingt toll! Mit dem Flugzeug?\nPaul: Nein, mit dem Auto. Das ist flexibler. Und die Fahrt durch Österreich und Slowenien ist auch schön.\nClaudia: Wie lange fahrt ihr?\nPaul: Etwa acht Stunden. Ich muss aber zwischendurch Pausen machen.\nClaudia: Das schaffst du. Und das Hotel?\nPaul: Ein kleines Hotel direkt am Strand, mit Balkon. Meine Frau wollte unbedingt Meerblick.\nClaudia: Klingt perfekt. Ich war noch nie in Kroatien.\nPaul: Solltest du mal machen. Es ist nicht teuer und das Wasser ist wunderschön.",
+          "items": [
+            { "id": "16", "text": "Paul fährt mit dem Flugzeug nach Kroatien.", "correct": "Falsch" },
+            { "id": "17", "text": "Der Urlaub dauert zwei Wochen.", "correct": "Richtig" },
+            { "id": "18", "text": "Die Fahrt nach Kroatien dauert acht Stunden.", "correct": "Richtig" },
+            { "id": "19", "text": "Das Hotel hat keinen Balkon.", "correct": "Falsch" },
+            { "id": "20", "text": "Pauls Frau möchte Meerblick.", "correct": "Richtig" },
+            { "id": "21", "text": "Claudia war schon oft in Kroatien.", "correct": "Falsch" },
+            { "id": "22", "text": "Das Hotel liegt nicht am Strand.", "correct": "Falsch" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teil-4",
+      "label": "Teil 4",
+      "nummer": 4,
+      "dauer": "ca. 8 Minuten",
+      "arbeitszeit": "8 Minuten",
+      "pruefungsziel": "Radiosendungen und Tonaufnahmen verstehen",
+      "aufgabentyp": "Zuordnung",
+      "answerType": "zuordnung-person",
+      "itemCount": 8,
+      "aufgabenNummern": "23–30",
+      "maxPlays": 2,
+      "title": "Diskussion verstehen — Wer sagt was?",
+      "titleAr": "فهم النقاش — من قال ماذا؟",
+      "description": "Sie hören eine Diskussion zweimal. Ordnen Sie die Aussagen den Personen zu.",
+      "howItWorks": {
+        "textType": "Radiodiskussion (ca. 3-4 Minuten)",
+        "personen": "Meist 2–3 Personen plus Moderator",
+        "task": "8 Aussagen einer Person zuordnen (A, B, C)",
+        "wiederholung": "Die Diskussion wird zweimal gespielt"
+      },
+      "personenMapping": {
+        "A": "Dana Schneider (gegen Krippe)",
+        "B": "Florian Bader (für Krippe)",
+        "C": "Moderator (selten als Antwort)"
+      },
+      "themen": [
+        {
+          "id": "h4-kinderkrippe",
+          "title": "Diskussion: Kinder in die Krippe?",
+          "titleAr": "مناقشة: أطفال في الحضانة؟",
+          "audio": "teil4/thema1.mp3",
+          "personen": { "A": "Dana Schneider (gegen Krippe)", "B": "Florian Bader (für Krippe)", "C": "Moderator" },
+          "transkript": "Moderator: Sollen Kinder in die Krippe? Frau Schneider?\nFrau Schneider: Nein, die ersten drei Jahre brauchen Kinder eine feste Bezugsperson.\nHerr Bader: Meine Zwillinge gehen gern in die Krippe. Sie lernen, auf andere zu hören.\nFrau Schneider: Soziales Miteinander lernt man auch später im Kindergarten.\nModerator: Ist es eine finanzielle Frage?\nHerr Bader: Meine Frau und ich können nicht drei Jahre aus dem Beruf aussteigen.\nFrau Schneider: Wenn Ihnen Karriere wichtiger ist als Kinder?\nHerr Bader: Man kann beides haben. Meine Frau war selbst in der Krippe.\nModerator: Was ist mit der Qualität?\nFrau Schneider: Erzieherinnen haben bei 12 Kindern keine Zeit für jedes.\nHerr Bader: In unserer Krippe sind 8 Kinder pro Gruppe. Das geht.\nModerator: Also kommt es auf die Krippe an.\nHerr Bader: In manchen fehlen finanzielle Mittel. Eltern müssen Papier mitbringen.\nModerator: Sollten Krippen besser gefördert werden? Frau Schneider?\nFrau Schneider: Ja, aber Kinder sollten nicht abgeschoben werden.\nHerr Bader: Sie langweilen sich nicht in der Krippe.",
+          "items": [
+            { "id": "23", "text": "Kinder brauchen in den ersten drei Jahren eine feste Bezugsperson.", "correct": "A" },
+            { "id": "24", "text": "Kinder lernen in der Krippe, auf andere Erwachsene zu hören.", "correct": "B" },
+            { "id": "25", "text": "Soziales Miteinander kann man auch später lernen.", "correct": "A" },
+            { "id": "26", "text": "Weder er noch seine Frau können drei Jahre aus dem Beruf aussteigen.", "correct": "B" },
+            { "id": "27", "text": "Erzieherinnen haben bei vielen Kindern keine Zeit für jedes Kind.", "correct": "A" },
+            { "id": "28", "text": "In manchen Krippen fehlen Geld und Materialien.", "correct": "B" },
+            { "id": "29", "text": "Sie lehnt den Bau von Krippen nicht grundsätzlich ab.", "correct": "A" },
+            { "id": "30", "text": "Die Kinder langweilen sich nicht in der Krippe.", "correct": "B" }
+          ]
+        },
+        {
+          "id": "h4-tempolimit",
+          "title": "Diskussion: Tempolimit auf Autobahnen",
+          "titleAr": "مناقشة: حدود السرعة على الطرق السريعة",
+          "audio": "teil4/thema2.mp3",
+          "personen": { "A": "Herr Krüger (dagegen)", "B": "Frau Schmidt (dafür)", "C": "Moderator" },
+          "personenMapping": {
+            "A": "Herr Krüger (dagegen)",
+            "B": "Frau Schmidt (dafür)",
+            "C": "Moderator"
+          },
+          "transkript": "Moderator: Soll ein Tempolimit von 130 km/h kommen? Herr Krüger?\nHerr Krüger: Nein. Freie Fahrt für freie Bürger. Die Unfallzahlen sind nicht höher als anderswo.\nFrau Schmidt: Ein Tempolimit würde den CO2-Ausstoß senken und Lärm reduzieren.\nHerr Krüger: Der Verkehr verursacht nur einen kleinen Teil der Emissionen. Die Industrie ist schlimmer.\nFrau Schmidt: Andere europäische Länder haben ein Tempolimit. Bei 130 verbraucht ein Auto 30% weniger Sprit.\nHerr Krüger: Autofahrer sollten selbst entscheiden. Das ist Freiheit.\nFrau Schmidt: Ihre Freiheit endet, wo sie die Umwelt schädigt. Die Mehrheit der Deutschen ist für ein Tempolimit.\nHerr Krüger: Verbote sind immer der falsche Weg.",
+          "items": [
+            { "id": "23", "text": "Die Unfallzahlen sind nicht höher als anderswo.", "correct": "A" },
+            { "id": "24", "text": "Ein Tempolimit würde den CO2-Ausstoß senken.", "correct": "B" },
+            { "id": "25", "text": "Die Industrie ist ein größeres Problem als der Autoverkehr.", "correct": "A" },
+            { "id": "26", "text": "Andere europäische Länder haben bereits ein Tempolimit.", "correct": "B" },
+            { "id": "27", "text": "Bei 130 km/h verbraucht ein Auto weniger Sprit.", "correct": "B" },
+            { "id": "28", "text": "Autofahrer sollten selbst entscheiden können.", "correct": "A" },
+            { "id": "29", "text": "Die Mehrheit der Deutschen ist für ein Tempolimit.", "correct": "B" },
+            { "id": "30", "text": "Verbote sind immer der falsche Weg.", "correct": "A" }
+          ]
+        },
+        {
+          "id": "h4-handy-schule",
+          "title": "Diskussion: Handyverbot in Schulen",
+          "titleAr": "مناقشة: حظر الهواتف في المدارس",
+          "audio": "teil4/thema3.mp3",
+          "personen": { "A": "Frau Dr. Berg (Lehrerin, dafür)", "B": "Herr Klein (Vater, dagegen)", "C": "Moderator" },
+          "personenMapping": {
+            "A": "Frau Dr. Berg (Lehrerin, dafür)",
+            "B": "Herr Klein (Vater, dagegen)",
+            "C": "Moderator"
+          },
+          "transkript": "Moderator: Herr Klein, Sie sind gegen ein Handyverbot?\nHerr Klein: Ja. Meine Tochter braucht ihr Handy, um mich nach der Schule zu erreichen. Verbote sind nicht zeitgemäß.\nModerator: Frau Dr. Berg, Sie sind Lehrerin. Was sagen Sie?\nFrau Dr. Berg: Die Kinder sind ständig abgelenkt. In den Pausen starren sie nur auf Bildschirme, statt miteinander zu reden.\nHerr Klein: Dann muss man Medienkompetenz unterrichten, nicht verbieten.\nFrau Dr. Berg: Das ist zu idealistisch. In der Praxis funktioniert das nicht.\nModerator: Gibt es eine Kompromisslösung?\nFrau Dr. Berg: Ja: Handys im Unterricht aus, in den Pausen an. Das wäre ein guter Mittelweg.\nHerr Klein: Das könnte ich akzeptieren. Aber ein komplettes Verbot lehne ich ab.",
+          "items": [
+            { "id": "23", "text": "Handys lenken die Kinder vom Miteinander ab.", "correct": "A" },
+            { "id": "24", "text": "Die Tochter braucht das Handy, um den Vater zu erreichen.", "correct": "B" },
+            { "id": "25", "text": "Man sollte Medienkompetenz unterrichten statt verbieten.", "correct": "B" },
+            { "id": "26", "text": "In der Praxis funktioniert Medienkompetenz nicht ideal.", "correct": "A" },
+            { "id": "27", "text": "Handys im Unterricht aus, in den Pausen an ist ein Mittelweg.", "correct": "A" },
+            { "id": "28", "text": "Ein komplettes Verbot wird abgelehnt.", "correct": "B" },
+            { "id": "29", "text": "Kinder sollten mehr miteinander reden.", "correct": "A" },
+            { "id": "30", "text": "Verbote sind nicht zeitgemäß.", "correct": "B" }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "institute": "Goethe",
+  "level": "B1",
+  "title": "Goethe-Zertifikat B1 - Prüfungssimulationen",
+  "description": "3 vollständige Simulationen der echten Goethe B1 Prüfung. Jede Simulation hat unterschiedliche Themen, aber gleichen Schwierigkeitsgrad.",
+  "totalVariants": 3,
+  "variants": [
+    {
+      "id": "001",
+      "title": "Simulation 1",
+      "description": "Themen: Wohnungssuche, Gesundheit, Umzug, Ausflug",
+      "difficulty": "Mittel",
+      "themes": ["Wohnungssuche", "Gesundheit & Bewegung", "Stadt vs. Land", "Umzug", "Taschengeld", "Ausflug"],
+      "path": "/data/goethe/b1/variants/001/",
+      "estimatedTime": 180
+    },
+    {
+      "id": "002",
+      "title": "Simulation 2",
+      "description": "Themen: Jobanzeigen, Digitalisierung, Geburtstagsfeier, Geschenk",
+      "difficulty": "Mittel",
+      "themes": ["Jobanzeigen", "Digitalisierung", "Homeoffice", "Geburtstagsfeier", "Fast Food", "Geschenk"],
+      "path": "/data/goethe/b1/variants/002/",
+      "estimatedTime": 180
+    },
+    {
+      "id": "003",
+      "title": "Simulation 3",
+      "description": "Themen: Sprachkurse, Klimawandel, Beschwerde, Restaurant",
+      "difficulty": "Mittel",
+      "themes": ["Sprachkurse", "Klimawandel", "Online-Shopping", "Beschwerde E-Mail", "Plastiktüten", "Restaurant"],
+      "path": "/data/goethe/b1/variants/003/",
+      "estimatedTime": 180
+    }
+  ]
+}

@@ -12,7 +12,9 @@ import {
   ChevronDown,
   ChevronUp,
   GraduationCap,
-  RotateCcw
+  RotateCcw,
+  Trophy,
+  ArrowRight
 } from 'lucide-react';
 import { a1Lessons, a2Lessons, b1Lessons, b2Lessons } from '@/data/lessonsData';
 import { useNavigate } from 'react-router-dom';

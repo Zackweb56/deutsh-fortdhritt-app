@@ -9,7 +9,9 @@ import ListeningTab from '@/components/listening/ListeningTab';
 
 import WritingLibraryTab from '@/components/writing/WritingLibraryTab';
 import { ResourcesTab } from '@/components/resources/ResourcesTab';
+
 import { GrammarTab } from '@/components/grammar/GrammarTab';
+import { PreparationTab } from '@/components/preparation/PreparationTab';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Button } from '@/components/ui/button';
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog';
@@ -47,8 +49,8 @@ const AppContent = () => {
           </div>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                <GraduationCap className="h-6 w-6 text-white" />
+              <div className="h-15 w-15 flex items-center justify-center overflow-hidden">
+                <img src="/deutschpath_logo.svg" alt="DeutschPath" className="h-12 w-12 object-contain" />
               </div>
               <div>
                 <h1 className="text-xl font-bold">تعلم الألمانية بنفسك</h1>
@@ -70,8 +72,8 @@ const AppContent = () => {
                 <SheetContent side="right" className="w-[85vw] max-w-[350px] p-0 bg-card/95 backdrop-blur-xl border-l-border" dir="rtl">
                   <div className="p-6 h-full flex flex-col">
                     <div className="flex items-center gap-3 mb-8">
-                      <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                        <GraduationCap className="h-6 w-6 text-white" />
+                      <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center overflow-hidden">
+                        <img src="/deutschpath_logo.svg" alt="DeutschPath" className="h-8 w-8 object-contain" />
                       </div>
                       <div>
                         <h2 className="text-lg font-bold">تعلم الألمانية بنفسك</h2>
@@ -108,9 +110,9 @@ const AppContent = () => {
         {currentTab === 'grammar' && <GrammarTab />}
         {currentTab === 'lessons' && <LessonsTab />}
         {currentTab === 'listening' && <ListeningTab />}
-
         {currentTab === 'writing' && <WritingLibraryTab />}
         {currentTab === 'resources' && <ResourcesTab />}
+        {currentTab === 'preparation' && <PreparationTab />}
       </main>
       
       {/* ScrollToTopButton moved to global App shell */}

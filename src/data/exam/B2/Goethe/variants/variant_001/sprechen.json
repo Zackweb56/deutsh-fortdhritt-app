@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "module": "Sprechen",
+    "timeMinutes": 15,
+    "totalRawPoints": 100,
+    "passingRaw": 60,
+    "scoringFormula": "rawPoints"
+  },
+  "teil1": {
+    "type": "vortrag",
+    "points": 50,
+    "instructions": "Präsentieren Sie Ihren Partnern ein Thema. (ca. 4 Min.)",
+    "thema": "Soziale Medien im Alltag",
+    "leitpunkte": [
+      "Bedeutung heute.",
+      "Nutzungsmöglichkeiten.",
+      "Vor- und Nachteile.",
+      "Eigene Meinung/Erfahrung."
+    ]
+  },
+  "teil2": {
+    "type": "diskussion",
+    "points": 50,
+    "instructions": "Diskutieren Sie mit Ihrem Partner über ein kontroverses Thema. (ca. 5 Min.)",
+    "thema": "Sollte Fleischkonsum staatlich begrenzt werden?",
+    "situation": "In einer Zeitschrift lesen Sie eine Diskussion..."
+  }
+}

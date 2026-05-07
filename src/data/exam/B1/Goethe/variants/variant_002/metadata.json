@@ -1,0 +1,18 @@
+{
+  "variantId": "002",
+  "title": "Goethe B1 - Simulation 2",
+  "description": "Authentische Prüfungssimulation mit Fokus auf Berufswelt und Digitalisierung.",
+  "difficulty": "Mittel",
+  "modules": ["lesen", "horen", "schreiben", "sprechen"],
+  "moduleOrder": ["lesen", "horen", "schreiben", "sprechen"],
+  "timeLimits": { "lesen": 65, "horen": 40, "schreiben": 60, "sprechen": 15 },
+  "rawPoints": { "lesen": 30, "horen": 30 },
+  "directPoints": { "schreiben": 100, "sprechen": 100 },
+  "passingScore": 60,
+  "themes": {
+    "lesen": ["Berufsleben/E-Mail", "Digitalisierung & Homeoffice", "Jobanzeigen", "Fast-Food-Verbot", "Firmen-Hausordnung"],
+    "horen": ["Jobzusage/Flughafen", "Stadtführung", "Einkaufsgespräch", "Diskussion Homeoffice"],
+    "schreiben": ["Geburtstag Geschenk", "Social Media & Privatsphäre", "Absage Arzttermin"],
+    "sprechen": ["Geschenk für Kollegen", "Sport & Gesundheit", "Mobilität & Stadt"]
+  }
+}

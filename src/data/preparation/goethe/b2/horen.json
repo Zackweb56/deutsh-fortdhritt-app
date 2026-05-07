@@ -1,0 +1,2054 @@
+{
+  "institut": "Goethe-Institut",
+  "level": "B2",
+  "module": "Hören",
+  "meta": {
+    "totalPunkte": 30,
+    "totalPunkteMax": 30,
+    "bestehensgrenzeMesspunkte": 18,
+    "bestehensgrenzeProzent": 60,
+    "gesamtergebnis": 100,
+    "totalZeit": "40 Minuten",
+    "teileCount": 4,
+    "description": "Das Modul Hören hat vier Teile. Sie hören mehrere Texte und lösen Aufgaben dazu. Lesen Sie zuerst die Aufgaben, bevor Sie den Text hören. Für jede Aufgabe gibt es nur eine richtige Lösung.",
+    "audioBaseUrl": "/media/audio/goethe/horen/b2/"
+  },
+  "teile": [
+    {
+      "id": "teil-1",
+      "label": "Teil 1",
+      "nummer": 1,
+      "arbeitszeit": "10 Minuten",
+      "pruefungsziel": "Alltagsgespräche verstehen",
+      "aufgabentyp": "richtig-falsch-und-mehrfachauswahl",
+      "punkte": 10,
+      "itemCount": 10,
+      "aufgabenNummern": "1–10",
+      "answerType": "mixed-rf-mc",
+      "title": "Alltagsgespräche und kurze Mitteilungen",
+      "titleAr": "محادثات يومية ورسائل قصيرة",
+      "instructions": "Sie hören fünf kurze Texte. Zu jedem Text gibt es zwei Aufgaben. Entscheiden Sie bei jedem Text, ob die Aussage richtig oder falsch ist und welche Antwort (a, b oder c) am besten passt.",
+      "description": "Fünf kurze Texte (je ca. 40-60 Sek.), jeder einmal gehört. Pro Text: eine R/F-Aufgabe und eine MC-Aufgabe (3-gliedrig).",
+      "themen": [
+        {
+          "id": "t1-set1-alltag",
+          "title": "Alltägliche Informationen",
+          "titleAr": "معلومات يومية",
+          "audioTexts": [
+            {
+              "id": "01-02",
+              "title": "Beispiel: Bahnansage",
+              "titleAr": "مثال: إعلان قطار",
+              "audio": "teil1/thema1_text1.mp3",
+              "transkript": "Achtung an Gleis 5. Der ICE 703 nach München Hauptbahnhof, planmäßige Abfahrt 14:15 Uhr, fällt heute wegen eines technischen Defekts am Triebwagen leider aus. Fahrgäste nach München werden gebeten, den IC 2213 auf Gleis 8 um 14:35 Uhr zu nutzen. Ihre Zugbindung ist aufgehoben.",
+              "items": [
+                {
+                  "id": "01",
+                  "type": "richtig-falsch",
+                  "text": "Der Zug nach München fährt pünktlich ab.",
+                  "correct": "Falsch"
+                },
+                {
+                  "id": "02",
+                  "type": "multiple-choice",
+                  "text": "Was sollen die Reisenden nach München tun?",
+                  "options": [
+                    "Auf den ICE warten.",
+                    "Auf Gleis 8 gehen.",
+                    "Ihre Fahrkarte stornieren."
+                  ],
+                  "correct": "b"
+                }
+              ]
+            },
+            {
+              "id": "1-2",
+              "title": "Text 1: Radionachricht",
+              "titleAr": "النص 1: رسالة إذاعية",
+              "audio": "teil1/thema1_text2.mp3",
+              "transkript": "Der Wetterdienst warnt vor starken Stürmen im gesamten Norddeutschen Raum ab heute Nachmittag. Es wird empfohlen, alle losen Gegenstände auf Balkonen und in Gärten zu sichern. Das Unwetter soll bis in die frühen Morgenstunden andauern, bevor sich das Wetter am Sonntag wieder beruhigt.",
+              "items": [
+                {
+                  "id": "1",
+                  "type": "richtig-falsch",
+                  "text": "Die Warnung gilt für ganz Deutschland.",
+                  "correct": "Falsch"
+                },
+                {
+                  "id": "2",
+                  "type": "multiple-choice",
+                  "text": "Wozu rät der Wetterdienst?",
+                  "options": [
+                    "Das Haus nicht zu verlassen.",
+                    "Dinge im Freien zu sichern.",
+                    "Am Wochenende nicht zu reisen."
+                  ],
+                  "correct": "b"
+                }
+              ]
+            },
+            {
+              "id": "3-4",
+              "title": "Text 2: Telefonansage Praxis",
+              "titleAr": "النص 2: رسالة هاتفية في عيادة",
+              "audio": "teil1/thema1_text3.mp3",
+              "transkript": "Herzlich willkommen in der Zahnarztpraxis Dr. Meier. Unsere Praxis ist wegen Urlaub bis zum 15. August geschlossen. In dringenden Schmerzfällen wenden Sie sich bitte an den zahnärztlichen Notdienst in der Klinik am Südring. Ab dem 16. August sind wir wieder zu den gewohnten Sprechzeiten für Sie da. Bitte hinterlassen Sie keine Nachricht, dieses Band wird nicht abgehört.",
+              "items": [
+                {
+                  "id": "3",
+                  "type": "richtig-falsch",
+                  "text": "Man kann eine Nachricht auf dem Anrufbeantworter hinterlassen.",
+                  "correct": "Falsch"
+                },
+                {
+                  "id": "4",
+                  "type": "multiple-choice",
+                  "text": "Wohin sollen Schmerzpatienten gehen?",
+                  "options": [
+                    "In eine andere Praxis im Haus.",
+                    "Zur Klinik am Südring.",
+                    "Zum Arzt am 16. August."
+                  ],
+                  "correct": "b"
+                }
+              ]
+            },
+            {
+              "id": "5-6",
+              "title": "Text 3: Gespräch im Supermarkt",
+              "titleAr": "النص 3: محادثة في السوبر ماركت",
+              "audio": "teil1/thema1_text4.mp3",
+              "transkript": "Entschuldigung, wissen Sie, wo ich die frische Hefe finde? Letztes Mal lag sie bei den Backwaren. – Oh, die haben wir umgeräumt. Frische Hefe muss gekühlt werden, deshalb finden Sie sie jetzt im Kühlregal, gleich neben der Butter und dem Quark. Trockenhefe haben wir weiterhin beim Backpulver in Gang drei.",
+              "items": [
+                {
+                  "id": "5",
+                  "type": "richtig-falsch",
+                  "text": "Der Kunde sucht frische Hefe.",
+                  "correct": "Richtig"
+                },
+                {
+                  "id": "6",
+                  "type": "multiple-choice",
+                  "text": "Wo findet der Kunde das gesuchte Produkt?",
+                  "options": [
+                    "In Gang drei.",
+                    "Bei den Backwaren.",
+                    "Im Kühlregal."
+                  ],
+                  "correct": "c"
+                }
+              ]
+            },
+            {
+              "id": "7-8",
+              "title": "Text 4: Radiowerbung",
+              "titleAr": "النص 4: إعلان إذاعي",
+              "audio": "teil1/thema1_text5.mp3",
+              "transkript": "Sie wollen sich beruflich verändern, haben aber keine Zeit für eine teure Weiterbildung am Abend? Bei der Fernuni-Nord bestimmen Sie Ihr Lerntempo selbst! Studieren Sie flexibel von zu Hause aus, neben dem Beruf. Informieren Sie sich an unserem Online-Infotag diesen Samstag ab 10 Uhr. Anmeldung unter fernuni-nord.de.",
+              "items": [
+                {
+                  "id": "7",
+                  "type": "richtig-falsch",
+                  "text": "Das Angebot richtet sich an Menschen mit viel Freizeit.",
+                  "correct": "Falsch"
+                },
+                {
+                  "id": "8",
+                  "type": "multiple-choice",
+                  "text": "Was bietet die Fernuni-Nord an?",
+                  "options": [
+                    "Ein flexibles Studium von zu Hause.",
+                    "Günstige Abendkurse.",
+                    "Einen Infotag am Freitag."
+                  ],
+                  "correct": "a"
+                }
+              ]
+            },
+            {
+              "id": "9-10",
+              "title": "Text 5: Durchsage im Kaufhaus",
+              "titleAr": "النص 5: إعلان في متجر",
+              "audio": "teil1/thema1_text6.mp3",
+              "transkript": "Liebe Kundinnen und Kunden! Beachten Sie unsere heutigen Sonderangebote in der Sportabteilung im zweiten Obergeschoss. Alle Laufschuhe der Marke Sprint sind um 30 Prozent reduziert. Außerdem gibt es auf die aktuelle Badekollektion im Erdgeschoss heute 20 Prozent Rabatt. Das Angebot gilt nur solange der Vorrat reicht.",
+              "items": [
+                {
+                  "id": "9",
+                  "type": "richtig-falsch",
+                  "text": "Die Sportabteilung befindet sich im Erdgeschoss.",
+                  "correct": "Falsch"
+                },
+                {
+                  "id": "10",
+                  "type": "multiple-choice",
+                  "text": "Was ist heute billiger?",
+                  "options": [
+                    "Alle Laufschuhe im Geschäft.",
+                    "Laufschuhe einer bestimmten Marke.",
+                    "Die Winterkollektion."
+                  ],
+                  "correct": "b"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "t1-set2-reisen",
+          "title": "Unterwegs und Reisen",
+          "titleAr": "السفر والتنقل",
+          "audioTexts": [
+            {
+              "id": "01-02",
+              "title": "Beispiel: Flughafen",
+              "titleAr": "مثال: المطار",
+              "audio": "teil1/thema2_beispiel.mp3",
+              "transkript": "Letzter Aufruf für Herrn Meier, gebucht auf Flug LH 345 nach Frankfurt. Herr Meier, bitte begeben Sie sich umgehend zu Gate B12. Das Gate schließt in drei Minuten. Dies ist der letzte Aufruf.",
+              "items": [
+                {
+                  "id": "01",
+                  "type": "richtig-falsch",
+                  "text": "Herr Meier hat den Flug nach Frankfurt verpasst.",
+                  "correct": "Falsch"
+                },
+                {
+                  "id": "02",
+                  "type": "multiple-choice",
+                  "text": "Was soll Herr Meier tun?",
+                  "options": [
+                    "Sofort zum Gate gehen.",
+                    "Sich am Schalter melden.",
+                    "Ein neues Ticket kaufen."
+                  ],
+                  "correct": "a"
+                }
+              ]
+            },
+            {
+              "id": "1-2",
+              "title": "Text 1: Durchsage im Zug",
+              "titleAr": "النص 1: إعلان في القطار",
+              "audio": "teil1/thema2_text2.mp3",
+              "transkript": "Sehr geehrte Fahrgäste, wir erreichen in Kürze Hannover Hauptbahnhof. Bitte beachten Sie: Wegen Bauarbeiten auf der Strecke Richtung Berlin verspäten sich alle Anschlusszüge um etwa 20 Minuten. Reisende in Richtung Hamburg haben jedoch pünktlichen Anschluss auf Gleis 4.",
+              "items": [
+                {
+                  "id": "1",
+                  "type": "richtig-falsch",
+                  "text": "Der Zug hat bereits Hannover erreicht.",
+                  "correct": "Falsch"
+                },
+                {
+                  "id": "2",
+                  "type": "multiple-choice",
+                  "text": "Für wen gibt es eine Verspätung?",
+                  "options": [
+                    "Für alle Fahrgäste.",
+                    "Für Reisende nach Berlin.",
+                    "Für Reisende nach Hamburg."
+                  ],
+                  "correct": "b"
+                }
+              ]
+            },
+            {
+              "id": "3-4",
+              "title": "Text 2: Nachricht von einer Freundin",
+              "titleAr": "النص 2: رسالة من صديقة",
+              "audio": "teil1/thema2_text3.mp3",
+              "transkript": "Hi Julia, ich bins, Sarah. Du, ich schaffe es heute Abend leider nicht zum Yoga. Ich muss im Büro noch eine Präsentation fertig machen und das dauert sicher bis acht. Gehst du morgen ins Fitnessstudio? Vielleicht können wir uns da treffen. Ruf mich später mal an!",
+              "items": [
+                {
+                  "id": "3",
+                  "type": "richtig-falsch",
+                  "text": "Sarah hat keine Lust auf Yoga.",
+                  "correct": "Falsch"
+                },
+                {
+                  "id": "4",
+                  "type": "multiple-choice",
+                  "text": "Warum muss Sarah absagen?",
+                  "options": [
+                    "Sie ist krank.",
+                    "Sie muss länger arbeiten.",
+                    "Sie geht ins Fitnessstudio."
+                  ],
+                  "correct": "b"
+                }
+              ]
+            },
+            {
+              "id": "5-6",
+              "title": "Text 3: Veranstaltungshinweis im Radio",
+              "titleAr": "النص 3: إعلان عن فعالية في الراديو",
+              "audio": "teil1/thema2_text4.mp3",
+              "transkript": "Für alle Musikfans: An diesem Wochenende findet im Stadtpark wieder das große Open-Air-Festival statt. Der Eintritt ist am Samstag komplett frei, am Sonntag kosten die Tickets 15 Euro an der Tageskasse. Bitte beachten Sie, dass das Mitbringen von eigenen Getränken aus Sicherheitsgründen nicht gestattet ist.",
+              "items": [
+                {
+                  "id": "5",
+                  "type": "richtig-falsch",
+                  "text": "Das Festival kostet an beiden Tagen Eintritt.",
+                  "correct": "Falsch"
+                },
+                {
+                  "id": "6",
+                  "type": "multiple-choice",
+                  "text": "Was ist auf dem Festival verboten?",
+                  "options": [
+                    "Das Fotografieren.",
+                    "Das Tanzen auf der Bühne.",
+                    "Das Mitbringen von Getränken."
+                  ],
+                  "correct": "c"
+                }
+              ]
+            },
+            {
+              "id": "7-8",
+              "title": "Text 4: Anrufbeantworter Hotel",
+              "titleAr": "النص 4: جهاز الرد الآلي في الفندق",
+              "audio": "teil1/thema2_text5.mp3",
+              "transkript": "Guten Tag, Herr Fischer, hier spricht das Hotel Alpenblick. Sie hatten bei uns ein Doppelzimmer für dieses Wochenende reserviert. Leider ist uns bei der Buchung ein Fehler unterlaufen und unser Haus ist komplett belegt. Wir haben jedoch auf unsere Kosten ein Zimmer im benachbarten Hotel Bergblick für Sie organisiert. Bitte melden Sie sich kurz.",
+              "items": [
+                {
+                  "id": "7",
+                  "type": "richtig-falsch",
+                  "text": "Das Hotel Alpenblick hat einen Fehler gemacht.",
+                  "correct": "Richtig"
+                },
+                {
+                  "id": "8",
+                  "type": "multiple-choice",
+                  "text": "Was bietet das Hotel als Lösung an?",
+                  "options": [
+                    "Sie stornieren die Buchung.",
+                    "Sie bezahlen das Wochenende im Nachbarhotel.",
+                    "Sie geben ihm ein günstigeres Zimmer."
+                  ],
+                  "correct": "b"
+                }
+              ]
+            },
+            {
+              "id": "9-10",
+              "title": "Text 5: Gespräch unter Kollegen",
+              "titleAr": "النص 5: محادثة بين زملاء",
+              "audio": "teil1/thema2_text6.mp3",
+              "transkript": "Hey Thomas, wir wollen dem Chef zum Geburtstag einen Gutschein für ein Restaurant schenken. Machst du auch mit? Wir dachten an zehn Euro pro Person. – Oh, gute Idee! Habt ihr schon ein bestimmtes Restaurant im Auge? – Ja, diesen neuen Italiener am Marktplatz. Er liebt doch Pizza. Gibst du mir das Geld morgen?",
+              "items": [
+                {
+                  "id": "9",
+                  "type": "richtig-falsch",
+                  "text": "Die Kollegen wollen für den Chef kochen.",
+                  "correct": "Falsch"
+                },
+                {
+                  "id": "10",
+                  "type": "multiple-choice",
+                  "text": "Was soll Thomas tun?",
+                  "options": [
+                    "Einen Gutschein kaufen.",
+                    "Morgen Geld mitbringen.",
+                    "Einen Tisch reservieren."
+                  ],
+                  "correct": "b"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "t1-set3-gesundheit",
+          "title": "Gesundheit und Freizeit",
+          "titleAr": "الصحة ووقت الفراغ",
+          "audioTexts": [
+            {
+              "id": "01-02",
+              "title": "Beispiel",
+              "titleAr": "مثال",
+              "audio": "teil1/thema3_beispiel.mp3",
+              "transkript": "...",
+              "items": [
+                {
+                  "id": "01",
+                  "type": "richtig-falsch",
+                  "text": "Dies ist ein Beispiel.",
+                  "correct": "Richtig"
+                },
+                {
+                  "id": "02",
+                  "type": "multiple-choice",
+                  "text": "Beispiel?",
+                  "options": [
+                    "A",
+                    "B",
+                    "C"
+                  ],
+                  "correct": "a"
+                }
+              ]
+            },
+            {
+              "id": "1-2",
+              "title": "Text 1: Apotheke",
+              "titleAr": "النص 1: الصيدلية",
+              "audio": "teil1/thema3_text2.mp3",
+              "transkript": "Hier sind Ihre Halstabletten. Bitte lutschen Sie alle drei Stunden eine davon. Und hier ist das Antibiotikum. Das müssen Sie unbedingt dreimal täglich nach den Mahlzeiten nehmen, am besten mit viel Wasser. Nehmen Sie es bitte so lange, bis die Packung leer ist, auch wenn Sie sich vorher schon besser fühlen.",
+              "items": [
+                {
+                  "id": "1",
+                  "type": "richtig-falsch",
+                  "text": "Man soll das Antibiotikum vor dem Essen nehmen.",
+                  "correct": "Falsch"
+                },
+                {
+                  "id": "2",
+                  "type": "multiple-choice",
+                  "text": "Wie lange soll das Antibiotikum genommen werden?",
+                  "options": [
+                    "Bis man sich gesund fühlt.",
+                    "Bis die Tabletten alle sind.",
+                    "Nur drei Tage lang."
+                  ],
+                  "correct": "b"
+                }
+              ]
+            },
+            {
+              "id": "3-4",
+              "title": "Text 2: Fitnessstudio",
+              "titleAr": "النص 2: صالة الألعاب الرياضية",
+              "audio": "teil1/thema3_text3.mp3",
+              "transkript": "Hallo, ich interessiere mich für eine Mitgliedschaft in Ihrem Studio. Was kostet das im Monat? – Das kommt darauf an. Unser Basistarif für die Geräte kostet 29 Euro. Wenn Sie auch an unseren Kursen wie Yoga oder Spinning teilnehmen möchten, liegt der Beitrag bei 49 Euro. Der Sauna-Bereich ist in beiden Tarifen inklusive.",
+              "items": [
+                {
+                  "id": "3",
+                  "type": "richtig-falsch",
+                  "text": "Die Sauna muss extra bezahlt werden.",
+                  "correct": "Falsch"
+                },
+                {
+                  "id": "4",
+                  "type": "multiple-choice",
+                  "text": "Was kostet 49 Euro?",
+                  "options": [
+                    "Geräte und Kurse.",
+                    "Nur die Kurse.",
+                    "Nur der Gerätebereich."
+                  ],
+                  "correct": "a"
+                }
+              ]
+            },
+            {
+              "id": "5-6",
+              "title": "Text 3: Kino-Ansage",
+              "titleAr": "النص 3: إعلان السينما",
+              "audio": "teil1/thema3_text4.mp3",
+              "transkript": "Sehr geehrte Kinobesucher, wir begrüßen Sie im Filmpalast. Bevor der Hauptfilm startet, möchten wir Sie noch auf unser neues Programmheft hinweisen, das Sie kostenlos an der Kasse mitnehmen können. Bitte schalten Sie jetzt Ihre Mobiltelefone aus oder auf lautlos, um andere Gäste nicht zu stören. Wir wünschen viel Vergnügen!",
+              "items": [
+                {
+                  "id": "5",
+                  "type": "richtig-falsch",
+                  "text": "Das Programmheft kostet Geld.",
+                  "correct": "Falsch"
+                },
+                {
+                  "id": "6",
+                  "type": "multiple-choice",
+                  "text": "Worum wird das Publikum gebeten?",
+                  "options": [
+                    "Leise zu sprechen.",
+                    "Die Handys auszuschalten.",
+                    "Sich Plätze zu suchen."
+                  ],
+                  "correct": "b"
+                }
+              ]
+            },
+            {
+              "id": "7-8",
+              "title": "Text 4: Radiotipp",
+              "titleAr": "النص 4: نصيحة إذاعية",
+              "audio": "teil1/thema3_text5.mp3",
+              "transkript": "Leiden Sie im Frühling auch unter starker Müdigkeit? Dagegen lässt sich leicht etwas tun. Experten raten, viel Zeit an der frischen Luft zu verbringen, um Sonnenlicht zu tanken. Auch leichte Bewegung wie Spazierengehen hilft dem Kreislauf. Auf Kaffee sollten Sie nachmittags besser verzichten, da er den Schlaf-Wach-Rhythmus stören kann.",
+              "items": [
+                {
+                  "id": "7",
+                  "type": "richtig-falsch",
+                  "text": "Bewegung an der frischen Luft hilft gegen Frühjahrsmüdigkeit.",
+                  "correct": "Richtig"
+                },
+                {
+                  "id": "8",
+                  "type": "multiple-choice",
+                  "text": "Was raten die Experten bezüglich Kaffee?",
+                  "options": [
+                    "Man soll gar keinen trinken.",
+                    "Man soll ihn nicht am Nachmittag trinken.",
+                    "Man soll ihn vor dem Sport trinken."
+                  ],
+                  "correct": "b"
+                }
+              ]
+            },
+            {
+              "id": "9-10",
+              "title": "Text 5: Telefongespräch",
+              "titleAr": "النص 5: محادثة هاتفية",
+              "audio": "teil1/thema3_text6.mp3",
+              "transkript": "Praxis Dr. Schneider, guten Tag. – Guten Tag, Wagner hier. Ich habe morgen um zehn einen Termin zur Blutabnahme, aber ich habe leider eine starke Autopanne und weiß nicht, ob der Wagen bis morgen früh repariert ist. Kann ich den Termin verschieben? – Gar kein Problem, Herr Wagner. Wie wäre es nächste Woche Mittwoch um neun?",
+              "items": [
+                {
+                  "id": "9",
+                  "type": "richtig-falsch",
+                  "text": "Herr Wagner sagt den Termin ab, weil er krank ist.",
+                  "correct": "Falsch"
+                },
+                {
+                  "id": "10",
+                  "type": "multiple-choice",
+                  "text": "Wann ist der neue Termin?",
+                  "options": [
+                    "Morgen früh.",
+                    "Am nächsten Mittwoch.",
+                    "In einem Monat."
+                  ],
+                  "correct": "b"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "t1-set4-beruf",
+          "title": "Arbeitswelt und Beruf",
+          "titleAr": "عالم العمل والمهنة",
+          "audioTexts": [
+            {
+              "id": "01-02",
+              "title": "Beispiel",
+              "titleAr": "مثال",
+              "audio": "teil1/thema4_beispiel.mp3",
+              "transkript": "...",
+              "items": [
+                {
+                  "id": "01",
+                  "type": "richtig-falsch",
+                  "text": "Beispiel.",
+                  "correct": "Richtig"
+                },
+                {
+                  "id": "02",
+                  "type": "multiple-choice",
+                  "text": "Beispiel?",
+                  "options": [
+                    "A",
+                    "B",
+                    "C"
+                  ],
+                  "correct": "a"
+                }
+              ]
+            },
+            {
+              "id": "1-2",
+              "title": "Text 1: Jobbörse",
+              "titleAr": "النص 1: بورصة الوظائف",
+              "audio": "teil1/thema4_text2.mp3",
+              "transkript": "Sie suchen eine neue berufliche Herausforderung? Auf der Jobmesse 'KarrierePlus' präsentieren sich über 100 Unternehmen aus der Region. Lassen Sie Ihre Bewerbungsmappe von Profis checken und nutzen Sie die Chance auf ein direktes Gespräch. Diesen Freitag in der Messehalle 4. Eintritt für Schüler und Studenten frei.",
+              "items": [
+                {
+                  "id": "1",
+                  "type": "richtig-falsch",
+                  "text": "Die Messe findet am Wochenende statt.",
+                  "correct": "Falsch"
+                },
+                {
+                  "id": "2",
+                  "type": "multiple-choice",
+                  "text": "Wer muss auf der Messe keinen Eintritt bezahlen?",
+                  "options": [
+                    "Niemand.",
+                    "Studierende und Schüler.",
+                    "Arbeitlose."
+                  ],
+                  "correct": "b"
+                }
+              ]
+            },
+            {
+              "id": "3-4",
+              "title": "Text 2: Kollegengespräch am Drucker",
+              "titleAr": "النص 2: محادثة زملاء عند الطابعة",
+              "audio": "teil1/thema4_text3.mp3",
+              "transkript": "Mist, der Drucker funktioniert schon wieder nicht. Er zeigt einen Papierstau an, aber ich sehe da kein Papier. – Lass mich mal schauen. Ah, das Fach 2 ist leer, aber als du gedruckt hast, hast du Fach 2 ausgewählt. Wenn du das auf 'automatisch' stellst, nimmt er das Papier aus Fach 1. Versuch es jetzt nochmal.",
+              "items": [
+                {
+                  "id": "3",
+                  "type": "richtig-falsch",
+                  "text": "Der Drucker war wirklich kaputt.",
+                  "correct": "Falsch"
+                },
+                {
+                  "id": "4",
+                  "type": "multiple-choice",
+                  "text": "Was war das Problem?",
+                  "options": [
+                    "Es war gar kein Papier da.",
+                    "Es gab einen echten Papierstau.",
+                    "Es wurde das falsche Papierfach gewählt."
+                  ],
+                  "correct": "c"
+                }
+              ]
+            },
+            {
+              "id": "5-6",
+              "title": "Text 3: Anruf beim IT-Support",
+              "titleAr": "النص 3: اتصال بالدعم التقني",
+              "audio": "teil1/thema4_text4.mp3",
+              "transkript": "IT-Support, Lehmann, was kann ich für Sie tun? – Hallo, hier ist Berger aus der Buchhaltung. Ich habe mein Passwort für das System dreimal falsch eingegeben und jetzt ist mein Konto gesperrt. – Das ist kein Problem. Ich sende Ihnen gleich einen Link an Ihre Dienst-Handynummer. Dort können Sie das Passwort selbst zurücksetzen.",
+              "items": [
+                {
+                  "id": "5",
+                  "type": "richtig-falsch",
+                  "text": "Herr Berger hat sein Passwort vergessen.",
+                  "correct": "Richtig"
+                },
+                {
+                  "id": "6",
+                  "type": "multiple-choice",
+                  "text": "Wie wird das Problem gelöst?",
+                  "options": [
+                    "Der Support setzt das Passwort zurück.",
+                    "Herr Berger bekommt einen Link aufs Handy.",
+                    "Herr Berger muss zum IT-Support gehen."
+                  ],
+                  "correct": "b"
+                }
+              ]
+            },
+            {
+              "id": "7-8",
+              "title": "Text 4: Radiomeldung Streik",
+              "titleAr": "النص 4: إعلان إذاعي عن إضراب",
+              "audio": "teil1/thema4_text5.mp3",
+              "transkript": "Die Gewerkschaft der Busfahrer hat für morgen einen ganztägigen Warnstreik angekündigt. Betroffen sind alle städtischen Buslinien. S-Bahnen und Straßenbahnen fahren jedoch nach dem regulären Fahrplan. Fahrgäste werden gebeten, auf diese Alternativen oder das Fahrrad umzusteigen. Der Streik soll am Donnerstagmorgen beendet sein.",
+              "items": [
+                {
+                  "id": "7",
+                  "type": "richtig-falsch",
+                  "text": "Der Streik betrifft auch die Straßenbahnen.",
+                  "correct": "Falsch"
+                },
+                {
+                  "id": "8",
+                  "type": "multiple-choice",
+                  "text": "Welche Alternative wird empfohlen?",
+                  "options": [
+                    "Die S-Bahn oder das Fahrrad.",
+                    "Das Taxi.",
+                    "Zu Fuß gehen."
+                  ],
+                  "correct": "a"
+                }
+              ]
+            },
+            {
+              "id": "9-10",
+              "title": "Text 5: Besprechung im Büro",
+              "titleAr": "النص 5: اجتماع في المكتب",
+              "audio": "teil1/thema4_text6.mp3",
+              "transkript": "So, meine Damen und Herren, bevor wir die Besprechung beenden, noch ein organisatorischer Hinweis. Unser Sommerfest findet dieses Jahr nicht im Juli, sondern erst Mitte August statt. Der Grund ist, dass viele im Juli schon im Urlaub sind. Die Einladungen mit dem genauen Datum schicke ich Ihnen Ende der Woche per Mail.",
+              "items": [
+                {
+                  "id": "9",
+                  "type": "richtig-falsch",
+                  "text": "Das Sommerfest findet im Juli statt.",
+                  "correct": "Falsch"
+                },
+                {
+                  "id": "10",
+                  "type": "multiple-choice",
+                  "text": "Wie erfahren die Kollegen das genaue Datum?",
+                  "options": [
+                    "Per Telefon.",
+                    "Per E-Mail.",
+                    "In der nächsten Besprechung."
+                  ],
+                  "correct": "b"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teil-2",
+      "label": "Teil 2",
+      "nummer": 2,
+      "arbeitszeit": "10 Minuten",
+      "pruefungsziel": "Informationen verstehen",
+      "aufgabentyp": "mehrfachauswahl-3-gliedrig",
+      "punkte": 6,
+      "itemCount": 6,
+      "aufgabenNummern": "11–16",
+      "answerType": "multiple-choice-abc",
+      "title": "Radio-Interview",
+      "titleAr": "مقابلة إذاعية",
+      "instructions": "Sie hören ein Radio-Interview. Sie hören den Text zweimal. Wählen Sie bei den Aufgaben 11 bis 16 die richtige Lösung a, b oder c.",
+      "description": "Ein längeres Interview (ca. 4 Min.), das ZWEIMAL gehört wird. 6 Multiple-Choice-Aufgaben (a/b/c).",
+      "themen": [
+        {
+          "id": "t2-ernaehrung-zukunft",
+          "title": "Ernährung der Zukunft",
+          "titleAr": "تغذية المستقبل",
+          "audio": "teil2/thema1.mp3",
+          "transkript": "Moderator: Guten Abend, liebe Hörerinnen und Hörer. Wie ernähren wir uns im Jahr 2050? Darüber spreche ich heute mit der Lebensmittelforscherin Frau Prof. Dr. Albers. Frau Albers, müssen wir uns bald von Insekten ernähren?\nProf. Albers: Hallo. Nun, Insekten sind eine extrem gute Proteinquelle und benötigen in der Zucht viel weniger Wasser und Platz als Rinder. Aber in Europa ist die psychologische Hürde noch sehr hoch. Ich glaube eher, dass Fleischalternativen aus Pflanzen wie Erbsen oder Soja, die aber genau wie echtes Fleisch schmecken, den Markt erobern werden.\nModerator: Viele Menschen kritisieren aber, dass diese Ersatzprodukte stark industriell verarbeitet sind.\nProf. Albers: Das ist ein berechtigter Kritikpunkt. Einige Ersatzprodukte enthalten viel Salz und Zusatzstoffe, um Geschmack und Konsistenz zu erreichen. Die Forschung arbeitet jedoch intensiv daran, diese Zusatzstoffe zu reduzieren. Gesundes Essen darf nicht künstlich sein.\nModerator: Eine andere Idee ist sogenanntes In-Vitro-Fleisch, also Fleisch aus dem Labor.\nProf. Albers: Ja, das ist eine sehr vielversprechende Technologie. Dabei werden tierische Zellen im Labor gezüchtet, ohne dass ein Tier dafür sterben muss. Derzeit ist die Produktion aber noch viel zu teuer für den Supermarkt. Es wird sicher noch 10 bis 15 Jahre dauern, bis das für jeden bezahlbar ist.\nModerator: Wird der traditionelle Bauer dann arbeitslos?\nProf. Albers: Nein, aber die Landwirtschaft wird sich verändern. Wir werden mehr pflanzliche Rohstoffe anbauen müssen. Die Bauern von morgen werden vielleicht Hafer und Algen produzieren statt Schweine zu züchten. Die Nachfrage nach regionalen und ökologisch angebauten Lebensmitteln steigt zudem stetig an.\nModerator: Frau Albers, vielen Dank für diese Einblicke.",
+          "items": [
+            {
+              "id": "11",
+              "text": "Was denkt Prof. Albers über Insekten als Nahrung in Europa?",
+              "options": [
+                {
+                  "label": "Sie werden bald das beliebteste Essen sein.",
+                  "value": "a"
+                },
+                {
+                  "label": "Die Menschen haben große Vorbehalte dagegen.",
+                  "value": "b"
+                },
+                {
+                  "label": "Sie sind nicht gesund genug für die Menschen.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "12",
+              "text": "Welche Alternative sieht sie für die nahe Zukunft?",
+              "options": [
+                {
+                  "label": "Pflanzliche Fleischalternativen.",
+                  "value": "a"
+                },
+                {
+                  "label": "Nur noch Gemüse und Obst.",
+                  "value": "b"
+                },
+                {
+                  "label": "Billiges Rindfleisch aus dem Ausland.",
+                  "value": "c"
+                }
+              ],
+              "correct": "a"
+            },
+            {
+              "id": "13",
+              "text": "Was kritisiert man an vielen aktuellen Fleischersatzprodukten?",
+              "options": [
+                {
+                  "label": "Sie schmecken nicht gut.",
+                  "value": "a"
+                },
+                {
+                  "label": "Sie sind zu teuer.",
+                  "value": "b"
+                },
+                {
+                  "label": "Sie enthalten viele künstliche Stoffe und Salz.",
+                  "value": "c"
+                }
+              ],
+              "correct": "c"
+            },
+            {
+              "id": "14",
+              "text": "Warum gibt es noch kein Labor-Fleisch im Supermarkt?",
+              "options": [
+                {
+                  "label": "Es ist gesetzlich verboten.",
+                  "value": "a"
+                },
+                {
+                  "label": "Die Herstellung kostet aktuell noch zu viel.",
+                  "value": "b"
+                },
+                {
+                  "label": "Niemand möchte es kaufen.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "15",
+              "text": "Wie wird sich die Rolle der Bauern verändern?",
+              "options": [
+                {
+                  "label": "Sie werden komplett arbeitslos.",
+                  "value": "a"
+                },
+                {
+                  "label": "Sie werden mehr Pflanzen als Tiere züchten.",
+                  "value": "b"
+                },
+                {
+                  "label": "Sie werden in Laboren arbeiten.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "16",
+              "text": "Was wünschen sich die Konsumenten immer mehr?",
+              "options": [
+                {
+                  "label": "Lebensmittel aus der eigenen Region.",
+                  "value": "a"
+                },
+                {
+                  "label": "Lebensmittel aus fernen Ländern.",
+                  "value": "b"
+                },
+                {
+                  "label": "Möglichst billige Lebensmittel.",
+                  "value": "c"
+                }
+              ],
+              "correct": "a"
+            }
+          ]
+        },
+        {
+          "id": "t2-klimawandel-alltag",
+          "title": "Klimawandel im Alltag",
+          "titleAr": "تغير المناخ في الحياة اليومية",
+          "audio": "teil2/thema2.mp3",
+          "transkript": "Moderator: Herzlich willkommen zu unserem Magazin 'Umwelt'. Bei uns ist heute Herr Dr. Krüger, Umweltwissenschaftler. Herr Krüger, viele Menschen fühlen sich machtlos gegen den Klimawandel. Was kann der Einzelne überhaupt tun?\nDr. Krüger: Guten Tag. Das Gefühl der Machtlosigkeit ist verständlich, aber falsch. Etwa 40 Prozent der CO2-Emissionen in Deutschland entstehen durch privaten Konsum und Wohnen. Wenn viele Menschen kleine Dinge ändern, hat das einen enormen Effekt.\nModerator: Wo sollten wir anfangen? Beim Autofahren?\nDr. Krüger: Der Verkehr ist definitiv ein großer Faktor, besonders das Fliegen. Aber oft wird vergessen, dass auch unsere Heizungen extrem viel Energie verbrauchen. Wenn man die Raumtemperatur im Winter nur um ein Grad senkt, spart das bis zu sechs Prozent Energie. Das schont das Klima und den eigenen Geldbeutel.\nModerator: Und beim Einkaufen?\nDr. Krüger: Regional und saisonal einzukaufen ist wichtig, um lange Transportwege zu vermeiden. Ein noch größerer Hebel ist aber unser Fleischkonsum. Die Produktion von einem Kilo Rindfleisch verursacht so viel Treibhausgas wie eine Autofahrt von über 100 Kilometern. Weniger Fleisch zu essen, ist also aktiver Klimaschutz.\nModerator: Viele Menschen versuchen auch, Müll zu vermeiden.\nDr. Krüger: Müllvermeidung ist gut für die Meere und die Natur. Für das Klima ist es jedoch wichtiger, langlebige Produkte zu kaufen. Ein Smartphone, das vier Jahre genutzt wird statt nur zwei Jahre, spart extrem viel Energie und Ressourcen in der Produktion, denn dort fällt das meiste CO2 an.\nModerator: Herr Krüger, danke für die praktischen Tipps.",
+          "items": [
+            {
+              "id": "11",
+              "text": "Wie viel Einfluss hat der private Konsum auf die CO2-Emissionen?",
+              "options": [
+                {
+                  "label": "Einen sehr geringen Einfluss.",
+                  "value": "a"
+                },
+                {
+                  "label": "Fast die Hälfte der Emissionen.",
+                  "value": "b"
+                },
+                {
+                  "label": "Mehr als 80 Prozent.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "12",
+              "text": "Welcher Bereich im eigenen Zuhause verbraucht laut Dr. Krüger sehr viel Energie?",
+              "options": [
+                {
+                  "label": "Das Heizen der Räume.",
+                  "value": "a"
+                },
+                {
+                  "label": "Die Beleuchtung.",
+                  "value": "b"
+                },
+                {
+                  "label": "Das Fernsehen.",
+                  "value": "c"
+                }
+              ],
+              "correct": "a"
+            },
+            {
+              "id": "13",
+              "text": "Was ist der Hauptvorteil, wenn man die Heizung etwas herunterdreht?",
+              "options": [
+                {
+                  "label": "Es ist gesünder für den Körper.",
+                  "value": "a"
+                },
+                {
+                  "label": "Man spart Energie und Geld.",
+                  "value": "b"
+                },
+                {
+                  "label": "Die Heizung geht nicht so schnell kaputt.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "14",
+              "text": "Was verursacht laut dem Interview besonders viele Treibhausgase?",
+              "options": [
+                {
+                  "label": "Die Produktion von Rindfleisch.",
+                  "value": "a"
+                },
+                {
+                  "label": "Der Transport von Äpfeln.",
+                  "value": "b"
+                },
+                {
+                  "label": "Das Wegwerfen von Plastiktüten.",
+                  "value": "c"
+                }
+              ],
+              "correct": "a"
+            },
+            {
+              "id": "15",
+              "text": "Was hilft der Umwelt beim Thema Technik am meisten?",
+              "options": [
+                {
+                  "label": "Kaputte Geräte sofort wegzuwerfen.",
+                  "value": "a"
+                },
+                {
+                  "label": "Möglichst kleine Handys zu kaufen.",
+                  "value": "b"
+                },
+                {
+                  "label": "Geräte möglichst lange zu verwenden.",
+                  "value": "c"
+                }
+              ],
+              "correct": "c"
+            },
+            {
+              "id": "16",
+              "text": "Warum ist es schlecht, oft neue Smartphones zu kaufen?",
+              "options": [
+                {
+                  "label": "Weil die Produktion extrem viel Energie kostet.",
+                  "value": "a"
+                },
+                {
+                  "label": "Weil sie schwer zu recyceln sind.",
+                  "value": "b"
+                },
+                {
+                  "label": "Weil sie zu viel Strom verbrauchen.",
+                  "value": "c"
+                }
+              ],
+              "correct": "a"
+            }
+          ]
+        },
+        {
+          "id": "t2-stadtentwicklung",
+          "title": "Stadtentwicklung und Wohnen",
+          "titleAr": "التنمية الحضرية والسكن",
+          "audio": "teil2/thema3.mp3",
+          "transkript": "Moderator: Willkommen bei 'Stadtgespräch'. Unser Thema heute: Wie wohnen wir in der Zukunft? Bei mir ist die Stadtplanerin Julia Hofmann. Frau Hofmann, die Mieten in den Großstädten explodieren. Was läuft da schief?\nHofmann: Guten Abend. Das Problem ist simpel: Es wollen mehr Menschen in die Stadt ziehen, als es Wohnungen gibt. Jahrelang wurde zu wenig gebaut. Und der Platz im Zentrum ist begrenzt, wir können die Städte nicht unendlich ausdehnen.\nModerator: Wäre es eine Lösung, höher zu bauen? Also mehr Hochhäuser?\nHofmann: Das ist definitiv ein Teil der Lösung. Wir müssen die Höhe nutzen. Viele Menschen haben Angst vor Wolkenkratzern, weil sie an anonyme Betonsilos aus den 70er Jahren denken. Aber moderne Hochhäuser sind grün, nachhaltig und bieten Gemeinschaftsflächen wie Dachgärten, wo sich die Nachbarn treffen können.\nModerator: Manche fordern auch, den Verkehr aus den Innenstädten zu verbannen, um Platz zu schaffen.\nHofmann: Ja, wir verschwenden unglaublich viel Platz für parkende Autos. Wenn wir weniger Autos haben, können wir aus Straßen Grünflächen, Spielplätze oder Radwege machen. Die Stadt der Zukunft muss den Menschen in den Mittelpunkt stellen, nicht das Auto.\nModerator: Aber wie kommen die Menschen dann zur Arbeit?\nHofmann: Durch einen exzellenten öffentlichen Nahverkehr, Carsharing und Mikromobilität wie E-Scooter. Außerdem wird das Homeoffice dazu führen, dass wir nicht mehr jeden Tag pendeln müssen.\nModerator: Was ist mit dem Leben auf dem Land?\nHofmann: Das Land wird wieder attraktiver, eben weil man durch schnelles Internet auch von dort aus arbeiten kann. Wir beobachten bereits, dass Familien aus der Stadt wegziehen, weil sie sich dort den Traum vom eigenen Garten noch leisten können.",
+          "items": [
+            {
+              "id": "11",
+              "text": "Warum steigen die Mieten in den Großstädten?",
+              "options": [
+                {
+                  "label": "Weil die Wohnungen luxuriöser werden.",
+                  "value": "a"
+                },
+                {
+                  "label": "Weil die Nachfrage größer ist als das Angebot.",
+                  "value": "b"
+                },
+                {
+                  "label": "Weil die Vermieter mehr Geld verdienen wollen.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "12",
+              "text": "Was sagt Frau Hofmann über den Bau von Hochhäusern?",
+              "options": [
+                {
+                  "label": "Sie sind ein notwendiger Teil der Lösung.",
+                  "value": "a"
+                },
+                {
+                  "label": "Sie sind oft hässliche Betonsilos.",
+                  "value": "b"
+                },
+                {
+                  "label": "Niemand möchte dort wohnen.",
+                  "value": "c"
+                }
+              ],
+              "correct": "a"
+            },
+            {
+              "id": "13",
+              "text": "Was kritisiert die Stadtplanerin an unseren heutigen Städten?",
+              "options": [
+                {
+                  "label": "Es gibt zu wenige Spielplätze.",
+                  "value": "a"
+                },
+                {
+                  "label": "Parkende Autos nehmen zu viel Platz weg.",
+                  "value": "b"
+                },
+                {
+                  "label": "Es gibt zu viele Radwege.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "14",
+              "text": "Wie sollen die Menschen in Zukunft zur Arbeit kommen?",
+              "options": [
+                {
+                  "label": "Mit fliegenden Autos.",
+                  "value": "a"
+                },
+                {
+                  "label": "Mit öffentlichen Verkehrsmitteln und Fahrrädern.",
+                  "value": "b"
+                },
+                {
+                  "label": "Die meisten werden zu Fuß gehen.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "15",
+              "text": "Welchen Effekt hat das Homeoffice auf das Wohnen?",
+              "options": [
+                {
+                  "label": "Man braucht keine Büros mehr.",
+                  "value": "a"
+                },
+                {
+                  "label": "Die Menschen müssen seltener pendeln.",
+                  "value": "b"
+                },
+                {
+                  "label": "Die Stromkosten steigen extrem.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "16",
+              "text": "Warum ziehen einige Familien aufs Land?",
+              "options": [
+                {
+                  "label": "Weil die Luft dort sauberer ist.",
+                  "value": "a"
+                },
+                {
+                  "label": "Weil sie dort günstig ein Haus mit Garten finden.",
+                  "value": "b"
+                },
+                {
+                  "label": "Weil es in der Stadt keine Schulen gibt.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            }
+          ]
+        },
+        {
+          "id": "t2-kuenstliche-intelligenz",
+          "title": "Künstliche Intelligenz und Arbeit",
+          "titleAr": "الذكاء الاصطناعي والعمل",
+          "audio": "teil2/thema4.mp3",
+          "transkript": "Moderator: In unserem heutigen Tech-Podcast sprechen wir mit dem IT-Spezialisten Markus Richter über Künstliche Intelligenz, kurz KI. Herr Richter, viele Menschen haben Angst, dass KI ihnen bald den Job wegnimmt. Ist diese Angst berechtigt?\nRichter: Guten Tag. Teilweise ja. Wir sehen bereits, dass Routineaufgaben in der Buchhaltung, bei der Datenanalyse oder im Kundenservice zunehmend von Algorithmen übernommen werden. Ein Computer arbeitet einfach schneller und fehlerfreier als ein Mensch, wenn es um das Auswerten großer Datenmengen geht.\nModerator: Das klingt nach Massenarbeitslosigkeit.\nRichter: Das glaube ich nicht. In der Geschichte hat jede technologische Revolution Jobs vernichtet, aber auch neue geschaffen. KI wird uns vor allem mühsame Routinearbeit abnehmen. Das gibt uns mehr Zeit für Aufgaben, die Kreativität, Empathie und komplexe Problemlösung erfordern – Dinge, die eine Maschine nicht gut kann.\nModerator: Welche Berufe sind besonders sicher?\nRichter: Alle Berufe, die viel zwischenmenschliche Interaktion erfordern, wie Pflegekräfte, Erzieher oder Therapeuten. Auch kreative Berufe und das Handwerk sind schwer durch KI zu ersetzen. Ein Roboter kann schwer ein kaputtes Wasserrohr im Altbau reparieren.\nModerator: Wie sollten sich Arbeitnehmer auf diese Entwicklung vorbereiten?\nRichter: Lebenslanges Lernen ist das Stichwort. Man muss keine Angst vor der Technik haben, sondern lernen, sie als Werkzeug zu nutzen. Ein Arzt wird nicht durch KI ersetzt, aber ein Arzt, der KI nutzt, wird den Arzt ersetzen, der keine KI nutzt. Wer sich stetig weiterbildet, hat auf dem Arbeitsmarkt der Zukunft gute Karten.",
+          "items": [
+            {
+              "id": "11",
+              "text": "Welche Aufgaben werden schon heute oft von KI erledigt?",
+              "options": [
+                {
+                  "label": "Kreative und künstlerische Arbeiten.",
+                  "value": "a"
+                },
+                {
+                  "label": "Routineaufgaben und Datenanalyse.",
+                  "value": "b"
+                },
+                {
+                  "label": "Reparaturen von Maschinen.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "12",
+              "text": "Warum ist ein Computer bei Daten besser als ein Mensch?",
+              "options": [
+                {
+                  "label": "Er arbeitet schneller und macht weniger Fehler.",
+                  "value": "a"
+                },
+                {
+                  "label": "Er kostet kein Geld.",
+                  "value": "b"
+                },
+                {
+                  "label": "Er kann kreativere Lösungen finden.",
+                  "value": "c"
+                }
+              ],
+              "correct": "a"
+            },
+            {
+              "id": "13",
+              "text": "Was sagt Herr Richter über die Entwicklung des Arbeitsmarktes?",
+              "options": [
+                {
+                  "label": "Es wird zu massiver Arbeitslosigkeit kommen.",
+                  "value": "a"
+                },
+                {
+                  "label": "Es werden mehr Jobs geschaffen als vernichtet.",
+                  "value": "b"
+                },
+                {
+                  "label": "Alte Jobs verschwinden, aber neue entstehen.",
+                  "value": "c"
+                }
+              ],
+              "correct": "c"
+            },
+            {
+              "id": "14",
+              "text": "Welche Berufe sind laut Experten vor KI sicher?",
+              "options": [
+                {
+                  "label": "Berufe in der Informatik.",
+                  "value": "a"
+                },
+                {
+                  "label": "Berufe mit viel menschlichem Kontakt.",
+                  "value": "b"
+                },
+                {
+                  "label": "Büroberufe in der Verwaltung.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "15",
+              "text": "Warum ist das Handwerk schwer zu ersetzen?",
+              "options": [
+                {
+                  "label": "Weil Handwerker sehr billig sind.",
+                  "value": "a"
+                },
+                {
+                  "label": "Weil jede Reparatur-Situation anders und komplex ist.",
+                  "value": "b"
+                },
+                {
+                  "label": "Weil Maschinen keine Werkzeuge halten können.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "16",
+              "text": "Was empfiehlt Herr Richter den Arbeitnehmern?",
+              "options": [
+                {
+                  "label": "Sie sollen die Technologie ablehnen.",
+                  "value": "a"
+                },
+                {
+                  "label": "Sie sollten Berufe wählen, die nichts mit Computern zu tun haben.",
+                  "value": "b"
+                },
+                {
+                  "label": "Sie sollen sich weiterbilden und KI als Werkzeug nutzen.",
+                  "value": "c"
+                }
+              ],
+              "correct": "c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teil-3",
+      "label": "Teil 3",
+      "nummer": 3,
+      "arbeitszeit": "10 Minuten",
+      "pruefungsziel": "Aussagen verstehen",
+      "aufgabentyp": "zuordnung-passagen",
+      "punkte": 6,
+      "itemCount": 6,
+      "aufgabenNummern": "17–22",
+      "answerType": "zuordnung-person",
+      "title": "Wer sagt was?",
+      "titleAr": "من يقول ماذا؟",
+      "instructions": "Sie hören ein Gespräch im Radio. Sie hören den Text einmal. Wer sagt was? Ordnen Sie die Aussagen den Personen zu.",
+      "description": "Ein Radio-Gespräch mit drei Personen (Moderator und 2 Gäste), einmal gehört. 6 Zuordnungsaufgaben (a, b oder c).",
+      "themen": [
+        {
+          "id": "t3-wohnen",
+          "title": "Alternative Wohnformen",
+          "titleAr": "أشكال السكن البديلة",
+          "audio": "teil3/thema1.mp3",
+          "transkript": "Moderator (Stefan): Willkommen zur heutigen Runde. Wir sprechen über 'Tiny Houses', also sehr kleine Häuser, und minimalistisches Wohnen. Bei mir sind Klara, die selbst in einem Tiny House lebt, und Herr Wagner, ein Architekt.\nKlara: Hallo, danke für die Einladung.\nWagner: Guten Tag!\nStefan: Klara, du hast dein Leben radikal verändert und lebst jetzt auf nur 15 Quadratmetern. Vermisst du nicht den Platz?\nKlara: Überhaupt nicht. Weniger Raum bedeutet auch weniger Dinge, die man putzen und aufräumen muss. Es befreit ungemein, nur das Nötigste zu besitzen.\nWagner: Aus architektonischer Sicht finde ich den Trend spannend. Aber man darf nicht vergessen, dass diese Häuschen oft außerhalb der Stadt stehen müssen, weil in den Zentren der Platz fehlt. Das erhöht den Pendelverkehr.\nStefan: Das stimmt, der Weg zur Arbeit wird länger. Aber sind Tiny Houses wirklich die Lösung für die Wohnungsnot in Städten?\nWagner: Nein, sicher nicht. Für Großstädte brauchen wir dichten Wohnungsbau, also Mehrfamilienhäuser. Tiny Houses verbrauchen relativ gesehen zu viel Grundstücksfläche.\nKlara: Für mich war es eher eine finanzielle Entscheidung. Ich wollte keine Schulden für ein großes Haus machen. Jetzt bin ich finanziell komplett unabhängig.\nStefan: Wir sehen also, es gibt Vor- und Nachteile. Vielen Dank für die Diskussion.",
+          "personen": {
+            "a": "Moderator (Stefan)",
+            "b": "Klara",
+            "c": "Herr Wagner"
+          },
+          "items": [
+            {
+              "id": "17",
+              "text": "Ein kleines Haus macht weniger Arbeit beim Aufräumen.",
+              "correct": "b"
+            },
+            {
+              "id": "18",
+              "text": "Tiny Houses führen oft zu längeren Wegen zur Arbeit.",
+              "correct": "c"
+            },
+            {
+              "id": "19",
+              "text": "Sind kleine Häuser die Antwort auf fehlenden Wohnraum?",
+              "correct": "a"
+            },
+            {
+              "id": "20",
+              "text": "In großen Städten muss man platzsparend in die Höhe bauen.",
+              "correct": "c"
+            },
+            {
+              "id": "21",
+              "text": "Durch das kleine Haus hat man weniger Geldsorgen.",
+              "correct": "b"
+            },
+            {
+              "id": "22",
+              "text": "Jede Wohnform hat ihre eigenen Vor- und Nachteile.",
+              "correct": "a"
+            }
+          ]
+        },
+        {
+          "id": "t3-homeoffice",
+          "title": "Die neue Arbeitswelt",
+          "titleAr": "عالم العمل الجديد",
+          "audio": "teil3/thema2.mp3",
+          "transkript": "Moderator (Thomas): Guten Morgen zusammen! Wir sprechen heute über das Thema Homeoffice. Sind wir im Büro oder zu Hause produktiver? Meine Gäste sind Frau Bergmann, eine Geschäftsführerin, und Herr Yilmaz, Arbeitspsychologe.\nBergmann: Schön, hier zu sein.\nYilmaz: Guten Morgen.\nThomas: Frau Bergmann, in Ihrer Firma gibt es keine Präsenzpflicht mehr. Wie sind die Erfahrungen?\nBergmann: Überwiegend positiv. Unsere Mitarbeiter schätzen die Flexibilität enorm. Viele berichten, dass sie konzentrierter arbeiten können, wenn keine Kollegen ständig ins Büro platzen.\nYilmaz: Das kann ich aus psychologischer Sicht bestätigen. Allerdings fehlt auf Dauer der informelle Austausch an der Kaffeemaschine. Dort entstehen oft die besten kreativen Ideen.\nThomas: Das bedeutet, wir brauchen das Büro vor allem für die Kommunikation?\nBergmann: Genau. Wir haben unsere Büroräume umgebaut. Es gibt kaum noch feste Schreibtische, dafür mehr Sofaecken und Besprechungsräume für Projektarbeiten.\nYilmaz: Man muss auch aufpassen, dass Arbeit und Privatleben sich nicht zu sehr vermischen. Wer zu Hause arbeitet, macht seltener richtig Feierabend und schaut abends noch Mails an. Das führt zu Stress.\nThomas: Die Lösung scheint also ein gutes Mittelmaß zu sein. Danke an meine Gäste.",
+          "personen": {
+            "a": "Moderator (Thomas)",
+            "b": "Frau Bergmann",
+            "c": "Herr Yilmaz"
+          },
+          "items": [
+            {
+              "id": "17",
+              "text": "Ohne Störungen durch Kollegen arbeitet man fokussierter.",
+              "correct": "b"
+            },
+            {
+              "id": "18",
+              "text": "Gute Ideen entstehen oft zufällig beim Gespräch mit Kollegen.",
+              "correct": "c"
+            },
+            {
+              "id": "19",
+              "text": "Dient das Büro heutzutage nur noch dem Austausch?",
+              "correct": "a"
+            },
+            {
+              "id": "20",
+              "text": "Wir haben das Büro so gestaltet, dass man besser zusammenarbeiten kann.",
+              "correct": "b"
+            },
+            {
+              "id": "21",
+              "text": "Die Grenze zwischen Arbeit und Freizeit verschwindet im Homeoffice oft.",
+              "correct": "c"
+            },
+            {
+              "id": "22",
+              "text": "Ein Kompromiss aus beidem ist wahrscheinlich der beste Weg.",
+              "correct": "a"
+            }
+          ]
+        },
+        {
+          "id": "t3-bildung",
+          "title": "Noten in der Schule",
+          "titleAr": "الدرجات في المدرسة",
+          "audio": "teil3/thema3.mp3",
+          "transkript": "Moderator (Laura): Hallo zur Bildungsdebatte. Brauchen wir noch Schulnoten von 1 bis 6? Darüber spreche ich mit Herrn Scholz, einem Lehrer, und Frau Peters, einer Bildungsforscherin.\nScholz: Hallo!\nPeters: Guten Tag.\nLaura: Herr Scholz, Sie vergeben täglich Noten. Finden Sie das System noch zeitgemäß?\nScholz: Ehrlich gesagt, habe ich oft Bauchschmerzen dabei. Noten erzeugen einen enormen Druck bei den Schülern. Ein einzelner Test sagt wenig über den Charakter oder die wahre Leistungsfähigkeit eines Kindes aus.\nPeters: Da stimme ich Ihnen zu. Studien zeigen, dass Noten die intrinsische Motivation, also die Freude am Lernen selbst, zerstören. Schüler lernen dann nur noch für die Prüfung und vergessen den Stoff danach sofort.\nLaura: Aber wie sollen Eltern und Betriebe sonst wissen, was ein Schüler kann?\nPeters: Ein ausführlicher schriftlicher Bericht über die individuellen Stärken und Schwächen ist viel aussagekräftiger als eine einfache Zahl.\nScholz: Das stimmt in der Theorie. Aber in der Praxis haben wir Lehrer bei 30 Kindern pro Klasse gar nicht die Zeit, für jeden so detaillierte Berichte zu verfassen. Das System müsste grundlegend geändert werden.\nLaura: Das klingt nach einem langen Weg, den wir in der Bildungspolitik noch vor uns haben.",
+          "personen": {
+            "a": "Moderator (Laura)",
+            "b": "Herr Scholz",
+            "c": "Frau Peters"
+          },
+          "items": [
+            {
+              "id": "17",
+              "text": "Das Notensystem setzt Kinder stark unter Stress.",
+              "correct": "b"
+            },
+            {
+              "id": "18",
+              "text": "Wenn es nur um Noten geht, geht der Spaß am Lernen verloren.",
+              "correct": "c"
+            },
+            {
+              "id": "19",
+              "text": "Wie können Firmen ohne Noten die Leistung einschätzen?",
+              "correct": "a"
+            },
+            {
+              "id": "20",
+              "text": "Textbewertungen geben ein viel besseres Bild vom Schüler.",
+              "correct": "c"
+            },
+            {
+              "id": "21",
+              "text": "Lehrkräfte haben zu wenig Zeit für detaillierte schriftliche Beurteilungen.",
+              "correct": "b"
+            },
+            {
+              "id": "22",
+              "text": "Es wird noch lange dauern, bis sich das System ändert.",
+              "correct": "a"
+            }
+          ]
+        },
+        {
+          "id": "t3-mode",
+          "title": "Fast Fashion",
+          "titleAr": "الموضة السريعة",
+          "audio": "teil3/thema4.mp3",
+          "transkript": "Moderator (Jens): Willkommen! Heute geht es um Kleidung. Wir kaufen mehr Klamotten als je zuvor, tragen sie aber kürzer. Zu Gast sind die Modedesignerin Alina und der Umweltaktivist Herr Weber.\nAlina: Hallo Jens.\nWeber: Hallo.\nJens: Herr Weber, was genau ist das Problem an der sogenannten 'Fast Fashion', der schnellen Mode?\nWeber: Das Problem ist die massive Ressourcenverschwendung. Für die Produktion eines einzigen T-Shirts werden über 2000 Liter Wasser verbraucht. Und oft landen diese Shirts nach wenigen Monaten schon im Müll, weil sie qualitativ minderwertig sind.\nAlina: Das lässt sich nicht bestreiten. Aber man muss auch sehen, dass Mode ein Weg ist, sich auszudrücken. Durch günstige Kleidung können auch Menschen mit weniger Geld an Trends teilhaben.\nJens: Ist es also ein soziales Problem, wenn wir nachhaltige, teure Kleidung fordern?\nWeber: Nicht unbedingt. Man muss nicht immer neu kaufen. Second-Hand-Kleidung ist günstig, oft von besserer Qualität und schont die Umwelt. Der Trend geht zum Glück stark in diese Richtung.\nAlina: Da stimme ich zu. Auch wir Designer müssen umdenken und Kleidung so entwerfen, dass sie reparierbar ist oder aus recycelten Materialien besteht. Das ist die Aufgabe unserer Branche für die Zukunft.\nJens: Ein Umdenken ist also auf allen Seiten gefordert.",
+          "personen": {
+            "a": "Moderator (Jens)",
+            "b": "Alina",
+            "c": "Herr Weber"
+          },
+          "items": [
+            {
+              "id": "17",
+              "text": "Warum ist schnelle Mode so problematisch?",
+              "correct": "a"
+            },
+            {
+              "id": "18",
+              "text": "Die Herstellung von Kleidung benötigt extrem viel Wasser.",
+              "correct": "c"
+            },
+            {
+              "id": "19",
+              "text": "Billige Mode ermöglicht es allen, modisch gekleidet zu sein.",
+              "correct": "b"
+            },
+            {
+              "id": "20",
+              "text": "Gebrauchte Kleidung zu kaufen ist umweltfreundlich und billig.",
+              "correct": "c"
+            },
+            {
+              "id": "21",
+              "text": "Kleidung sollte so produziert werden, dass man sie reparieren kann.",
+              "correct": "b"
+            },
+            {
+              "id": "22",
+              "text": "Sowohl Konsumenten als auch Hersteller müssen sich verändern.",
+              "correct": "a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teil-4",
+      "label": "Teil 4",
+      "nummer": 4,
+      "arbeitszeit": "10 Minuten",
+      "pruefungsziel": "Vorträge verstehen",
+      "aufgabentyp": "mehrfachauswahl-3-gliedrig",
+      "punkte": 8,
+      "itemCount": 8,
+      "aufgabenNummern": "23–30",
+      "answerType": "multiple-choice-abc",
+      "title": "Einen Vortrag verstehen",
+      "titleAr": "فهم محاضرة",
+      "instructions": "Sie hören einen Vortrag. Sie hören den Text zweimal. Wählen Sie bei den Aufgaben 23 bis 30 die richtige Lösung a, b oder c.",
+      "description": "Ein längerer, strukturierter Vortrag (ca. 4-5 Min.), zweimal gehört. 8 Multiple-Choice-Aufgaben (a/b/c).",
+      "themen": [
+        {
+          "id": "t4-schlaf",
+          "title": "Die Bedeutung des Schlafs",
+          "titleAr": "أهمية النوم",
+          "audio": "teil4/thema1.mp3",
+          "transkript": "Guten Abend, meine Damen und Herren. Mein Name ist Dr. Leonie Graf, ich bin Schlafforscherin, und ich möchte heute mit Ihnen über eine unserer wichtigsten, aber oft vernachlässigten Tätigkeiten sprechen: das Schlafen.\nWir verbringen etwa ein Drittel unseres Lebens im Schlaf. Viele Menschen betrachten Schlaf als verlorene Zeit, in der man nichts Produktives leistet. Doch das Gegenteil ist der Fall. Während unser Körper ruht, arbeitet unser Gehirn auf Hochtouren. Es sortiert die Eindrücke des Tages, speichert Wichtiges im Langzeitgedächtnis ab und löscht Unwichtiges. Wer also vor einer Prüfung die Nacht durchlernt, tut sich keinen Gefallen, da das Gelernte ohne Schlaf gar nicht richtig gespeichert werden kann.\nAußerdem regeneriert sich unser Immunsystem im Schlaf. Studien zeigen eindeutig, dass Menschen, die dauerhaft weniger als sieben Stunden pro Nacht schlafen, ein dreifach höheres Risiko haben, sich bei einer Erkältungswelle anzustecken. Auch das Risiko für Herz-Kreislauf-Erkrankungen steigt bei chronischem Schlafmangel dramatisch an.\nWarum aber schlafen heute so viele Menschen schlecht? Ein Hauptgrund ist das Licht unserer Bildschirme. Smartphones und Tablets strahlen einen hohen Anteil an blauem Licht ab. Dieses blaue Licht signalisiert unserem Gehirn, dass es Tag ist, und stoppt die Produktion von Melatonin, unserem natürlichen Schlafhormon. Die Folge: Wir können nicht einschlafen.\nWas können wir also tun? Experten sprechen hier von 'Schlafhygiene'. Dazu gehört, mindestens eine Stunde vor dem Zubettgehen auf Bildschirme zu verzichten. Lesen Sie stattdessen ein Buch oder hören Sie leise Musik. Auch das Schlafzimmer selbst spielt eine Rolle: Es sollte kühl sein, idealerweise zwischen 16 und 18 Grad, und möglichst dunkel.\nUnd noch ein Mythos, den ich aufklären möchte: Alkohol hilft nicht beim Schlafen. Ein Glas Wein lässt uns zwar schneller einschlafen, aber der Schlaf ist unruhig und wenig erholsam, da der Körper mit dem Abbau des Alkohols beschäftigt ist.\nZusammenfassend lässt sich sagen: Schlaf ist kein Luxus, sondern überlebenswichtig für unsere körperliche und geistige Gesundheit. Geben Sie Ihrem Schlaf die Priorität, die er verdient. Vielen Dank.",
+          "items": [
+            {
+              "id": "23",
+              "text": "Wie betrachten viele Menschen laut der Rednerin den Schlaf?",
+              "options": [
+                {
+                  "label": "Als die beste Zeit des Tages.",
+                  "value": "a"
+                },
+                {
+                  "label": "Als unproduktive, verschwendete Zeit.",
+                  "value": "b"
+                },
+                {
+                  "label": "Als gute Möglichkeit, Probleme zu lösen.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "24",
+              "text": "Was macht das Gehirn während wir schlafen?",
+              "options": [
+                {
+                  "label": "Es schaltet sich komplett ab.",
+                  "value": "a"
+                },
+                {
+                  "label": "Es bereitet sich auf den Traum vor.",
+                  "value": "b"
+                },
+                {
+                  "label": "Es verarbeitet Informationen und speichert Erinnerungen.",
+                  "value": "c"
+                }
+              ],
+              "correct": "c"
+            },
+            {
+              "id": "25",
+              "text": "Was passiert, wenn man vor Prüfungen nachts nicht schläft?",
+              "options": [
+                {
+                  "label": "Man kann sich das Gelernte nicht gut merken.",
+                  "value": "a"
+                },
+                {
+                  "label": "Man hat mehr Zeit zum Lernen und bekommt bessere Noten.",
+                  "value": "b"
+                },
+                {
+                  "label": "Man ist am nächsten Tag besonders konzentriert.",
+                  "value": "c"
+                }
+              ],
+              "correct": "a"
+            },
+            {
+              "id": "26",
+              "text": "Welche körperlichen Folgen hat ständiger Schlafmangel?",
+              "options": [
+                {
+                  "label": "Man bekommt schneller muskuläre Probleme.",
+                  "value": "a"
+                },
+                {
+                  "label": "Man wird häufiger krank und anfällig für Infekte.",
+                  "value": "b"
+                },
+                {
+                  "label": "Man verliert Gewicht.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "27",
+              "text": "Wie wirkt das blaue Licht von Smartphones auf den Menschen?",
+              "options": [
+                {
+                  "label": "Es macht die Augen müde, sodass man besser schläft.",
+                  "value": "a"
+                },
+                {
+                  "label": "Es stoppt das Schlafhormon, weil das Gehirn denkt, es sei Tag.",
+                  "value": "b"
+                },
+                {
+                  "label": "Es entspannt das Gehirn vor dem Schlafen.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "28",
+              "text": "Was ist laut der Expertin Teil einer guten 'Schlafhygiene'?",
+              "options": [
+                {
+                  "label": "Vor dem Schlafen noch kurz die Mails checken.",
+                  "value": "a"
+                },
+                {
+                  "label": "Spät am Abend noch intensiven Sport treiben.",
+                  "value": "b"
+                },
+                {
+                  "label": "Vor dem Schlafengehen auf elektronische Geräte verzichten.",
+                  "value": "c"
+                }
+              ],
+              "correct": "c"
+            },
+            {
+              "id": "29",
+              "text": "Wie sollte das Schlafzimmer idealerweise sein?",
+              "options": [
+                {
+                  "label": "Warm und gemütlich.",
+                  "value": "a"
+                },
+                {
+                  "label": "Kühl und abgedunkelt.",
+                  "value": "b"
+                },
+                {
+                  "label": "Hell und gut belüftet.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "30",
+              "text": "Welche Wirkung hat Alkohol auf den Schlaf?",
+              "options": [
+                {
+                  "label": "Er sorgt für einen tieferen und längeren Schlaf.",
+                  "value": "a"
+                },
+                {
+                  "label": "Er hilft beim Einschlafen, macht den Schlaf aber unerholsam.",
+                  "value": "b"
+                },
+                {
+                  "label": "Er hat gar keine Auswirkungen auf den Schlaf.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            }
+          ]
+        },
+        {
+          "id": "t4-stress",
+          "title": "Umgang mit Stress im Berufsleben",
+          "titleAr": "التعامل مع التوتر في الحياة المهنية",
+          "audio": "teil4/thema2.mp3",
+          "transkript": "Guten Tag. Mein Name ist Michael Wagner, und ich arbeite als Coach für Stressmanagement. Heute sprechen wir über eine Volkskrankheit: den beruflichen Stress.\nZunächst einmal müssen wir verstehen, dass Stress nicht per se schlecht ist. Evolutionär gesehen ist Stress eine Überlebensreaktion. Er versetzt unseren Körper in Alarmbereitschaft, schüttet Adrenalin aus und macht uns kurzfristig leistungsfähiger – das war früher wichtig, um vor Gefahren wegzulaufen. Das Problem in der modernen Arbeitswelt ist jedoch, dass dieser Alarmzustand oft nicht mehr aufhört. Ständige Erreichbarkeit, enge Deadlines und unklare Aufgaben sorgen für Dauerstress, ohne dass wir die Stresshormone körperlich wieder abbauen können.\nDie gesundheitlichen Folgen von Dauerstress sind enorm. Typische Symptome sind Kopfschmerzen, Schlafstörungen und ein geschwächtes Immunsystem. Im schlimmsten Fall führt Dauerstress zum Burnout, einer totalen körperlichen und emotionalen Erschöpfung.\nWas können wir also dagegen tun? Die wichtigste Methode ist das Setzen von klaren Grenzen. Es ist essenziell, nach Feierabend keine beruflichen E-Mails mehr zu lesen. Unser Gehirn braucht Pausen, um abzuschalten. Zweitens: Lernen Sie, Nein zu sagen. Viele Menschen übernehmen zu viele Aufgaben, weil sie es allen recht machen wollen. Wer Aufgaben delegiert oder freundlich ablehnt, zeigt keine Schwäche, sondern Professionalität.\nEin weiterer wichtiger Faktor ist Bewegung. Sport ist die natürlichste Methode, um Stresshormone im Körper abzubauen. Sie müssen keinen Marathon laufen – ein zügiger Spaziergang von 30 Minuten am Abend reicht oft schon aus.\nAuch Entspannungstechniken wie Meditation oder progressive Muskelentspannung können helfen. Wer lernt, auf seinen eigenen Körper zu hören, merkt schneller, wann es zu viel wird. Achten Sie auf sich selbst, denn Ihre Gesundheit ist Ihr wichtigstes Gut. Danke für Ihre Aufmerksamkeit.",
+          "items": [
+            {
+              "id": "23",
+              "text": "Was sagt Herr Wagner grundsätzlich über Stress?",
+              "options": [
+                {
+                  "label": "Stress ist eine moderne Erfindung.",
+                  "value": "a"
+                },
+                {
+                  "label": "Stress war in der Vergangenheit wichtig für das Überleben.",
+                  "value": "b"
+                },
+                {
+                  "label": "Stress ist immer schädlich für den Körper.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "24",
+              "text": "Was ist das Hauptproblem in der heutigen Arbeitswelt?",
+              "options": [
+                {
+                  "label": "Dass Menschen zu wenig arbeiten.",
+                  "value": "a"
+                },
+                {
+                  "label": "Dass der Zustand des Stresses nicht aufhört.",
+                  "value": "b"
+                },
+                {
+                  "label": "Dass die Bezahlung zu schlecht ist.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "25",
+              "text": "Was kann die extremste Folge von Dauerstress sein?",
+              "options": [
+                {
+                  "label": "Totale Erschöpfung (Burnout).",
+                  "value": "a"
+                },
+                {
+                  "label": "Dauerhafte Kopfschmerzen.",
+                  "value": "b"
+                },
+                {
+                  "label": "Verlust des Arbeitsplatzes.",
+                  "value": "c"
+                }
+              ],
+              "correct": "a"
+            },
+            {
+              "id": "26",
+              "text": "Was empfiehlt der Redner bezüglich der Erreichbarkeit?",
+              "options": [
+                {
+                  "label": "Man sollte für den Chef immer erreichbar sein.",
+                  "value": "a"
+                },
+                {
+                  "label": "Man sollte nach der Arbeit keine Firmen-Mails mehr lesen.",
+                  "value": "b"
+                },
+                {
+                  "label": "Man sollte das Handy komplett abschaffen.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "27",
+              "text": "Warum haben viele Menschen Schwierigkeiten, Nein zu sagen?",
+              "options": [
+                {
+                  "label": "Weil sie Angst vor dem Chef haben.",
+                  "value": "a"
+                },
+                {
+                  "label": "Weil sie glauben, dass es unhöflich ist.",
+                  "value": "b"
+                },
+                {
+                  "label": "Weil sie es allen recht machen wollen.",
+                  "value": "c"
+                }
+              ],
+              "correct": "c"
+            },
+            {
+              "id": "28",
+              "text": "Wie bewertet der Redner das Ablehnen von Aufgaben?",
+              "options": [
+                {
+                  "label": "Es ist ein Zeichen von Professionalität.",
+                  "value": "a"
+                },
+                {
+                  "label": "Es zeigt, dass man faul ist.",
+                  "value": "b"
+                },
+                {
+                  "label": "Es ist egoistisch gegenüber den Kollegen.",
+                  "value": "c"
+                }
+              ],
+              "correct": "a"
+            },
+            {
+              "id": "29",
+              "text": "Warum ist Sport laut dem Redner gut gegen Stress?",
+              "options": [
+                {
+                  "label": "Weil man dabei neue Leute kennenlernt.",
+                  "value": "a"
+                },
+                {
+                  "label": "Weil man dadurch Stresshormone abbauen kann.",
+                  "value": "b"
+                },
+                {
+                  "label": "Weil man dann im Büro besser sitzen kann.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "30",
+              "text": "Wofür sind Techniken wie Meditation gut?",
+              "options": [
+                {
+                  "label": "Um besser arbeiten zu können.",
+                  "value": "a"
+                },
+                {
+                  "label": "Um den eigenen Körper besser wahrzunehmen.",
+                  "value": "b"
+                },
+                {
+                  "label": "Um beim Sport besser zu sein.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            }
+          ]
+        },
+        {
+          "id": "t4-minimalismus",
+          "title": "Minimalismus als Lebensstil",
+          "titleAr": "البساطة كأسلوب حياة",
+          "audio": "teil4/thema3.mp3",
+          "transkript": "Herzlich willkommen zu meinem Vortrag. Ich bin Anna Berg, Autorin und Minimalistin. Viele denken bei Minimalismus sofort an leere weiße Räume und Verzicht. Doch Minimalismus bedeutet nicht, dass man nichts mehr besitzen darf. Es geht vielmehr darum, sich auf das zu konzentrieren, was einem wirklich wichtig ist, und den Rest loszulassen.\nIn unserer westlichen Welt haben wir oft von allem zu viel. Kleiderschränke, die überquellen, Keller voller Kartons, die wir seit Jahren nicht geöffnet haben. Dieser Überfluss an materiellen Dingen kostet uns nicht nur Geld, sondern vor allem Zeit und Energie. Jedes Objekt in unserer Wohnung muss gepflegt, geputzt, aufgeräumt oder verwaltet werden.\nDer erste Schritt zum Minimalismus ist das bewusste Aussortieren. Fragen Sie sich bei jedem Gegenstand: Brauche ich das wirklich? Macht es mich glücklich? Wenn die Antwort zweimal 'Nein' lautet, können Sie es spenden, verkaufen oder wegwerfen. Sie werden merken, wie befreiend es ist, sich von Ballast zu trennen.\nMinimalismus ändert auch unser Konsumverhalten. Vor jedem Kauf überlegt man sich sehr genau, ob man diesen Gegenstand wirklich benötigt. Das führt dazu, dass man weniger, aber dafür qualitativ hochwertigere Dinge kauft. Auf lange Sicht spart das enorm viel Geld, das man für Erlebnisse, wie Reisen oder Zeit mit der Familie, nutzen kann.\nEs geht aber nicht nur um Dinge. Minimalismus lässt sich auch auf unseren Terminkalender übertragen. Wir haben oft das Gefühl, auf jeder Party tanzen zu müssen. Wenn wir lernen, Verpflichtungen abzusagen, die uns keine Freude bereiten, gewinnen wir Zeit für uns selbst zurück.\nLetztlich ist Minimalismus ein Werkzeug für mehr Freiheit. Er schafft Platz – physisch in unserer Wohnung und mental in unserem Kopf. Probieren Sie es aus, vielleicht fangen Sie heute Abend einfach mit einer Schublade an. Danke sehr.",
+          "items": [
+            {
+              "id": "23",
+              "text": "Was ist Minimalismus laut Anna Berg in Wirklichkeit?",
+              "options": [
+                {
+                  "label": "Ein Leben ganz ohne Besitz und in leeren Räumen.",
+                  "value": "a"
+                },
+                {
+                  "label": "Die Konzentration auf die Dinge, die einem wichtig sind.",
+                  "value": "b"
+                },
+                {
+                  "label": "Ein Trend, bei dem man weiße Möbel kauft.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "24",
+              "text": "Was ist das Problem mit zu vielen materiellen Dingen?",
+              "options": [
+                {
+                  "label": "Sie machen die Wohnung ungemütlich.",
+                  "value": "a"
+                },
+                {
+                  "label": "Man kann sie nicht alle benutzen.",
+                  "value": "b"
+                },
+                {
+                  "label": "Sie kosten uns Zeit und Energie für die Pflege.",
+                  "value": "c"
+                }
+              ],
+              "correct": "c"
+            },
+            {
+              "id": "25",
+              "text": "Wie lautet die Regel beim Aussortieren?",
+              "options": [
+                {
+                  "label": "Man sollte Gegenstände weggeben, wenn man sie nicht braucht und sie nicht glücklich machen.",
+                  "value": "a"
+                },
+                {
+                  "label": "Man sollte alles wegwerfen, was älter als ein Jahr ist.",
+                  "value": "b"
+                },
+                {
+                  "label": "Man sollte alle Dinge spenden, um anderen zu helfen.",
+                  "value": "c"
+                }
+              ],
+              "correct": "a"
+            },
+            {
+              "id": "26",
+              "text": "Welchen Effekt hat der Minimalismus auf das Einkaufen?",
+              "options": [
+                {
+                  "label": "Man kauft gar nichts Neues mehr.",
+                  "value": "a"
+                },
+                {
+                  "label": "Man kauft weniger Dinge, aber von besserer Qualität.",
+                  "value": "b"
+                },
+                {
+                  "label": "Man kauft nur noch gebrauchte Sachen.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "27",
+              "text": "Wofür nutzen Minimalisten das gesparte Geld oft?",
+              "options": [
+                {
+                  "label": "Sie legen es auf dem Bankkonto an.",
+                  "value": "a"
+                },
+                {
+                  "label": "Sie kaufen sich ein kleineres Haus.",
+                  "value": "b"
+                },
+                {
+                  "label": "Sie nutzen es für Erlebnisse und Zeit mit der Familie.",
+                  "value": "c"
+                }
+              ],
+              "correct": "c"
+            },
+            {
+              "id": "28",
+              "text": "Was empfiehlt die Rednerin bezüglich des Terminkalenders?",
+              "options": [
+                {
+                  "label": "Man sollte Termine, die keinen Spaß machen, absagen.",
+                  "value": "a"
+                },
+                {
+                  "label": "Man sollte versuchen, noch produktiver zu sein.",
+                  "value": "b"
+                },
+                {
+                  "label": "Man sollte den Kalender komplett wegwerfen.",
+                  "value": "c"
+                }
+              ],
+              "correct": "a"
+            },
+            {
+              "id": "29",
+              "text": "Was ist das ultimative Ziel des Minimalismus?",
+              "options": [
+                {
+                  "label": "Andere Menschen zu beeindrucken.",
+                  "value": "a"
+                },
+                {
+                  "label": "Mehr Freiheit und mentalen Platz zu gewinnen.",
+                  "value": "b"
+                },
+                {
+                  "label": "Die Umwelt zu retten.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "30",
+              "text": "Welchen Ratschlag gibt sie den Zuhörern zum Schluss?",
+              "options": [
+                {
+                  "label": "Sie sollen sofort ihr ganzes Haus ausmisten.",
+                  "value": "a"
+                },
+                {
+                  "label": "Sie sollen mit einem kleinen Schritt, wie einer Schublade, beginnen.",
+                  "value": "b"
+                },
+                {
+                  "label": "Sie sollen sich ein Buch über Minimalismus kaufen.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            }
+          ]
+        },
+        {
+          "id": "t4-sprachen",
+          "title": "Sprachen lernen im Erwachsenenalter",
+          "titleAr": "تعلم اللغات في مرحلة البلوغ",
+          "audio": "teil4/thema4.mp3",
+          "transkript": "Guten Tag, mein Name ist Prof. Dr. Weber und ich forsche zur Sprachentwicklung. Ein Mythos hält sich hartnäckig: 'Als Erwachsener kann man keine neuen Sprachen mehr fließend lernen.' Das ist glücklicherweise falsch.\nEs stimmt, dass das Gehirn von Kindern noch formbarer ist. Sie lernen Sprachen spielerisch und ahmen die Aussprache perfekt nach. Aber Erwachsene haben andere Vorteile: Wir verstehen komplexe Grammatikregeln viel schneller und können abstrakte Zusammenhänge erkennen. Wir haben bereits Lernstrategien entwickelt, die Kindern fehlen.\nWarum fällt es uns dann oft so schwer? Der Hauptgrund ist Zeitmangel. Kinder sind ständig von Sprache umgeben, in der Schule oder beim Spielen. Ein Erwachsener geht vielleicht einmal pro Woche für 90 Minuten in einen Sprachkurs und hat den Rest der Woche keine Berührung mit der Sprache. Das reicht nicht aus, um das Gehirn zu trainieren.\nDie Lösung liegt in der Regelmäßigkeit. Es ist viel effektiver, jeden Tag 15 Minuten zu lernen, als einmal pro Woche zwei Stunden. Nutzen Sie die 'toten Zeiten' im Alltag: Hören Sie einen fremdsprachigen Podcast beim Pendeln, ändern Sie die Sprache Ihres Smartphones oder schauen Sie Serien in der Originalsprache mit Untertiteln. Das Gehirn braucht ständigen Input, um Verbindungen aufzubauen.\nEin zweites Problem von Erwachsenen ist die Angst vor Fehlern. Wir wollen perfekt sprechen und schweigen lieber, als etwas Falsches zu sagen. Das ist fatal beim Sprachenlernen. Fehler sind absolut notwendig, um den Lernprozess voranzutreiben. Man muss den Mut haben, wie ein Kind einfach loszuplappern, auch wenn die Grammatik nicht stimmt. Kommunikation ist wichtiger als Perfektion.\nFazit: Das Alter ist keine Ausrede. Mit der richtigen Methode, täglicher Übung und dem Mut zur Fehlerhaftigkeit kann jeder Erwachsene erfolgreich eine neue Sprache meistern. Danke.",
+          "items": [
+            {
+              "id": "23",
+              "text": "Was sagt Professor Weber über den weit verbreiteten Mythos?",
+              "options": [
+                {
+                  "label": "Er ist wissenschaftlich bewiesen.",
+                  "value": "a"
+                },
+                {
+                  "label": "Er stimmt nur teilweise.",
+                  "value": "b"
+                },
+                {
+                  "label": "Er ist völlig falsch.",
+                  "value": "c"
+                }
+              ],
+              "correct": "c"
+            },
+            {
+              "id": "24",
+              "text": "Welchen Vorteil haben Erwachsene gegenüber Kindern beim Lernen?",
+              "options": [
+                {
+                  "label": "Sie haben eine bessere Aussprache.",
+                  "value": "a"
+                },
+                {
+                  "label": "Sie können grammatikalische Regeln schneller verstehen.",
+                  "value": "b"
+                },
+                {
+                  "label": "Sie haben mehr Freizeit zum Üben.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "25",
+              "text": "Was ist der Hauptgrund, warum Erwachsene oft scheitern?",
+              "options": [
+                {
+                  "label": "Sie haben nicht genug Talent.",
+                  "value": "a"
+                },
+                {
+                  "label": "Das Gehirn ist zu alt, um Neues zu speichern.",
+                  "value": "b"
+                },
+                {
+                  "label": "Sie beschäftigen sich im Alltag zu wenig mit der Sprache.",
+                  "value": "c"
+                }
+              ],
+              "correct": "c"
+            },
+            {
+              "id": "26",
+              "text": "Was ist die effektivste Methode zum Lernen?",
+              "options": [
+                {
+                  "label": "Einmal pro Woche ein mehrstündiger Intensivkurs.",
+                  "value": "a"
+                },
+                {
+                  "label": "Tägliches Üben in kurzen Einheiten.",
+                  "value": "b"
+                },
+                {
+                  "label": "Ein teurer Aufenthalt im Ausland.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "27",
+              "text": "Was meint der Redner mit 'toten Zeiten'?",
+              "options": [
+                {
+                  "label": "Die Zeit, in der man schläft.",
+                  "value": "a"
+                },
+                {
+                  "label": "Unproduktiv genutzte Zeit, wie die Fahrt zur Arbeit.",
+                  "value": "b"
+                },
+                {
+                  "label": "Zeit, in der man das Handy ausgeschaltet hat.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "28",
+              "text": "Was blockiert Erwachsene häufig beim Sprechen?",
+              "options": [
+                {
+                  "label": "Sie finden keinen Gesprächspartner.",
+                  "value": "a"
+                },
+                {
+                  "label": "Sie schämen sich und haben Angst davor, Fehler zu machen.",
+                  "value": "b"
+                },
+                {
+                  "label": "Sie kennen zu wenige Wörter.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "29",
+              "text": "Wie bewertet der Professor Fehler beim Lernen?",
+              "options": [
+                {
+                  "label": "Sie sollten unbedingt vermieden werden.",
+                  "value": "a"
+                },
+                {
+                  "label": "Sie sind ein wichtiges Element im Lernprozess.",
+                  "value": "b"
+                },
+                {
+                  "label": "Sie zeigen, dass man kein Sprachtalent hat.",
+                  "value": "c"
+                }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "30",
+              "text": "Was ist das Fazit des Vortrags?",
+              "options": [
+                {
+                  "label": "Jeder kann Sprachen lernen, wenn man Fehler in Kauf nimmt und täglich übt.",
+                  "value": "a"
+                },
+                {
+                  "label": "Erwachsene sollten nur Sprachen lernen, die ihrer Muttersprache ähnlich sind.",
+                  "value": "b"
+                },
+                {
+                  "label": "Ab einem gewissen Alter lohnt sich der Aufwand nicht mehr.",
+                  "value": "c"
+                }
+              ],
+              "correct": "a"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

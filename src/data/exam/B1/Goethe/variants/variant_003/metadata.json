@@ -1,0 +1,18 @@
+{
+  "variantId": "003",
+  "title": "Goethe B1 - Simulation 3",
+  "description": "Fokus auf Umwelt, Reisen und gesellschaftliche Trends.",
+  "difficulty": "Mittel",
+  "modules": ["lesen", "horen", "schreiben", "sprechen"],
+  "moduleOrder": ["lesen", "horen", "schreiben", "sprechen"],
+  "timeLimits": { "lesen": 65, "horen": 40, "schreiben": 60, "sprechen": 15 },
+  "rawPoints": { "lesen": 30, "horen": 30 },
+  "directPoints": { "schreiben": 100, "sprechen": 100 },
+  "passingScore": 60,
+  "themes": {
+    "lesen": ["Reise/Urlaub", "Klimawandel & Stadtentwicklung", "Sprachkurse", "Plastiktüten-Verbot", "VHS-Hausordnung"],
+    "horen": ["Tierheim/Wetter", "Radio-Interview", "Alltagsgespräch", "Diskussion Schulhandys"],
+    "schreiben": ["Umzug", "Plastik & Umwelt", "Absage Kursgespräch"],
+    "sprechen": ["Ausflug planen", "Umwelt & Recycling", "Online-Shopping"]
+  }
+}

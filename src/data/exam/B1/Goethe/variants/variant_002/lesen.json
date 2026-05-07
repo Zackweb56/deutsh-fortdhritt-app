@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "module": "Lesen",
+    "timeMinutes": 65,
+    "totalRawPoints": 30,
+    "passingRaw": 18,
+    "scoringFormula": "rawPoints / 30 * 100"
+  },
+  "teil1": {
+    "type": "richtig_falsch",
+    "points": 6,
+    "arbeitszeitMinutes": 10,
+    "instructions": "Lesen Sie den Text und die Aufgaben 1 bis 6. Wählen Sie: Richtig oder Falsch?",
+    "textType": "Brief/E-Mail Beruf",
+    "text": {
+      "title": "Neuer Job in der IT-Abteilung",
+      "source": "aus einer internen E-Mail",
+      "content": "Liebe Kollegen, wie ihr wisst, habe ich vor zwei Wochen meine neue Stelle als Systemadministrator angetreten. Die Einarbeitung läuft sehr gut, und ich habe schon fast alle von euch kennengelernt. Mein neuer Arbeitsplatz ist modern und die Aufgaben sind genau das, was ich gesucht habe. Besonders gut gefällt mir die Gleitzeitregelung: Ich kann morgens zwischen 7 und 9 Uhr anfangen, was mir als Vater sehr hilft. Nächsten Donnerstag lade ich euch alle in der Mittagspause zu einem kleinen Umtrunk ein, um meinen Einstand offiziell zu feiern. Wir treffen uns um 12:30 Uhr in der Kantine. Ich freue mich auf die Zusammenarbeit! Viele Grüße, Michael."
+    },
+    "items": [
+      { "id": 0, "text": "Michael arbeitet erst seit kurzem in der Firma.", "correct": "Richtig", "isExample": true },
+      { "id": 1, "text": "Michael fühlt sich in seinem neuen Job noch nicht wohl.", "correct": "Falsch" },
+      { "id": 2, "text": "Michael hat bereits Kontakt zu den meisten Kollegen.", "correct": "Richtig" },
+      { "id": 3, "text": "Die Arbeitszeiten in der Firma sind starr und unflexibel.", "correct": "Falsch" },
+      { "id": 4, "text": "Michael nutzt die Arbeitszeitregelung, um sich um seine Kinder zu kümmern.", "correct": "Richtig" },
+      { "id": 5, "text": "Die Feier findet am Donnerstagmorgen statt.", "correct": "Falsch" },
+      { "id": 6, "text": "Der Treffpunkt für die Feier ist Michaels Büro.", "correct": "Falsch" }
+    ]
+  },
+  "teil2": {
+    "type": "mehrfachauswahl",
+    "points": 6,
+    "arbeitszeitMinutes": 20,
+    "instructions": "Lesen Sie die Texte. Wählen Sie bei jeder Aufgabe a, b oder c.",
+    "texts": [
+      {
+        "id": "A",
+        "title": "Die Zukunft des Homeoffice",
+        "source": "aus einer Wirtschaftszeitung",
+        "content": "Seit der Pandemie hat sich die Arbeitswelt verändert. Viele Unternehmen bieten ihren Mitarbeitern nun dauerhaft die Möglichkeit an, von zu Hause zu arbeiten. Eine aktuelle Umfrage zeigt, dass die Produktivität im Homeoffice oft höher ist als im Büro, da es weniger Ablenkungen gibt. Allerdings vermissen viele Beschäftigte den direkten Austausch mit den Kollegen.",
+        "items": [
+          { "id": 7, "text": "Durch die Pandemie ist Homeoffice...", "options": [{"value":"a","label":"verboten worden."},{"value":"b","label":"normaler geworden."},{"value":"c","label":"unbeliebter geworden."}], "correct": "b" },
+          { "id": 8, "text": "Im Homeoffice arbeiten die Leute oft...", "options": [{"value":"a","label":"weniger."},{"value":"b","label":"genauso viel."},{"value":"c","label":"effizienter."}], "correct": "c" },
+          { "id": 9, "text": "Was ist ein Nachteil von Homeoffice?", "options": [{"value":"a","label":"Der lange Arbeitsweg."},{"value":"b","label":"Fehlende Gespräche vor Ort."},{"value":"c","label":"Zu viel Arbeit."}], "correct": "b" }
+        ]
+      },
+      {
+        "id": "B",
+        "title": "Digitalisierung im Handwerk",
+        "source": "aus einer Fachzeitschrift",
+        "content": "Auch im Handwerk wird die Digitalisierung immer wichtiger. Tischler nutzen heute 3D-Programme zur Planung, und Termine werden online vergeben. Das spart Zeit und Papier. Viele ältere Handwerker haben jedoch Schwierigkeiten mit der neuen Technik und brauchen Fortbildungen. Der Staat unterstützt Betriebe finanziell bei der Anschaffung neuer Software.",
+        "items": [
+          { "id": 10, "text": "Handwerker nutzen heute Computer für...", "options": [{"value":"a","label":"die Vorbereitung ihrer Arbeit."},{"value":"b","label":"das Bauen von Möbeln."},{"value":"c","label":"Freizeitspiele."}], "correct": "a" },
+          { "id": 11, "text": "Ein Vorteil der Digitalisierung ist...", "options": [{"value":"a","label":"dass man weniger lernen muss."},{"value":"b","label":"die Schonung von Ressourcen."},{"value":"c","label":"dass alles teurer wird."}], "correct": "b" },
+          { "id": 12, "text": "Wie hilft der Staat den Betrieben?", "options": [{"value":"a","label":"Er gibt ihnen Geld für Technik."},{"value":"b","label":"Er schickt Mitarbeiter vorbei."},{"value":"c","label":"Er kauft die Möbel."}], "correct": "a" }
+        ]
+      }
+    ]
+  },
+  "teil3": {
+    "type": "zuordnung",
+    "points": 7,
+    "arbeitszeitMinutes": 10,
+    "instructions": "Lesen Sie die Situationen 13–19 und die Anzeigen A–J. Welche Anzeige passt?",
+    "context": "Personen suchen eine passende Stelle.",
+    "example": { "id": 0, "text": "Ein Student sucht einen Job für Samstagabend.", "correct": "i" },
+    "ads": [
+      { "id": "a", "title": "Bürokraft gesucht", "content": "Teilzeit (20 Std.), gute MS-Office Kenntnisse erforderlich." },
+      { "id": "b", "title": "Aushilfe im Lager", "content": "Körperlich fit, Arbeitszeiten flexibel, auch nachts." },
+      { "id": "c", "title": "Koch/Köchin", "content": "Für unser italienisches Restaurant, Vollzeit." },
+      { "id": "d", "title": "Nachhilfelehrer", "content": "Mathe und Englisch für 5.-10. Klasse. Nachmittags." },
+      { "id": "e", "title": "LKW-Fahrer", "content": "Führerschein Klasse C, Fernverkehr." },
+      { "id": "f", "title": "Reinigungskraft", "content": "Morgens von 6:00 bis 8:00 Uhr in einer Bank." },
+      { "id": "g", "title": "Verkäufer/in Mode", "content": "Freundliches Auftreten, Erfahrung im Einzelhandel." },
+      { "id": "h", "title": "Gärtner/in", "content": "Pflege von Parkanlagen, Saisonarbeit." },
+      { "id": "i", "title": "Kellner für Events", "content": "Wochenendeinsätze, vor allem abends.", "isExample": true },
+      { "id": "j", "title": "IT-Support", "content": "Hilfe bei Computerproblemen, Homeoffice möglich." }
+    ],
+    "situations": [
+      { "id": 13, "text": "Sarah möchte vormittags arbeiten, bevor sie ihre Kinder von der Schule abholt.", "correct": "f" },
+      { "id": 14, "text": "Markus hat Informatik studiert und möchte gerne von zu Hause aus arbeiten.", "correct": "j" },
+      { "id": 15, "text": "Lena liebt Kleidung und möchte gerne Menschen beraten.", "correct": "g" },
+      { "id": 16, "text": "Herr Klose hat jahrelang in einer Küche gearbeitet und sucht eine neue Stelle.", "correct": "c" },
+      { "id": 17, "text": "Tim möchte neben der Schule sein Taschengeld aufbessern und gut in Mathe.", "correct": "d" },
+      { "id": 18, "text": "Frau Jung sucht eine Arbeit am Computer für 4 Stunden pro Tag.", "correct": "a" },
+      { "id": 19, "text": "Bernd hat einen Führerschein für große Autos und will viel reisen.", "correct": "e" }
+    ]
+  },
+  "teil4": {
+    "type": "ja_nein",
+    "points": 7,
+    "arbeitszeitMinutes": 15,
+    "instructions": "Lesen Sie die Texte 20–26. Ist die Person für ein Verbot? Ja oder Nein?",
+    "topic": "Verbot von Fast Food in Schulkantinen",
+    "context": "Diskussion über gesunde Ernährung an Schulen.",
+    "example": { "id": 0, "author": "Dr. Weiß", "text": "Übergewicht ist ein großes Problem. Wir müssen Burger und Pommes aus den Schulen verbannen.", "correct": "Ja" },
+    "items": [
+      { "id": 20, "author": "Claudia", "age": 38, "city": "Bonn", "text": "Die Kinder sollten lernen, selbst zu entscheiden. Ein Verbot führt nur dazu, dass sie heimlich in der Pause zum Kiosk rennen.", "correct": "Nein" },
+      { "id": 21, "author": "Jürgen", "age": 45, "city": "Essen", "text": "Gesundheit geht vor. Wenn die Schule nur gesundes Essen anbietet, gewöhnen sich die Kinder an Gemüse und Obst. Ich bin absolut dafür.", "correct": "Ja" },
+      { "id": 22, "author": "Lisa", "age": 16, "city": "Kiel", "text": "Wir sind alt genug! Einmal pro Woche Pommes schadet niemandem. Man sollte uns die Wahl lassen.", "correct": "Nein" },
+      { "id": 23, "author": "Ralf", "age": 50, "city": "Mainz", "text": "Die Qualität des Essens an Schulen ist oft schlecht. Nur ein striktes Verbot von ungesunden Sachen kann die Situation verbessern.", "correct": "Ja" },
+      { "id": 24, "author": "Monika", "age": 29, "city": "Ulm", "text": "Besser als Verbote wäre es, gesundes Essen billiger zu machen. Dann würden die Schüler es von selbst wählen.", "correct": "Nein" },
+      { "id": 25, "author": "Stefan", "age": 42, "city": "Graz", "text": "Zucker und Fett machen krank. Der Staat hat eine Schutzpflicht gegenüber den Schülern. Weg mit dem Fast Food!", "correct": "Ja" },
+      { "id": 26, "author": "Katrin", "age": 34, "city": "Bern", "text": "Ich finde das übertrieben. Man sollte lieber mehr Sportunterricht machen, anstatt das Essen zu kontrollieren.", "correct": "Nein" }
+    ]
+  },
+  "teil5": {
+    "type": "mehrfachauswahl",
+    "points": 4,
+    "arbeitszeitMinutes": 10,
+    "instructions": "Lesen Sie den Text und die Aufgaben 27–30. Wählen Sie a, b oder c.",
+    "textType": "Firmen-Hausordnung",
+    "context": "Regeln für das Verhalten im Bürogebäude.",
+    "text": {
+      "title": "ALLGEMEINE BÜROORDNUNG",
+      "content": "Alle Mitarbeiter werden gebeten, auf Sauberkeit in der Teeküche zu achten. Geschirr muss sofort in die Spülmaschine gestellt werden. Das Rauchen ist im gesamten Gebäude inklusive der Treppenhäuser untersagt; dafür steht der Raucherbereich im Innenhof zur Verfügung. Ab 22:00 Uhr wird die Alarmanlage aktiviert. Wer länger arbeitet, muss sich beim Wachdienst melden."
+    },
+    "items": [
+      { "id": 27, "text": "Was gilt für die Teeküche?", "options": [{"value":"a","label":"Man darf dort nicht essen."},{"value":"b","label":"Jeder muss sein Geschirr selbst wegräumen."},{"value":"c","label":"Die Putzkraft räumt alles auf."}], "correct": "b" },
+      { "id": 28, "text": "Wo darf man rauchen?", "options": [{"value":"a","label":"Im Treppenhaus."},{"value":"b","label":"Überall im Gebäude."},{"value":"c","label":"Draußen im Hof."}], "correct": "c" },
+      { "id": 29, "text": "Ab wann ist das Gebäude gesichert?", "options": [{"value":"a","label":"Ab 22:00 Uhr."},{"value":"b","label":"Ab 20:00 Uhr."},{"value":"c","label":"Den ganzen Tag."}], "correct": "a" },
+      { "id": 30, "text": "Was muss man tun, wenn man nachts arbeitet?", "options": [{"value":"a","label":"Die Polizei rufen."},{"value":"b","label":"Den Sicherheitsdienst informieren."},{"value":"c","label":"Das Licht auslassen."}], "correct": "b" }
+    ]
+  }
+}

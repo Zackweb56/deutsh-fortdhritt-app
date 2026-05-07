@@ -1,0 +1,243 @@
+{
+  "institut": "Goethe-Institut",
+  "level": "B2",
+  "module": "Schreiben",
+  "meta": {
+    "totalPunkte": 100,
+    "totalPunkteMax": 100,
+    "bestehensgrenzeProzent": 60,
+    "totalZeit": "75 Minuten",
+    "teileCount": 2,
+    "description": "Das Modul Schreiben hat zwei Teile. In Teil 1 schreiben Sie einen Forenbeitrag, in Teil 2 eine formelle oder informelle Nachricht.",
+    "bewertungskriterien": "Aufgabenerfüllung + Kohärenz + Wortschatz + Strukturen. Scoring: A=höchste, B, C, D, E=0 Punkte."
+  },
+  "teile": [
+    {
+      "id": "teil-1",
+      "label": "Teil 1",
+      "nummer": 1,
+      "arbeitszeit": "50 Minuten",
+      "pruefungsziel": "Produktion — Meinungsäußerung verfassen",
+      "aufgabentyp": "freier-text",
+      "punkte": 50,
+      "minWords": 150,
+      "woerter": "circa 150 Wörter",
+      "title": "Forenbeitrag / Blog-Kommentar",
+      "titleAr": "مشاركة في منتدى / تعليق على مدونة",
+      "instructions": "Sie schreiben einen Forumsbeitrag zu einem aktuellen gesellschaftlichen Thema. Äußern Sie Ihre Meinung, begründen Sie diese, nennen Sie Alternativen und Vorteile der Alternativen. Vergessen Sie nicht Einleitung und Schluss.",
+      "description": "Einen zusammenhängenden Text (ca. 150 Wörter) zu einem Thema schreiben. Alle vier Leitpunkte müssen bearbeitet werden.",
+      "themen": [
+        {
+          "id": "t1-plastik",
+          "title": "Plastikverpackungen im Alltag",
+          "titleAr": "العبوات البلاستيكية في الحياة اليومية",
+          "topic_image_description": "Ein Bild von einem Strand voller Plastikmüll.",
+          "context": "Sie lesen in einem Online-Forum eine Diskussion über den hohen Verbrauch von Plastikverpackungen im Alltag. Sie möchten Ihre Meinung dazu äußern.",
+          "aufgabenpunkte": [
+            "Äußern Sie Ihre Meinung zu Plastikverpackungen im Alltag.",
+            "Nennen Sie Gründe, warum Plastik so verbreitet ist.",
+            "Nennen Sie andere Möglichkeiten / Alternativen zu Plastikverpackungen.",
+            "Nennen Sie Vorteile dieser Alternativen."
+          ],
+          "beispielantwort": "Hallo zusammen, ich möchte mich auch an der Diskussion über Plastikverpackungen beteiligen, weil mir dieses Thema sehr am Herzen liegt. Meiner Meinung nach verwenden wir im Alltag viel zu viel Plastik. Es ist erschreckend, wie viel Müll dadurch entsteht. Ein Hauptgrund für die weite Verbreitung von Plastik ist sicherlich, dass es billig in der Herstellung ist und Lebensmittel länger frisch hält. Außerdem ist es sehr leicht und bequem für den Transport. Es gibt jedoch gute Alternativen. Man kann zum Beispiel beim Einkaufen Stoffbeutel benutzen oder Obst und Gemüse lose kaufen. Auch Glasflaschen anstelle von Plastikflaschen sind eine gute Lösung. Der größte Vorteil dieser Alternativen ist, dass sie die Umwelt schonen und den Müll reduzieren. Außerdem können Dinge aus Glas oder Stoff immer wieder verwendet werden, was auf lange Sicht auch Geld spart. Wir sollten alle versuchen, unseren Plastikverbrauch zu reduzieren. Viele Grüße"
+        },
+        {
+          "id": "t1-homeoffice",
+          "title": "Homeoffice vs. Büroarbeit",
+          "titleAr": "العمل من المنزل مقابل العمل المكتبي",
+          "topic_image_description": "Ein Mann sitzt gemütlich am Laptop auf dem Sofa, im Hintergrund sieht man ein Bürogebäude.",
+          "context": "Sie haben in einem Blogbeitrag über die zunehmende Beliebtheit von Homeoffice gelesen und möchten dazu einen Kommentar verfassen.",
+          "aufgabenpunkte": [
+            "Äußern Sie Ihre Meinung zum Thema Homeoffice.",
+            "Nennen Sie Gründe, warum immer mehr Menschen von zu Hause aus arbeiten.",
+            "Nennen Sie Alternativen zur ausschließlichen Arbeit im Homeoffice oder im Büro.",
+            "Nennen Sie Vorteile dieser Alternativen."
+          ],
+          "beispielantwort": "Hallo liebe Leser, ich finde das Thema Homeoffice sehr spannend und möchte dazu meine Meinung äußern. Ich persönlich finde Homeoffice toll, da man sich den Arbeitsweg spart und flexibler ist. Der Hauptgrund, warum Homeoffice immer beliebter wird, ist die Digitalisierung. Dank Internet und Laptops kann man heute fast überall arbeiten. Außerdem wünschen sich viele Arbeitnehmer eine bessere Vereinbarkeit von Beruf und Privatleben. Eine gute Alternative zum reinen Homeoffice oder der ständigen Präsenz im Büro ist das hybride Arbeiten. Dabei arbeitet man beispielsweise drei Tage im Büro und zwei Tage zu Hause. Ein weiterer Ansatz sind Co-Working-Spaces, wo man sich in der Nähe des Wohnorts einen Schreibtisch mietet. Die Vorteile des hybriden Modells liegen auf der Hand: Man behält den persönlichen Kontakt zu Kollegen, was für die Teamarbeit wichtig ist, profitiert aber gleichzeitig von der Flexibilität des Homeoffices. So hat man das Beste aus beiden Welten. Liebe Grüße"
+        },
+        {
+          "id": "t1-socialmedia",
+          "title": "Soziale Medien und Jugendliche",
+          "titleAr": "وسائل التواصل الاجتماعي والشباب",
+          "topic_image_description": "Jugendliche, die alle auf ihre Smartphones schauen und nicht miteinander sprechen.",
+          "context": "In einem Internetforum wird darüber diskutiert, dass Jugendliche zu viel Zeit in sozialen Netzwerken verbringen. Schreiben Sie einen Beitrag dazu.",
+          "aufgabenpunkte": [
+            "Äußern Sie Ihre Meinung zur Nutzung sozialer Medien durch Jugendliche.",
+            "Nennen Sie Gründe, warum Jugendliche so viel Zeit online verbringen.",
+            "Nennen Sie alternative Freizeitbeschäftigungen für Jugendliche.",
+            "Nennen Sie Vorteile dieser Alternativen."
+          ],
+          "beispielantwort": "Hallo, ich möchte auch etwas zum Thema Jugendliche und soziale Medien sagen. Meiner Meinung nach ist es problematisch, wie viel Zeit junge Leute heute am Smartphone verbringen. Soziale Kontakte im echten Leben leiden oft darunter. Ein Grund für die intensive Nutzung ist, dass soziale Medien so programmiert sind, dass man ständig online bleiben möchte. Zudem läuft die Kommunikation mit Freunden heutzutage fast ausschließlich über Apps wie Instagram oder TikTok. Wer dort nicht aktiv ist, fühlt sich schnell ausgeschlossen. Es gibt aber viele sinnvolle Alternativen. Jugendliche könnten sich in Sportvereinen engagieren, ein Musikinstrument lernen oder sich ehrenamtlich betätigen, zum Beispiel in der Nachbarschaftshilfe oder im Tierschutz. Der Vorteil dieser Aktivitäten ist, dass sie das Selbstbewusstsein stärken und man echte Freundschaften knüpft. Außerdem fördert Sport die körperliche Gesundheit, was als Ausgleich zum ständigen Sitzen vor dem Bildschirm extrem wichtig ist. Viele Grüße"
+        },
+        {
+          "id": "t1-nahverkehr",
+          "title": "Öffentlicher Nahverkehr vs. Privatauto",
+          "titleAr": "وسائل النقل العام مقابل السيارة الخاصة",
+          "topic_image_description": "Ein Stau mit vielen Autos neben einer leeren Busspur.",
+          "context": "Sie lesen auf einer Nachrichten-Website eine Diskussion darüber, wie man den Verkehr in Großstädten reduzieren kann. Verfassen Sie einen Kommentar.",
+          "aufgabenpunkte": [
+            "Äußern Sie Ihre Meinung zur Verkehrssituation in Städten.",
+            "Nennen Sie Gründe, warum viele Menschen lieber mit dem eigenen Auto fahren.",
+            "Nennen Sie andere Möglichkeiten der Fortbewegung in der Stadt.",
+            "Nennen Sie Vorteile dieser Fortbewegungsmöglichkeiten."
+          ],
+          "beispielantwort": "Guten Tag, das Thema Verkehr in der Stadt betrifft uns alle, deshalb möchte ich meine Gedanken dazu teilen. Ich finde, dass unsere Städte völlig überlastet sind. Es gibt zu viele Autos, zu viele Staus und die Luftverschmutzung ist ein großes Problem. Der Grund, warum so viele Menschen trotzdem das Auto nutzen, ist die Bequemlichkeit. Das Auto steht direkt vor der Haustür, man ist unabhängig von Fahrplänen und kann schwere Einkäufe leicht transportieren. Zudem sind öffentliche Verkehrsmittel oft unpünktlich oder überfüllt. Es gibt jedoch gute Alternativen zum eigenen Auto. Carsharing-Angebote werden immer beliebter. Eine weitere sehr gute Möglichkeit ist das Fahrrad oder E-Bike. Der große Vorteil des Fahrrads ist, dass es sehr umweltfreundlich ist und man keinen Parkplatz suchen muss. Außerdem hält man sich durch die Bewegung fit. Wenn die Städte die Fahrradwege ausbauen würden, wäre das für viele Menschen eine echte Alternative. Herzliche Grüße"
+        },
+        {
+          "id": "t1-vegetarisch",
+          "title": "Vegetarische Ernährung in Schulkantinen",
+          "titleAr": "التغذية النباتية في مقاصف المدارس",
+          "topic_image_description": "Ein Tablett in einer Kantine mit einem bunten vegetarischen Gericht.",
+          "context": "In einem Online-Magazin wird gefordert, dass in Schulkantinen nur noch vegetarisches Essen angeboten werden soll. Schreiben Sie einen Leserbrief dazu.",
+          "aufgabenpunkte": [
+            "Äußern Sie Ihre Meinung zu rein vegetarischen Schulkantinen.",
+            "Nennen Sie Gründe, warum Fleischkonsum kritisch gesehen wird.",
+            "Nennen Sie Alternativen zu einem reinen Verbot von Fleisch.",
+            "Nennen Sie Vorteile Ihrer vorgeschlagenen Alternativen."
+          ],
+          "beispielantwort": "Hallo zusammen, die Idee, in Schulen nur noch fleischloses Essen anzubieten, hat mich sehr beschäftigt. Meiner Meinung nach ist ein komplettes Fleischverbot der falsche Weg, da Essen auch etwas mit persönlicher Freiheit zu tun hat. Ich verstehe aber die Gründe, warum Fleisch kritisch betrachtet wird. Die Massentierhaltung ist schlecht für die Umwelt und trägt stark zum Klimawandel bei. Außerdem ist zu viel Fleisch ungesund. Anstatt Fleisch komplett zu verbieten, schlage ich vor, ein bis zwei fleischfreie Tage in der Woche einzuführen. Eine weitere Alternative wäre, nur noch qualitativ hochwertiges Bio-Fleisch aus der Region anzubieten. Der Vorteil dieser Lösungen ist, dass die Schüler lernen, Fleisch bewusster zu konsumieren, ohne das Gefühl zu haben, bevormundet zu werden. Gleichzeitig wird die Umwelt geschont. So können Kinder eine gesunde Ernährung lernen, die auch Kompromisse zulässt. Mit freundlichen Grüßen"
+        },
+        {
+          "id": "t1-digital-unterricht",
+          "title": "Digitale Medien im Unterricht",
+          "titleAr": "وسائط الإعلام الرقمية في الفصول الدراسية",
+          "topic_image_description": "Schüler sitzen im Klassenzimmer mit Tablets statt mit Schulbüchern.",
+          "context": "Sie lesen im Forum einer Bildungsseite über die zunehmende Digitalisierung des Schulunterrichts und möchten Ihre Ansichten teilen.",
+          "aufgabenpunkte": [
+            "Äußern Sie Ihre Meinung zum Einsatz von Tablets und Laptops im Unterricht.",
+            "Nennen Sie Gründe, warum Schulen auf digitale Medien setzen.",
+            "Nennen Sie alternative Lernmethoden oder Ergänzungen zum digitalen Unterricht.",
+            "Nennen Sie Vorteile dieser Methoden."
+          ],
+          "beispielantwort": "Hallo, gerne möchte ich mich zur Digitalisierung an Schulen äußern. Grundsätzlich finde ich den Einsatz von Tablets im Unterricht sehr sinnvoll, da unsere Welt immer digitaler wird. Der Hauptgrund, warum Schulen diesen Weg gehen, ist die Vorbereitung der Schüler auf das spätere Berufsleben. Heute arbeitet fast jeder Beruf mit Computern. Zudem bieten digitale Medien interaktive Lernmöglichkeiten und aktuelle Informationen, die alte Schulbücher nicht haben. Dennoch sollte der Unterricht nicht nur digital stattfinden. Als Alternative oder Ergänzung sind praktische Projekte und Gruppenarbeiten wichtig, bei denen die Schüler selbst experimentieren oder etwas mit den eigenen Händen bauen. Auch Ausflüge in die Natur oder in Museen sind wertvoll. Der große Vorteil dieser klassischen Methoden ist, dass die Schüler lernen, im Team zu arbeiten und soziale Fähigkeiten zu entwickeln. Außerdem fördert das haptische Erleben das Verständnis vieler Themen besser als ein Bildschirm. Viele Grüße"
+        },
+        {
+          "id": "t1-overtourism",
+          "title": "Städtetourismus und Overtourism",
+          "titleAr": "سياحة المدن والسياحة المفرطة",
+          "topic_image_description": "Eine extrem überfüllte Gasse in einer europäischen Altstadt.",
+          "context": "In einem Reiseblog wird über die negativen Folgen des Massentourismus in beliebten Städten diskutiert. Schreiben Sie einen Kommentar.",
+          "aufgabenpunkte": [
+            "Äußern Sie Ihre Meinung zum Massentourismus in Städten.",
+            "Nennen Sie Gründe, warum Städtetrips so populär sind.",
+            "Nennen Sie Alternativen zum Besuch von Metropolen.",
+            "Nennen Sie Vorteile dieser Alternativen."
+          ],
+          "beispielantwort": "Liebe Reisefreunde, das Thema Overtourism finde ich sehr wichtig. Meiner Meinung nach nimmt der Massentourismus in manchen Städten wie Venedig oder Barcelona schlimme Ausmaße an, sodass die Einheimischen aus ihren Vierteln verdrängt werden. Dass Städtetrips so beliebt sind, liegt vor allem an den günstigen Flugpreisen. Viele Fluglinien bieten Tickets für wenige Euros an. Zudem lassen sich Städte gut an einem Wochenende besichtigen, was perfekt für kurze Urlaube ist. Wir müssen aber nicht immer in die bekanntesten Metropolen reisen. Eine hervorragende Alternative ist es, kleinere, unbekanntere Städte zu besuchen oder Urlaub in der Natur, zum Beispiel in den Bergen oder an Seen, zu machen. Der Vorteil solcher Alternativen ist, dass der Urlaub viel entspannter ist, da man nicht in Menschenmassen feststeckt. Gleichzeitig unterstützt man Regionen, die wirtschaftlich vom Tourismus profitieren können, während man die überlaufenen Hotspots entlastet. Herzliche Grüße"
+        }
+      ]
+    },
+    {
+      "id": "teil-2",
+      "label": "Teil 2",
+      "nummer": 2,
+      "arbeitszeit": "25 Minuten",
+      "pruefungsziel": "Interaktion — Persönliche Mitteilung verfassen",
+      "aufgabentyp": "freier-text",
+      "punkte": 50,
+      "minWords": 100,
+      "title": "Formelle Nachricht am Arbeitsplatz",
+      "titleAr": "رسالة رسمية في مكان العمل",
+      "instructions": "Sie schreiben eine formelle oder informelle Nachricht. Achten Sie auf den passenden Stil, die richtige Anrede und den Gruß. Bearbeiten Sie alle vier Leitpunkte in beliebiger Reihenfolge.",
+      "description": "Eine formelle Mitteilung (ca. 100 Wörter) verfassen. Alle vier Leitpunkte müssen bearbeitet werden.",
+      "themen": [
+        {
+          "id": "t2-praktikum-arbeit",
+          "title": "Praktikum: Zu viel Arbeit",
+          "titleAr": "التدريب: عمل كثير جداً",
+          "situation": "Sie machen ein Praktikum in einer großen Firma. In den letzten Tagen haben Sie sehr viele Aufgaben bekommen und schaffen es nicht, alles rechtzeitig zu erledigen. Schreiben Sie eine Nachricht an Ihren Vorgesetzten, Herrn Berger.",
+          "empfaenger": "Herr Berger, Ihr Vorgesetzter",
+          "register": "formell",
+          "aufgabenpunkte": [
+            "Beschreiben Sie Ihre aktuelle Situation im Praktikum.",
+            "Bitten Sie um Verständnis für Ihre Lage.",
+            "Machen Sie einen Vorschlag, wie Sie das Problem lösen können.",
+            "Zeigen Sie Verständnis dafür, dass das Projekt wichtig ist."
+          ],
+          "minWords": 100,
+          "beispielantwort": "Sehr geehrter Herr Berger,\n\nich wende mich an Sie, da ich derzeit im Praktikum auf ein Problem gestoßen bin. In den letzten Tagen habe ich sehr viele neue Aufgaben für das aktuelle Projekt übernommen und stelle nun fest, dass ich die Arbeit in der vorgegebenen Zeit nicht komplett schaffen kann.\nIch bitte Sie um Verständnis für meine Situation, da ich die Aufgaben gründlich und fehlerfrei erledigen möchte.\nMir ist natürlich vollkommen klar, dass dieses Projekt für unsere Abteilung höchste Priorität hat und der Abgabetermin eingehalten werden muss.\nDeshalb schlage ich vor, dass wir uns kurz zusammensetzen, um die Aufgaben zu priorisieren. Alternativ könnte vielleicht Frau Müller einen Teil der Dateneingabe übernehmen.\n\nMit freundlichen Grüßen,\n[Ihr Name]"
+        },
+        {
+          "id": "t2-krankmeldung",
+          "title": "Krankmeldung beim Kursleiter",
+          "titleAr": "إبلاغ عن مرض لمدرس الدورة",
+          "situation": "Sie besuchen einen wichtigen Vorbereitungskurs für eine Prüfung. Leider sind Sie heute krank geworden und können nicht am Kurs teilnehmen, in dem Sie eigentlich eine Präsentation halten sollten. Schreiben Sie eine E-Mail an Ihre Kursleiterin, Frau Dr. Weber.",
+          "empfaenger": "Frau Dr. Weber, Ihre Kursleiterin",
+          "register": "formell",
+          "aufgabenpunkte": [
+            "Beschreiben Sie, warum Sie schreiben.",
+            "Entschuldigen Sie sich für das Fehlen.",
+            "Machen Sie einen Vorschlag, wann Sie die Präsentation nachholen können.",
+            "Zeigen Sie Verständnis für die Umstände im Kurs."
+          ],
+          "minWords": 100,
+          "beispielantwort": "Sehr geehrte Frau Dr. Weber,\n\nich schreibe Ihnen heute, um Ihnen mitzuteilen, dass ich wegen einer starken Grippe leider nicht am Kurs teilnehmen kann.\nEs tut mir sehr leid, dass ich heute fehle, besonders weil meine Präsentation auf dem Plan stand.\nIch verstehe vollkommen, dass dies den Zeitplan des Kurses durcheinanderbringt und für Sie unangenehm ist.\nUm das Problem zu lösen, schlage ich vor, dass ich meine Präsentation gleich in der nächsten Woche am Dienstag halte. Mein Arzt hat mich bis Ende dieser Woche krankgeschrieben, sodass ich am Montag wieder fit sein sollte.\n\nIch danke Ihnen für Ihr Verständnis.\n\nMit freundlichen Grüßen,\n[Ihr Name]"
+        },
+        {
+          "id": "t2-beschwerde-vermieter",
+          "title": "Beschwerdebrief an Vermieter",
+          "titleAr": "رسالة شكوى إلى صاحب العقار",
+          "situation": "In Ihrer Mietwohnung funktioniert die Heizung seit drei Tagen nicht mehr richtig, und es ist sehr kalt. Sie haben den Hausmeister nicht erreicht. Schreiben Sie eine Nachricht an Ihren Vermieter, Herrn Klein.",
+          "empfaenger": "Herr Klein, Ihr Vermieter",
+          "register": "formell",
+          "aufgabenpunkte": [
+            "Beschreiben Sie das Problem mit der Heizung.",
+            "Bitten Sie um eine schnelle Reparatur.",
+            "Schlagen Sie vor, wann ein Handwerker kommen kann.",
+            "Zeigen Sie Verständnis dafür, dass im Winter viel zu tun ist."
+          ],
+          "minWords": 100,
+          "beispielantwort": "Sehr geehrter Herr Klein,\n\nich wende mich an Sie, weil in meiner Wohnung seit drei Tagen die Heizung fast komplett ausgefallen ist. Die Heizkörper werden nur noch lauwarm, und die Zimmertemperatur liegt bei unter 15 Grad.\nIch bitte Sie dringend darum, einen Handwerker mit der Reparatur zu beauftragen, da es nachts extrem kalt wird.\nMir ist durchaus bewusst, dass Heizungsfirmen jetzt im Winter besonders viele Aufträge haben und es zu Wartezeiten kommen kann.\nDennoch wäre es wichtig, das Problem schnell zu beheben. Ein Handwerker könnte diese Woche am Donnerstag oder Freitag ab 14 Uhr kommen, da ich dann zu Hause bin.\n\nIch bedanke mich für Ihre Bemühungen.\n\nMit freundlichen Grüßen,\n[Ihr Name]"
+        },
+        {
+          "id": "t2-anfrage-bewerbung",
+          "title": "Anfrage für ein Praktikum",
+          "titleAr": "طلب للحصول على تدريب",
+          "situation": "Sie interessieren sich für ein Praktikum in einem großen IT-Unternehmen, finden aber auf der Website keine Informationen darüber, ob aktuell Stellen frei sind. Schreiben Sie eine E-Mail an die Personalabteilung (Frau Lehmann).",
+          "empfaenger": "Frau Lehmann, Personalabteilung",
+          "register": "formell",
+          "aufgabenpunkte": [
+            "Beschreiben Sie, warum Sie sich für das Unternehmen interessieren.",
+            "Bitten Sie um Informationen über mögliche Praktikumsplätze.",
+            "Schlagen Sie vor, Ihre Bewerbungsunterlagen sofort zuzusenden.",
+            "Zeigen Sie Verständnis dafür, dass die Abteilung viele Anfragen bekommt."
+          ],
+          "minWords": 100,
+          "beispielantwort": "Sehr geehrte Frau Lehmann,\n\nich schreibe Ihnen, da ich großes Interesse an einem Praktikum in Ihrem IT-Unternehmen habe. Ihre innovativen Projekte im Bereich der Softwareentwicklung verfolge ich schon lange mit Begeisterung.\nDa ich auf Ihrer Website keine aktuellen Praktikumsangebote finden konnte, möchte ich hiermit höflich anfragen, ob Sie für den kommenden Sommer Praktikanten aufnehmen.\nIch habe natürlich volles Verständnis dafür, dass Ihre Abteilung täglich viele Bewerbungen bearbeiten muss und eine Antwort Zeit kosten kann.\nFalls es grundsätzlich Möglichkeiten gibt, würde ich Ihnen sehr gerne meine vollständigen Bewerbungsunterlagen per E-Mail zusenden. \n\nIch freue mich über eine kurze Rückmeldung von Ihnen.\n\nMit freundlichen Grüßen,\n[Ihr Name]"
+        },
+        {
+          "id": "t2-absage-termin",
+          "title": "Absage einer Einladung",
+          "titleAr": "إلغاء دعوة",
+          "situation": "Ihr Geschäftsleiter, Herr Schwarz, hat Sie zu einem wichtigen Firmenessen am Freitagabend eingeladen. Leider können Sie wegen eines privaten Notfalls nicht teilnehmen. Schreiben Sie ihm eine Nachricht.",
+          "empfaenger": "Herr Schwarz, Geschäftsleiter",
+          "register": "formell",
+          "aufgabenpunkte": [
+            "Erklären Sie, warum Sie absagen müssen.",
+            "Entschuldigen Sie sich für die kurzfristige Absage.",
+            "Machen Sie den Vorschlag, sich in der nächsten Woche kurz auszutauschen.",
+            "Zeigen Sie Verständnis für die Bedeutung des Essens."
+          ],
+          "minWords": 100,
+          "beispielantwort": "Sehr geehrter Herr Schwarz,\n\nich danke Ihnen sehr für die Einladung zum Firmenessen am kommenden Freitag. Leider muss ich Ihnen mitteilen, dass ich aus familiären Gründen kurzfristig in meine Heimatstadt reisen muss und daher nicht teilnehmen kann.\nIch bitte Sie aufrichtig um Entschuldigung für diese späte Absage.\nMir ist durchaus bewusst, dass dieses Essen sehr wichtig ist, um die neuen Kollegen besser kennenzulernen und das Team zu stärken.\nDa ich das persönliche Gespräch sehr schätze, möchte ich vorschlagen, dass wir uns nächste Woche am Dienstagmittag auf einen kurzen Kaffee im Büro treffen.\n\nIch wünsche Ihnen und dem Team einen erfolgreichen und schönen Abend.\n\nMit freundlichen Grüßen,\n[Ihr Name]"
+        },
+        {
+          "id": "t2-dank-vorstellungsgespraech",
+          "title": "Dankesschreiben nach Vorstellungsgespräch",
+          "titleAr": "رسالة شكر بعد مقابلة عمل",
+          "situation": "Sie hatten letzte Woche ein Vorstellungsgespräch in einer Werbeagentur bei Herrn Neumann. Sie möchten sich für das gute Gespräch bedanken und noch eine offene Frage klären. Schreiben Sie eine E-Mail.",
+          "empfaenger": "Herr Neumann, Agenturleiter",
+          "register": "formell",
+          "aufgabenpunkte": [
+            "Bedanken Sie sich für das interessante Gespräch.",
+            "Beschreiben Sie Ihre Motivation für die Stelle.",
+            "Bitten Sie um eine Information zum weiteren Ablauf.",
+            "Schlagen Sie vor, bei Bedarf weitere Arbeitsproben zu schicken."
+          ],
+          "minWords": 100,
+          "beispielantwort": "Sehr geehrter Herr Neumann,\n\nich möchte mich noch einmal sehr herzlich für das angenehme und interessante Vorstellungsgespräch am vergangenen Donnerstag bedanken.\nDas Gespräch hat mich in meiner Motivation bestärkt, Teil Ihres kreativen Teams zu werden. Besonders die geplante Marketingkampagne finde ich äußerst spannend.\nDa ich leider vergessen habe, danach zu fragen, wäre ich Ihnen dankbar, wenn Sie mir kurz mitteilen könnten, bis wann ich mit einer Entscheidung rechnen darf.\nIch weiß natürlich, dass der Auswahlprozess viel Zeit in Anspruch nimmt. Sollten Sie in der Zwischenzeit weitere Arbeitsproben von mir benötigen, sende ich Ihnen diese gerne sofort zu.\n\nIch freue mich darauf, wieder von Ihnen zu hören.\n\nMit freundlichen Grüßen,\n[Ihr Name]"
+        }
+      ]
+    }
+  ]
+}

@@ -115,6 +115,22 @@ const AccessGate: React.FC<AccessGateProps> = ({ children }) => {
     };
   }, [granted]);
 
+  // Disable right click in free access mode and prevent text selection
+  useEffect(() => {
+    if (!isLimitedAccess()) return;
+
+    const handleContextMenu = (e: MouseEvent) => {
+      e.preventDefault();
+      return false;
+    };
+
+    document.addEventListener('contextmenu', handleContextMenu, { passive: false });
+
+    return () => {
+      document.removeEventListener('contextmenu', handleContextMenu);
+    };
+  }, [granted]);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const input = code.trim().toUpperCase();
@@ -419,6 +435,25 @@ const AccessGate: React.FC<AccessGateProps> = ({ children }) => {
             -ms-user-select: none !important;
             user-select: none !important;
             -webkit-touch-callout: none !important;
+          }
+          body {
+            -webkit-user-select: none !important;
+            -moz-user-select: none !important;
+            -ms-user-select: none !important;
+            user-select: none !important;
+          }
+        `
+      }} />
+    )}
+
+    {isLimitedAccess() && (
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          * {
+            -webkit-user-select: none !important;
+            -moz-user-select: none !important;
+            -ms-user-select: none !important;
+            user-select: none !important;
           }
           body {
             -webkit-user-select: none !important;

@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "module": "Sprechen",
+    "prepTimeMinutes": 15,
+    "examTimeMinutesPerPair": 15,
+    "totalPoints": 100,
+    "passingScore": 60,
+    "note": "15 Minuten Vorbereitung allein, dann 3 Teile mit Partner und Prüfer"
+  },
+  "teil1": {
+    "durationMinutes": 3,
+    "type": "gemeinsam_planen",
+    "instructions": "Planen Sie gemeinsam mit Ihrem Partner. Sprechen Sie über alle Leitpunkte und einigen Sie sich.",
+    "situation": "Sie möchten gemeinsam mit Ihrem Partner einen Ausflug in eine andere Stadt planen.",
+    "leitpunkte": [
+      "Wohin fahren?",
+      "Was besichtigen?",
+      "Wann treffen?",
+      "Wie hinkommen?"
+    ],
+    "userSuggestion": "Sie möchten am Samstagmorgen mit dem Zug nach Berlin fahren und dort ein Museum besuchen.",
+    "partnerSuggestion": "Ihr Partner möchte lieber nach Hamburg fahren, den Hafen sehen und vorschlägt, mit dem Auto zu fahren.",
+    "partnerResponses": [
+      {
+        "leitpunkt": "Wohin fahren?",
+        "partnerSays": "Ich finde Hamburg schöner als Berlin. Was hältst du von Hamburg?"
+      },
+      {
+        "leitpunkt": "Was besichtigen?",
+        "partnerSays": "Im Hafen gibt es viel zu sehen, das ist interessanter als ein Museum, oder?"
+      },
+      {
+        "leitpunkt": "Wann treffen?",
+        "partnerSays": "Samstagmorgen ist okay, aber vielleicht nicht zu früh?"
+      },
+      {
+        "leitpunkt": "Wie hinkommen?",
+        "partnerSays": "Mit dem Auto sind wir flexibler als mit dem Zug. Sollen wir mein Auto nehmen?"
+      }
+    ],
+    "decisionOptions": [
+      { "id": "A", "text": "Berlin, Zug, Museum (Ihr Vorschlag)" },
+      { "id": "B", "text": "Hamburg, Auto, Hafen (Partner-Vorschlag)" },
+      { "id": "C", "text": "Hamburg, Zug, Hafen + Fischmarkt (Kompromiss)" }
+    ]
+  },
+  "teil2": {
+    "durationMinutes": 3,
+    "type": "thema_praesentieren",
+    "instructions": "Präsentieren Sie Ihr Thema. Folgen Sie den 5 Folien. Sprechen Sie frei — Ihre Notizen sind nur zur Hilfe.",
+    "folienStruktur": [
+      {
+        "folie": 1,
+        "title": "Einleitung",
+        "instruction": "Stellen Sie Ihr Thema vor. Erklären Sie, worüber Sie sprechen werden."
+      },
+      {
+        "folie": 2,
+        "title": "Persönliche Erfahrung",
+        "instruction": "Berichten Sie von Ihrer eigenen Situation oder einem Erlebnis zu diesem Thema."
+      },
+      {
+        "folie": 3,
+        "title": "Situation im Heimatland",
+        "instruction": "Wie ist die Situation in Ihrem Heimatland? Geben Sie Beispiele."
+      },
+      {
+        "folie": 4,
+        "title": "Vor- und Nachteile",
+        "instruction": "Nennen Sie Vor- und Nachteile. Sagen Sie Ihre Meinung dazu."
+      },
+      {
+        "folie": 5,
+        "title": "Abschluss",
+        "instruction": "Fassen Sie kurz zusammen. Bedanken Sie sich bei den Zuhörern."
+      }
+    ],
+    "thema1": {
+      "title": "Umwelt und Recycling",
+      "headline": "\"Wo kommt der Plastikmüll hin?\"",
+      "subheadline": "Warum ist Mülltrennung heute wichtiger denn je?",
+      "slides": [
+        { "folie": 1, "content": "Thema: Umwelt & Recycling — Unser Beitrag für eine sauberere Zukunft?" },
+        { "folie": 2, "content": "In meiner Wohnung habe ich drei verschiedene Mülleimer für Plastik, Papier und Restmüll. Das ist am Anfang schwer, aber man gewöhnt sich daran." },
+        { "folie": 3, "content": "In meiner Heimat wird leider noch viel Müll einfach zusammen weggeworfen, aber es gibt erste Projekte für Recycling." },
+        { "folie": 4, "content": "Vorteile: Schutz der Ressourcen, weniger Umweltverschmutzung. Nachteile: Braucht Platz in der Küche, Zeitaufwand. Meinung: Wir müssen alle mitmachen." },
+        { "folie": 5, "content": "Zusammenfassung: Recycling fängt zu Hause an. Vielen Dank für Ihre Aufmerksamkeit!" }
+      ],
+      "prueferFragen": [
+        "Was kann jeder Einzelne für die Umwelt tun?",
+        "Gibt es in Ihrem Heimatland Recycling-Programme?",
+        "Denken Sie, dass Mülltrennung wirklich hilft?"
+      ],
+      "feedbackStarter": [
+        "Du hast ein sehr wichtiges Thema gewählt, ich finde es gut dass du...",
+        "Ich war überrascht zu hören, dass in deinem Heimatland...",
+        "Ich stimme dir zu beim Punkt mit..."
+      ],
+      "suggestedQuestions": [
+        "Glaubst du, dass Plastikverpackungen im Supermarkt verboten werden sollten?",
+        "Was ist für dich schwieriger: Müll zu trennen oder Wasser zu sparen?"
+      ]
+    },
+    "thema2": {
+      "title": "Online-Shopping",
+      "headline": "\"Nur ein Klick und es ist da!\"",
+      "subheadline": "Kaufen wir zu viel im Internet oder ist es einfach zeitgemäß?",
+      "slides": [
+        { "folie": 1, "content": "Thema: Online-Shopping — Die neue Art zu kaufen: Fluch oder Segen?" },
+        { "folie": 2, "content": "Ich bestelle oft Kleidung online, weil es bequem ist und ich Zeit spare, aber manchmal passen die Sachen nicht." },
+        { "folie": 3, "content": "In meinem Land gibt es immer mehr Paketstationen in den Städten und das Internet-Shopping wächst sehr schnell." },
+        { "folie": 4, "content": "Pro: Riesige Auswahl, 24h offen, Preisvergleich. Contra: Viel Verpackungsmüll, lokale Läden gehen kaputt. Meinung: Bewusst und gezielt kaufen." },
+        { "folie": 5, "content": "Fazit: Online-Shopping ist praktisch, aber wir sollten die lokalen Geschäfte nicht vergessen. Danke fürs Zuhören!" }
+      ],
+      "prueferFragen": [
+        "Kaufen Sie lieber online oder im Geschäft? Warum?",
+        "Was sind die größten Probleme des Online-Shoppings?",
+        "Wie kann man bewusster konsumieren?"
+      ],
+      "feedbackStarter": [
+        "Deine Präsentation war sehr aktuell, ich finde besonders den Punkt über... gut.",
+        "Ich mache auch oft Online-Shopping, aber ich finde auch dass...",
+        "Interessant war dein Beispiel mit..."
+      ],
+      "suggestedQuestions": [
+        "Was machst du, wenn ein online bestelltes Produkt nicht funktioniert?",
+        "Glaubst du, dass es in 20 Jahren noch normale Geschäfte geben wird?"
+      ]
+    }
+  },
+  "teil3": {
+    "durationMinutes": 2,
+    "type": "feedback_und_frage",
+    "instructions": "Geben Sie Rückmeldung zur Präsentation Ihres Partners und stellen Sie eine Frage."
+  }
+}

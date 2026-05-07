@@ -1060,41 +1060,6 @@
     },
     {
       "grammar_topic": "Modalverben (können, müssen, wollen)",
-      "questions": [
-        {
-          "question": "Ich ___ Deutsch sprechen.",
-          "choices": ["kann", "kannst", "können", "könnt"],
-          "correct": "kann",
-          "explanation_ar": "فعل 'können' مع 'ich' في المضارع: kann."
-        },
-        {
-          "question": "Du ___ heute früher nach Hause gehen.",
-          "choices": ["musst", "muss", "müssen", "müsst"],
-          "correct": "musst",
-          "explanation_ar": "فعل 'müssen' مع 'du' يصبح 'musst'."
-        },
-        {
-          "question": "Wir ___ einen neuen Lehrer bekommen.",
-          "choices": ["wollen", "will", "willst", "wollt"],
-          "correct": "wollen",
-          "explanation_ar": "فعل 'wollen' مع 'wir' يبقى 'wollen' (نفس صيغة المصدر)."
-        },
-        {
-          "question": "___ ihr mir helfen?",
-          "choices": ["Könnt", "Kannst", "Kann", "Können"],
-          "correct": "Könnt",
-          "explanation_ar": "فعل 'können' مع 'ihr' يصبح 'könnt'."
-        },
-        {
-          "question": "Sie (formell) ___ das nicht machen.",
-          "choices": ["dürfen", "darf", "darfst", "dürft"],
-          "correct": "dürfen",
-          "explanation_ar": "مع صيغة الاحترام 'Sie'، الفعل 'dürfen' يبقى 'dürfen'."
-        }
-      ]
-    },
-    {
-      "grammar_topic": "Modalverben (können, müssen, wollen)",
       "exercises": [
         {
           "exercise_type": "multiple_choice",

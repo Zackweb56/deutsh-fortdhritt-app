@@ -1,0 +1,49 @@
+{
+  "meta": {
+    "module": "Schreiben",
+    "timeMinutes": 60,
+    "totalPoints": 100,
+    "passingScore": 60
+  },
+  "aufgabe1": {
+    "timeMinutes": 25,
+    "maxPoints": 40,
+    "wordCount": 80,
+    "type": "email_persoenlich",
+    "situation": "Patrick hat Geburtstag gefeiert. Sie waren da, aber möchten ihm nun ein anderes Geschenk schicken, da das erste nicht gepasst hat.",
+    "pointsToCover": [
+      "Bedanken Sie sich für die schöne Feier.",
+      "Erklären Sie das Problem mit dem Geschenk.",
+      "Fragen Sie nach seinen Wünschen für ein neues Geschenk."
+    ],
+    "sampleAnswer": "Lieber Patrick, danke noch einmal für die tolle Party am Samstag! Es hat wirklich Spaß gemacht. Leider habe ich gemerkt, dass das Buch, das ich dir geschenkt habe, nicht ganz deinen Geschmack trifft, oder? Ich möchte es gerne umtauschen. Was liest du denn momentan gerne? Oder hättest du lieber einen Gutschein für das Kino? Sag mir doch bitte kurz Bescheid, damit ich dir etwas schicken kann, das dir wirklich gefällt. Viele Grüße, Zack",
+    "scoringWeights": { "Erfuellung": 10, "Kohaerenz": 10, "Wortschatz": 10, "Strukturen": 10 }
+  },
+  "aufgabe2": {
+    "timeMinutes": 25,
+    "maxPoints": 40,
+    "wordCount": 80,
+    "type": "diskussionsbeitrag",
+    "topic": "Social Media und Privatsphäre",
+    "onlineComment": { 
+      "author": "Laura", 
+      "text": "Ich teile alles auf Instagram. Warum machen sich alle so viele Sorgen um den Datenschutz? Ich habe nichts zu verbergen!" 
+    },
+    "task": "Geben Sie Ihre Meinung zu Lauras Einstellung.",
+    "sampleAnswer": "Hallo Laura, dein Kommentar ist interessant, aber ich sehe das ganz anders. Ich finde es gefährlich, alles im Internet zu zeigen. Man weiß nie, wer die Fotos sieht und was damit passiert. Daten sind sehr wertvoll und Firmen nutzen sie für Werbung. Ich finde, man sollte vorsichtig sein, welche privaten Informationen man teilt. Ein bisschen Privatsphäre ist wichtig für die Sicherheit. Wie denken die anderen darüber?",
+    "scoringWeights": { "Erfuellung": 10, "Kohaerenz": 10, "Wortschatz": 10, "Strukturen": 10 }
+  },
+  "aufgabe3": {
+    "timeMinutes": 10,
+    "maxPoints": 20,
+    "wordCount": 40,
+    "type": "email_formell",
+    "situation": "Sie müssen einen Termin beim Zahnarzt absagen.",
+    "pointsToCover": [
+      "Höfliche Absage.",
+      "Grund angeben (kurz)."
+    ],
+    "sampleAnswer": "Sehr geehrte Damen und Herren, leider muss ich meinen Termin am Mittwoch um 10 Uhr absagen, da ich kurzfristig beruflich verreisen muss. Könnten wir einen neuen Termin für nächste Woche vereinbaren? Über eine Rückmeldung freue ich mich. Mit freundlichen Grüßen, Zack Dev",
+    "scoringWeights": { "Erfuellung": 5, "Kohaerenz": 5, "Wortschatz": 5, "Strukturen": 5 }
+  }
+}

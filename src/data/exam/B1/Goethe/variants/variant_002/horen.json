@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "module": "Hören",
+    "timeMinutes": 40,
+    "totalRawPoints": 30,
+    "passingRaw": 18,
+    "scoringFormula": "rawPoints / 30 * 100",
+    "baseAudioPath": "/src/data/exam/B1/Goethe/variants/variant_002/horen/"
+  },
+  "teil1": {
+    "type": "richtig_falsch_plus_mehrfach",
+    "points": 10,
+    "plays": 2,
+    "prepSeconds": 10,
+    "instructions": "Sie hören 5 kurze Texte. Jeden Text ZWEIMAL.",
+    "textType": "Beruf / Reise",
+    "example": {
+      "audioFile": "beispiel.mp3",
+      "transcript": "Guten Tag, Herr Weber. Hier ist die Personalabteilung der Firma TechSolution. Wir freuen uns, Ihnen mitteilen zu können, dass Sie die Stelle bekommen haben. Bitte kommen Sie am Montag um 9 Uhr für den Vertrag vorbei.",
+      "q1": { "id": "01", "text": "Herr Weber hat den Job bekommen.", "correct": "Richtig" },
+      "q2": { "id": "02", "text": "Wann soll er in die Firma kommen?", "options": [{"value":"a","label":"Am Freitag."},{"value":"b","label":"Am Montag."},{"value":"c","label":"Nächste Woche Dienstag."}], "correct": "b" }
+    },
+    "texts": [
+      {
+        "id": 1, "audioFile": "text1.m4a", "transcript": "Achtung am Bahnsteig 9. Der Intercity aus Frankfurt hat heute leider 15 Minuten Verspätung. Reisende nach Berlin nutzen bitte den Ersatzzug auf Gleis 11, der in wenigen Minuten einfährt.",
+        "q1": { "id": 1, "text": "Der Zug aus Frankfurt ist pünktlich.", "correct": "Falsch" },
+        "q2": { "id": 2, "text": "Wo fährt der Ersatzzug ab?", "options": [{"value":"a","label":"Gleis 9."},{"value":"b","label":"Gleis 11."},{"value":"c","label":"Gleis 15."}], "correct": "b" }
+      },
+      {
+        "id": 2, "audioFile": "text2.mp3", "transcript": "Guten Abend, liebe Hörer. Wegen eines Unfalls auf der A8 ist die Autobahn Richtung Salzburg gesperrt. Bitte umfahren Sie das Gebiet weiträumig über die Landstraße. Wir halten Sie auf dem Laufenden.",
+        "q1": { "id": 3, "text": "Die Autobahn ist frei befahrbar.", "correct": "Falsch" },
+        "q2": { "id": 4, "text": "In welche Richtung gibt es Probleme?", "options": [{"value":"a","label":"München."},{"value":"b","label":"Salzburg."},{"value":"c","label":"Frankfurt."}], "correct": "b" }
+      },
+      {
+        "id": 3, "audioFile": "text3.mp3", "transcript": "Hallo Karin, hier ist Tom. Du, ich schaffe es heute leider nicht pünktlich zum Treffen. Mein Auto springt nicht an. Ich nehme jetzt den Bus und bin wohl erst um 19 Uhr da. Entschuldigung!",
+        "q1": { "id": 5, "text": "Tom kommt später.", "correct": "Richtig" },
+        "q2": { "id": 6, "text": "Wie fährt Tom zum Treffen?", "options": [{"value":"a","label":"Mit dem Auto."},{"value":"b","label":"Mit dem Fahrrad."},{"value":"c","label":"Mit dem Bus."}], "correct": "c" }
+      },
+      {
+        "id": 4, "audioFile": "text4.m4a", "transcript": "Achtung, eine wichtige Durchsage am Flughafen: Herr Gonzales, gebucht auf Flug LH 452 nach Madrid, wird gebeten, sofort zum Schalter 24 zu kommen. Ihr Flug wird in Kürze aufgerufen.",
+        "q1": { "id": 7, "text": "Herr Gonzales soll zum Gate gehen.", "correct": "Falsch" },
+        "q2": { "id": 8, "text": "Wohin fliegt Herr Gonzales?", "options": [{"value":"a","label":"Nach Barcelona."},{"value":"b","label":"Nach Madrid."},{"value":"c","label":"Nach Mexiko."}], "correct": "b" }
+      },
+      {
+        "id": 5, "audioFile": "text5.m4a", "transcript": "Liebe Kunden, besuchen Sie unsere neue Gartenabteilung im zweiten Stock! Nur heute gibt es 20 Prozent Rabatt auf alle Zimmerpflanzen. Wir freuen uns auf Ihren Besuch.",
+        "q1": { "id": 9, "text": "Es gibt heute ein Sonderangebot.", "correct": "Richtig" },
+        "q2": { "id": 10, "text": "Wo ist die Gartenabteilung?", "options": [{"value":"a","label":"Im Erdgeschoss."},{"value":"b","label":"Im ersten Stock."},{"value":"c","label":"Im zweiten Stock."}], "correct": "c" }
+      }
+    ]
+  },
+  "teil2": {
+    "type": "mehrfachauswahl",
+    "points": 5,
+    "plays": 1,
+    "prepSeconds": 60,
+    "audioFile": "teil2.mp3",
+    "instructions": "Stadtführung EINMAL hören.",
+    "transcript": "Willkommen zu unserer Stadtführung 'Historisches Hamburg'! Wir stehen hier vor dem berühmten Rathaus. Es wurde Ende des 19. Jahrhunderts erbaut. Bitte schauen Sie sich die Fassade an. Wir gehen gleich weiter in die Speicherstadt. Dort besichtigen wir ein altes Lagerhaus, in dem heute Kaffee geröstet wird. Sie können dort auch eine kleine Kostprobe bekommen. Die Führung endet am Hafen, wo Sie die Möglichkeit haben, eine Bootsfahrt zu machen. Bitte bleiben Sie in der Gruppe, es ist heute sehr voll in der Stadt.",
+    "items": [
+      { "id": 11, "text": "Das Hamburger Rathaus ist...", "options": [{"value":"a","label":"ganz neu."},{"value":"b","label":"über 100 Jahre alt."},{"value":"c","label":"aus Holz gebaut."}], "correct": "b" },
+      { "id": 12, "text": "Was passiert heute in der Speicherstadt?", "options": [{"value":"a","label":"Es wird Kaffee produziert."},{"value":"b","label":"Dort wohnen nur noch Leute."},{"value":"c","label":"Es werden Schiffe gebaut."}], "correct": "a" },
+      { "id": 13, "text": "Was können die Besucher dort tun?", "options": [{"value":"a","label":"Kaffee trinken."},{"value":"b","label":"Kaffee verkaufen."},{"value":"c","label":"Bohnen pflanzen."}], "correct": "a" },
+      { "id": 14, "text": "Wo ist das Ziel der Führung?", "options": [{"value":"a","label":"Am Bahnhof."},{"value":"b","label":"Am Rathaus."},{"value":"c","label":"Am Hafen."}], "correct": "c" },
+      { "id": 15, "text": "Was empfiehlt der Führer am Ende?", "options": [{"value":"a","label":"Essen zu gehen."},{"value":"b","label":"Eine Fahrt auf dem Wasser."},{"value":"c","label":"Sich auszuruhen."}], "correct": "b" }
+    ]
+  },
+  "teil3": {
+    "type": "richtig_falsch",
+    "points": 7,
+    "plays": 1,
+    "audioFile": "teil3.mp3",
+    "transcript": "Frau: Entschuldigung, wissen Sie, wo ich hier Bio-Eier finde? Mann: Ja, die sind ganz hinten bei den Milchprodukten. Frau: Oh danke. Ich bin neu hier in der Gegend und finde mich im Supermarkt noch nicht so gut zurecht. Mann: Kein Problem. Gehen Sie einfach geradeaus. Frau: Super, danke. Sagen Sie, sind die Eier hier immer frisch? Mann: Ja, ich kaufe hier oft ein. Die Qualität ist wirklich gut. Frau: Das ist schön zu hören. Ich lege viel Wert auf gesunde Ernährung. Mann: Ich auch. Schönen Tag noch!",
+    "items": [
+      { "id": 16, "text": "Die Frau sucht nach Eiern.", "correct": "Richtig" },
+      { "id": 17, "text": "Der Mann arbeitet im Supermarkt.", "correct": "Falsch" },
+      { "id": 18, "text": "Die Frau kennt den Laden sehr gut.", "correct": "Falsch" },
+      { "id": 19, "text": "Die Eier befinden sich in der Nähe der Milch.", "correct": "Richtig" },
+      { "id": 20, "text": "Der Mann ist unzufrieden mit dem Supermarkt.", "correct": "Falsch" },
+      { "id": 21, "text": "Die Frau möchte sich gesund ernähren.", "correct": "Richtig" },
+      { "id": 22, "text": "Der Mann kauft selten in diesem Laden.", "correct": "Falsch" }
+    ]
+  },
+  "teil4": {
+    "type": "zuordnung_personen",
+    "points": 8,
+    "plays": 2,
+    "instructions": "Diskussion zum Thema Homeoffice hören.",
+    "transcript": "Moderator: Herzlich willkommen zu unserer Talkrunde. Heute geht es um das Thema Homeoffice. Bei uns sind Frau Schmidt, Personalchefin, und Herr Lange, der lieber im Büro arbeitet. Frau Schmidt, viele Firmen setzen jetzt auf Homeoffice, oder? Frau Schmidt: Ja, absolut. Wir sehen, dass die Mitarbeiter motivierter sind, wenn sie sich den Weg zur Arbeit sparen. Außerdem können wir Büroflächen verkleinern. Herr Lange: Das mag sein, aber ich finde den persönlichen Kontakt wichtig. Zu Hause arbeite ich zwar viel, aber ich fühle mich einsam. Moderator: Ein wichtiger Punkt. Wie sieht es mit der Technik aus? Frau Schmidt: Wir stellen natürlich alles zur Verfügung: Laptop, Monitor, Headset. Herr Lange: Aber was ist mit dem Datenschutz? Zu Hause ist das viel schwieriger zu kontrollieren als in der Firma.",
+    "audioFile": "teil4.mp3",
+    "speakers": { "a": "Moderator", "b": "Frau Schmidt", "c": "Herr Lange" },
+    "topic": "Homeoffice: Fluch oder Segen?",
+    "example": { "id": 0, "text": "Stellt die Gäste der Talkrunde vor.", "correct": "a" },
+    "items": [
+      { "id": 23, "text": "Ist davon überzeugt, dass Mitarbeiter ohne Pendelweg glücklicher sind.", "correct": "b" },
+      { "id": 24, "text": "Vermisst die Gespräche mit den Kollegen vor Ort.", "correct": "c" },
+      { "id": 25, "text": "Sieht finanzielle Vorteile für die Firma durch weniger Miete.", "correct": "b" },
+      { "id": 26, "text": "Lenkt die Diskussion auf technische Aspekte.", "correct": "a" },
+      { "id": 27, "text": "Erklärt, dass die Firma die notwendigen Geräte bezahlt.", "correct": "b" },
+      { "id": 28, "text": "Macht sich Sorgen um die Sicherheit von Daten in der Wohnung.", "correct": "c" },
+      { "id": 29, "text": "Findet, dass die Arbeit im Homeoffice zu wenig soziale Interaktion bietet.", "correct": "c" },
+      { "id": 30, "text": "Beendet das Gespräch mit einer Zusammenfassung.", "correct": "a" }
+    ]
+  }
+}

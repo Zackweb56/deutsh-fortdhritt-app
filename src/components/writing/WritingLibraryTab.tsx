@@ -26,9 +26,7 @@ interface WritingResults {
 const levelOrder: WritingLevel[] = ['A1', 'A2', 'B1', 'B2'];
 
 const getLevelBadgeVariant = (level: WritingLevel): 'default' | 'secondary' | 'destructive' | 'outline' => {
-  if (level === 'A1' || level === 'A2') return 'secondary';
-  if (level === 'B1') return 'outline';
-  return 'default';
+  return 'secondary';
 };
 
 const normalizeToken = (token: string) => token.replace(/[.,!?;:()"']/g, '').toLowerCase();
@@ -221,6 +219,28 @@ const WritingLibraryTab = () => {
     []
   );
 
+  const allowedFreeWritingIds = useMemo(() => {
+    const freeByLevel = new Set<string>();
+    const seenLevel: Record<WritingLevel, boolean> = {
+      A1: false,
+      A2: false,
+      B1: false,
+      B2: false,
+    };
+
+    for (const writing of writingData) {
+      if (!seenLevel[writing.level] && writing.isFree) {
+        freeByLevel.add(writing.id);
+        seenLevel[writing.level] = true;
+      }
+      if (Object.values(seenLevel).every(Boolean)) {
+        break;
+      }
+    }
+
+    return freeByLevel;
+  }, []);
+
   const selectedWriting = useMemo(
     () => writingData.find((writing) => writing.id === selectedWritingId) || null,
     [selectedWritingId]
@@ -228,7 +248,7 @@ const WritingLibraryTab = () => {
 
   const currentLine = selectedWriting?.lines[lineIndex] || null;
 
-  const isWritingLocked = (writing: WritingItem) => limited && !writing.isFree;
+  const isWritingLocked = (writing: WritingItem) => limited && !allowedFreeWritingIds.has(writing.id);
 
   // Preload audio with caching and fallback
   const preloadAudioWithFallback = useCallback(async (src: string): Promise<HTMLAudioElement> => {
@@ -1000,10 +1020,10 @@ const WritingLibraryTab = () => {
               </p>
             </div>
           </div>
-          <div className="text-[10px] sm:text-xs text-muted-foreground flex items-center gap-2">
+          {/* <div className="text-[10px] sm:text-xs text-muted-foreground flex items-center gap-2">
             <Lock className="h-3 w-3 sm:h-4 sm:w-4" />
             {limited ? 'مجاني: تمارين تجريبية' : 'مدفوع: جميع التمارين'}
-          </div>
+          </div> */}
         </div>
       </Card>
 
@@ -1045,8 +1065,10 @@ const WritingLibraryTab = () => {
           const wordCount = writing.lines.reduce((acc, line) => acc + countWords(line.de), 0);
           const content = (
             <Card
-              className="p-3 sm:p-5 h-full cursor-pointer border-border/70 hover:border-primary/40 transition-colors"
-              onClick={() => startWriting(writing)}
+              className={
+                `p-3 sm:p-5 h-full border-border/70 transition-colors ${locked ? 'opacity-80 cursor-not-allowed' : 'cursor-pointer hover:border-primary/40'}`
+              }
+              onClick={() => !locked && startWriting(writing)}
             >
               <div className="flex items-start justify-between gap-2 mb-2 sm:mb-3">
                 <div className="flex-1 min-w-0">
@@ -1054,7 +1076,6 @@ const WritingLibraryTab = () => {
                   <p className="text-xs sm:text-sm text-muted-foreground truncate">{writing.titleAr}</p>
                 </div>
                 <div className="flex flex-col items-end gap-1 sm:gap-2 flex-shrink-0">
-                  {writing.isFree ? <Badge variant="secondary" className="text-[10px] sm:text-xs">مجاني</Badge> : <Badge variant="outline" className="text-[10px] sm:text-xs">مدفوع</Badge>}
                   <Badge variant={getLevelBadgeVariant(writing.level)} className="text-[10px] sm:text-xs">{writing.level}</Badge>
                 </div>
               </div>

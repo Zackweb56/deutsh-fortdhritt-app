@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "module": "Hören",
+    "timeMinutes": 40,
+    "totalRawPoints": 30,
+    "passingRaw": 18,
+    "scoringFormula": "rawPoints / 30 * 100",
+    "baseAudioPath": "/src/data/exam/B1/Goethe/variants/variant_003/horen/"
+  },
+  "teil1": {
+    "type": "richtig_falsch_plus_mehrfach",
+    "points": 10,
+    "plays": 2,
+    "prepSeconds": 10,
+    "instructions": "Sie hören 5 kurze Texte. Jeden Text ZWEIMAL.",
+    "example": {
+      "audioFile": "beispiel.m4a",
+      "transcript": "Hallo, hier ist das Tierheim. Wir haben gute Nachrichten: Ihr Hund wurde gefunden! Er ist wohlauf und Sie können ihn heute bis 18 Uhr abholen. Bitte bringen Sie Ihren Ausweis mit.",
+      "q1": { "id": "01", "text": "Der Hund wurde gefunden.", "correct": "Richtig" },
+      "q2": { "id": "02", "text": "Bis wann kann man den Hund abholen?", "options": [{"value":"a","label":"Bis 16 Uhr."},{"value":"b","label":"Bis 18 Uhr."},{"value":"c","label":"Morgen früh."}], "correct": "b" }
+    },
+    "texts": [
+      {
+        "id": 1, "audioFile": "text1.m4a", "transcript": "Guten Tag, hier ist die Volkshochschule. Der Spanischkurs am Mittwochabend fällt heute leider aus, da die Lehrerin krank ist. Ein Ersatztermin wird nächste Woche bekannt gegeben.",
+        "q1": { "id": 1, "text": "Der Kurs findet heute statt.", "correct": "Falsch" },
+        "q2": { "id": 2, "text": "Warum fällt der Kurs aus?", "options": [{"value":"a","label":"Wegen Bauarbeiten."},{"value":"b","label":"Die Lehrerin ist nicht da."},{"value":"c","label":"Es gibt zu wenige Schüler."}], "correct": "b" }
+      },
+      {
+        "id": 2, "audioFile": "text2.m4a", "transcript": "Achtung am Bahnsteig 3. Der Regionalzug nach Stuttgart fährt heute außerplanmäßig von Bahnsteig 5 ab. Bitte achten Sie auf die geänderte Gleisanzeige.",
+        "q1": { "id": 3, "text": "Der Zug fährt von einem anderen Gleis.", "correct": "Richtig" },
+        "q2": { "id": 4, "text": "Wohin fährt der Zug?", "options": [{"value":"a","label":"Nach München."},{"value":"b","label":"Nach Stuttgart."},{"value":"c","label":"Nach Berlin."}], "correct": "b" }
+      },
+      {
+        "id": 3, "audioFile": "text3.m4a", "transcript": "Und hier das Wetter für Norddeutschland: Es bleibt bewölkt und regnerisch. Die Temperaturen liegen zwischen 10 und 12 Grad. Erst am Sonntag wird es wieder sonnig.",
+        "q1": { "id": 5, "text": "In Norddeutschland regnet es.", "correct": "Richtig" },
+        "q2": { "id": 6, "text": "Wann wird das Wetter besser?", "options": [{"value":"a","label":"Am Samstag."},{"value":"b","label":"Morgen."},{"value":"c","label":"Am Sonntag."}], "correct": "c" }
+      },
+      {
+        "id": 4, "audioFile": "text4.mp3", "transcript": "Hallo Lena, hier ist Max. Ich stehe im Stau und schaffe es nicht pünktlich zum Essen. Fangt schon mal ohne mich an. Ich melde mich später noch einmal.",
+        "q1": { "id": 7, "text": "Max ist pünktlich.", "correct": "Falsch" },
+        "q2": { "id": 8, "text": "Was soll Lena tun?", "options": [{"value":"a","label":"Warten."},{"value":"b","label":"Schon mal essen."},{"value":"c","label":"Ihn anrufen."}], "correct": "b" }
+      },
+      {
+        "id": 5, "audioFile": "text5.m4a", "transcript": "Achtung im Kaufhaus: In der Kinderabteilung wurde ein kleiner Junge namens Paul gefunden. Er wartet an der Kasse im 2. Stock auf seine Eltern.",
+        "q1": { "id": 9, "text": "Ein Kind wird gesucht.", "correct": "Richtig" },
+        "q2": { "id": 10, "text": "Wo wartet Paul?", "options": [{"value":"a","label":"Am Ausgang."},{"value":"b","label":"In der Spielzeugabteilung."},{"value":"c","label":"An der Kasse."}], "correct": "c" }
+      }
+    ]
+  },
+  "teil2": {
+    "type": "mehrfachauswahl",
+    "points": 5,
+    "plays": 1,
+    "prepSeconds": 60,
+    "audioFile": "teil2.mp3",
+    "instructions": "Radio-Interview EINMAL hören.",
+    "transcript": "Moderator: Heute bei uns im Studio: Frau Weber vom Verein 'Saubere Umwelt'. Frau Weber, Sie organisieren am Wochenende eine Aufräumaktion im Stadtpark, richtig? Frau Weber: Ganz genau. Wir treffen uns am Samstag um 10 Uhr am Haupteingang. Jeder kann mitmachen. Wir stellen Handschuhe und Müllsäcke zur Verfügung. Letztes Jahr haben über 100 Leute geholfen. Das war ein toller Erfolg. Wir wollen vor allem den Plastikmüll am See einsammeln. Nach der Arbeit gibt es für alle Helfer kostenlose Getränke und Würstchen vom Grill.",
+    "items": [
+      { "id": 11, "text": "Wann findet die Aktion statt?", "options": [{"value":"a","label":"Am Freitag."},{"value":"b","label":"Am Samstag."},{"value":"c","label":"Am Sonntag."}], "correct": "b" },
+      { "id": 12, "text": "Was müssen die Helfer mitbringen?", "options": [{"value":"a","label":"Handschuhe."},{"value":"b","label":"Müllsäcke."},{"value":"c","label":"Nichts."}], "correct": "c" },
+      { "id": 13, "text": "Wie viele Leute waren letztes Jahr dabei?", "options": [{"value":"a","label":"Über 100."},{"value":"b","label":"Genau 50."},{"value":"c","label":"Zehn Personen."}], "correct": "a" },
+      { "id": 14, "text": "Welcher Ort im Park ist besonders schmutzig?", "options": [{"value":"a","label":"Der Spielplatz."},{"value":"b","label":"Der See."},{"value":"c","label":"Der Parkplatz."}], "correct": "b" },
+      { "id": 15, "text": "Was bekommen die Helfer nach der Aktion?", "options": [{"value":"a","label":"Geld."},{"value":"b","label":"Einen Gutschein."},{"value":"c","label":"Essen und Trinken."}], "correct": "c" }
+    ]
+  },
+  "teil3": {
+    "type": "richtig_falsch",
+    "points": 7,
+    "plays": 1,
+    "audioFile": "teil3.mp3",
+    "transcript": "Mann: Hallo Sarah, hast du schon gehört? Markus zieht am Wochenende um. Frau: Oh, echt? Braucht er Hilfe? Mann: Ja, er hat gefragt, ob wir mit anpacken können. Er hat zwar einen kleinen LKW gemietet, aber er hat so viele Bücherkisten. Frau: Na klar, ich helfe gerne. Wann geht es denn los? Mann: Am Samstag um 9 Uhr morgens. Frau: Oh weh, das ist aber früh. Aber okay, ich komme. Sollen wir was zu essen mitbringen? Mann: Nein, Markus bestellt Pizza für alle Helfer.",
+    "items": [
+      { "id": 16, "text": "Markus braucht Hilfe beim Umzug.", "correct": "Richtig" },
+      { "id": 17, "text": "Markus hat keinen LKW gemietet.", "correct": "Falsch" },
+      { "id": 18, "text": "Markus hat viele schwere Sachen.", "correct": "Richtig" },
+      { "id": 19, "text": "Der Umzug beginnt am Sonntag.", "correct": "Falsch" },
+      { "id": 20, "text": "Sarah hat am Samstag keine Zeit.", "correct": "Falsch" },
+      { "id": 21, "text": "Die Helfer müssen ihr eigenes Essen kaufen.", "correct": "Falsch" },
+      { "id": 22, "text": "Sarah findet 9 Uhr morgens spät.", "correct": "Falsch" }
+    ]
+  },
+  "teil4": {
+    "type": "zuordnung_personen",
+    "points": 8,
+    "plays": 2,
+    "audioFile": "teil4.mp3",
+    "transcript": "Moderator: Herzlich willkommen zu unserer Diskussionsrunde. Heute zum Thema: Handys in der Schule. Bei uns sind Frau Berger, Lehrerin, und Herr Kunze, Vater eines 14-jährigen Sohnes. Frau Berger, Sie sind für ein strenges Handyverbot, oder? Frau Berger: Ja, also, ich meine, die Handys lenken im Unterricht einfach zu stark ab. Ähm, die Schüler schauen ständig auf ihre Nachrichten anstatt dem Lehrer zuzuhören. Herr Kunze: Na ja, aber das Handy ist heute ein wichtiges Werkzeug. Also, ich finde, die Schüler sollten lernen, wie man es sinnvoll nutzt. Moderator: Das ist ein interessanter Punkt. Aber was ist mit Cybermobbing? Frau Berger: Genau, das ist ein großes Problem. In den Pausen werden oft heimlich Fotos gemacht und dann im Internet verbreitet. Herr Kunze: Das stimmt, aber ein Verbot löst das Problem nicht. Man muss darüber sprechen. Moderator: Also, wir sehen, es gibt kein einfaches Richtig oder Falsch.",
+    "speakers": { "a": "Moderator", "b": "Frau Berger", "c": "Herr Kunze" },
+    "topic": "Handyverbot an Schulen",
+    "example": { "id": 0, "text": "Begrüßt die Gäste und führt in das Thema ein.", "correct": "a" },
+    "items": [
+      { "id": 23, "text": "Findet, dass Smartphones die Konzentration im Unterricht stören.", "correct": "b" },
+      { "id": 24, "text": "Hält das Handy für ein unverzichtbares Instrument in der modernen Welt.", "correct": "c" },
+      { "id": 25, "text": "Macht sich Sorgen um die Privatsphäre der Schüler in den Pausen.", "correct": "b" },
+      { "id": 26, "text": "Ist der Meinung, dass man den Umgang mit Technik lernen muss, anstatt sie zu verbieten.", "correct": "c" },
+      { "id": 27, "text": "Sieht das Internet als Ort für Beleidigungen und Mobbing unter Schülern.", "correct": "b" },
+      { "id": 28, "text": "Fragt nach den Gefahren durch soziale Medien.", "correct": "a" },
+      { "id": 29, "text": "Betont, dass ein Verbot allein keine Lösung für gesellschaftliche Probleme ist.", "correct": "c" },
+      { "id": 30, "text": "Stellt fest, dass es zu diesem Thema sehr verschiedene Meinungen gibt.", "correct": "a" }
+    ]
+  }
+}

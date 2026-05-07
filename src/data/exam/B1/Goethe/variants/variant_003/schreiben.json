@@ -1,0 +1,49 @@
+{
+  "meta": {
+    "module": "Schreiben",
+    "timeMinutes": 60,
+    "totalPoints": 100,
+    "passingScore": 60
+  },
+  "aufgabe1": {
+    "timeMinutes": 25,
+    "maxPoints": 40,
+    "wordCount": 80,
+    "type": "email_persoenlich",
+    "situation": "Sie sind letzte Woche in eine neue Wohnung umgezogen. Schreiben Sie einer Freundin / einem Freund davon.",
+    "pointsToCover": [
+      "Beschreiben Sie die neue Wohnung.",
+      "Erzählen Sie vom Umzugstag.",
+      "Laden Sie die Person zu einer Einweihungsparty ein."
+    ],
+    "sampleAnswer": "Liebe Sarah, wie geht es dir? Ich bin endlich in meiner neuen Wohnung! Sie ist wirklich hell und hat einen großen Balkon, was mir sehr gefällt. Der Umzugstag war zwar anstrengend, aber zum Glück haben viele Freunde geholfen. Wir waren am Abend zwar alle müde, aber glücklich. Ich möchte das gerne feiern und lade dich am nächsten Samstag zu meiner Einweihungsparty ein. Es gibt Pizza und Getränke. Hast du Zeit? Ich würde mich sehr freuen! Liebe Grüße, Zack",
+    "scoringWeights": { "Erfuellung": 10, "Kohaerenz": 10, "Wortschatz": 10, "Strukturen": 10 }
+  },
+  "aufgabe2": {
+    "timeMinutes": 25,
+    "maxPoints": 40,
+    "wordCount": 80,
+    "type": "diskussionsbeitrag",
+    "topic": "Plastiktüten und Umwelt",
+    "onlineComment": { 
+      "author": "Elena", 
+      "text": "Ich verstehe nicht, warum alle wegen der Plastiktüten so einen Stress machen. Es gibt doch viel wichtigere Probleme auf der Welt!" 
+    },
+    "task": "Reagieren Sie auf Elenas Kommentar.",
+    "sampleAnswer": "Hallo Elena, ich habe deinen Kommentar gelesen. Ich stimme dir nicht ganz zu. Es stimmt, dass es viele Probleme gibt, aber der Plastikmüll ist eines der größten für unsere Umwelt. Jede Plastiktüte, die wir nicht benutzen, hilft, die Meere sauber zu halten. Es ist eine einfache Sache, die jeder von uns tun kann. Wir sollten alle versuchen, weniger Plastik zu verbrauchen, um die Natur für die Zukunft zu schützen. Was denkst du darüber?",
+    "scoringWeights": { "Erfuellung": 10, "Kohaerenz": 10, "Wortschatz": 10, "Strukturen": 10 }
+  },
+  "aufgabe3": {
+    "timeMinutes": 10,
+    "maxPoints": 20,
+    "wordCount": 40,
+    "type": "email_formell",
+    "situation": "Sie haben ein Gespräch mit Ihrem Kursleiter vereinbart, können aber nicht kommen.",
+    "pointsToCover": [
+      "Entschuldigen Sie sich höflich.",
+      "Bitten Sie um einen neuen Termin."
+    ],
+    "sampleAnswer": "Sehr geehrter Herr Müller, leider kann ich zu unserem Gespräch am Dienstag nicht kommen, da ich kurzfristig arbeiten muss. Bitte entschuldigen Sie mein Fernbleiben. Wäre es möglich, das Gespräch am Donnerstag zur gleichen Zeit nachzuholen? Vielen Dank für Ihr Verständnis. Mit freundlichen Grüßen, Zack Dev",
+    "scoringWeights": { "Erfuellung": 5, "Kohaerenz": 5, "Wortschatz": 5, "Strukturen": 5 }
+  }
+}

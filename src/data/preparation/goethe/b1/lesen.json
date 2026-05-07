@@ -1,0 +1,1275 @@
+{
+  "institut": "Goethe-Institut",
+  "level": "B1",
+  "module": "Lesen",
+  "meta": {
+    "totalPunkte": 30,
+    "totalPunkteMax": 30,
+    "bestehensgrenzeMesspunkte": 18,
+    "bestehensgrenzeProzent": 60,
+    "gesamtergebnis": 100,
+    "totalZeit": "65 Minuten",
+    "teileCount": 5,
+    "description": "Das Modul Lesen hat fünf Teile. Sie lesen mehrere Texte und lösen Aufgaben dazu. Für jede Aufgabe gibt es nur eine richtige Lösung."
+  },
+  "teile": [
+    {
+      "id": "teil-1",
+      "label": "Teil 1",
+      "nummer": 1,
+      "arbeitszeit": "10 Minuten",
+      "pruefungsziel": "Korrespondenz lesen",
+      "aufgabentyp": "richtig-falsch",
+      "punkte": 6,
+      "itemCount": 6,
+      "aufgabenNummern": "1–6",
+      "answerType": "richtig-falsch",
+      "title": "Globalverstehen — Blog oder persönlicher Text",
+      "titleAr": "الفهم العام — مدونة أو نص شخصي",
+      "instructions": "Lesen Sie den Text und die Aufgaben 1 bis 6 dazu. Wählen Sie: Sind die Aussagen Richtig oder Falsch?",
+      "description": "Ein persönlicher Text (Blog, Tagebuch, Brief, E-Mail). Sechs Aussagen dazu als richtig oder falsch bewerten.",
+      "howItWorks": {
+        "textType": "Blogeintrag, Tagebucheintrag, persönlicher Brief oder E-Mail (ca. 300–400 Wörter)",
+        "task": "6 Aussagen (Aufgabe 1–6) als Richtig oder Falsch markieren",
+        "example": "Aufgabe 0 (Beispiel) ist immer dabei und zeigt das Format"
+      },
+      "themen": [
+        {
+          "id": "t1-brieftasche",
+          "title": "Gefundene Brieftasche — Blogeintrag",
+          "titleAr": "حقيبة يد مفقودة — تدوينة",
+          "source": "SusannesAlltagsBlog.at",
+          "text": {
+            "title": "SusannesAlltagsBlog.at — Mein Alltag, meine Gedanken, mein Leben ...",
+            "datum": "Donnerstag, den 23. Juni",
+            "content": "Was mir heute passiert ist, das glaubt mir keiner: Als ich zu Mittag nichts ahnend in der Küche beim Kochen stand, läutete mein Handy. Eine Frauenstimme erklärte mir, dass meine Brieftasche in der Bankfiliale abgegeben worden war und ich sie dort abholen könnte. Mir wurde ganz heiß – mir war noch gar nicht aufgefallen, dass sie fehlte. Und ich hatte ja auch noch relativ viel Bargeld eingesteckt!\n\nSchnell holte ich meine Handtasche hervor und suchte nach der Brieftasche. Es stimmte! Auch nach längerem Kramen in der Tasche konnte ich sie nicht finden. Mein Geld war tatsächlich verschwunden!\n\nIch machte mich also auf den Weg zur Bank und überlegte, wo ich meine Brieftasche liegen gelassen hatte: Sicherlich im Supermarkt an der Kasse. Jedenfalls kam ich bei der Bank an und war schon gespannt darauf zu erfahren, wo meine Brieftasche gefunden worden war und natürlich, ob etwas fehlte. Die Bankangestellte teilte mir mit, dass ein junger Mann die Brieftasche abgegeben hatte. Er hatte sie auf dem Parkplatz vor dem Supermarkt gefunden und wollte sie eigentlich ins Fundbüro bringen – wie man es in so einem Fall eben macht. Der Weg dorthin war für ihn zu weit und so suchte er nach einer anderen Möglichkeit, mir die Brieftasche zurückzugeben. Das muss man sich einmal vorstellen: Er war so clever, dass er auf der Bankomatkarte nach meinem und dem Namen meiner Bank suchte … Die Bank würde ja die Kontaktdaten zu meinem Namen haben und könnte mich so anrufen. Er fuhr in die nächste Filiale meiner Bank und dank der Computervernetzung der Filialen konnte meine Telefonnummer schnell herausgefunden werden. Da stand ich nun mit meiner Brieftasche, die mir beim Verlassen des Supermarktes aus der Handtasche gerutscht sein muss. Zum Glück war alles noch da! Ich bin sooo froh, dass diese Episode so gut ausgegangen ist.\n\nNun weiß ich leider gar nicht, wie ich dem ehrlichen Finder danken kann. Vielleicht liest er ja diesen Blogeintrag oder es liest ihn jemand, dem er die Geschichte erzählt hat: „Vielen, vielen Dank, lieber Finder!\n\nBis bald\neure Susanne"
+          },
+          "beispiel": {
+            "id": "0",
+            "text": "Zu Mittag klingelte Susannes Telefon.",
+            "correct": "Richtig"
+          },
+          "items": [
+            { "id": "1", "text": "Erst durch den Anruf bemerkte Susanne das Fehlen ihrer Brieftasche.", "correct": "Richtig" },
+            { "id": "2", "text": "Susanne glaubte, die Brieftasche beim Bezahlen vergessen zu haben.", "correct": "Richtig" },
+            { "id": "3", "text": "Der Finder hatte die Brieftasche ins Fundbüro gebracht.", "correct": "Falsch" },
+            { "id": "4", "text": "Die Telefonnummer der Bank war in der Brieftasche.", "correct": "Falsch" },
+            { "id": "5", "text": "In Susannes Brieftasche fehlte nichts.", "correct": "Richtig" },
+            { "id": "6", "text": "Susanne konnte dem Finder persönlich für seine Ehrlichkeit danken.", "correct": "Falsch" }
+          ]
+        },
+        {
+          "id": "t1-umzug",
+          "title": "Umzug in eine neue Stadt — Blogeintrag",
+          "titleAr": "انتقال إلى مدينة جديدة — تدوينة",
+          "source": "MeinLeben-Blog.de",
+          "text": {
+            "title": "MeinLeben-Blog.de — Neue Stadt, neues Leben",
+            "datum": "Montag, den 14. März",
+            "content": "Jetzt bin ich also endlich in Hamburg angekommen. Vor drei Wochen habe ich meinen Job in München gekündigt und bin mit allem, was ich besitze, hierher gezogen. Die Wohnung habe ich schon vor einem Monat über das Internet gemietet – ohne sie vorher persönlich gesehen zu haben. Das war vielleicht mutig!\n\nAls ich ankam, war ich zuerst enttäuscht. Die Wohnung war kleiner als auf den Fotos und das Badezimmer musste dringend renoviert werden. Aber nach ein paar Tagen Putzen und Einrichten sieht es schon viel besser aus. Meine Nachbarin, eine ältere Dame namens Frau Schulze, hat mir sofort geholfen und mir sogar selbstgebackenen Kuchen gebracht. Das hat mich sehr gerührt.\n\nDen neuen Job fange ich erst nächste Woche an. Ich arbeite als Grafikdesignerin in einer kleinen Werbeagentur. Das Team kenne ich noch nicht persönlich – wir haben bisher nur per Video kommuniziert. Ich hoffe, dass sie genauso nett sind wie sie im Internet wirken.\n\nHamburg selbst finde ich wunderschön. Gestern war ich das erste Mal am Hafen und war begeistert. Das Wetter ist natürlich viel schlechter als in München – heute hat es schon den dritten Tag in Folge geregnet. Aber das gehört ja dazu, sagen alle. Ich bin gespannt, was diese neue Lebensphase bringt!\n\nBis zum nächsten Eintrag\neure Mia"
+          },
+          "beispiel": {
+            "id": "0",
+            "text": "Mia hat einen neuen Job in Hamburg bekommen.",
+            "correct": "Richtig"
+          },
+          "items": [
+            { "id": "1", "text": "Mia hat ihre neue Wohnung vor dem Umzug persönlich besichtigt.", "correct": "Falsch" },
+            { "id": "2", "text": "Mia war zunächst nicht zufrieden mit der Wohnung.", "correct": "Richtig" },
+            { "id": "3", "text": "Frau Schulze ist Mias neue Kollegin.", "correct": "Falsch" },
+            { "id": "4", "text": "Mia kennt ihre neuen Kollegen noch nicht persönlich.", "correct": "Richtig" },
+            { "id": "5", "text": "Mia war schon mehrmals am Hamburger Hafen.", "correct": "Falsch" },
+            { "id": "6", "text": "Das Wetter in Hamburg gefällt Mia besser als in München.", "correct": "Falsch" }
+          ]
+        },
+        {
+          "id": "t1-reise-abenteuer",
+          "title": "Pannen auf einer Reise — Blogeintrag",
+          "titleAr": "مغامرات ومشاكل السفر — تدوينة",
+          "source": "ReiseBlogger.at",
+          "text": {
+            "title": "ReiseBlogger.at — Unterwegs in Europa",
+            "datum": "Freitag, den 7. August",
+            "content": "Ich wollte eigentlich nur drei Tage nach Prag fahren. Was daraus geworden ist, könnt ihr euch nicht vorstellen!\n\nAlles fing damit an, dass mein Zug in Wien zwei Stunden Verspätung hatte. Dadurch verpasste ich meinen Anschlusszug in Linz. Die Bahnmitarbeiter dort waren sehr hilfsbereit und buchten mir ohne Aufpreis einen neuen Zug – allerdings über eine Umleitung durch Salzburg. So kam ich erst um Mitternacht in Prag an, statt um 18 Uhr wie geplant.\n\nDas Hotel hatte meine Reservierung storniert, weil ich nicht rechtzeitig eingecheckt hatte und keine Nachricht geschickt hatte. Ich stand also mit meinem Koffer auf der Straße. Zum Glück fand ich über eine App schnell ein freies Zimmer in einem anderen Hotel – etwas teurer, aber sauber und zentral gelegen.\n\nAm nächsten Morgen wollte ich die Prager Burg besuchen. Vor dem Eingang stellte ich fest, dass ich meinen Geldbeutel im Hotel vergessen hatte. Ich lief also eine halbe Stunde zurück, holte ihn und kam zur Burg – die aber wegen eines Staatsbesuches für Touristen geschlossen war!\n\nTrotzdem: Prag ist wunderschön. Die Altstadt, die Karlsbrücke, das Essen – alles toll. Beim nächsten Mal plane ich aber deutlich mehr Zeit ein und hoffe auf weniger Pannen.\n\nBis bald\nAlexander"
+          },
+          "beispiel": {
+            "id": "0",
+            "text": "Alexander wollte drei Tage nach Prag reisen.",
+            "correct": "Richtig"
+          },
+          "items": [
+            { "id": "1", "text": "Der Zug in Wien hatte Verspätung.", "correct": "Richtig" },
+            { "id": "2", "text": "Alexander musste für den Ersatzzug extra bezahlen.", "correct": "Falsch" },
+            { "id": "3", "text": "Das Hotel hatte Alexanders Reservierung aufgehoben.", "correct": "Richtig" },
+            { "id": "4", "text": "Alexander fand sofort ein neues Hotel ohne Hilfe.", "correct": "Falsch" },
+            { "id": "5", "text": "Die Prager Burg war wegen eines offiziellen Besuches geschlossen.", "correct": "Richtig" },
+            { "id": "6", "text": "Alexander möchte nie wieder nach Prag fahren.", "correct": "Falsch" }
+          ]
+        },
+        {
+          "id": "t1-sprachkurs-erfahrung",
+          "title": "Sprachkurs im Ausland — persönlicher Brief",
+          "titleAr": "تجربة دورة لغة في الخارج — رسالة شخصية",
+          "source": "Persönlicher Brief",
+          "text": {
+            "title": "Brief an eine Freundin",
+            "datum": "Barcelona, den 3. September",
+            "content": "Liebe Sarah,\n\nendlich schreibe ich dir! Ich bin jetzt seit drei Wochen in Barcelona und mache einen Intensivsprachkurs Spanisch. Ich wohne bei einer Gastfamilie – Señora García und ihre zwei Töchter. Die Familie ist sehr nett, aber das Essen ist eine Herausforderung für mich. Señora García kocht sehr fettreich und ich esse eigentlich kaum Fleisch. Trotzdem versuche ich, höflich alles zu essen.\n\nDer Kurs selbst ist super. Wir sind zwölf Personen aus acht verschiedenen Ländern. Mein Lieblingskollege ist Paulo aus Brasilien – er ist sehr lustig und wir lernen zusammen nach dem Unterricht. Unsere Lehrerin, Profesora Marta, ist sehr streng, aber auch sehr gut. Sie erlaubt kein Deutsch im Unterricht, auch in den Pausen nicht.\n\nBarcelona ist eine unglaubliche Stadt. Am Wochenende besuche ich immer Sehenswürdigkeiten. Letzte Woche war ich in der Sagrada Família – einfach atemberaubend! Das Meer ist leider etwas weit vom Kurs entfernt, aber am Samstag waren wir zu sechst am Strand.\n\nMein Spanisch wird täglich besser. Am Anfang konnte ich kaum ein Wort verstehen, aber jetzt führe ich schon einfache Gespräche mit Einheimischen. Ich bleibe noch zwei Wochen – und dann komme ich mit viel Spanisch und vielen Erinnerungen nach Hause!\n\nHerzliche Grüße\nKlara"
+          },
+          "beispiel": {
+            "id": "0",
+            "text": "Klara ist seit drei Wochen in Barcelona.",
+            "correct": "Richtig"
+          },
+          "items": [
+            { "id": "1", "text": "Klara wohnt in einem Hotel in Barcelona.", "correct": "Falsch" },
+            { "id": "2", "text": "Klara isst normalerweise sehr gerne Fleisch.", "correct": "Falsch" },
+            { "id": "3", "text": "Im Kurs sind Schüler aus verschiedenen Ländern.", "correct": "Richtig" },
+            { "id": "4", "text": "Die Lehrerin erlaubt kein Deutsch im Unterricht.", "correct": "Richtig" },
+            { "id": "5", "text": "Die Sagrada Família liegt direkt am Meer.", "correct": "Falsch" },
+            { "id": "6", "text": "Klara kann sich schon auf Spanisch unterhalten.", "correct": "Richtig" }
+          ]
+        },
+        {
+          "id": "t1-ehrenamt-erfahrung",
+          "title": "Erfahrungen als Ehrenamtliche — Blogeintrag",
+          "titleAr": "تجارب العمل التطوعي — تدوينة",
+          "source": "FreiwilligenBlog.de",
+          "text": {
+            "title": "FreiwilligenBlog.de — Mein Jahr als Ehrenamtliche",
+            "datum": "Dienstag, den 18. November",
+            "content": "Vor einem Jahr hätte ich nicht gedacht, dass ich einmal in einer Flüchtlingsunterkunft arbeiten würde. Damals suchte ich nach einem sinnvollen Hobby – und fand das Ehrenamt.\n\nIch helfe jeden Dienstag und Donnerstag bei den Hausaufgaben der Kinder und gebe zweimal pro Woche Deutschkurse für Erwachsene. Am Anfang war es nicht einfach: Ich hatte keine Ausbildung als Lehrerin und wusste nicht, wie ich den Unterricht strukturieren sollte. Zum Glück bekam ich eine kurze Schulung vom Verein, die mir sehr geholfen hat.\n\nDie Erfahrungen, die ich dort mache, sind unbezahlbar. Letzte Woche hat mir eine Frau aus Syrien erzählt, wie sie es geschafft hat, trotz aller Schwierigkeiten ihren Führerschein auf Deutsch zu machen. Das hat mich zu Tränen gerührt.\n\nNatürlich gibt es auch schwierige Momente. Manchmal bin ich nach dem Einsatz sehr erschöpft, besonders wenn die Nachrichten über die Situation in den Herkunftsländern sehr schlimm sind. Dann frage ich mich, ob ich wirklich genug helfe. Aber dann kommen die Kinder und freuen sich, mich zu sehen – und alles ist wieder gut.\n\nIch würde jedem empfehlen, sich ehrenamtlich zu engagieren. Man gibt etwas, aber man bekommt so viel mehr zurück.\n\nEure Katharina"
+          },
+          "beispiel": {
+            "id": "0",
+            "text": "Katharina arbeitet seit einem Jahr ehrenamtlich.",
+            "correct": "Richtig"
+          },
+          "items": [
+            { "id": "1", "text": "Katharina hatte früher geplant, in einer Flüchtlingsunterkunft zu arbeiten.", "correct": "Falsch" },
+            { "id": "2", "text": "Katharina unterrichtet zweimal pro Woche Deutsch.", "correct": "Richtig" },
+            { "id": "3", "text": "Katharina hatte eine Ausbildung als Lehrerin gemacht.", "correct": "Falsch" },
+            { "id": "4", "text": "Eine Frau aus Syrien hat ihren Führerschein auf Deutsch bestanden.", "correct": "Richtig" },
+            { "id": "5", "text": "Die Arbeit macht Katharina manchmal müde.", "correct": "Richtig" },
+            { "id": "6", "text": "Katharina würde das Ehrenamt anderen Menschen nicht empfehlen.", "correct": "Falsch" }
+          ]
+        },
+        {
+          "id": "t1-fahrrad-abenteuer",
+          "title": "Fahrradtour durch Deutschland — Tagebuch",
+          "titleAr": "جولة بالدراجة في ألمانيا — يوميات",
+          "source": "Radfahrer-Tagebuch",
+          "text": {
+            "title": "Tagebuch: Mit dem Rad von Hamburg nach München",
+            "datum": "Tag 8, Mittwoch",
+            "content": "Heute habe ich eine echte Lektion gelernt: Immer das Wetter prüfen, bevor man losfährt!\n\nIch bin morgens um sieben Uhr aufgebrochen, der Himmel war noch klar. Aber nach etwa 30 Kilometern zogen dunkle Wolken auf. Ich dachte, ich schaffe es noch bis zum nächsten Ort – Fehlanzeige. Nach weiteren zehn Kilometern begann ein heftiger Regen. Meine Regenjacke hatte ich natürlich tief im Koffer verstaut.\n\nEin Bauer, der gerade sein Feld bearbeitete, hat mich bemerkt und mich in seine Scheune eingeladen. Er hat mir sogar heißen Kaffee gemacht und Brot mit Käse angeboten. Wir haben fast eine Stunde geredet – auf Bayerisch, was ich kaum verstanden habe! Aber es war trotzdem eine schöne Begegnung.\n\nNachmittags klarte es auf und ich fuhr weiter. Die Landschaft war wunderschön – grüne Wiesen, kleine Dörfer, kaum Autos auf den Radwegen. Abends kam ich erschöpft aber glücklich in Nürnberg an. Das Hostel war günstig und das Abendessen – eine große Portion Bratwürste – das Beste, was ich seit Tagen gegessen habe.\n\nMorgen geht es weiter. Noch zwei Tage bis München. Ich freue mich schon darauf!\n\nBis morgen\nDein Jonas"
+          },
+          "beispiel": {
+            "id": "0",
+            "text": "Jonas macht eine Fahrradtour von Hamburg nach München.",
+            "correct": "Richtig"
+          },
+          "items": [
+            { "id": "1", "text": "Jonas hatte morgens schlechtes Wetter erwartet.", "correct": "Falsch" },
+            { "id": "2", "text": "Jonas hatte seine Regenjacke sofort griffbereit.", "correct": "Falsch" },
+            { "id": "3", "text": "Ein Bauer hat Jonas vor dem Regen geschützt.", "correct": "Richtig" },
+            { "id": "4", "text": "Jonas hat den bayerischen Dialekt gut verstanden.", "correct": "Falsch" },
+            { "id": "5", "text": "Jonas übernachtete in Nürnberg in einem preiswerten Hostel.", "correct": "Richtig" },
+            { "id": "6", "text": "Jonas braucht noch mehr als zwei Tage bis München.", "correct": "Falsch" }
+          ]
+        },
+        {
+          "id": "t1-haustier",
+          "title": "Ein neues Haustier — Tagebucheintrag",
+          "titleAr": "حيوان أليف جديد — يوميات",
+          "source": "Lenas Tagebuch",
+          "text": {
+            "title": "Lenas Tagebuch — Ein Hund für die Familie",
+            "datum": "Sonntag, den 10. April",
+            "content": "Liebes Tagebuch,\n\nheute ist etwas Wundervolles passiert! Nach monatelanger Diskussion hat sich meine Familie endlich entschieden: Wir holen einen Hund! Es ist ein dreijähriger Labrador namens Max aus dem Tierheim. Meine Schwester und ich haben ihn schon besucht, als wir uns die Tiere angesehen haben.\n\nMeine Eltern waren anfangs nicht begeistert, aber wir Kinder haben ihnen versprochen, dass wir uns um alles kümmern: Gassi gehen, Füttern, Bürsten. Papa hat gesagt, wir müssen erst einmal beweisen, dass wir zuverlässig sind, bevor wir Max in zwei Wochen endgültig adoptieren dürfen.\n\nMax ist sehr ruhig und freundlich. Die Tierheim-Mitarbeiterin sagte, dass er gut mit Kindern kann. Leider hat er Angst vor lauten Geräuschen – wahrscheinlich von seinem früheren Besitzer. Ich hoffe, dass er sich bei uns sicher fühlen wird.\n\nJetzt bereiten wir alles vor: Wir haben ein gemütliches Körbchen gekauft, Näpfe für Futter und Wasser, eine Leine und natürlich viele Spielzeuge. Meine Schwester hat auch schon einen Hundekurs für Welpen in der Nachbarschaft gefunden. Max ist zwar kein Welpe mehr, aber sie sagte, dass auch er vom Kurs profitieren könnte.\n\nIch zähle die Tage, bis Max endlich bei uns einzieht. Das wird der beste Sommer aller Zeiten!\n\nLena"
+          },
+          "beispiel": {
+            "id": "0",
+            "text": "Lenas Familie hat sich für einen Hund aus dem Tierheim entschieden.",
+            "correct": "Richtig"
+          },
+          "items": [
+            { "id": "1", "text": "Lenas Eltern waren sofort für einen Hund.", "correct": "Falsch" },
+            { "id": "2", "text": "Max ist noch ein Welpe.", "correct": "Falsch" },
+            { "id": "3", "text": "Max hat Angst vor lauten Geräuschen.", "correct": "Richtig" },
+            { "id": "4", "text": "Die Familie hat schon alles für den Hund gekauft.", "correct": "Richtig" },
+            { "id": "5", "text": "Lenas Schwester hat einen Kurs für Hunde gefunden.", "correct": "Richtig" },
+            { "id": "6", "text": "Max zieht sofort bei der Familie ein.", "correct": "Falsch" }
+          ]
+        },
+        {
+          "id": "t1-berufswechsel",
+          "title": "Berufswechsel — persönlicher Brief",
+          "titleAr": "تغيير المهنة — رسالة شخصية",
+          "source": "Persönlicher Brief",
+          "text": {
+            "title": "Brief an den besten Freund",
+            "datum": "Berlin, den 22. Februar",
+            "content": "Lieber Tom,\n\nich muss dir etwas Wichtiges erzählen. Ich habe gekündigt! Nach fünf Jahren im Büro habe ich beschlossen, meinen Job als Buchhalter aufzugeben und etwas völlig Neues zu machen. Du wirst es nicht glauben: Ich werde Koch!\n\nIch weiß, es klingt verrückt. Aber ich habe in den letzten Monaten gemerkt, dass die Zahlen und Tabellen mich todunglücklich machen. Kochen hingegen war schon immer meine Leidenschaft. Du erinnerst dich doch an unsere Grillabende, wo ich stundenlang am Herd stand und experimentiert habe?\n\nDie Ausbildung beginnt im September in einer renommierten Küche in der Nähe des Alexanderplatzes. Der Chefkoch hat mich nach einem Probetag direkt genommen. Er sagte, ich hätte Talent und Leidenschaft – das sei wichtiger als perfekte Vorkenntnisse.\n\nMeine Eltern sind geschockt, meine Kollegen halten mich für verrückt. Aber ich habe noch nie in meinem Leben eine so klare Entscheidung getroffen. Ja, ich werde weniger verdienen. Ja, die Arbeitszeiten sind hart. Aber ich werde mit Freude aufwachen, und das ist unbezahlbar.\n\nIch hoffe, du unterstützt mich. Vielleicht kannst du mich bald besuchen kommen – dann koche ich für dich!\n\nDein Marcus"
+          },
+          "beispiel": {
+            "id": "0",
+            "text": "Marcus hat seinen Job als Buchhalter gekündigt.",
+            "correct": "Richtig"
+          },
+          "items": [
+            { "id": "1", "text": "Marcus arbeitete fünf Jahre als Buchhalter.", "correct": "Richtig" },
+            { "id": "2", "text": "Marcus will Friseur werden.", "correct": "Falsch" },
+            { "id": "3", "text": "Die Kochausbildung beginnt im September.", "correct": "Richtig" },
+            { "id": "4", "text": "Marcus' Eltern unterstützen ihn sofort.", "correct": "Falsch" },
+            { "id": "5", "text": "Der Chefkoch war von Marcus' Talent überzeugt.", "correct": "Richtig" },
+            { "id": "6", "text": "Marcus erwartet im neuen Job mehr Geld.", "correct": "Falsch" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teil-2",
+      "label": "Teil 2",
+      "nummer": 2,
+      "arbeitszeit": "20 Minuten",
+      "pruefungsziel": "Information und Argumentation verstehen",
+      "aufgabentyp": "mehrfachauswahl-3-gliedrig",
+      "punkte": 6,
+      "itemCount": 6,
+      "aufgabenNummern": "7–12",
+      "answerType": "multiple-choice-abc",
+      "title": "Detailverstehen — Zeitungsartikel oder Pressebericht",
+      "titleAr": "فهم التفاصيل — مقال صحفي",
+      "instructions": "Lesen Sie den Text aus der Presse und die Aufgaben 7 bis 12 dazu. Wählen Sie bei jeder Aufgabe die richtige Lösung a, b oder c.",
+      "description": "Zwei mittellange Pressetexte (je ca. 200–300 Wörter). Zu jedem Text 3 Multiple-Choice-Fragen (a/b/c).",
+      "howItWorks": {
+        "textType": "Zeitungsartikel, Pressebericht, Reportage (aus deutschsprachigen Medien)",
+        "task": "Aufgabe 7–9 zum ersten Text, Aufgabe 10–12 zum zweiten Text, je 3 Optionen (a, b, c)",
+        "textCount": 2,
+        "questionsPerText": 3,
+        "note": "Eine Beispielaufgabe (0) zeigt das Format"
+      },
+      "themen": [
+        {
+          "id": "t2-gruene-energie",
+          "title": "Grüne Energie — Bioenergiedorf & Velotourismus",
+          "titleAr": "الطاقة الخضراء",
+          "texts": [
+            {
+              "id": "text-a",
+              "title": "Ein Dorf für grüne Energie",
+              "source": "aus einer deutschen Zeitung",
+              "content": "Das Dorf Feldheim in Brandenburg macht sich unabhängig von Öl und Kohle. Seit Kurzem deckt das Dorf seinen kompletten Strombedarf und drei Viertel des Wärmebedarfs durch moderne Energien. „Das funktioniert mithilfe einer modernen Anlage für Bio-Gas“, erklärt der Diplom-Physiker Eckhard Meier. „Da kommen Abfall von den Tieren, Getreide und Holz rein und werden erwärmt. Ein Motor verbrennt das Gas und erzeugt dabei Wärme. Der Motor treibt dann einen Generator an, der Strom produziert.“\n\nEntstanden ist die Idee des „Bio-Energiedorfs“ an der Universität Göttingen. Ziel der Wissenschaftler war es zu zeigen, dass es möglich ist, ein Dorf komplett mit erneuerbaren Energien zu versorgen und damit einen Beitrag zum Klimaschutz zu leisten. Tatsächlich: Die Bio-Gasanlage erzeugt jährlich doppelt so viel Strom wie die Gemeinde verbraucht. Der Rest wird in das Stromnetz abgegeben und kostenlos anderen Dörfern zur Verfügung gestellt.\n\nPasst das Konzept auch für andere Dörfer? „Im Prinzip schon“, meint Eckhard Meier. Die technischen Anlagen könnten an anderen Orten genauso aufgebaut werden – der Raumbedarf ist gering. Man benötigt allerdings vor allem eines: aktive und begeisterte Einwohner!",
+              "beispiel": {
+                "id": "0",
+                "text": "Die Bio-Gasanlage …",
+                "options": [
+                  { "label": "gehört Eckhard Meier.", "value": "a" },
+                  { "label": "gibt es seit einem Dreivierteljahr.", "value": "b" },
+                  { "label": "produziert Strom und Wärme.", "value": "c" }
+                ],
+                "correct": "c"
+              },
+              "items": [
+                {
+                  "id": "7",
+                  "text": "In diesem Text geht es um ...",
+                  "options": [
+                    { "label": "die neue Technologie von Eckhard Meier.", "value": "a" },
+                    { "label": "die umweltfreundliche Stromproduktion in Feldheim.", "value": "b" },
+                    { "label": "einen Studiengang an der Universität Göttingen.", "value": "c" }
+                  ],
+                  "correct": "b"
+                },
+                {
+                  "id": "8",
+                  "text": "Die Wissenschaftler wollten zeigen, dass ...",
+                  "options": [
+                    { "label": "ein ganzes Dorf von modernen Energien leben kann.", "value": "a" },
+                    { "label": "eine Bio-Gasanlage mehr Strom produziert, als ein Dorf braucht.", "value": "b" },
+                    { "label": "man größere Mengen Strom sparen kann.", "value": "c" }
+                  ],
+                  "correct": "a"
+                },
+                {
+                  "id": "9",
+                  "text": "Damit die Idee auch in anderen Dörfern funktioniert, ...",
+                  "options": [
+                    { "label": "benötigt man viel Geld.", "value": "a" },
+                    { "label": "braucht man genug Platz für die Technik.", "value": "b" },
+                    { "label": "muss die Bevölkerung dafür sein.", "value": "c" }
+                  ],
+                  "correct": "c"
+                }
+              ]
+            },
+            {
+              "id": "text-b",
+              "title": "Zeitreise per Velo in Murten",
+              "source": "aus einer Schweizer Broschüre",
+              "content": "Mit der Rundfahrt „Zeitreise per Velo“ können Touristen das Städtchen Murten und seine Geschichte sportlich neu entdecken. Die Tour startet am Bahnhof von Murten, wo die sportlichen Teilnehmer auf das eigene oder ein gemietetes Velo steigen. Die weniger sportlichen und jene, die es schon immer ausprobieren wollten, steigen aufs Elektro-Velo. Dieses kann ebenfalls am Bahnhof gemietet werden.\n\nVom Bahnhof führt der Weg auf den historischen Hügel, wo Karl der Kühne sein Hauptquartier aufbaute, bevor sein Heer im Jahr 1476 besiegt wurde. Die Sportlichen kommen bei der Fahrt auf den Hügel ins Schwitzen, während die E-Biker ganz einfach den Elektromotor nutzen.\n\nOben angekommen kann man die wunderbare Aussicht auf den Murtensee genießen. Nach einer kurzen Pause geht es weiter nach Merlach. Dort steht ein Denkmal für Soldaten, die in der Schlacht bei Murten 1476 umgekommen sind. Danach geht die Fahrt zum Hafen und in die Altstadt. Unterwegs erfahren die Velofahrer vieles über die Region. „Mit der Velorundfahrt für Gruppen wollen wir unser Angebot für aktive Radfahrer erweitern“, sagt der Geschäftsführer von Murten Tourismus. Damit soll sowohl das Gebiet für Velo-Touristen interessant gemacht als auch der Trend zum E-Bike unterstützt werden.",
+              "items": [
+                {
+                  "id": "10",
+                  "text": "In diesem Text geht es darum, dass …",
+                  "options": [
+                    { "label": "die Geschichte von Murten neu erzählt wird.", "value": "a" },
+                    { "label": "es ein neues Tourismus-Angebot gibt.", "value": "b" },
+                    { "label": "man in Murten neue Velo-Wege bauen will.", "value": "c" }
+                  ],
+                  "correct": "b"
+                },
+                {
+                  "id": "11",
+                  "text": "Für die Rundfahrt ...",
+                  "options": [
+                    { "label": "braucht man ein eigenes Velo.", "value": "a" },
+                    { "label": "muss man nicht sportlich sein.", "value": "b" },
+                    { "label": "sollte man mit der Bahn anreisen.", "value": "c" }
+                  ],
+                  "correct": "b"
+                },
+                {
+                  "id": "12",
+                  "text": "Der Geschäftsführer von Murten Tourismus will, dass ...",
+                  "options": [
+                    { "label": "es in Murten mehr Stadtführungen für Gruppen gibt.", "value": "a" },
+                    { "label": "die Leute normale Velos statt Elektro-Velos benutzen.", "value": "b" },
+                    { "label": "mehr Velo-Touristen in die Region kommen.", "value": "c" }
+                  ],
+                  "correct": "c"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "t2-ehrenamt-mobilitaet",
+          "title": "Ehrenamt & Mobilität im Alter",
+          "titleAr": "التطوع والتنقل في سن الشيخوخة",
+          "texts": [
+            {
+              "id": "text-a",
+              "title": "Ehrenamt — Was treibt Menschen an?",
+              "source": "aus einer deutschen Tageszeitung",
+              "content": "In Deutschland engagieren sich rund 28 Millionen Menschen ehrenamtlich – das entspricht etwa einem Drittel der Bevölkerung. Sie helfen in Sportvereinen, Feuerwehren, Schulen und Pflegeeinrichtungen. Laut einer aktuellen Befragung sind die häufigsten Motive Freude am Helfen, der Wunsch nach sozialem Kontakt und das Gefühl, etwas Sinnvolles zu tun.\n\nEin weit verbreitetes Vorurteil ist, dass vor allem ältere Menschen ehrenamtlich aktiv sind. Tatsächlich zeigen Studien, dass das Engagement in allen Altersgruppen ähnlich hoch ist. Allerdings unterscheiden sich die Bereiche: Junge Menschen helfen häufiger in der Flüchtlingshilfe und beim Umweltschutz, während Ältere eher in sozialen Einrichtungen und Vereinen tätig sind.\n\nEin Problem bleibt: Wer voll berufstätig ist, findet oft keine Zeit. Viele Unternehmen unterstützen deshalb inzwischen das Ehrenamt ihrer Mitarbeiter – etwa durch bezahlte Freistellungen für soziale Projekte. Experten fordern außerdem mehr staatliche Anerkennung, zum Beispiel durch Steuervergünstigungen für Ehrenamtliche.",
+              "items": [
+                {
+                  "id": "7",
+                  "text": "Wie viele Deutsche engagieren sich laut Text ehrenamtlich?",
+                  "options": [
+                    { "label": "Etwa die Hälfte der Bevölkerung.", "value": "a" },
+                    { "label": "Ungefähr ein Drittel der Bevölkerung.", "value": "b" },
+                    { "label": "Fast alle Rentner in Deutschland.", "value": "c" }
+                  ],
+                  "correct": "b"
+                },
+                {
+                  "id": "8",
+                  "text": "Was ist laut Text ein häufiges Vorurteil über Ehrenamtliche?",
+                  "options": [
+                    { "label": "Dass sie hauptsächlich wegen Steuervergünstigungen helfen.", "value": "a" },
+                    { "label": "Dass besonders ältere Menschen ehrenamtlich aktiv sind.", "value": "b" },
+                    { "label": "Dass sie nur in Sportvereinen arbeiten.", "value": "c" }
+                  ],
+                  "correct": "b"
+                },
+                {
+                  "id": "9",
+                  "text": "Wie helfen manche Unternehmen ihren Mitarbeitern beim Ehrenamt?",
+                  "options": [
+                    { "label": "Sie zahlen höhere Gehälter.", "value": "a" },
+                    { "label": "Sie organisieren eigene soziale Projekte.", "value": "b" },
+                    { "label": "Sie ermöglichen bezahlte Freistellungen.", "value": "c" }
+                  ],
+                  "correct": "c"
+                }
+              ]
+            },
+            {
+              "id": "text-b",
+              "title": "Senioren und Mobilität — ein wachsendes Problem",
+              "source": "aus einer österreichischen Zeitung",
+              "content": "Immer mehr ältere Menschen in Österreich leben alleine auf dem Land. Für sie ist Mobilität eine große Herausforderung: Busse fahren selten, Taxis sind teuer, und das eigene Auto können viele aus gesundheitlichen Gründen nicht mehr fahren.\n\nEin innovatives Projekt in der Steiermark versucht, dieses Problem zu lösen. Ehrenamtliche Fahrer bringen Senioren zu Arztterminen, Einkäufen oder Behördengängen. Die Koordination läuft über eine einfache App. Das Projekt wurde vor zwei Jahren gestartet und hat inzwischen über 200 freiwillige Fahrer.\n\nDie Reaktionen der Senioren sind überwältigend positiv. „Ich kann wieder am gesellschaftlichen Leben teilnehmen“, sagt eine 78-jährige Teilnehmerin. Projektleiterin Dr. Anna Huber betont, dass nicht nur die Mobilität wichtig ist: „Für viele ist das Gespräch mit dem Fahrer der einzige soziale Kontakt des Tages.“ Das Projekt wird nun auf andere Regionen Österreichs ausgedehnt.",
+              "items": [
+                {
+                  "id": "10",
+                  "text": "Womit haben viele ältere Menschen auf dem Land Probleme?",
+                  "options": [
+                    { "label": "Mit der schlechten Qualität der Krankenhäuser.", "value": "a" },
+                    { "label": "Mit der eingeschränkten Mobilität.", "value": "b" },
+                    { "label": "Mit den hohen Mietkosten.", "value": "c" }
+                  ],
+                  "correct": "b"
+                },
+                {
+                  "id": "11",
+                  "text": "Wie funktioniert das Projekt in der Steiermark?",
+                  "options": [
+                    { "label": "Senioren bekommen kostenlose Bustickets.", "value": "a" },
+                    { "label": "Freiwillige Fahrer helfen bei Transporten, koordiniert per App.", "value": "b" },
+                    { "label": "Taxiunternehmen bieten günstigere Preise an.", "value": "c" }
+                  ],
+                  "correct": "b"
+                },
+                {
+                  "id": "12",
+                  "text": "Was betont Dr. Huber als besonders wichtig?",
+                  "options": [
+                    { "label": "Dass die Fahrer pünktlich sind.", "value": "a" },
+                    { "label": "Dass das Projekt günstig ist.", "value": "b" },
+                    { "label": "Dass die sozialen Kontakte für die Senioren wichtig sind.", "value": "c" }
+                  ],
+                  "correct": "c"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "t2-umwelt-beruf",
+          "title": "Umwelt & Beruf",
+          "titleAr": "البيئة والمهنة",
+          "texts": [
+            {
+              "id": "text-a",
+              "title": "Urban Gardening — Gärtnern in der Stadt",
+              "source": "aus einer deutschen Wochenzeitung",
+              "content": "In vielen deutschen Städten entstehen immer mehr Gemeinschaftsgärten, in denen Stadtbewohner gemeinsam Obst und Gemüse anbauen. Dieses sogenannte Urban Gardening liegt besonders bei jungen Menschen im Trend, die sich eine nachhaltigere Lebensweise wünschen.\n\nDie Gärten bieten nicht nur frisches Essen, sondern auch soziale Begegnung. Viele Teilnehmer betonen, dass sie durch den Garten Menschen kennenlernen, die sie sonst nie getroffen hätten. „In unserem Garten treffen sich Menschen aus zwanzig verschiedenen Ländern. Wir reden, lachen und arbeiten zusammen“, sagt Carla, eine Lehrerin aus Hamburg.\n\nAuch für die Umwelt hat Urban Gardening positive Effekte: Grünflächen in der Stadt verbessern das Klima, filtern Schadstoffe aus der Luft und bieten Lebensraum für Insekten. Einige Städte unterstützen deshalb aktiv die Entstehung solcher Gärten mit Fördermitteln und kostenlosem Land.\n\nAllerdings gibt es auch Herausforderungen. Der Boden in der Stadt ist oft mit Schwermetallen belastet, sodass viele Gärtner in Hochbeeten oder Töpfen arbeiten müssen.",
+              "items": [
+                {
+                  "id": "7",
+                  "text": "Bei welcher Gruppe ist Urban Gardening besonders beliebt?",
+                  "options": [
+                    { "label": "Bei älteren Menschen mit viel Freizeit.", "value": "a" },
+                    { "label": "Bei jungen Menschen mit Interesse an Nachhaltigkeit.", "value": "b" },
+                    { "label": "Bei Bauern, die in die Stadt gezogen sind.", "value": "c" }
+                  ],
+                  "correct": "b"
+                },
+                {
+                  "id": "8",
+                  "text": "Was schätzen die Teilnehmer besonders?",
+                  "options": [
+                    { "label": "Dass sie Geld beim Einkaufen sparen.", "value": "a" },
+                    { "label": "Dass sie neue Menschen kennenlernen.", "value": "b" },
+                    { "label": "Dass die Arbeit sehr entspannend ist.", "value": "c" }
+                  ],
+                  "correct": "b"
+                },
+                {
+                  "id": "9",
+                  "text": "Welches Problem gibt es mit dem Stadtboden?",
+                  "options": [
+                    { "label": "Er ist zu hart und schwer zu bearbeiten.", "value": "a" },
+                    { "label": "Er ist häufig durch Schwermetalle belastet.", "value": "b" },
+                    { "label": "Er ist zu nass und sumpfig.", "value": "c" }
+                  ],
+                  "correct": "b"
+                }
+              ]
+            },
+            {
+              "id": "text-b",
+              "title": "Berufseinstieg nach dem Studium",
+              "source": "aus einer Schweizer Tageszeitung",
+              "content": "Viele Hochschulabsolventen stehen nach dem Studium vor einer großen Herausforderung: dem Einstieg ins Berufsleben. Eine aktuelle Studie zeigt, dass rund 40 Prozent der Absolventen nicht in dem Bereich arbeiten, den sie studiert haben. Der Grund: Der Arbeitsmarkt ist dynamisch und viele Studienrichtungen passen nicht zu den aktuellen Bedürfnissen der Wirtschaft.\n\nExpertinnen empfehlen, schon während des Studiums Praktika zu machen und ein berufliches Netzwerk aufzubauen. „Wer Kontakte hat, findet schneller eine Stelle“, erklärt die Karriereberaterin Sabine Koch. Außerdem sollten Absolventen flexibel sein – auch geografisch. Wer bereit ist, in eine andere Stadt oder sogar ins Ausland zu ziehen, hat deutlich bessere Chancen.\n\nDigitale Kompetenzen sind heute in fast jedem Beruf gefragt. Auch Soft Skills wie Teamfähigkeit, Kommunikation und Belastbarkeit werden von Arbeitgebern sehr geschätzt. Absolventen, die diese Fähigkeiten in ihren Bewerbungen nachweisen können, haben klare Vorteile auf dem Arbeitsmarkt.",
+              "items": [
+                {
+                  "id": "10",
+                  "text": "Was zeigt die aktuelle Studie über Hochschulabsolventen?",
+                  "options": [
+                    { "label": "Die meisten arbeiten sofort in ihrem Studienfach.", "value": "a" },
+                    { "label": "Viele arbeiten nicht in dem Bereich, den sie studiert haben.", "value": "b" },
+                    { "label": "Fast alle Absolventen gehen ins Ausland.", "value": "c" }
+                  ],
+                  "correct": "b"
+                },
+                {
+                  "id": "11",
+                  "text": "Was empfiehlt Sabine Koch den Studierenden?",
+                  "options": [
+                    { "label": "Möglichst lange zu studieren.", "value": "a" },
+                    { "label": "Schon während des Studiums Kontakte aufzubauen.", "value": "b" },
+                    { "label": "Nur im eigenen Land zu arbeiten.", "value": "c" }
+                  ],
+                  "correct": "b"
+                },
+                {
+                  "id": "12",
+                  "text": "Was ist laut Text heute in fast jedem Beruf wichtig?",
+                  "options": [
+                    { "label": "Ein sehr guter Schulabschluss.", "value": "a" },
+                    { "label": "Digitale Kompetenzen und Soft Skills.", "value": "b" },
+                    { "label": "Erfahrung im Ausland.", "value": "c" }
+                  ],
+                  "correct": "b"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "t2-gesundheit-ernaehrung",
+          "title": "Gesundheit & Ernährung",
+          "titleAr": "الصحة والتغذية",
+          "texts": [
+            {
+              "id": "text-a",
+              "title": "Superfoods – Wundermittel oder Marketing?",
+              "source": "aus einer deutschen Zeitschrift",
+              "content": "In den letzten Jahren sind sogenannte Superfoods wie Chia-Samen, Goji-Beeren oder Matcha-Tee immer populärer geworden. Diese Lebensmittel enthalten besonders viele Vitamine, Mineralstoffe oder Antioxidantien. Doch sind sie wirklich so gesund, wie ihre Hersteller behaupten?\n\nErnährungswissenschaftler sind sich uneinig. Einige Experten betonen, dass Superfoods einen hohen Nährwert haben und eine gute Ergänzung zur normalen Ernährung sein können. Andere warnen: Eine ausgewogene Ernährung mit regionalem Obst und Gemüse ist genauso gesund und vor allem viel günstiger.\n\n„Viele unterschätzen, dass heimische Lebensmittel wie Leinsamen, Haferflocken oder Brokkoli ähnlich positive Eigenschaften haben“, erklärt Dr. Weber von der Universität Bonn. „Der Hype um Superfoods ist oft nur gut für die Hersteller.“ Die Deutsche Gesellschaft für Ernährung empfiehlt, nicht auf einzelne angebliche Wunderprodukte zu setzen, sondern insgesamt abwechslungsreich zu essen.",
+              "items": [
+                {
+                  "id": "7",
+                  "text": "Was sind sogenannte Superfoods laut Text?",
+                  "options": [
+                    { "label": "Nahrungsmittel, die extrem teuer sind.", "value": "a" },
+                    { "label": "Lebensmittel mit besonders vielen Nährstoffen.", "value": "b" },
+                    { "label": "Produkte, die nur im Ausland wachsen.", "value": "c" }
+                  ],
+                  "correct": "b"
+                },
+                {
+                  "id": "8",
+                  "text": "Was kritisieren einige Ernährungswissenschaftler an Superfoods?",
+                  "options": [
+                    { "label": "Sie schmecken nicht gut.", "value": "a" },
+                    { "label": "Regionale Lebensmittel sind oft genauso gesund und billiger.", "value": "b" },
+                    { "label": "Sie sind schwer zu bekommen.", "value": "c" }
+                  ],
+                  "correct": "b"
+                },
+                {
+                  "id": "9",
+                  "text": "Was empfiehlt die Deutsche Gesellschaft für Ernährung?",
+                  "options": [
+                    { "label": "Täglich Superfoods zu essen.", "value": "a" },
+                    { "label": "Nur noch regionale Lebensmittel zu kaufen.", "value": "b" },
+                    { "label": "Abwechslungsreich zu essen.", "value": "c" }
+                  ],
+                  "correct": "c"
+                }
+              ]
+            },
+            {
+              "id": "text-b",
+              "title": "Büroarbeit schadet dem Rücken",
+              "source": "aus einer österreichischen Gesundheitszeitschrift",
+              "content": "Lange Sitzzeiten im Büro sind eine der Hauptursachen für Rückenschmerzen – das ist kein Geheimnis. Eine neue Studie der Universität Wien zeigt jedoch, wie gravierend das Problem tatsächlich ist: Mehr als 60 Prozent der Büroangestellten klagen regelmäßig über Schmerzen im unteren Rücken. Besonders betroffen sind junge Berufstätige unter 30 Jahren.\n\nDie Forscher empfehlen einfache Maßnahmen: Stehpulte ermöglichen einen Wechsel zwischen Sitzen und Stehen. Bereits kleine Bewegungspausen alle 30 Minuten, etwa um Wasser zu holen oder zu einem Kollegen zu gehen, können die Beschwerden deutlich reduzieren.\n\nZusätzlich raten Orthopäden zu regelmäßigem Sport. „Spazierengehen, Schwimmen oder Yoga sind ideal, um die Rückenmuskulatur zu stärken“, sagt Dr. Fischer von der Wiener Gesundheitsanstalt. Auch die richtige Sitzhaltung sowie ein ergonomisch eingerichteter Arbeitsplatz seien wichtig, um langfristige Schäden zu vermeiden.",
+              "items": [
+                {
+                  "id": "10",
+                  "text": "Welche Gruppe ist besonders von Rückenschmerzen betroffen?",
+                  "options": [
+                    { "label": "Menschen über 60 Jahre.", "value": "a" },
+                    { "label": "Junge Berufstätige unter 30 Jahren.", "value": "b" },
+                    { "label": "Handwerker und Bauarbeiter.", "value": "c" }
+                  ],
+                  "correct": "b"
+                },
+                {
+                  "id": "11",
+                  "text": "Was empfehlen die Forscher als einfache Maßnahme?",
+                  "options": [
+                    { "label": "Aufstehen und regelmäßig bewegen.", "value": "a" },
+                    { "label": "Den Beruf zu wechseln.", "value": "b" },
+                    { "label": "Medikamente gegen Schmerzen zu nehmen.", "value": "c" }
+                  ],
+                  "correct": "a"
+                },
+                {
+                  "id": "12",
+                  "text": "Welche Sportart wird im Text empfohlen?",
+                  "options": [
+                    { "label": "Fußball und Basketball.", "value": "a" },
+                    { "label": "Marathonlauf und Gewichtheben.", "value": "b" },
+                    { "label": "Schwimmen und Yoga.", "value": "c" }
+                  ],
+                  "correct": "c"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "t2-bildung-digitalisierung",
+          "title": "Bildung & Digitalisierung",
+          "titleAr": "التعليم والتحول الرقمي",
+          "texts": [
+            {
+              "id": "text-a",
+              "title": "Digitale Medien in Schulen – Fluch oder Segen?",
+              "source": "aus einer Schweizer Bildungszeitschrift",
+              "content": "Die Diskussion um digitale Medien in Schulen ist in vollem Gange. Befürworter argumentieren, dass Tablets und Laptops den Unterricht zeitgemäßer machen und Schüler besser auf die Arbeitswelt vorbereiten. Kritiker warnen hingegen vor zu viel Bildschirmzeit und mangelnder Konzentration.\n\nEine Langzeitstudie aus Norwegen zeigt nun: Schüler, die regelmäßig mit digitalen Geräten arbeiten, haben bessere Computerkenntnisse. Allerdings schnitten sie in Rechtschreibung und Leseverständnis schlechter ab als Schüler, die traditionell mit Büchern lernten. Die Forscher betonen daher, dass Medienkompetenz wichtig ist, aber traditionelle Lernmethoden nicht komplett ersetzt werden sollten.\n\nDie optimale Lösung scheint eine Mischung zu sein: Digitale Geräte für Recherchen und Präsentationen, aber weiterhin handschriftliche Übungen und gedruckte Bücher für das Grundwissen.",
+              "items": [
+                {
+                  "id": "7",
+                  "text": "Welchen Vorteil haben Schüler, die digital lernen?",
+                  "options": [
+                    { "label": "Sie haben bessere Noten in allen Fächern.", "value": "a" },
+                    { "label": "Sie haben bessere Computerkenntnisse.", "value": "b" },
+                    { "label": "Sie sind konzentrierter.", "value": "c" }
+                  ],
+                  "correct": "b"
+                },
+                {
+                  "id": "8",
+                  "text": "Welche Nachteile zeigte die norwegische Studie?",
+                  "options": [
+                    { "label": "Schlechtere Leistungen in Rechtschreibung.", "value": "a" },
+                    { "label": "Höhere Kosten für die Schulen.", "value": "b" },
+                    { "label": "Mehr Konflikte unter Schülern.", "value": "c" }
+                  ],
+                  "correct": "a"
+                },
+                {
+                  "id": "9",
+                  "text": "Was empfehlen die Forscher als beste Lösung?",
+                  "options": [
+                    { "label": "Nur noch digital zu unterrichten.", "value": "a" },
+                    { "label": "Eine Kombination aus digitalen und traditionellen Methoden.", "value": "b" },
+                    { "label": "Wieder komplett auf Bücher zurückzukehren.", "value": "c" }
+                  ],
+                  "correct": "b"
+                }
+              ]
+            },
+            {
+              "id": "text-b",
+              "title": "Weiterbildung im mittleren Alter",
+              "source": "aus einer deutschen Wirtschaftszeitung",
+              "content": "Der Arbeitsmarkt verändert sich rasant. Neue Technologien und Automatisierung machen viele Berufe überflüssig, schaffen aber auch neue Arbeitsfelder. Für Arbeitnehmer über 40 wird es daher immer wichtiger, sich weiterzubilden.\n\nEine Studie des Instituts für Arbeitsmarktforschung zeigt: Wer nach dem 40. Lebensjahr eine Weiterbildung abschließt, hat ein um 30 Prozent geringeres Risiko, arbeitslos zu werden. Besonders gefragt sind digitale Kompetenzen, aber auch Soft Skills wie Projektmanagement oder Kommunikation.\n\nDie Bundesregierung fördert deshalb Weiterbildungen für ältere Arbeitnehmer mit Zuschüssen von bis zu 50 Prozent der Kurskosten. Viele Unternehmen bieten zudem interne Trainings an. „Es lohnt sich in jedem Fall“, sagt Bildungsökonom Prof. Keller. „Auch mit 50 kann man noch Neues lernen – die Erfahrung ist dann sogar ein Vorteil.“",
+              "items": [
+                {
+                  "id": "10",
+                  "text": "Warum ist Weiterbildung für Menschen über 40 wichtig?",
+                  "options": [
+                    { "label": "Weil sie sonst ihren Job verlieren.", "value": "a" },
+                    { "label": "Weil sich der Arbeitsmarkt schnell verändert.", "value": "b" },
+                    { "label": "Weil sie mehr Geld verdienen wollen.", "value": "c" }
+                  ],
+                  "correct": "b"
+                },
+                {
+                  "id": "11",
+                  "text": "Wie hoch ist die staatliche Förderung für Weiterbildungen?",
+                  "options": [
+                    { "label": "Bis zu 30 Prozent der Kosten.", "value": "a" },
+                    { "label": "Bis zu 50 Prozent der Kosten.", "value": "b" },
+                    { "label": "Bis zu 80 Prozent der Kosten.", "value": "c" }
+                  ],
+                  "correct": "b"
+                },
+                {
+                  "id": "12",
+                  "text": "Was sagt Prof. Keller über Lernen mit 50?",
+                  "options": [
+                    { "label": "Es ist zu spät für Weiterbildung.", "value": "a" },
+                    { "label": "Man kann noch Neues lernen, die Erfahrung ist ein Vorteil.", "value": "b" },
+                    { "label": "Junge Menschen lernen viel schneller.", "value": "c" }
+                  ],
+                  "correct": "b"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teil-3",
+      "label": "Teil 3",
+      "nummer": 3,
+      "arbeitszeit": "10 Minuten",
+      "pruefungsziel": "Zur Orientierung lesen",
+      "aufgabentyp": "zuordnung",
+      "punkte": 7,
+      "itemCount": 7,
+      "aufgabenNummern": "13–19",
+      "answerType": "zuordnung-ad-situation",
+      "zuordnung": {
+        "anzahlAnzeigen": 10,
+        "anzahlSituationen": 7,
+        "nullMoeglich": true,
+        "beispielVergeben": "i"
+      },
+      "title": "Selektives Lesen — Anzeigen und Situationen zuordnen",
+      "titleAr": "القراءة الانتقائية — ربط الإعلانات بالمواقف",
+      "instructions": "Lesen Sie die Situationen 13 bis 19 und die Anzeigen A bis J aus verschiedenen deutschsprachigen Medien. Wählen Sie: Welche Anzeige passt zu welcher Situation? Sie können jede Anzeige nur einmal verwenden. Für eine Situation gibt es keine passende Anzeige. In diesem Fall schreiben Sie 0.",
+      "description": "7 Situationen (13–19) und 10 Anzeigen (A–J). Eine Situation passt zu keiner Anzeige (Antwort: 0). Eine Anzeige (Beispiel i) ist bereits verwendet und nicht mehr verfügbar.",
+      "howItWorks": {
+        "leftSide": "10 kurze Anzeigen/Texte (A–J) — Kurse, Jobs, Angebote, Vereine etc.",
+        "rightSide": "7 Situationen (Aufgaben 13–19), für die die passende Anzeige gesucht wird",
+        "task": "Jeder Situation einen Anzeigenbuchstaben (A–J) oder 0 (keine Anzeige passt) zuordnen",
+        "note": "Jede Anzeige darf nur einmal verwendet werden. Eine Beispielsituation (0) ist bereits gelöst."
+      },
+      "themen": [
+        {
+          "id": "t3-deutsch-lernen",
+          "title": "Deutsch lernen — verschiedene Angebote",
+          "titleAr": "تعلم اللغة الألمانية",
+          "context": "Nach dem Ende Ihres gemeinsamen Deutschkurses möchten einige Ihrer Kolleginnen und Kollegen weiter Deutsch lernen und suchen dafür passende Möglichkeiten.",
+          "beispiel": {
+            "id": "0",
+            "text": "Mario möchte in Wien einen Sommersprachkurs besuchen.",
+            "correct": "i"
+          },
+          "ads": [
+            {
+              "id": "a",
+              "title": "Schweizer Autoren, leicht gemacht",
+              "content": "Neu im Verlagsprogramm: Nach 100 Lernstunden schon literarische Kurzgeschichten, Romane und Gedichte lesen? Kein Problem! Die Reihe bietet Deutschlernern vereinfachte Originalversionen für uneingeschränktes Lesevergnügen. www.schweizer-leseverlag.ch"
+            },
+            {
+              "id": "b",
+              "title": "Trainingsprogramm Deutsch",
+              "content": "Sie wollen Ihre Sprachkenntnisse verbessern, haben aber keine Zeit für Kurse? Dann lernen Sie Deutsch im Internet! Unser Lernportal bietet Ihnen gratis: 10 Kurslektionen für Anfänger und Fortgeschrittene, Erklärungen zur Grammatik, alle Übungen online verfügbar. www.sprachenlernen.de"
+            },
+            {
+              "id": "c",
+              "title": "Deutsch in der Schweiz",
+              "content": "Unser Angebot: Intensivkurse mit 20–30 Wochenstunden, Schreibkurse (auch als Fernstudium!), Sommerkurse für Jugendliche und Erwachsene (mit Freizeitprogramm), Kurs: Deutsch im Hotel. Wir bieten nur Tageskurse an! www.deutschinderschweiz.ch"
+            },
+            {
+              "id": "d",
+              "title": "Job & Sprache-Net",
+              "content": "Wir bieten Jobs für Deutschlernende in Deutschland, Österreich und in der Schweiz. Perfektionieren Sie Ihre Sprachkenntnisse und sammeln Sie Erfahrungen in den Arbeitsbereichen Hotel und Restaurant. Dauer: bis zu 3 Monate (Juni–August). Kosten für Unterkunft und Verpflegung werden übernommen. www.jobundsprache-net.com"
+            },
+            {
+              "id": "e",
+              "title": "Sprachschule ORION sucht Trainer/innen",
+              "content": "Sprachschule ORION sucht engagierte Trainer und Trainerinnen (Vollzeit). Kurszeiten von 8:00–17:00 h, Niveaus A1–C1, allgemeine und berufsbezogene Sprachkurse (z. B. Deutsch für den Tourismus). Bewerbungen an: office@deutschintensiv.de"
+            },
+            {
+              "id": "f",
+              "title": "Deutsch erLesen",
+              "content": "Das Magazin Deutsch erLesen richtet sich an Deutschinteressierte im In- und Ausland. Es erscheint einmal im Monat und enthält aktuelle Originalartikel aus der deutschen Presse. Deutschland erfahren & Deutsch lernen! Bestellen Sie noch heute Ihr Probeexemplar: info@deutsch-erlesen.de"
+            },
+            {
+              "id": "g",
+              "title": "Verlag für deutsche Literatur",
+              "content": "Verlag für deutsche Literatur sucht Lektor/Lektorin für die Auswahl und Korrektur von Werken junger deutscher Autoren. Unser Verlagsprogramm umfasst Romane, Gedichtbände und Hörbücher. Schicken Sie Ihre Bewerbung an: junge-literatur@berlin.de"
+            },
+            {
+              "id": "h",
+              "title": "Deutsch in Linz",
+              "content": "Deutsch-Intensivkurse Mo bis Fr von 9:30–13h und von 14:00–17h. Kurse für Berufstätige: Für Berufstätige und Vielbeschäftigte bieten wir flexible Kurszeiten an (Termine nach Wunsch). Online-Einstufungstest auf www.deutschinlinz-schule.at"
+            },
+            {
+              "id": "i",
+              "title": "Sprache und Kultur in Wien",
+              "content": "Deutschkurse ganzjährig! Spezialangebote für den Sommer. Infos unter: www.sprache-kultur@aon.at",
+              "isBeispiel": true
+            },
+            {
+              "id": "j",
+              "title": "Neues Computerprogramm DIGITAL LEARNING",
+              "content": "Für Büromanagement und Buchhaltung in englischer und deutscher Sprache. Ab sofort im Buchhandel erhältlich. Infos: software@digital-learning.net"
+            }
+          ],
+          "situations": [
+            { "id": "13", "text": "Leon möchte im Sommer im Tourismus-Bereich arbeiten, um sein Deutsch zu verbessern.", "correct": "d" },
+            { "id": "14", "text": "Giovanna sucht deutsche Hörbücher, damit sie unterwegs Deutsch lernen kann.", "correct": "0" },
+            { "id": "15", "text": "Mirjeta hat keine Zeit für einen Kurs, möchte sich aber regelmäßig über Neuigkeiten aus Deutschland informieren.", "correct": "f" },
+            { "id": "16", "text": "Maria möchte am Computer Deutsch lernen.", "correct": "b" },
+            { "id": "17", "text": "Susan liest am liebsten Literatur, wenn die Texte nicht zu schwierig sind.", "correct": "a" },
+            { "id": "18", "text": "Miroslav will den schriftlichen Ausdruck verbessern, weil er im Studium viel schreiben muss.", "correct": "c" },
+            { "id": "19", "text": "Juan kann nur am Abend einen Kurs besuchen.", "correct": "h" }
+          ]
+        },
+        {
+          "id": "t3-jobs-angebote",
+          "title": "Jobs, Kurse und Freizeitangebote",
+          "titleAr": "وظائف، دورات وعروض ترفيهية",
+          "context": "Verschiedene Personen suchen passende Angebote für ihre jeweilige Situation.",
+          "beispiel": {
+            "id": "0",
+            "text": "Frau Müller sucht einen Deutschkurs für Anfänger in München.",
+            "correct": "i"
+          },
+          "ads": [
+            { "id": "a", "title": "Praktikum im Marketing", "content": "Kreative Köpfe gesucht! Wir bieten ein 3-monatiges Praktikum in unserer Marketingabteilung. Voraussetzung: Student/in im Bereich BWL oder Kommunikation. Bewerbung per E-Mail." },
+            { "id": "b", "title": "Aushilfe im Café — Wochenende", "content": "Für unser gemütliches Café suchen wir Studenten für Wochenendarbeit (Sa/So). Berufserfahrung nicht nötig. Mindestalter: 18 Jahre. Gute Bezahlung." },
+            { "id": "c", "title": "Rezeptionist/in gesucht", "content": "Wir suchen eine/n Rezeptionist/in ab sofort. Anforderungen: freundlich, Hotelerfahrung, Englisch und Deutsch. Vollzeit oder Teilzeit möglich." },
+            { "id": "d", "title": "Babysitter gesucht — abends", "content": "Familie mit zwei Kindern (3 und 6 Jahre) sucht zuverlässigen Babysitter für 2–3 Abende pro Woche. Erfahrung mit Kindern wichtig. Führerschein von Vorteil." },
+            { "id": "e", "title": "Nachhilfelehrer Mathematik", "content": "Ich suche Unterstützung für meinen Sohn (15) in Mathematik. 2× pro Woche, 2 Stunden. Gerne Lehramtstudent/in. Gute Bezahlung. Privatzahler." },
+            { "id": "f", "title": "Werkstudent/in Buchhaltung", "content": "Suchen Werkstudenten für Buchhaltungsabteilung. 15–20 Std./Woche, flexibel einteilbar. Studium der Wirtschaftswissenschaften Voraussetzung." },
+            { "id": "g", "title": "Hundesitter gesucht — Juli", "content": "Suche jemanden, der unseren Golden Retriever während meines Urlaubs (2 Wochen im Juli) betreut. Eigener Garten von Vorteil. Vergütung: 30€/Tag." },
+            { "id": "h", "title": "Yogakurs — sanft und entspannend", "content": "Neuer Yogakurs für Einsteiger/innen und Menschen mit Rückenproblemen. Di + Do 7:00–8:00 Uhr. Kleingruppe (max. 8 Personen). Matte kann ausgeliehen werden." },
+            { "id": "i", "title": "VHS München — Deutschkurse", "content": "Volkshochschule München bietet Deutschkurse für alle Niveaus. Anfänger bis Fortgeschrittene. Kursbeginn: jeden Monat. Anmeldung online. www.vhs-muenchen.de", "isBeispiel": true },
+            { "id": "j", "title": "Übersetzer Spanisch–Deutsch", "content": "Kleines Übersetzungsbüro sucht freiberufliche/n Übersetzer/in Spanisch–Deutsch. Erfahrung mit Fachtexten bevorzugt. Heimarbeit möglich." }
+          ],
+          "situations": [
+            { "id": "13", "text": "Tom ist Student und sucht einen Nebenjob für die Wochenenden. Berufserfahrung hat er nicht.", "correct": "b" },
+            { "id": "14", "text": "Lisa hat ihr Studium in Marketing fast beendet und möchte erste praktische Erfahrungen sammeln.", "correct": "a" },
+            { "id": "15", "text": "Anna hat zwei Jahre in einem Hotel gearbeitet und sucht eine neue Stelle.", "correct": "c" },
+            { "id": "16", "text": "Herr Bauer sucht jemanden, der seinem 15-jährigen Sohn bei Mathe hilft.", "correct": "e" },
+            { "id": "17", "text": "Sandra liebt Tiere und möchte im Juli einen Ferienjob haben.", "correct": "g" },
+            { "id": "18", "text": "Maria hat seit Jahren Rückenprobleme und sucht einen sanften Sportkurs am frühen Morgen.", "correct": "h" },
+            { "id": "19", "text": "Carlos spricht fließend Spanisch und Deutsch und sucht flexible Arbeit von zu Hause.", "correct": "j" }
+          ]
+        },
+        {
+          "id": "t3-freizeit-vereine",
+          "title": "Freizeit- und Sportangebote",
+          "titleAr": "عروض ترفيهية ورياضية",
+          "context": "Verschiedene Personen suchen passende Freizeit- und Sportangebote in ihrer Stadt.",
+          "beispiel": {
+            "id": "0",
+            "text": "Paul möchte einem Fußballverein in Berlin beitreten.",
+            "correct": "i"
+          },
+          "ads": [
+            { "id": "a", "title": "Tanzkurs — Salsa für Anfänger", "content": "Sie wollten schon immer Salsa tanzen? Unser Kurs startet am 5. März. 8 Abende, 80€ pro Person. Kein Partner nötig. Anmeldung unter: www.salsa-berlin.de" },
+            { "id": "b", "title": "Seniorenwandergruppe", "content": "Gemütliche Wanderungen für Senioren ab 60. Jeden Donnerstag um 10 Uhr. Treffpunkt: Haupteingang Stadtpark. Einkehr in netten Cafés inbegriffen. Mitgliedschaft 15€/Jahr." },
+            { "id": "c", "title": "Fotokurs — Digitale Fotografie", "content": "Lernen Sie Ihre Kamera besser kennen! Theorie und Praxis an 4 Wochenenden. Themen: Landschaft, Portrait, Nachtaufnahmen. Vorkenntnisse nicht erforderlich. www.fotokurs-muenchen.de" },
+            { "id": "d", "title": "Kletterhalle TRIXX", "content": "Deutschlands größte Kletterhalle! 500 Routen für Anfänger und Profis. Kursangebote: Einführungskurs (2h, 35€), Kindergeburtstage, Firmenevents. Täglich geöffnet 10–22 Uhr. www.trixx-klettern.de" },
+            { "id": "e", "title": "Schachklub Hamburg", "content": "Sie lieben Schach? Unser Klub trifft sich jeden Dienstag und Freitag ab 19 Uhr. Neue Mitglieder sind herzlich willkommen. Alle Altersgruppen und Spielstärken. Erste 3 Probetermine kostenlos." },
+            { "id": "f", "title": "Yoga am Fluss", "content": "Yoga im Freien direkt am Main. Mai–September, Mo + Mi 18–19:30 Uhr. Entspannung und Bewegung inmitten der Natur. Matten können gestellt werden. 15€/Einheit." },
+            { "id": "g", "title": "Töpferkurs für Kinder (6–12 Jahre)", "content": "Kreativ-Werkstatt: Töpfern für Kinder. Jeden Samstag von 10–12 Uhr. Alle Materialien inklusive. Kursgebühr: 45€/Monat. Anmeldung unter: werkstatt@töpfern.com" },
+            { "id": "h", "title": "Sprachcafé — Deutsch üben", "content": "Sprechen Sie Deutsch in entspannter Atmosphäre! Jeden Mittwoch 16–18 Uhr im Café „Mona Lisa“. Muttersprachler helfen bei Fragen. Kostenlos – nur der eigene Kaffeepreis. Keine Anmeldung nötig." },
+            { "id": "i", "title": "Sportverein Blau-Weiß Berlin", "content": "Fußball, Handball, Leichtathletik. Jugendtraining Di+Do 16–18 Uhr. Erwachsenentraining Mo+Mi 19–21 Uhr. Frühjahrsanmeldung ab 1. März. www.blauweiss-berlin.de", "isBeispiel": true },
+            { "id": "j", "title": "Kochkurs — Mediterrane Küche", "content": "Kochen Sie mit uns durch Italien, Spanien und Griechenland! 3 Abende (jeweils 2 Rezepte). Inkl. gemeinsames Essen und Rezeptheft. Preis: 120€. Nächster Kurs: 10.–12. April." }
+          ],
+          "situations": [
+            { "id": "13", "text": "Sabine (65) möchte gerne mit anderen Senioren spazieren gehen und Kaffeepausen machen.", "correct": "b" },
+            { "id": "14", "text": "Thomas interessiert sich für Fotografie und möchte einen Kurs am Wochenende besuchen.", "correct": "c" },
+            { "id": "15", "text": "Lisa (8) möchte einen kreativen Nachmittagskurs besuchen.", "correct": "g" },
+            { "id": "16", "text": "Ahmed möchte seine Deutschkenntnisse im Gespräch mit anderen verbessern.", "correct": "h" },
+            { "id": "17", "text": "Claudia möchte gerne kochen lernen, besonders italienische und griechische Gerichte.", "correct": "j" },
+            { "id": "18", "text": "Felix sucht eine Herausforderung: Er möchte einen Sport lernen, der Kraft und Geschicklichkeit trainiert.", "correct": "d" },
+            { "id": "19", "text": "Maria möchte tanzen lernen, hat aber keinen Tanzpartner.", "correct": "a" }
+          ]
+        },
+        {
+          "id": "t3-wohnen-umzug",
+          "title": "Wohnen und Umzug",
+          "titleAr": "السكن والانتقال",
+          "context": "Verschiedene Personen suchen Wohnungen, WG-Zimmer oder Umzugshilfe.",
+          "beispiel": {
+            "id": "0",
+            "text": "Frau Weber sucht eine 3-Zimmer-Wohnung in Köln mit Balkon.",
+            "correct": "i"
+          },
+          "ads": [
+            { "id": "a", "title": "WG-Zimmer frei in Köln-Süd", "content": "helle 20m² in 3er-WG, 450€ warm, ab sofort. Mitbewohner (w, 24) und (m, 26) suchen ruhige/n Student/in. Bitte Nachricht an: wg-koeln@mail.de" },
+            { "id": "b", "title": "1-Zimmer-Wohnung in Wien", "content": "30m², Balkon, EBK, zentral, 750€ warm (+ Strom). Geeignet für Single oder Paar. Besichtigung nach Vereinbarung. Kontakt: immobilien@wien.at" },
+            { "id": "c", "title": "Umzugshelfer gesucht", "content": "Für Umzug am 15. Juni in Berlin benötige ich 2–3 starke Helfer. Dauer ca. 4 Stunden, Lohn 15€/h + Verpflegung. Bitte melden unter 0176 1234567." },
+            { "id": "d", "title": "Wohnungstausch München — Hamburg", "content": "Ich tausche meine 2-Zimmer-Wohnung in München-Schwabing (65m²) gegen eine Wohnung in Hamburg ab September. Bei Interesse: wohnungstausch@web.de" },
+            { "id": "e", "title": "Studentenwohnheim Frankfurt", "content": "Zimmer ab 250€ warm. Wartezeit ca. 3 Monate. Bewerbung online. Voraussetzung: Immatrikulationsbescheinigung. www.studentenwerk-frankfurt.de" },
+            { "id": "f", "title": "Senioren-WG sucht Mitbewohnerin", "content": "Wir (w, 68 und w, 72) suchen nette Dame ab 60 für gemeinsame Wohnung in ruhiger Lage. Kosten: 500€ all inkl. Bei Interesse: 089 12345678." },
+            { "id": "g", "title": "Nachmieter gesucht für 2-Zimmer-Wohnung", "content": "Dresden-Neustadt, 55m², Altbau, hohe Decken, EBK. Kaltmiete 520€. Verfügbar ab 1. August. Bei Interesse: nachmieter-dresden@gmx.de" },
+            { "id": "h", "title": "Möbelpaket für WG-Zimmer", "content": "Bett, Schreibtisch, Kleiderschrank, Regal. Alles gut erhalten. Preis für alles: 250€. Selbstabholung in Stuttgart-Zuffenhausen. Tel: 0711 9876543." },
+            { "id": "i", "title": "Immobilien Köln — Wohnungen zur Miete", "content": "Aktuelle Angebote: 3-ZKB mit Balkon ab 850€ warm. Besichtigungstermine nach Vereinbarung. www.immobilien-koeln.de", "isBeispiel": true },
+            { "id": "j", "title": "Zwischenmiete Juni–August", "content": "Zimmer in Berlin-Friedrichshain, 400€/Monat. Vom 1. Juni bis 31. August. Sehr zentral, 5 min zur U-Bahn. Nur an Nichtraucher. Zwischenmiete@berlin.de" }
+          ],
+          "situations": [
+            { "id": "13", "text": "Julia beginnt im September ein Studium in Frankfurt und sucht eine günstige Unterkunft.", "correct": "e" },
+            { "id": "14", "text": "Herr König (65) sucht eine Wohnung mit anderen Senioren, um nicht allein zu wohnen.", "correct": "f" },
+            { "id": "15", "text": "Susanne muss im August aus ihrer Wohnung in Dresden ausziehen und sucht jemanden, der die Wohnung übernimmt.", "correct": "g" },
+            { "id": "16", "text": "Peter will im Juni von Berlin nach Hamburg umziehen und sucht jemanden, der seine Wohnung in Berlin übernimmt.", "correct": "d" },
+            { "id": "17", "text": "Lena braucht jemanden, der ihr beim Umzug hilft.", "correct": "c" },
+            { "id": "18", "text": "Markus sucht ein möbliertes Zimmer für die Sommermonate in Berlin.", "correct": "j" },
+            { "id": "19", "text": "Sophie sucht ein WG-Zimmer in Köln, idealerweise mit ruhigen Mitbewohnern.", "correct": "a" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teil-4",
+      "label": "Teil 4",
+      "nummer": 4,
+      "arbeitszeit": "15 Minuten",
+      "pruefungsziel": "Information und Argumentation verstehen",
+      "aufgabentyp": "ja-nein",
+      "punkte": 7,
+      "itemCount": 7,
+      "aufgabenNummern": "20–26",
+      "answerType": "dafuer-dagegen",
+      "title": "Globalverstehen — Leserbriefe und Kommentare",
+      "titleAr": "الفهم العام — رسائل القراء والتعليقات",
+      "instructions": "Lesen Sie die Texte 20 bis 26. Wählen Sie: Ist die Person für ein Verbot? (Ja oder Nein)",
+      "description": "In einer Zeitschrift lesen Sie Kommentare zu einem kontroversen Thema. 7 Personen äußern sich. Für jede Person: Ist sie dafür (Ja) oder dagegen (Nein)?",
+      "howItWorks": {
+        "format": "Kurze Kommentare/Leserbriefe von 7 verschiedenen Personen (je ca. 50–80 Wörter)",
+        "task": "Für jede Person entscheiden: Ja (dafür) oder Nein (dagegen)",
+        "note": "Eine Beispielperson (0) ist bereits gelöst und zeigt das Format"
+      },
+      "themen": [
+        {
+          "id": "t4-killerspiele",
+          "title": "Verbot von Killerspielen",
+          "titleAr": "حظر ألعاب الفيديو العنيفة",
+          "contextText": "In einer Zeitschrift lesen Sie Kommentare zu einem Artikel über das Verbot von Videospielen, in denen viel Gewalt vorkommt (sogenannte „Killerspiele“).",
+          "fragestellung": "Ist die Person für ein Verbot?",
+          "beispiel": {
+            "id": "0",
+            "author": "Niko, 52, Saarbrücken",
+            "text": "Man hat bis jetzt nicht wissenschaftlich gezeigt, dass sogenannte Gewaltspiele einen Einfluss auf das Verhalten von Jugendlichen haben? So ein Blödsinn! Ist doch logisch, dass so massive Bilder die Gedanken beeinflussen! Für mich ist klar: Durch solche Spiele kann viel Unglück und Schaden entstehen, die müssen weg!",
+            "correct": "Ja"
+          },
+          "comments": [
+            { "id": "20", "author": "Stefan, 19, Graz", "text": "Ich könnte mir vorstellen, dass ein Verbot die gegenteilige Wirkung hätte, denn ein verbotenes Spiel ist doch noch interessanter als ein nicht verbotenes! Außerdem ist es gar nicht möglich, alle Killerspiele abzuschaffen, weil es davon schon viel zu viele gibt. Mein Fazit: Warum „Killerspiele“ verbieten, wenn es im Endeffekt sowieso alle spielen und das Ganze gerade durch ein Verbot noch interessanter wird?", "correct": "Nein" },
+            { "id": "21", "author": "Dagmar, 23, Leipzig", "text": "Wer entscheidet letztlich darüber, welche Spiele man nicht braucht? Dürfen diese Menschen dann auch darüber entscheiden, welche Bücher, Filme oder Musik wir nicht brauchen? Viel wichtiger ist es doch, dass Kinder und Jugendliche lernen, selbst zwischen virtueller und realer Gewalt zu unterscheiden!", "correct": "Nein" },
+            { "id": "22", "author": "Kathleen, 49, Cuxhaven", "text": "„Töten auf Probe“ soll erlaubt sein? Das bedeutet: Mal schnell zu üben, wie man jemanden umbringt, ist eine Freizeitbeschäftigung. Wie zynisch kann man sein? Nicht jeder wird zum Glück zum Monster, der sich mit so viel Gewalt und Zerstörung beschäftigt. Die Einstellung dahinter ist aber Ausdruck einer unglaublichen Gleichgültigkeit. Das muss man stoppen, und zwar schnell.", "correct": "Ja" },
+            { "id": "23", "author": "Marius, 34, St. Gallen", "text": "Ich spiele sogenannte Killerspiele wie CaDu seit bald drei Jahren regelmässig. Ich habe eine kleine Tochter, eine Frau und einen Job und spiele für den Ausgleich. Nur weil es mal dazu kommt, dass einer auf dieser Welt das Spiel als Realität sieht und durchdreht, müssen dann all die anderen ein Verbot hinnehmen? Es wäre besser, die Altersbeschränkung auf 18 Jahre festzulegen und sie auch strikt einzuhalten.", "correct": "Nein" },
+            { "id": "24", "author": "Jonny, 21, Berlin", "text": "„Killerspiele“ machen schnell aggressiv und man wird davon abhängig. Außerdem besteht die Gefahr, dass jemand nicht mit solchen Spielen umgehen kann und zum Nachahmungstäter wird. Das sind nur zwei Gründe, warum man gegen diese Spiele endlich etwas tun sollte.", "correct": "Ja" },
+            { "id": "25", "author": "Robert, 18, Winterthur", "text": "In dieser Diskussion fehlt immer die genaue Kenntnis! Meistens ist es bei sogenannten „Killerspielen“ nämlich so, dass man in einem Team spielt. Ein solches Spiel stärkt also den Teamgeist. Außerdem steht die Taktik im Vordergrund und nicht eine bestimmte Methode, jemanden umzubringen. So wird das taktische bzw. logische Denken gefördert!", "correct": "Nein" },
+            { "id": "26", "author": "Marinette, 38, Frankfurt", "text": "Ich denke, dass gewisse Situationen oder Dinge einen Menschen dazu bringen können, etwas zu tun, das er sonst nicht tun würde. Das kann gerade bei sogenannten „Killerspielen“ der Fall sein. Deshalb scheint mir ein Verbot sinnvoll zu sein, auch wenn so ein Verbot allein wahrscheinlich nicht viel nützt, denn Killerspiele sind ja nur eine ‚Inspirationsquelle‘ für Gewalt.", "correct": "Ja" }
+          ]
+        },
+        {
+          "id": "t4-handyverbot",
+          "title": "Handyverbot an Schulen",
+          "titleAr": "حظر الهواتف في المدارس",
+          "contextText": "In einem Online-Forum lesen Sie Kommentare zu einem Artikel über ein mögliches Handyverbot an deutschen Schulen.",
+          "fragestellung": "Ist die Person für ein Handyverbot an Schulen?",
+          "beispiel": {
+            "id": "0",
+            "author": "Frau Meyer, 48, Lehrerin",
+            "text": "Handys lenken die Kinder während des Unterrichts ständig ab. Ich sehe das jeden Tag. In der Pause sollten sie miteinander spielen und reden, nicht auf den Bildschirm starren. Ich bin klar für ein Verbot!",
+            "correct": "Ja"
+          },
+          "comments": [
+            { "id": "20", "author": "Herr Schmidt, 42, Vater", "text": "Das ist völlig unrealistisch. Kinder müssen lernen, verantwortungsvoll mit Technologie umzugehen. Ein Verbot löst das Problem nicht, es verlagert es nur. Wir sollten Medienkompetenz fördern, nicht Verbote aussprechen.", "correct": "Nein" },
+            { "id": "21", "author": "Jana, 16, Schülerin", "text": "Ich fühle mich ohne Handy in der Schule viel entspannter. Es gibt weniger Cybermobbing und ich vergleiche mich nicht ständig mit anderen auf Social Media. Ein Verbot würde mir persönlich sehr helfen.", "correct": "Ja" },
+            { "id": "22", "author": "Tobias, 17, Schüler", "text": "Das Handy ist mein wichtigstes Lernwerkzeug. Ich recherchiere, übersetze unbekannte Wörter und organisiere meinen Schulalltag damit. Ohne Handy wäre ich in vielen Fächern aufgeschmissen.", "correct": "Nein" },
+            { "id": "23", "author": "Frau Braun, 52, Schulleiterin", "text": "Seit wir an unserer Schule das Handy während des Unterrichts verboten haben, ist die Unterrichtsqualität deutlich gestiegen. Die Schüler hören besser zu und die sozialen Konflikte in den Pausen sind deutlich weniger geworden.", "correct": "Ja" },
+            { "id": "24", "author": "Dr. Lehmann, 39, Pädagoge", "text": "Medienkompetenz entwickelt man nicht durch Verbote, sondern durch den bewussten Umgang mit dem Gerät. Schulen sollten Schüler beim richtigen Umgang mit dem Handy begleiten und unterstützen, nicht einfach verbieten.", "correct": "Nein" },
+            { "id": "25", "author": "Petra, 35, Mutter", "text": "Ich möchte meine Tochter jederzeit erreichen können, auch in der Schule. Was ist, wenn etwas passiert? Ein vollständiges Verbot lehne ich deshalb ab, auch wenn Regeln für den Unterricht sinnvoll wären.", "correct": "Nein" },
+            { "id": "26", "author": "Klaus, 67, Rentner", "text": "In meiner Schulzeit gab es keine Handys und wir haben trotzdem gut gelernt. Diese ständige Ablenkung tut den Kindern nicht gut. Ich unterstütze ein klares Verbot zu hundert Prozent.", "correct": "Ja" }
+          ]
+        },
+        {
+          "id": "t4-vegetarisch",
+          "title": "Pflichtvegetarische Tage in Schulkantinen",
+          "titleAr": "أيام نباتية إجبارية في المقاصف",
+          "contextText": "In einer Zeitschrift lesen Sie Leserbriefe zum Thema: Sollten Schulkantinen mindestens zweimal pro Woche nur vegetarisches Essen anbieten?",
+          "fragestellung": "Ist die Person für vegetarische Pflichtmenüs in der Schulkantine?",
+          "beispiel": {
+            "id": "0",
+            "author": "Frau Richter, 44, Ernährungsberaterin",
+            "text": "Ja, definitiv! Kinder sollen lernen, dass es viele leckere Alternativen zu Fleisch gibt. Das tut ihnen gut und schützt die Umwelt. Schulen haben eine Vorbildfunktion.",
+            "correct": "Ja"
+          },
+          "comments": [
+            { "id": "20", "author": "Hans, 50, Vater", "text": "Mein Sohn isst kein Gemüse. Punkt. Er würde in der Schule hungern. Solche Zwangsmaßnahmen sind keine Lösung. Eltern sollen entscheiden, was ihre Kinder essen, nicht der Staat.", "correct": "Nein" },
+            { "id": "21", "author": "Emma, 14, Schülerin", "text": "Ich finde die Idee gut! In unserer Kantine gibt es sowieso schon fast jeden Tag Fleisch. Ein bisschen mehr Abwechslung wäre toll und ich würde auch gerne mehr vegetarische Gerichte ausprobieren.", "correct": "Ja" },
+            { "id": "22", "author": "Herr Bauer, 58, Koch", "text": "Als Schulkoch sage ich: Wir wollen gutes Essen machen, das den Kindern schmeckt. Wenn wir gezwungen werden, bestimmte Gerichte anzubieten, leiden Qualität und Kreativität darunter. Das hilft niemandem.", "correct": "Nein" },
+            { "id": "23", "author": "Dr. Müller, 47, Ärztin", "text": "Aus medizinischer Sicht ist eine ausgewogene Ernährung mit weniger Fleisch klar empfehlenswert. Wenn Schulen dabei helfen, gesündere Gewohnheiten zu entwickeln, ist das eine wichtige gesellschaftliche Investition.", "correct": "Ja" },
+            { "id": "24", "author": "Lena, 32, Mutter", "text": "Ich esse selbst viel Gemüse und unterstütze nachhaltige Ernährung. Aber Verbote oder Pflichten halte ich für den falschen Weg. Besser wäre es, vegetarische Gerichte attraktiver und günstiger zu machen.", "correct": "Nein" },
+            { "id": "25", "author": "Tobias, 19, Student", "text": "Absolut richtig! Die Fleischindustrie ist eine der größten Ursachen des Klimawandels. Wenn Schulen Verantwortung übernehmen und Kinder für das Thema sensibilisieren, ist das ein wichtiger Schritt in die richtige Richtung.", "correct": "Ja" },
+            { "id": "26", "author": "Frau Neumann, 61, Rentnerin", "text": "Zwang bringt gar nichts. In meiner Jugend mussten wir alles essen – und ich habe Fleisch bis heute geliebt. Aufklärung ist wichtig, aber bitte freiwillig.", "correct": "Nein" }
+          ]
+        },
+        {
+          "id": "t4-tierversuche",
+          "title": "Tierversuche in der Medizin",
+          "titleAr": "التجارب على الحيوانات في الطب",
+          "contextText": "In einer Online-Diskussion lesen Sie Kommentare zum Thema: Sollten Tierversuche in der medizinischen Forschung verboten werden?",
+          "fragestellung": "Ist die Person für ein Verbot von Tierversuchen?",
+          "beispiel": {
+            "id": "0",
+            "author": "Dr. Wagner, 55, Forscherin",
+            "text": "Tierversuche sind derzeit leider unverzichtbar, um neue Medikamente zu entwickeln. Wir verzichten bereits wo immer möglich darauf. Ein pauschales Verbot würde die medizinische Forschung um Jahrzehnte zurückwerfen.",
+            "correct": "Nein"
+          },
+          "comments": [
+            { "id": "20", "author": "Mia, 24, Tierschützerin", "text": "Tiere sind Lebewesen mit Gefühlen. Jedes Jahr leiden Millionen von Tieren in Labors – das ist nicht zu rechtfertigen. Es gibt inzwischen moderne Alternativen wie Zellkulturen und Computersimulationen. Ein Verbot ist längst überfällig!", "correct": "Ja" },
+            { "id": "21", "author": "Professor Keller, 62, Mediziner", "text": "Ohne Tierversuche gäbe es keine Impfungen gegen Polio oder Covid-19. Wir haben die ethische Pflicht, Menschenleben zu retten – auch wenn das Tierversuche bedeutet. Wir müssen die Zahl reduzieren, aber nicht komplett verbieten.", "correct": "Nein" },
+            { "id": "22", "author": "Sarah, 19, Studentin", "text": "Ich habe Biologie studiert und finde Tierversuche grausam. Wo ziehen wir die Grenze? Erst Mäuse, dann Hunde, dann Affen? Für mich ist klar: Tierversuche müssen komplett verboten werden. Forschung muss ohne Tierleid auskommen.", "correct": "Ja" },
+            { "id": "23", "author": "Dr. Meier, 48, Tierarzt", "text": "Als Tierarzt sehe ich jeden Tag kranke Tiere. Ich bin gegen unnötige Tierversuche, besonders bei Kosmetika. Aber in der Medizin? Da gibt es Situationen, wo sie notwendig sind. Ein generelles Verbot ist nicht durchdacht.", "correct": "Nein" },
+            { "id": "24", "author": "Lena, 31, Ärztin", "text": "Ich arbeite auf einer Krebsstation. Die Medikamente, die wir geben, wurden alle an Tieren getestet. Wenn wir das verbieten, sterben mehr Menschen. Und das kann ich mit meinem Gewissen nicht vereinbaren.", "correct": "Nein" },
+            { "id": "25", "author": "Felix, 27, Veganer", "text": "Tiere sind nicht unsere Versuchsobjekte. Die Forschung hat jahrzehntelang Tiere gequält – ohne wirklichen Nutzen. Viele Medikamente wirken bei Tieren anders als beim Menschen. Es ist Zeit für einen radikalen Wandel: Verbieten!", "correct": "Ja" },
+            { "id": "26", "author": "Frau Schulz, 68, Patientin", "text": "Ich lebe dank eines Medikaments, das an Tieren getestet wurde. Natürlich ist Tierleid schlimm. Aber ich finde, Menschenleben sind wichtiger. Vielleicht kann man die Anzahl reduzieren, aber ein Verbot wäre falsch.", "correct": "Nein" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teil-5",
+      "label": "Teil 5",
+      "nummer": 5,
+      "arbeitszeit": "10 Minuten",
+      "pruefungsziel": "Schriftliche Anweisung verstehen",
+      "aufgabentyp": "mehrfachauswahl-3-gliedrig",
+      "punkte": 4,
+      "itemCount": 4,
+      "aufgabenNummern": "27–30",
+      "answerType": "multiple-choice-abc",
+      "title": "Selektives Lesen — Hausordnung oder schriftliche Anweisung",
+      "titleAr": "القراءة الانتقائية — نظام داخلي أو تعليمات كتابية",
+      "instructions": "Lesen Sie die Aufgaben 27 bis 30 und den Text dazu. Wählen Sie bei jeder Aufgabe die richtige Lösung a, b oder c.",
+      "description": "Ein kurzer offizieller Text (Hausordnung, Anleitung, Aushang, Regelwerk). 4 Multiple-Choice-Fragen (a/b/c).",
+      "howItWorks": {
+        "textType": "Hausordnung, Schulordnung, Baderegeln, Bibliotheksordnung, Museumsregeln etc.",
+        "task": "Aufgaben 27–30: je 3 Antwortmöglichkeiten (a, b, c), eine ist richtig",
+        "note": "Die Fragen prüfen spezifische Details aus dem Regeltext"
+      },
+      "themen": [
+        {
+          "id": "t5-schulhausordnung",
+          "title": "Hausordnung des Berufsbildungszentrums",
+          "titleAr": "نظام المدرسة الداخلي",
+          "context": "Sie informieren sich über die Hausordnung des Dresdner Berufsbildungszentrums BZW, in dem Sie einen Kurs gebucht haben.",
+          "text": {
+            "title": "HAUSORDNUNG",
+            "content": "Unterrichtszeiten: Die vereinbarten Unterrichtszeiten sind verbindlich. Ist die Lehrperson zehn Minuten nach Unterrichtsbeginn nicht da, informiert die Klassenvertretung das Sekretariat.\n\nOrdnung: In sämtlichen Räumen und Anlagen unserer Schule ist auf Ordnung und Sauberkeit zu achten. Schulräume, Einrichtungen und Anlagen sind sorgfältig zu benützen. Außerhalb der Unterrichtszeiten dürfen sich Lernende nicht in den Klassenräumen aufhalten. Es ist untersagt, in den Klassenräumen etwas an die Wände zu kleben oder zu schreiben und Schulmöbel in andere Räume zu bringen. Mitarbeitende und Lernende, die Schäden feststellen, melden diese dem Sekretariat.\n\nStörungen: Mitarbeitende und Lernende sorgen dafür, dass der Schulbetrieb nicht gestört wird.\n\nAlkohol- und Drogenkonsum: Der Konsum von Alkohol, illegalen Drogen sowie anderen psychoaktiven Substanzen ist auf dem gesamten Schulareal und während schulischer Veranstaltungen (einschließlich aller Pausen) verboten. In Ausnahmefällen kann die Schulleitung den Konsum von Alkohol erlauben.\n\nRauchen: Rauchen ist nur im Freien beziehungsweise in den dafür vorgesehenen Zonen gestattet. Wir bitten darum, die aufgestellten Aschenbecher zu benutzen.\n\nDiebstahl: Es empfiehlt sich, Wertsachen und Bargeld sorgfältig aufzubewahren. Die Schule stellt den Lernenden und Mitarbeitenden kostenlos Schließfächer zur Verfügung. Für verlorene Schlüssel wird eine Gebühr von Euro 50,- erhoben. Die Schule übernimmt für Diebstähle keine Haftung.\n\nFundgegenstände: Fundgegenstände bitte im Sekretariat abgeben.\n\nParkplätze: Auf dem Schulareal stehen keine Gratis-Autoparkplätze zur Verfügung. Fahrräder müssen in den dafür vorgesehenen Fahrradkeller gebracht und abgeschlossen werden. Mopeds und Motorräder sind auf dem Schulareal nicht erlaubt."
+          },
+          "items": [
+            {
+              "id": "27",
+              "text": "Schüler ...",
+              "options": [
+                { "label": "dürfen keine Fahrräder mit zur Schule bringen.", "value": "a" },
+                { "label": "dürfen ihre Fahrräder auf den Schulhof stellen.", "value": "b" },
+                { "label": "müssen ihre Fahrräder in einen speziellen Raum stellen.", "value": "c" }
+              ],
+              "correct": "c"
+            },
+            {
+              "id": "28",
+              "text": "Für die Klassenräume des BZW gilt:",
+              "options": [
+                { "label": "Schüler dürfen keine Poster aufhängen.", "value": "a" },
+                { "label": "Schüler müssen dort selber aufräumen.", "value": "b" },
+                { "label": "Schüler können dort nach dem Unterricht lernen.", "value": "c" }
+              ],
+              "correct": "a"
+            },
+            {
+              "id": "29",
+              "text": "Um die verschließbaren Fächer benutzen zu können, muss man ...",
+              "options": [
+                { "label": "einen Schlüssel im Sekretariat verlangen.", "value": "a" },
+                { "label": "einmalig 50,- Euro zahlen.", "value": "b" },
+                { "label": "Schüler sein oder im BZW arbeiten.", "value": "c" }
+              ],
+              "correct": "c"
+            },
+            {
+              "id": "30",
+              "text": "Das Trinken von Alkohol ...",
+              "options": [
+                { "label": "kann von der Schulleitung genehmigt werden.", "value": "a" },
+                { "label": "muss der Lehrperson gemeldet werden.", "value": "b" },
+                { "label": "ist ohne Ausnahme verboten.", "value": "c" }
+              ],
+              "correct": "a"
+            }
+          ]
+        },
+        {
+          "id": "t5-hallenbad",
+          "title": "Badeordnung des Stadtbades",
+          "titleAr": "نظام المسبح العام",
+          "context": "Sie möchten das Stadtbad besuchen und lesen vorher die Badeordnung.",
+          "text": {
+            "title": "BADEORDNUNG DES STADTBADES",
+            "content": "Willkommen im Stadtbad! Für die Sicherheit und das Wohlbefinden aller Besucher bitten wir Sie, folgende Regeln zu beachten:\n\nDuschen: Vor dem Betreten des Schwimmbeckens müssen alle Besucher duschen.\n\nBadekappen: Badekappen sind im Schwimmerbereich verpflichtend. Im Freizeitbereich und Whirlpool ist dies nicht nötig.\n\nKinder: Kinder unter 10 Jahren dürfen nur in Begleitung einer Aufsichtsperson schwimmen. Im Nichtschwimmerbereich gilt Sprungverbot. Der Sprungturm darf nur von Schwimmern über 14 Jahren benutzt werden.\n\nEssen und Trinken: Eigene Speisen dürfen nicht ins Bad mitgebracht werden. Im Kiosk sind Snacks und Getränke erhältlich.\n\nAusleihe: Handtücher und Badetücher können gegen eine Gebühr von 3€ ausgeliehen werden.\n\nWertsachen: Wertgegenstände bitte im Schließfach aufbewahren. Das Bad übernimmt keine Haftung für Verluste.\n\nÖffnungszeiten: Mo–Fr 6:30–22:00 Uhr, Sa–So 8:00–20:00 Uhr. Letzter Einlass eine Stunde vor Schließung."
+          },
+          "items": [
+            {
+              "id": "27",
+              "text": "Wann muss man eine Badekappe tragen?",
+              "options": [
+                { "label": "Immer, im ganzen Bad.", "value": "a" },
+                { "label": "Nur im Schwimmerbereich.", "value": "b" },
+                { "label": "Nur wenn man springt.", "value": "c" }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "28",
+              "text": "Wer darf den Sprungturm benutzen?",
+              "options": [
+                { "label": "Alle Besucher ab 10 Jahren.", "value": "a" },
+                { "label": "Nur Kinder mit Begleitung.", "value": "b" },
+                { "label": "Nur Schwimmer, die älter als 14 Jahre sind.", "value": "c" }
+              ],
+              "correct": "c"
+            },
+            {
+              "id": "29",
+              "text": "Was kann man sich im Bad gegen Bezahlung ausleihen?",
+              "options": [
+                { "label": "Badekappen und Schwimmflossen.", "value": "a" },
+                { "label": "Handtücher und Badetücher.", "value": "b" },
+                { "label": "Badeschuhe und Sonnencreme.", "value": "c" }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "30",
+              "text": "Wann darf man samstags zuletzt ins Bad?",
+              "options": [
+                { "label": "Um 20:00 Uhr.", "value": "a" },
+                { "label": "Um 19:00 Uhr.", "value": "b" },
+                { "label": "Um 22:00 Uhr.", "value": "c" }
+              ],
+              "correct": "b"
+            }
+          ]
+        },
+        {
+          "id": "t5-bibliothek",
+          "title": "Benutzungsordnung der Stadtbibliothek",
+          "titleAr": "نظام المكتبة العامة",
+          "context": "Sie möchten die Stadtbibliothek benutzen und lesen zuerst die Benutzungsordnung.",
+          "text": {
+            "title": "BENUTZUNGSORDNUNG DER STADTBIBLIOTHEK",
+            "content": "Sehr geehrte Besucherinnen und Besucher,\n\ndie Stadtbibliothek steht allen Einwohnern kostenlos zur Verfügung. Bitte beachten Sie:\n\nAnmeldung: Die Bibliotheksausweis-Anmeldung ist kostenlos. Sie benötigen dafür einen Personalausweis und einen Nachweis Ihrer aktuellen Adresse.\n\nAusleihe: Bücher und Zeitschriften können für 4 Wochen ausgeliehen werden. DVDs und Hörbücher dürfen nur für 1 Woche entliehen werden. Verlängerungen sind zweimal online oder per Telefon möglich, sofern keine Vorbestellungen vorliegen.\n\nMahngebühren: Bei Überschreitung der Leihfrist wird eine Mahngebühr von 0,50€ pro Medium und angefangener Woche erhoben.\n\nLesesaal: Im Lesesaal herrscht Ruhe. Handys müssen auf lautlos gestellt werden. Telefonieren ist im Lesesaal verboten. Essen und Trinken sind nicht gestattet.\n\nTechnik: WLAN steht allen Besuchern kostenlos zur Verfügung. Computer-Arbeitsplätze können für maximal 2 Stunden pro Tag reserviert werden."
+          },
+          "items": [
+            {
+              "id": "27",
+              "text": "Wie lange darf man DVDs ausleihen?",
+              "options": [
+                { "label": "Vier Wochen, wie Bücher.", "value": "a" },
+                { "label": "Eine Woche.", "value": "b" },
+                { "label": "Zwei Wochen.", "value": "c" }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "28",
+              "text": "Was passiert, wenn man ein Buch zu spät zurückgibt?",
+              "options": [
+                { "label": "Man darf nichts mehr ausleihen.", "value": "a" },
+                { "label": "Man bekommt eine Warnung per E-Mail.", "value": "b" },
+                { "label": "Man muss eine Gebühr pro Woche bezahlen.", "value": "c" }
+              ],
+              "correct": "c"
+            },
+            {
+              "id": "29",
+              "text": "Was darf man im Lesesaal nicht tun?",
+              "options": [
+                { "label": "Das WLAN benutzen.", "value": "a" },
+                { "label": "Telefonieren.", "value": "b" },
+                { "label": "Bücher lesen.", "value": "c" }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "30",
+              "text": "Wie oft kann man ein ausgeliehenes Buch verlängern?",
+              "options": [
+                { "label": "Einmal.", "value": "a" },
+                { "label": "Zweimal.", "value": "b" },
+                { "label": "Dreimal.", "value": "c" }
+              ],
+              "correct": "b"
+            }
+          ]
+        },
+        {
+          "id": "t5-museum",
+          "title": "Hausordnung des Stadtmuseums",
+          "titleAr": "نظام المتحف",
+          "context": "Sie besuchen das Stadtmuseum und lesen die Hausordnung am Eingang.",
+          "text": {
+            "title": "HAUSORDNUNG DES STADTMUSEUMS",
+            "content": "Herzlich willkommen im Stadtmuseum! Bitte beachten Sie folgende Regeln:\n\nFotografieren: Das Fotografieren ohne Blitz ist gestattet. Blitzlichtaufnahmen sowie Videoaufnahmen sind verboten.\n\nGarderobe: Große Taschen und Rucksäcke müssen an der Garderobe im Erdgeschoss abgegeben werden (kostenlos).\n\nExponate: Bitte berühren Sie die Exponate nicht, es sei denn, dies ist an entsprechenden Stationen ausdrücklich erlaubt.\n\nBarrierefreiheit: Das Museum ist barrierefrei. Rollstühle können an der Information kostenlos ausgeliehen werden.\n\nEssen: Im Café im 2. Obergeschoss dürfen Speisen und Getränke konsumiert werden. Im Ausstellungsbereich ist Essen und Trinken nicht gestattet.\n\nFührungen: Führungen für Gruppen ab 8 Personen müssen mindestens eine Woche im Voraus angemeldet werden.\n\nEintritt: Kinder unter 14 Jahren haben in Begleitung eines Erwachsenen freien Eintritt."
+          },
+          "items": [
+            {
+              "id": "27",
+              "text": "Was ist beim Fotografieren im Museum erlaubt?",
+              "options": [
+                { "label": "Fotografieren ist komplett verboten.", "value": "a" },
+                { "label": "Fotografieren ohne Blitz ist erlaubt.", "value": "b" },
+                { "label": "Fotografieren mit Blitz ist erlaubt.", "value": "c" }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "28",
+              "text": "Wo darf man im Museum etwas essen?",
+              "options": [
+                { "label": "Überall im Museum.", "value": "a" },
+                { "label": "Nur im Café im 2. Obergeschoss.", "value": "b" },
+                { "label": "Im Eingangsbereich.", "value": "c" }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "29",
+              "text": "Ab wie vielen Personen muss man eine Führung anmelden?",
+              "options": [
+                { "label": "Ab 5 Personen.", "value": "a" },
+                { "label": "Ab 10 Personen.", "value": "b" },
+                { "label": "Ab 8 Personen.", "value": "c" }
+              ],
+              "correct": "c"
+            },
+            {
+              "id": "30",
+              "text": "Was gilt für Kinder unter 14 Jahren?",
+              "options": [
+                { "label": "Sie zahlen den halben Eintrittspreis.", "value": "a" },
+                { "label": "Sie dürfen das Museum nur in Gruppen besuchen.", "value": "b" },
+                { "label": "Sie haben mit einem Erwachsenen freien Eintritt.", "value": "c" }
+              ],
+              "correct": "c"
+            }
+          ]
+        },
+        {
+          "id": "t5-turnhalle",
+          "title": "Nutzungsordnung der Turnhalle",
+          "titleAr": "نظام الصالة الرياضية",
+          "context": "Sie möchten die städtische Turnhalle für eine Geburtstagsfeier mieten und lesen die Nutzungsordnung.",
+          "text": {
+            "title": "NUTZUNGSORDNUNG DER STÄDTISCHEN TURNHALLE",
+            "content": "Die Turnhalle kann von Vereinen und Privatpersonen gemietet werden. Bitte beachten Sie:\n\nÖffnungszeiten: Die Halle ist täglich von 8:00 bis 22:00 Uhr geöffnet. Letzter Mietbeginn ist um 20:00 Uhr.\n\nSchuhe: Hallenschuhe mit heller Sohle sind Pflicht. Straßenschuhe sind nicht erlaubt.\n\nVerpflegung: Essen und Getränke dürfen nur in den dafür vorgesehenen Zuschauerbereichen konsumiert werden. In der Halle selbst ist dies verboten.\n\nAlkohol: Alkohol ist auf dem gesamten Gelände nicht erlaubt.\n\nReinigung: Die Mieter sind verpflichtet, die Halle nach der Nutzung zu besenrein zu hinterlassen. Müll ist mitzunehmen.\n\nSchließfächer: Schließfächer für Wertsachen stehen kostenlos zur Verfügung. Der Schlüssel ist am Ende am Empfang abzugeben. Für verlorene Schlüssel wird eine Gebühr von 20€ erhoben.\n\nLautstärke: Musik ist erlaubt, sofern sie keine Anwohner stört. Nach 20:00 Uhr ist die Lautstärke zu reduzieren.\n\nKosten: 25€ pro Stunde (Vereine 15€ pro Stunde). Kaution: 100€ (wird bei Schäden einbehalten)."
+          },
+          "items": [
+            {
+              "id": "27",
+              "text": "Welche Schuhe muss man in der Turnhalle tragen?",
+              "options": [
+                { "label": "Straßenschuhe sind erlaubt.", "value": "a" },
+                { "label": "Hallenschuhe mit heller Sohle sind Pflicht.", "value": "b" },
+                { "label": "Man darf barfuß turnen.", "value": "c" }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "28",
+              "text": "Was muss man nach der Nutzung der Halle tun?",
+              "options": [
+                { "label": "Die Halle professionell reinigen lassen.", "value": "a" },
+                { "label": "Die Halle besenrein hinterlassen.", "value": "b" },
+                { "label": "Die Halle abschließen und Schlüssel mitnehmen.", "value": "c" }
+              ],
+              "correct": "b"
+            },
+            {
+              "id": "29",
+              "text": "Was kostet ein verlorener Schlüssel?",
+              "options": [
+                { "label": "50 Euro.", "value": "a" },
+                { "label": "25 Euro.", "value": "b" },
+                { "label": "20 Euro.", "value": "c" }
+              ],
+              "correct": "c"
+            },
+            {
+              "id": "30",
+              "text": "Bis wann kann man die Halle spätestens mieten?",
+              "options": [
+                { "label": "Bis 22:00 Uhr.", "value": "a" },
+                { "label": "Bis 20:00 Uhr.", "value": "b" },
+                { "label": "Bis 18:00 Uhr.", "value": "c" }
+              ],
+              "correct": "b"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
