@@ -1,6 +1,5 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { Mail } from 'lucide-react';
 
 interface Teil3Props {
   teil: any;
@@ -12,77 +11,66 @@ interface Teil3Props {
 
 const Teil3: React.FC<Teil3Props> = ({ teil, topic, userText, onTextChange, wordCount }) => {
   return (
-    <div className="space-y-8 animate-in fade-in duration-700">
-      {/* Exam Paper Header - Dark Mode */}
-      <div className="bg-[#1a1a1a] border border-white/10 p-4 flex justify-between items-center text-white font-sans rounded-t-xl">
-        <div className="flex flex-col">
-          <span className="text-sm font-black uppercase leading-none text-[#ffcc00]">Zertifikat B1</span>
-          <span className="text-xl font-black uppercase leading-none">Schreiben</span>
+    <div className="space-y-12">
+      <div className="bg-white p-8 space-y-8 border border-gray-200">
+        <div className="flex items-end justify-between border-b-2 border-gray-900 pb-4">
+          <h2 className="text-xl font-bold text-gray-900 uppercase tracking-tight">{teil.label}</h2>
+          <span className="text-sm text-gray-600 font-serif">Arbeitszeit: {teil.arbeitszeit}</span>
         </div>
-        <div className="flex flex-col items-end">
-          <span className="text-[10px] font-bold uppercase text-white/40">Modellsatz</span>
-          <span className="text-[10px] font-bold uppercase text-white/40">Kandidatenblätter</span>
-        </div>
-      </div>
 
-      {/* Main Task Card - Dark Mode */}
-      <div className="bg-[#111] text-white p-8 sm:p-12 rounded-b-xl border border-white/10 relative overflow-hidden">
-        <div className="relative z-10 space-y-10">
-          {/* Title & Time */}
-          <div className="flex justify-between items-baseline border-b border-white/10 pb-4">
-            <h2 className="text-2xl font-black italic">{teil.label}</h2>
-            <span className="text-sm font-medium italic text-white/40">Arbeitszeit: {teil.arbeitszeit}</span>
-          </div>
+        <div className="space-y-6 font-serif">
+           <p className="text-base text-gray-800 italic leading-relaxed whitespace-pre-wrap">
+             {topic.situation}
+           </p>
 
-          {/* Formal Email Context - Dark Mode */}
-          <div className="space-y-6">
-            <div className="flex items-center gap-4 bg-white/5 p-6 rounded-2xl border border-white/5">
-                <div className="h-12 w-12 rounded-xl bg-[#ffcc00]/10 flex items-center justify-center shrink-0">
-                    <Mail className="h-6 w-6 text-[#ffcc00]" />
-                </div>
-                <div className="space-y-1">
-                   <h4 className="text-[10px] font-black text-white/40 uppercase">Formelle Nachricht</h4>
-                   <p className="text-lg font-bold leading-tight">{topic.title}</p>
-                </div>
-            </div>
+           <div className="text-base text-gray-800 leading-relaxed">
+             <p>Schreiben Sie an {topic.situation?.match(/Ihre Kursleiterin, ([^,]+),/)?.[1] || 'die entsprechende Person'}. Entschuldigen Sie sich höflich und berichten Sie, warum Sie nicht kommen können.</p>
+           </div>
 
-            <p className="text-lg leading-relaxed italic font-medium text-white/80 border-l-2 border-[#ffcc00] pl-6 py-2">
-              {topic.situation}
-            </p>
-          </div>
+           <div className="space-y-2 pl-2">
+             {(topic.aufgabenpunkte || ["Entschuldigen Sie sich", "Erklären Sie den Grund", "Bitten Sie um einen neuen Termin"]).map((point: string, idx: number) => (
+               <label key={idx} className="text-base text-gray-800 flex gap-3 items-start cursor-pointer hover:bg-gray-50 p-1 -ml-1 rounded">
+                 <input type="checkbox" className="mt-1.5 h-4 w-4 rounded border-gray-300 text-gray-900 focus:ring-gray-900" />
+                 <span>{point}</span>
+               </label>
+             ))}
+           </div>
 
-          {/* Instructions */}
-          <div className="space-y-6 pt-8 border-t border-white/5">
-            <div className="flex items-center gap-2 text-emerald-400">
-               <div className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-               <p className="text-base font-black uppercase text-[10px]">Anforderungen</p>
-            </div>
-            <div className="space-y-3">
-              <p className="text-base font-bold leading-relaxed">Schreiben Sie eine Entschuldigung (circa {teil.minWords} Wörter).</p>
-              <p className="text-sm font-medium text-white/60">• Schreiben Sie höflich und begründen Sie Ihre Situation.</p>
-              <p className="text-sm font-medium text-white/60">• Achten Sie auf den Textaufbau (Anrede, Einleitung, Grund, Schluss).</p>
-            </div>
-          </div>
+           <div className="pt-4 space-y-3 text-base text-gray-800">
+             <p className="font-bold">Schreiben Sie eine E-Mail ({teil.woerter}).</p>
+             <p className="text-blue-700 text-sm font-bold bg-blue-50 p-3 border border-blue-100">
+               WICHTIG: Verwenden Sie eine formelle Anrede ("Sehr geehrte/r...") und eine formelle Grußformel ("Mit freundlichen Grüßen").
+             </p>
+             <p className="text-red-600 text-sm font-bold bg-red-50 p-3 border border-red-100">
+               ACHTUNG: Nur circa 40 Wörter! Sehr kurz und präzise schreiben.
+             </p>
+           </div>
         </div>
       </div>
 
       {/* Writing Area */}
-      <div className="space-y-4 pt-4">
-        <div className="flex items-center justify-between">
-           <h3 className="text-xs font-black text-[#ffcc00] uppercase flex items-center gap-2">
-              <span className="h-1 w-4 bg-[#ffcc00] rounded-full" />
-              Ihre E-Mail
-           </h3>
-           <div className="text-[10px] font-black text-white/20 uppercase bg-white/5 px-3 py-1 rounded-full border border-white/5">
-              Sehr geehrte/r Frau/Herr ...
+      <div className="space-y-4">
+        <div className="flex items-center justify-between border-b border-gray-200 pb-2">
+           <h3 className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Antwortblatt</h3>
+           <div className="flex items-center gap-2">
+              <span className={cn(
+                "text-[9px] font-bold px-2 py-0.5 border",
+                (wordCount > 0 && (wordCount < 30 || wordCount > 60)) ? "bg-red-50 border-red-200 text-red-700" :
+                (wordCount >= 30 && wordCount <= 34) || (wordCount >= 51 && wordCount <= 60) ? "bg-yellow-50 border-yellow-200 text-yellow-700" :
+                (wordCount >= 35 && wordCount <= 50) ? "bg-green-50 border-green-200 text-green-700" :
+                "bg-gray-100 border-gray-200 text-gray-400"
+              )}>
+                {wordCount} Wörter
+              </span>
+              <span className="text-[9px] text-gray-400 font-bold uppercase">/ min. {teil.minWords || 40}</span>
            </div>
         </div>
+        
         <textarea
           value={userText}
           onChange={onTextChange}
-          placeholder="Sehr geehrte/r Frau/Herr ..., ich schreibe Ihnen, weil ..."
-          className="w-full h-64 bg-[#151515] border border-white/10 rounded-3xl p-8 text-lg leading-relaxed focus:outline-none focus:ring-2 focus:ring-[#ffcc00]/30 transition-all placeholder:text-white/5 resize-none custom-scrollbar"
-          dir="ltr"
+          placeholder="Schreiben Sie hier..."
+          className="w-full h-[400px] p-8 bg-white border border-gray-300 focus:border-gray-900 focus:ring-0 text-sm font-serif leading-relaxed text-gray-800 transition-none resize-none placeholder:text-gray-200"
         />
       </div>
     </div>

@@ -12,13 +12,14 @@ interface Teil3Props {
 const Teil3: React.FC<Teil3Props> = ({ topic, answers, showResults, onAnswerChange }) => {
   if (!topic) return null;
 
-  const getOptions = () => {
-    const opts = topic.ads.map((ad: any) => ad.id);
-    opts.push('0');
-    return opts;
-  };
+  const validOptions = [...topic.ads.map((ad: any) => ad.id.toUpperCase()), '0'];
 
-  const options = getOptions();
+  const handleInputChange = (id: string, val: string) => {
+    const upperVal = val.toUpperCase();
+    if (upperVal === '' || validOptions.includes(upperVal)) {
+      onAnswerChange(id, upperVal);
+    }
+  };
 
   const renderSituation = (situation: any, isBeispiel = false) => {
     const isCorrect = answers[situation.id] === situation.correct;
@@ -28,45 +29,40 @@ const Teil3: React.FC<Teil3Props> = ({ topic, answers, showResults, onAnswerChan
       <div 
         key={situation.id} 
         className={cn(
-          "flex flex-col sm:flex-row items-start sm:items-center justify-between p-4 rounded-xl border transition-all duration-300",
-          isBeispiel ? "bg-white/5 border-white/10 opacity-75" : "bg-[#111] border-white/5 hover:border-white/20",
-          showResults && !isBeispiel && (isCorrect ? "border-green-500/50 bg-green-500/5" : "border-red-500/50 bg-red-500/5")
+          "flex items-center justify-between p-3 bg-white border border-gray-300 mb-2 transition-none",
+          isBeispiel ? "bg-gray-50 opacity-60" : "",
+          showResults && !isBeispiel && (isCorrect ? "bg-green-50 border-green-200" : "bg-red-50 border-red-200")
         )}
       >
-        <div className="flex gap-3 mb-4 sm:mb-0 pr-4">
-          <span className="font-black text-[#ffcc00] text-lg w-6 shrink-0">{situation.id}</span>
-          <p className="text-sm text-white/90 font-medium leading-relaxed">{situation.text}</p>
+        <div className="flex gap-3 pr-4 flex-1">
+          <span className="font-bold text-gray-500 text-[10px] mt-0.5 w-5">{situation.id}.</span>
+          <p className="text-[11px] text-gray-900 font-medium leading-normal">{situation.text}</p>
         </div>
 
-        <div className="flex items-center gap-3 self-end sm:self-auto shrink-0 bg-black/40 p-1.5 rounded-lg border border-white/10">
-          <span className="text-[10px] font-black uppercase text-white/50 tracking-widest pl-2">Anzeige:</span>
-          
-          <select
-            disabled={isBeispiel || showResults}
-            value={value}
-            onChange={(e) => onAnswerChange(situation.id, e.target.value)}
-            className={cn(
-              "w-16 h-10 bg-[#1a1a1a] border-2 rounded-md font-black text-center text-sm uppercase appearance-none cursor-pointer outline-none transition-all",
-              !value ? "border-dashed border-white/20 text-white/50" : "border-[#ffcc00] text-[#ffcc00] shadow-[0_0_10px_rgba(255,204,0,0.2)]",
-              isBeispiel && "border-white/30 text-white bg-transparent shadow-none"
-            )}
-            style={{ textAlignLast: 'center' }}
-          >
-            <option value="" disabled>-</option>
-            {options.map(opt => (
-              <option key={opt} value={opt}>{opt}</option>
-            ))}
-          </select>
+        <div className="flex items-center gap-3 shrink-0">
+          <div className="relative">
+            <input
+              type="text"
+              maxLength={1}
+              disabled={isBeispiel || showResults}
+              value={value}
+              onChange={(e) => handleInputChange(situation.id, e.target.value)}
+              className={cn(
+                "w-9 h-9 bg-white border border-gray-400 font-bold text-center text-xs uppercase outline-none focus:border-gray-900 focus:bg-gray-50",
+                !value && !isBeispiel && "border-dashed",
+                isBeispiel && "bg-transparent border-gray-200 text-gray-400"
+              )}
+            />
+          </div>
 
-          {/* Validation Icons */}
           {showResults && !isBeispiel && (
-            <div className="flex flex-col items-center justify-center w-6 ml-1">
+            <div className="flex flex-col items-center justify-center w-5">
               {isCorrect ? (
-                <Check className="h-5 w-5 text-green-500" />
+                <Check className="h-3.5 w-3.5 text-green-600" />
               ) : (
                 <div className="flex flex-col items-center">
-                  <X className="h-5 w-5 text-red-500" />
-                  <span className="text-[10px] font-black text-green-500 uppercase mt-1">{situation.correct}</span>
+                  <X className="h-3.5 w-3.5 text-red-600" />
+                  <span className="text-[8px] font-bold text-green-600 uppercase tracking-tighter">{situation.correct}</span>
                 </div>
               )}
             </div>
@@ -77,70 +73,73 @@ const Teil3: React.FC<Teil3Props> = ({ topic, answers, showResults, onAnswerChan
   };
 
   return (
-    <div className="space-y-10 animate-in fade-in duration-500">
-      
-      {/* Context Block */}
-      {topic.context && (
-        <div className="bg-[#1a1a1a] p-4 border-l-4 border-[#ffcc00] rounded-r-xl">
-          <p className="text-sm text-white/80 font-medium italic">
-            {topic.context}
-          </p>
-        </div>
-      )}
+    <div className="flex h-full bg-[#e2e8f0]">
+      {/* Left: Ads (Cards) */}
+      <div className="flex-1 overflow-y-auto p-10 bg-white border-r border-gray-300">
+        <div className="max-w-3xl mx-auto space-y-6">
+           <div className="bg-[#f8fafc] border border-gray-200 p-6 mb-6">
+              <h3 className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Leseverstehen — Teil 3</h3>
+              <h2 className="text-base font-bold text-gray-900 uppercase tracking-tight">
+                Anzeigen zur Auswahl
+              </h2>
+           </div>
 
-      <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
-        {/* Left Column: Situations */}
-        <div className="space-y-4">
-          <div className="flex items-center gap-2 mb-2 px-2">
-            <div className="h-2 w-2 rounded-full bg-[#ffcc00]" />
-            <h3 className="font-black text-white uppercase tracking-widest text-sm">Situationen</h3>
-          </div>
-          
-          <div className="space-y-3">
-            {topic.beispiel && renderSituation(topic.beispiel, true)}
-            {topic.situations?.map((sit: any) => renderSituation(sit, false))}
-          </div>
-        </div>
-
-        {/* Right Column: Ads */}
-        <div className="space-y-4">
-          <div className="flex items-center gap-2 mb-2 px-2">
-            <div className="h-2 w-2 rounded-full bg-blue-500" />
-            <h3 className="font-black text-white uppercase tracking-widest text-sm">Anzeigen</h3>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {topic.ads?.map((ad: any) => (
-              <div 
-                key={ad.id}
-                className={cn(
-                  "bg-[#111] p-4 rounded-xl shadow-md border relative overflow-hidden flex flex-col",
-                  ad.isBeispiel ? "border-white/10 opacity-60 bg-[#1a1a1a]" : "border-white/20"
-                )}
-              >
-                {/* Ad ID Tag */}
-                <div className="absolute top-0 right-0 bg-black text-white font-black px-3 py-1 rounded-bl-xl text-sm uppercase">
-                  {ad.id}
-                </div>
-                
-                {ad.isBeispiel && (
-                  <div className="absolute top-2 left-2 bg-red-600 text-white text-[9px] font-black uppercase px-2 py-0.5 rounded shadow-sm">
-                    Beispiel (vergeben)
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              {topic.ads?.map((ad: any) => (
+                <div 
+                  key={ad.id}
+                  className={cn(
+                    "bg-white p-4 border border-gray-300 relative flex flex-col min-h-[120px] transition-none",
+                    ad.isBeispiel ? "opacity-50 grayscale" : ""
+                  )}
+                >
+                  <div className="absolute top-0 right-0 bg-gray-900 text-white font-bold px-2 py-1 text-[10px] uppercase">
+                    {ad.id}
                   </div>
-                )}
-
-                <h4 className={cn(
-                  "font-black text-white leading-tight mb-3 pr-8",
-                  ad.isBeispiel ? "mt-4" : ""
-                )}>
-                  {ad.title}
-                </h4>
-                <p className="text-xs text-white/70 leading-relaxed font-medium">
-                  {ad.content}
-                </p>
+                  
+                  <h4 className="text-[11px] font-bold text-gray-900 leading-tight mb-2 pr-6 uppercase tracking-tight">
+                    {ad.title}
+                  </h4>
+                  <p className="text-[10px] text-gray-600 leading-relaxed">
+                    {ad.content}
+                  </p>
+                </div>
+              ))}
+              
+              <div className="bg-gray-100 p-4 border border-dashed border-gray-300 flex items-center justify-center text-center">
+                 <div className="space-y-1">
+                   <span className="text-xl font-bold text-gray-400">0</span>
+                   <p className="text-[9px] font-bold text-gray-400 uppercase tracking-widest leading-none">Keine Anzeige</p>
+                 </div>
               </div>
-            ))}
-          </div>
+           </div>
+        </div>
+      </div>
+
+      {/* Right: Situations */}
+      <div className="w-[440px] overflow-y-auto bg-[#f1f5f9] p-8 shrink-0 border-l border-gray-300">
+        <div className="space-y-6">
+           <div className="border-b border-gray-300 pb-3 mb-2">
+              <h3 className="text-[10px] font-bold text-gray-900 uppercase tracking-widest">Situationen</h3>
+           </div>
+
+           {topic.context && (
+             <div className="bg-white border border-gray-300 p-4 mb-4">
+               <p className="text-[11px] text-gray-600 leading-relaxed font-serif italic">
+                 {topic.context}
+               </p>
+             </div>
+           )}
+           
+           <div className="space-y-1">
+              {topic.beispiel && (
+                <div className="mb-4">
+                   <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest block mb-1">Beispiel</span>
+                   {renderSituation(topic.beispiel, true)}
+                </div>
+              )}
+              {topic.situations?.map((sit: any) => renderSituation(sit, false))}
+           </div>
         </div>
       </div>
     </div>

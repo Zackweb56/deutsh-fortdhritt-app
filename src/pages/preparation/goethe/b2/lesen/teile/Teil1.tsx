@@ -24,49 +24,43 @@ const Teil1: React.FC<Teil1Props> = ({ topic, answers, showResults, onAnswerChan
       <div 
         key={item.id} 
         className={cn(
-          "relative p-4 rounded-xl border transition-all duration-300",
-          isBeispiel ? "bg-white/5 border-white/10 opacity-75" : "bg-[#111] border-white/5 hover:border-white/20",
-          showResults && !isBeispiel && (isCorrect ? "border-green-500/50 bg-green-500/5" : "border-red-500/50 bg-red-500/5")
+          "relative p-6 bg-white border border-gray-200 rounded-sm transition-all shadow-sm",
+          showResults && !isBeispiel && (isCorrect ? "bg-green-50/50 border-green-200" : "bg-red-50/50 border-red-200")
         )}
       >
-        <div className="flex gap-4 items-start">
-          <span className="font-black text-[#ffcc00] text-lg w-6 shrink-0">{item.id}</span>
-          <div className="flex-1 space-y-4">
-            <p className="text-sm text-white/90 leading-relaxed font-medium">{item.text}</p>
-            
-            <div className="grid grid-cols-4 gap-2">
-              {['a', 'b', 'c', 'd'].map((option) => {
-                const isSelected = selectedAnswer === option;
-                const isItemCorrect = item.correct === option;
-                
-                return (
-                  <button
-                    key={option}
-                    disabled={isBeispiel || showResults}
-                    onClick={() => onAnswerChange(item.id, option)}
-                    className={cn(
-                      "py-2 rounded-lg font-black uppercase transition-all border-2 text-xs",
-                      isSelected 
-                        ? "bg-[#ffcc00] border-[#ffcc00] text-black shadow-[0_0_15px_rgba(255,204,0,0.3)]" 
-                        : "bg-transparent border-white/10 text-white/40 hover:border-white/30 hover:text-white/70",
-                      showResults && !isBeispiel && isItemCorrect && !isSelected && "border-green-500 text-green-500",
-                      isBeispiel && isSelected && "bg-white/20 border-white/30 text-white shadow-none"
-                    )}
-                  >
-                    {option.toUpperCase()}
-                  </button>
-                );
-              })}
-            </div>
+        <div className="space-y-6">
+          <div className="flex gap-4 items-start">
+            <span className="font-bold text-gray-400 text-sm pt-0.5">{item.id}.</span>
+            <p className="text-[16px] text-gray-800 leading-relaxed font-medium flex-1">{item.text}</p>
+          </div>
+          
+          <div className="flex gap-4 pl-9">
+            {['a', 'b', 'c', 'd'].map((option) => {
+              const isSelected = selectedAnswer === option;
+              
+              return (
+                <div 
+                  key={option}
+                  className={cn("goethe-option", isSelected && "active")}
+                  onClick={() => !isBeispiel && !showResults && onAnswerChange(item.id, option)}
+                >
+                  <div className={cn("goethe-radio", isSelected && "active")} />
+                  <span className="text-sm font-bold uppercase tracking-tight">{option}</span>
+                </div>
+              );
+            })}
           </div>
         </div>
 
         {showResults && !isBeispiel && (
-          <div className="absolute right-3 top-3">
+          <div className="absolute top-4 right-4">
             {isCorrect ? (
-              <Check className="h-5 w-5 text-green-500" />
+              <Check className="h-6 w-6 text-green-600" />
             ) : (
-              <X className="h-5 w-5 text-red-500" />
+              <div className="flex flex-col items-end gap-1">
+                <X className="h-6 w-6 text-red-600" />
+                <span className="text-[10px] font-bold text-green-600 uppercase">Soll: {item.correct}</span>
+              </div>
             )}
           </div>
         )}
@@ -75,41 +69,57 @@ const Teil1: React.FC<Teil1Props> = ({ topic, answers, showResults, onAnswerChan
   };
 
   return (
-    <div className="space-y-10 animate-in fade-in duration-500 pb-10">
-      {/* Persons Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {persons.map((person: any) => (
-          <div key={person.id} className="bg-[#1a1a1a] border border-white/10 rounded-2xl p-5 shadow-xl flex flex-col h-full">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="h-10 w-10 rounded-full bg-[#ffcc00]/20 flex items-center justify-center text-[#ffcc00] font-black border border-[#ffcc00]/30 uppercase">
-                {person.id}
-              </div>
-              <h3 className="text-lg font-black text-white">{person.name}</h3>
-            </div>
-            <p className="text-sm text-white/70 leading-relaxed italic flex-1">
-              "{person.text}"
-            </p>
-          </div>
-        ))}
+    <div className="flex h-full animate-in fade-in duration-500 overflow-hidden bg-white">
+      {/* Left: Statements (People) */}
+      <div className="flex-1 overflow-y-auto p-16 bg-white border-r border-gray-200 custom-scrollbar">
+        <div className="max-w-2xl mx-auto space-y-12">
+           <div className="border-b-4 border-gray-900 pb-8">
+              <h2 className="text-3xl font-serif font-bold text-gray-900 leading-tight tracking-tight">
+                Leseverstehen — Teil 1
+              </h2>
+              <p className="text-sm text-gray-400 font-bold uppercase tracking-widest mt-2">Statements zur Diskussion</p>
+           </div>
+           
+           <div className="space-y-10">
+              {topic.personen?.map((person: any) => (
+                <div key={person.id} className="space-y-4 border-l-4 border-gray-100 pl-8 py-4 bg-gray-50/50 rounded-r-sm">
+                   <div className="flex items-center gap-4">
+                      <div className="h-10 w-10 rounded-full bg-gray-900 flex items-center justify-center font-bold text-white text-sm">
+                        {person.id.toUpperCase()}
+                      </div>
+                      <span className="font-bold text-gray-900 text-base">{person.name}</span>
+                   </div>
+                   <div className="text-[17px] leading-relaxed text-gray-700 font-serif italic">
+                      "{person.text}"
+                   </div>
+                </div>
+              ))}
+           </div>
+        </div>
       </div>
 
-      {/* Questions Section */}
-      <div className="space-y-6">
-        <div className="flex items-center gap-2 border-l-4 border-[#ffcc00] pl-3 mb-6">
-          <h2 className="text-xl font-black text-white uppercase tracking-tight">Aufgaben</h2>
-        </div>
-        
-        <div className="space-y-4">
-          {beispiel && (
-            <div className="space-y-2">
-              <span className="text-[10px] font-black text-white/30 uppercase tracking-widest ml-1">Beispiel</span>
-              {renderItem(beispiel, true)}
-            </div>
-          )}
-          
-          <div className="space-y-4 pt-4 border-t border-white/5">
-             {items.map((item: any) => renderItem(item))}
-          </div>
+      {/* Right: Questions Area */}
+      <div className="w-[480px] overflow-y-auto bg-gray-50/50 p-10 custom-scrollbar shrink-0 border-l border-gray-200">
+        <div className="space-y-8">
+           <div className="flex items-center justify-between border-b border-gray-300 pb-6">
+              <div className="space-y-1">
+                <h3 className="text-sm font-bold text-gray-900 uppercase tracking-widest">Fragen</h3>
+                <p className="text-[10px] text-gray-400 font-bold uppercase">Ordnen Sie die Aussagen zu (a-d)</p>
+              </div>
+              <div className="h-10 w-10 bg-gray-100 rounded-full flex items-center justify-center font-bold text-gray-400 text-xs">
+                01
+              </div>
+           </div>
+           
+           <div className="space-y-6">
+              {topic.beispiel && (
+                <div className="space-y-3">
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em] ml-1">Beispiel</span>
+                  {renderItem(topic.beispiel, true)}
+                </div>
+              )}
+              {topic.items?.map((item: any) => renderItem(item))}
+           </div>
         </div>
       </div>
     </div>

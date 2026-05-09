@@ -12,63 +12,58 @@ interface Teil3Props {
 const Teil3: React.FC<Teil3Props> = ({ topic, answers, showResults, onAnswerChange }) => {
   if (!topic) return null;
 
-  const { text, items, beispiel } = topic;
-
-  const renderQuestion = (item: any, isBeispiel = false) => {
-    const selectedValue = isBeispiel ? item.correct : answers[item.id];
-    const isCorrect = isBeispiel ? true : selectedValue === item.correct;
+  const renderItem = (item: any) => {
+    const isCorrect = answers[item.id] === item.correct;
 
     return (
       <div 
         key={item.id} 
         className={cn(
-          "p-6 rounded-2xl border transition-all duration-300 relative",
-          isBeispiel ? "bg-white/5 border-white/10 opacity-75" : "bg-[#111] border-white/5 hover:border-white/20",
-          showResults && !isBeispiel && (isCorrect ? "border-green-500/50 bg-green-500/5" : "border-red-500/50 bg-red-500/5")
+          "relative p-6 bg-white border border-gray-200 rounded-sm transition-all shadow-sm",
+          showResults && (isCorrect ? "bg-green-50/50 border-green-200" : "bg-red-50/50 border-red-200")
         )}
       >
-        <div className="flex gap-4 mb-6">
-          <span className="font-black text-[#ffcc00] text-lg leading-none shrink-0">{item.id}</span>
-          <h3 className="text-base font-bold text-white leading-snug">{item.text}</h3>
+        <div className="space-y-6">
+          <div className="flex gap-4 items-start">
+            <span className="font-bold text-gray-400 text-sm pt-0.5">{item.id}.</span>
+            <p className="text-[16px] text-gray-800 leading-snug font-bold flex-1">{item.text}</p>
+          </div>
+          
+          <div className="flex flex-col gap-3 pl-8">
+            {item.options.map((opt: any) => {
+              const isSelected = answers[item.id] === opt.value;
+              const isActuallyCorrect = opt.value === item.correct;
+
+              return (
+                <div
+                  key={opt.value}
+                  className={cn(
+                    "goethe-option",
+                    isSelected && "active",
+                    showResults && isActuallyCorrect && !isSelected && "border-green-600 bg-green-50"
+                  )}
+                  onClick={() => !showResults && onAnswerChange(item.id, opt.value)}
+                >
+                  <div className={cn("goethe-radio", isSelected && "active")} />
+                  <div className="flex items-center gap-3">
+                    <span className="text-[11px] font-bold text-gray-400 uppercase w-4">{opt.value}</span>
+                    <span className="text-sm font-medium text-gray-700">{opt.label}</span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
 
-        <div className="space-y-3">
-          {item.options.map((option: any) => {
-            const isSelected = selectedValue === option.value;
-            const isOptionCorrect = item.correct === option.value;
-
-            return (
-              <button
-                key={option.value}
-                disabled={isBeispiel || showResults}
-                onClick={() => onAnswerChange(item.id, option.value)}
-                className={cn(
-                  "w-full flex items-center gap-4 p-4 rounded-xl border-2 transition-all text-left group",
-                  isSelected 
-                    ? "bg-[#ffcc00] border-[#ffcc00] text-black shadow-lg shadow-[#ffcc00]/10" 
-                    : "bg-transparent border-white/5 text-white/60 hover:border-white/20 hover:text-white",
-                  showResults && !isBeispiel && isOptionCorrect && !isSelected && "border-green-500 text-green-500",
-                  isBeispiel && isSelected && "bg-white/20 border-white/30 text-white shadow-none"
-                )}
-              >
-                <span className={cn(
-                  "h-7 w-7 rounded-lg flex items-center justify-center font-black text-xs uppercase shrink-0 transition-all",
-                  isSelected ? "bg-black text-[#ffcc00]" : "bg-white/5 text-white/40 group-hover:bg-white/10"
-                )}>
-                  {option.value}
-                </span>
-                <span className="text-sm font-medium">{option.label}</span>
-              </button>
-            );
-          })}
-        </div>
-
-        {showResults && !isBeispiel && (
-          <div className="absolute right-6 top-6">
+        {showResults && (
+          <div className="absolute top-4 right-4">
             {isCorrect ? (
-              <Check className="h-6 w-6 text-green-500" />
+              <Check className="h-6 w-6 text-green-600" />
             ) : (
-              <X className="h-6 w-6 text-red-500" />
+              <div className="flex flex-col items-end gap-1">
+                <X className="h-6 w-6 text-red-600" />
+                <span className="text-[10px] font-bold text-green-600 uppercase">Soll: {item.correct}</span>
+              </div>
             )}
           </div>
         )}
@@ -77,37 +72,38 @@ const Teil3: React.FC<Teil3Props> = ({ topic, answers, showResults, onAnswerChan
   };
 
   return (
-    <div className="space-y-10 animate-in fade-in duration-500 pb-10">
-      {/* Text Section */}
-      <div className="bg-[#1a1a1a] border border-white/10 rounded-2xl p-6 md:p-10 shadow-2xl relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-[#ffcc00]/5 rounded-full -mr-32 -mt-32 blur-3xl" />
-        
-        <h2 className="text-2xl md:text-3xl font-black text-white mb-8 pb-6 border-b border-white/10 relative z-10">
-          {topic.title}
-        </h2>
-        
-        <div className="prose prose-invert max-w-none relative z-10">
-          <p className="text-base md:text-lg text-white/80 leading-relaxed whitespace-pre-line font-medium italic">
-             {text}
-          </p>
+    <div className="flex h-full animate-in fade-in duration-500 overflow-hidden bg-white">
+      {/* Left: Reading Text */}
+      <div className="flex-1 overflow-y-auto p-16 bg-white border-r border-gray-200 custom-scrollbar">
+        <div className="max-w-2xl mx-auto space-y-12">
+           <div className="border-b-4 border-gray-900 pb-8 text-center">
+              <h2 className="text-3xl font-serif font-bold text-gray-900 leading-tight tracking-tight uppercase">
+                {topic.text.title}
+              </h2>
+           </div>
+           
+           <div className="text-[18px] leading-[1.8] text-gray-800 font-serif whitespace-pre-line text-justify">
+              {topic.text.content}
+           </div>
         </div>
       </div>
 
-      {/* Questions Area */}
-      <div className="space-y-6">
-        <div className="flex items-center gap-2 border-l-4 border-[#ffcc00] pl-3 mb-8">
-          <h2 className="text-xl font-black text-white uppercase tracking-tight">Aufgaben</h2>
-        </div>
-
-        {beispiel && (
-          <div className="space-y-3">
-             <span className="text-[10px] font-black text-white/30 uppercase tracking-widest ml-1">Beispiel</span>
-             {renderQuestion(beispiel, true)}
-          </div>
-        )}
-
-        <div className="grid grid-cols-1 gap-6 pt-6 border-t border-white/5">
-          {items.map((item: any) => renderQuestion(item))}
+      {/* Right: Questions Area */}
+      <div className="w-[480px] overflow-y-auto bg-gray-50/50 p-10 custom-scrollbar shrink-0 border-l border-gray-200">
+        <div className="space-y-8">
+           <div className="flex items-center justify-between border-b border-gray-300 pb-6">
+              <div className="space-y-1">
+                <h3 className="text-sm font-bold text-gray-900 uppercase tracking-widest">Aufgaben</h3>
+                <p className="text-[10px] text-gray-400 font-bold uppercase">Leseverstehen — Teil 3</p>
+              </div>
+              <div className="h-10 w-10 bg-gray-100 rounded-full flex items-center justify-center font-bold text-gray-400 text-xs">
+                03
+              </div>
+           </div>
+           
+           <div className="space-y-6">
+              {topic.items?.map((item: any) => renderItem(item))}
+           </div>
         </div>
       </div>
     </div>

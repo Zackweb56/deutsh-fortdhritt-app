@@ -1,20 +1,32 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { ChevronLeft, Info, Loader2, Mic, Square, Play, CheckCircle2, MessageSquare, AlertCircle, PenTool } from 'lucide-react';
+import { Info, Loader2, Mic, MessageSquare } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import sprechenData from '@/data/preparation/goethe/b1/sprechen.json';
+import GoetheExamLayout from '@/components/preparation/goethe/GoetheExamLayout';
 import { playTTS } from '@/lib/tts';
 import { getPreparationSpeakingReply, evaluatePreparationSpeaking, PreparationSpeakingResult } from '@/lib/ai/groq';
 import Teil1 from './teile/Teil1';
 import Teil2 from './teile/Teil2';
 import Teil3 from './teile/Teil3';
 
-const formatTime = (seconds: number) => {
-  const m = Math.floor(seconds / 60);
-  const s = seconds % 60;
-  return `${m}:${s.toString().padStart(2, '0')}`;
-};
+// Voice wave animation
+const VoiceWaves = () => (
+  <div className="flex items-center gap-px h-3">
+    {[1, 2, 3, 4, 5].map((i) => (
+      <div
+        key={i}
+        className="w-0.5 bg-red-600"
+        style={{
+          height: '100%',
+          animation: 'voiceWave 0.5s ease-in-out infinite',
+          animationDelay: `${i * 0.1}s`,
+        }}
+      />
+    ))}
+  </div>
+);
 
 // @ts-ignore
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -25,34 +37,30 @@ const GoetheB1SprechenSimulator = () => {
 
   const [teil, setTeil] = useState<any>(null);
   const [topic, setTopic] = useState<any>(null);
-  const [selectedTopic, setSelectedTopic] = useState<any>(null); // For Teil 2 selection
+  const [selectedTopic, setSelectedTopic] = useState<any>(null);
 
   const [timeLeft, setTimeLeft] = useState<number>(0);
   const [isTimerRunning, setIsTimerRunning] = useState(false);
 
-  // STT State
   const [isRecording, setIsRecording] = useState(false);
   const [transcript, setTranscript] = useState('');
   const recognitionRef = useRef<any>(null);
   const accumulatedTranscriptRef = useRef('');
 
-  // Conversation State
   const [conversation, setConversation] = useState<Array<{ role: 'user' | 'ai'; text: string }>>([]);
   const [isAiProcessing, setIsAiProcessing] = useState(false);
   const [hasStarted, setHasStarted] = useState(false);
-  const [isPreparing, setIsPreparing] = useState(false); // For Teil 2 preparation phase
+  const [isPreparing, setIsPreparing] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  // Evaluation States
   const [isEvaluating, setIsEvaluating] = useState(false);
   const [showResultsModal, setShowResultsModal] = useState(false);
   const [evaluationResult, setEvaluationResult] = useState<PreparationSpeakingResult | null>(null);
-  const [isChatOpen, setIsChatOpen] = useState(false);
 
   useEffect(() => {
     if (!teilId || !topicId) return;
 
-    const currentTeil = sprechenData.teile.find(t => t.id === teilId);
+    const currentTeil = (sprechenData as any).teile.find((t: any) => t.id === teilId);
     if (!currentTeil) return;
 
     const currentTopic = currentTeil.themen?.find((t: any) => t.id === topicId);
@@ -62,14 +70,9 @@ const GoetheB1SprechenSimulator = () => {
     setTopic(currentTopic);
     setSelectedTopic(null);
 
-    // Initial time based on part
-    if (currentTeil.nummer === 1) {
-        setTimeLeft(180); // 3 mins
-    } else if (currentTeil.nummer === 2) {
-        setTimeLeft(240); // 4 mins
-    } else {
-        setTimeLeft(120); // 2 mins
-    }
+    if (currentTeil.nummer === 1) setTimeLeft(180);
+    else if (currentTeil.nummer === 2) setTimeLeft(240);
+    else setTimeLeft(120);
 
     setConversation([]);
     setEvaluationResult(null);
@@ -85,9 +88,7 @@ const GoetheB1SprechenSimulator = () => {
   useEffect(() => {
     let interval: NodeJS.Timeout;
     if (isTimerRunning && timeLeft > 0) {
-      interval = setInterval(() => {
-        setTimeLeft(prev => prev - 1);
-      }, 1000);
+      interval = setInterval(() => setTimeLeft(prev => prev - 1), 1000);
     } else if (timeLeft === 0 && isTimerRunning) {
       setIsTimerRunning(false);
     }
@@ -102,98 +103,73 @@ const GoetheB1SprechenSimulator = () => {
 
   // Initialize SpeechRecognition
   useEffect(() => {
-    if (SpeechRecognition) {
-      const recognition = new SpeechRecognition();
-      recognition.continuous = true;
-      recognition.interimResults = true;
-      recognition.lang = 'de-DE';
+    if (!SpeechRecognition) return;
 
-      recognition.onresult = (event: any) => {
-        let finalTranscript = '';
-        let interimTranscript = '';
+    const recognition = new SpeechRecognition();
+    recognition.continuous = true;
+    recognition.interimResults = true;
+    recognition.lang = 'de-DE';
 
-        for (let i = event.resultIndex; i < event.results.length; ++i) {
-          if (event.results[i].isFinal) {
-            finalTranscript += event.results[i][0].transcript;
-          } else {
-            interimTranscript += event.results[i][0].transcript;
-          }
+    recognition.onresult = (event: any) => {
+      let finalTranscript = '';
+      let interimTranscript = '';
+      for (let i = event.resultIndex; i < event.results.length; ++i) {
+        if (event.results[i].isFinal) {
+          finalTranscript += event.results[i][0].transcript;
+        } else {
+          interimTranscript += event.results[i][0].transcript;
         }
+      }
+      if (finalTranscript) {
+        accumulatedTranscriptRef.current += (accumulatedTranscriptRef.current ? ' ' : '') + finalTranscript.trim();
+      }
+      setTranscript(accumulatedTranscriptRef.current + (interimTranscript ? ' ' + interimTranscript : ''));
+    };
 
-        if (finalTranscript) {
-          accumulatedTranscriptRef.current += (accumulatedTranscriptRef.current ? ' ' : '') + finalTranscript.trim();
-        }
-
-        setTranscript(accumulatedTranscriptRef.current + (interimTranscript ? ' ' + interimTranscript : ''));
-      };
-
-      recognition.onerror = (event: any) => {
-        console.error("Speech Recognition Error:", event.error);
-        setIsRecording(false);
-      };
-
-      recognition.onend = () => {
-        setIsRecording(false);
-      };
-
-      recognitionRef.current = recognition;
-    }
+    recognition.onerror = () => setIsRecording(false);
+    recognition.onend = () => setIsRecording(false);
+    recognitionRef.current = recognition;
 
     return () => {
-      if (recognitionRef.current) {
-        try { recognitionRef.current.abort(); } catch (e) { }
-      }
+      try { recognitionRef.current?.abort(); } catch (_) {}
     };
   }, []);
 
   const handleStartConversation = async () => {
     if (!teil || !topic) return;
-    
-    // For Teil 2, we need to pick a topic first
-    if (teil.nummer === 2 && !selectedTopic) {
-        // This is handled in the UI by the choice buttons
-        return;
-    }
+    if (teil.nummer === 2 && !selectedTopic) return;
 
     setHasStarted(true);
     setIsTimerRunning(true);
 
     if (teil.nummer === 1) {
-        setIsAiProcessing(true);
-        try {
-            const initialReply = "Hallo! Unser Mitschüler aus dem Deutschkurs liegt ja im Krankenhaus. Sollen wir planen, wie und wann wir ihn besuchen?";
-            setConversation([{ role: 'ai', text: initialReply }]);
-            await playTTS(initialReply);
-        } catch (error) {
-            console.error(error);
-        } finally {
-            setIsAiProcessing(false);
-        }
+      setIsAiProcessing(true);
+      try {
+        const msg = 'Hallo! Unser Mitschüler aus dem Deutschkurs liegt ja im Krankenhaus. Sollen wir planen, wie und wann wir ihn besuchen?';
+        setConversation([{ role: 'ai', text: msg }]);
+        await playTTS(msg);
+      } catch (e) { console.error(e); }
+      finally { setIsAiProcessing(false); }
     } else if (teil.nummer === 2) {
-        // For Teil 2, AI is just listening
-        const intro = "Guten Tag. Bitte beginnen Sie mit Ihrer Präsentation zum Thema '" + selectedTopic.title + "'.";
-        setConversation([{ role: 'ai', text: intro }]);
-        await playTTS(intro);
+      const msg = `Guten Tag. Bitte beginnen Sie mit Ihrer Präsentation zum Thema '${selectedTopic.title}'.`;
+      setConversation([{ role: 'ai', text: msg }]);
+      await playTTS(msg);
     } else if (teil.nummer === 3) {
-        setIsAiProcessing(true);
-        try {
-            const initialReply = "Vielen Dank für Ihre Präsentation zum Thema '" + topic.title + "'. Ich fand Ihren Vortrag sehr interessant. Besonders gut hat mir gefallen, wie Sie über Ihre persönlichen Erfahrungen gesprochen haben. Eine Frage habe ich aber noch: " + topic.suggestedQuestion;
-            setConversation([{ role: 'ai', text: initialReply }]);
-            await playTTS(initialReply);
-        } catch (error) {
-            console.error(error);
-        } finally {
-            setIsAiProcessing(false);
-        }
+      setIsAiProcessing(true);
+      try {
+        const msg = `Vielen Dank für Ihre Präsentation. ${topic.suggestedQuestion || 'Können Sie mehr dazu erzählen?'}`;
+        setConversation([{ role: 'ai', text: msg }]);
+        await playTTS(msg);
+      } catch (e) { console.error(e); }
+      finally { setIsAiProcessing(false); }
     }
   };
 
   const toggleRecording = () => {
     if (!recognitionRef.current) {
-      alert("Spracherkennung wird nicht unterstützt.");
+      alert('Spracherkennung wird nicht unterstützt.');
       return;
     }
-
     if (isRecording) {
       recognitionRef.current.stop();
       setIsRecording(false);
@@ -206,9 +182,11 @@ const GoetheB1SprechenSimulator = () => {
 
   const processUserTurn = async () => {
     if (!transcript.trim()) return;
-
     const finalUserText = transcript.trim();
-    const newConversation: Array<{ role: 'user' | 'ai'; text: string }> = [...conversation, { role: 'user', text: finalUserText }];
+    const newConversation: Array<{ role: 'user' | 'ai'; text: string }> = [
+      ...conversation,
+      { role: 'user', text: finalUserText },
+    ];
     setConversation(newConversation);
     setTranscript('');
     accumulatedTranscriptRef.current = '';
@@ -216,24 +194,20 @@ const GoetheB1SprechenSimulator = () => {
     setIsAiProcessing(true);
     try {
       const reply = await getPreparationSpeakingReply({
-        institute: sprechenData.institut,
-        level: sprechenData.level,
+        institute: (sprechenData as any).institut,
+        level: (sprechenData as any).level,
         teilLabel: teil.label,
-        themaTitle: teil.nummer === 2 ? selectedTopic.title : topic.title,
-        instructions: teil.nummer === 1 ? topic.situation : teil.nummer === 3 ? "Antworte auf die Reaktion des Users." : "Höre nur zu.",
+        themaTitle: teil.nummer === 2 ? selectedTopic?.title : topic.title,
+        instructions: teil.nummer === 1 ? topic.situation : 'Reagiere auf den User.',
         prompts: teil.nummer === 1 ? topic.punkte : [],
         conversation: newConversation,
         userText: finalUserText,
-        turnLimit: 10
+        turnLimit: 10,
       });
-
       setConversation([...newConversation, { role: 'ai', text: reply }]);
       await playTTS(reply);
-    } catch (error) {
-      console.error(error);
-    } finally {
-      setIsAiProcessing(false);
-    }
+    } catch (e) { console.error(e); }
+    finally { setIsAiProcessing(false); }
   };
 
   const handleEvaluate = async () => {
@@ -249,419 +223,293 @@ const GoetheB1SprechenSimulator = () => {
 
     try {
       const result = await evaluatePreparationSpeaking({
-        institute: sprechenData.institut,
-        level: sprechenData.level,
-        themaTitle: teil.nummer === 2 ? selectedTopic.title : topic.title,
+        institute: (sprechenData as any).institut,
+        level: (sprechenData as any).level,
+        themaTitle: teil.nummer === 2 ? selectedTopic?.title : topic.title,
         instructions: teil.nummer === 1 ? topic.situation : topic.title,
-        conversation: conversation
+        conversation,
       });
       setEvaluationResult(result);
-    } catch (error) {
-      console.error(error);
+    } catch (e) {
+      console.error(e);
       setEvaluationResult({
         score: 0,
         aufgabenerfuellung: 0,
         interaktion: 0,
         wortschatz: 0,
         strukturen_aussprache: 0,
-        feedback: "Ein Fehler ist bei der Auswertung aufgetreten.",
-        tips: []
+        feedback: 'Ein Fehler ist bei der Auswertung aufgetreten.',
+        tips: [],
       });
     } finally {
       setIsEvaluating(false);
     }
   };
 
+  // Navigate to topics selection page for that Teil
+  const handleJumpToTeil = (id: string) => {
+    navigate(`/preparation/goethe/b1/sprechen/${id}`);
+  };
+
+  if (!teil || !topic) {
+    return (
+      <div className="min-h-screen bg-[#f1f5f9] flex items-center justify-center text-gray-400 font-bold uppercase tracking-widest text-xs" dir="ltr">
+        Laden...
+      </div>
+    );
+  }
+
   const userTurnCount = conversation.filter(m => m.role === 'user').length;
-  const MAX_TURNS = teil?.nummer === 1 ? 8 : 6;
+  const MAX_TURNS = teil.nummer === 1 ? 8 : 6;
   const isTimeUp = hasStarted && timeLeft === 0;
   const isMaxTurnsReached = userTurnCount >= MAX_TURNS;
   const isInputDisabled = isAiProcessing || isEvaluating || isTimeUp || isMaxTurnsReached;
 
-  if (!teil || !topic) {
-    return <div className="min-h-screen bg-[#0a0a0a] flex items-center justify-center text-white font-sans" dir="ltr">Laden...</div>;
-  }
+  const allTeile = (sprechenData as any).teile.map((t: any) => ({
+    id: t.id,
+    label: t.label,
+    points: t.punkte ?? '—',
+    examType: t.aufgabentyp || 'Sprechen',
+    isCompleted: false,
+  }));
+
+  const totalTimeLabels = ['3 Min', '4 Min', '2 Min'];
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white flex flex-col font-sans overflow-hidden" dir="ltr">
-      {/* Header */}
-      <header className="h-16 border-b border-white/10 bg-[#111] flex items-center justify-between px-4 sticky top-0 z-50 shrink-0">
-        <div className="flex items-center gap-4">
-          <Button variant="ghost" size="sm" className="h-8 px-2 text-white/50 hover:text-white" onClick={() => navigate(-1)}>
-            <ChevronLeft className="h-4 w-4 mr-1" />
-            <span className="text-xs font-bold uppercase">Zurück</span>
-          </Button>
-          <div className="flex flex-col hidden sm:flex">
-            <span className="text-[10px] font-black text-[#ffcc00] uppercase">{sprechenData.institut} • {sprechenData.level}</span>
-            <span className="text-xs font-bold text-white/90">{sprechenData.module} • {teil.label}</span>
-          </div>
-        </div>
+    <>
+      <style>{`
+        @keyframes voiceWave {
+          0%, 100% { transform: scaleY(0.4); }
+          50% { transform: scaleY(1); }
+        }
+      `}</style>
 
-        <div className="flex items-center gap-4">
-          <div className={cn(
-            'flex flex-col items-center px-4 py-1.5 rounded-xl border transition-all',
-            timeLeft > 60 ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400' :
-              timeLeft > 0 ? 'bg-[#ffcc00]/10 border-[#ffcc00]/30 text-[#ffcc00]' :
-                'bg-red-500/10 border-red-500/30 text-red-500'
-          )}>
-            <span className="text-[8px] font-black uppercase opacity-80">Zeit</span>
-            <span className="text-lg font-black tabular-nums leading-none">
-              {formatTime(timeLeft)}
-            </span>
-          </div>
-        </div>
-      </header>
-
-      {/* Main Layout */}
-      <main className="flex-1 flex flex-col lg:flex-row overflow-hidden relative">
-        {/* Left Side: Exam Paper */}
-        <div className="flex-1 overflow-y-auto custom-scrollbar p-4 sm:p-6 lg:p-8 bg-[#0c0c0c]">
-          <div className="max-w-4xl mx-auto space-y-8 pb-32">
-
-            {/* Dynamic Aufgabe Render */}
-            {/* ... */}
-            {teil.nummer === 1 && <Teil1 teil={teil} topic={topic} hasStarted={hasStarted} />}
-            {teil.nummer === 2 && (
-              <Teil2
-                teil={teil}
-                topic={topic}
-                selectedTopic={selectedTopic}
-                setSelectedTopic={setSelectedTopic}
-                hasStarted={hasStarted}
-                isPreparing={isPreparing}
-                setIsPreparing={setIsPreparing}
-              />
-            )}
-            {teil.nummer === 3 && <Teil3 teil={teil} topic={topic} hasStarted={hasStarted} />}
-
-          </div>
-        </div>
-
-        {/* Mobile Overlay */}
-        {isChatOpen && (
-          <div 
-            className="fixed inset-0 bg-black/60 z-[55] lg:hidden animate-in fade-in duration-300" 
-            onClick={() => setIsChatOpen(false)}
-          />
-        )}
-
-        {/* Right Side: Conversation Interface (Side Menu on Mobile) */}
-        <div className={cn(
-            "fixed lg:static inset-y-0 right-0 z-[60] w-[85%] sm:w-[400px] lg:w-[450px] bg-[#111] flex flex-col transition-transform duration-500 ease-in-out border-l border-white/10",
-            "lg:translate-x-0", // Always visible on desktop
-            isChatOpen ? "translate-x-0" : "translate-x-full" // Toggle on mobile
-        )}>
-
-          <div className="p-6 border-b border-white/5 flex items-center justify-between shrink-0">
-            <div className="flex items-center gap-3">
-              <div className="relative">
-                <div className={cn("w-3 h-3 rounded-full", isAiProcessing ? "bg-[#ffcc00]" : isRecording ? "bg-red-500" : "bg-emerald-500")} />
-              </div>
-              <span className="text-xs font-black text-white uppercase flex items-center gap-2">
-                {isAiProcessing ? "KI-Partner denkt..." : isRecording ? "Sie sprechen..." : "Bereit für Input"}
-              </span>
-            </div>
-            
-            <div className="flex items-center gap-2">
-                {hasStarted && (
-                  <div className="bg-white/5 px-4 py-1 rounded-full border border-white/5 text-[10px] font-black text-white/30 uppercase">
-                    Turn {userTurnCount}/{MAX_TURNS}
+      <GoetheExamLayout
+        title={`${(sprechenData as any).institut} — ${(sprechenData as any).level}`}
+        module={(sprechenData as any).module}
+        teil={teil.label}
+        timeLeft={timeLeft}
+        totalTimeLabel={totalTimeLabels[teil.nummer - 1] || ''}
+        progress={`${teil.nummer}/${(sprechenData as any).teile.length}`}
+        onZuruck={() => navigate(-1)}
+        onWeiter={() => {
+          const nextTeil = (sprechenData as any).teile.find((t: any) => t.nummer === teil.nummer + 1);
+          if (nextTeil) navigate(`/preparation/goethe/b1/sprechen/${nextTeil.id}/${topicId}`);
+        }}
+        onAbgeben={handleEvaluate}
+        onJumpToTeil={handleJumpToTeil}
+        currentTeilId={teil.id}
+        allTeile={allTeile}
+      >
+        <div className="flex flex-col lg:flex-row bg-white border border-gray-300 min-h-[60vh]">
+          {/* Left: Task Paper */}
+          <div className="flex-1 p-4 md:p-8 lg:p-10 border-b lg:border-b-0 lg:border-r border-gray-200 bg-white">
+            <div className="max-w-2xl mx-auto space-y-4 md:space-y-6">
+              <div className="bg-[#fff9c4] border border-gray-300 p-3 text-[10px] text-gray-800 leading-relaxed font-bold uppercase">
+                <div className="flex items-start gap-2">
+                  <Info className="h-3.5 w-3.5 shrink-0 text-gray-400 mt-0.5" />
+                  <div>
+                    <p className="tracking-widest">Hinweise — {teil.label}</p>
+                    <p className="italic text-[9px] font-medium lowercase tracking-tight mt-0.5">{teil.description}</p>
                   </div>
+                </div>
+              </div>
+
+              <div>
+                {teil.nummer === 1 && <Teil1 teil={teil} topic={topic} hasStarted={hasStarted} />}
+                {teil.nummer === 2 && (
+                  <Teil2
+                    teil={teil}
+                    topic={topic}
+                    selectedTopic={selectedTopic}
+                    setSelectedTopic={setSelectedTopic}
+                    hasStarted={hasStarted}
+                    isPreparing={isPreparing}
+                    setIsPreparing={setIsPreparing}
+                  />
                 )}
-                {/* Close button for mobile drawer */}
-                <Button 
-                  variant="ghost" 
-                  size="icon" 
-                  className="lg:hidden text-white/50"
-                  onClick={() => setIsChatOpen(false)}
-                >
-                  <ChevronLeft className="h-5 w-5 rotate-180" />
-                </Button>
+                {teil.nummer === 3 && <Teil3 teil={teil} topic={topic} hasStarted={hasStarted} />}
+              </div>
             </div>
           </div>
 
-          <div className="flex-1 overflow-y-auto p-6 space-y-6 custom-scrollbar" ref={scrollRef}>
-            {!hasStarted ? (
-              <div className="h-full flex flex-col items-center justify-center text-center px-6 space-y-6">
-                <div className="relative group">
-                  <div className="relative w-24 h-24 rounded-full bg-[#1a1a1a] border-2 border-[#ffcc00]/30 flex items-center justify-center">
-                    <Mic className="w-10 h-10 text-[#ffcc00]" />
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <h4 className="text-xl font-black text-white uppercase italic">Mündliche Prüfung</h4>
-                  <p className="text-sm text-white/40 font-medium">Stellen Sie sicher, dass Ihr Mikrofon aktiviert ist und Sie in einer ruhigen Umgebung sind.</p>
-                </div>
-                <Button
-                  onClick={handleStartConversation}
-                  disabled={teil.nummer === 2 && !selectedTopic}
-                  className={cn(
-                    "h-16 w-full rounded-2xl font-black uppercase text-sm transition-all",
-                    (teil.nummer === 2 && !selectedTopic)
-                      ? "bg-white/5 text-white/20"
-                      : "bg-[#ffcc00] hover:bg-[#ffcc00]/90 text-black"
-                  )}
-                >
-                  <Play className="w-5 h-5 mr-3 fill-current" /> Simulation Starten
-                </Button>
+          {/* Right: Conversation Interface */}
+          <div className="w-full lg:w-[360px] bg-gray-50 flex flex-col shrink-0 border-l border-gray-100">
+            {/* Status */}
+            <div className="p-3 border-b border-gray-200 bg-white flex items-center justify-between shrink-0">
+              <div className="flex items-center gap-2">
+                <div className={cn(
+                  'w-2 h-2',
+                  isAiProcessing ? 'bg-amber-500 animate-pulse' : isRecording ? 'bg-red-600 animate-pulse' : 'bg-emerald-600'
+                )} />
+                <span className="text-[9px] font-bold text-gray-900 uppercase tracking-widest">
+                  {isAiProcessing ? 'Prüfer spricht' : isRecording ? 'Aufnahme läuft' : 'Bereit'}
+                </span>
               </div>
-            ) : (
-              <>
-                {conversation.map((msg, idx) => (
-                  <div key={idx} className={cn("flex flex-col max-w-[92%]", msg.role === 'user' ? "ml-auto items-end" : "mr-auto items-start")}>
-                    <span className={cn(
-                      "text-[9px] font-black mb-1 uppercase px-2",
-                      msg.role === 'user' ? "text-amber-500/50" : "text-white/30"
-                    )}>
-                      {msg.role === 'user' ? "Ihre Antwort" : "KI-Prüfungspartner"}
-                    </span>
-                    <div className={cn(
-                      "p-4 rounded-[24px] text-sm font-medium leading-relaxed",
-                      msg.role === 'user'
-                        ? "bg-[#ffcc00] text-black rounded-tr-sm"
-                        : "bg-white/5 border border-white/5 text-white rounded-tl-sm"
-                    )}>
-                      {msg.text}
-                    </div>
-                  </div>
-                ))}
-              </>
-            )}
-          </div>
-
-          {/* Controls */}
-          {hasStarted && (
-            <div className="p-4 border-t border-white/5 bg-[#1a1a1a] flex flex-col gap-4 shrink-0 lg:rounded-none">
-
-              {/* Global Status Warnings */}
-              {isTimeUp && (
-                <div className="flex items-center justify-center gap-3 bg-red-500/10 border border-red-500/20 p-2 rounded-xl">
-                  <AlertCircle className="h-4 w-4 text-red-500" />
-                  <span className="text-[10px] font-black text-red-500 uppercase">Zeit abgelaufen!</span>
+              {hasStarted && (
+                <div className="bg-gray-100 px-2 py-0.5 flex items-center gap-1 border border-gray-200">
+                  <MessageSquare className="h-2.5 w-2.5 text-gray-400" />
+                  <span className="text-[8px] font-bold text-gray-500 uppercase">{userTurnCount}/{MAX_TURNS}</span>
                 </div>
               )}
+            </div>
 
-              <div className="flex flex-col gap-3">
-                <div className="relative group">
-                  <textarea
-                    value={transcript}
-                    onChange={(e) => setTranscript(e.target.value)}
-                    placeholder={isRecording ? "Sprechen Sie jetzt..." : isInputDisabled ? "Gespräch beendet." : "Tippen oder sprechen..."}
-                    className={cn(
-                      "w-full bg-[#0c0c0c] border border-white/10 rounded-xl p-4 text-sm text-white focus:ring-2 focus:ring-[#ffcc00]/30 resize-none h-16 custom-scrollbar transition-all",
-                      isInputDisabled && "opacity-40 cursor-not-allowed"
-                    )}
-                    disabled={isInputDisabled}
-                  />
+            {/* Messages */}
+            <div className="flex-1 overflow-y-auto p-4 space-y-3 min-h-[200px] lg:min-h-0" ref={scrollRef}>
+              {!hasStarted ? (
+                <div className="h-full flex flex-col items-center justify-center text-center space-y-3 py-8">
+                  <div className="h-10 w-10 border border-gray-200 bg-white flex items-center justify-center text-gray-300">
+                    <Mic className="h-4 w-4" />
+                  </div>
+                  <div className="space-y-0.5">
+                    <h4 className="text-[9px] font-bold text-gray-900 uppercase tracking-widest">Bereit zum Starten</h4>
+                    <p className="text-[8px] text-gray-400">Mikrofon prüfen vor dem Start</p>
+                  </div>
+                  <Button
+                    onClick={handleStartConversation}
+                    disabled={teil.nummer === 2 && !selectedTopic}
+                    className="bg-gray-900 text-white px-5 h-8 font-bold uppercase text-[8px] tracking-widest transition-none rounded-none disabled:opacity-40"
+                  >
+                    Beginnen
+                  </Button>
                 </div>
+              ) : (
+                <div className="space-y-3">
+                  {conversation.map((msg, idx) => (
+                    <div key={idx} className={cn('flex flex-col max-w-[95%]', msg.role === 'user' ? 'ml-auto items-end' : 'mr-auto items-start')}>
+                      <span className="text-[7px] font-bold text-gray-400 uppercase tracking-widest mb-1 px-1">
+                        {msg.role === 'user' ? 'Ich' : 'Prüfer'}
+                      </span>
+                      <div className={cn(
+                        'p-2.5 text-[10px] leading-relaxed border',
+                        msg.role === 'user'
+                          ? 'bg-gray-800 border-gray-800 text-white'
+                          : 'bg-white border-gray-200 text-gray-700'
+                      )}>
+                        {msg.text}
+                      </div>
+                    </div>
+                  ))}
+                  {transcript && (
+                    <div className="ml-auto max-w-[95%]">
+                      <div className="p-2.5 text-[10px] border border-dashed border-gray-300 text-gray-400 italic">
+                        {transcript}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
 
-                <div className="flex gap-3 h-14">
+            {/* Controls */}
+            {hasStarted && (
+              <div className="p-3 bg-white border-t border-gray-200 space-y-2">
+                <textarea
+                  value={transcript}
+                  onChange={(e) => setTranscript(e.target.value)}
+                  placeholder="Antworten oder Mikrofon nutzen..."
+                  className="w-full bg-gray-50 border border-gray-200 p-2.5 text-[10px] text-gray-700 focus:border-gray-900 focus:ring-0 resize-none h-16 transition-none font-medium placeholder:text-gray-300 rounded-none"
+                  disabled={isInputDisabled}
+                />
+                <div className="flex gap-2 h-8">
                   <Button
                     onClick={toggleRecording}
                     disabled={isInputDisabled}
                     className={cn(
-                      "flex-1 rounded-2xl font-black uppercase transition-all",
+                      'flex-1 h-full font-bold uppercase text-[8px] tracking-widest transition-none border rounded-none',
                       isRecording
-                        ? "bg-red-500 hover:bg-red-600 text-white"
-                        : "bg-white/5 hover:bg-white/10 text-white",
+                        ? 'bg-red-50 border-red-200 text-red-600'
+                        : 'bg-white border-gray-300 text-gray-600 hover:border-gray-900 hover:text-gray-900'
                     )}
                   >
-                    {isRecording ? (
-                      <><Square className="w-5 h-5 mr-3 fill-current" /> Stop</>
-                    ) : (
-                      <><Mic className="w-5 h-5 mr-3" /> Sprechen</>
-                    )}
+                    {isRecording ? <VoiceWaves /> : <Mic className="h-3 w-3 mr-1" />}
+                    <span className="ml-1">{isRecording ? 'Hören' : 'Sprechen'}</span>
                   </Button>
                   <Button
                     onClick={processUserTurn}
                     disabled={isInputDisabled || !transcript.trim() || isRecording}
-                    className="flex-1 rounded-2xl bg-[#ffcc00] hover:bg-[#ffcc00]/90 text-black font-black uppercase transition-all disabled:opacity-40"
+                    className="flex-1 h-full bg-gray-900 text-white font-bold uppercase text-[8px] tracking-widest transition-none rounded-none disabled:opacity-40"
                   >
                     Senden
                   </Button>
-                  <Button
-                    onClick={handleEvaluate}
-                    disabled={isAiProcessing || isRecording || userTurnCount === 0}
-                    className="w-14 rounded-2xl bg-emerald-500/10 text-emerald-500 hover:bg-emerald-500 hover:text-white border border-emerald-500/20 p-0 flex items-center justify-center transition-all"
-                    title="Auswerten"
-                  >
-                    {isEvaluating ? <Loader2 className="w-5 h-5 animate-spin" /> : <CheckCircle2 className="w-6 h-6" />}
-                  </Button>
                 </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
-
-        {/* Floating Toggle Button for Mobile */}
-        <div className={cn(
-          "fixed bottom-24 right-6 flex flex-col items-end gap-3 lg:hidden z-50 transition-all duration-500",
-          isChatOpen ? "translate-x-24 opacity-0" : "translate-x-0 opacity-100"
-        )}>
-           {/* Hint for mobile */}
-           <div className="bg-[#ffcc00] text-black text-[10px] font-black px-4 py-2 rounded-full shadow-2xl animate-bounce border-2 border-black/10">
-              HIER KLICKEN ZUM SPRECHEN
-           </div>
-           <Button
-              onClick={() => setIsChatOpen(true)}
-              className="h-16 w-16 rounded-full bg-[#ffcc00] text-black shadow-2xl flex items-center justify-center relative overflow-hidden group border-4 border-[#111]"
-           >
-              <div className="absolute inset-0 bg-white/20 scale-0 group-hover:scale-100 transition-transform duration-500 rounded-full" />
-              <MessageSquare className="h-7 w-7 relative z-10" />
-              {conversation.length > 0 && (
-                <span className="absolute top-0 right-0 h-6 w-6 bg-red-600 rounded-full text-[10px] font-black text-white flex items-center justify-center border-2 border-[#111]">
-                  {conversation.length}
-                </span>
-              )}
-           </Button>
-        </div>
-      </main>
+      </GoetheExamLayout>
 
       {/* Evaluation Modal */}
       {showResultsModal && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-4 sm:p-6" dir="ltr">
-          <div className="bg-[#111] border border-white/10 rounded-[48px] w-full max-w-2xl max-h-[90vh] flex flex-col overflow-hidden">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-gray-900/60 p-4" dir="ltr">
+          <div className="bg-white border border-gray-200 w-full max-w-2xl max-h-[90vh] flex flex-col overflow-hidden">
             {isEvaluating ? (
-              <div className="p-20 flex flex-col items-center justify-center gap-8 h-[500px]">
-                <div className="relative">
-                  <Loader2 className="h-20 w-20 text-[#ffcc00] animate-spin" />
-                </div>
-                <div className="text-center space-y-3">
-                  <h3 className="text-3xl font-black text-white uppercase italic">KI-Bewertung</h3>
-                  <p className="text-xs text-white/40 font-black uppercase animate-pulse">Ihre mündliche Leistung wird nach Goethe B1 Standards analysiert</p>
+              <div className="p-16 flex flex-col items-center justify-center gap-6 h-[320px]">
+                <Loader2 className="h-8 w-8 text-gray-900 animate-spin" />
+                <div className="text-center">
+                  <h3 className="text-xs font-bold text-gray-900 uppercase tracking-widest">Analyse läuft</h3>
+                  <p className="text-[9px] text-gray-400 font-bold uppercase tracking-widest mt-1">Ihre Antworten werden bewertet...</p>
                 </div>
               </div>
             ) : evaluationResult ? (
               <>
-                {/* Result Header */}
-                <div className="p-10 border-b border-white/5 bg-[#181818] flex items-center justify-between shrink-0">
-                  <div className="space-y-2">
-                    <h2 className="text-3xl font-black text-white uppercase italic">Prüfungsergebnis</h2>
-                    <div className="flex items-center gap-3">
-                      <span className="text-[10px] font-black text-[#ffcc00] uppercase bg-[#ffcc00]/10 px-3 py-1 rounded-full">B1 Sprechen</span>
-                      <span className="h-1.5 w-1.5 rounded-full bg-white/20" />
-                      <p className="text-xs font-bold text-white/40 truncate max-w-[200px]">
-                        {teil.nummer === 2 ? selectedTopic.title : topic.title}
-                      </p>
-                    </div>
+                <div className="p-5 border-b border-gray-100 bg-gray-50 flex items-center justify-between shrink-0">
+                  <div>
+                    <h2 className="text-sm font-bold text-gray-900 uppercase tracking-tight">Ergebnisbericht</h2>
+                    <span className="text-[8px] font-bold text-gray-400 uppercase tracking-widest">{teil.label}</span>
                   </div>
                   <div className={cn(
-                    "relative flex flex-col items-center justify-center h-24 w-24 rounded-[32px] border-2",
-                    evaluationResult.score >= 60 ? "border-emerald-500/50 bg-emerald-500/5 text-emerald-400" : "border-red-500/50 bg-red-500/5 text-red-400"
+                    'flex flex-col items-center justify-center h-14 w-14 border-2 bg-white',
+                    evaluationResult.score >= 60 ? 'border-green-600 text-green-600' : 'border-red-600 text-red-600'
                   )}>
-                    <span className="text-4xl font-black tabular-nums">{evaluationResult.score}</span>
-                    <span className="text-[8px] font-black uppercase opacity-60">Punkte</span>
+                    <span className="text-lg font-bold">{evaluationResult.score}</span>
+                    <span className="text-[7px] font-bold opacity-60">Pkt</span>
                   </div>
                 </div>
 
-                <div className="p-10 overflow-y-auto custom-scrollbar flex-1 space-y-12">
-                  {/* Score Grid */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="p-5 overflow-y-auto flex-1 space-y-5 text-xs">
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
                     {[
-                      { label: 'Aufgabenerfüllung', value: evaluationResult.aufgabenerfuellung },
+                      { label: 'Aufgabe', value: evaluationResult.aufgabenerfuellung },
                       { label: 'Interaktion', value: evaluationResult.interaktion },
                       { label: 'Wortschatz', value: evaluationResult.wortschatz },
-                      { label: 'Strukturen & Aussprache', value: evaluationResult.strukturen_aussprache }
-                    ].map((crit, idx) => (
-                      <div key={idx} className="bg-white/[0.02] border border-white/5 p-6 rounded-3xl group hover:bg-white/[0.05] transition-colors">
-                        <div className="flex justify-between items-center mb-4">
-                          <span className="text-[10px] font-black text-white/40 uppercase">{crit.label}</span>
-                          <span className="text-base font-black text-[#ffcc00]">{crit.value}/25</span>
-                        </div>
-                        <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
-                          <div
-                            className="h-full bg-[#ffcc00] rounded-full transition-all duration-1000 delay-300"
-                            style={{ width: `${(crit.value / 25) * 100}%` }}
-                          />
-                        </div>
+                      { label: 'Strukturen', value: evaluationResult.strukturen_aussprache },
+                    ].map(item => (
+                      <div key={item.label} className="bg-gray-50 border border-gray-200 p-3 text-center">
+                        <div className="text-[7px] font-bold text-gray-400 uppercase tracking-widest">{item.label}</div>
+                        <div className="text-base font-bold text-gray-900 mt-1">{item.value ?? '—'}</div>
                       </div>
                     ))}
                   </div>
 
-                  {/* Turn Corrections */}
-                  {evaluationResult.turnCorrections && evaluationResult.turnCorrections.length > 0 && (
-                    <div className="space-y-6">
-                      <div className="flex items-center gap-4">
-                        <div className="h-10 w-10 rounded-2xl bg-emerald-500/10 flex items-center justify-center text-emerald-400">
-                          <CheckCircle2 className="h-5 w-5" />
-                        </div>
-                        <h3 className="text-base font-black text-white uppercase">Optimierte Formulierungen</h3>
-                      </div>
-                      <div className="space-y-4">
-                        {evaluationResult.turnCorrections.map((corr, i) => (
-                          <div key={i} className="bg-white/[0.02] border border-white/5 p-6 rounded-3xl space-y-3">
-                            <div className="flex items-start gap-3">
-                              <span className="text-[10px] font-black text-red-400/50 uppercase mt-1 shrink-0">Original:</span>
-                              <p className="text-sm text-white/60 italic">"{corr.original}"</p>
-                            </div>
-                            <div className="flex items-start gap-3">
-                              <span className="text-[10px] font-black text-emerald-400 uppercase mt-1 shrink-0">Besser:</span>
-                              <p className="text-sm text-emerald-400 font-bold">"{corr.improved}"</p>
-                            </div>
-                            {corr.reason && (
-                              <p className="text-[11px] text-white/30 pl-16 italic">— {corr.reason}</p>
-                            )}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Feedback Section */}
-                  <div className="space-y-6">
-                    <div className="flex items-center gap-4">
-                      <div className="h-10 w-10 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-400">
-                        <MessageSquare className="h-5 w-5" />
-                      </div>
-                      <h3 className="text-base font-black text-white uppercase">Feedback des Prüfers</h3>
-                    </div>
-                    <div className="bg-blue-500/5 border border-blue-500/10 p-8 rounded-3xl text-base leading-relaxed text-blue-100/80 font-medium italic whitespace-pre-wrap">
+                  <div className="space-y-2">
+                    <h3 className="text-[8px] font-bold text-gray-900 uppercase tracking-widest border-b border-gray-100 pb-1">Feedback</h3>
+                    <div className="p-4 bg-gray-50 border border-gray-100 leading-relaxed text-gray-700 italic whitespace-pre-wrap text-[10px]">
                       {evaluationResult.feedback}
                     </div>
                   </div>
 
-                  {/* Tips */}
-                  <div className="space-y-6">
-                    <div className="flex items-center gap-4">
-                      <div className="h-10 w-10 rounded-2xl bg-[#ffcc00]/10 flex items-center justify-center text-[#ffcc00]">
-                        <PenTool className="h-5 w-5" />
-                      </div>
-                      <h3 className="text-base font-black text-white uppercase">Tipps zur Verbesserung</h3>
+                  {evaluationResult.tips && evaluationResult.tips.length > 0 && (
+                    <div className="space-y-2">
+                      <h3 className="text-[8px] font-bold text-gray-900 uppercase tracking-widest border-b border-gray-100 pb-1">Tipps</h3>
+                      <ul className="space-y-1.5">
+                        {evaluationResult.tips.map((tip: string, i: number) => (
+                          <li key={i} className="flex gap-2 text-[10px] text-gray-700">
+                            <span className="text-gray-300 font-bold">—</span>
+                            <span>{tip}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                    <ul className="space-y-4">
-                      {evaluationResult.tips.map((tip, i) => (
-                        <li key={i} className="bg-[#1a1a1a] p-5 rounded-2xl border border-white/5 flex items-start gap-4">
-                           <div className="h-6 w-6 rounded-full bg-[#ffcc00] flex items-center justify-center shrink-0 mt-0.5">
-                              <span className="text-[10px] font-black text-black">{i + 1}</span>
-                           </div>
-                           <p className="text-sm text-white/70 font-medium">{tip}</p>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  )}
                 </div>
 
-                {/* Modal Footer */}
-                <div className="p-10 border-t border-white/5 bg-[#181818] shrink-0 flex justify-end gap-6">
+                <div className="p-4 border-t border-gray-100 bg-gray-50 flex justify-end">
                   <Button
-                    variant="outline"
                     onClick={() => setShowResultsModal(false)}
-                    className="border-white/10 text-white/50 hover:bg-white/5 hover:text-white font-black uppercase text-[10px] px-8 h-14 rounded-2xl"
+                    className="bg-gray-800 text-white font-bold uppercase text-[8px] tracking-widest px-6 h-8 rounded-none"
                   >
                     Schließen
-                  </Button>
-                  <Button
-                    onClick={() => {
-                      setShowResultsModal(false);
-                      setConversation([]);
-                      setTranscript('');
-                      accumulatedTranscriptRef.current = '';
-                      setTimeLeft(180);
-                      setHasStarted(false);
-                    }}
-                    className="bg-[#ffcc00] hover:bg-[#ffcc00]/90 text-black font-black uppercase text-xs px-12 h-14 rounded-2xl"
-                  >
-                    Neu starten
                   </Button>
                 </div>
               </>
@@ -669,7 +517,7 @@ const GoetheB1SprechenSimulator = () => {
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 };
 

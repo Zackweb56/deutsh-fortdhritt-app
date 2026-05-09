@@ -90,6 +90,10 @@
   * {
     @apply transition-colors duration-200;
   }
+
+  .font-arabic {
+    font-family: 'Cairo', sans-serif;
+  }
 }
 
 @layer components {
@@ -190,26 +194,58 @@
   animation: shimmer 2s infinite;
 }
 
-/* Custom Scrollbar */
-.custom-scrollbar::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+/* Exam Retro Overrides (90s Style) */
+.exam-container {
+  font-family: Arial, Helvetica, sans-serif !important;
 }
 
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: transparent;
+.exam-container *, 
+.exam-container *:before, 
+.exam-container *:after {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  transition: none !important;
+  animation: none !important;
 }
 
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
+.exam-container button {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.2);
+.goethe-paper {
+  background-color: white !important;
+  color: #333 !important;
+  border: 1px solid #94a3b8 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
 }
 
-.custom-scrollbar {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+.goethe-radio {
+  @apply h-4 w-4 rounded-none border border-gray-400 flex items-center justify-center cursor-pointer bg-white;
+}
+
+.goethe-radio.active {
+  @apply border-gray-900 bg-gray-900;
+}
+
+.goethe-radio.active::after {
+  content: '✓';
+  @apply text-[10px] font-bold text-white;
+}
+
+.goethe-option {
+  @apply flex items-center gap-3 p-2 rounded-none border border-transparent hover:bg-gray-100 cursor-pointer;
+}
+
+.goethe-option.active {
+  @apply bg-blue-100/50 border-blue-300;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

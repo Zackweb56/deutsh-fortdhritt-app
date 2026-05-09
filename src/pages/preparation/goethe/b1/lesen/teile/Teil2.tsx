@@ -1,101 +1,185 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
-import { Check, X } from 'lucide-react';
+import { Check, X, Flag } from 'lucide-react';
 
 interface Teil2Props {
   topic: any;
   answers: Record<string, string>;
   showResults: boolean;
-  onAnswerChange: (id: string, value: string) => void;
+  onAnswerChange: (itemId: string, value: string) => void;
 }
 
 const Teil2: React.FC<Teil2Props> = ({ topic, answers, showResults, onAnswerChange }) => {
-  if (!topic || !topic.texts) return null;
+  const [markedItems, setMarkedItems] = useState<Set<string>>(new Set());
 
-  const renderItem = (item: any, isBeispiel = false) => {
-    const isCorrect = answers[item.id] === item.correct;
+  if (!topic) return null;
 
-    return (
-      <div 
-        key={item.id} 
-        className={cn(
-          "flex flex-col gap-4 p-5 rounded-xl border transition-all duration-300",
-          isBeispiel ? "bg-white/5 border-white/10 opacity-75" : "bg-[#111] border-white/5 hover:border-white/20",
-          showResults && !isBeispiel && (isCorrect ? "border-green-500/50 bg-green-500/5" : "border-red-500/50 bg-red-500/5")
-        )}
-      >
-        <div className="flex gap-3 items-start">
-          <span className="font-black text-[#ffcc00] text-lg w-6 shrink-0 pt-0.5">{item.id}</span>
-          <p className="text-base text-white/90 font-bold leading-snug flex-1">{item.text}</p>
-          {showResults && !isBeispiel && (
-            <div className="shrink-0">
-              {isCorrect ? <Check className="h-6 w-6 text-green-500" /> : <X className="h-6 w-6 text-red-500" />}
-            </div>
-          )}
-        </div>
-        
-        <div className="flex flex-col gap-2 ml-9">
-          {item.options.map((opt: any) => {
-            const isSelected = isBeispiel ? opt.value === item.correct : answers[item.id] === opt.value;
-            const isActuallyCorrect = opt.value === item.correct;
-
-            return (
-              <button
-                key={opt.value}
-                disabled={isBeispiel || showResults}
-                onClick={() => onAnswerChange(item.id, opt.value)}
-                className={cn(
-                  "flex items-center gap-3 p-3 rounded-lg border-2 text-left transition-all",
-                  isSelected 
-                    ? "bg-[#ffcc00] border-[#ffcc00] text-black shadow-[0_0_15px_rgba(255,204,0,0.3)]" 
-                    : "bg-transparent border-white/10 text-white/70 hover:border-white/30 hover:text-white",
-                  showResults && !isBeispiel && isActuallyCorrect && !isSelected && "border-green-500 text-green-500 bg-green-500/10",
-                  isBeispiel && isSelected && "bg-white/20 border-white/30 text-white shadow-none"
-                )}
-              >
-                <div className={cn(
-                  "flex items-center justify-center h-6 w-6 rounded border font-black text-xs uppercase shrink-0",
-                  isSelected ? "border-black/30" : "border-current"
-                )}>
-                  {opt.value}
-                </div>
-                <span className="text-sm font-medium">{opt.label}</span>
-              </button>
-            );
-          })}
-        </div>
-      </div>
-    );
+  const toggleMark = (id: string) => {
+    setMarkedItems(prev => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
   };
 
+  const allItems = topic.texts?.flatMap((t: any) => t.items ?? []) ?? [];
+  const answeredCount = allItems.filter((item: any) => !!answers[item.id]).length;
+  const totalCount = allItems.length;
+
   return (
-    <div className="space-y-12 animate-in fade-in duration-500">
-      {topic.texts.map((textObj: any, index: number) => (
-        <div key={textObj.id || index} className="space-y-6">
-          {/* Text Section */}
-          <div className="bg-[#1a1a1a] border border-white/10 rounded-2xl p-6 md:p-8 shadow-xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-[#ffcc00]/5 rounded-bl-full -mr-8 -mt-8 pointer-events-none" />
-            
-            <div className="mb-6 pb-4 border-b border-white/10">
-              <h2 className="text-xl md:text-2xl font-black text-white mb-2">{textObj.title}</h2>
-              {textObj.source && (
-                <span className="text-xs font-bold text-white/50 uppercase tracking-wider">{textObj.source}</span>
-              )}
-            </div>
-            <div className="prose prose-invert max-w-none">
-              <p className="text-base md:text-lg text-white/80 leading-loose whitespace-pre-line font-medium">
+    <div className="flex flex-col lg:flex-row h-full bg-[#f1f5f9]">
+
+      {/* Left: Texts */}
+      <div className="flex-1 overflow-y-auto p-6 md:p-10 bg-white border-b lg:border-b-0 lg:border-r border-gray-300">
+        <div className="max-w-2xl mx-auto space-y-10">
+          {topic.texts?.map((textObj: any, idx: number) => (
+            <div key={idx} className="space-y-4">
+              <div className="border-b-2 border-gray-900 pb-2">
+                <p className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Text {idx + 1}</p>
+                <h2 className="text-sm font-bold text-gray-900 uppercase tracking-tight mt-0.5">{textObj.title}</h2>
+                {textObj.source && (
+                  <p className="text-[9px] text-gray-400 italic mt-0.5">{textObj.source}</p>
+                )}
+              </div>
+              <div className="text-[11px] text-gray-800 leading-relaxed font-serif whitespace-pre-line bg-gray-50 p-5 border border-gray-100">
                 {textObj.content}
-              </p>
+              </div>
             </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Right: Questions */}
+      <div className="w-full lg:w-[400px] overflow-y-auto bg-gray-50 p-5 md:p-8 shrink-0 border-l border-gray-300">
+        <div className="space-y-5">
+
+          {/* Counter */}
+          <div className="flex items-center justify-between border-b border-gray-300 pb-3">
+            <h3 className="text-[9px] font-bold text-gray-900 uppercase tracking-widest">Aufgaben</h3>
+            <span className={cn(
+              'text-[8px] font-bold px-2 py-0.5 border uppercase tracking-wide',
+              answeredCount === totalCount && totalCount > 0
+                ? 'bg-green-50 border-green-300 text-green-700'
+                : 'bg-gray-100 border-gray-300 text-gray-400'
+            )}>
+              {answeredCount} / {totalCount}
+            </span>
           </div>
 
-          {/* Questions Section */}
-          <div className="space-y-4">
-            {textObj.beispiel && renderItem(textObj.beispiel, true)}
-            {textObj.items?.map((item: any) => renderItem(item, false))}
-          </div>
+          {topic.texts?.map((textObj: any, tIdx: number) => (
+            <div key={tIdx} className="space-y-2">
+              <p className="text-[9px] font-bold text-gray-400 uppercase tracking-widest px-1">
+                Zu Text {tIdx + 1}
+              </p>
+
+              {textObj.items?.map((item: any) => {
+                const selected   = answers[item.id];
+                const isAnswered = !!selected;
+                const isCorrect  = selected === item.correct;
+                const isMarked   = markedItems.has(item.id);
+
+                // Options can be objects {label, value} or plain strings
+                const normalizedOptions: Array<{ label: string; value: string }> =
+                  Array.isArray(item.options)
+                    ? item.options.map((opt: any, i: number) =>
+                        typeof opt === 'string'
+                          ? { label: opt, value: String.fromCharCode(97 + i) }
+                          : { label: opt.label, value: opt.value }
+                      )
+                    : [];
+
+                return (
+                  <div
+                    key={item.id}
+                    className={cn(
+                      'border transition-none',
+                      showResults
+                        ? isCorrect
+                          ? 'bg-green-50 border-green-300'
+                          : 'bg-red-50 border-red-300'
+                        : isAnswered
+                          ? 'bg-blue-50 border-blue-300'
+                          : isMarked
+                            ? 'bg-yellow-50 border-yellow-300'
+                            : 'bg-white border-gray-300'
+                    )}
+                  >
+                    <div className="p-3 space-y-2.5">
+                      {/* Question */}
+                      <div className="flex items-start justify-between gap-2">
+                        <div className="flex gap-2 flex-1">
+                          <span className={cn(
+                            'text-[9px] font-black mt-0.5 shrink-0',
+                            isAnswered && !showResults ? 'text-blue-500' : 'text-gray-400'
+                          )}>
+                            {item.id}.
+                          </span>
+                          <p className="text-[11px] text-gray-800 font-medium leading-snug">{item.text}</p>
+                        </div>
+                        <div className="flex items-center gap-1 shrink-0">
+                          {showResults
+                            ? isCorrect
+                              ? <Check className="h-3.5 w-3.5 text-green-600" />
+                              : <X className="h-3.5 w-3.5 text-red-600" />
+                            : (
+                              <button
+                                onClick={() => toggleMark(item.id)}
+                                className="text-gray-300 hover:text-yellow-500 transition-none"
+                              >
+                                <Flag className={cn('h-3 w-3', isMarked && 'fill-yellow-400 text-yellow-400')} />
+                              </button>
+                            )
+                          }
+                        </div>
+                      </div>
+
+                      {/* Options */}
+                      <div className="flex flex-col gap-1.5 pl-4">
+                        {normalizedOptions.map((opt) => {
+                          const isSelected = selected === opt.value;
+                          const isCorrectOpt = opt.value === item.correct;
+                          return (
+                            <button
+                              key={opt.value}
+                              disabled={showResults}
+                              onClick={() => onAnswerChange(item.id, opt.value)}
+                              className={cn(
+                                'flex items-center gap-2 px-3 py-1.5 border text-left transition-none w-full',
+                                isSelected
+                                  ? 'bg-[#1e293b] border-[#1e293b] text-white'
+                                  : 'bg-white border-gray-200 text-gray-600 hover:border-gray-400',
+                                showResults && isSelected && isCorrect  && 'bg-green-600 border-green-600 text-white',
+                                showResults && isSelected && !isCorrect && 'bg-red-600 border-red-600 text-white',
+                                showResults && !isSelected && isCorrectOpt && 'border-green-400 bg-green-50 text-green-700'
+                              )}
+                            >
+                              <span className={cn(
+                                'text-[9px] font-black w-3 shrink-0',
+                                isSelected ? 'text-white/70' : 'text-gray-400'
+                              )}>
+                                {opt.value}.
+                              </span>
+                              <span className="text-[10px] font-medium leading-tight">{opt.label}</span>
+                            </button>
+                          );
+                        })}
+                      </div>
+
+                      {showResults && !isCorrect && (
+                        <div className="pl-4 flex justify-between">
+                          <span className="text-[8px] font-bold text-red-600 uppercase">Falsch</span>
+                          <span className="text-[8px] font-bold text-green-600 uppercase">Soll: {item.correct}</span>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
     </div>
   );
 };

@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { ChevronLeft, Info, CheckCircle2, Loader2, PenTool } from 'lucide-react';
+import { Loader2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import schreibenData from '@/data/preparation/goethe/b1/schreiben.json';
 import { evaluatePreparationWriting, PreparationWritingResult } from '@/lib/ai/groq';
+import GoetheExamLayout from '@/components/preparation/goethe/GoetheExamLayout';
 import Teil1 from './teile/Teil1';
 import Teil2 from './teile/Teil2';
 import Teil3 from './teile/Teil3';
@@ -16,10 +17,15 @@ const parseDurationToSeconds = (duration?: string): number => {
   return parseInt(match[1], 10) * 60;
 };
 
-const formatTime = (seconds: number) => {
-  const m = Math.floor(seconds / 60);
-  const s = seconds % 60;
-  return `${m}:${s.toString().padStart(2, '0')}`;
+const formatAufgabentyp = (typ?: string): string => {
+  if (!typ) return '';
+  const map: Record<string, string> = {
+    'schreiben': 'Schreiben',
+    'formeller-brief': 'Brief',
+    'kommentar': 'Kommentar',
+    'email': 'E-Mail',
+  };
+  return map[typ] || typ;
 };
 
 const GoetheB1SchreibenSimulator = () => {
@@ -30,19 +36,18 @@ const GoetheB1SchreibenSimulator = () => {
   const [topic, setTopic] = useState<any>(null);
   const [userText, setUserText] = useState('');
   const [wordCount, setWordCount] = useState(0);
-
   const [timeLeft, setTimeLeft] = useState<number>(0);
   const [isTimerRunning, setIsTimerRunning] = useState(false);
 
-  // Evaluation States
   const [isEvaluating, setIsEvaluating] = useState(false);
   const [showResultsModal, setShowResultsModal] = useState(false);
   const [evaluationResult, setEvaluationResult] = useState<PreparationWritingResult | null>(null);
+  const [showBeispiel, setShowBeispiel] = useState(false);
 
   useEffect(() => {
     if (!teilId || !topicId) return;
 
-    const currentTeil = schreibenData.teile.find(t => t.id === teilId);
+    const currentTeil = (schreibenData as any).teile.find((t: any) => t.id === teilId);
     if (!currentTeil) return;
 
     const currentTopic = currentTeil.themen?.find((t: any) => t.id === topicId);
@@ -50,15 +55,16 @@ const GoetheB1SchreibenSimulator = () => {
 
     setTeil(currentTeil);
     setTopic(currentTopic);
-    
+
     const seconds = parseDurationToSeconds(currentTeil.arbeitszeit);
     setTimeLeft(seconds);
     setIsTimerRunning(true);
-    
+
     setUserText('');
     setWordCount(0);
     setEvaluationResult(null);
     setShowResultsModal(false);
+    setShowBeispiel(false);
   }, [teilId, topicId]);
 
   useEffect(() => {
@@ -82,279 +88,229 @@ const GoetheB1SchreibenSimulator = () => {
 
   const handleSubmit = async () => {
     if (userText.trim().length === 0) return;
-    
+
     setIsTimerRunning(false);
     setIsEvaluating(true);
     setShowResultsModal(true);
 
     try {
       const result = await evaluatePreparationWriting({
-        institute: schreibenData.institut,
-        level: schreibenData.level,
+        institute: (schreibenData as any).institut,
+        level: (schreibenData as any).level,
         teilLabel: teil.label,
         themaTitle: topic.title,
-        instructions: `Context: ${topic.situation}\nAufgabe: ${teil.pruefungsziel}\nPunkte: ${topic.aufgabenpunkte?.join(', ') || ''}`,
+        instructions: `Context: ${topic.situation || topic.ausgangsmeinung || ''}
+Aufgabe: ${teil.pruefungsziel}
+Punkte: ${topic.aufgabenpunkte?.join(', ') || ''}`,
         minWords: teil.minWords,
-        userText: userText
+        userText,
       });
       setEvaluationResult(result);
     } catch (error) {
-      console.error("Evaluation Error:", error);
+      console.error('Evaluation Error:', error);
       setEvaluationResult({
         score: 0,
         aufgabenerfuellung: 0,
         kohaerenz: 0,
         wortschatz: 0,
         strukturen: 0,
-        feedback: "Es gab einen Fehler bei der Auswertung. Bitte versuchen Sie es später noch einmal.",
-        improvedVersion: ""
+        feedback: { gut: [], verbessern: ['Es gab einen Fehler bei der Auswertung. Bitte versuchen Sie es später noch einmal.'] },
+        tipps: [],
+        improvedVersion: '',
       });
     } finally {
       setIsEvaluating(false);
     }
   };
 
+  // Navigate to topics selection page for that Teil
+  const handleJumpToTeil = (id: string) => {
+    navigate(`/preparation/goethe/b1/schreiben/${id}`);
+  };
+
   if (!teil || !topic) {
     return (
-      <div className="min-h-screen bg-[#0a0a0a] flex items-center justify-center text-white font-sans" dir="ltr">
+      <div className="min-h-screen bg-[#f1f5f9] flex items-center justify-center text-gray-400 font-bold uppercase tracking-widest text-xs" dir="ltr">
         Laden...
       </div>
     );
   }
 
+  const allTeile = (schreibenData as any).teile.map((t: any) => ({
+    id: t.id,
+    label: t.label,
+    points: t.punkte ?? '—',
+    examType: formatAufgabentyp(t.aufgabentyp) || t.pruefungsziel?.substring(0, 15),
+    isCompleted: false,
+  }));
+
+  const renderTeil = () => {
+    const props = { teil, topic, userText, onTextChange: handleTextChange, wordCount };
+    switch (teil.nummer) {
+      case 1: return <Teil1 {...props} />;
+      case 2: return <Teil2 {...props} />;
+      case 3: return <Teil3 {...props} />;
+      default: return <div className="text-xs text-gray-400 p-4">Teil nicht gefunden</div>;
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white flex flex-col font-sans overflow-hidden" dir="ltr">      {/* Header */}
-      <header className="h-16 border-b border-white/10 bg-[#111] flex items-center justify-between px-4 sticky top-0 z-50">
-        <div className="flex items-center gap-4">
-          <Button variant="ghost" size="sm" className="h-8 px-2 text-white/50 hover:text-white" onClick={() => navigate(-1)}>
-            <ChevronLeft className="h-4 w-4 mr-1" />
-            <span className="text-xs font-bold uppercase">Zurück</span>
-          </Button>
-          <div className="flex flex-col hidden sm:flex">
-            <span className="text-[10px] font-black text-[#ffcc00] uppercase">{schreibenData.institut} • {schreibenData.level}</span>
-            <span className="text-xs font-bold text-white/90">{schreibenData.module} • {teil.label}</span>
+    <>
+      <GoetheExamLayout
+        title={`${(schreibenData as any).institut} — ${(schreibenData as any).level}`}
+        module={(schreibenData as any).module}
+        teil={teil.label}
+        timeLeft={timeLeft}
+        totalTimeLabel={teil.arbeitszeit}
+        progress={`${teil.nummer}/${(schreibenData as any).teile.length}`}
+        onZuruck={() => navigate(-1)}
+        onWeiter={() => {
+          const nextTeil = (schreibenData as any).teile.find((t: any) => t.nummer === teil.nummer + 1);
+          if (nextTeil) navigate(`/preparation/goethe/b1/schreiben/${nextTeil.id}/${topicId}`);
+        }}
+        onAbgeben={handleSubmit}
+        onJumpToTeil={handleJumpToTeil}
+        currentTeilId={teil.id}
+        allTeile={allTeile}
+      >
+        <div className="w-full space-y-6 pb-16 md:pb-20">
+          <div className="bg-white border border-gray-300 p-4 md:p-8 space-y-6">
+            <div className="border-b border-gray-100 pb-3 flex justify-between items-center">
+              <h2 className="text-sm md:text-base font-bold text-gray-900 uppercase tracking-tight">
+                {teil.label} — {teil.title}
+              </h2>
+              {topic.beispielantwort && (
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setShowBeispiel(!showBeispiel)}
+                  className="text-[10px] uppercase font-bold tracking-widest h-8"
+                >
+                  {showBeispiel ? 'Beispiel ausblenden' : 'Beispiel anzeigen'}
+                </Button>
+              )}
+            </div>
+
+            {showBeispiel && topic.beispielantwort && (
+              <div className="bg-yellow-50 border border-yellow-200 p-4 font-serif text-sm text-gray-800 leading-relaxed whitespace-pre-wrap">
+                <div className="text-[9px] font-bold text-yellow-600 uppercase tracking-widest mb-2 font-sans">Beispielantwort</div>
+                {topic.beispielantwort}
+              </div>
+            )}
+
+            {renderTeil()}
           </div>
         </div>
-
-        {/* Timer */}
-        <div className="flex items-center gap-4">
-           <div className={cn(
-             'flex flex-col items-center px-4 py-1.5 rounded-xl border transition-all',
-             timeLeft > 120 ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400' :
-             timeLeft > 0 ? 'bg-[#ffcc00]/10 border-[#ffcc00]/30 text-[#ffcc00]' :
-             'bg-red-500/10 border-red-500/30 text-red-500'
-           )}>
-             <span className="text-[8px] font-black uppercase opacity-80">Zeit</span>
-             <span className="text-lg font-black tabular-nums leading-none">
-               {formatTime(timeLeft)}
-             </span>
-           </div>
-        </div>
-      </header>
-
-      {/* Main Content */}
-      <main className="flex-1 overflow-y-auto custom-scrollbar p-4 sm:p-6 lg:p-8 relative">
-        <div className="max-w-4xl mx-auto space-y-8 pb-32">
-          
-          {teil.nummer === 1 && (
-            <Teil1
-              teil={teil}
-              topic={topic}
-              userText={userText}
-              onTextChange={handleTextChange}
-              wordCount={wordCount}
-            />
-          )}
-          {teil.nummer === 2 && (
-            <Teil2
-              teil={teil}
-              topic={topic}
-              userText={userText}
-              onTextChange={handleTextChange}
-              wordCount={wordCount}
-            />
-          )}
-          {teil.nummer === 3 && (
-            <Teil3
-              teil={teil}
-              topic={topic}
-              userText={userText}
-              onTextChange={handleTextChange}
-              wordCount={wordCount}
-            />
-          )}
-
-        </div>
-      </main>
-
-      {/* Footer / Submit Area */}
-      <footer className="h-24 border-t border-white/10 bg-[#111] fixed bottom-0 w-full z-40 flex items-center justify-center px-4">
-        <div className="max-w-4xl w-full flex justify-between items-center gap-4">
-          <div className="flex flex-col flex-1 min-w-0">
-             <div className="flex items-center gap-2 mb-1">
-                <span className="text-[10px] font-black text-[#ffcc00] uppercase">Fortschritt</span>
-                <span className="text-[10px] font-bold text-white/30 uppercase">Ziel: {teil.minWords} Wörter</span>
-             </div>
-             <div className="flex items-center gap-3">
-                <div className="h-1.5 flex-1 bg-white/5 rounded-full overflow-hidden max-w-[200px]">
-                   <div 
-                      className={cn(
-                        "h-full transition-all duration-500",
-                        wordCount >= teil.minWords ? "bg-emerald-500" : "bg-[#ffcc00]"
-                      )}
-                      style={{ width: `${Math.min((wordCount / teil.minWords) * 100, 100)}%` }}
-                   />
-                </div>
-                <span className={cn(
-                  "text-sm font-black tabular-nums",
-                  wordCount >= teil.minWords ? "text-emerald-400" : "text-white"
-                )}>{wordCount}</span>
-             </div>
-          </div>
-          
-          <div className="flex items-center gap-3 shrink-0">
-             <Button 
-                variant="outline"
-                onClick={() => {
-                  if (confirm("Möchten Sie Ihren Text wirklich löschen?")) {
-                    setUserText('');
-                    setWordCount(0);
-                  }
-                }}
-                className="border-white/10 text-white/40 hover:bg-white/5 hover:text-white font-black uppercase px-4 sm:px-6 h-12 text-[10px] sm:text-xs bg-transparent rounded-xl"
-             >
-                zurücksetzen
-             </Button>
-             <Button 
-                onClick={handleSubmit}
-                disabled={wordCount < teil.minWords || isEvaluating}
-                className={cn(
-                  "font-black uppercase px-8 sm:px-12 h-12 text-[10px] sm:text-sm transition-all rounded-xl",
-                  wordCount >= teil.minWords
-                    ? "bg-[#ffcc00] hover:bg-[#ffcc00]/90 text-black"
-                    : "bg-white/5 text-white/20 cursor-not-allowed"
-                )}
-             >
-                {isEvaluating ? <Loader2 className="h-5 w-5 animate-spin" /> : "Analysieren"}
-             </Button>
-          </div>
-        </div>
-      </footer>
+      </GoetheExamLayout>
 
       {/* Evaluation Modal */}
       {showResultsModal && (
-        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/90 p-4 sm:p-6" dir="ltr">
-          <div className="bg-[#111] border border-white/10 rounded-[32px] w-full max-w-2xl max-h-[90vh] flex flex-col overflow-hidden">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-gray-900/60 p-4" dir="ltr">
+          <div className="bg-white border border-gray-200 w-full max-w-2xl max-h-[90vh] flex flex-col overflow-hidden">
             {isEvaluating ? (
-              <div className="p-16 flex flex-col items-center justify-center gap-6 h-80">
-                <div className="relative">
-                   <Loader2 className="h-16 w-16 text-[#ffcc00] animate-spin" />
-                </div>
-                <div className="text-center space-y-2">
-                  <h3 className="text-2xl font-black text-white uppercase italic">KI-Analyse</h3>
-                  <p className="text-xs text-white/40 font-bold uppercase">Ihre Leistung wird nach Goethe B1 Kriterien bewertet</p>
+              <div className="p-16 flex flex-col items-center justify-center gap-6 h-[360px]">
+                <Loader2 className="h-8 w-8 text-gray-900 animate-spin" />
+                <div className="text-center space-y-1">
+                  <h3 className="text-xs font-bold text-gray-900 uppercase tracking-widest">Analyse läuft</h3>
+                  <p className="text-[9px] text-gray-400 font-bold uppercase tracking-widest">Ihr Text wird bewertet...</p>
                 </div>
               </div>
             ) : evaluationResult ? (
               <>
-                {/* Result Header */}
-                <div className="p-8 border-b border-white/5 bg-[#181818] flex items-center justify-between shrink-0">
-                  <div className="space-y-1">
-                    <h2 className="text-2xl font-black text-white uppercase italic">Testergebnis</h2>
-                    <div className="flex items-center gap-2">
-                       <span className="text-[10px] font-black text-[#ffcc00] uppercase">{schreibenData.level} Standard</span>
-                       <span className="h-1 w-1 rounded-full bg-white/20" />
-                       <p className="text-xs font-bold text-white/40">{topic.title}</p>
-                    </div>
+                <div className="p-6 border-b border-gray-100 bg-gray-50 flex items-center justify-between shrink-0">
+                  <div className="space-y-0.5">
+                    <h2 className="text-base font-bold text-gray-900 uppercase tracking-tight">Ergebnisbericht</h2>
+                    <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">{teil.label}</span>
                   </div>
-                  <div className={cn(
-                    "relative flex flex-col items-center justify-center h-20 w-20 rounded-2xl border-2",
-                    evaluationResult.score >= 60 ? "border-emerald-500/50 bg-emerald-500/5 text-emerald-400" : "border-red-500/50 bg-red-500/5 text-red-400"
-                  )}>
-                    <span className="text-3xl font-black tabular-nums">{evaluationResult.score}</span>
-                    <span className="text-[8px] font-black uppercase opacity-60">Punkte</span>
+                  <div className="flex items-center gap-4">
+                    <div className={cn(
+                      'px-3 py-1 text-[10px] font-bold uppercase tracking-widest border',
+                      evaluationResult.score >= 60 ? 'bg-green-100 text-green-800 border-green-200' : 'bg-red-100 text-red-800 border-red-200'
+                    )}>
+                      {evaluationResult.score >= 60 ? 'Bestanden' : 'Nicht Bestanden'}
+                    </div>
+                    <div className={cn(
+                      'flex flex-col items-center justify-center h-14 w-14 border-2 bg-white',
+                      evaluationResult.score >= 60 ? 'border-green-600 text-green-600' : 'border-red-600 text-red-600'
+                    )}>
+                      <span className="text-lg font-bold tabular-nums leading-none">{evaluationResult.score}</span>
+                      <span className="text-[7px] font-bold uppercase opacity-60 tracking-tighter">/ 100</span>
+                    </div>
                   </div>
                 </div>
 
-                <div className="p-8 overflow-y-auto custom-scrollbar flex-1 space-y-10">
-                  {/* Score Grid */}
-                  <div className="grid grid-cols-2 gap-4">
+                <div className="p-6 overflow-y-auto flex-1 space-y-6 text-xs">
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                     {[
-                      { label: 'Aufgabenerfüllung', value: evaluationResult.aufgabenerfuellung },
+                      { label: 'Aufgabe', value: evaluationResult.aufgabenerfuellung },
                       { label: 'Kohärenz', value: evaluationResult.kohaerenz },
                       { label: 'Wortschatz', value: evaluationResult.wortschatz },
-                      { label: 'Strukturen', value: evaluationResult.strukturen }
-                    ].map((crit, idx) => (
-                      <div key={idx} className="bg-white/[0.02] border border-white/5 p-4 rounded-2xl hover:bg-white/[0.04] transition-colors">
-                        <div className="flex justify-between items-center">
-                          <span className="text-[10px] font-black text-white/40 uppercase">{crit.label}</span>
-                          <span className="text-sm font-black text-[#ffcc00]">{crit.value}/25</span>
-                        </div>
-                        <div className="h-1 w-full bg-white/5 rounded-full mt-3 overflow-hidden">
-                           <div 
-                              className="h-full bg-[#ffcc00] rounded-full transition-all duration-1000 delay-300" 
-                              style={{ width: `${(crit.value / 25) * 100}%` }}
-                           />
-                        </div>
+                      { label: 'Strukturen', value: evaluationResult.strukturen },
+                    ].map(item => (
+                      <div key={item.label} className="bg-gray-50 border border-gray-200 p-3 text-center">
+                        <div className="text-[8px] font-bold text-gray-400 uppercase tracking-widest">{item.label}</div>
+                        <div className="text-base font-bold text-gray-900 mt-1">{item.value ?? '—'} <span className="text-xs text-gray-400">/ 25</span></div>
                       </div>
                     ))}
                   </div>
 
-                  {/* Feedback Section */}
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-3">
-                       <div className="h-8 w-8 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400">
-                          <Info className="h-4 w-4" />
-                       </div>
-                       <h3 className="text-sm font-black text-white uppercase">Feedback des Prüfers</h3>
-                    </div>
-                    <div className="bg-blue-500/5 border border-blue-500/10 p-6 rounded-2xl text-sm leading-relaxed text-blue-100/80 font-medium whitespace-pre-wrap">
-                      {evaluationResult.feedback}
-                    </div>
-                  </div>
+                  <div className="space-y-6 pt-2">
+                    <div className="space-y-3">
+                      <h3 className="text-[10px] font-bold text-gray-900 uppercase tracking-widest border-b border-gray-200 pb-1">Feedback</h3>
+                      
+                      {evaluationResult.feedback?.gut?.length > 0 && (
+                        <div className="space-y-1">
+                          <h4 className="text-sm font-bold text-green-700">Was war gut?</h4>
+                          <ul className="list-disc pl-5 text-gray-700 text-sm space-y-0.5">
+                            {evaluationResult.feedback.gut.map((item: string, i: number) => <li key={i}>{item}</li>)}
+                          </ul>
+                        </div>
+                      )}
 
-                  {/* Improved Version */}
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-3">
-                       <div className="h-8 w-8 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400">
-                          <CheckCircle2 className="h-4 w-4" />
-                       </div>
-                       <h3 className="text-sm font-black text-white uppercase">Musterlösung (Besserer Vorschlag)</h3>
+                      {evaluationResult.feedback?.verbessern?.length > 0 && (
+                        <div className="space-y-1 mt-4">
+                          <h4 className="text-sm font-bold text-red-700">Was muss verbessert werden?</h4>
+                          <ul className="list-disc pl-5 text-gray-700 text-sm space-y-0.5">
+                            {evaluationResult.feedback.verbessern.map((item: string, i: number) => <li key={i}>{item}</li>)}
+                          </ul>
+                        </div>
+                      )}
                     </div>
-                    <div className="bg-emerald-500/5 border border-emerald-500/10 p-6 rounded-2xl text-sm leading-relaxed text-emerald-100/80 font-medium whitespace-pre-wrap">
-                      {evaluationResult.improvedVersion || "Keine Musterlösung verfügbar."}
-                    </div>
+
+                    {evaluationResult.tipps?.length > 0 && (
+                      <div className="space-y-2 bg-blue-50 p-4 border border-blue-100">
+                        <h4 className="text-[10px] font-bold text-blue-900 uppercase tracking-widest">Tipps für nächstes Mal</h4>
+                        <ol className="list-decimal pl-4 text-blue-800 text-sm space-y-1">
+                          {evaluationResult.tipps.map((item: string, i: number) => <li key={i}>{item}</li>)}
+                        </ol>
+                      </div>
+                    )}
+                  
+                    {evaluationResult.improvedVersion && (
+                      <div className="space-y-2">
+                        <h3 className="text-[9px] font-bold text-gray-900 uppercase tracking-widest border-b border-gray-100 pb-1 text-green-700">Musterlösung</h3>
+                        <div className="p-4 bg-green-50 border border-green-100 leading-relaxed text-green-900 font-serif whitespace-pre-wrap">
+                          {evaluationResult.improvedVersion}
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
 
-                {/* Modal Footer */}
-                <div className="p-8 border-t border-white/5 bg-[#181818] shrink-0 flex justify-end gap-4">
-                   <Button 
-                      variant="outline" 
-                      onClick={() => setShowResultsModal(false)}
-                      className="border-white/10 text-white/50 hover:bg-white/5 hover:text-white font-black uppercase text-[10px] px-6 h-12 rounded-xl"
-                   >
-                      Schließen
-                   </Button>
-                   <Button 
-                      onClick={() => {
-                        setShowResultsModal(false);
-                        setUserText('');
-                        setWordCount(0);
-                        setTimeLeft(parseDurationToSeconds(teil.arbeitszeit));
-                        setIsTimerRunning(true);
-                      }}
-                      className="bg-[#ffcc00] hover:bg-[#ffcc00]/90 text-black font-black uppercase text-xs px-8 h-12 rounded-xl"
-                   >
-                      Neu starten
-                   </Button>
+                <div className="p-4 border-t border-gray-100 bg-gray-50 flex justify-end">
+                  <Button
+                    onClick={() => setShowResultsModal(false)}
+                    className="bg-gray-800 text-white font-bold uppercase text-[9px] tracking-widest px-6 h-9 rounded-none"
+                  >
+                    Schließen
+                  </Button>
                 </div>
               </>
             ) : null}
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 };
 

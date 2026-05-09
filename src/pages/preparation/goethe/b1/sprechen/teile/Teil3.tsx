@@ -10,67 +10,60 @@ interface Teil3Props {
 
 const Teil3: React.FC<Teil3Props> = ({ teil, topic, hasStarted }) => {
   return (
-    <div className="space-y-8 animate-in fade-in duration-700">
+    <div className="space-y-8 bg-white">
       {/* Exam Paper Header */}
-      <div className="bg-[#1a1a1a] border border-white/10 p-4 flex justify-between items-center text-white font-sans">
+      <div className="bg-white border-b-2 border-gray-900 pb-4 flex justify-between items-end text-gray-900 font-sans">
         <div className="flex flex-col">
-          <span className="text-sm font-black uppercase leading-none">Zertifikat B1</span>
-          <span className="text-xl font-black uppercase leading-none">Sprechen</span>
+          <span className="text-[8px] font-bold uppercase tracking-widest text-gray-400 leading-none mb-1">Zertifikat B1</span>
+          <span className="text-lg font-bold uppercase leading-none">Sprechen</span>
         </div>
-        <div className="flex flex-col items-end">
-          <span className="text-[10px] font-bold uppercase">Modellsatz</span>
-          <span className="text-[10px] font-bold uppercase">Kandidatenblätter</span>
+        <div className="flex flex-col items-end text-[7px] font-bold text-gray-400 uppercase tracking-widest">
+          <span>Kandidatenblatt</span>
         </div>
       </div>
 
       {/* Main Task Card */}
-      <div className="bg-[#111] text-white p-8 sm:p-12 rounded-sm border border-white/10 relative overflow-hidden">
-        <div className="relative z-10 space-y-12">
-          {/* Title */}
-          <div className="flex justify-between items-baseline border-b border-white/10 pb-4">
-            <h2 className="text-2xl font-black">{teil.label} {teil.title}</h2>
-          </div>
+      <div className="bg-white space-y-10">
+        <div className="flex justify-between items-baseline border-b border-gray-200 pb-2">
+          <h2 className="text-[11px] font-bold text-gray-900 uppercase tracking-tight">{teil.label} {teil.title}</h2>
+        </div>
 
-          <div className="space-y-12">
-            {/* Section 1 */}
-            <div className="space-y-4">
-                <h3 className="text-xl font-black uppercase italic text-[#ffcc00]">Nach Ihrer Präsentation:</h3>
-                <p className="text-lg font-medium leading-relaxed text-white/70 pr-0 sm:pr-12">
+        <div className="space-y-10">
+          <div className="space-y-3">
+              <h3 className="text-[9px] font-bold uppercase text-gray-400 tracking-widest">Nach Ihrer Präsentation:</h3>
+              <div className="p-4 border-l-2 border-gray-900 bg-gray-50">
+                <p className="text-xs font-serif italic leading-relaxed text-gray-700">
                    Reagieren Sie auf die Rückmeldung und auf Fragen der Prüfer/-innen und des Gesprächspartners/der Gesprächspartnerin.
                 </p>
-            </div>
+              </div>
+          </div>
 
-            {/* Section 2 */}
-            <div className="space-y-6">
-                <h3 className="text-xl font-black uppercase italic text-[#ffcc00]">Nach der Präsentation Ihres Partners/Ihrer Partnerin:</h3>
-                <div className="space-y-6 pl-0 sm:pl-4">
-                    <div className="flex items-start gap-4">
-                        <span className="text-lg font-bold">a)</span>
-                        <div className="space-y-2">
-                           <p className="text-lg font-bold">Geben Sie eine Rückmeldung zur Präsentation Ihres Partners/Ihrer Partnerin</p>
-                           <p className="text-base font-medium text-white/40 italic">(z. B. wie Ihnen die Präsentation gefallen hat, was für Sie neu oder besonders interessant war usw.).</p>
-                        </div>
-                    </div>
-                    <div className="flex items-start gap-4">
-                        <span className="text-lg font-bold">b)</span>
-                        <p className="text-lg font-bold">Stellen Sie auch eine Frage zur Präsentation Ihres Partners/Ihrer Partnerin.</p>
-                    </div>
-                </div>
-            </div>
+          <div className="space-y-4 pt-4">
+              <h3 className="text-[9px] font-bold uppercase text-gray-400 tracking-widest">Nach der Präsentation Ihres Partners:</h3>
+              <div className="space-y-6 pl-4">
+                  <div className="flex items-start gap-3">
+                      <span className="text-xs font-bold text-gray-900">a)</span>
+                      <div className="space-y-1">
+                         <p className="text-xs font-bold text-gray-800 uppercase tracking-tight">Geben Sie eine Rückmeldung zur Präsentation Ihres Partners</p>
+                         <p className="text-[9px] font-medium text-gray-400 italic">(z. B. wie Ihnen die Präsentation gefallen hat, was für Sie neu war usw.).</p>
+                      </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                      <span className="text-xs font-bold text-gray-900">b)</span>
+                      <p className="text-xs font-bold text-gray-800 uppercase tracking-tight">Stellen Sie auch eine Frage zur Präsentation Ihres Partners.</p>
+                  </div>
+              </div>
           </div>
         </div>
       </div>
 
-      {/* Context Alert */}
       {!hasStarted && (
-        <div className="bg-[#ffcc00]/5 border border-[#ffcc00]/10 p-6 rounded-[32px] flex items-start gap-4">
-          <div className="h-10 w-10 rounded-2xl bg-[#ffcc00]/10 flex items-center justify-center shrink-0">
-            <Info className="h-5 w-5 text-[#ffcc00]" />
-          </div>
+        <div className="border border-gray-200 p-4 flex items-start gap-3 bg-gray-50">
+          <Info className="h-4 w-4 text-gray-400 shrink-0" />
           <div className="space-y-1">
-            <h4 className="text-sm font-black text-white uppercase">Interaktions-Phase</h4>
-            <p className="text-sm text-white/50 leading-relaxed font-medium">
-               Der KI-Prüfungspartner wird nun auf Ihre Präsentation aus Teil 2 reagieren und eine Frage stellen. Bitte antworten Sie mündlich.
+            <h4 className="text-[9px] font-bold text-gray-900 uppercase tracking-widest">Hinweis</h4>
+            <p className="text-[9px] text-gray-500 leading-relaxed font-medium italic">
+               Der KI-Partner wird auf Ihre Präsentation reagieren und eine Frage stellen.
             </p>
           </div>
         </div>

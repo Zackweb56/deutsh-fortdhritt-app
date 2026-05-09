@@ -1,6 +1,5 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { Globe, MessageCircle } from 'lucide-react';
 
 interface Teil2Props {
   teil: any;
@@ -11,95 +10,87 @@ interface Teil2Props {
 }
 
 const Teil2: React.FC<Teil2Props> = ({ teil, topic, userText, onTextChange, wordCount }) => {
+  // Parse ausgangsmeinung, e.g. "Tania: 'Früher traf man sich...'"
+  let speakerName = 'Gast';
+  let commentText = topic.ausgangsmeinung || '';
+  const match = commentText.match(/^([^:]+):\s*['"]?(.+?)['"]?$/);
+  if (match) {
+    speakerName = match[1].trim();
+    commentText = match[2].trim();
+  }
+
   return (
-    <div className="space-y-8 animate-in fade-in duration-700">
-      {/* Exam Paper Header - Dark Mode */}
-      <div className="bg-[#1a1a1a] border border-white/10 p-4 flex justify-between items-center text-white font-sans rounded-t-xl">
-        <div className="flex flex-col">
-          <span className="text-sm font-black uppercase leading-none text-[#ffcc00]">Zertifikat B1</span>
-          <span className="text-xl font-black uppercase leading-none">Schreiben</span>
+    <div className="space-y-12">
+      <div className="bg-white p-8 space-y-8 border border-gray-200">
+        <div className="flex items-end justify-between border-b-2 border-gray-900 pb-4">
+          <h2 className="text-xl font-bold text-gray-900 uppercase tracking-tight">{teil.label}</h2>
+          <span className="text-sm text-gray-600 font-serif">Arbeitszeit: {teil.arbeitszeit}</span>
         </div>
-        <div className="flex flex-col items-end">
-          <span className="text-[10px] font-bold uppercase text-white/40">Modellsatz</span>
-          <span className="text-[10px] font-bold uppercase text-white/40">Kandidatenblätter</span>
-        </div>
-      </div>
 
-      {/* Main Task Card - Dark Mode */}
-      <div className="bg-[#111] text-white p-8 sm:p-12 rounded-b-xl border border-white/10 relative overflow-hidden">
-        <div className="relative z-10 space-y-10">
-          {/* Title & Time */}
-          <div className="flex justify-between items-baseline border-b border-white/10 pb-4">
-            <h2 className="text-2xl font-black italic">{teil.label}</h2>
-            <span className="text-sm font-medium italic text-white/40">Arbeitszeit: {teil.arbeitszeit}</span>
-          </div>
+        <div className="space-y-8 font-serif">
+           <div className="space-y-1">
+             <p className="text-base text-gray-800 italic leading-relaxed">
+               Sie haben im Fernsehen eine Diskussionssendung zum Thema „{topic.title}“ gesehen.
+             </p>
+             <p className="text-base text-gray-800 italic leading-relaxed">
+               Im Online-Gästebuch der Sendung finden Sie folgende Meinung:
+             </p>
+           </div>
 
-          {/* Forum Context Mockup - Dark Mode */}
-          <div className="bg-[#1a1a1a] rounded-3xl border border-white/5 overflow-hidden">
-             <div className="bg-white/5 px-6 py-4 flex items-center justify-between border-b border-white/5">
-                <div className="flex items-center gap-3">
-                   <div className="flex gap-1.5">
-                      <div className="w-2.5 h-2.5 rounded-full bg-red-500/50" />
-                      <div className="w-2.5 h-2.5 rounded-full bg-amber-500/50" />
-                      <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/50" />
-                   </div>
-                   <div className="h-6 w-48 bg-white/5 rounded-lg flex items-center px-3 ml-2">
-                      <Globe className="h-3 w-3 text-white/20 mr-2" />
-                      <span className="text-[10px] font-black text-white/20 uppercase">gaestebuch-diskussion.de</span>
-                   </div>
-                </div>
-                <div className="h-2 w-2 rounded-full bg-[#ffcc00]" />
+           {/* Gästebuch UI */}
+           <div className="border border-gray-400 bg-gray-100 font-sans max-w-2xl shadow-sm">
+             <div className="bg-gray-300 px-4 py-2 border-b border-gray-400 flex items-center">
+               <span className="font-bold text-gray-800 text-lg">Gästebuch</span>
              </div>
-             <div className="p-8 space-y-6">
-                <div className="space-y-2">
-                   <h3 className="text-2xl font-black text-white/90 italic">
-                      Thema: {topic.title}
-                   </h3>
-                   <p className="text-sm text-white/40 font-medium italic">Sie haben im Fernsehen eine Diskussionssendung zum Thema "{topic.title}" gesehen. Im Gästebuch der Sendung finden Sie folgende Meinung:</p>
-                </div>
-                <div className="bg-white/[0.03] p-8 rounded-2xl border-l-4 border-[#ffcc00] relative">
-                   <MessageCircle className="absolute top-4 right-4 h-5 w-5 text-white/10" />
-                   <p className="text-lg font-bold leading-relaxed text-[#ffcc00]/90">
-                      {topic.ausgangsmeinung}
-                   </p>
-                </div>
+             <div className="p-4 space-y-3 bg-white">
+               <div className="flex items-start gap-2 border-b border-gray-200 pb-2">
+                 <span className="text-gray-400 mt-1">▶</span>
+                 <div>
+                   <p className="text-sm font-bold text-gray-700">15.01. 16:55 Uhr</p>
+                   <p className="font-bold text-gray-900 mt-1">{speakerName}</p>
+                 </div>
+                 <div className="ml-4 pl-4 border-l border-gray-200 text-base text-gray-800 leading-relaxed font-serif">
+                   {commentText}
+                 </div>
+               </div>
+               <div className="flex items-center gap-2 text-gray-400 pt-1">
+                 <span>▶</span>
+                 <span className="text-sm font-bold">15.01. 17:02 Uhr</span>
+               </div>
              </div>
-          </div>
+           </div>
 
-          {/* Instructions */}
-          <div className="space-y-6 pt-4">
-            <div className="flex items-center gap-2 text-emerald-400">
-               <div className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-               <p className="text-base font-black uppercase text-[10px]">Ihre Aufgabe</p>
-            </div>
-            <div className="space-y-2">
-              <p className="text-lg font-bold leading-relaxed">Schreiben Sie nun Ihre Meinung (circa {teil.minWords} Wörter).</p>
-              <ul className="space-y-2 text-white/60 text-sm font-medium pl-2">
-                 <li>• Sagen Sie Ihre Meinung zu diesem Thema.</li>
-                 <li>• Begründen Sie, warum Sie dafür oder dagegen sind.</li>
-              </ul>
-            </div>
-          </div>
+           <div className="pt-4 text-base text-gray-800 space-y-3">
+             <p className="font-bold">Was ist Ihre Meinung dazu? Schreiben Sie einen Forumsbeitrag (ca. 80 Wörter).</p>
+             <p className="text-red-600 text-sm font-bold bg-red-50 p-3 border border-red-100">
+               ACHTUNG: Dies ist ein Forumsbeitrag. Benutzen Sie KEINE Anrede (wie "Liebe/r") und KEINE Grußformel am Ende. Beginnen Sie direkt mit Ihrer Meinung!
+             </p>
+           </div>
         </div>
       </div>
 
       {/* Writing Area */}
-      <div className="space-y-4 pt-4">
-        <div className="flex items-center justify-between">
-           <h3 className="text-xs font-black text-[#ffcc00] uppercase flex items-center gap-2">
-              <span className="h-1 w-4 bg-[#ffcc00] rounded-full" />
-              Ihre Meinung
-           </h3>
-           <div className="text-[10px] font-black text-white/20 uppercase bg-white/5 px-3 py-1 rounded-full border border-white/5">
-              Gästebuch-Beitrag verfassen
+      <div className="space-y-4">
+        <div className="flex items-center justify-between border-b border-gray-200 pb-2">
+           <h3 className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Antwortblatt</h3>
+           <div className="flex items-center gap-2">
+              <span className={cn(
+                "text-[9px] font-bold px-2 py-0.5 border",
+                (wordCount > 0 && (wordCount < 70 || wordCount > 100)) ? "bg-red-50 border-red-200 text-red-700" :
+                wordCount >= (teil.minWords || 80) ? "bg-green-50 border-green-200 text-green-700" : 
+                "bg-gray-100 border-gray-200 text-gray-400"
+              )}>
+                {wordCount} Wörter
+              </span>
+              <span className="text-[9px] text-gray-400 font-bold uppercase">/ min. {teil.minWords || 80}</span>
            </div>
         </div>
+        
         <textarea
           value={userText}
           onChange={onTextChange}
-          placeholder="Ich bin der Meinung, dass ... weil ..."
-          className="w-full h-80 bg-[#151515] border border-white/10 rounded-3xl p-8 text-lg leading-relaxed focus:outline-none focus:ring-2 focus:ring-[#ffcc00]/30 transition-all placeholder:text-white/5 resize-none custom-scrollbar"
-          dir="ltr"
+          placeholder="Schreiben Sie hier..."
+          className="w-full h-[400px] p-8 bg-white border border-gray-300 focus:border-gray-900 focus:ring-0 text-sm font-serif leading-relaxed text-gray-800 transition-none resize-none placeholder:text-gray-200"
         />
       </div>
     </div>

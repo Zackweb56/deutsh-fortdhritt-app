@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { ChevronLeft, Info, CheckCircle2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import lesenData from '@/data/preparation/goethe/b2/lesen.json';
+import GoetheExamLayout from '@/components/preparation/goethe/GoetheExamLayout';
 
 import Teil1 from './teile/Teil1';
 import Teil2 from './teile/Teil2';
@@ -95,117 +96,39 @@ const GoetheB2LesenSimulator = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white flex flex-col font-sans overflow-hidden" dir="ltr">
-      {/* Header */}
-      <header className="h-14 border-b border-white/10 bg-[#111] flex items-center justify-between px-4 sticky top-0 z-50">
-        <div className="flex items-center gap-4">
-          <Button variant="ghost" size="sm" className="h-8 px-2 text-white/50 hover:text-white" onClick={() => navigate(-1)}>
-            <ChevronLeft className="h-4 w-4 mr-1" />
-            <span className="text-xs font-bold uppercase">Zurück</span>
-          </Button>
-          <div className="flex flex-col hidden sm:flex">
-            <span className="text-[10px] font-black text-[#ffcc00] uppercase tracking-wider">{lesenData.institut} • {lesenData.level}</span>
-            <span className="text-xs font-bold text-white/90">{lesenData.module} • {teil.label}</span>
-          </div>
-        </div>
-
-        {/* Timer */}
-        <div className="flex items-center gap-4">
-           <div className={cn(
-             'flex flex-col items-center px-3 py-1 rounded-md border transition-all',
-             timeLeft > 120 ? 'bg-green-500/10 border-green-500/30 text-green-400' :
-             timeLeft > 0 ? 'bg-[#ffcc00]/10 border-[#ffcc00]/30 text-[#ffcc00]' :
-             'bg-red-500/10 border-red-500/30 text-red-500 animate-pulse'
-           )}>
-             <span className="text-[8px] font-black uppercase tracking-widest opacity-80">Zeit</span>
-             <span className="text-sm font-black tabular-nums leading-none">
-               {formatTime(timeLeft)}
-             </span>
-           </div>
-        </div>
-      </header>
-
-      {/* Main Content */}
-      <main className="flex-1 overflow-y-auto custom-scrollbar p-4 sm:p-6 lg:p-8 relative">
-        <div className="max-w-4xl mx-auto space-y-6">
-          
-          {/* Instructions Block */}
-          <div className="bg-[#ffcc00] p-4 rounded-xl flex items-start gap-3 shadow-lg shadow-[#ffcc00]/5">
-            <div className="h-6 w-6 rounded-full bg-black/10 flex items-center justify-center shrink-0 mt-0.5">
-              <Info className="h-4 w-4 text-black" />
-            </div>
-            <div>
-              <p className="text-sm font-black text-black leading-snug uppercase tracking-tight">
-                {teil.instructions}
-              </p>
-              <div className="flex items-center gap-3 mt-2 opacity-80">
-                <span className="text-[10px] font-bold text-black uppercase">{teil.pruefungsziel}</span>
-                <span className="text-[10px] font-bold text-black uppercase">•</span>
-                <span className="text-[10px] font-bold text-black uppercase">{teil.arbeitszeit}</span>
-              </div>
-            </div>
+    <>
+      <GoetheExamLayout
+        title={`${lesenData.institut} — ${lesenData.level}`}
+        module={lesenData.module}
+        teil={teil.label}
+        timeLeft={timeLeft}
+        progress={`${teil.nummer}/${lesenData.teile.length}`}
+        onZuruck={() => navigate(-1)}
+        onWeiter={() => {
+          const nextTeil = lesenData.teile.find(t => t.nummer === teil.nummer + 1);
+          if (nextTeil) {
+            navigate(`/preparation/goethe/b2/lesen/${nextTeil.id}/${topicId}`);
+          }
+        }}
+        onAbgeben={handleSubmit}
+        disableMainScroll={true}
+      >
+        <div className="flex flex-col h-full">
+          {/* Instructions Box */}
+          <div className="bg-[#fff9c4] border-b border-[#fbc02d] p-4 text-sm text-[#5d4037] leading-relaxed shrink-0">
+             <div className="max-w-6xl mx-auto flex items-start gap-3">
+                <Info className="h-4 w-4 mt-0.5 shrink-0" />
+                <p className="font-bold uppercase tracking-tight">{teil.instructions} {teil.pruefungsziel}</p>
+             </div>
           </div>
 
-          {/* Active Teil Component */}
-          <div className="pb-24">
+          {/* Split Content Area */}
+          <div className="flex-1 overflow-hidden">
             {renderTeil()}
           </div>
         </div>
-      </main>
-
-      {/* Footer / Submit Area */}
-      <footer className="h-16 border-t border-white/10 bg-[#111] fixed bottom-0 w-full z-40 flex items-center justify-center px-4">
-        <div className="max-w-4xl w-full flex justify-between items-center gap-2">
-          <div className="text-[10px] sm:text-xs font-bold text-white/50 truncate flex-1 min-w-0 pr-2">
-            {topic.title}
-          </div>
-          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
-            {!showResults ? (
-              <>
-                <Button 
-                  variant="outline"
-                  onClick={() => setAnswers({})}
-                  className="border-white/20 text-white/70 hover:bg-white/10 font-bold uppercase tracking-wider px-3 sm:px-6 h-8 sm:h-10 text-[9px] sm:text-xs bg-transparent"
-                >
-                  Zurücksetzen
-                </Button>
-                <Button 
-                  onClick={handleSubmit}
-                  disabled={Object.keys(answers).length < (teil.itemCount || 0)}
-                  className={cn(
-                    "font-black uppercase tracking-widest px-4 sm:px-8 h-8 sm:h-10 text-[10px] sm:text-sm transition-all",
-                    Object.keys(answers).length >= (teil.itemCount || 0)
-                      ? "bg-[#ffcc00] hover:bg-[#ffcc00]/90 text-black shadow-lg shadow-[#ffcc00]/20"
-                      : "bg-white/10 text-white/30 cursor-not-allowed"
-                  )}
-                >
-                  Auswerten
-                </Button>
-              </>
-            ) : (
-              <>
-                <Button 
-                  variant="outline"
-                  onClick={() => {
-                    setAnswers({});
-                    setShowResults(false);
-                    setTimeLeft(parseDurationToSeconds(teil.arbeitszeit));
-                    setIsTimerRunning(true);
-                  }}
-                  className="border-white/20 text-white/70 hover:bg-white/10 font-bold uppercase tracking-wider px-3 sm:px-6 h-8 sm:h-10 text-[9px] sm:text-xs bg-transparent"
-                >
-                  Neu starten
-                </Button>
-                <div className="flex items-center gap-1.5 text-green-400 font-black uppercase tracking-widest text-[10px] sm:text-xs">
-                  <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5" />
-                  <span className="hidden sm:inline">Ergebnisse</span>
-                </div>
-              </>
-            )}
-          </div>
-        </div>
-      </footer>
-    </div>
+      </GoetheExamLayout>
+    </>
   );
 };
 

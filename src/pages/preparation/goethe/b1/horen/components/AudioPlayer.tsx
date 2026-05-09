@@ -1,14 +1,15 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Play, Pause, Volume2, Headphones, RotateCcw } from 'lucide-react';
+import { Play, Headphones } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface AudioPlayerProps {
   src: string;
   maxPlays: number;
   onPlayComplete?: () => void;
+  className?: string;
 }
 
-const AudioPlayer: React.FC<AudioPlayerProps> = ({ src, maxPlays, onPlayComplete }) => {
+const AudioPlayer: React.FC<AudioPlayerProps> = ({ src, maxPlays, onPlayComplete, className }) => {
   const [playCount, setPlayCount] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -16,68 +17,44 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ src, maxPlays, onPlayComplete
   const [currentTime, setCurrentTime] = useState(0);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  const togglePlay = () => {
-    if (!audioRef.current) return;
+  const isLimitReached = playCount >= maxPlays;
 
-    if (isPlaying) {
-      audioRef.current.pause();
-    } else {
-      if (playCount >= maxPlays && audioRef.current.currentTime === 0) return;
-      
-      const playPromise = audioRef.current.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(error => {
-          console.error("Playback failed:", error);
-        });
-      }
-    }
+  const handlePlay = () => {
+    if (!audioRef.current || isLimitReached || isPlaying) return;
+    audioRef.current.play().catch(err => console.error('Playback failed:', err));
   };
 
   const handleTimeUpdate = () => {
     if (!audioRef.current) return;
-    const current = audioRef.current.currentTime;
+    const cur = audioRef.current.currentTime;
     const dur = audioRef.current.duration;
-    setCurrentTime(current);
-    setProgress((current / dur) * 100);
+    setCurrentTime(cur);
+    setProgress(dur > 0 ? (cur / dur) * 100 : 0);
   };
 
   const handleLoadedMetadata = () => {
-    if (!audioRef.current) return;
-    setDuration(audioRef.current.duration);
+    if (audioRef.current) setDuration(audioRef.current.duration);
   };
 
   const handleEnded = () => {
     setIsPlaying(false);
-    setProgress(100);
     setPlayCount(prev => prev + 1);
+    setProgress(0);
+    setCurrentTime(0);
+    if (audioRef.current) audioRef.current.currentTime = 0;
     if (onPlayComplete) onPlayComplete();
-    
-    // Auto-reset for next play if allowed
-    if (audioRef.current) {
-        audioRef.current.currentTime = 0;
-        setProgress(0);
-    }
-  };
-
-  const formatTime = (time: number) => {
-    const minutes = Math.floor(time / 60);
-    const seconds = Math.floor(time % 60);
-    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
   };
 
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
-
-    const onPlay = () => setIsPlaying(true);
+    const onPlay  = () => setIsPlaying(true);
     const onPause = () => setIsPlaying(false);
-
     audio.addEventListener('play', onPlay);
     audio.addEventListener('pause', onPause);
     audio.addEventListener('timeupdate', handleTimeUpdate);
     audio.addEventListener('loadedmetadata', handleLoadedMetadata);
     audio.addEventListener('ended', handleEnded);
-
     return () => {
       audio.removeEventListener('play', onPlay);
       audio.removeEventListener('pause', onPause);
@@ -87,57 +64,95 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ src, maxPlays, onPlayComplete
     };
   }, []);
 
-  const isLimitReached = playCount >= maxPlays;
+  const fmt = (t: number) => {
+    const m = Math.floor(t / 60);
+    const s = Math.floor(t % 60);
+    return `${m}:${s.toString().padStart(2, '0')}`;
+  };
+
+  const playsLeft = maxPlays - playCount;
 
   return (
-    <div className="flex items-center gap-4 bg-black/40 p-4 rounded-xl border border-white/5 group relative overflow-hidden">
+    <div className={cn('bg-[#f1f5f9] border border-gray-300 p-3 space-y-2 relative', className)}>
       <audio ref={audioRef} src={src} />
-      
-      <button 
-        onClick={togglePlay}
-        disabled={isLimitReached && !isPlaying}
-        className={cn(
-          "h-10 w-10 rounded-full flex items-center justify-center text-black transition-all shadow-lg",
-          isLimitReached && !isPlaying 
-            ? "bg-white/10 text-white/20 cursor-not-allowed" 
-            : "bg-[#ffcc00] hover:scale-105 active:scale-95 shadow-[#ffcc00]/20"
-        )}
-      >
-        {isPlaying ? (
-          <Pause className="h-5 w-5 fill-current" />
-        ) : (
-          <Play className="h-5 w-5 fill-current ml-0.5" />
-        )}
-      </button>
 
-      <div className="flex-1 space-y-1">
-        <div className="flex justify-between items-center mb-1">
-            <span className="text-[10px] font-black text-white/30 uppercase tracking-widest flex items-center gap-1">
-                <RotateCcw className="h-2.5 w-2.5" />
-                {playCount} / {maxPlays} {playCount === 1 ? 'Wiederholung' : 'Wiederholungen'}
+      {/* Top row: Play button + status */}
+      <div className="flex items-center gap-3">
+        {/* Play button */}
+        <button
+          onClick={handlePlay}
+          disabled={isLimitReached || isPlaying}
+          className={cn(
+            'h-9 w-9 border flex items-center justify-center shrink-0 transition-none',
+            isLimitReached
+              ? 'bg-gray-100 border-gray-200 text-gray-300 cursor-not-allowed'
+              : isPlaying
+                ? 'bg-gray-200 border-gray-300 text-gray-400 cursor-not-allowed'
+                : 'bg-[#1e293b] border-[#1e293b] text-white cursor-pointer'
+          )}
+        >
+          {isPlaying ? (
+            <Headphones className="h-3.5 w-3.5" />
+          ) : (
+            <Play className="h-3.5 w-3.5 fill-current ml-0.5" />
+          )}
+        </button>
+
+        {/* Info */}
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center justify-between mb-1.5">
+            <div className="flex items-center gap-1.5">
+              {/* Play count dots */}
+              <div className="flex gap-1">
+                {Array.from({ length: maxPlays }).map((_, i) => (
+                  <div
+                    key={i}
+                    className={cn(
+                      'h-2 w-2 border',
+                      i < playCount
+                        ? 'bg-gray-400 border-gray-400'
+                        : isPlaying && i === playCount
+                          ? 'bg-[#1e293b] border-[#1e293b]'
+                          : 'bg-white border-gray-400'
+                    )}
+                  />
+                ))}
+              </div>
+              <span className="text-[8px] font-bold text-gray-500 uppercase tracking-wide">
+                {isPlaying
+                  ? 'Wiedergabe läuft...'
+                  : isLimitReached
+                    ? 'Abgespielt'
+                    : `${playsLeft}x verbleibend`
+                }
+              </span>
+            </div>
+            <span className="text-[8px] font-bold text-gray-400 tabular-nums shrink-0">
+              {fmt(currentTime)} / {fmt(duration || 0)}
             </span>
-            <span className="text-[10px] font-black text-white/30 tabular-nums uppercase tracking-widest">
-                {formatTime(currentTime)} / {formatTime(duration || 0)}
-            </span>
-        </div>
-        <div className="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
-          <div 
-            className="h-full bg-[#ffcc00] rounded-full transition-all duration-300" 
-            style={{ width: `${progress}%` }} 
-          />
+          </div>
+
+          {/* Progress bar */}
+          <div className="h-1 w-full bg-gray-200 border border-gray-300 overflow-hidden">
+            <div
+              className="h-full bg-[#1e293b] transition-none"
+              style={{ width: `${progress}%` }}
+            />
+          </div>
         </div>
       </div>
 
-      <Headphones className={cn(
-        "h-4 w-4 transition-colors",
-        isPlaying ? "text-[#ffcc00] animate-pulse" : "text-white/20"
-      )} />
-
+      {/* Limit reached banner */}
       {isLimitReached && !isPlaying && (
-        <div className="absolute inset-0 bg-black/60 flex items-center justify-center backdrop-blur-[2px] animate-in fade-in duration-300">
-            <span className="text-[10px] font-black text-[#ffcc00] uppercase tracking-[0.2em]">Hörvorgänge beendet</span>
+        <div className="border border-gray-300 bg-gray-100 px-3 py-1.5 text-center">
+          <span className="text-[8px] font-bold text-gray-500 uppercase tracking-widest">
+            Hörvorgang abgeschlossen — Keine weiteren Versuche
+          </span>
         </div>
       )}
+
+      {/* Seek-prevention overlay (covers timeline area only) */}
+      <div className="absolute inset-0 cursor-default" style={{ pointerEvents: isPlaying ? 'all' : 'none' }} />
     </div>
   );
 };

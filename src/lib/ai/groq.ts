@@ -62,7 +62,11 @@ export interface PreparationWritingResult {
   kohaerenz: number;
   wortschatz: number;
   strukturen: number;
-  feedback: string;
+  feedback: {
+    gut: string[];
+    verbessern: string[];
+  };
+  tipps: string[];
   improvedVersion: string;
 }
 
@@ -406,6 +410,8 @@ export const evaluatePreparationWriting = async (params: {
   minWords: number;
   userText: string;
 }): Promise<PreparationWritingResult> => {
+  const wordCount = params.userText.trim().split(/\\s+/).filter(w => w.length > 0).length;
+
   const messages: GroqMessage[] = [
     {
       role: 'system',
@@ -422,29 +428,72 @@ Mindestwoerter: ${params.minWords}
 Kandidatentext:
 "${params.userText}"
 
-Offizielles ${params.level} Bewertungsschema (Maximal 100 Punkte, Bestehensgrenze: 60 Punkte):
-- aufgabenerfuellung (0-25 Punkte): Wurden alle Punkte der Aufgabenstellung behandelt? Stimmt das Format?
-- kohaerenz (0-25 Punkte): Logischer Aufbau, Verknüpfungen, Absätze.
-- wortschatz (0-25 Punkte): Reichhaltigkeit, Genauigkeit, situationsangemessen.
-- strukturen (0-25 Punkte): Grammatik, Satzbau, Flexion.
+Offizielles ${params.level} Bewertungsschema (Vergebe für jedes Kriterium strikt Punkte im Bereich 0-25):
 
-Die Summe dieser 4 Kriterien ergibt den "score" (0-100).
-"feedback" muss auf Deutsch sein.
-"improvedVersion" muss eine sprachlich einwandfreie, natürliche MUSTERLÖSUNG des Textes sein. 
-Achte dabei ABSOLUT STRIKT auf den Aufgabentyp basierend auf dem Niveau und Teil:
-- B1 Teil 1: Persönliche E-Mail (informell, "du").
-- B1 Teil 2 / B2 Teil 1: Forumsbeitrag/Meinungsäußerung (sachlich, keine direkte Anrede nötig).
-- B1 Teil 3 / B2 Teil 2: Formelle Nachricht/E-Mail (formell, "Sie", Anrede "Sehr geehrte/r ...", Gruß "Mit freundlichen Grüßen").
-Die Musterlösung sollte zeigen, wie ein Prüfling auf Niveau ${params.level} die volle Punktzahl erreicht.
+**Aufgabenerfüllung (0-25):**
+- 25: Alle 3 Aufgabenpunkte perfekt + richtiges Format
+- 20-24: Alle Punkte behandelt, aber einer zu kurz oder kleiner Formatfehler
+- 15-19: Nur 2 von 3 Punkten behandelt
+- 10-14: Nur 1 von 3 Punkten behandelt
+- 5-9: Thema verfehlt, aber verwandt
+- 0-4: Völlig falsch oder leer
 
-Gib deine Bewertung exakt in diesem JSON-Format zurück:
-{"score":0,"aufgabenerfuellung":0,"kohaerenz":0,"wortschatz":0,"strukturen":0,"feedback":"","improvedVersion":""}`,
+**Kohärenz (0-25):**
+- 25: Logischer Aufbau + 3+ verschiedene Konnektoren
+- 20-24: Logischer Aufbau + 2 Konnektoren
+- 15-19: Logisch + 1 Konnektor
+- 10-14: Logisch aber keine Konnektoren
+- 5-9: Schwer verständlich
+- 0-4: Keine Struktur
+
+**Wortschatz (0-25):**
+- 25: Reicher Wortschatz, 0 Wiederholungen, themenspezifisch
+- 20-24: Guter Wortschatz, 1-2 Wiederholungen
+- 15-19: Basis-Wortschatz, 3-4 Wiederholungen
+- 10-14: Sehr begrenzt, 5-6 Wiederholungen
+- 5-9: Viele falsche Wörter
+- 0-4: Unverständlich
+
+**Strukturen / Grammatik (0-25):**
+- 25: 0-2 Fehler
+- 20-24: 3-4 Fehler
+- 15-19: 5-6 Fehler, noch verständlich
+- 10-14: 7-8 Fehler
+- 5-9: 9-10 Fehler, schwer verständlich
+- 0-4: 11+ Fehler
+
+WICHTIGE PRÜFUNGSREGELN:
+1. Wortanzahl: Der Text hat ${wordCount} Wörter. Das Minimum ist ${params.minWords}. Wenn der Text deutlich zu kurz ist (weniger als ${params.minWords - 10} Wörter), ziehe Punkte bei der Aufgabenerfüllung ab!
+2. Format prüfen:
+   - B1 Teil 1: Persönliche E-Mail (informell). MUSS eine informelle Anrede (z.B. Liebe/r) und eine Grußformel (z.B. Viele Grüße) haben. Wenn diese fehlen -> Punktabzug!
+   - B1 Teil 2 / B2 Teil 1: Forumsbeitrag/Meinungsäußerung. Darf KEINE direkte Anrede oder Grußformel (wie "Liebe/r" oder "Viele Grüße") haben. Man startet direkt mit der Meinung. Wenn Anrede/Gruß vorhanden -> Punktabzug!
+   - B1 Teil 3 / B2 Teil 2: Formelle Nachricht/E-Mail (formell, "Sie"). MUSS eine formelle Anrede (Sehr geehrte/r) und einen formellen Gruß (Mit freundlichen Grüßen) haben. Wenn informell oder fehlend -> starker Punktabzug!
+
+"feedback" muss strukturiert auf Deutsch sein. 
+"improvedVersion" muss eine sprachlich einwandfreie, natürliche MUSTERLÖSUNG (100%) des Textes sein, im EXAKT richtigen Format (E-Mail oder Forumsbeitrag).
+
+Gib deine Bewertung exakt in diesem JSON-Format zurück (Kategorien 0-25):
+{"aufgabenerfuellung":0,"kohaerenz":0,"wortschatz":0,"strukturen":0,"feedback":{"gut":["..."],"verbessern":["..."]},"tipps":["..."],"improvedVersion":""}`,
     },
   ];
 
   const rawText = await callGroq(messages, 0.3);
   const cleanedText = stripMarkdownJson(rawText);
-  return JSON.parse(cleanedText) as PreparationWritingResult;
+  const parsed = JSON.parse(cleanedText) as any;
+  
+  // Total score is the sum of the 4 criteria directly (no multiplier)
+  const totalScore = (parsed.aufgabenerfuellung || 0) + (parsed.kohaerenz || 0) + (parsed.wortschatz || 0) + (parsed.strukturen || 0);
+
+  return {
+    score: totalScore,
+    aufgabenerfuellung: parsed.aufgabenerfuellung || 0,
+    kohaerenz: parsed.kohaerenz || 0,
+    wortschatz: parsed.wortschatz || 0,
+    strukturen: parsed.strukturen || 0,
+    feedback: parsed.feedback || { gut: [], verbessern: [] },
+    tipps: parsed.tipps || [],
+    improvedVersion: parsed.improvedVersion || '',
+  };
 };
 
 export const evaluatePreparationSpeaking = async (params: {

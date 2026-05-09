@@ -1,103 +1,189 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
-import { Check, X } from 'lucide-react';
+import { Check, X, Flag } from 'lucide-react';
 
 interface Teil1Props {
   topic: any;
   answers: Record<string, string>;
   showResults: boolean;
-  onAnswerChange: (id: string, value: string) => void;
+  onAnswerChange: (itemId: string, value: string) => void;
 }
 
 const Teil1: React.FC<Teil1Props> = ({ topic, answers, showResults, onAnswerChange }) => {
+  const [markedItems, setMarkedItems] = useState<Set<string>>(new Set());
+
   if (!topic) return null;
 
-  const renderItem = (item: any, isBeispiel = false) => {
-    const isSelectedRichtig = isBeispiel ? item.correct === 'Richtig' : answers[item.id] === 'Richtig';
-    const isSelectedFalsch = isBeispiel ? item.correct === 'Falsch' : answers[item.id] === 'Falsch';
-
-    // Evaluation logic when showResults is true
-    const isCorrect = answers[item.id] === item.correct;
-    
-    return (
-      <div 
-        key={item.id} 
-        className={cn(
-          "flex flex-col sm:flex-row gap-4 p-4 rounded-xl border transition-all duration-300",
-          isBeispiel ? "bg-white/5 border-white/10 opacity-75" : "bg-[#111] border-white/5 hover:border-white/20",
-          showResults && !isBeispiel && (isCorrect ? "border-green-500/50 bg-green-500/5" : "border-red-500/50 bg-red-500/5")
-        )}
-      >
-        <div className="flex-1 flex gap-3">
-          <span className="font-black text-[#ffcc00] text-lg w-6 shrink-0">{item.id}</span>
-          <p className="text-sm text-white/90 leading-relaxed font-medium">{item.text}</p>
-        </div>
-        <div className="flex gap-2 sm:shrink-0 sm:self-center pt-2 sm:pt-0">
-          <button
-            disabled={isBeispiel || showResults}
-            onClick={() => onAnswerChange(item.id, 'Richtig')}
-            className={cn(
-              "flex-1 sm:flex-none px-6 py-2 rounded-lg font-black uppercase tracking-widest text-xs border-2 transition-all",
-              isSelectedRichtig 
-                ? "bg-[#ffcc00] border-[#ffcc00] text-black shadow-[0_0_15px_rgba(255,204,0,0.3)]" 
-                : "bg-transparent border-white/20 text-white/50 hover:border-white/50 hover:text-white",
-              showResults && !isBeispiel && item.correct === 'Richtig' && !isSelectedRichtig && "border-green-500 text-green-500",
-              isBeispiel && isSelectedRichtig && "bg-white/20 border-white/30 text-white shadow-none"
-            )}
-          >
-            Richtig
-          </button>
-          <button
-            disabled={isBeispiel || showResults}
-            onClick={() => onAnswerChange(item.id, 'Falsch')}
-            className={cn(
-              "flex-1 sm:flex-none px-6 py-2 rounded-lg font-black uppercase tracking-widest text-xs border-2 transition-all",
-              isSelectedFalsch 
-                ? "bg-[#ffcc00] border-[#ffcc00] text-black shadow-[0_0_15px_rgba(255,204,0,0.3)]" 
-                : "bg-transparent border-white/20 text-white/50 hover:border-white/50 hover:text-white",
-              showResults && !isBeispiel && item.correct === 'Falsch' && !isSelectedFalsch && "border-green-500 text-green-500",
-              isBeispiel && isSelectedFalsch && "bg-white/20 border-white/30 text-white shadow-none"
-            )}
-          >
-            Falsch
-          </button>
-        </div>
-        
-        {/* Result Icon */}
-        {showResults && !isBeispiel && (
-          <div className="absolute right-2 top-2 sm:relative sm:right-0 sm:top-0 flex items-center justify-center">
-            {isCorrect ? (
-              <Check className="h-6 w-6 text-green-500" />
-            ) : (
-              <X className="h-6 w-6 text-red-500" />
-            )}
-          </div>
-        )}
-      </div>
-    );
+  const toggleMark = (id: string) => {
+    setMarkedItems(prev => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
   };
 
+  const textTitle = typeof topic.text === 'object' ? topic.text.title : null;
+  const textDatum  = typeof topic.text === 'object' ? topic.text.datum  : null;
+  const textContent = typeof topic.text === 'object' ? topic.text.content : topic.text;
+
+  const answeredCount = topic.items?.filter((item: any) => !!answers[item.id]).length ?? 0;
+  const totalCount    = topic.items?.length ?? 0;
+
   return (
-    <div className="space-y-8 animate-in fade-in duration-500">
-      {/* Text Section */}
-      <div className="bg-[#1a1a1a] border border-white/10 rounded-2xl p-6 md:p-8 shadow-xl">
-        <div className="mb-6 pb-4 border-b border-white/10">
-          <h2 className="text-xl md:text-2xl font-black text-white mb-2">{topic.text.title}</h2>
-          {topic.text.datum && (
-            <span className="text-sm font-bold text-[#ffcc00] uppercase tracking-wider">{topic.text.datum}</span>
-          )}
-        </div>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-base md:text-lg text-white/80 leading-loose whitespace-pre-line font-medium">
-            {topic.text.content}
-          </p>
+    <div className="flex flex-col lg:flex-row h-full bg-[#f1f5f9]">
+
+      {/* ── Left: Reading Text ── */}
+      <div className="flex-1 overflow-y-auto p-6 md:p-10 bg-white border-b lg:border-b-0 lg:border-r border-gray-300">
+        <div className="max-w-2xl mx-auto space-y-5">
+          <div className="border-b-2 border-gray-900 pb-3">
+            <p className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Leseverstehen — Teil 1</p>
+            <h2 className="text-base font-bold text-gray-900 uppercase tracking-tight mt-0.5">{topic.title}</h2>
+          </div>
+
+          <div className="bg-gray-50 border border-gray-200 p-6 space-y-3">
+            {textTitle && (
+              <h4 className="text-xs font-bold text-gray-900 border-b border-gray-200 pb-2">{textTitle}</h4>
+            )}
+            {textDatum && (
+              <p className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">{textDatum}</p>
+            )}
+            <div className="text-xs text-gray-800 leading-relaxed font-serif whitespace-pre-line">
+              {textContent}
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Questions Section */}
-      <div className="space-y-4">
-        {topic.beispiel && renderItem(topic.beispiel, true)}
-        {topic.items?.map((item: any) => renderItem(item, false))}
+      {/* ── Right: Questions ── */}
+      <div className="w-full lg:w-[420px] overflow-y-auto bg-gray-50 p-5 md:p-8 shrink-0 border-l border-gray-300">
+        <div className="space-y-5">
+
+          {/* Header with counter */}
+          <div className="flex items-center justify-between border-b border-gray-300 pb-3">
+            <h3 className="text-[9px] font-bold text-gray-900 uppercase tracking-widest">Aufgaben</h3>
+            <span className={cn(
+              'text-[8px] font-bold px-2 py-0.5 border uppercase tracking-wide',
+              answeredCount === totalCount
+                ? 'bg-green-50 border-green-300 text-green-700'
+                : 'bg-gray-100 border-gray-300 text-gray-400'
+            )}>
+              {answeredCount} / {totalCount} beantwortet
+            </span>
+          </div>
+
+          {/* Beispiel */}
+          {topic.beispiel && (
+            <div className="space-y-1 opacity-60">
+              <span className="text-[8px] font-bold text-gray-400 uppercase tracking-widest">Beispiel</span>
+              <div className="p-3 bg-gray-100 border border-gray-200">
+                <div className="flex gap-2 mb-2">
+                  <span className="text-[9px] font-bold text-gray-400">0.</span>
+                  <p className="text-[11px] text-gray-700 font-medium leading-snug">{topic.beispiel.text}</p>
+                </div>
+                <div className="flex gap-2 pl-4">
+                  <div className="goethe-option active py-0.5 px-3 pointer-events-none">
+                    <div className="goethe-radio active" />
+                    <span className="text-[9px] font-bold uppercase">{topic.beispiel.correct}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Questions */}
+          <div className="space-y-2.5">
+            {topic.items?.map((item: any) => {
+              const selected   = answers[item.id];
+              const isAnswered = !!selected;
+              const isCorrect  = selected === item.correct;
+              const isMarked   = markedItems.has(item.id);
+
+              return (
+                <div
+                  key={item.id}
+                  className={cn(
+                    'border transition-none',
+                    showResults
+                      ? isCorrect
+                        ? 'bg-green-50 border-green-300'
+                        : 'bg-red-50 border-red-300'
+                      : isAnswered
+                        ? 'bg-blue-50 border-blue-300'   // ← blue highlight when answered
+                        : isMarked
+                          ? 'bg-yellow-50 border-yellow-300'
+                          : 'bg-white border-gray-300'
+                  )}
+                >
+                  <div className="p-3 space-y-2.5">
+                    {/* Question row */}
+                    <div className="flex items-start gap-2 justify-between">
+                      <div className="flex gap-2 flex-1">
+                        <span className={cn(
+                          'text-[9px] font-black mt-0.5 w-4 shrink-0',
+                          isAnswered && !showResults ? 'text-blue-500' : 'text-gray-400'
+                        )}>
+                          {item.id}.
+                        </span>
+                        <p className="text-[11px] text-gray-800 font-medium leading-snug">{item.text}</p>
+                      </div>
+
+                      {/* Flag / result icon */}
+                      <div className="shrink-0 flex items-center gap-1">
+                        {showResults ? (
+                          isCorrect
+                            ? <Check className="h-3.5 w-3.5 text-green-600" />
+                            : <X className="h-3.5 w-3.5 text-red-600" />
+                        ) : (
+                          <button
+                            onClick={() => toggleMark(item.id)}
+                            className="p-0.5 text-gray-300 hover:text-yellow-500 transition-none"
+                            title="Markieren"
+                          >
+                            <Flag className={cn('h-3 w-3', isMarked && 'fill-yellow-400 text-yellow-400')} />
+                          </button>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Pill buttons: Richtig / Falsch */}
+                    <div className="flex gap-2 pl-5">
+                      {['Richtig', 'Falsch'].map((option) => {
+                        const isSelected = selected === option;
+                        return (
+                          <button
+                            key={option}
+                            disabled={showResults}
+                            onClick={() => onAnswerChange(item.id, option)}
+                            className={cn(
+                              'flex-1 py-1.5 text-center border font-bold text-[9px] uppercase tracking-wide transition-none',
+                              isSelected
+                                ? 'bg-[#1e293b] border-[#1e293b] text-white'
+                                : 'bg-white border-gray-300 text-gray-500 hover:border-gray-500 hover:text-gray-700',
+                              showResults && isSelected && isCorrect  && 'bg-green-600 border-green-600 text-white',
+                              showResults && isSelected && !isCorrect && 'bg-red-600 border-red-600 text-white',
+                              showResults && !isSelected && option === item.correct && 'border-green-500 text-green-600 bg-green-50'
+                            )}
+                          >
+                            {option}
+                          </button>
+                        );
+                      })}
+                    </div>
+
+                    {/* Show correct answer when wrong */}
+                    {showResults && !isCorrect && (
+                      <div className="pl-5 flex items-center justify-between">
+                        <span className="text-[8px] font-bold text-red-600 uppercase">Falsch</span>
+                        <span className="text-[8px] font-bold text-green-600 uppercase">Soll: {item.correct}</span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </div>
   );

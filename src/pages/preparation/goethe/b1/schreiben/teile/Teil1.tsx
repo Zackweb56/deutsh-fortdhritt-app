@@ -11,75 +11,60 @@ interface Teil1Props {
 
 const Teil1: React.FC<Teil1Props> = ({ teil, topic, userText, onTextChange, wordCount }) => {
   return (
-    <div className="space-y-8 animate-in fade-in duration-700">
-      {/* Exam Paper Header - Dark Mode */}
-      <div className="bg-[#1a1a1a] border border-white/10 p-4 flex justify-between items-center text-white font-sans rounded-t-xl">
-        <div className="flex flex-col">
-          <span className="text-sm font-black uppercase leading-none text-[#ffcc00]">Zertifikat B1</span>
-          <span className="text-xl font-black uppercase leading-none">Schreiben</span>
+    <div className="space-y-12">
+      <div className="bg-white p-8 space-y-8 border border-gray-200">
+        <div className="flex items-end justify-between border-b-2 border-gray-900 pb-4">
+          <h2 className="text-xl font-bold text-gray-900 uppercase tracking-tight">{teil.label}</h2>
+          <span className="text-sm text-gray-600 font-serif">Arbeitszeit: {teil.arbeitszeit}</span>
         </div>
-        <div className="flex flex-col items-end">
-          <span className="text-[10px] font-bold uppercase text-white/40">Modellsatz</span>
-          <span className="text-[10px] font-bold uppercase text-white/40">Kandidatenblätter</span>
-        </div>
-      </div>
 
-      {/* Main Task Card - Dark Mode */}
-      <div className="bg-[#111] text-white p-8 sm:p-12 rounded-b-xl border border-white/10 relative overflow-hidden">
-        <div className="relative z-10 space-y-10">
-          {/* Title & Time */}
-          <div className="flex justify-between items-baseline border-b border-white/10 pb-4">
-            <h2 className="text-2xl font-black italic">{teil.label}</h2>
-            <span className="text-sm font-medium italic text-white/40">Arbeitszeit: {teil.arbeitszeit}</span>
-          </div>
+        <div className="space-y-6 font-serif">
+           <p className="text-base text-gray-800 italic leading-relaxed whitespace-pre-wrap">
+             {topic.situation}
+           </p>
 
-          {/* Situation */}
-          <div className="space-y-6">
-            <p className="text-lg leading-relaxed italic font-medium text-white/80 border-l-2 border-[#ffcc00] pl-6 py-2 bg-white/[0.02]">
-              {topic.situation}
-            </p>
-            
-            {/* Task Points */}
-            <ul className="space-y-4 pl-4">
-              {topic.aufgabenpunkte.map((punkt: string, idx: number) => (
-                <li key={idx} className="flex items-start gap-4">
-                  <span className="text-black font-black mt-1.5 h-1.5 w-5 bg-[#ffcc00] shrink-0 rounded-full" />
-                  <span className="text-lg font-bold">{punkt}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+           <div className="space-y-2 pl-2">
+             {topic.aufgabenpunkte?.map((point: string, idx: number) => (
+               <label key={idx} className="text-base text-gray-800 flex gap-3 items-start cursor-pointer hover:bg-gray-50 p-1 -ml-1 rounded">
+                 <input type="checkbox" className="mt-1.5 h-4 w-4 rounded border-gray-300 text-gray-900 focus:ring-gray-900" />
+                 <span>{point}</span>
+               </label>
+             ))}
+           </div>
 
-          {/* Instructions */}
-          <div className="space-y-3 pt-8 border-t border-white/5">
-            <div className="flex items-center gap-2 text-emerald-400">
-               <div className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-               <p className="text-base font-black uppercase text-[10px]">Anforderungen</p>
-            </div>
-            <p className="text-sm font-medium text-white/60">• Schreiben Sie eine E-Mail (circa {teil.minWords} Wörter).</p>
-            <p className="text-sm font-medium text-white/60">• Schreiben Sie etwas zu allen drei Punkten.</p>
-            <p className="text-sm font-medium text-white/60">• Achten Sie auf den Textaufbau (Anrede, Einleitung, Reihenfolge der Inhaltspunkte, Schluss).</p>
-          </div>
+           <div className="pt-6 space-y-3 text-base text-gray-800">
+             <p className="font-bold">Schreiben Sie eine E-Mail ({teil.woerter}).</p>
+             <p>Schreiben Sie etwas zu allen drei Punkten.</p>
+             <p>Achten Sie auf den Textaufbau (Anrede, Einleitung, Reihenfolge der Inhaltspunkte, Schluss).</p>
+             <p className="text-blue-700 text-sm font-bold bg-blue-50 p-3 border border-blue-100">
+               WICHTIG: Persönliche E-Mail! Beginnen Sie mit "Liebe/Lieber [Name]" und enden Sie mit "Viele Grüße" oder "Dein/Deine".
+             </p>
+           </div>
         </div>
       </div>
 
       {/* Writing Area */}
-      <div className="space-y-4 pt-4">
-        <div className="flex items-center justify-between">
-           <h3 className="text-xs font-black text-[#ffcc00] uppercase flex items-center gap-2">
-              <span className="h-1 w-4 bg-[#ffcc00] rounded-full" />
-              Ihr Text
-           </h3>
-           <div className="text-[10px] font-black text-white/20 uppercase bg-white/5 px-3 py-1 rounded-full border border-white/5">
-              Anrede und Schluss nicht vergessen
+      <div className="space-y-4">
+        <div className="flex items-center justify-between border-b border-gray-200 pb-2">
+           <h3 className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Antwortblatt</h3>
+           <div className="flex items-center gap-2">
+              <span className={cn(
+                "text-[9px] font-bold px-2 py-0.5 border",
+                (wordCount > 0 && wordCount < 70) ? "bg-red-50 border-red-200 text-red-700" :
+                wordCount >= (teil.minWords || 80) ? "bg-green-50 border-green-200 text-green-700" : 
+                "bg-gray-100 border-gray-200 text-gray-400"
+              )}>
+                {wordCount} Wörter
+              </span>
+              <span className="text-[9px] text-gray-400 font-bold uppercase">/ min. {teil.minWords || 80}</span>
            </div>
         </div>
+        
         <textarea
           value={userText}
           onChange={onTextChange}
-          placeholder="Liebe/r ..., wie geht es dir? ..."
-          className="w-full h-80 bg-[#151515] border border-white/10 rounded-3xl p-8 text-lg leading-relaxed focus:outline-none focus:ring-2 focus:ring-[#ffcc00]/30 transition-all placeholder:text-white/5 resize-none custom-scrollbar"
-          dir="ltr"
+          placeholder="Schreiben Sie hier..."
+          className="w-full h-[400px] p-8 bg-white border border-gray-300 focus:border-gray-900 focus:ring-0 text-sm font-serif leading-relaxed text-gray-800 transition-none resize-none placeholder:text-gray-200"
         />
       </div>
     </div>

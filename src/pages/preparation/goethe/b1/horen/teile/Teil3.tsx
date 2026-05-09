@@ -1,114 +1,149 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
-import { Check, X, Users } from 'lucide-react';
+import { Check, X, Volume2, Flag } from 'lucide-react';
 import AudioPlayer from '../components/AudioPlayer';
 
 interface Teil3Props {
   topic: any;
+  teil: any;
   answers: Record<string, string>;
   showResults: boolean;
   onAnswerChange: (itemId: string, value: string) => void;
 }
 
-const Teil3: React.FC<Teil3Props> = ({ topic, answers, showResults, onAnswerChange }) => {
+const Teil3: React.FC<Teil3Props> = ({ topic, teil, answers, showResults, onAnswerChange }) => {
+  const [markedItems, setMarkedItems] = useState<Set<string>>(new Set());
+
   if (!topic) return null;
 
-  const { items, transkript, audio } = topic;
-  const maxPlays = 1; // Fixed for Teil 3
+  const audioPath = `/media/audio/goethe/horen/b1/${topic.audio}`;
+  const maxPlays = 2;
 
-  const renderTask = (item: any) => {
-    const selectedValue = answers[item.id];
-    const isCorrect = selectedValue === item.correct;
-
-    return (
-      <div 
-        key={item.id} 
-        className={cn(
-          "p-5 rounded-2xl border transition-all duration-300 relative",
-          showResults 
-            ? (isCorrect ? "border-emerald-500/50 bg-emerald-500/5" : "border-red-500/50 bg-red-500/5") 
-            : "bg-[#111] border-white/5 hover:border-white/10"
-        )}
-      >
-        <div className="flex gap-4 mb-5">
-           <span className="font-black text-[#ffcc00] text-sm shrink-0 mt-0.5">{item.id}</span>
-           <p className="text-sm font-bold text-white/90 leading-relaxed">{item.text}</p>
-        </div>
-
-        <div className="flex gap-2">
-          {['Richtig', 'Falsch'].map((option) => (
-            <button
-              key={option}
-              disabled={showResults}
-              onClick={() => onAnswerChange(item.id, option)}
-              className={cn(
-                "flex-1 py-3 rounded-xl font-black uppercase tracking-widest text-xs border-2 transition-all",
-                selectedValue === option 
-                  ? "bg-[#ffcc00] border-[#ffcc00] text-black shadow-lg shadow-[#ffcc00]/10" 
-                  : "bg-transparent border-white/10 text-white/40 hover:border-white/20 hover:text-white",
-                showResults && item.correct === option && selectedValue !== option && "border-emerald-500 text-emerald-500"
-              )}
-            >
-              {option}
-            </button>
-          ))}
-        </div>
-
-        {showResults && (
-          <div className="absolute right-4 top-4">
-            {isCorrect ? (
-              <Check className="h-5 w-5 text-emerald-500" />
-            ) : (
-              <X className="h-5 w-5 text-red-500" />
-            )}
-          </div>
-        )}
-      </div>
-    );
+  const toggleMark = (id: string) => {
+    setMarkedItems(prev => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
   };
 
+  const items = topic.items ?? [];
+  const answeredCount = items.filter((i: any) => !!answers[i.id]).length;
+  const totalCount = items.length;
+
   return (
-    <div className="space-y-10 animate-in fade-in duration-700">
-      {/* Central Audio Player Section */}
-      <div className="bg-[#1a1a1a] border border-white/10 rounded-3xl p-8 shadow-2xl relative overflow-hidden text-center space-y-6">
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#ffcc00] to-transparent opacity-50" />
-        
-        <div className="space-y-2">
-          <h2 className="text-2xl font-black text-white uppercase tracking-tight">{topic.title}</h2>
-          <p className="text-xs font-black text-white/30 uppercase tracking-[0.4em]">Alltagsgespräch • 1x Hören</p>
+    <div className="space-y-6 max-w-3xl mx-auto pb-8">
+      {/* Italic context from topic */}
+      {topic.title && (
+        <div className="border-l-2 border-gray-400 pl-3 py-1 bg-gray-50">
+          <p className="text-[11px] text-gray-600 italic font-serif leading-relaxed">
+            {`Sie hören ein Gespräch zum Thema: „${topic.title}"`}
+          </p>
         </div>
+      )}
 
-        <div className="max-w-md mx-auto">
-           {audio && (
-             <AudioPlayer 
-               src={`/media/audio/goethe/horen/b1/${audio}`} 
-               maxPlays={maxPlays} 
-             />
-           )}
-        </div>
+      {/* Counter */}
+      <div className="flex items-center justify-between border-b border-gray-300 pb-2">
+        <h3 className="text-[9px] font-bold text-gray-900 uppercase tracking-widest">Hören — Teil 3</h3>
+        <span className={cn(
+          'text-[8px] font-bold px-2 py-0.5 border uppercase tracking-wide',
+          answeredCount === totalCount && totalCount > 0
+            ? 'bg-green-50 border-green-300 text-green-700'
+            : 'bg-gray-100 border-gray-300 text-gray-400'
+        )}>
+          {answeredCount} / {totalCount} beantwortet
+        </span>
       </div>
 
-      {/* Tasks Section */}
-      <div className="space-y-6">
-        <div className="flex items-center gap-2 border-l-4 border-[#ffcc00] pl-3">
-          <h2 className="text-xl font-black text-white uppercase tracking-tight">Aufgaben 16–22</h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-           {items.map((item: any) => renderTask(item))}
-        </div>
+      {/* Audio Player (2 plays allowed for Teil 3) */}
+      <AudioPlayer src={audioPath} maxPlays={maxPlays} />
+
+      {/* Questions — Richtig/Falsch pills */}
+      <div className="space-y-2.5">
+        {items.map((item: any) => {
+          const selected   = answers[item.id];
+          const isAnswered = !!selected;
+          const isCorrect  = selected === item.correct;
+          const isMarked   = markedItems.has(item.id);
+
+          return (
+            <div
+              key={item.id}
+              className={cn(
+                'border transition-none',
+                showResults
+                  ? isCorrect ? 'bg-green-50 border-green-300' : 'bg-red-50 border-red-300'
+                  : isAnswered ? 'bg-blue-50 border-blue-300'
+                    : isMarked  ? 'bg-yellow-50 border-yellow-300'
+                    : 'bg-white border-gray-300'
+              )}
+            >
+              <div className="p-3 space-y-2.5">
+                <div className="flex items-start justify-between gap-2">
+                  <div className="flex gap-2 flex-1">
+                    <span className={cn(
+                      'text-[9px] font-black mt-0.5 shrink-0',
+                      isAnswered && !showResults ? 'text-blue-500' : 'text-gray-400'
+                    )}>
+                      {item.id}.
+                    </span>
+                    <p className="text-[11px] text-gray-800 font-medium leading-snug">{item.text}</p>
+                  </div>
+                  <div className="shrink-0">
+                    {showResults
+                      ? isCorrect
+                        ? <Check className="h-3.5 w-3.5 text-green-600" />
+                        : (
+                          <div className="flex flex-col items-end gap-0.5">
+                            <X className="h-3.5 w-3.5 text-red-600" />
+                            <span className="text-[7px] font-bold text-green-600 uppercase">{item.correct}</span>
+                          </div>
+                        )
+                      : (
+                        <button onClick={() => toggleMark(item.id)} className="text-gray-200 hover:text-yellow-400 transition-none">
+                          <Flag className={cn('h-3 w-3', isMarked && 'fill-yellow-400 text-yellow-400')} />
+                        </button>
+                      )
+                    }
+                  </div>
+                </div>
+
+                {/* Richtig / Falsch pills */}
+                <div className="flex gap-2 pl-5">
+                  {['Richtig', 'Falsch'].map((option) => {
+                    const isSel = selected === option;
+                    return (
+                      <button
+                        key={option}
+                        disabled={showResults}
+                        onClick={() => onAnswerChange(item.id, option)}
+                        className={cn(
+                          'flex-1 text-center py-1.5 border font-bold text-[9px] uppercase tracking-wide transition-none',
+                          isSel ? 'bg-[#1e293b] border-[#1e293b] text-white' : 'bg-white border-gray-300 text-gray-500 hover:border-gray-500',
+                          showResults && isSel && isCorrect  && 'bg-green-600 border-green-600 text-white',
+                          showResults && isSel && !isCorrect && 'bg-red-600 border-red-600 text-white',
+                          showResults && !isSel && option === item.correct && 'border-green-500 text-green-600 bg-green-50'
+                        )}
+                      >
+                        {option}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          );
+        })}
       </div>
 
-      {/* Transkript */}
-      {showResults && transkript && (
-        <div className="mt-10 pt-10 border-t border-white/10 animate-in fade-in duration-700">
-          <div className="flex items-center gap-3 mb-6">
-             <Users className="h-5 w-5 text-[#ffcc00]" />
-             <h3 className="text-lg font-black text-white uppercase tracking-tight">Transkript des Gesprächs</h3>
-          </div>
-          <div className="prose prose-invert max-w-none">
-             <p className="text-sm text-white/50 leading-relaxed italic font-medium whitespace-pre-line bg-black/40 p-8 rounded-3xl border border-white/5">
-                {transkript}
-             </p>
+      {showResults && topic.transkript && (
+        <div className="pt-4 border-t border-gray-100">
+          <h4 className="text-[8px] font-bold text-gray-400 uppercase tracking-widest mb-2 flex items-center gap-2">
+            <Volume2 className="h-3 w-3" /> Transkript
+          </h4>
+          <div className="p-4 bg-gray-50 italic text-[11px] text-gray-600 font-serif leading-relaxed border border-gray-200">
+            "{topic.transkript}"
           </div>
         </div>
       )}

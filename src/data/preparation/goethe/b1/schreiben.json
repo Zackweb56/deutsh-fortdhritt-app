@@ -17,7 +17,7 @@
     },
     "description": "Das Modul Schreiben besteht aus drei Teilen. In den Aufgaben 1 und 3 schreiben Sie E-Mails. In Aufgabe 2 schreiben Sie einen Diskussionsbeitrag.",
     "gradingCriteria": {
-      "description": "Bewertung durch zwei unabhängige Prüfer nach folgenden Kriterien (je 0–5 Punkte pro Kriterium, max. 100 Punkte). Eine Drittbewertung erfolgt, wenn eine Bewertung unter 60 und die andere über 60 liegt, und der Durchschnitt unter 60 ist.",
+      "description": "Bewertung durch zwei unabhängige Prüfer nach folgenden Kriterien (je 0–25 Punkte pro Kriterium, max. 100 Punkte). Eine Drittbewertung erfolgt, wenn eine Bewertung unter 60 und die andere über 60 liegt, und der Durchschnitt unter 60 ist.",
       "kriterien": [
         {
           "name": "Aufgabenerfüllung",
@@ -35,7 +35,7 @@
           "name": "Wortschatz",
           "nameAr": "المفردات",
           "maxPunkte": 25,
-          "description": "Reichhaltigkeit, Genauigkeit, situationsangemessen"
+          "description": "Variationsreicher Wortschatz, Genauigkeit, situationsangemessen"
         },
         {
           "name": "Strukturen",
@@ -241,7 +241,11 @@
           "titleAr": "اعتذار عن مقابلة عمل",
           "minWords": 40,
           "situation": "Sie haben eine Einladung zum Bewerbungsgespräch. Sie sind an dem Tag krank.",
-          "aufgabenpunkte": ["Entschuldigen Sie sich", "Berichten Sie warum", "Bitten Sie um neuen Termin"]
+          "aufgabenpunkte": [
+            "Entschuldigen Sie sich",
+            "Berichten Sie warum",
+            "Bitten Sie um neuen Termin"
+          ]
         },
         {
           "id": "w3-geburztagseinladung",
@@ -249,7 +253,11 @@
           "titleAr": "اعتذار عن دعوة عيد ميلاد",
           "minWords": 40,
           "situation": "Ihr Freund Mark feiert Geburtstag. Sie können nicht kommen, weil Sie Ihre Großeltern besuchen.",
-          "aufgabenpunkte": ["Bedanken Sie sich", "Entschuldigen Sie sich", "Berichten Sie warum"]
+          "aufgabenpunkte": [
+            "Bedanken Sie sich",
+            "Entschuldigen Sie sich",
+            "Berichten Sie warum"
+          ]
         },
         {
           "id": "w3-klassenfahrt",
@@ -257,7 +265,11 @@
           "titleAr": "اعتذار عن رحلة مدرسية",
           "minWords": 40,
           "situation": "Ihre Klasse fährt nach Berlin. Sie können nicht mitfahren, weil Sie eine Prüfung haben.",
-          "aufgabenpunkte": ["Bedanken Sie sich", "Entschuldigen Sie sich", "Berichten Sie warum"]
+          "aufgabenpunkte": [
+            "Bedanken Sie sich",
+            "Entschuldigen Sie sich",
+            "Berichten Sie warum"
+          ]
         },
         {
           "id": "w3-arzttermin",
@@ -265,7 +277,11 @@
           "titleAr": "اعتذار عن موعد طبيب",
           "minWords": 40,
           "situation": "Sie haben einen Zahnarzttermin. Sie müssen absagen, weil Sie Fieber haben.",
-          "aufgabenpunkte": ["Entschuldigen Sie sich", "Berichten Sie warum", "Bitten Sie um neuen Termin"]
+          "aufgabenpunkte": [
+            "Entschuldigen Sie sich",
+            "Berichten Sie warum",
+            "Bitten Sie um neuen Termin"
+          ]
         },
         {
           "id": "w3-projektarbeit",
@@ -273,7 +289,11 @@
           "titleAr": "اعتذار عن عمل مشروع",
           "minWords": 40,
           "situation": "Sie haben sich mit Ihrer Kommilitonin Julia verabredet. Sie müssen absagen.",
-          "aufgabenpunkte": ["Entschuldigen Sie sich", "Berichten Sie warum", "Schlagen Sie neuen Termin vor"]
+          "aufgabenpunkte": [
+            "Entschuldigen Sie sich",
+            "Berichten Sie warum",
+            "Schlagen Sie neuen Termin vor"
+          ]
         }
       ]
     }

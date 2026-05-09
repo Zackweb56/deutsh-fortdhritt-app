@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { ChevronLeft, Info, Loader2, Mic, Square, Play, CheckCircle2, MessageSquare, AlertCircle, PenTool } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import sprechenData from '@/data/preparation/goethe/b2/sprechen.json';
+import GoetheExamLayout from '@/components/preparation/goethe/GoetheExamLayout';
 import { playTTS } from '@/lib/tts';
 import { getPreparationSpeakingReply, evaluatePreparationSpeaking, PreparationSpeakingResult } from '@/lib/ai/groq';
 import Teil1 from './teile/Teil1';
@@ -267,290 +268,221 @@ const GoetheB2SprechenSimulator = () => {
   const isInputDisabled = isAiProcessing || isEvaluating || isTimeUp || isMaxTurnsReached;
 
   if (!teil || !topic) {
-    return <div className="min-h-screen bg-[#0a0a0a] flex items-center justify-center text-white font-sans" dir="ltr">Laden...</div>;
+    return (
+      <div className="min-h-screen bg-white flex items-center justify-center text-gray-900 font-sans" dir="ltr">
+        <Loader2 className="h-8 w-8 animate-spin text-gray-400 mr-3" />
+        <span className="text-sm font-bold uppercase tracking-widest text-gray-400">Laden...</span>
+      </div>
+    );
   }
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white flex flex-col font-sans overflow-hidden" dir="ltr">
-      {/* Header */}
-      <header className="h-16 border-b border-white/10 bg-[#111] flex items-center justify-between px-4 sticky top-0 z-50 shrink-0">
-        <div className="flex items-center gap-4">
-          <Button variant="ghost" size="sm" className="h-8 px-2 text-white/50 hover:text-white" onClick={() => navigate(-1)}>
-            <ChevronLeft className="h-4 w-4 mr-1" />
-            <span className="text-xs font-black uppercase tracking-widest">Zurück</span>
-          </Button>
-          <div className="flex flex-col hidden sm:flex">
-            <span className="text-[10px] font-black text-[#ffcc00] uppercase tracking-widest">{sprechenData.institut} • {sprechenData.level}</span>
-            <span className="text-xs font-bold text-white/90">{sprechenData.module} • {teil.label}</span>
-          </div>
-        </div>
-
-        <div className="flex items-center gap-4">
-          <div className={cn(
-            'flex flex-col items-center px-4 py-1.5 rounded-xl border transition-all',
-            timeLeft > 60 ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400' :
-              timeLeft > 0 ? 'bg-[#ffcc00]/10 border-[#ffcc00]/30 text-[#ffcc00]' :
-                'bg-red-500/10 border-red-500/30 text-red-500'
-          )}>
-            <span className="text-[8px] font-black uppercase tracking-widest opacity-80">Zeit</span>
-            <span className="text-lg font-black tabular-nums leading-none">
-              {formatTime(timeLeft)}
-            </span>
-          </div>
-        </div>
-      </header>
-
-      {/* Main Layout */}
-      <main className="flex-1 flex flex-col lg:flex-row overflow-hidden relative">
-        {/* Left Side: Exam Paper */}
-        <div className="flex-1 overflow-y-auto custom-scrollbar p-4 sm:p-6 lg:p-8 bg-[#0c0c0c]">
-          <div className="max-w-3xl mx-auto space-y-8 pb-32">
-            {teil.nummer === 1 && (
-              <Teil1
-                teil={teil}
-                topic={topic}
-                hasStarted={hasStarted}
-                selectedThema={selectedThema}
-                setSelectedThema={setSelectedThema}
-              />
-            )}
-            {teil.nummer === 2 && (
-              <Teil2
-                teil={teil}
-                topic={topic}
-              />
-            )}
-          </div>
-        </div>
-
-        {/* Mobile Overlay */}
-        {isChatOpen && (
-          <div 
-            className="fixed inset-0 bg-black/60 z-[55] lg:hidden animate-in fade-in duration-300" 
-            onClick={() => setIsChatOpen(false)}
-          />
-        )}
-
-        {/* Right Side: Conversation Interface (Drawer on Mobile) */}
-        <div className={cn(
-            "fixed lg:static inset-y-0 right-0 z-[60] w-[85%] sm:w-[400px] lg:w-[450px] bg-[#111] flex flex-col transition-transform duration-500 ease-in-out border-l border-white/10",
-            "lg:translate-x-0",
-            isChatOpen ? "translate-x-0" : "translate-x-full"
-        )}>
-
-          <div className="p-6 border-b border-white/5 flex items-center justify-between shrink-0">
-            <div className="flex items-center gap-3">
-              <div className="relative">
-                <div className={cn("w-3 h-3 rounded-full", isAiProcessing ? "bg-[#ffcc00]" : isRecording ? "bg-red-500" : "bg-emerald-500")} />
-              </div>
-              <span className="text-xs font-black text-white uppercase tracking-[0.2em] flex items-center gap-2">
-                {isAiProcessing ? "KI-Partner denkt..." : isRecording ? "Sie sprechen..." : "Bereit für Input"}
-              </span>
-            </div>
-            
-            <div className="flex items-center gap-2">
-                {hasStarted && (
-                  <div className="bg-white/5 px-4 py-1 rounded-full border border-white/5 text-[10px] font-black text-white/30 tracking-widest uppercase">
-                    Turn {userTurnCount}/{MAX_TURNS}
+    <>
+      <GoetheExamLayout
+        title={`${sprechenData.institut} — ${sprechenData.level}`}
+        module={sprechenData.module}
+        teil={teil.label}
+        timeLeft={timeLeft}
+        progress={`${teil.nummer}/${sprechenData.teile.length}`}
+        onZuruck={() => navigate(-1)}
+        onWeiter={() => {
+          const nextTeil = sprechenData.teile.find(t => t.nummer === teil.nummer + 1);
+          if (nextTeil) {
+            navigate(`/preparation/goethe/b2/sprechen/${nextTeil.id}/${topicId}`);
+          }
+        }}
+        onAbgeben={handleEvaluate}
+      >
+        <div className="flex flex-col lg:flex-row h-full overflow-hidden bg-white">
+          {/* Left Side: Task Paper */}
+          <div className="flex-1 overflow-y-auto p-12 border-r border-gray-300 bg-white custom-scrollbar">
+            <div className="max-w-2xl mx-auto space-y-8">
+               <div className="bg-[#fff9c4] border border-[#fbc02d] p-6 text-sm text-[#5d4037] leading-relaxed shadow-sm">
+                  <div className="flex items-start gap-3">
+                     <Info className="h-4 w-4 mt-0.5 shrink-0" />
+                     <div>
+                        <p className="font-bold uppercase tracking-tight mb-2">Instruktionen — {teil.label}</p>
+                        <p className="font-medium italic">{teil.description}</p>
+                     </div>
                   </div>
-                )}
-                <Button 
-                  variant="ghost" 
-                  size="icon" 
-                  className="lg:hidden text-white/50"
-                  onClick={() => setIsChatOpen(false)}
-                >
-                  <ChevronLeft className="h-5 w-5 rotate-180" />
-                </Button>
-            </div>
-          </div>
+               </div>
 
-          <div className="flex-1 overflow-y-auto p-6 space-y-6 custom-scrollbar" ref={scrollRef}>
-            {!hasStarted ? (
-              <div className="h-full flex flex-col items-center justify-center text-center px-6 space-y-6">
-                <div className="relative group">
-                  <div className="relative w-24 h-24 rounded-full bg-[#1a1a1a] border-2 border-[#ffcc00]/30 flex items-center justify-center">
-                    <Mic className="w-10 h-10 text-[#ffcc00]" />
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <h4 className="text-xl font-black text-white uppercase italic tracking-widest">Mündliche Prüfung</h4>
-                  <p className="text-sm text-white/40 font-medium text-center">Stellen Sie sicher, dass Ihr Mikrofon aktiviert ist und Sie in einer ruhigen Umgebung sind.</p>
-                </div>
-                <Button
-                  onClick={handleStartConversation}
-                  disabled={teil.nummer === 1 && !selectedThema}
-                  className={cn(
-                    "h-16 w-full rounded-2xl font-black uppercase tracking-[0.2em] text-sm transition-all",
-                    (teil.nummer === 1 && !selectedThema)
-                      ? "bg-white/5 text-white/20"
-                      : "bg-[#ffcc00] hover:bg-[#ffcc00]/90 text-black shadow-none"
+               <div className="prose max-w-none">
+                  {teil.nummer === 1 && (
+                    <Teil1
+                      teil={teil}
+                      topic={topic}
+                      hasStarted={hasStarted}
+                      selectedThema={selectedThema}
+                      setSelectedThema={setSelectedThema}
+                    />
                   )}
-                >
-                  <Play className="w-5 h-5 mr-3 fill-current" /> Simulation Starten
-                </Button>
-              </div>
-            ) : (
-              <>
-                {conversation.map((msg, idx) => (
-                  <div key={idx} className={cn("flex flex-col max-w-[92%]", msg.role === 'user' ? "ml-auto items-end" : "mr-auto items-start")}>
-                    <span className={cn(
-                      "text-[9px] font-black mb-1 uppercase tracking-widest px-2",
-                      msg.role === 'user' ? "text-amber-500/50" : "text-white/30"
-                    )}>
-                      {msg.role === 'user' ? "Ihre Antwort" : "KI-Prüfungspartner"}
-                    </span>
-                    <div className={cn(
-                      "p-4 rounded-[24px] text-sm font-medium leading-relaxed",
-                      msg.role === 'user'
-                        ? "bg-[#ffcc00] text-black rounded-tr-sm"
-                        : "bg-white/5 border border-white/5 text-white rounded-tl-sm shadow-none"
-                    )}>
-                      {msg.text}
-                    </div>
-                  </div>
-                ))}
-              </>
-            )}
-          </div>
-
-          {/* Controls */}
-          {hasStarted && (
-            <div className="p-4 border-t border-white/5 bg-[#1a1a1a] flex flex-col gap-4 shrink-0 lg:rounded-none">
-              {isTimeUp && (
-                <div className="flex items-center justify-center gap-3 bg-red-500/10 border border-red-500/20 p-2 rounded-xl">
-                  <AlertCircle className="h-4 w-4 text-red-500" />
-                  <span className="text-[10px] font-black text-red-500 uppercase tracking-widest">Zeit abgelaufen!</span>
-                </div>
-              )}
-
-              <div className="flex flex-col gap-3">
-                <div className="relative group">
-                  <textarea
-                    value={transcript}
-                    onChange={(e) => setTranscript(e.target.value)}
-                    placeholder={isRecording ? "Sprechen Sie jetzt..." : isInputDisabled ? "Gespräch beendet." : "Tippen oder sprechen..."}
-                    className={cn(
-                      "w-full bg-[#0c0c0c] border border-white/10 rounded-xl p-4 text-sm text-white focus:ring-2 focus:ring-[#ffcc00]/30 resize-none h-20 custom-scrollbar transition-all shadow-none",
-                      isInputDisabled && "opacity-40 cursor-not-allowed"
-                    )}
-                    disabled={isInputDisabled}
-                  />
-                </div>
-
-                <div className="flex gap-3 h-14">
-                  <Button
-                    onClick={toggleRecording}
-                    disabled={isInputDisabled}
-                    className={cn(
-                      "flex-1 rounded-2xl font-black uppercase tracking-widest transition-all",
-                      isRecording
-                        ? "bg-red-500 hover:bg-red-600 text-white"
-                        : "bg-white/5 hover:bg-white/10 text-white shadow-none",
-                    )}
-                  >
-                    {isRecording ? (
-                      <><Square className="w-5 h-5 mr-3 fill-current" /> Stop</>
-                    ) : (
-                      <><Mic className="w-5 h-5 mr-3" /> Sprechen</>
-                    )}
-                  </Button>
-                  <Button
-                    onClick={processUserTurn}
-                    disabled={isInputDisabled || !transcript.trim() || isRecording}
-                    className="flex-1 rounded-2xl bg-[#ffcc00] hover:bg-[#ffcc00]/90 text-black font-black uppercase tracking-[0.2em] transition-all disabled:opacity-40 shadow-none"
-                  >
-                    Senden
-                  </Button>
-                  <Button
-                    onClick={handleEvaluate}
-                    disabled={isAiProcessing || isRecording || userTurnCount === 0}
-                    className="w-14 rounded-2xl bg-emerald-500/10 text-emerald-500 hover:bg-emerald-500 hover:text-white border border-emerald-500/20 p-0 flex items-center justify-center transition-all shadow-none"
-                    title="Auswerten"
-                  >
-                    {isEvaluating ? <Loader2 className="w-5 h-5 animate-spin" /> : <CheckCircle2 className="w-6 h-6" />}
-                  </Button>
-                </div>
-              </div>
+                  {teil.nummer === 2 && <Teil2 teil={teil} topic={topic} />}
+               </div>
             </div>
-          )}
-        </div>
-
-        {/* Floating Toggle Button for Mobile */}
-        {!isChatOpen && (
-          <div className="fixed bottom-24 right-6 flex flex-col items-end gap-3 lg:hidden z-50 animate-in slide-in-from-right duration-500">
-             <div className="bg-[#ffcc00] text-black text-[10px] font-black px-4 py-2 rounded-full border-2 border-black/10">
-                HIER KLICKEN ZUM SPRECHEN
-             </div>
-             <Button
-                onClick={() => setIsChatOpen(true)}
-                className="h-16 w-16 rounded-full bg-[#ffcc00] text-black flex items-center justify-center relative overflow-hidden group border-4 border-[#111] shadow-none"
-             >
-                <MessageSquare className="h-7 w-7 relative z-10" />
-                {conversation.length > 0 && (
-                  <span className="absolute top-0 right-0 h-6 w-6 bg-red-600 rounded-full text-[10px] font-black text-white flex items-center justify-center border-2 border-[#111]">
-                    {conversation.length}
-                  </span>
-                )}
-             </Button>
           </div>
-        )}
-      </main>
+
+          {/* Right Side: Conversation Interface */}
+          <div className="w-[450px] bg-gray-50 flex flex-col shrink-0">
+             {/* Status Header */}
+             <div className="p-6 border-b border-gray-200 bg-white flex items-center justify-between shrink-0">
+                <div className="flex items-center gap-3">
+                   <div className={cn(
+                      "w-2 h-2 rounded-full",
+                      isAiProcessing ? "bg-amber-500 animate-pulse" : isRecording ? "bg-red-500 animate-pulse" : "bg-emerald-500"
+                   )} />
+                   <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">
+                      {isAiProcessing ? "Prüfer spricht..." : isRecording ? "Sie sprechen..." : "Bereit"}
+                   </span>
+                </div>
+                {hasStarted && (
+                   <span className="text-[10px] font-mono text-gray-400">Runde {userTurnCount}/{MAX_TURNS}</span>
+                )}
+             </div>
+
+             {/* Conversation Area */}
+             <div className="flex-1 overflow-y-auto p-8 space-y-6 custom-scrollbar" ref={scrollRef}>
+                {!hasStarted ? (
+                  <div className="h-full flex flex-col items-center justify-center text-center space-y-6">
+                     <div className="h-20 w-20 rounded-full bg-gray-200 flex items-center justify-center text-gray-400">
+                        <Mic className="h-10 w-10" />
+                     </div>
+                     <div className="space-y-2">
+                        <h4 className="text-sm font-bold text-gray-800 uppercase tracking-widest">Mündliche Prüfung</h4>
+                        <p className="text-xs text-gray-500 leading-relaxed max-w-[200px] mx-auto">
+                           Klicken Sie auf den Button, um die Simulation zu starten.
+                        </p>
+                     </div>
+                     <Button 
+                        onClick={handleStartConversation}
+                        className="bg-gray-800 hover:bg-black text-white px-8 h-12 rounded-sm font-bold uppercase text-xs"
+                     >
+                        Simulation Starten
+                     </Button>
+                  </div>
+                ) : (
+                  <div className="space-y-6">
+                     {conversation.map((msg, idx) => (
+                        <div key={idx} className={cn("flex flex-col max-w-[90%]", msg.role === 'user' ? "ml-auto items-end" : "mr-auto items-start")}>
+                           <span className="text-[9px] font-bold text-gray-400 uppercase mb-1 px-1">
+                              {msg.role === 'user' ? "Sie" : "Prüfer"}
+                           </span>
+                           <div className={cn(
+                              "p-4 rounded-sm text-sm font-medium leading-relaxed shadow-sm border",
+                              msg.role === 'user' 
+                                 ? "bg-gray-800 border-gray-800 text-white" 
+                                 : "bg-white border-gray-200 text-gray-800"
+                           )}>
+                              {msg.text}
+                           </div>
+                        </div>
+                     ))}
+                     {isAiProcessing && (
+                        <div className="mr-auto items-start max-w-[90%]">
+                           <div className="bg-white border border-gray-200 p-4 rounded-sm flex items-center gap-2">
+                              <Loader2 className="h-4 w-4 animate-spin text-gray-400" />
+                              <span className="text-xs text-gray-400 font-medium italic italic">Prüfer antwortet...</span>
+                           </div>
+                        </div>
+                     )}
+                  </div>
+                )}
+             </div>
+
+             {/* Controls Area */}
+             {hasStarted && (
+                <div className="p-6 bg-white border-t border-gray-200 space-y-4">
+                   <div className="relative">
+                      <textarea
+                        value={transcript}
+                        onChange={(e) => setTranscript(e.target.value)}
+                        placeholder={isRecording ? "Bitte sprechen Sie..." : "Antwort eingeben oder sprechen..."}
+                        className="w-full bg-gray-50 border border-gray-200 rounded-sm p-4 text-sm text-gray-800 focus:border-gray-800 focus:ring-0 resize-none h-20 transition-all font-medium custom-scrollbar"
+                        disabled={isInputDisabled}
+                      />
+                   </div>
+
+                   <div className="flex gap-3 h-12">
+                      <Button
+                        onClick={toggleRecording}
+                        disabled={isInputDisabled}
+                        className={cn(
+                          "flex-1 h-full rounded-sm font-bold uppercase text-xs transition-all border",
+                          isRecording 
+                            ? "bg-red-600 border-red-600 text-white" 
+                            : "bg-white border-gray-300 text-gray-600 hover:border-gray-800 hover:text-gray-800"
+                        )}
+                      >
+                        {isRecording ? <Square className="h-4 w-4 mr-2" /> : <Mic className="h-4 w-4 mr-2" />}
+                        {isRecording ? "Stop" : "Sprechen"}
+                      </Button>
+                      <Button
+                        onClick={processUserTurn}
+                        disabled={isInputDisabled || !transcript.trim() || isRecording}
+                        className="flex-1 h-full bg-gray-800 hover:bg-black text-white rounded-sm font-bold uppercase text-xs"
+                      >
+                        Senden
+                      </Button>
+                   </div>
+                </div>
+             )}
+          </div>
+        </div>
+      </GoetheExamLayout>
 
       {/* Evaluation Modal */}
       {showResultsModal && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-4 sm:p-6" dir="ltr">
-          <div className="bg-[#111] border border-white/10 rounded-[48px] w-full max-w-2xl max-h-[90vh] flex flex-col overflow-hidden shadow-none">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-gray-900/60 backdrop-blur-sm p-6" dir="ltr">
+          <div className="bg-white border border-gray-200 rounded-sm w-full max-w-2xl max-h-[90vh] flex flex-col overflow-hidden shadow-2xl animate-in zoom-in-95 duration-300">
             {isEvaluating ? (
-              <div className="p-20 flex flex-col items-center justify-center gap-8 h-[500px]">
-                <div className="relative">
-                  <Loader2 className="h-20 w-20 text-[#ffcc00] animate-spin" />
-                </div>
+              <div className="p-20 flex flex-col items-center justify-center gap-8 h-[400px]">
+                <Loader2 className="h-12 w-12 text-gray-900 animate-spin" />
                 <div className="text-center space-y-3">
-                  <h3 className="text-3xl font-black text-white tracking-[0.3em] uppercase italic">KI-Bewertung</h3>
-                  <p className="text-xs text-white/40 font-black uppercase tracking-widest animate-pulse">Ihre mündliche Leistung wird nach Goethe B2 Standards analysiert</p>
+                  <h3 className="text-xl font-bold text-gray-900 uppercase tracking-widest">Bewertung wird erstellt</h3>
+                  <p className="text-xs text-gray-400 font-bold uppercase tracking-widest animate-pulse">Ihre Leistung wird nach Goethe-Standards analysiert</p>
                 </div>
               </div>
             ) : evaluationResult ? (
               <>
                 {/* Result Header */}
-                <div className="p-10 border-b border-white/5 bg-[#181818] flex items-center justify-between shrink-0">
+                <div className="p-10 border-b border-gray-100 bg-gray-50 flex items-center justify-between shrink-0">
                   <div className="space-y-2">
-                    <h2 className="text-3xl font-black text-white uppercase tracking-tight italic">Prüfungsergebnis</h2>
+                    <h2 className="text-2xl font-serif font-bold text-gray-900 uppercase tracking-tight">Ergebnisbericht</h2>
                     <div className="flex items-center gap-3">
-                      <span className="text-[10px] font-black text-[#ffcc00] uppercase tracking-[0.3em] bg-[#ffcc00]/10 px-3 py-1 rounded-full">B2 Sprechen</span>
-                      <span className="h-1.5 w-1.5 rounded-full bg-white/20" />
-                      <p className="text-xs font-bold text-white/40 truncate max-w-[200px]">
-                        {teil.nummer === 1 ? (selectedThema === 'thema1' ? topic.thema1.title : topic.thema2.title) : topic.title}
-                      </p>
+                      <span className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">Goethe-Zertifikat B2</span>
+                      <div className="h-1 w-1 rounded-full bg-gray-300" />
+                      <span className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">{teil.label}</span>
                     </div>
                   </div>
                   <div className={cn(
-                    "relative flex flex-col items-center justify-center h-24 w-24 rounded-[32px] border-2",
-                    evaluationResult.score >= 60 ? "border-emerald-500/50 bg-emerald-500/5 text-emerald-400" : "border-red-500/50 bg-red-500/5 text-red-400"
+                    "flex flex-col items-center justify-center h-24 w-24 rounded-full border-4 shadow-sm bg-white",
+                    evaluationResult.score >= 60 ? "border-green-600 text-green-600" : "border-red-600 text-red-600"
                   )}>
-                    <span className="text-4xl font-black tabular-nums">{evaluationResult.score}</span>
-                    <span className="text-[8px] font-black uppercase tracking-widest opacity-60">Punkte</span>
+                    <span className="text-3xl font-bold tabular-nums leading-none">{evaluationResult.score}</span>
+                    <span className="text-[10px] font-bold uppercase opacity-60 tracking-tighter mt-1">Punkte</span>
                   </div>
                 </div>
 
-                <div className="p-10 overflow-y-auto custom-scrollbar flex-1 space-y-12">
+                <div className="p-10 overflow-y-auto custom-scrollbar flex-1 space-y-12 bg-white">
                   {/* Score Grid */}
-                  <div className="grid grid-cols-2 gap-6">
+                  <div className="grid grid-cols-2 gap-8">
                     {[
-                      { label: 'Aufgabenerfüllung', value: evaluationResult.aufgabenerfuellung },
+                      { label: 'Erfüllung', value: evaluationResult.aufgabenerfuellung },
                       { label: 'Interaktion', value: evaluationResult.interaktion },
                       { label: 'Wortschatz', value: evaluationResult.wortschatz },
-                      { label: 'Grammatik/Aussprache', value: evaluationResult.strukturen_aussprache }
+                      { label: 'Strukturen', value: evaluationResult.strukturen_aussprache }
                     ].map((crit, idx) => (
-                      <div key={idx} className="bg-white/[0.02] border border-white/5 p-6 rounded-3xl group hover:bg-white/[0.05] transition-colors shadow-none">
-                        <div className="flex justify-between items-center mb-4">
-                          <span className="text-[10px] font-black text-white/40 uppercase tracking-widest">{crit.label}</span>
-                          <span className="text-base font-black text-[#ffcc00]">{crit.value}/25</span>
+                      <div key={idx} className="space-y-4">
+                        <div className="flex justify-between items-baseline">
+                          <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">{crit.label}</span>
+                          <span className="text-sm font-bold text-gray-900">{crit.value}/25</span>
                         </div>
-                        <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden shadow-none">
+                        <div className="h-1.5 w-full bg-gray-100 rounded-full overflow-hidden">
                           <div
-                            className="h-full bg-[#ffcc00] rounded-full transition-all duration-1000 delay-300"
+                            className={cn(
+                              "h-full rounded-full transition-all duration-1000 delay-300",
+                              crit.value >= 15 ? "bg-gray-900" : "bg-gray-400"
+                            )}
                             style={{ width: `${(crit.value / 25) * 100}%` }}
                           />
                         </div>
@@ -558,53 +490,60 @@ const GoetheB2SprechenSimulator = () => {
                     ))}
                   </div>
 
-                  {/* Feedback Section */}
-                  <div className="space-y-6">
-                    <div className="flex items-center gap-4">
-                      <div className="h-10 w-10 rounded-2xl bg-blue-500/10 flex items-center justify-center">
-                        <MessageSquare className="h-5 w-5 text-blue-400" />
-                      </div>
-                      <h3 className="text-base font-black text-white uppercase tracking-[0.2em]">Pädagogisches Feedback</h3>
-                    </div>
-                    <div className="bg-blue-500/5 border border-blue-500/10 p-8 rounded-3xl text-base leading-relaxed text-blue-100/80 font-medium italic whitespace-pre-wrap shadow-none">
-                      {evaluationResult.feedback}
-                    </div>
-                  </div>
-
-                  {/* Improved Version */}
+                  {/* Corrections */}
                   {evaluationResult.turnCorrections && evaluationResult.turnCorrections.length > 0 && (
                     <div className="space-y-6">
-                      <div className="flex items-center gap-4">
-                        <div className="h-10 w-10 rounded-2xl bg-[#ffcc00]/10 flex items-center justify-center">
-                          <PenTool className="h-5 w-5 text-[#ffcc00]" />
-                        </div>
-                        <h3 className="text-base font-black text-white uppercase tracking-[0.2em]">Bessere Formulierungen</h3>
-                      </div>
+                      <h3 className="text-xs font-bold text-gray-900 uppercase tracking-[0.3em] border-b border-gray-200 pb-3 flex items-center gap-3">
+                        <PenTool className="h-4 w-4" />
+                        Korrekturvorschläge
+                      </h3>
                       <div className="space-y-6">
                         {evaluationResult.turnCorrections.map((corr, i) => (
-                          <div key={i} className="bg-[#1a1a1a] p-6 rounded-3xl border border-white/5 space-y-4 shadow-none">
-                            <div>
-                              <span className="text-[10px] font-black text-red-500 uppercase tracking-widest block mb-2">Original</span>
-                              <p className="text-sm text-white/50 italic line-through">{corr.original}</p>
-                            </div>
-                            <div className="p-4 bg-emerald-500/5 rounded-2xl border border-emerald-500/10">
-                              <span className="text-[10px] font-black text-emerald-500 uppercase tracking-widest block mb-2">Empfehlung</span>
-                              <p className="text-base text-emerald-100 font-bold">{corr.improved}</p>
-                            </div>
-                            <p className="text-xs text-white/40 font-medium pl-2 border-l border-white/20 italic">{corr.reason}</p>
+                          <div key={i} className="space-y-3 pl-6 border-l-2 border-gray-100 group">
+                            <p className="text-sm text-gray-400 italic">"{corr.original}"</p>
+                            <p className="text-base font-serif font-bold text-gray-900">"{corr.improved}"</p>
+                            {corr.reason && (
+                              <p className="text-[11px] text-gray-500 font-serif italic">— {corr.reason}</p>
+                            )}
                           </div>
                         ))}
                       </div>
                     </div>
                   )}
+
+                  {/* Feedback */}
+                  <div className="space-y-4">
+                     <h3 className="text-xs font-bold text-gray-900 uppercase tracking-[0.3em] border-b border-gray-200 pb-3 flex items-center gap-3">
+                        <MessageSquare className="h-4 w-4" />
+                        Prüfer-Feedback
+                     </h3>
+                     <div className="bg-gray-50 p-8 rounded-sm border border-gray-100 text-[15px] leading-relaxed text-gray-700 font-serif italic whitespace-pre-wrap">
+                        {evaluationResult.feedback}
+                     </div>
+                  </div>
+
+                  {/* Tips */}
+                  <div className="space-y-6">
+                     <h3 className="text-xs font-bold text-gray-900 uppercase tracking-[0.3em] border-b border-gray-200 pb-3">Empfehlungen</h3>
+                     <ul className="space-y-4">
+                       {evaluationResult.tips.map((tip, i) => (
+                         <li key={i} className="flex items-start gap-4 p-4 hover:bg-gray-50 transition-colors rounded-sm">
+                            <div className="h-6 w-6 rounded-full bg-gray-900 flex items-center justify-center shrink-0 text-white text-[10px] font-bold mt-0.5">
+                               {i + 1}
+                            </div>
+                            <p className="text-sm text-gray-600 font-medium leading-relaxed">{tip}</p>
+                         </li>
+                       ))}
+                     </ul>
+                  </div>
                 </div>
 
                 {/* Modal Footer */}
-                <div className="p-10 border-t border-white/5 bg-[#181818] shrink-0 flex justify-end gap-6">
+                <div className="p-8 border-t border-gray-100 bg-gray-50/80 shrink-0 flex justify-end gap-4">
                   <Button
-                    variant="outline"
+                    variant="ghost"
                     onClick={() => setShowResultsModal(false)}
-                    className="border-white/10 text-white/50 hover:bg-white/5 hover:text-white font-black uppercase tracking-widest text-[10px] px-8 h-14 rounded-2xl shadow-none"
+                    className="text-[10px] font-bold text-gray-400 hover:text-gray-900 uppercase tracking-widest h-12 px-6"
                   >
                     Schließen
                   </Button>
@@ -617,7 +556,7 @@ const GoetheB2SprechenSimulator = () => {
                       setTimeLeft(teil.nummer === 1 ? 240 : 300);
                       setHasStarted(false);
                     }}
-                    className="bg-[#ffcc00] hover:bg-[#ffcc00]/90 text-black font-black uppercase tracking-[0.2em] text-xs px-12 h-14 rounded-2xl shadow-none"
+                    className="bg-gray-900 hover:bg-black text-white font-bold uppercase text-[10px] tracking-widest px-10 h-12 rounded-sm shadow-xl"
                   >
                     Neu starten
                   </Button>
@@ -627,7 +566,7 @@ const GoetheB2SprechenSimulator = () => {
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 };
 
