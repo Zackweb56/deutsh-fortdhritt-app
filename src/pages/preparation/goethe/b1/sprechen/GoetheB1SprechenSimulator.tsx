@@ -131,7 +131,7 @@ const GoetheB1SprechenSimulator = () => {
     recognitionRef.current = recognition;
 
     return () => {
-      try { recognitionRef.current?.abort(); } catch (_) {}
+      try { recognitionRef.current?.abort(); } catch (_) { }
     };
   }, []);
 

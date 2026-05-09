@@ -42,14 +42,14 @@ const getDeviceId = (): string => {
 const App = () => {
   useEffect(() => {
     setupAdsAutoSync();
-    
+
     // Record visit for analytics
     const recordVisit = async () => {
       // Don't track on localhost to avoid 404 errors during development
       if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
         return;
       }
-      
+
       try {
         await fetch('/api/analytics', {
           method: 'POST',
@@ -60,7 +60,7 @@ const App = () => {
         // Silently fail in production
       }
     };
-    
+
     recordVisit();
   }, []);
 
@@ -78,7 +78,7 @@ const App = () => {
                 <Route path="/lessons/a2/:lessonNumber" element={<A2Lesson />} />
                 <Route path="/lessons/b1/:lessonNumber" element={<B1Lesson />} />
                 <Route path="/lessons/b2/:lessonNumber" element={<B2Lesson />} />
-                 <Route path="/exams" element={<ExamsSelection />} />
+                <Route path="/exams" element={<ExamsSelection />} />
                 <Route path="/exam/:instituteLevel" element={<ExamSimulator />} />
                 <Route path="/preparation/:institute/:level/:module/:teilId/:topicId" element={<PreparationSimulator />} />
                 <Route path="/reset-access" element={<ResetAccess />} />

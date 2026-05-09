@@ -103,14 +103,13 @@ const GoetheExamLayout: React.FC<GoetheExamLayoutProps> = ({
             </div>
             <div className="flex items-center gap-px overflow-x-auto no-scrollbar">
               {allTeile.map((t) => (
-                <button
+                <div
                   key={t.id}
-                  onClick={() => onJumpToTeil?.(t.id)}
                   className={cn(
-                    'px-2 py-1.5 text-left min-w-[80px] md:min-w-[110px] border-b-2 transition-none shrink-0 relative',
+                    'px-2 py-1.5 text-left min-w-[80px] md:min-w-[110px] border-b-2 transition-none shrink-0 relative flex flex-col items-start justify-center cursor-default',
                     currentTeilId === t.id
                       ? 'bg-white text-gray-900 border-b-blue-500'
-                      : 'bg-[#334155] text-white/70 hover:bg-[#475569] hover:text-white border-b-transparent'
+                      : 'bg-[#334155] text-white/50 border-b-transparent'
                   )}
                 >
                   <div className="text-[9px] font-bold uppercase leading-none">{t.label}</div>
@@ -131,7 +130,7 @@ const GoetheExamLayout: React.FC<GoetheExamLayoutProps> = ({
                   {t.isCompleted && (
                     <Check className="h-2.5 w-2.5 text-green-400 absolute bottom-1 right-1" />
                   )}
-                </button>
+                </div>
               ))}
             </div>
           </div>

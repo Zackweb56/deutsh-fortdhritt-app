@@ -257,7 +257,7 @@ Punkte: ${topic.aufgabenpunkte?.join(', ') || ''}`,
                   <div className="space-y-6 pt-2">
                     <div className="space-y-3">
                       <h3 className="text-[10px] font-bold text-gray-900 uppercase tracking-widest border-b border-gray-200 pb-1">Feedback</h3>
-                      
+
                       {evaluationResult.feedback?.gut?.length > 0 && (
                         <div className="space-y-1">
                           <h4 className="text-sm font-bold text-green-700">Was war gut?</h4>
@@ -285,7 +285,7 @@ Punkte: ${topic.aufgabenpunkte?.join(', ') || ''}`,
                         </ol>
                       </div>
                     )}
-                  
+
                     {evaluationResult.improvedVersion && (
                       <div className="space-y-2">
                         <h3 className="text-[9px] font-bold text-gray-900 uppercase tracking-widest border-b border-gray-100 pb-1 text-green-700">Musterlösung</h3>
