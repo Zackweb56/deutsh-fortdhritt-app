@@ -1,88 +1,158 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
-import { Check, X } from 'lucide-react';
+import { Check, X, Volume2, Flag } from 'lucide-react';
+import AudioPlayer from '../components/AudioPlayer';
 
 interface Teil3Props {
   topic: any;
+  teil: any;
   answers: Record<string, string>;
   showResults: boolean;
-  onAnswerChange: (id: string, value: string) => void;
+  onAnswerChange: (itemId: string, value: string) => void;
 }
 
-const Teil3: React.FC<Teil3Props> = ({ topic, answers, showResults, onAnswerChange }) => {
+const Teil3: React.FC<Teil3Props> = ({ topic, teil, answers, showResults, onAnswerChange }) => {
+  const [markedItems, setMarkedItems] = useState<Set<string>>(new Set());
+
   if (!topic) return null;
 
-  const renderItem = (item: any) => {
-    const isCorrect = answers[item.id] === item.correct;
+  const audioPath = `/media/audio/goethe/horen/b2/${topic.audio}`;
+  const maxPlays = 1;
 
-    return (
-      <div 
-        key={item.id} 
-        className={cn(
-          "relative p-8 bg-white border border-gray-200 rounded-sm transition-all shadow-sm",
-          showResults && (isCorrect ? "bg-green-50/50 border-green-200" : "bg-red-50/50 border-red-200")
-        )}
-      >
-        <div className="space-y-6">
-          <div className="flex gap-4 items-start">
-            <span className="font-bold text-gray-400 text-sm pt-0.5">{item.id}.</span>
-            <p className="text-[16px] text-gray-800 leading-snug font-bold flex-1">{item.text}</p>
-          </div>
-          
-          <div className="flex flex-col gap-3 pl-8">
-            {topic.speakers?.map((speaker: any) => {
-              const isSelected = answers[item.id] === speaker.id;
-              const isActuallyCorrect = speaker.id === item.correct;
-
-              return (
-                <div
-                  key={speaker.id}
-                  className={cn(
-                    "goethe-option",
-                    isSelected && "active",
-                    showResults && isActuallyCorrect && !isSelected && "border-green-600 bg-green-50"
-                  )}
-                  onClick={() => !showResults && onAnswerChange(item.id, speaker.id)}
-                >
-                  <div className={cn("goethe-radio", isSelected && "active")} />
-                  <div className="flex items-center gap-3">
-                    <span className="text-[11px] font-bold text-gray-400 uppercase w-4">{speaker.id}</span>
-                    <span className="text-sm font-medium text-gray-700">{speaker.name}</span>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        {showResults && (
-          <div className="absolute top-4 right-4">
-            {isCorrect ? (
-              <Check className="h-6 w-6 text-green-600" />
-            ) : (
-              <div className="flex flex-col items-end gap-1">
-                <X className="h-6 w-6 text-red-600" />
-                <span className="text-[10px] font-bold text-green-600 uppercase">Soll: {item.correct}</span>
-              </div>
-            )}
-          </div>
-        )}
-      </div>
-    );
+  const toggleMark = (id: string) => {
+    setMarkedItems(prev => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
   };
 
+  const items = topic.items ?? [];
+  const answeredCount = items.filter((i: any) => !!answers[i.id]).length;
+  const totalCount = items.length;
+  
+  // Extract personen from topic
+  const personen = topic.personen || {};
+  const personenKeys = Object.keys(personen).sort();
+
   return (
-    <div className="space-y-12 animate-in fade-in duration-500 max-w-4xl mx-auto pb-20">
-      <div className="bg-white border-b-4 border-gray-900 pb-8 text-center">
-         <h2 className="text-3xl font-serif font-bold text-gray-900 leading-tight tracking-tight">
-           Hörverstehen — Teil 3
-         </h2>
-         <p className="text-sm text-gray-400 font-bold uppercase tracking-widest mt-2">Diskussion — Zuordnung</p>
+    <div className="space-y-6 max-w-3xl mx-auto pb-8">
+      {/* Italic context from topic */}
+      {topic.title && (
+        <div className="border-l-2 border-gray-400 pl-3 py-1 bg-gray-50">
+          <p className="text-[11px] text-gray-600 italic font-serif leading-relaxed">
+            {`Sie hören ein Gespräch zum Thema: „${topic.title}"`}
+          </p>
+        </div>
+      )}
+
+      {/* Counter */}
+      <div className="flex items-center justify-between border-b border-gray-300 pb-2">
+        <h3 className="text-[9px] font-bold text-gray-900 uppercase tracking-widest">Hören — Teil 3</h3>
+        <span className={cn(
+          'text-[8px] font-bold px-2 py-0.5 border uppercase tracking-wide',
+          answeredCount === totalCount && totalCount > 0
+            ? 'bg-green-50 border-green-300 text-green-700'
+            : 'bg-gray-100 border-gray-300 text-gray-400'
+        )}>
+          {answeredCount} / {totalCount} beantwortet
+        </span>
       </div>
 
-      <div className="space-y-8">
-        {topic.items?.map((item: any) => renderItem(item))}
+      {/* Audio Player */}
+      <AudioPlayer src={audioPath} maxPlays={maxPlays} />
+
+      {/* Questions */}
+      <div className="space-y-2.5">
+        {items.map((item: any) => {
+          const selected   = answers[item.id];
+          const isAnswered = !!selected;
+          const isCorrect  = selected === item.correct;
+          const isMarked   = markedItems.has(item.id);
+
+          return (
+            <div
+              key={item.id}
+              className={cn(
+                'border transition-none',
+                showResults
+                  ? isCorrect ? 'bg-green-50 border-green-300' : 'bg-red-50 border-red-300'
+                  : isAnswered ? 'bg-blue-50 border-blue-300'
+                    : isMarked  ? 'bg-yellow-50 border-yellow-300'
+                    : 'bg-white border-gray-300'
+              )}
+            >
+              <div className="p-3 space-y-2.5">
+                <div className="flex items-start justify-between gap-2">
+                  <div className="flex gap-2 flex-1">
+                    <span className={cn(
+                      'text-[9px] font-black mt-0.5 shrink-0',
+                      isAnswered && !showResults ? 'text-blue-500' : 'text-gray-400'
+                    )}>
+                      {item.id}.
+                    </span>
+                    <p className="text-[11px] text-gray-800 font-medium leading-snug">{item.text}</p>
+                  </div>
+                  <div className="shrink-0">
+                    {showResults
+                      ? isCorrect
+                        ? <Check className="h-3.5 w-3.5 text-green-600" />
+                        : (
+                          <div className="flex flex-col items-end gap-0.5">
+                            <X className="h-3.5 w-3.5 text-red-600" />
+                            <span className="text-[7px] font-bold text-green-600 uppercase">{item.correct}</span>
+                          </div>
+                        )
+                      : (
+                        <button onClick={() => toggleMark(item.id)} className="text-gray-200 hover:text-yellow-400 transition-none">
+                          <Flag className={cn('h-3 w-3', isMarked && 'fill-yellow-400 text-yellow-400')} />
+                        </button>
+                      )
+                    }
+                  </div>
+                </div>
+
+                <div className="flex flex-col gap-1.5 pl-5">
+                  {personenKeys.map((key) => {
+                    const personName = personen[key];
+                    const isSel = selected === key;
+                    const isCorrectOpt = key === item.correct;
+                    return (
+                      <button
+                        key={key}
+                        disabled={showResults}
+                        onClick={() => onAnswerChange(item.id, key)}
+                        className={cn(
+                          'flex items-center gap-2 px-3 py-1.5 border text-left w-full transition-none',
+                          isSel ? 'bg-[#1e293b] border-[#1e293b] text-white' : 'bg-white border-gray-200 text-gray-600 hover:border-gray-400',
+                          showResults && isSel && isCorrect  && 'bg-green-600 border-green-600 text-white',
+                          showResults && isSel && !isCorrect && 'bg-red-600 border-red-600 text-white',
+                          showResults && !isSel && isCorrectOpt && 'border-green-400 bg-green-50 text-green-700'
+                        )}
+                      >
+                        <span className={cn('text-[9px] font-black w-3 shrink-0', isSel ? 'text-white/70' : 'text-gray-400')}>{key}.</span>
+                        <span className="text-[10px] font-medium leading-tight">{personName}</span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          );
+        })}
       </div>
+
+      {showResults && topic.transkript && (
+        <div className="pt-4 border-t border-gray-100">
+          <h4 className="text-[8px] font-bold text-gray-400 uppercase tracking-widest mb-2 flex items-center gap-2">
+            <Volume2 className="h-3 w-3" /> Transkript
+          </h4>
+          <div className="p-4 bg-gray-50 italic text-[11px] text-gray-600 font-serif leading-relaxed border border-gray-200">
+            "{topic.transkript}"
+          </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -16,8 +16,7 @@ const VoiceWaves = () => (
   <div className="flex items-center gap-px h-3">
     {[1, 2, 3, 4, 5].map((i) => (
       <div
-        key={i}
-        className="w-0.5 bg-red-600"
+        className="w-0.5 bg-gray-900"
         style={{
           height: '100%',
           animation: 'voiceWave 0.5s ease-in-out infinite',
@@ -27,6 +26,13 @@ const VoiceWaves = () => (
     ))}
   </div>
 );
+
+const formatAufgabentyp = (nummer?: number): string => {
+  if (nummer === 1) return 'Planung';
+  if (nummer === 2) return 'Vortrag';
+  if (nummer === 3) return 'Feedback';
+  return 'Sprechen';
+};
 
 // @ts-ignore
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -269,7 +275,7 @@ const GoetheB1SprechenSimulator = () => {
     id: t.id,
     label: t.label,
     points: t.punkte ?? '—',
-    examType: t.aufgabentyp || 'Sprechen',
+    examType: formatAufgabentyp(t.nummer),
     isCompleted: false,
   }));
 
@@ -418,12 +424,12 @@ const GoetheB1SprechenSimulator = () => {
                     className={cn(
                       'flex-1 h-full font-bold uppercase text-[8px] tracking-widest transition-none border rounded-none',
                       isRecording
-                        ? 'bg-red-50 border-red-200 text-red-600'
-                        : 'bg-white border-gray-300 text-gray-600 hover:border-gray-900 hover:text-gray-900'
+                        ? 'bg-gray-100 border-gray-300 text-gray-900'
+                        : 'bg-white border-gray-300 text-gray-600'
                     )}
                   >
                     {isRecording ? <VoiceWaves /> : <Mic className="h-3 w-3 mr-1" />}
-                    <span className="ml-1">{isRecording ? 'Hören' : 'Sprechen'}</span>
+                    <span>{isRecording ? 'Hören' : 'Sprechen'}</span>
                   </Button>
                   <Button
                     onClick={processUserTurn}

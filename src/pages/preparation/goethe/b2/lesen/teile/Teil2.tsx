@@ -30,33 +30,37 @@ const Teil2: React.FC<Teil2Props> = ({ topic, answers, showResults, onAnswerChan
 
         return (
           <span key={index} className="inline-block mx-1 align-middle relative group">
-            <button
-              disabled={isBeispiel || showResults}
-              onClick={() => {
-                // Simplified: Open a native-like selection or custom modal
-                // For this implementation, we'll use a select but styled to look like an inline gap
-              }}
-              className="relative"
-            >
-              <select
-                disabled={isBeispiel || showResults}
-                value={selectedValue || ""}
-                onChange={(e) => onAnswerChange(gapId, e.target.value)}
-                className={cn(
-                  "appearance-none bg-white border-2 rounded-sm px-3 py-1 text-sm font-bold min-w-[4rem] text-center cursor-pointer transition-all",
-                  !selectedValue ? "border-blue-400 text-blue-600 animate-pulse" : "border-gray-800 text-gray-800",
-                  showResults && !isBeispiel && (isCorrect ? "border-green-600 bg-green-50" : "border-red-600 bg-red-50"),
-                  isBeispiel && "border-gray-200 opacity-60 text-gray-400 cursor-default"
-                )}
-                title={selectedValue ? selectedSentenceText : "Lücke wählen"}
+            {isBeispiel ? (
+              <span className="inline-flex items-center justify-center bg-gray-200 border border-gray-400 text-gray-600 font-bold text-[10px] w-6 h-5 mx-1">
+                0
+              </span>
+            ) : (
+              <button
+                disabled={showResults}
+                onClick={() => {
+                  // Handled by select
+                }}
+                className="relative"
               >
-                <option value="" disabled>{gapId}</option>
-                {sentences.map((s: any) => (
-                  <option key={s.id} value={s.id}>{s.id.toUpperCase()}</option>
-                ))}
-              </select>
-              <ChevronDown className="h-3 w-3 absolute right-1 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400" />
-            </button>
+                <select
+                  disabled={showResults}
+                  value={selectedValue || ""}
+                  onChange={(e) => onAnswerChange(gapId, e.target.value)}
+                  className={cn(
+                    "appearance-none bg-white border rounded-none px-2 py-0.5 text-[10px] font-bold min-w-[3rem] text-center cursor-pointer transition-none",
+                    !selectedValue ? "border-blue-400 text-blue-600" : "border-gray-800 text-gray-800",
+                    showResults && (isCorrect ? "border-green-600 bg-green-50" : "border-red-600 bg-red-50")
+                  )}
+                  title={selectedValue ? selectedSentenceText : "Lücke wählen"}
+                >
+                  <option value="" disabled>{gapId}</option>
+                  {sentences.map((s: any) => (
+                    <option key={s.id} value={s.id}>{s.id.toUpperCase()}</option>
+                  ))}
+                </select>
+                <ChevronDown className="h-2.5 w-2.5 absolute right-0.5 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400" />
+              </button>
+            )}
             
             {showResults && !isBeispiel && (
               <span className="absolute -top-6 left-1/2 -translate-x-1/2">
@@ -76,32 +80,39 @@ const Teil2: React.FC<Teil2Props> = ({ topic, answers, showResults, onAnswerChan
   };
 
   return (
-    <div className="flex h-full animate-in fade-in duration-500 overflow-hidden bg-white">
-      {/* Left: Reading Text */}
-      <div className="flex-1 overflow-y-auto p-16 bg-white border-r border-gray-200 custom-scrollbar">
-        <div className="max-w-2xl mx-auto space-y-10">
-           <div className="border-b-4 border-gray-900 pb-8">
-              <h2 className="text-4xl font-serif font-bold text-gray-900 leading-tight tracking-tight">
-                {topic.title}
-              </h2>
+    <div className="flex flex-col lg:flex-row h-full bg-[#f1f5f9]">
+      {/* ── Left: Reading Text ── */}
+      <div className="flex-1 overflow-y-auto p-6 md:p-10 bg-white border-b lg:border-b-0 lg:border-r border-gray-300">
+        <div className="max-w-2xl mx-auto space-y-5">
+           <div className="border-b-2 border-gray-900 pb-3">
+              <p className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Leseverstehen — Teil 2</p>
+              <h2 className="text-base font-bold text-gray-900 uppercase tracking-tight mt-0.5">{topic.title}</h2>
            </div>
-           <div className="text-[18px] leading-[2] text-gray-800 whitespace-pre-line font-serif italic selection:bg-yellow-200">
-             {renderTextWithGaps()}
+           
+           <div className="bg-gray-50 border border-gray-200 p-6 space-y-3">
+             <div className="text-xs text-gray-800 leading-relaxed font-serif whitespace-pre-line italic">
+               {renderTextWithGaps()}
+             </div>
            </div>
         </div>
       </div>
 
-      {/* Right: Sentences selection Area */}
-      <div className="w-[520px] overflow-y-auto bg-gray-50/50 p-10 custom-scrollbar shrink-0 border-l border-gray-200">
-        <div className="space-y-8">
-           <div className="flex items-center justify-between border-b border-gray-300 pb-6">
-              <div className="space-y-1">
-                <h3 className="text-sm font-bold text-gray-900 uppercase tracking-widest">Sätze zur Auswahl</h3>
-                <p className="text-[10px] text-gray-400 font-bold uppercase">Leseverstehen — Teil 2</p>
+      {/* ── Right: Sentences selection Area ── */}
+      <div className="w-full lg:w-[420px] overflow-y-auto bg-gray-50 p-5 md:p-8 shrink-0 border-l border-gray-300">
+        <div className="space-y-5">
+           <div className="flex items-center justify-between border-b border-gray-300 pb-3">
+              <div className="space-y-0.5">
+                <h3 className="text-[9px] font-bold text-gray-900 uppercase tracking-widest">Sätze zur Auswahl</h3>
+                <p className="text-[8px] text-gray-400 font-bold uppercase">Ordnen Sie die Sätze zu</p>
               </div>
            </div>
+
+           <div className="bg-gray-100 border border-gray-300 p-2 flex items-center justify-center gap-2">
+              <span className="text-[10px] font-bold text-gray-600 uppercase tracking-widest">Beispiel: 0</span>
+              <span className="text-[10px] font-bold text-gray-800 uppercase">Lösung: {beispiel.correct}</span>
+           </div>
            
-           <div className="grid grid-cols-1 gap-4">
+           <div className="grid grid-cols-1 gap-2.5">
              {sentences.map((sentence: any) => {
                // Find where this sentence is used
                let usedInGap = null;
@@ -115,20 +126,20 @@ const Teil2: React.FC<Teil2Props> = ({ topic, answers, showResults, onAnswerChan
                  <div 
                    key={sentence.id} 
                    className={cn(
-                     "flex items-start gap-5 p-5 bg-white border rounded-sm transition-all shadow-sm",
-                     usedInGap ? "border-blue-400 bg-blue-50/20" : "border-gray-200"
+                     "flex items-start gap-3 p-3 bg-white border transition-none",
+                     usedInGap ? "bg-blue-50 border-blue-300" : "border-gray-300"
                    )}
                  >
                    <div className={cn(
-                     "h-10 w-10 rounded-sm flex items-center justify-center font-bold text-sm shrink-0 uppercase border-2",
-                     usedInGap ? "bg-blue-600 border-blue-600 text-white" : "bg-gray-100 border-gray-200 text-gray-400"
+                     "h-5 w-5 flex items-center justify-center font-bold text-[9px] shrink-0 uppercase border",
+                     usedInGap ? "bg-blue-600 border-blue-600 text-white" : "bg-gray-100 border-gray-300 text-gray-500"
                    )}>
                      {sentence.id}
                    </div>
-                   <div className="flex-1 space-y-2">
-                      <p className="text-[15px] text-gray-800 leading-relaxed font-medium">{sentence.text}</p>
+                   <div className="flex-1 space-y-1">
+                      <p className="text-[11px] text-gray-800 leading-snug font-medium">{sentence.text}</p>
                       {usedInGap && (
-                        <span className="text-[10px] font-bold text-blue-600 uppercase tracking-widest">
+                        <span className="text-[8px] font-bold text-blue-600 uppercase tracking-widest">
                           Eingesetzt in Lücke {usedInGap}
                         </span>
                       )}

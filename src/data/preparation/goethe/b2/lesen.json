@@ -3761,7 +3761,8 @@
           "context": "Sie sind in eine neue Wohnung gezogen und lesen die Hausordnung.",
           "beispiel": {
             "id": "0",
-            "correct": "c"
+            "correct": "c",
+            "text": "Das Waschen von Fahrzeugen auf dem Grundstück ist aus Umweltschutzgründen untersagt."
           },
           "text": {
             "title": "Allgemeine Hausordnung",
@@ -3839,7 +3840,8 @@
           "context": "Sie möchten an der Uni studieren und lesen Auszüge aus der Prüfungsordnung.",
           "beispiel": {
             "id": "0",
-            "correct": "e"
+            "correct": "e",
+            "text": "Dies ist ein Beispieltext für den Paragrafen 0. Er dient dazu, das Format der Aufgabe zu veranschaulichen."
           },
           "text": {
             "title": "Allgemeine Studienordnung",
@@ -3917,7 +3919,8 @@
           "context": "Sie melden sich in der Stadtbibliothek an und lesen die Nutzungsregeln.",
           "beispiel": {
             "id": "0",
-            "correct": "a"
+            "correct": "a",
+            "text": "Zur Anmeldung ist ein gültiger Personalausweis oder Reisepass mit Meldebescheinigung vorzulegen."
           },
           "text": {
             "title": "Benutzungsordnung Stadtbibliothek",
@@ -3995,7 +3998,8 @@
           "context": "Sie unterschreiben einen Vertrag im Fitnessstudio und prüfen die Bedingungen.",
           "beispiel": {
             "id": "0",
-            "correct": "h"
+            "correct": "h",
+            "text": "Dies ist ein Beispieltext für den Paragrafen 0. Er dient dazu, das Format der Aufgabe zu veranschaulichen."
           },
           "text": {
             "title": "Allgemeine Geschäftsbedingungen",
@@ -4073,7 +4077,8 @@
           "context": "Sie beginnen eine neue Stelle und lesen Ihren Arbeitsvertrag genau durch.",
           "beispiel": {
             "id": "0",
-            "correct": "c"
+            "correct": "c",
+            "text": "Dies ist ein Beispieltext für den Paragrafen 0. Er dient dazu, das Format der Aufgabe zu veranschaulichen."
           },
           "text": {
             "title": "Arbeitsvertrag der Musterfirma GmbH",
@@ -4151,7 +4156,8 @@
           "context": "Sie reisen häufig mit der Bahn und lesen die Fahrgastrechte.",
           "beispiel": {
             "id": "0",
-            "correct": "c"
+            "correct": "c",
+            "text": "Fahrräder können in ICE-Zügen nur nach vorheriger Reservierung eines Stellplatzes mitgenommen werden."
           },
           "text": {
             "title": "Beförderungsbedingungen - Auszug",
@@ -4229,7 +4235,8 @@
           "context": "Sie treten einem Sportverein bei und lesen die Satzung.",
           "beispiel": {
             "id": "0",
-            "correct": "b"
+            "correct": "b",
+            "text": "Ein Vereinsaustritt ist nur schriftlich mit einer Frist von drei Monaten zum Jahresende möglich."
           },
           "text": {
             "title": "Satzung des SV Beispiel 1890 e.V.",
@@ -4307,7 +4314,8 @@
           "context": "Sie bereiten sich auf das Abitur vor und lesen die Prüfungsordnung.",
           "beispiel": {
             "id": "0",
-            "correct": "d"
+            "correct": "d",
+            "text": "Krankmeldungen müssen spätestens am dritten Tag nach Beginn der Erkrankung durch ein ärztliches Attest nachgewiesen werden."
           },
           "text": {
             "title": "Prüfungsordnung für die gymnasiale Oberstufe",
@@ -4385,7 +4393,8 @@
           "context": "Sie beziehen eine neue Wohnung und lesen den Mietvertrag sorgfältig.",
           "beispiel": {
             "id": "0",
-            "correct": "b"
+            "correct": "b",
+            "text": "Die Haltung von Kleintieren wie Vögeln und Zierfischen ist grundsätzlich ohne vorherige Zustimmung des Vermieters erlaubt."
           },
           "text": {
             "title": "Mietvertrag (Standard) - Auszug",

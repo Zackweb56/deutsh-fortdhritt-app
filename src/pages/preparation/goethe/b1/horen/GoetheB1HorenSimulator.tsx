@@ -22,6 +22,9 @@ const formatAufgabentyp = (typ?: string): string => {
     'mehrfachauswahl-3-gliedrig': 'a/b/c',
     'zuordnung': 'Zuordnung',
     'mehrfachauswahl': 'a/b/c',
+    'multiple-choice': 'a/b/c',
+    'richtig-falsch-mc': 'Mixed',
+    'zuordnung-person': 'Zuordnung',
   };
   return map[typ] || typ;
 };

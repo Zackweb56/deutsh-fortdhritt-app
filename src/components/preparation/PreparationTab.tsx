@@ -51,8 +51,37 @@ const getAufgabentypLabel = (type?: string) => {
   return aufgabentypLabels[type] || type;
 };
 
-const getTeilRoleLabel = (module?: Module | null, teilNummer?: number) => {
-  const map: Record<string, Record<number, string>> = {
+const getTeilRoleLabel = (module?: Module | null, teilNummer?: number, level?: string | null) => {
+  if (!module || !teilNummer) return 'Aufgabentyp';
+  
+  if (level === 'B2') {
+    const b2Map: Record<string, Record<number, string>> = {
+      lesen: {
+        1: 'Einstellungen/Haltungen verstehen',
+        2: 'Informationen verstehen',
+        3: 'Informationen verstehen',
+        4: 'Standpunkte verstehen',
+        5: 'Regeln/Instruktionen verstehen',
+      },
+      horen: {
+        1: 'Alltagsgespräche verstehen',
+        2: 'Informationen verstehen',
+        3: 'Aussagen verstehen',
+        4: 'Vorträge verstehen',
+      },
+      schreiben: {
+        1: 'Meinungsäußerung verfassen',
+        2: 'Formelle Nachricht schreiben',
+      },
+      sprechen: {
+        1: 'Vortrag halten & Fragen beantworten',
+        2: 'Argumente pro und kontra erörtern',
+      },
+    };
+    return b2Map[module]?.[teilNummer] || 'Aufgabentyp';
+  }
+
+  const b1Map: Record<string, Record<number, string>> = {
     lesen: {
       1: 'Globalverstehen (Richtig/Falsch)',
       2: 'Detailverstehen (Presse/Artikel)',
@@ -77,8 +106,7 @@ const getTeilRoleLabel = (module?: Module | null, teilNummer?: number) => {
       3: 'Feedback geben und nachfragen',
     },
   };
-  if (!module || !teilNummer) return 'Teil-Rolle';
-  return map[module]?.[teilNummer] || 'Teil-Rolle';
+  return b1Map[module]?.[teilNummer] || 'Aufgabentyp';
 };
 
 export const PreparationTab = () => {
@@ -394,7 +422,7 @@ export const PreparationTab = () => {
                   aufgabentyp={part.aufgabentyp}
                   itemCount={part.itemCount}
                   arbeitszeit={part.arbeitszeit}
-                  teilRole={getTeilRoleLabel(selectedModule, part.nummer)}
+                  teilRole={getTeilRoleLabel(selectedModule, part.nummer, selectedLevel)}
                   showAufgaben={['lesen', 'horen'].includes(selectedModule)}
                   themenCount={part.themen?.length}
                   onClick={() => handleTeilSelect(part)}
@@ -441,7 +469,7 @@ export const PreparationTab = () => {
               </div>
               <div className="sm:col-span-2 lg:col-span-4">
                 <p className="text-[7px] text-white/30 font-black uppercase tracking-widest">Teil-Rolle</p>
-                <p className="text-[9px] text-red-500 font-black mt-1">{getTeilRoleLabel(selectedModule, selectedTeil.nummer)}</p>
+                <p className="text-[9px] text-red-500 font-black mt-1">{getTeilRoleLabel(selectedModule, selectedTeil.nummer, selectedLevel)}</p>
               </div>
             </div>
           </Card>
@@ -494,7 +522,7 @@ export const PreparationTab = () => {
               )}
               <div>
                 <p className="text-[7px] text-white/30 font-black uppercase tracking-widest">Teil</p>
-                <p className="text-xs sm:text-sm font-black text-white mt-1 sm:mt-2">{selectedTeil.label} • {getTeilRoleLabel(selectedModule, selectedTeil.nummer)}</p>
+                <p className="text-xs sm:text-sm font-black text-white mt-1 sm:mt-2">{selectedTeil.label} • {getTeilRoleLabel(selectedModule, selectedTeil.nummer, selectedLevel)}</p>
               </div>
               <div>
                 <p className="text-[7px] text-white/30 font-black uppercase tracking-widest">Themeninfo</p>

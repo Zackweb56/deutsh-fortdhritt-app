@@ -1,6 +1,5 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { PenTool, ImageIcon, ListChecks } from 'lucide-react';
 
 interface Teil1Props {
   teil: any;
@@ -12,61 +11,57 @@ interface Teil1Props {
 
 const Teil1: React.FC<Teil1Props> = ({ teil, topic, userText, onTextChange, wordCount }) => {
   return (
-    <div className="space-y-12 animate-in fade-in duration-500">
-      {/* Task Sheet */}
-      <div className="bg-white border border-gray-200 shadow-sm p-12 space-y-10">
-        <div className="border-b-4 border-gray-900 pb-8 flex justify-between items-end">
-          <div className="space-y-1">
-            <h2 className="text-3xl font-serif font-bold text-gray-900 uppercase tracking-tight">Kandidatenblatt</h2>
-            <p className="text-[10px] text-gray-400 font-bold uppercase tracking-[0.2em]">Schreiben — Teil 1</p>
-          </div>
-          <div className="h-12 w-12 bg-gray-100 rounded-full flex items-center justify-center font-bold text-gray-400 text-xs">
-            01
-          </div>
+    <div className="space-y-12">
+      <div className="bg-white p-8 space-y-8 border border-gray-200">
+        <div className="flex items-end justify-between border-b-2 border-gray-900 pb-4">
+          <h2 className="text-xl font-bold text-gray-900 uppercase tracking-tight">{teil.label}</h2>
+          <span className="text-sm text-gray-600 font-serif">vorgeschlagene Arbeitszeit: {teil.arbeitszeit}</span>
         </div>
 
-        <div className="space-y-8">
-           <div className="bg-gray-50/50 p-8 border border-gray-100 rounded-sm italic font-serif text-[16px] text-gray-700 leading-relaxed">
+        <div className="space-y-6 font-serif">
+           <p className="text-base text-gray-800 leading-relaxed whitespace-pre-wrap">
              {topic.context}
+           </p>
+
+           <div className="space-y-2 pl-2">
+             {topic.aufgabenpunkte?.map((point: string, idx: number) => (
+               <label key={idx} className="text-base text-gray-800 flex gap-3 items-start cursor-pointer hover:bg-gray-50 p-1 -ml-1 rounded">
+                 <span className="h-1.5 w-1.5 rounded-full bg-gray-900 mt-2.5 shrink-0" />
+                 <span>{point}</span>
+               </label>
+             ))}
            </div>
 
-           <div className="space-y-6">
-              <h3 className="text-sm font-bold text-gray-900 uppercase tracking-widest border-l-4 border-gray-900 pl-4">Ihre Aufgabe</h3>
-              <p className="text-[17px] font-serif text-gray-800 leading-relaxed">
-                {teil.instructions}
-              </p>
-              <ul className="grid grid-cols-1 gap-4">
-                {topic.aufgabenpunkte.map((point: string, idx: number) => (
-                  <li key={idx} className="flex gap-4 items-start bg-gray-50/30 p-4 rounded-sm border border-gray-100/50">
-                    <span className="h-2 w-2 rounded-full bg-gray-400 mt-2 shrink-0" />
-                    <span className="text-[16px] text-gray-700 font-serif">{point}</span>
-                  </li>
-                ))}
-              </ul>
+           <div className="pt-6 space-y-3 text-base text-gray-800 text-sm">
+             <p>
+               Denken Sie an eine Einleitung und einen Schluss. Bei der Bewertung wird darauf geachtet, wie genau die Inhaltspunkte bearbeitet sind, wie korrekt der Text ist und wie gut die Sätze und Abschnitte sprachlich miteinander verknüpft sind. Schreiben Sie circa <strong>150 Wörter</strong>.
+             </p>
            </div>
         </div>
       </div>
 
       {/* Writing Area */}
-      <div className="space-y-6">
-        <div className="flex items-center justify-between px-2">
-           <h3 className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Antwortblatt</h3>
+      <div className="space-y-4">
+        <div className="flex items-center justify-between border-b border-gray-200 pb-2">
+           <h3 className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Antwortblatt</h3>
            <div className="flex items-center gap-2">
               <span className={cn(
-                "text-[10px] font-bold px-2 py-0.5 rounded-full",
-                wordCount >= (teil.minWords || 150) ? "bg-green-50 text-green-600" : "bg-gray-100 text-gray-400"
+                "text-[9px] font-bold px-2 py-0.5 border",
+                (wordCount > 0 && wordCount < 140) ? "bg-red-50 border-red-200 text-red-700" :
+                wordCount >= (teil.minWords || 150) ? "bg-green-50 border-green-200 text-green-700" : 
+                "bg-gray-100 border-gray-200 text-gray-400"
               )}>
                 {wordCount} Wörter
               </span>
-              <span className="text-[10px] text-gray-400 font-medium">/ min. {teil.minWords || 150}</span>
+              <span className="text-[9px] text-gray-400 font-bold uppercase">/ min. {teil.minWords || 150}</span>
            </div>
         </div>
         
         <textarea
           value={userText}
           onChange={onTextChange}
-          placeholder="Schreiben Sie hier Ihren Beitrag..."
-          className="w-full h-[600px] p-12 bg-white border border-gray-200 focus:border-gray-900 focus:ring-0 rounded-sm text-[18px] font-serif leading-[1.8] text-gray-800 shadow-sm transition-all resize-none placeholder:text-gray-200"
+          placeholder="Schreiben Sie hier..."
+          className="w-full h-[400px] p-8 bg-white border border-gray-300 focus:border-gray-900 focus:ring-0 text-sm font-serif leading-relaxed text-gray-800 transition-none resize-none placeholder:text-gray-200"
         />
       </div>
     </div>

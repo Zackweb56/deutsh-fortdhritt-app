@@ -3,6 +3,7 @@ import { VocabularyForm } from './VocabularyForm';
 import { VocabularyTable } from './VocabularyTable';
 import { VocabularyLearning } from './VocabularyLearning';
 import { ArtikelQuiz } from './ArtikelQuiz';
+import { VocabsLibrary } from './VocabsLibrary';
 import { Card } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
@@ -11,8 +12,14 @@ export const VocabularyTab = () => {
 
   return (
     <div className="space-y-6">
-      <Tabs defaultValue="learning" className="w-full" dir="rtl">
+      <Tabs defaultValue="library" className="w-full" dir="rtl">
         <TabsList className="flex flex-wrap h-auto w-full gap-1.5 p-1.5 justify-start sm:justify-center rounded-lg bg-muted/50">
+          <TabsTrigger
+            value="library"
+            className="flex-auto sm:flex-1 h-auto min-h-9 whitespace-nowrap px-3 py-2 text-center text-[8px] sm:text-sm rounded-lg data-[state=active]:bg-background data-[state=active]:shadow-sm transition-all"
+          >
+            المكتبة
+          </TabsTrigger>
           <TabsTrigger
             value="learning"
             className="flex-auto sm:flex-1 h-auto min-h-9 whitespace-nowrap px-3 py-2 text-center text-[8px] sm:text-sm rounded-lg data-[state=active]:bg-background data-[state=active]:shadow-sm transition-all"
@@ -38,6 +45,10 @@ export const VocabularyTab = () => {
             قائمة المفردات
           </TabsTrigger>
         </TabsList>
+
+        <TabsContent value="library" className="space-y-6">
+          <VocabsLibrary />
+        </TabsContent>
         
         <TabsContent value="learning" className="space-y-6">
           <VocabularyLearning />

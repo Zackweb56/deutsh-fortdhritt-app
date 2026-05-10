@@ -25,6 +25,23 @@ const formatTime = (seconds: number) => {
   return `${m}:${s.toString().padStart(2, '0')}`;
 };
 
+const formatAufgabentyp = (typ?: string): string => {
+  if (!typ) return '';
+  const map: Record<string, string> = {
+    'richtig-falsch': 'R/F',
+    'mehrfachauswahl-3-gliedrig': 'a/b/c',
+    'zuordnung': 'Zuordnung',
+    'lueckentext': 'Lückentext',
+    'mehrfachauswahl': 'a/b/c',
+    'zuordnung-personen': 'Zuordnung',
+    'satzergaenzung': 'Lückentext',
+    'multiple-choice-abc': 'a/b/c',
+    'zuordnung-ueberschriften': 'Zuordnung',
+    'zuordnung-paragrafen': 'Zuordnung',
+  };
+  return map[typ] || typ;
+};
+
 const GoetheB2LesenSimulator = () => {
   const { teilId, topicId } = useParams<{ teilId: string; topicId: string }>();
   const navigate = useNavigate();
@@ -79,8 +96,16 @@ const GoetheB2LesenSimulator = () => {
     setIsTimerRunning(false);
   };
 
+  const handleJumpToTeil = (id: string) => {
+    navigate(`/preparation/goethe/b2/lesen/${id}`);
+  };
+
   if (!teil || !topic) {
-    return <div className="min-h-screen bg-[#0a0a0a] flex items-center justify-center text-white" dir="ltr">Laden...</div>;
+    return (
+      <div className="min-h-screen bg-[#f1f5f9] flex items-center justify-center text-gray-500 font-bold uppercase tracking-widest text-xs" dir="ltr">
+        Laden...
+      </div>
+    );
   }
 
   const renderTeil = () => {
@@ -91,9 +116,26 @@ const GoetheB2LesenSimulator = () => {
       case 3: return <Teil3 {...props} />;
       case 4: return <Teil4 {...props} />;
       case 5: return <Teil5 {...props} />;
-      default: return <div className="text-white p-4">Teil nicht gefunden</div>;
+      default: return <div className="text-gray-900 p-4 text-xs">Teil nicht gefunden</div>;
     }
   };
+
+  const answeredCount = Object.keys(answers).length;
+  const totalCount = (() => {
+    if (!topic) return 0;
+    if (teil.nummer === 2) return topic.text?.match(/\[\.\.\.\d+\.\.\.\]/g)?.length ?? 0;
+    if (topic.items) return topic.items.length;
+    if (topic.situations) return topic.situations.length;
+    return 0;
+  })();
+
+  const allTeile = lesenData.teile.map(t => ({
+    id: t.id,
+    label: t.label,
+    points: (t as any).punkte,
+    examType: formatAufgabentyp((t as any).aufgabentyp),
+    isCompleted: false,
+  }));
 
   return (
     <>
@@ -102,7 +144,10 @@ const GoetheB2LesenSimulator = () => {
         module={lesenData.module}
         teil={teil.label}
         timeLeft={timeLeft}
+        totalTimeLabel={teil.arbeitszeit}
         progress={`${teil.nummer}/${lesenData.teile.length}`}
+        answeredCount={answeredCount}
+        totalCount={totalCount}
         onZuruck={() => navigate(-1)}
         onWeiter={() => {
           const nextTeil = lesenData.teile.find(t => t.nummer === teil.nummer + 1);
@@ -111,14 +156,17 @@ const GoetheB2LesenSimulator = () => {
           }
         }}
         onAbgeben={handleSubmit}
+        onJumpToTeil={handleJumpToTeil}
+        currentTeilId={teil.id}
+        allTeile={allTeile}
         disableMainScroll={true}
       >
-        <div className="flex flex-col h-full">
-          {/* Instructions Box */}
-          <div className="bg-[#fff9c4] border-b border-[#fbc02d] p-4 text-sm text-[#5d4037] leading-relaxed shrink-0">
-             <div className="max-w-6xl mx-auto flex items-start gap-3">
-                <Info className="h-4 w-4 mt-0.5 shrink-0" />
-                <p className="font-bold uppercase tracking-tight">{teil.instructions} {teil.pruefungsziel}</p>
+        <div className="flex flex-col h-full bg-white border border-gray-300">
+          {/* Part Instructions */}
+          <div className="bg-[#fff9c4] border-b border-gray-300 p-3 md:p-4 text-[10px] md:text-xs text-gray-800 leading-relaxed font-bold">
+             <div className="max-w-7xl mx-auto flex items-start gap-3">
+                <Info className="h-4 w-4 mt-0.5 shrink-0 text-gray-400" />
+                <p className="uppercase tracking-tight">{teil.instructions} {teil.pruefungsziel}</p>
              </div>
           </div>
 

@@ -185,7 +185,7 @@ async function callGroq(messages: GroqMessage[], temperature = 0.7): Promise<str
       model: GROQ_MODEL,
       messages,
       temperature,
-      max_tokens: 500,
+      max_tokens: 1500,
     }),
   });
 
@@ -465,9 +465,9 @@ Offizielles ${params.level} Bewertungsschema (Vergebe für jedes Kriterium strik
 WICHTIGE PRÜFUNGSREGELN:
 1. Wortanzahl: Der Text hat ${wordCount} Wörter. Das Minimum ist ${params.minWords}. Wenn der Text deutlich zu kurz ist (weniger als ${params.minWords - 10} Wörter), ziehe Punkte bei der Aufgabenerfüllung ab!
 2. Format prüfen:
-   - B1 Teil 1: Persönliche E-Mail (informell). MUSS eine informelle Anrede (z.B. Liebe/r) und eine Grußformel (z.B. Viele Grüße) haben. Wenn diese fehlen -> Punktabzug!
-   - B1 Teil 2 / B2 Teil 1: Forumsbeitrag/Meinungsäußerung. Darf KEINE direkte Anrede oder Grußformel (wie "Liebe/r" oder "Viele Grüße") haben. Man startet direkt mit der Meinung. Wenn Anrede/Gruß vorhanden -> Punktabzug!
-   - B1 Teil 3 / B2 Teil 2: Formelle Nachricht/E-Mail (formell, "Sie"). MUSS eine formelle Anrede (Sehr geehrte/r) und einen formellen Gruß (Mit freundlichen Grüßen) haben. Wenn informell oder fehlend -> starker Punktabzug!
+   - B1 Teil 1: Informelle Nachricht an Freunde. MUSS eine informelle Anrede (z.B. Liebe/r, Hallo) und Grußformel (z.B. Viele Grüße) haben. Wenn fehlend -> Punktabzug.
+   - B1 Teil 2 / B2 Teil 1: Forumsbeitrag / Blog-Kommentar. Eine allgemeine Anrede (z.B. "Hallo zusammen", "Liebe Leser") und ein Abschiedsgruß ("Viele Grüße") sind typisch und in der Musterlösung zwingend erforderlich. Ein direkter Einstieg ist beim Kandidaten tolerierbar, aber die Musterlösung muss wie ein echter Forenbeitrag formatiert sein.
+   - B1 Teil 3 / B2 Teil 2: Formelle Nachricht (an Chef, Lehrer, etc. mit "Sie"). MUSS zwingend eine formelle Anrede (Sehr geehrte/r) und einen formellen Gruß (Mit freundlichen Grüßen) haben. Wenn informell oder fehlend -> starker Punktabzug!
 
 "feedback" muss strukturiert auf Deutsch sein. 
 "improvedVersion" muss eine sprachlich einwandfreie, natürliche MUSTERLÖSUNG (100%) des Textes sein, im EXAKT richtigen Format (E-Mail oder Forumsbeitrag).

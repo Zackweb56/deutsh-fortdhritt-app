@@ -17,15 +17,11 @@ const parseDurationToSeconds = (duration?: string): number => {
   return parseInt(match[1], 10) * 60;
 };
 
-const formatAufgabentyp = (typ?: string): string => {
-  if (!typ) return '';
-  const map: Record<string, string> = {
-    'schreiben': 'Schreiben',
-    'formeller-brief': 'Brief',
-    'kommentar': 'Kommentar',
-    'email': 'E-Mail',
-  };
-  return map[typ] || typ;
+const formatAufgabentyp = (typ?: string, nummer?: number): string => {
+  if (nummer === 1) return 'E-Mail';
+  if (nummer === 2) return 'Meinung';
+  if (nummer === 3) return 'E-Mail (kurz)';
+  return 'Schreiben';
 };
 
 const GoetheB1SchreibenSimulator = () => {
@@ -140,7 +136,7 @@ Punkte: ${topic.aufgabenpunkte?.join(', ') || ''}`,
     id: t.id,
     label: t.label,
     points: t.punkte ?? '—',
-    examType: formatAufgabentyp(t.aufgabentyp) || t.pruefungsziel?.substring(0, 15),
+    examType: formatAufgabentyp(t.aufgabentyp, t.nummer) || t.pruefungsziel?.substring(0, 15),
     isCompleted: false,
   }));
 

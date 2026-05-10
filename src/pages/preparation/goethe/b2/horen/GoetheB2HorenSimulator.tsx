@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { ChevronLeft, Info, CheckCircle2, Loader2 } from 'lucide-react';
+import { Info, Loader2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import horenData from '@/data/preparation/goethe/b2/horen.json';
 import GoetheExamLayout from '@/components/preparation/goethe/GoetheExamLayout';
-import { Volume2, Play } from 'lucide-react';
 import Teil1 from './teile/Teil1';
 import Teil2 from './teile/Teil2';
 import Teil3 from './teile/Teil3';
@@ -17,10 +15,14 @@ const parseDurationToSeconds = (duration?: string): number => {
   return match ? parseInt(match[1], 10) * 60 : 0;
 };
 
-const formatTime = (seconds: number) => {
-  const m = Math.floor(seconds / 60);
-  const s = seconds % 60;
-  return `${m}:${s.toString().padStart(2, '0')}`;
+const formatAufgabentyp = (typ?: string): string => {
+  if (!typ) return '';
+  const map: Record<string, string> = {
+    'richtig-falsch-und-mehrfachauswahl': 'Mixed',
+    'mehrfachauswahl-3-gliedrig': 'a/b/c',
+    'zuordnung-passagen': 'Zuordnung',
+  };
+  return map[typ] || typ;
 };
 
 const GoetheB2HorenSimulator: React.FC = () => {
@@ -37,7 +39,7 @@ const GoetheB2HorenSimulator: React.FC = () => {
   useEffect(() => {
     if (!teilId || !topicId) return;
 
-    const currentTeil = horenData.teile.find((t: any) => t.id === teilId);
+    const currentTeil = (horenData as any).teile.find((t: any) => t.id === teilId);
     if (!currentTeil) return;
 
     let currentTopic: any = null;
@@ -51,7 +53,7 @@ const GoetheB2HorenSimulator: React.FC = () => {
     setTopic(currentTopic);
     setAnswers({});
     setShowResults(false);
-    setTimeLeft(parseDurationToSeconds(currentTeil.arbeitszeit));
+    setTimeLeft(parseDurationToSeconds(currentTeil.arbeitszeit || '10 Minuten'));
     setIsTimerRunning(true);
   }, [teilId, topicId]);
 
@@ -77,84 +79,90 @@ const GoetheB2HorenSimulator: React.FC = () => {
     setIsTimerRunning(false);
   };
 
+  // Navigate to topics selection page for that Teil
+  const handleJumpToTeil = (id: string) => {
+    navigate(`/preparation/goethe/b2/horen/${id}`);
+  };
+
   if (!teil || !topic) {
     return (
-      <div className="min-h-screen bg-white flex items-center justify-center text-gray-900 font-sans" dir="ltr">
-        <Loader2 className="h-8 w-8 animate-spin text-gray-400 mr-3" />
-        <span className="text-sm font-bold uppercase tracking-widest text-gray-400">Laden...</span>
+      <div className="min-h-screen bg-[#f1f5f9] flex items-center justify-center text-gray-400 font-bold uppercase tracking-widest text-xs" dir="ltr">
+        <Loader2 className="h-5 w-5 animate-spin mr-3 text-gray-400" />
+        Laden...
       </div>
     );
   }
 
+  // Count answered questions for footer progress
+  const answeredCount = Object.keys(answers).length;
+  const totalCount = (() => {
+    if (!topic) return 0;
+    if (topic.audioTexts) return topic.audioTexts.reduce((acc: number, t: any) => acc + (t.items?.length ?? 0), 0);
+    if (topic.items) return topic.items.length;
+    return 0;
+  })();
+
   const renderTeil = () => {
-    const props = { topic, answers, showResults, onAnswerChange: handleAnswerChange };
+    const props = { topic, teil, answers, showResults, onAnswerChange: handleAnswerChange };
     switch (teil.nummer) {
       case 1: return <Teil1 {...props} />;
       case 2: return <Teil2 {...props} />;
       case 3: return <Teil3 {...props} />;
       case 4: return <Teil4 {...props} />;
-      default: return <div className="p-4">Teil nicht gefunden</div>;
+      default: return <div className="text-gray-900 p-4 text-xs">Teil nicht gefunden</div>;
     }
   };
 
-  return (
-    <>
-      <GoetheExamLayout
-        title={`${horenData.institut} — ${horenData.level}`}
-        module={horenData.module}
-        teil={teil.label}
-        timeLeft={timeLeft}
-        progress={`${teil.nummer}/${horenData.teile.length}`}
-        onZuruck={() => navigate(-1)}
-        onWeiter={() => {
-          const nextTeil = horenData.teile.find((t: any) => t.nummer === teil.nummer + 1);
-          if (nextTeil) {
-            navigate(`/preparation/goethe/b2/horen/${nextTeil.id}/${topicId}`);
-          }
-        }}
-        onAbgeben={handleSubmit}
-      >
-        <div className="max-w-4xl mx-auto w-full space-y-8 pb-20">
-          {/* Audio Player & Instructions */}
-          <div className="bg-white border border-gray-300 shadow-sm rounded-sm overflow-hidden">
-             <div className="bg-gray-50 border-b border-gray-200 p-6 flex items-center justify-between">
-                <div className="flex items-center gap-4">
-                   <div className="h-12 w-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-600">
-                      <Volume2 className="h-6 w-6" />
-                   </div>
-                   <div>
-                      <h3 className="text-sm font-bold text-gray-800 uppercase tracking-tight">{teil.title}</h3>
-                      <p className="text-[10px] font-bold text-gray-400 uppercase">Hörverstehen — {teil.label}</p>
-                   </div>
-                </div>
+  const allTeile = (horenData as any).teile.map((t: any) => ({
+    id: t.id,
+    label: t.label,
+    points: t.itemCount ?? t.punkte ?? '—',
+    examType: formatAufgabentyp(t.aufgabentyp),
+    isCompleted: false,
+  }));
 
-                <div className="flex items-center gap-6">
-                   <div className="flex flex-col items-end">
-                      <span className="text-[10px] font-bold text-gray-400 uppercase">Wiederholungen</span>
-                      <span className="text-sm font-bold text-gray-800">1 von 2</span>
-                   </div>
-                   <Button className="bg-gray-800 hover:bg-black text-white px-8 h-10 rounded-sm font-bold uppercase text-xs flex items-center gap-2">
-                      <Play className="h-4 w-4 fill-current" />
-                      Abspielen
-                   </Button>
-                </div>
-             </div>
-             
-             <div className="p-6 bg-[#fff9c4] text-sm text-[#5d4037] leading-relaxed">
-                <div className="flex items-start gap-3">
-                   <Info className="h-4 w-4 mt-0.5 shrink-0" />
-                   <p className="font-bold uppercase tracking-tight">{teil.description} {teil.pruefungsziel}</p>
-                </div>
-             </div>
+  return (
+    <GoetheExamLayout
+      title={`${(horenData as any).institut} — ${(horenData as any).level}`}
+      module={(horenData as any).module}
+      teil={teil.label}
+      timeLeft={timeLeft}
+      totalTimeLabel={teil.arbeitszeit}
+      progress={`${teil.nummer}/${(horenData as any).teile.length}`}
+      answeredCount={answeredCount}
+      totalCount={totalCount}
+      onZuruck={() => navigate(-1)}
+      onWeiter={() => {
+        const nextTeil = (horenData as any).teile.find((t: any) => t.nummer === teil.nummer + 1);
+        if (nextTeil) {
+          navigate(`/preparation/goethe/b2/horen/${nextTeil.id}/${topicId}`);
+        }
+      }}
+      onAbgeben={handleSubmit}
+      onJumpToTeil={handleJumpToTeil}
+      currentTeilId={teil.id}
+      allTeile={allTeile}
+    >
+      <div className="w-full space-y-6 pb-16 md:pb-20">
+        <div className="bg-white border border-gray-300 p-4 md:p-8 space-y-6 md:space-y-8 shadow-sm">
+          <div className="border-b border-gray-200 pb-3">
+            <h2 className="text-sm md:text-base font-bold text-gray-900 uppercase tracking-tight">{teil.label} — {teil.title}</h2>
           </div>
 
-          {/* Questions Area */}
-          <div className="space-y-6">
+          <div className="bg-[#fff9c4] border border-gray-200 p-3 md:p-4 flex items-start gap-3">
+            <Info className="h-4 w-4 mt-0.5 shrink-0 text-gray-400" />
+            <div className="space-y-1">
+              <p className="text-[9px] font-bold text-gray-400 uppercase tracking-widest leading-none">Anweisung</p>
+              <p className="text-[10px] md:text-xs text-gray-800 leading-relaxed font-bold">{teil.instructions || teil.description || teil.pruefungsziel}</p>
+            </div>
+          </div>
+
+          <div className="space-y-8 md:space-y-12">
             {renderTeil()}
           </div>
         </div>
-      </GoetheExamLayout>
-    </>
+      </div>
+    </GoetheExamLayout>
   );
 };
 
