@@ -6,8 +6,9 @@ import { Input } from '@/components/ui/input';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { ArrowLeft, ArrowRight, Check, HelpCircle, PenTool, Search, X, AlertCircle, FileText, Pointer, Shuffle, Lock, RotateCcw } from 'lucide-react';
-import grammarRaw from '@/data/grammar/grammar_tab_exercises.json';
+import grammarRaw from '@/data/grammar/grammar_exercises.json';
 import { isLimitedAccess } from '@/lib/access';
 import LockOverlay from '@/components/ui/lock-overlay';
 
@@ -53,12 +54,28 @@ interface GrammarTopic {
   exercises: Exercise[];
 }
 
-const grammarData = grammarRaw as GrammarTopic[];
+interface LevelData {
+  level: string;
+  total_topics: number;
+  grammar_topics: GrammarTopic[];
+}
+
+const grammarData = grammarRaw as LevelData[];
 
 export const GrammarExercisesTab = () => {
+  const [selectedLevel, setSelectedLevel] = useState<string>('A1');
+  const [selectedTopic, setSelectedTopic] = useState<GrammarTopic | null>(null);
+  const [selectedTopicIndex, setSelectedTopicIndex] = useState<number>(-1);
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const currentLevelData = useMemo(() => {
+    return grammarData.find(ld => ld.level === selectedLevel);
+  }, [selectedLevel]);
+
   const topics = useMemo(() => {
-    return grammarData.map((topic) => {
-      // Handle legacy format where topic has a flat `questions` array instead of `exercises`
+    if (!currentLevelData) return [];
+    return currentLevelData.grammar_topics.map((topic) => {
+      // Handle legacy format if any
       if (!topic.exercises && (topic as any).questions) {
         return {
           ...topic,
@@ -74,12 +91,8 @@ export const GrammarExercisesTab = () => {
       }
       return topic;
     });
-  }, []);
+  }, [currentLevelData]);
 
-  const [selectedTopic, setSelectedTopic] = useState<GrammarTopic | null>(null);
-  const [selectedTopicIndex, setSelectedTopicIndex] = useState<number>(-1);
-  const [searchTerm, setSearchTerm] = useState('');
-  
   // State for answers: key is `${eIdx}-${qIdx}`
   const [answers, setAnswers] = useState<Record<string, string | string[]>>({});
   // State to track if an answer has been explicitly checked (for text inputs / sentences)
@@ -257,9 +270,14 @@ export const GrammarExercisesTab = () => {
           </RadioGroup>
 
           {hasAnswered && q.explanation_ar && (
-            <p className="text-sm text-muted-foreground mt-2 bg-muted/30 p-3 rounded-lg border border-border/50" dir="rtl">
-              {q.explanation_ar}
-            </p>
+            <Alert className="mt-4 bg-gray-800 dark:bg-gray-900 border-gray-700 dark:border-gray-700 text-gray-100 dark:text-gray-100 py-3" dir="rtl">
+              <div className="flex items-start gap-3">
+                <AlertCircle className="h-4 w-4 mt-0.5 text-gray-400 dark:text-gray-400 flex-shrink-0" />
+                <AlertDescription className="text-xs sm:text-sm font-medium leading-relaxed">
+                  {q.explanation_ar}
+                </AlertDescription>
+              </div>
+            </Alert>
           )}
         </div>
       );
@@ -332,10 +350,15 @@ export const GrammarExercisesTab = () => {
           </div>
 
           {isChecked && q.explanation_ar && (
-            <p className="text-sm text-muted-foreground bg-muted/30 p-3 rounded-lg border border-border/50" dir="rtl">
-              <span className="font-semibold block mb-1">توضيح:</span>
-              {q.explanation_ar}
-            </p>
+            <Alert className="mt-4 bg-gray-800 dark:bg-gray-900 border-gray-700 dark:border-gray-700 text-gray-100 dark:text-gray-100 py-3" dir="rtl">
+              <div className="flex items-start gap-3">
+                <AlertCircle className="h-4 w-4 mt-0.5 text-gray-400 dark:text-gray-400 flex-shrink-0" />
+                <AlertDescription className="text-xs sm:text-sm font-medium leading-relaxed">
+                  <span className="font-bold block mb-1">توضيح:</span>
+                  {q.explanation_ar}
+                </AlertDescription>
+              </div>
+            </Alert>
           )}
         </div>
       );
@@ -454,9 +477,14 @@ export const GrammarExercisesTab = () => {
           </div>
 
           {hasAnswered && item.explanation_ar && (
-            <p className="text-sm text-muted-foreground bg-card p-3 rounded-lg border border-border shadow-sm" dir="rtl">
-              {item.explanation_ar}
-            </p>
+            <Alert className="mt-4 bg-gray-800 dark:bg-gray-900 border-gray-700 dark:border-gray-700 text-gray-100 dark:text-gray-100 py-3" dir="rtl">
+              <div className="flex items-start gap-3">
+                <AlertCircle className="h-4 w-4 mt-0.5 text-gray-400 dark:text-gray-400 flex-shrink-0" />
+                <AlertDescription className="text-xs sm:text-sm font-medium leading-relaxed">
+                  {item.explanation_ar}
+                </AlertDescription>
+              </div>
+            </Alert>
           )}
         </div>
       );
@@ -576,10 +604,15 @@ export const GrammarExercisesTab = () => {
           )}
 
           {isChecked && q.explanation_ar && (
-            <p className="text-sm text-muted-foreground bg-card p-3 rounded-lg border border-border shadow-sm mt-4" dir="rtl">
-              <span className="font-semibold block mb-1 text-foreground">القاعدة:</span>
-              {q.explanation_ar}
-            </p>
+            <Alert className="mt-4 bg-gray-800 dark:bg-gray-900 border-gray-700 dark:border-gray-700 text-gray-100 dark:text-gray-100 py-3" dir="rtl">
+              <div className="flex items-start gap-3">
+                <AlertCircle className="h-4 w-4 mt-0.5 text-gray-400 dark:text-gray-400 flex-shrink-0" />
+                <AlertDescription className="text-xs sm:text-sm font-medium leading-relaxed">
+                  <span className="font-bold block mb-1">القاعدة:</span>
+                  {q.explanation_ar}
+                </AlertDescription>
+              </div>
+            </Alert>
           )}
         </div>
       );
@@ -591,40 +624,55 @@ export const GrammarExercisesTab = () => {
   return (
     <div className="space-y-6" dir="rtl">
       {/* Header */}
-      <Card className="p-6 bg-gradient-to-r from-primary/5 to-secondary/5 border-primary/20">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <div className="h-12 w-12 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-              <PenTool className="h-6 w-6 text-white" />
-            </div>
-            <div dir="rtl">
-              <h2 className="text-2xl font-bold">تمارين القواعد</h2>
-              <p className="text-muted-foreground">
-                {topics.length} درس • اختر درسًا وابدأ بالإجابة
-              </p>
-            </div>
+      <Card className="card-gradient p-6">
+        <div className="flex items-center justify-between flex-wrap gap-3">
+          <div>
+            <h2 className="text-xl font-bold">تمارين القواعد — {selectedLevel}</h2>
+            <p className="text-sm text-muted-foreground mt-1">
+              اختر درساً من القائمة وقم بحل التمارين لاختبار معلوماتك وتطوير مهاراتك اللغوية.
+            </p>
+          </div>
+          <div className="flex items-center gap-2">
+            <Select value={selectedLevel} onValueChange={(v) => {
+              setSelectedLevel(v);
+              setSelectedTopic(null);
+              resetState();
+            }}>
+              <SelectTrigger className="w-[120px]">
+                <SelectValue placeholder="المستوى" />
+              </SelectTrigger>
+              <SelectContent align="end">
+                {['A1', 'A2', 'B1', 'B2'].map((lvl) => (
+                  <SelectItem key={lvl} value={lvl}>{lvl}</SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+            <Badge variant="secondary" className="text-xs">
+              الدروس: {topics.length}
+            </Badge>
           </div>
         </div>
       </Card>
 
-      {/* Search */}
-      <Card className="p-4">
-        <div className="relative">
-          <Search className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-          <Input
-            placeholder="ابحث في الدروس أو الأسئلة..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="pr-10 bg-background"
-          />
-        </div>
-      </Card>
+      {!selectedTopic && (
+        <Card className="p-4">
+          <div className="relative">
+            <Search className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+            <Input
+              placeholder="ابحث في الدروس..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="pr-10 bg-background w-full"
+            />
+          </div>
+        </Card>
+      )}
 
       {topics.length === 0 && (
         <Alert className="border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20">
           <AlertCircle className="h-4 w-4 text-yellow-600" />
           <AlertDescription className="text-yellow-800 dark:text-yellow-200">
-            لا توجد تمارين قواعد متاحة حالياً
+            لا توجد تمارين متاحة لهذا المستوى حالياً
           </AlertDescription>
         </Alert>
       )}
@@ -632,16 +680,16 @@ export const GrammarExercisesTab = () => {
       {!selectedTopic ? (
         <>
           {/* Topics List View */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4">
             {filteredTopics.map((topic, idx) => {
               const originalIndex = topics.indexOf(topic);
               const qCount = topic.exercises.reduce((acc, ex) => acc + (ex.questions?.length || ex.items?.length || 0), 0);
-              const shouldLock = limited && originalIndex >= 2;
+              const shouldLock = limited && (selectedLevel !== 'A1' || originalIndex >= 3);
               
               return (
                 <LockOverlay key={`${topic.grammar_topic}-${idx}`} isLocked={shouldLock} message="دروس محجوبة">
                   <Card
-                    className={`p-3 lg:p-4 transition-all duration-200 ${shouldLock ? '' : 'cursor-pointer hover:shadow-md hover:border-primary/50 active:scale-[0.98]'}`}
+                    className={`p-4 transition-all duration-200 flex flex-col h-full min-h-[160px] ${shouldLock ? '' : 'cursor-pointer hover:shadow-md hover:border-primary/50 active:scale-[0.98]'}`}
                     onClick={() => {
                       if (shouldLock) return;
                       setSelectedTopic(topic);
@@ -649,24 +697,24 @@ export const GrammarExercisesTab = () => {
                       resetState();
                     }}
                   >
-                  <div className="flex items-start gap-3">
-                    <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-sm font-bold text-primary flex-shrink-0">
-                      {idx + 1}
+                    <div className="flex items-start justify-between mb-3">
+                      <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-sm font-bold text-primary flex-shrink-0">
+                        {idx + 1}
+                      </div>
+                      <Badge variant="outline" className="text-[10px] uppercase font-bold text-muted-foreground">{selectedLevel}</Badge>
                     </div>
-                    <div className="flex-1 min-w-0">
-                      <h3 className="font-semibold mb-2 text-base lg:text-lg line-clamp-2 text-left" dir="ltr">
+                    <div className="flex-1">
+                      <h3 className="font-bold text-base leading-snug line-clamp-2 text-left mb-4" dir="ltr" title={topic.grammar_topic}>
                         {topic.grammar_topic}
                       </h3>
-                      <div className="flex items-center justify-between gap-2 text-xs text-muted-foreground" dir="rtl">
-                        <span className="inline-flex items-center gap-1.5">
-                          <FileText className="h-3.5 w-3.5" />
-                          <span>{qCount} تدريب</span>
-                        </span>
-                        <Badge variant="secondary" className="font-normal text-[10px] lg:text-xs">درس #{originalIndex + 1}</Badge>
-                      </div>
                     </div>
-                  </div>
-                </Card>
+                    <div className="mt-auto flex items-center justify-between text-xs text-muted-foreground pt-3 border-t border-border/50" dir="rtl">
+                      <span className="inline-flex items-center gap-1.5">
+                        <FileText className="h-3.5 w-3.5" />
+                        <span>{qCount} تدريب</span>
+                      </span>
+                    </div>
+                  </Card>
                 </LockOverlay>
               );
             })}

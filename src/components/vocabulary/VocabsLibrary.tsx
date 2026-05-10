@@ -3,13 +3,19 @@ import { useApp } from '@/contexts/AppContext';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion';
-import { Search, Plus, BookOpen, Check, ChevronLeft, Volume2 } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+import { 
+  Search, 
+  Plus, 
+  BookOpen, 
+  Check, 
+  ChevronLeft, 
+  Volume2, 
+  ArrowLeft, 
+  ExternalLink,
+  Layers,
+  LayoutGrid
+} from 'lucide-react';
 import { toast } from 'sonner';
 import { speakGerman } from '@/lib/tts';
 import vocabsData from '@/data/vocabulars/vocabs_data.json';
@@ -38,10 +44,10 @@ export const VocabsLibrary = () => {
   const [search, setSearch] = useState('');
   const [addedIds, setAddedIds] = useState<Set<string>>(new Set());
   
-  // View State
-  const [view, setView] = useState<'sections' | 'topic'>('sections');
-  const [selectedTopic, setSelectedTopic] = useState<Topic | null>(null);
+  // View State: 'sections' | 'topics' | 'cards'
+  const [view, setView] = useState<'sections' | 'topics' | 'cards'>('sections');
   const [selectedSection, setSelectedSection] = useState<Section | null>(null);
+  const [selectedTopic, setSelectedTopic] = useState<Topic | null>(null);
 
   // Check if a word is already in the app's vocabulary list
   const isAlreadyAdded = (german: string) => {
@@ -98,19 +104,6 @@ export const VocabsLibrary = () => {
     speakGerman(text);
   };
 
-  const handleTopicClick = (section: Section, topic: Topic) => {
-    setSelectedSection(section);
-    setSelectedTopic(topic);
-    setView('topic');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const handleBack = () => {
-    setView('sections');
-    setSelectedTopic(null);
-    setSelectedSection(null);
-  };
-
   const renderGermanWord = (text: string) => {
     const parts = text.split(' ');
     if (parts.length > 1) {
@@ -118,36 +111,60 @@ export const VocabsLibrary = () => {
       const rest = parts.slice(1).join(' ');
       
       if (article === 'der') return <><span className="text-blue-400">der</span> {rest}</>;
-      if (article === 'die') return <><span className="text-primary font-black">die</span> {rest}</>;
+      if (article === 'die') return <><span className="text-primary font-bold">die</span> {rest}</>;
       if (article === 'das') return <><span className="text-accent">das</span> {rest}</>;
     }
     return text;
   };
 
-  if (view === 'topic' && selectedTopic && selectedSection) {
-    return (
-      <div className="space-y-4 animate-in fade-in slide-in-from-bottom-2 duration-300">
-        <div className="flex items-center justify-between pb-3 border-b border-white/5">
-          <Button 
-            variant="ghost" 
-            size="sm"
-            onClick={handleBack}
-            className="gap-1.5 text-muted-foreground hover:text-foreground h-8 px-2"
-          >
-            <ChevronLeft className="h-4 w-4" />
-            <span className="text-xs font-medium">العودة</span>
-          </Button>
-          <div className="text-right">
-            <h2 className="text-lg font-bold text-foreground">
-              {selectedTopic.topic}
-            </h2>
-            <p className="text-[10px] text-muted-foreground uppercase tracking-wider">
-              {selectedTopic.topic_ar} • {selectedSection.section}
-            </p>
-          </div>
-        </div>
+  const handleSectionSelect = (section: Section) => {
+    setSelectedSection(section);
+    setView('topics');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+  const handleTopicSelect = (topic: Topic) => {
+    setSelectedTopic(topic);
+    setView('cards');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleBack = () => {
+    if (view === 'cards') {
+      setView('topics');
+      setSelectedTopic(null);
+    } else if (view === 'topics') {
+      setView('sections');
+      setSelectedSection(null);
+    }
+  };
+
+  // 1. Cards View (Vocabulary Items)
+  if (view === 'cards' && selectedTopic && selectedSection) {
+    return (
+      <div className="space-y-4">
+        <Card className="border border-zinc-800 bg-zinc-900/60 p-4 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <Button 
+              variant="ghost" 
+              size="sm"
+              onClick={handleBack}
+              className="gap-2 h-9 text-muted-foreground hover:text-foreground hover:bg-white/5"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              <span>العودة</span>
+            </Button>
+            <div className="text-right">
+              <h2 className="text-lg font-bold text-foreground">{selectedTopic.topic_ar}</h2>
+              <p className="text-[10px] text-muted-foreground uppercase">{selectedTopic.topic}</p>
+            </div>
+          </div>
+          <Badge variant="outline" className="bg-zinc-400/10 border-none text-zinc-400 font-bold px-3">
+            {selectedTopic.vocab.length} كلمة
+          </Badge>
+        </Card>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {selectedTopic.vocab.map((item, vIdx) => {
             const alreadyInApp = isAlreadyAdded(item.de);
             const isJustAdded = addedIds.has(item.de);
@@ -155,53 +172,43 @@ export const VocabsLibrary = () => {
             return (
               <Card 
                 key={`${item.de}-${vIdx}`}
-                className="group relative overflow-hidden border-none bg-secondary/50 backdrop-blur-sm hover:bg-secondary/80 transition-all duration-300 rounded-xl focus-within:ring-0"
+                className="group border border-zinc-800 bg-zinc-900/40 hover:border-zinc-700 transition-all p-5 flex flex-col h-full rounded-xl"
               >
-                <CardContent className="p-4 flex flex-col items-center text-center gap-3">
-                  <div className="absolute top-2 left-2">
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      className="h-7 w-7 rounded-full hover:bg-white/10 text-muted-foreground transition-all"
-                      onClick={(e) => handlePlaySound(e, item.de)}
-                    >
-                      <Volume2 className="h-3.5 w-3.5" />
-                    </Button>
+                <div className="flex justify-between items-start mb-4">
+                  <div className="p-2 rounded-full bg-zinc-800/50 text-zinc-500 hover:text-accent transition-colors cursor-pointer" onClick={(e) => handlePlaySound(e, item.de)}>
+                    <Volume2 className="h-4 w-4" />
                   </div>
+                  <div className="bg-primary/10 text-primary rounded-full px-2 py-1 flex items-center justify-center text-[10px] font-bold">
+                    {vIdx + 1}
+                  </div>
+                </div>
 
-                  <div className="w-full mt-2">
-                    <div className="text-base font-bold text-foreground transition-colors leading-tight mb-1" dir="ltr">
-                      {renderGermanWord(item.de)}
-                    </div>
-                    <div className="text-xs text-muted-foreground font-medium font-arabic">
-                      {item.ar.join('، ')}
-                    </div>
-                  </div>
-                  
-                  <Button
-                    size="sm"
-                    variant={alreadyInApp || isJustAdded ? "secondary" : "outline"}
-                    className={`w-full gap-1.5 rounded-lg h-8 text-[10px] font-bold transition-all duration-500 focus-visible:ring-0 ${
-                      alreadyInApp || isJustAdded 
-                        ? "bg-success text-success-foreground border-none" 
-                        : "hover:bg-accent hover:text-accent-foreground border-white/10"
-                    }`}
-                    onClick={() => handleAdd(item)}
-                    disabled={alreadyInApp || isJustAdded}
-                  >
-                    {alreadyInApp || isJustAdded ? (
-                      <>
-                        <Check className="h-3 w-3" />
-                        <span>تمت</span>
-                      </>
-                    ) : (
-                      <>
-                        <Plus className="h-3 w-3" />
-                        <span>إضافة</span>
-                      </>
-                    )}
-                  </Button>
-                </CardContent>
+                <div className="flex-1 text-center space-y-2 mb-6">
+                  <h3 className="font-bold text-3xl leading-tight text-foreground" dir="ltr">
+                    {renderGermanWord(item.de)}
+                  </h3>
+                  <p className="text-md text-muted-foreground font-arabic opacity-70">
+                    {item.ar.join('، ')}
+                  </p>
+                </div>
+
+                <Button
+                  size="sm"
+                  variant={alreadyInApp || isJustAdded ? "secondary" : "outline"}
+                  className={`w-full gap-2 rounded-lg h-9 text-xs font-bold transition-all ${
+                    alreadyInApp || isJustAdded 
+                      ? "bg-success text-success-foreground border-none" 
+                      : "hover:bg-accent hover:text-black hover:border-accent border-zinc-700 bg-zinc-900"
+                  }`}
+                  onClick={() => handleAdd(item)}
+                  disabled={alreadyInApp || isJustAdded}
+                >
+                  {alreadyInApp || isJustAdded ? (
+                    <><Check className="h-3.5 w-3.5" /> تم الحفظ</>
+                  ) : (
+                    <><Plus className="h-3.5 w-3.5" /> إضافة</>
+                  )}
+                </Button>
               </Card>
             );
           })}
@@ -210,76 +217,116 @@ export const VocabsLibrary = () => {
     );
   }
 
-  return (
-    <div className="space-y-4 animate-in fade-in duration-500">
-      <div className="relative">
-        <Search className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-        <Input
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          placeholder="ابحث عن قسم أو كلمة..."
-          className="pr-10 h-10 text-sm rounded-xl border-none bg-secondary/50 focus-visible:ring-primary/20 transition-all shadow-inner"
-        />
-      </div>
+  // 2. Topics View (Sub-sections)
+  if (view === 'topics' && selectedSection) {
+    return (
+      <div className="space-y-4">
+        <Card className="border border-zinc-800 bg-zinc-900/60 p-4 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <Button 
+              variant="ghost" 
+              size="sm"
+              onClick={handleBack}
+              className="gap-2 h-9 text-muted-foreground hover:text-foreground hover:bg-white/5"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              <span>العودة للأقسام</span>
+            </Button>
+            <h2 className="text-lg font-bold text-foreground">{selectedSection.section_ar}</h2>
+          </div>
+          <Badge variant="outline" className="text-[10px] opacity-70 border-zinc-700">{selectedSection.section}</Badge>
+        </Card>
 
-      <div className="space-y-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {selectedSection.topics.map((topic, tIdx) => (
+            <Card
+              key={topic.topic}
+              onClick={() => handleTopicSelect(topic)}
+              className="group cursor-pointer border border-zinc-800 bg-zinc-900/40 hover:border-zinc-700 transition-all p-5 flex flex-col h-full rounded-xl"
+            >
+              <div className="flex justify-between items-start mb-4">
+                <div className="p-2 rounded-full bg-zinc-800/50 text-zinc-600 group-hover:text-accent transition-colors">
+                  <Layers className="h-5 w-5" />
+                </div>
+                <Badge variant="secondary" className="bg-zinc-800/50 text-zinc-300 border-none text-[10px] font-bold">
+                  {topic.vocab.length} كلمة
+                </Badge>
+              </div>
+
+              <div className="flex-1 text-right mb-6">
+                <h3 className="font-bold text-base leading-tight text-foreground group-hover:text-primary transition-colors">
+                  {topic.topic_ar}
+                </h3>
+                <p className="text-[10px] text-muted-foreground uppercase tracking-wider">{topic.topic}</p>
+              </div>
+
+              <Button className="w-full bg-zinc-900 border border-zinc-800 hover:border-accent/50 hover:bg-accent hover:text-black h-10 gap-2 text-xs transition-all">
+                <span>ابدأ التعلم</span>
+                <ExternalLink className="h-3.5 w-3.5" />
+              </Button>
+            </Card>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  // 3. Main Sections View
+  return (
+    <div className="space-y-6">
+      <Card className="p-4 border border-zinc-800 bg-zinc-900/60">
+        <div className="relative group">
+          <Search className="absolute right-4 top-1/2 -translate-y-1/2 h-5 w-5 text-zinc-600 group-focus-within:text-primary transition-colors" />
+          <Input
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="ابحث في المكتبة الشاملة..."
+            className="pr-12 h-12 text-sm rounded-lg border-zinc-800 bg-zinc-950/40 focus-visible:ring-1 focus-visible:ring-primary focus-visible:border-primary focus-visible:ring-offset-0 transition-all shadow-none"
+          />
+        </div>
+      </Card>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         {filteredSections.length === 0 ? (
-          <div className="text-center py-16 text-muted-foreground bg-secondary/20 rounded-2xl border-2 border-dashed border-white/5">
-            <BookOpen className="h-10 w-10 mx-auto mb-3 opacity-10" />
-            <p className="text-sm font-bold">لم يتم العثور على نتائج</p>
+          <div className="col-span-full text-center py-20 bg-secondary/20 rounded-2xl border-2 border-dashed border-white/5">
+            <BookOpen className="h-12 w-12 mx-auto mb-4 text-muted-foreground opacity-20" />
+            <p className="text-sm font-bold text-muted-foreground">لم يتم العثور على أي نتائج</p>
           </div>
         ) : (
-          <Accordion type="multiple" className="w-full space-y-2">
-            {filteredSections.slice(0, 20).map((section) => (
-              <AccordionItem 
-                key={section.section} 
-                value={section.section}
-                className="border-none rounded-xl bg-secondary/30 overflow-hidden transition-all px-4 hover:bg-secondary/40"
-              >
-                <AccordionTrigger className="hover:no-underline py-4">
-                  <div className="flex flex-col items-start gap-0.5">
-                    <span className="text-base font-bold text-foreground tracking-tight uppercase">
-                      {section.section}
-                    </span>
-                    <span className="text-[10px] text-muted-foreground font-medium font-arabic opacity-70">
-                      {section.section_ar} • {section.total_vocab} كلمة
-                    </span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="pb-4">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-1">
-                    {section.topics.map((topic) => (
-                      <button
-                        key={topic.topic}
-                        onClick={() => handleTopicClick(section, topic)}
-                        className="flex items-center justify-between p-3 rounded-lg bg-background/40 hover:bg-primary/10 transition-all text-right group shadow-sm"
-                      >
-                        <div className="flex flex-col items-start">
-                          <span className="text-xs font-bold text-foreground group-hover:text-primary transition-colors">
-                            {topic.topic}
-                          </span>
-                          <span className="text-[9px] text-muted-foreground/60 font-medium font-arabic mt-0.5">
-                            {topic.topic_ar}
-                          </span>
-                        </div>
-                        <div className="flex items-center gap-3">
-                          <span className="text-[9px] font-bold bg-white/5 px-2 py-0.5 rounded-full border border-white/5">
-                            {topic.vocab.length}
-                          </span>
-                          <ChevronLeft className="h-3.5 w-3.5 text-muted-foreground group-hover:text-primary group-hover:-translate-x-1 transition-all" />
-                        </div>
-                      </button>
-                    ))}
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-            {filteredSections.length > 20 && (
-              <p className="text-center text-[10px] text-muted-foreground py-4 italic">
-                استخدم البحث لمشاهدة المزيد من الأقسام...
-              </p>
-            )}
-          </Accordion>
+          filteredSections.map((section, sIdx) => (
+            <Card
+              key={section.section}
+              onClick={() => handleSectionSelect(section)}
+              className="group cursor-pointer border border-zinc-800 bg-zinc-900/40 hover:border-zinc-700 transition-all p-4 flex flex-col rounded-2xl"
+            >
+              {/* Top Row: Title at Top, Icon on Left */}
+              <div className="flex justify-between items-start w-full mb-4">
+                <div className="p-2 rounded-full bg-zinc-800/50 text-zinc-500 group-hover:text-accent transition-colors order-last">
+                  <LayoutGrid className="h-5 w-5" />
+                </div>
+                {/* Description Content */}
+                <div className="flex-1 text-right space-y-1 mb-8">
+                  <h3 className="font-bold text-lg text-foreground transition-colors tracking-tight text-right flex-1 pr-2">
+                    {section.section_ar}
+                  </h3>
+                  <p className="text-sm text-muted-foreground uppercase tracking-widest font-medium opacity-60">
+                    {section.section}
+                  </p>
+                </div>
+              </div>
+
+              {/* Footer Section: Strict Bottom Alignment */}
+              <div className="mt-auto flex items-center gap-3 pt-4 border-t border-zinc-800/50">
+                <Button className="flex-1 bg-zinc-900 border border-zinc-800 h-10 gap-2 text-xs font-bold transition-all hover:bg-accent hover:text-black hover:border-accent">
+                  <span>استكشاف</span>
+                  <ExternalLink className="h-3.5 w-3.5" />
+                </Button>
+                <div className="bg-zinc-800/50 px-3 py-1.5 rounded-lg text-[10px] text-zinc-500 font-bold border border-zinc-800/50 whitespace-nowrap">
+                  {section.total_vocab} كلمة
+                </div>
+              </div>
+            </Card>
+          ))
         )}
       </div>
     </div>
