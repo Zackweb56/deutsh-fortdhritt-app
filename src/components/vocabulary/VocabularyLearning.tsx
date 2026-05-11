@@ -155,7 +155,10 @@ export const VocabularyLearning = ({ onScoreUpdate }: VocabularyLearningProps) =
   const playAudio = async () => {
     if (!currentCard) return;
     
-    const success = await playTTS(currentCard.german, {
+    // Remove grammatical markers in parentheses like (r/s), (e/n) for cleaner TTS
+    const cleanText = currentCard.german.replace(/\([^)]*\)/g, '').trim();
+    
+    const success = await playTTS(cleanText, {
       onStart: () => setIsAudioPlaying(true),
       onEnd: () => setIsAudioPlaying(false),
       onError: () => setIsAudioPlaying(false)

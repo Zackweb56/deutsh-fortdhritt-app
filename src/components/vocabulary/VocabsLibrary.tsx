@@ -4,18 +4,25 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { 
-  Search, 
-  Plus, 
-  BookOpen, 
-  Check, 
-  ChevronLeft, 
-  Volume2, 
-  ArrowLeft, 
+import {
+  Search,
+  Plus,
+  BookOpen,
+  Check,
+  ChevronLeft,
+  Volume2,
+  ArrowLeft,
   ExternalLink,
   Layers,
+  ImageOff,
   LayoutGrid
 } from 'lucide-react';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { toast } from 'sonner';
 import { speakGerman } from '@/lib/tts';
 import vocabsData from '@/data/vocabulars/vocabs_data.json';
@@ -23,6 +30,7 @@ import vocabsData from '@/data/vocabulars/vocabs_data.json';
 interface VocabItem {
   de: string;
   ar: string[];
+  image?: string;
 }
 
 interface Topic {
@@ -39,11 +47,53 @@ interface Section {
   topics: Topic[];
 }
 
+const VocabImage = ({ src, alt }: { src?: string, alt: string }) => {
+  const isNumber = src && !isNaN(Number(src)) && src.trim() !== '';
+
+  if (isNumber) {
+    const getFontSize = (text: string) => {
+      const len = text.length;
+      if (len <= 2) return 'text-7xl sm:text-8xl';
+      if (len <= 4) return 'text-5xl sm:text-6xl';
+      if (len <= 6) return 'text-3xl sm:text-4xl';
+      return 'text-2xl sm:text-3xl';
+    };
+
+    return (
+      <div className="w-full h-full flex items-center justify-center relative">
+        <span className={`font-black text-primary/30 tracking-tighter ${getFontSize(src)}`}>
+          {src}
+        </span>
+      </div>
+    );
+  }
+
+  return (
+    <div className="w-full h-full flex items-center justify-center relative">
+      {src && (
+        <img
+          src={src}
+          alt={alt}
+          className="w-full h-full object-contain p-2 transform scale-110 group-hover:scale-[1.25] transition-transform duration-300 relative z-10"
+          onError={(e) => {
+            e.currentTarget.style.display = 'none';
+            e.currentTarget.nextElementSibling?.classList.remove('hidden');
+            e.currentTarget.nextElementSibling?.classList.add('flex');
+          }}
+        />
+      )}
+      <div className={`absolute inset-0 w-full h-full bg-primary/5 items-center justify-center ${src ? 'hidden' : 'flex'}`}>
+        <ImageOff className="w-7 h-7 text-zinc-500/60" />
+      </div>
+    </div>
+  );
+};
+
 export const VocabsLibrary = () => {
   const { addVocabulary, vocabulary } = useApp();
   const [search, setSearch] = useState('');
   const [addedIds, setAddedIds] = useState<Set<string>>(new Set());
-  
+
   // View State: 'sections' | 'topics' | 'cards'
   const [view, setView] = useState<'sections' | 'topics' | 'cards'>('sections');
   const [selectedSection, setSelectedSection] = useState<Section | null>(null);
@@ -58,11 +108,11 @@ export const VocabsLibrary = () => {
     if (!search) return vocabsData.sections as Section[];
 
     const lowerSearch = search.toLowerCase();
-    
+
     return (vocabsData.sections as Section[]).map(section => {
       const filteredTopics = section.topics.map(topic => {
-        const filteredVocab = topic.vocab.filter(v => 
-          v.de.toLowerCase().includes(lowerSearch) || 
+        const filteredVocab = topic.vocab.filter(v =>
+          v.de.toLowerCase().includes(lowerSearch) ||
           v.ar.some(a => a.includes(lowerSearch))
         );
 
@@ -70,17 +120,17 @@ export const VocabsLibrary = () => {
           return { ...topic, vocab: filteredVocab };
         }
 
-        if (topic.topic.toLowerCase().includes(lowerSearch) || 
-            topic.topic_ar.includes(lowerSearch)) {
+        if (topic.topic.toLowerCase().includes(lowerSearch) ||
+          topic.topic_ar.includes(lowerSearch)) {
           return topic;
         }
 
         return null;
       }).filter(Boolean) as Topic[];
 
-      if (filteredTopics.length > 0 || 
-          section.section.toLowerCase().includes(lowerSearch) || 
-          section.section_ar.includes(lowerSearch)) {
+      if (filteredTopics.length > 0 ||
+        section.section.toLowerCase().includes(lowerSearch) ||
+        section.section_ar.includes(lowerSearch)) {
         return { ...section, topics: filteredTopics.length > 0 ? filteredTopics : section.topics };
       }
 
@@ -93,7 +143,7 @@ export const VocabsLibrary = () => {
     addVocabulary({
       german: item.de,
       translation: translation,
-      pronunciation: '-', 
+      pronunciation: '-',
     });
     setAddedIds(prev => new Set(prev).add(item.de));
     toast.success(`تمت إضافة "${item.de}" إلى قائمتك`);
@@ -101,7 +151,9 @@ export const VocabsLibrary = () => {
 
   const handlePlaySound = (e: React.MouseEvent, text: string) => {
     e.stopPropagation();
-    speakGerman(text);
+    // Remove grammatical markers in parentheses like (r/s), (e/n) for cleaner TTS
+    const cleanText = text.replace(/\([^)]*\)/g, '').trim();
+    speakGerman(cleanText);
   };
 
   const renderGermanWord = (text: string) => {
@@ -109,7 +161,7 @@ export const VocabsLibrary = () => {
     if (parts.length > 1) {
       const article = parts[0].toLowerCase();
       const rest = parts.slice(1).join(' ');
-      
+
       if (article === 'der') return <><span className="text-blue-400">der</span> {rest}</>;
       if (article === 'die') return <><span className="text-primary font-bold">die</span> {rest}</>;
       if (article === 'das') return <><span className="text-accent">das</span> {rest}</>;
@@ -145,8 +197,8 @@ export const VocabsLibrary = () => {
       <div className="space-y-4">
         <Card className="border border-zinc-800 bg-zinc-900/60 p-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <Button 
-              variant="ghost" 
+            <Button
+              variant="ghost"
               size="sm"
               onClick={handleBack}
               className="gap-2 h-9 text-muted-foreground hover:text-foreground hover:bg-white/5"
@@ -170,20 +222,81 @@ export const VocabsLibrary = () => {
             const isJustAdded = addedIds.has(item.de);
 
             return (
-              <Card 
+              <Card
                 key={`${item.de}-${vIdx}`}
                 className="group border border-zinc-800 bg-zinc-900/40 hover:border-zinc-700 transition-all p-5 flex flex-col h-full rounded-xl"
               >
                 <div className="flex justify-between items-start mb-4">
-                  <div className="p-2 rounded-full bg-zinc-800/50 text-zinc-500 hover:text-accent transition-colors cursor-pointer" onClick={(e) => handlePlaySound(e, item.de)}>
-                    <Volume2 className="h-4 w-4" />
+                  <div className="flex items-center gap-2">
+                    <div className="p-2 rounded-full bg-zinc-800/50 text-zinc-500 hover:text-yellow-500 hover:bg-yellow-500/10 transition-colors cursor-pointer" onClick={(e) => handlePlaySound(e, item.de)}>
+                      <Volume2 className="h-4 w-4" />
+                    </div>
+
+                    <TooltipProvider delayDuration={80}>
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <div
+                            className={`p-2 rounded-full transition-colors cursor-pointer ${alreadyInApp || isJustAdded
+                              ? "bg-success/20 text-success"
+                              : "bg-zinc-800/50 text-zinc-500 hover:text-yellow-500 hover:bg-yellow-500/10"
+                              }`}
+                            onClick={() =>
+                              !alreadyInApp && !isJustAdded && handleAdd(item)
+                            }
+                          >
+                            {alreadyInApp || isJustAdded ? (
+                              <Check className="h-4 w-4" />
+                            ) : (
+                              <Plus className="h-4 w-4" />
+                            )}
+                          </div>
+                        </TooltipTrigger>
+
+                        <TooltipContent
+                          side="top"
+                          sideOffset={6}
+                          className="
+                          relative
+                          bg-zinc-900
+                          border border-zinc-800
+                          text-zinc-200
+                          text-[11px]
+                          px-2.5 py-1
+                          rounded-md
+                        "
+                        >
+                          {alreadyInApp || isJustAdded
+                            ? "تمت الإضافة للمفردات"
+                            : "إضافة إلى قائمة المفردات"}
+
+                          {/* Arrow */}
+                          <div
+                            className="
+                              absolute
+                              left-1/2
+                              top-full
+                              -translate-x-1/2
+                              w-2 h-2
+                              rotate-45
+                              bg-zinc-900
+                              border-r border-b border-zinc-800
+                            "
+                          />
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
                   </div>
                   <div className="bg-primary/10 text-primary rounded-full px-2 py-1 flex items-center justify-center text-[10px] font-bold">
                     {vIdx + 1}
                   </div>
                 </div>
 
-                <div className="flex-1 text-center space-y-2 mb-6">
+                {/* Image Container */}
+                <div className="mb-6 h-40 sm:h-52 w-full flex items-center justify-center bg-zinc-800/20 rounded-xl overflow-hidden group-hover:bg-zinc-800/40 transition-colors relative">
+                  <VocabImage src={item.image} alt={item.de} />
+                </div>
+
+                <div className="flex-1 text-center space-y-2">
                   <h3 className="font-bold text-3xl leading-tight text-foreground" dir="ltr">
                     {renderGermanWord(item.de)}
                   </h3>
@@ -191,24 +304,6 @@ export const VocabsLibrary = () => {
                     {item.ar.join('، ')}
                   </p>
                 </div>
-
-                <Button
-                  size="sm"
-                  variant={alreadyInApp || isJustAdded ? "secondary" : "outline"}
-                  className={`w-full gap-2 rounded-lg h-9 text-xs font-bold transition-all ${
-                    alreadyInApp || isJustAdded 
-                      ? "bg-success text-success-foreground border-none" 
-                      : "hover:bg-accent hover:text-black hover:border-accent border-zinc-700 bg-zinc-900"
-                  }`}
-                  onClick={() => handleAdd(item)}
-                  disabled={alreadyInApp || isJustAdded}
-                >
-                  {alreadyInApp || isJustAdded ? (
-                    <><Check className="h-3.5 w-3.5" /> تم الحفظ</>
-                  ) : (
-                    <><Plus className="h-3.5 w-3.5" /> إضافة</>
-                  )}
-                </Button>
               </Card>
             );
           })}
@@ -223,8 +318,8 @@ export const VocabsLibrary = () => {
       <div className="space-y-4">
         <Card className="border border-zinc-800 bg-zinc-900/60 p-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <Button 
-              variant="ghost" 
+            <Button
+              variant="ghost"
               size="sm"
               onClick={handleBack}
               className="gap-2 h-9 text-muted-foreground hover:text-foreground hover:bg-white/5"
