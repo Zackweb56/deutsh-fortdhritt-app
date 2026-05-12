@@ -29,10 +29,13 @@ type PerfektInfo = {
   example?: { de: string; ar: string; pron?: string };
 };
 
+type Conjugations = Record<string, Record<string, string>>;
+
 type VerbItem = {
   verb: string;
   meaning: string;
   type: string;
+  conjugations?: Conjugations;
   tenses?: {
     Präsens?: PresentConjugation;
     Perfekt?: PerfektInfo;
@@ -43,26 +46,34 @@ type VerbItem = {
 type GrammarTopic = {
   title: string;
   explanation?: string;
-  table?: Record<string, Record<string, string>> | Record<string, string>;
+  table?: Record<string, any>;
   examples?: { de: string; ar: string; pron?: string }[];
 };
 
-function highlightVerbText(v: { verb: string; tenses?: { Präsens?: PresentConjugation; Perfekt?: { participle?: string } } }, text: string) {
+function highlightVerbText(v: VerbItem, text: string) {
   if (!text) return text as unknown as any;
   const forms = new Set<string>();
   forms.add(v.verb);
-  const pr = v.tenses?.Präsens;
-  if (pr) {
-    Object.values(pr).forEach(f => f && forms.add(f));
+  
+  if (v.conjugations) {
+    Object.values(v.conjugations).forEach(tense => {
+      Object.values(tense).forEach(f => f && forms.add(f));
+    });
+  } else if (v.tenses) {
+    const pr = v.tenses?.Präsens;
+    if (pr) {
+      Object.values(pr).forEach(f => f && forms.add(f));
+    }
+    const part = v.tenses?.Perfekt?.participle;
+    if (part) forms.add(part);
   }
-  const part = v.tenses?.Perfekt?.participle;
-  if (part) forms.add(part);
 
   const escaped = Array.from(forms)
     .filter(Boolean)
     .sort((a, b) => b.length - a.length)
     .map(s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
     .join('|');
+    
   if (!escaped) return text as unknown as any;
   const regex = new RegExp(`(\\b(?:${escaped})\\b)`, 'gi');
 
@@ -80,6 +91,70 @@ function highlightVerbText(v: { verb: string; tenses?: { Präsens?: PresentConju
   );
 }
 
+function highlightVerbForm(verb: string, form: string) {
+  if (!form) return '';
+  
+  const seinForms = ['bin', 'bist', 'ist', 'sind', 'seid'];
+  const habenForms = ['habe', 'hast', 'hat', 'haben', 'habt'];
+  const werdenForms = ['werde', 'wirst', 'wird', 'werden', 'werdet'];
+  
+  const words = form.split(' ');
+  if (words.length > 1) {
+    return (
+      <span dir="ltr" className="inline-flex gap-1.5 flex-row">
+        {words.map((w, i) => {
+          const lower = w.toLowerCase();
+          if (seinForms.includes(lower)) {
+            return <span key={i} className="text-red-500 font-bold">{w}</span>;
+          }
+          if (habenForms.includes(lower)) {
+            return <span key={i} className="text-emerald-500 font-bold">{w}</span>;
+          }
+          if (werdenForms.includes(lower)) {
+            return <span key={i} className="text-blue-500 font-bold">{w}</span>;
+          }
+          return <span key={i} className="text-accent font-semibold">{w}</span>;
+        })}
+      </span>
+    );
+  }
+
+  // Single word: Root + Suffix
+  let root = verb.toLowerCase();
+  if (root.endsWith('en')) root = root.slice(0, -2);
+  else if (root.endsWith('n')) root = root.slice(0, -1);
+
+  if (form.toLowerCase().startsWith(root) && form.length > root.length) {
+    const actualRoot = form.slice(0, root.length);
+    const ending = form.slice(root.length);
+    return (
+      <span dir="ltr">
+        <span className="opacity-80">{actualRoot}</span>
+        <span className="text-accent font-bold underline decoration-accent/30">{ending}</span>
+      </span>
+    );
+  }
+
+  let commonLen = 0;
+  for (let i = 0; i < Math.min(root.length, form.length); i++) {
+    if (root[i] === form[i].toLowerCase()) commonLen++;
+    else break;
+  }
+
+  if (commonLen > 2) {
+    const actualRoot = form.slice(0, commonLen);
+    const rest = form.slice(commonLen);
+    return (
+      <span dir="ltr">
+        <span className="opacity-80">{actualRoot}</span>
+        <span className="text-accent font-bold underline decoration-accent/30">{rest}</span>
+      </span>
+    );
+  }
+
+  return <span className="text-accent font-bold italic" dir="ltr">{form}</span>;
+}
+
 export const GrammarVerbsTab = () => {
   type LevelKey = 'A1' | 'A2' | 'B1' | 'B2';
   const dataByLevel = useMemo(() => ({
@@ -90,10 +165,10 @@ export const GrammarVerbsTab = () => {
   }), []);
 
   const [level, setLevel] = useState<LevelKey>('A1');
-
   const [search, setSearch] = useState('');
   const [typeFilter, setTypeFilter] = useState<string>('all');
   const [activeTab, setActiveTab] = useState<'grammar' | 'verbs'>('grammar');
+  const [verbTenses, setVerbTenses] = useState<Record<string, string>>({});
 
   const current = useMemo(() => dataByLevel[level] || { grammar: [], verbs: [] }, [dataByLevel, level]);
   const verbs: VerbItem[] = useMemo(() => current?.verbs ?? [], [current]);
@@ -119,7 +194,7 @@ export const GrammarVerbsTab = () => {
   }, [verbs, search, typeFilter]);
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6" dir="rtl">
       <Card className="card-gradient p-6">
         <div className="flex items-center justify-between flex-wrap gap-3">
           <div>
@@ -151,7 +226,7 @@ export const GrammarVerbsTab = () => {
       </Card>
 
       <Tabs value={activeTab} onValueChange={(v) => setActiveTab(v as any)} dir="rtl">
-        <TabsList className="w-full sm:w-auto">
+        <TabsList className="w-full sm:w-auto mb-4">
           <TabsTrigger value="grammar" className="flex items-center gap-2">
             <BookOpenCheck className="h-4 w-4" />
             القواعد
@@ -174,7 +249,6 @@ export const GrammarVerbsTab = () => {
                     </p>
                   )}
 
-                  {/* Render table data if present */}
                   {topic.table && (
                     <div className="mb-3 overflow-x-auto">
                       {renderFlexibleTable(topic.table)}
@@ -203,16 +277,16 @@ export const GrammarVerbsTab = () => {
           </div>
         </TabsContent>
 
-        <TabsContent value="verbs" className="space-y-4">
+        <TabsContent value="verbs" className="space-y-6">
           <Card className="p-4">
-            <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+            <div className="flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between">
               <div className="flex-1 relative">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                <Search className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                 <Input
                   placeholder="ابحث عن فعل أو معنى أو مثال..."
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
-                  className="pl-10"
+                  className="pr-10"
                 />
               </div>
               <div>
@@ -230,90 +304,74 @@ export const GrammarVerbsTab = () => {
             </div>
           </Card>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-            {filteredVerbs.map((v, idx) => (
-              <Card key={idx} className="p-4 flex flex-col gap-3">
-                <LockOverlay isLocked={isLimitedAccess()} message="الأفعال محجوبة — تواصل عبر واتساب لفتح الوصول الكامل">
-                <div className="flex items-start justify-between gap-2">
-                  <div>
-                    <div className="text-xl font-bold text-accent">{v.verb}</div>
-                    <div className="text-sm text-muted-foreground">{v.meaning}</div>
-                  </div>
-                  {renderTypeBadge(v.type)}
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+            {filteredVerbs.map((v, idx) => {
+              const currentTense = verbTenses[v.verb] || 'Präsens';
+              const tenses = v.conjugations ? Object.keys(v.conjugations) : (v.tenses ? ['Präsens', 'Perfekt'] : []);
 
-                {/* Präsens table */}
-                {v.tenses?.Präsens && (
-                  <div>
-                    <div className="text-sm font-medium mb-2">التصريف في المضارع (Präsens)</div>
-                    <Table>
-                      <TableHeader>
-                        <TableRow>
-                          <TableHead className="text-right">الصيغة</TableHead>
-                          <TableHead className="text-right">الضمير</TableHead>
-                        </TableRow>
-                      </TableHeader>
-                      <TableBody>
-                        {renderPresentRows(v.tenses.Präsens)}
-                      </TableBody>
-                    </Table>
-                  </div>
-                )}
-
-                {/* Perfekt info */}
-                {v.tenses?.Perfekt && (
-                  <div className="space-y-2">
-                    <div className="text-sm font-medium">الماضي التام (Perfekt)</div>
-                    <div className="text-sm text-muted-foreground">
-                      {v.tenses.Perfekt.auxiliary && (
-                        <span className="mr-2">الفعل المساعد: <span className="font-medium">{v.tenses.Perfekt.auxiliary}</span></span>
-                      )}
-                      {v.tenses.Perfekt.participle && (
-                        <span>اسم المفعول: <span className="font-medium">{v.tenses.Perfekt.participle}</span></span>
-                      )}
+              return (
+                <Card key={idx} className="p-5 flex flex-col gap-5 border border-border shadow-sm hover:shadow-md transition-shadow">
+                  <LockOverlay isLocked={isLimitedAccess()} message="الأفعال محجوبة — تواصل عبر واتساب لفتح الوصول الكامل">
+                  <div className="flex items-start justify-between gap-2 border-b border-zinc-800/20 pb-4">
+                    <div>
+                      <div className="text-2xl font-bold text-white tracking-tight">{v.verb}</div>
+                      <div className="text-sm text-zinc-500 font-medium mt-0.5">{v.meaning}</div>
                     </div>
-                    {v.tenses.Perfekt.example && (
-                      <div className="p-2 rounded border border-border">
-                        <div className="font-medium">{highlightVerbText(v, v.tenses.Perfekt.example.de)}</div>
-                        <div className="text-sm text-muted-foreground">{v.tenses.Perfekt.example.ar}</div>
-                        {v.tenses.Perfekt.example.pron && (
-                          <div className="text-xs text-muted-foreground mt-1">{v.tenses.Perfekt.example.pron}</div>
-                        )}
-                      </div>
-                    )}
+                    {renderTypeBadge(v.type)}
                   </div>
-                )}
 
-                {/* Examples */}
-                {Array.isArray(v.examples) && v.examples.length > 0 && (
-                  <Accordion type="single" collapsible>
-                    <AccordionItem value="examples">
-                      <AccordionTrigger className="text-sm font-medium">
-                        <div className="flex items-center gap-2">
-                          <Quote className="h-4 w-4 opacity-80" />
-                          <span>أمثلة</span>
-                          <span className="text-xs text-muted-foreground">({v.examples.length})</span>
-                        </div>
-                      </AccordionTrigger>
-                      <AccordionContent>
-                        <div className="space-y-2">
-                          {v.examples.map((ex, i) => (
-                            <div key={i} className="p-2 rounded border border-border">
-                              <div className="font-medium">{highlightVerbText(v, ex.de)}</div>
-                              <div className="text-sm text-muted-foreground">{ex.ar}</div>
-                              {ex.pron && (
-                                <div className="text-xs text-muted-foreground mt-1">{ex.pron}</div>
-                              )}
-                            </div>
+                  {/* Tense selector inside each card */}
+                  {tenses.length > 0 && (
+                    <div className="flex items-center justify-between gap-3 bg-muted/30 p-2 rounded-lg border border-border/50">
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">الزمن:</span>
+                      <Select value={currentTense} onValueChange={(t) => setVerbTenses(prev => ({ ...prev, [v.verb]: t }))}>
+                        <SelectTrigger className="h-8 w-[120px] text-xs">
+                          <SelectValue placeholder="الزمن" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {tenses.map(t => (
+                            <SelectItem key={t} value={t}>{t}</SelectItem>
                           ))}
-                        </div>
-                      </AccordionContent>
-                    </AccordionItem>
-                  </Accordion>
-                )}
-                </LockOverlay>
-              </Card>
-            ))}
+                        </SelectContent>
+                      </Select>
+                    </div>
+                  )}
+
+                  {/* Conjugation display */}
+                  <div className="flex-1">
+                    {renderConjugation(v, currentTense)}
+                  </div>
+
+                  {/* Examples */}
+                  {Array.isArray(v.examples) && v.examples.length > 0 && (
+                    <Accordion type="single" collapsible className="mt-2">
+                      <AccordionItem value="examples" className="border-none">
+                        <AccordionTrigger className="text-sm font-medium py-2 opacity-70 hover:opacity-100 transition-opacity">
+                          <div className="flex items-center gap-2">
+                            <Quote className="h-4 w-4" />
+                            <span>أمثلة ({v.examples.length})</span>
+                          </div>
+                        </AccordionTrigger>
+                        <AccordionContent>
+                          <div className="space-y-2.5 pt-2">
+                            {v.examples.map((ex, i) => (
+                              <div key={i} className="p-3 rounded-lg border border-border bg-muted/10">
+                                <div className="font-medium text-sm leading-relaxed">{highlightVerbText(v, ex.de)}</div>
+                                <div className="text-xs text-muted-foreground mt-1.5">{ex.ar}</div>
+                                {ex.pron && (
+                                  <div className="text-[10px] text-muted-foreground/60 mt-1 italic">{ex.pron}</div>
+                                )}
+                              </div>
+                            ))}
+                          </div>
+                        </AccordionContent>
+                      </AccordionItem>
+                    </Accordion>
+                  )}
+                  </LockOverlay>
+                </Card>
+              );
+            })}
           </div>
         </TabsContent>
       </Tabs>
@@ -321,20 +379,97 @@ export const GrammarVerbsTab = () => {
   );
 };
 
-function renderPresentRows(pr: PresentConjugation) {
-  const order: (keyof PresentConjugation)[] = ['ich', 'du', 'er/sie/es', 'wir', 'ihr', 'sie/Sie'];
-  return order
-    .filter((k) => pr[k])
-    .map((k) => (
-      <TableRow key={k as string}>
-        <TableCell className="text-accent font-semibold">{pr[k]}</TableCell>
-        <TableCell className="font-medium">{k}</TableCell>
-      </TableRow>
-    ));
+function renderConjugation(v: VerbItem, tense: string) {
+  const conj = v.conjugations?.[tense];
+  
+  if (conj) {
+    const isImperativ = tense === 'Imperativ';
+    const order = isImperativ ? ['du', 'ihr', 'Sie'] : ['ich', 'du', 'er/sie/es', 'wir', 'ihr', 'sie/Sie'];
+    
+    return (
+      <div className="mt-3 space-y-3">
+        <div className="text-[10px] font-black text-muted-foreground uppercase tracking-[0.2em] flex items-center gap-2">
+          <span className="h-1 w-1 rounded-full bg-accent" />
+          {tense}
+        </div>
+        <div className="rounded-xl overflow-hidden border border-border/50 bg-black/5">
+          <Table>
+            <TableBody>
+              {order.map(k => conj[k] ? (
+                <TableRow key={k} className="hover:bg-muted/50 transition-colors border-border/20">
+                  <TableCell className="text-right py-2 px-4 font-bold">
+                    {highlightVerbForm(v.verb, conj[k])}
+                  </TableCell>
+                  <TableCell className="py-2 px-4 text-[11px] text-muted-foreground font-medium text-left border-r border-border/10">
+                    {k}
+                  </TableCell>
+                </TableRow>
+              ) : null)}
+            </TableBody>
+          </Table>
+        </div>
+      </div>
+    );
+  }
+
+  if (tense === 'Präsens' && v.tenses?.Präsens) {
+    const pr = v.tenses.Präsens;
+    const order = ['ich', 'du', 'er/sie/es', 'wir', 'ihr', 'sie/Sie'];
+    return (
+      <div className="mt-3 space-y-3">
+        <div className="text-[10px] font-black text-muted-foreground uppercase tracking-[0.2em] flex items-center gap-2">
+          <span className="h-1 w-1 rounded-full bg-accent" />
+          Präsens
+        </div>
+        <Table className="border-border/50">
+          <TableBody>
+            {order.map(k => (pr as any)[k] ? (
+              <TableRow key={k} className="hover:bg-muted/50 border-border/20">
+                <TableCell className="text-right py-2 px-4 font-bold">
+                  {highlightVerbForm(v.verb, (pr as any)[k])}
+                </TableCell>
+                <TableCell className="py-2 px-4 text-[11px] text-muted-foreground text-left border-r border-border/10">{k}</TableCell>
+              </TableRow>
+            ) : null)}
+          </TableBody>
+        </Table>
+      </div>
+    );
+  }
+
+  if (tense === 'Perfekt' && v.tenses?.Perfekt) {
+    const perf = v.tenses.Perfekt;
+    return (
+      <div className="space-y-3">
+        <div className="text-sm font-bold border-b border-border/20 pb-2">الماضي التام (Perfekt)</div>
+        <div className="space-y-2.5 p-1">
+          {perf.auxiliary && (
+            <div className="text-xs text-muted-foreground flex justify-between items-center">
+              <span>الفعل المساعد:</span>
+              <span className={perf.auxiliary === 'sein' ? 'text-red-500 font-black' : 'text-emerald-500 font-black'}>{perf.auxiliary}</span>
+            </div>
+          )}
+          {perf.participle && (
+            <div className="text-xs text-muted-foreground flex justify-between items-center">
+              <span>اسم المفعول:</span>
+              <span className="text-accent font-black tracking-wide">{perf.participle}</span>
+            </div>
+          )}
+          {perf.example && (
+            <div className="p-3 rounded-lg border border-border bg-accent/5 mt-3">
+              <div className="font-bold text-sm text-foreground">{highlightVerbText(v, perf.example.de)}</div>
+              <div className="text-xs text-muted-foreground mt-1">{perf.example.ar}</div>
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  return <div className="py-4 text-center text-xs text-muted-foreground/50 italic border border-dashed border-border rounded-lg">غير متوفر.</div>;
 }
 
 function renderFlexibleTable(table: Record<string, any>) {
-  // Support nested and flat structures from the JSON
   const entries = Object.entries(table);
   const isFlat = entries.every(([, v]) => typeof v === 'string');
 
@@ -359,7 +494,6 @@ function renderFlexibleTable(table: Record<string, any>) {
     );
   }
 
-  // Nested: render each sub-table
   return (
     <div className="space-y-4">
       {entries.map(([subTitle, value]) => (
@@ -390,7 +524,6 @@ function renderFlexibleTable(table: Record<string, any>) {
 }
 
 function renderTypeBadge(type: string) {
-  // Map known types to accent colors and German labels; dark pill with colored dot
   const normalized = type.trim();
   const colorMap: Record<string, string> = {
     'منتظم': 'bg-green-500',
@@ -406,13 +539,11 @@ function renderTypeBadge(type: string) {
   const de = deLabel[normalized] || '';
   return (
     <span className={
-      'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs whitespace-nowrap border border-border bg-card/70'
+      'inline-flex items-center gap-2 px-3 py-1 rounded-full text-[10px] whitespace-nowrap border border-border bg-black/40'
     }>
-      <span className={`h-2 w-2 rounded-full ${dot}`} />
-      <span className="font-medium">{type}</span>
-      {de && <span className="opacity-80">• {de}</span>}
+      <span className={`h-1.5 w-1.5 rounded-full ${dot}`} />
+      <span className="font-bold text-zinc-300">{type}</span>
+      {de && <span className="opacity-40 text-[9px]">• {de}</span>}
     </span>
   );
 }
-
-

@@ -389,7 +389,7 @@
             "verb": "sich lohnen",
             "meaning": "يستحق الجهد",
             "type": "منتظم",
-            "tenses": {
+            "conjugations": {
                 "Präsens": {
                 "ich": "lohne mich",
                 "du": "lohnst dich",
@@ -398,21 +398,41 @@
                 "ihr": "lohnt euch",
                 "sie/Sie": "lohnen sich"
                 },
+                "Präteritum": {
+                "ich": "lohnte mich",
+                "du": "lohntest dich",
+                "er/sie/es": "lohnte sich",
+                "wir": "lohnten uns",
+                "ihr": "lohntet euch",
+                "sie/Sie": "lohnten sich"
+                },
                 "Perfekt": {
-                "auxiliary": "haben",
-                "participle": "gelohnt",
-                "example": {
-                    "de": "Es hat sich gelohnt, früh aufzustehen.",
-                    "ar": "لقد استحق الأمر الاستيقاظ مبكرًا.",
-                    "pron": "إس هات زيش غِلونت، فرويخ آوفتسوشتيهِن"
-                }
+                "ich": "habe mich gelohnt",
+                "du": "hast dich gelohnt",
+                "er/sie/es": "hat sich gelohnt",
+                "wir": "haben uns gelohnt",
+                "ihr": "habt euch gelohnt",
+                "sie/Sie": "haben sich gelohnt"
+                },
+                "Futur I": {
+                "ich": "werde mich lohnen",
+                "du": "wirst dich lohnen",
+                "er/sie/es": "wird sich lohnen",
+                "wir": "werden uns lohnen",
+                "ihr": "werdet euch lohnen",
+                "sie/Sie": "werden sich lohnen"
+                },
+                "Imperativ": {
+                "du": "lohne dich",
+                "ihr": "lohnt euch",
+                "Sie": "lohnen Sie sich"
                 }
             },
             "examples": [
                 {
                 "de": "Lohnt es sich, dieses Buch zu lesen?",
                 "ar": "هل يستحق هذا الكتاب القراءة؟",
-                "pron": "لونت إس زيش، ديليزِه بوخ تسو ليزِن؟"
+                "pron": "لونت إس زيش، ديزِه بوخ تسو ليزِن؟"
                 },
                 {
                 "de": "Der Ausflug hat sich wirklich gelohnt.",
@@ -430,7 +450,7 @@
             "verb": "sich auskennen",
             "meaning": "يكون ملمًا بـ / يعرف جيدًا",
             "type": "غير منتظم",
-            "tenses": {
+            "conjugations": {
                 "Präsens": {
                 "ich": "kenne mich aus",
                 "du": "kennst dich aus",
@@ -439,14 +459,34 @@
                 "ihr": "kennt euch aus",
                 "sie/Sie": "kennen sich aus"
                 },
+                "Präteritum": {
+                "ich": "kannte mich aus",
+                "du": "kanntest dich aus",
+                "er/sie/es": "kannte sich aus",
+                "wir": "kannten uns aus",
+                "ihr": "kanntet euch aus",
+                "sie/Sie": "kannten sich aus"
+                },
                 "Perfekt": {
-                "auxiliary": "haben",
-                "participle": "ausgekannt",
-                "example": {
-                    "de": "Ich habe mich in der Stadt gut ausgekannt.",
-                    "ar": "كنت أعرف المدينة جيدًا.",
-                    "pron": "إش هابِه ميش إن دير شتات غوت آوسغِكانت"
-                }
+                "ich": "habe mich ausgekannt",
+                "du": "hast dich ausgekannt",
+                "er/sie/es": "hat sich ausgekannt",
+                "wir": "haben uns ausgekannt",
+                "ihr": "habt euch ausgekannt",
+                "sie/Sie": "haben sich ausgekannt"
+                },
+                "Futur I": {
+                "ich": "werde mich auskennen",
+                "du": "wirst dich auskennen",
+                "er/sie/es": "wird sich auskennen",
+                "wir": "werden uns auskennen",
+                "ihr": "werdet euch auskennen",
+                "sie/Sie": "werden sich auskennen"
+                },
+                "Imperativ": {
+                "du": "kenn dich aus",
+                "ihr": "kennt euch aus",
+                "Sie": "kennen Sie sich aus"
                 }
             },
             "examples": [
@@ -476,7 +516,7 @@
             "verb": "sich bewerben um",
             "meaning": "يتقدم بطلب للحصول على",
             "type": "غير منتظم",
-            "tenses": {
+            "conjugations": {
                 "Präsens": {
                 "ich": "bewerbe mich um",
                 "du": "bewirbst dich um",
@@ -485,14 +525,34 @@
                 "ihr": "bewerbt euch um",
                 "sie/Sie": "bewerben sich um"
                 },
+                "Präteritum": {
+                "ich": "bewarb mich um",
+                "du": "bewarbst dich um",
+                "er/sie/es": "bewarb sich um",
+                "wir": "bewarben uns um",
+                "ihr": "bewarbt euch um",
+                "sie/Sie": "bewarben sich um"
+                },
                 "Perfekt": {
-                "auxiliary": "haben",
-                "participle": "beworben",
-                "example": {
-                    "de": "Sie hat sich um eine Stelle beworben.",
-                    "ar": "لقد تقدمت بطلب للحصول على وظيفة.",
-                    "pron": "زي هات زيش أوم آينِه شتِلِه بِفوربِن"
-                }
+                "ich": "habe mich beworben",
+                "du": "hast dich beworben",
+                "er/sie/es": "hat sich beworben",
+                "wir": "haben uns beworben",
+                "ihr": "habt euch beworben",
+                "sie/Sie": "haben sich beworben"
+                },
+                "Futur I": {
+                "ich": "werde mich bewerben",
+                "du": "wirst dich bewerben",
+                "er/sie/es": "wird sich bewerben",
+                "wir": "werden uns bewerben",
+                "ihr": "werdet euch bewerben",
+                "sie/Sie": "werden sich bewerben"
+                },
+                "Imperativ": {
+                "du": "bewirb dich um",
+                "ihr": "bewerbt euch um",
+                "Sie": "bewerben Sie sich um"
                 }
             },
             "examples": [
@@ -512,23 +572,43 @@
             "verb": "sich einstellen auf",
             "meaning": "يستعد لـ / يتكيف مع",
             "type": "منتظم",
-            "tenses": {
+            "conjugations": {
                 "Präsens": {
                 "ich": "stelle mich ein auf",
                 "du": "stellst dich ein auf",
                 "er/sie/es": "stellt sich ein auf",
-                "wir": "stellen uns ein على",
+                "wir": "stellen uns ein auf",
                 "ihr": "stellt euch ein auf",
                 "sie/Sie": "stellen sich ein auf"
                 },
+                "Präteritum": {
+                "ich": "stellte mich ein auf",
+                "du": "stelltest dich ein auf",
+                "er/sie/es": "stellte sich ein auf",
+                "wir": "stellten uns ein auf",
+                "ihr": "stelltet euch ein auf",
+                "sie/Sie": "stellten sich ein auf"
+                },
                 "Perfekt": {
-                "auxiliary": "haben",
-                "participle": "eingestellt",
-                "example": {
-                    "de": "Ich habe mich auf die Prüfung eingestellt.",
-                    "ar": "لقد استعددت للامتحان.",
-                    "pron": "إش هابِه ميش آوف دي بروفونغ آينغِشتِلت"
-                }
+                "ich": "habe mich eingestellt",
+                "du": "hast dich eingestellt",
+                "er/sie/es": "hat sich eingestellt",
+                "wir": "haben uns eingestellt",
+                "ihr": "habt euch eingestellt",
+                "sie/Sie": "haben sich eingestellt"
+                },
+                "Futur I": {
+                "ich": "werde mich einstellen",
+                "du": "wirst dich einstellen",
+                "er/sie/es": "wird sich einstellen",
+                "wir": "werden uns einstellen",
+                "ihr": "werdet euch einstellen",
+                "sie/Sie": "werden sich einstellen"
+                },
+                "Imperativ": {
+                "du": "stell dich ein auf",
+                "ihr": "stellt euch ein auf",
+                "Sie": "stellen Sie sich ein auf"
                 }
             },
             "examples": [
@@ -553,7 +633,7 @@
             "verb": "sich ergeben aus",
             "meaning": "ينتج عن / يترتب على",
             "type": "غير منتظم",
-            "tenses": {
+            "conjugations": {
                 "Präsens": {
                 "ich": "ergebe mich aus",
                 "du": "ergibst dich aus",
@@ -562,15 +642,31 @@
                 "ihr": "ergebt euch aus",
                 "sie/Sie": "ergeben sich aus"
                 },
+                "Präteritum": {
+                "ich": "ergab mich aus",
+                "du": "ergabst dich aus",
+                "er/sie/es": "ergab sich aus",
+                "wir": "ergaben uns aus",
+                "ihr": "ergabt euch aus",
+                "sie/Sie": "ergaben sich aus"
+                },
                 "Perfekt": {
-                "auxiliary": "haben",
-                "participle": "ergeben",
-                "example": {
-                    "de": "Was ergibt sich aus dieser Situation?",
-                    "ar": "ماذا ينتج عن هذا الموقف؟",
-                    "pron": "فاس إرغيبت زيش آوس ديزِر زيتواتسيون؟"
-                }
-                }
+                "ich": "habe mich ergeben",
+                "du": "hast dich ergeben",
+                "er/sie/es": "hat sich ergeben",
+                "wir": "haben uns ergeben",
+                "ihr": "habt euch ergeben",
+                "sie/Sie": "haben sich ergeben"
+                },
+                "Futur I": {
+                "ich": "werde mich ergeben",
+                "du": "wirst dich ergeben",
+                "er/sie/es": "wird sich ergeben",
+                "wir": "werden uns ergeben",
+                "ihr": "werdet euch ergeben",
+                "sie/Sie": "werden sich ergeben"
+                },
+                "Imperativ": {}
             },
             "examples": [
                 {
@@ -589,7 +685,7 @@
             "verb": "sich freuen auf",
             "meaning": "يتطلع إلى",
             "type": "منتظم",
-            "tenses": {
+            "conjugations": {
                 "Präsens": {
                 "ich": "freue mich auf",
                 "du": "freust dich auf",
@@ -598,14 +694,34 @@
                 "ihr": "freut euch auf",
                 "sie/Sie": "freuen sich auf"
                 },
+                "Präteritum": {
+                "ich": "freute mich auf",
+                "du": "freutest dich auf",
+                "er/sie/es": "freute sich auf",
+                "wir": "freuten uns auf",
+                "ihr": "freutet euch auf",
+                "sie/Sie": "freuten sich auf"
+                },
                 "Perfekt": {
-                "auxiliary": "haben",
-                "participle": "gefreut",
-                "example": {
-                    "de": "Ich habe mich auf den Urlaub gefreut.",
-                    "ar": "كنت أتطلع إلى الإجازة.",
-                    "pron": "إش هابِه ميش آوف دين أورلاوب غِفرويت"
-                }
+                "ich": "habe mich gefreut auf",
+                "du": "hast dich gefreut auf",
+                "er/sie/es": "hat sich gefreut auf",
+                "wir": "haben uns gefreut auf",
+                "ihr": "habt euch gefreut auf",
+                "sie/Sie": "haben sich gefreut auf"
+                },
+                "Futur I": {
+                "ich": "werde mich freuen auf",
+                "du": "wirst dich freuen auf",
+                "er/sie/es": "wird sich freuen auf",
+                "wir": "werden uns freuen auf",
+                "ihr": "werdet euch freuen auf",
+                "sie/Sie": "werden sich freuen auf"
+                },
+                "Imperativ": {
+                "du": "freue dich auf",
+                "ihr": "freut euch auf",
+                "Sie": "freuen Sie sich auf"
                 }
             },
             "examples": [
@@ -635,7 +751,7 @@
             "verb": "sich gewöhnen an",
             "meaning": "يعتاد على",
             "type": "منتظم",
-            "tenses": {
+            "conjugations": {
                 "Präsens": {
                 "ich": "gewöhne mich an",
                 "du": "gewöhnst dich an",
@@ -644,14 +760,34 @@
                 "ihr": "gewöhnt euch an",
                 "sie/Sie": "gewöhnen sich an"
                 },
+                "Präteritum": {
+                "ich": "gewöhnte mich an",
+                "du": "gewöhntest dich an",
+                "er/sie/es": "gewöhnte sich an",
+                "wir": "gewöhnten uns an",
+                "ihr": "gewöhntet euch an",
+                "sie/Sie": "gewöhnten sich an"
+                },
                 "Perfekt": {
-                "auxiliary": "haben",
-                "participle": "gewöhnt",
-                "example": {
-                    "de": "Ich habe mich an das kalte Wetter gewöhnt.",
-                    "ar": "لقد اعتدت على الطقس البارد.",
-                    "pron": "إش هابِه ميش آن داس كالتِه فيتِر غِفونت"
-                }
+                "ich": "habe mich gewöhnt an",
+                "du": "hast dich gewöhnt an",
+                "er/sie/es": "hat sich gewöhnt an",
+                "wir": "haben uns gewöhnt an",
+                "ihr": "habt euch gewöhnt an",
+                "sie/Sie": "haben sich gewöhnt an"
+                },
+                "Futur I": {
+                "ich": "werde mich gewöhnen an",
+                "du": "wirst dich gewöhnen an",
+                "er/sie/es": "wird sich gewöhnen an",
+                "wir": "werden uns gewöhnen an",
+                "ihr": "werdet euch gewöhnen an",
+                "sie/Sie": "werden sich gewöhnen an"
+                },
+                "Imperativ": {
+                "du": "gewöhne dich an",
+                "ihr": "gewöhnt euch an",
+                "Sie": "gewöhnen Sie sich an"
                 }
             },
             "examples": [
@@ -671,7 +807,7 @@
             "verb": "sich handeln um",
             "meaning": "يتعلق الأمر بـ",
             "type": "منتظم",
-            "tenses": {
+            "conjugations": {
                 "Präsens": {
                 "ich": "handele mich um",
                 "du": "handelst dich um",
@@ -680,15 +816,31 @@
                 "ihr": "handelt euch um",
                 "sie/Sie": "handeln sich um"
                 },
+                "Präteritum": {
+                "ich": "handelte mich um",
+                "du": "handeltest dich um",
+                "er/sie/es": "handelte sich um",
+                "wir": "handelten uns um",
+                "ihr": "handeltet euch um",
+                "sie/Sie": "handelten sich um"
+                },
                 "Perfekt": {
-                "auxiliary": "haben",
-                "participle": "gehandelt",
-                "example": {
-                    "de": "Worum handelt es sich?",
-                    "ar": "عم يتعلق الأمر؟",
-                    "pron": "فوروم هاندِلت إس زيش؟"
-                }
-                }
+                "ich": "habe mich gehandelt um",
+                "du": "hast dich gehandelt um",
+                "er/sie/es": "hat sich gehandelt um",
+                "wir": "haben uns gehandelt um",
+                "ihr": "habt euch gehandelt um",
+                "sie/Sie": "haben sich gehandelt um"
+                },
+                "Futur I": {
+                "ich": "werde mich handeln um",
+                "du": "wirst dich handeln um",
+                "er/sie/es": "wird sich handeln um",
+                "wir": "werden uns handeln um",
+                "ihr": "werdet euch handeln um",
+                "sie/Sie": "werden sich handeln um"
+                },
+                "Imperativ": {}
             },
             "examples": [
                 {
@@ -712,7 +864,7 @@
             "verb": "sich kümmern um",
             "meaning": "يهتم بـ / يعتني بـ",
             "type": "منتظم",
-            "tenses": {
+            "conjugations": {
                 "Präsens": {
                 "ich": "kümmere mich um",
                 "du": "kümmerst dich um",
@@ -721,14 +873,34 @@
                 "ihr": "kümmert euch um",
                 "sie/Sie": "kümmern sich um"
                 },
+                "Präteritum": {
+                "ich": "kümmerte mich um",
+                "du": "kümmertest dich um",
+                "er/sie/es": "kümmerte sich um",
+                "wir": "kümmerten uns um",
+                "ihr": "kümmertet euch um",
+                "sie/Sie": "kümmerten sich um"
+                },
                 "Perfekt": {
-                "auxiliary": "haben",
-                "participle": "gekümmert",
-                "example": {
-                    "de": "Sie kümmert sich um ihre Kinder.",
-                    "ar": "هي تعتني بأطفالها.",
-                    "pron": "زي كيمِرت زيش أوم إيرِه كيندِر"
-                }
+                "ich": "habe mich gekümmert um",
+                "du": "hast dich gekümmert um",
+                "er/sie/es": "hat sich gekümmert um",
+                "wir": "haben uns gekümmert um",
+                "ihr": "habt euch gekümmert um",
+                "sie/Sie": "haben sich gekümmert um"
+                },
+                "Futur I": {
+                "ich": "werde mich kümmern um",
+                "du": "wirst dich kümmern um",
+                "er/sie/es": "wird sich kümmern um",
+                "wir": "werden uns kümmern um",
+                "ihr": "werdet euch kümmern um",
+                "sie/Sie": "werden sich kümmern um"
+                },
+                "Imperativ": {
+                "du": "kümmere dich um",
+                "ihr": "kümmert euch um",
+                "Sie": "kümmern Sie sich um"
                 }
             },
             "examples": [
@@ -758,7 +930,7 @@
             "verb": "sich leisten können",
             "meaning": "يستطيع تحمل تكلفة",
             "type": "غير منتظم",
-            "tenses": {
+            "conjugations": {
                 "Präsens": {
                 "ich": "kann mir leisten",
                 "du": "kannst dir leisten",
@@ -767,15 +939,31 @@
                 "ihr": "könnt euch leisten",
                 "sie/Sie": "können sich leisten"
                 },
+                "Präteritum": {
+                "ich": "konnte mir leisten",
+                "du": "konntest dir leisten",
+                "er/sie/es": "konnte sich leisten",
+                "wir": "konnten uns leisten",
+                "ihr": "konntet euch leisten",
+                "sie/Sie": "konnten sich leisten"
+                },
                 "Perfekt": {
-                "auxiliary": "haben",
-                "participle": "geleistet",
-                "example": {
-                    "de": "Ich habe mir ein neues Auto leisten können.",
-                    "ar": "استطعت تحمل تكلفة سيارة جديدة.",
-                    "pron": "إش هابِه مير آين نُويس آوتو لَايستِن كُونِن"
-                }
-                }
+                "ich": "habe mir leisten können",
+                "du": "hast dir leisten können",
+                "er/sie/es": "hat sich leisten können",
+                "wir": "haben uns leisten können",
+                "ihr": "habt euch leisten können",
+                "sie/Sie": "haben sich leisten können"
+                },
+                "Futur I": {
+                "ich": "werde mir leisten können",
+                "du": "wirst dir leisten können",
+                "er/sie/es": "wird sich leisten können",
+                "wir": "werden uns leisten können",
+                "ihr": "werdet euch leisten können",
+                "sie/Sie": "werden sich leisten können"
+                },
+                "Imperativ": {}
             },
             "examples": [
                 {
@@ -794,7 +982,7 @@
             "verb": "sich interessieren für",
             "meaning": "يهتم بـ",
             "type": "منتظم",
-            "tenses": {
+            "conjugations": {
                 "Präsens": {
                 "ich": "interessiere mich für",
                 "du": "interessierst dich für",
@@ -803,14 +991,34 @@
                 "ihr": "interessiert euch für",
                 "sie/Sie": "interessieren sich für"
                 },
+                "Präteritum": {
+                "ich": "interessierte mich für",
+                "du": "interessiertest dich für",
+                "er/sie/es": "interessierte sich für",
+                "wir": "interessierten uns für",
+                "ihr": "interessiertet euch für",
+                "sie/Sie": "interessierten sich für"
+                },
                 "Perfekt": {
-                "auxiliary": "haben",
-                "participle": "interessiert",
-                "example": {
-                    "de": "Ich habe mich immer für Geschichte interessiert.",
-                    "ar": "لقد اهتممت دائمًا بالتاريخ.",
-                    "pron": "إش هابِه ميش إمِر فور غِشيشته إنتِريسيِرت"
-                }
+                "ich": "habe mich interessiert für",
+                "du": "hast dich interessiert für",
+                "er/sie/es": "hat sich interessiert für",
+                "wir": "haben uns interessiert für",
+                "ihr": "habt euch interessiert für",
+                "sie/Sie": "haben sich interessiert für"
+                },
+                "Futur I": {
+                "ich": "werde mich interessieren für",
+                "du": "wirst dich interessieren für",
+                "er/sie/es": "wird sich interessieren für",
+                "wir": "werden uns interessieren für",
+                "ihr": "werdet euch interessieren für",
+                "sie/Sie": "werden sich interessieren für"
+                },
+                "Imperativ": {
+                "du": "interessiere dich für",
+                "ihr": "interessiert euch für",
+                "Sie": "interessieren Sie sich für"
                 }
             },
             "examples": [
@@ -835,7 +1043,7 @@
             "verb": "sich beschäftigen mit",
             "meaning": "يشغل نفسه بـ / يدرس",
             "type": "منتظم",
-            "tenses": {
+            "conjugations": {
                 "Präsens": {
                 "ich": "beschäftige mich mit",
                 "du": "beschäftigst dich mit",
@@ -844,14 +1052,34 @@
                 "ihr": "beschäftigt euch mit",
                 "sie/Sie": "beschäftigen sich mit"
                 },
+                "Präteritum": {
+                "ich": "beschäftigte mich mit",
+                "du": "beschäftigtest dich mit",
+                "er/sie/es": "beschäftigte sich mit",
+                "wir": "beschäftigten uns mit",
+                "ihr": "beschäftigtet euch mit",
+                "sie/Sie": "beschäftigten sich mit"
+                },
                 "Perfekt": {
-                "auxiliary": "haben",
-                "participle": "beschäftigt",
-                "example": {
-                    "de": "Ich habe mich mit dem Thema beschäftigt.",
-                    "ar": "لقد درست الموضوع.",
-                    "pron": "إش هابِه ميش ميت ديم تيما بْشِفتِقت"
-                }
+                "ich": "habe mich beschäftigt mit",
+                "du": "hast dich beschäftigt mit",
+                "er/sie/es": "hat sich beschäftigt mit",
+                "wir": "haben uns beschäftigt mit",
+                "ihr": "habt euch beschäftigt mit",
+                "sie/Sie": "haben sich beschäftigt mit"
+                },
+                "Futur I": {
+                "ich": "werde mich beschäftigen mit",
+                "du": "wirst dich beschäftigen mit",
+                "er/sie/es": "wird sich beschäftigen mit",
+                "wir": "werden uns beschäftigen mit",
+                "ihr": "werdet euch beschäftigen mit",
+                "sie/Sie": "werden sich beschäftigen mit"
+                },
+                "Imperativ": {
+                "du": "beschäftige dich mit",
+                "ihr": "beschäftigt euch mit",
+                "Sie": "beschäftigen Sie sich mit"
                 }
             },
             "examples": [
@@ -881,7 +1109,7 @@
             "verb": "sich entscheiden für",
             "meaning": "يقرر لصالح / يختار",
             "type": "غير منتظم",
-            "tenses": {
+            "conjugations": {
                 "Präsens": {
                 "ich": "entscheide mich für",
                 "du": "entscheidest dich für",
@@ -890,14 +1118,34 @@
                 "ihr": "entscheidet euch für",
                 "sie/Sie": "entscheiden sich für"
                 },
+                "Präteritum": {
+                "ich": "entschied mich für",
+                "du": "entschiedest dich für",
+                "er/sie/es": "entschied sich für",
+                "wir": "entschieden uns für",
+                "ihr": "entschiedet euch für",
+                "sie/Sie": "entschieden sich für"
+                },
                 "Perfekt": {
-                "auxiliary": "haben",
-                "participle": "entschieden",
-                "example": {
-                    "de": "Ich habe mich für das blaue Kleid entschieden.",
-                    "ar": "لقد قررت لصالح الفستان الأزرق.",
-                    "pron": "إش هابِه ميش فور داس بلاوِه كلايت إنتشيدِن"
-                }
+                "ich": "habe mich entschieden für",
+                "du": "hast dich entschieden für",
+                "er/sie/es": "hat sich entschieden für",
+                "wir": "haben uns entschieden für",
+                "ihr": "habt euch entschieden für",
+                "sie/Sie": "haben sich entschieden für"
+                },
+                "Futur I": {
+                "ich": "werde mich entscheiden für",
+                "du": "wirst dich entscheiden für",
+                "er/sie/es": "wird sich entscheiden für",
+                "wir": "werden uns entscheiden für",
+                "ihr": "werdet euch entscheiden für",
+                "sie/Sie": "werden sich entscheiden für"
+                },
+                "Imperativ": {
+                "du": "entscheide dich für",
+                "ihr": "entscheidet euch für",
+                "Sie": "entscheiden Sie sich für"
                 }
             },
             "examples": [
@@ -917,7 +1165,7 @@
             "verb": "sich erinnern an",
             "meaning": "يتذكر",
             "type": "منتظم",
-            "tenses": {
+            "conjugations": {
                 "Präsens": {
                 "ich": "erinnere mich an",
                 "du": "erinnerst dich an",
@@ -926,14 +1174,34 @@
                 "ihr": "erinnert euch an",
                 "sie/Sie": "erinnern sich an"
                 },
+                "Präteritum": {
+                "ich": "erinnerte mich an",
+                "du": "erinnertest dich an",
+                "er/sie/es": "erinnerte sich an",
+                "wir": "erinnerten uns an",
+                "ihr": "erinnertet euch an",
+                "sie/Sie": "erinnerten sich an"
+                },
                 "Perfekt": {
-                "auxiliary": "haben",
-                "participle": "erinnert",
-                "example": {
-                    "de": "Ich habe mich an meinen ersten Schultag erinnert.",
-                    "ar": "لقد تذكرت أول يوم لي في المدرسة.",
-                    "pron": "إش هابِه ميش آن ماينِن إرستِن شولتاك إرينِرت"
-                }
+                "ich": "habe mich erinnert an",
+                "du": "hast dich erinnert an",
+                "er/sie/es": "hat sich erinnert an",
+                "wir": "haben uns erinnert an",
+                "ihr": "habt euch erinnert an",
+                "sie/Sie": "haben sich erinnert an"
+                },
+                "Futur I": {
+                "ich": "werde mich erinnern an",
+                "du": "wirst dich erinnern an",
+                "er/sie/es": "wird sich erinnern an",
+                "wir": "werden uns erinnern an",
+                "ihr": "werdet euch erinnern an",
+                "sie/Sie": "werden sich erinnern an"
+                },
+                "Imperativ": {
+                "du": "erinnere dich an",
+                "ihr": "erinnert euch an",
+                "Sie": "erinnern Sie sich an"
                 }
             },
             "examples": [
@@ -958,7 +1226,7 @@
             "verb": "sich freuen über",
             "meaning": "يفرح بـ / يسعد بـ",
             "type": "منتظم",
-            "tenses": {
+            "conjugations": {
                 "Präsens": {
                 "ich": "freue mich über",
                 "du": "freust dich über",
@@ -967,14 +1235,34 @@
                 "ihr": "freut euch über",
                 "sie/Sie": "freuen sich über"
                 },
+                "Präteritum": {
+                "ich": "freute mich über",
+                "du": "freutest dich über",
+                "er/sie/es": "freute sich über",
+                "wir": "freuten uns über",
+                "ihr": "freutet euch über",
+                "sie/Sie": "freuten sich über"
+                },
                 "Perfekt": {
-                "auxiliary": "haben",
-                "participle": "gefreut",
-                "example": {
-                    "de": "Ich habe mich über das Geschenk sehr gefreut.",
-                    "ar": "لقد فرحت جدًا بالهدية.",
-                    "pron": "إش هابِه ميش أوبِر داس غِشينك زير غِفرويت"
-                }
+                "ich": "habe mich gefreut über",
+                "du": "hast dich gefreut über",
+                "er/sie/es": "hat sich gefreut über",
+                "wir": "haben uns gefreut über",
+                "ihr": "habt euch gefreut über",
+                "sie/Sie": "haben sich gefreut über"
+                },
+                "Futur I": {
+                "ich": "werde mich freuen über",
+                "du": "wirst dich freuen über",
+                "er/sie/es": "wird sich freuen über",
+                "wir": "werden uns freuen über",
+                "ihr": "werdet euch freuen über",
+                "sie/Sie": "werden sich freuen über"
+                },
+                "Imperativ": {
+                "du": "freue dich über",
+                "ihr": "freut euch über",
+                "Sie": "freuen Sie sich über"
                 }
             },
             "examples": [
@@ -1004,7 +1292,7 @@
             "verb": "sich konzentrieren auf",
             "meaning": "يركز على",
             "type": "منتظم",
-            "tenses": {
+            "conjugations": {
                 "Präsens": {
                 "ich": "konzentriere mich auf",
                 "du": "konzentrierst dich auf",
@@ -1013,14 +1301,34 @@
                 "ihr": "konzentriert euch auf",
                 "sie/Sie": "konzentrieren sich auf"
                 },
+                "Präteritum": {
+                "ich": "konzentrierte mich auf",
+                "du": "konzentriertest dich auf",
+                "er/sie/es": "konzentrierte sich auf",
+                "wir": "konzentrierten uns auf",
+                "ihr": "konzentriertet euch auf",
+                "sie/Sie": "konzentrierten sich auf"
+                },
                 "Perfekt": {
-                "auxiliary": "haben",
-                "participle": "konzentriert",
-                "example": {
-                    "de": "Ich habe mich auf die Aufgabe konzentriert.",
-                    "ar": "لقد ركزت على المهمة.",
-                    "pron": "إش هابِه ميش آوف دي آوفغابِه كونتسينتريِرت"
-                }
+                "ich": "habe mich konzentriert auf",
+                "du": "hast dich konzentriert auf",
+                "er/sie/es": "hat sich konzentriert auf",
+                "wir": "haben uns konzentriert auf",
+                "ihr": "habt euch konzentriert auf",
+                "sie/Sie": "haben sich konzentriert auf"
+                },
+                "Futur I": {
+                "ich": "werde mich konzentrieren auf",
+                "du": "wirst dich konzentrieren auf",
+                "er/sie/es": "wird sich konzentrieren auf",
+                "wir": "werden uns konzentrieren auf",
+                "ihr": "werdet euch konzentrieren auf",
+                "sie/Sie": "werden sich konzentrieren auf"
+                },
+                "Imperativ": {
+                "du": "konzentriere dich auf",
+                "ihr": "konzentriert euch auf",
+                "Sie": "konzentrieren Sie sich auf"
                 }
             },
             "examples": [
@@ -1040,7 +1348,7 @@
             "verb": "sich trennen von",
             "meaning": "يفارق / ينفصل عن",
             "type": "منتظم",
-            "tenses": {
+            "conjugations": {
                 "Präsens": {
                 "ich": "trenne mich von",
                 "du": "trennst dich von",
@@ -1049,14 +1357,34 @@
                 "ihr": "trennt euch von",
                 "sie/Sie": "trennen sich von"
                 },
+                "Präteritum": {
+                "ich": "trennte mich von",
+                "du": "trenntest dich von",
+                "er/sie/es": "trennte sich von",
+                "wir": "trennten uns von",
+                "ihr": "trenntet euch von",
+                "sie/Sie": "trennten sich von"
+                },
                 "Perfekt": {
-                "auxiliary": "haben",
-                "participle": "getrennt",
-                "example": {
-                    "de": "Sie haben sich nach zehn Jahren getrennt.",
-                    "ar": "لقد انفصلوا بعد عشر سنوات.",
-                    "pron": "زي هابِن زيش ناخ تسين ياهرِن غِترينت"
-                }
+                "ich": "habe mich getrennt von",
+                "du": "hast dich getrennt von",
+                "er/sie/es": "hat sich getrennt von",
+                "wir": "haben uns getrennt von",
+                "ihr": "habt euch getrennt von",
+                "sie/Sie": "haben sich getrennt von"
+                },
+                "Futur I": {
+                "ich": "werde mich trennen von",
+                "du": "wirst dich trennen von",
+                "er/sie/es": "wird sich trennen von",
+                "wir": "werden uns trennen von",
+                "ihr": "werdet euch trennen von",
+                "sie/Sie": "werden sich trennen von"
+                },
+                "Imperativ": {
+                "du": "trenne dich von",
+                "ihr": "trennt euch von",
+                "Sie": "trennen Sie sich von"
                 }
             },
             "examples": [
@@ -1081,7 +1409,7 @@
             "verb": "sich verlieben in",
             "meaning": "يقع في الحب",
             "type": "منتظم",
-            "tenses": {
+            "conjugations": {
                 "Präsens": {
                 "ich": "verliebe mich in",
                 "du": "verliebst dich in",
@@ -1090,14 +1418,34 @@
                 "ihr": "verliebt euch in",
                 "sie/Sie": "verlieben sich in"
                 },
+                "Präteritum": {
+                "ich": "verliebte mich in",
+                "du": "verliebtest dich in",
+                "er/sie/es": "verliebte sich in",
+                "wir": "verliebten uns in",
+                "ihr": "verliebtet euch in",
+                "sie/Sie": "verliebten sich in"
+                },
                 "Perfekt": {
-                "auxiliary": "haben",
-                "participle": "verliebt",
-                "example": {
-                    "de": "Ich habe mich in meinen Kollegen verliebt.",
-                    "ar": "لقد وقعت في الحب مع زميلي.",
-                    "pron": "إش هابِه ميش إن ماينِن كولِغِن فيرليبت"
-                }
+                "ich": "habe mich verliebt in",
+                "du": "hast dich verliebt in",
+                "er/sie/es": "hat sich verliebt in",
+                "wir": "haben uns verliebt in",
+                "ihr": "habt euch verliebt in",
+                "sie/Sie": "haben sich verliebt in"
+                },
+                "Futur I": {
+                "ich": "werde mich verlieben in",
+                "du": "wirst dich verlieben in",
+                "er/sie/es": "wird sich verlieben in",
+                "wir": "werden uns verlieben in",
+                "ihr": "werdet euch verlieben in",
+                "sie/Sie": "werden sich verlieben in"
+                },
+                "Imperativ": {
+                "du": "verliebe dich in",
+                "ihr": "verliebt euch in",
+                "Sie": "verlieben Sie sich in"
                 }
             },
             "examples": [
@@ -1127,7 +1475,7 @@
             "verb": "sich wundern über",
             "meaning": "يتعجب من",
             "type": "منتظم",
-            "tenses": {
+            "conjugations": {
                 "Präsens": {
                 "ich": "wundere mich über",
                 "du": "wunderst dich über",
@@ -1136,14 +1484,34 @@
                 "ihr": "wundert euch über",
                 "sie/Sie": "wundern sich über"
                 },
+                "Präteritum": {
+                "ich": "wunderte mich über",
+                "du": "wundertest dich über",
+                "er/sie/es": "wunderte sich über",
+                "wir": "wunderten uns über",
+                "ihr": "wundertet euch über",
+                "sie/Sie": "wunderten sich über"
+                },
                 "Perfekt": {
-                "auxiliary": "haben",
-                "participle": "gewundert",
-                "example": {
-                    "de": "Ich habe mich über seine Reaktion gewundert.",
-                    "ar": "لقد تعجبت من ردة فعله.",
-                    "pron": "إش هابِه ميش أوبِر زاينِه ريأكتسيون غِفوندرت"
-                }
+                "ich": "habe mich gewundert über",
+                "du": "hast dich gewundert über",
+                "er/sie/es": "hat sich gewundert über",
+                "wir": "haben uns gewundert über",
+                "ihr": "habt euch gewundert über",
+                "sie/Sie": "haben sich gewundert über"
+                },
+                "Futur I": {
+                "ich": "werde mich wundern über",
+                "du": "wirst dich wundern über",
+                "er/sie/es": "wird sich wundern über",
+                "wir": "werden uns wundern über",
+                "ihr": "werdet euch wundern über",
+                "sie/Sie": "werden sich wundern über"
+                },
+                "Imperativ": {
+                "du": "wundere dich über",
+                "ihr": "wundert euch über",
+                "Sie": "wundern Sie sich über"
                 }
             },
             "examples": [
@@ -1154,436 +1522,478 @@
                 },
                 {
                 "de": "Sie wundert sich über nichts.",
-                "ar": "هي لا تتعجب من anything.",
+                "ar": "هي لا تتعجب من أي شيء.",
                 "pron": "زي فوندرت زيش أوبِر نيشتس"
                 }
             ]
             },
             {
-                "verb": "sich ärgern über",
-                "meaning": "ينزعج من",
-                "type": "منتظم",
-                "tenses": {
-                  "Präsens": {
-                    "ich": "ärgere mich über",
-                    "du": "ärgerst dich über",
-                    "er/sie/es": "ärgert sich über",
-                    "wir": "ärgern uns über",
-                    "ihr": "ärgert euch über",
-                    "sie/Sie": "ärgern sich über"
-                  },
-                  "Perfekt": {
-                    "auxiliary": "haben",
-                    "participle": "geärgert",
-                    "example": {
-                      "de": "Ich habe mich über die Verspätung geärgert.",
-                      "ar": "لقد انزعجت من التأخير.",
-                      "pron": "إش هابِه ميش أوبِر دي فيرشبيتونغ غِإيرغيرت"
-                    }
-                  }
+            "verb": "sich ärgern über",
+            "meaning": "ينزعج من",
+            "type": "منتظم",
+            "conjugations": {
+                "Präsens": {
+                "ich": "ärgere mich über",
+                "du": "ärgerst dich über",
+                "er/sie/es": "ärgert sich über",
+                "wir": "ärgern uns über",
+                "ihr": "ärgert euch über",
+                "sie/Sie": "ärgern sich über"
                 },
-                "examples": [
-                  {
-                    "de": "Er ärgert sich über das schlechte Wetter.",
-                    "ar": "هو ينزعج من الطقس السيء.",
-                    "pron": "إر إيرغيرت زيش أوبِر داس شليخته فيتِر"
-                  },
-                  {
-                    "de": "Ärgere dich nicht über kleine Probleme!",
-                    "ar": "لا تنزعج من المشاكل الصغيرة!",
-                    "pron": "إيرغيرِه ديش نيشت أوبِر كلاينِه بروبليمِه!"
-                  }
-                ]
-              },
-              {
-                "verb": "sich bedanken bei",
-                "meaning": "يشكر عند",
-                "type": "منتظم",
-                "tenses": {
-                  "Präsens": {
-                    "ich": "bedanke mich bei",
-                    "du": "bedankst dich bei",
-                    "er/sie/es": "bedankt sich bei",
-                    "wir": "bedanken uns bei",
-                    "ihr": "bedankt euch bei",
-                    "sie/Sie": "bedanken sich bei"
-                  },
-                  "Perfekt": {
-                    "auxiliary": "haben",
-                    "participle": "bedankt",
-                    "example": {
-                      "de": "Ich habe mich bei ihr für die Hilfe bedankt.",
-                      "ar": "لقد شكرتها على المساعدة.",
-                      "pron": "إش هابِه ميش باي إير فور دي هيلفِه بيدانكت"
-                    }
-                  }
+                "Präteritum": {
+                "ich": "ärgerte mich über",
+                "du": "ärgertest dich über",
+                "er/sie/es": "ärgerte sich über",
+                "wir": "ärgerten uns über",
+                "ihr": "ärgertet euch über",
+                "sie/Sie": "ärgerten sich über"
                 },
-                "examples": [
-                  {
-                    "de": "Bedankst du dich bei deinen Eltern?",
-                    "ar": "هل تشكر والديك؟",
-                    "pron": "بيدانكست دو ديش باي داينِن إلترن؟"
-                  },
-                  {
-                    "de": "Wir bedanken uns herzlich bei Ihnen.",
-                    "ar": "نحن نشكركم بشدة.",
-                    "pron": "فير بيدانكن أونس هيرتسليش باي إينِن"
-                  },
-                  {
-                    "de": "Sie bedankt sich immer höflich.",
-                    "ar": "هي تشكر دائمًا بأدب.",
-                    "pron": "زي بيدانكت زيش إمِر هوفليش"
-                  }
-                ]
-              },
-              {
-                "verb": "sich bemühen um",
-                "meaning": "يبذل جهدًا للحصول على",
-                "type": "منتظم",
-                "tenses": {
-                  "Präsens": {
-                    "ich": "bemühe mich um",
-                    "du": "bemühst dich um",
-                    "er/sie/es": "bemüht sich um",
-                    "wir": "bemühen uns um",
-                    "ihr": "bemüht euch um",
-                    "sie/Sie": "bemühen sich um"
-                  },
-                  "Perfekt": {
-                    "auxiliary": "haben",
-                    "participle": "bemüht",
-                    "example": {
-                      "de": "Ich habe mich um eine Lösung bemüht.",
-                      "ar": "لقد بذلت جهدًا لإيجاد حل.",
-                      "pron": "إش هابِه ميش أوم آينِه لوزونغ بيمويت"
-                    }
-                  }
+                "Perfekt": {
+                "ich": "habe mich geärgert über",
+                "du": "hast dich geärgert über",
+                "er/sie/es": "hat sich geärgert über",
+                "wir": "haben uns geärgert über",
+                "ihr": "habt euch geärgert über",
+                "sie/Sie": "haben sich geärgert über"
                 },
-                "examples": [
-                  {
-                    "de": "Bemühe dich um bessere Noten!",
-                    "ar": "ابذل جهدًا للحصول على درجات أفضل!",
-                    "pron": "بيموهِه ديش أوم بيسيرِه نوتِن!"
-                  },
-                  {
-                    "de": "Er bemüht sich sehr um seine Gesundheit.",
-                    "ar": "هو يبذل جهدًا كبيرًا من أجل صحته.",
-                    "pron": "إر بيمويت زيش زير أوم زاينِه غِزوندهايت"
-                  }
-                ]
-              },
-              {
-                "verb": "sich beschweren über",
-                "meaning": "يشكو من",
-                "type": "منتظم",
-                "tenses": {
-                  "Präsens": {
-                    "ich": "beschwere mich über",
-                    "du": "beschwerst dich über",
-                    "er/sie/es": "beschwert sich über",
-                    "wir": "beschweren uns über",
-                    "ihr": "beschwert euch über",
-                    "sie/Sie": "beschweren sich über"
-                  },
-                  "Perfekt": {
-                    "auxiliary": "haben",
-                    "participle": "beschwert",
-                    "example": {
-                      "de": "Ich habe mich über den Lärm beschwert.",
-                      "ar": "لقد شكوت من الضوضاء.",
-                      "pron": "إش هابِه ميش أوبِر دين ليرم بِشفيرت"
-                    }
-                  }
+                "Futur I": {
+                "ich": "werde mich ärgern über",
+                "du": "wirst dich ärgern über",
+                "er/sie/es": "wird sich ärgern über",
+                "wir": "werden uns ärgern über",
+                "ihr": "werdet euch ärgern über",
+                "sie/Sie": "werden sich ärgern über"
                 },
-                "examples": [
-                  {
-                    "de": "Beschweren Sie sich oft über den Service?",
-                    "ar": "هل تشكون غالبًا من الخدمة؟",
-                    "pron": "بِشفيرِن زي زيش أوفت أوبِر دين زيرفيس؟"
-                  },
-                  {
-                    "de": "Sie beschwert sich nie über ihre Arbeit.",
-                    "ar": "هي لا تشكو أبدًا من عملها.",
-                    "pron": "زي بِشفيرت زيش ني أوبِر إيرِه آربايت"
-                  },
-                  {
-                    "de": "Worüber beschwerst du dich?",
-                    "ar": "عم تشتكي؟",
-                    "pron": "فورأوبِر بِشفيرست دو ديش؟"
-                  }
-                ]
-              },
-              {
-                "verb": "sich beklagen über",
-                "meaning": "يشتكي من",
-                "type": "منتظم",
-                "tenses": {
-                  "Präsens": {
-                    "ich": "beklage mich über",
-                    "du": "beklagst dich über",
-                    "er/sie/es": "beklagt sich über",
-                    "wir": "beklagen uns über",
-                    "ihr": "beklagt euch über",
-                    "sie/Sie": "beklagen sich über"
-                  },
-                  "Perfekt": {
-                    "auxiliary": "haben",
-                    "participle": "beklagt",
-                    "example": {
-                      "de": "Er hat sich über die Preise beklagt.",
-                      "ar": "لقد اشتكى من الأسعار.",
-                      "pron": "إر هات زيش أوبِر دي برايزِه بيكلاكْت"
-                    }
-                  }
+                "Imperativ": {
+                "du": "ärgere dich nicht über",
+                "ihr": "ärgert euch nicht über",
+                "Sie": "ärgern Sie sich nicht über"
+                }
+            },
+            "examples": [
+                {
+                "de": "Er ärgert sich über das schlechte Wetter.",
+                "ar": "هو ينزعج من الطقس السيء.",
+                "pron": "إر إيرغيرت زيش أوبِر داس شليخته فيتِر"
                 },
-                "examples": [
-                  {
-                    "de": "Beklagst du dich oft über das Essen?",
-                    "ar": "هل تشتكي غالبًا من الطعام؟",
-                    "pron": "بيكلاكست دو ديش أوفت أوبِر داس إسِن؟"
-                  },
-                  {
-                    "de": "Die Nachbarn beklagen sich über den Lärm.",
-                    "ar": "الجيران يشكون من الضوضاء.",
-                    "pron": "دي ناخبارن بيكلاغِن زيش أوبِر دين ليرم"
-                  }
-                ]
-              },
-              {
-                "verb": "sich entschuldigen für",
-                "meaning": "يعتذر عن",
-                "type": "منتظم",
-                "tenses": {
-                  "Präsens": {
-                    "ich": "entschuldige mich für",
-                    "du": "entschuldigst dich für",
-                    "er/sie/es": "entschuldigt sich für",
-                    "wir": "entschuldigen uns für",
-                    "ihr": "entschuldigt euch für",
-                    "sie/Sie": "entschuldigen sich für"
-                  },
-                  "Perfekt": {
-                    "auxiliary": "haben",
-                    "participle": "entschuldigt",
-                    "example": {
-                      "de": "Ich habe mich für mein Verhalten entschuldigt.",
-                      "ar": "لقد اعتذرت عن سلوكي.",
-                      "pron": "إش هابِه ميش فور ماين فيرهالتِن إنتشولديغت"
-                    }
-                  }
+                {
+                "de": "Ärgere dich nicht über kleine Probleme!",
+                "ar": "لا تنزعج من المشاكل الصغيرة!",
+                "pron": "إيرغيرِه ديش نيشت أوبِر كلاينِه بروبليمِه!"
+                }
+            ]
+            },
+            {
+            "verb": "sich bedanken bei",
+            "meaning": "يشكر عند",
+            "type": "منتظم",
+            "conjugations": {
+                "Präsens": {
+                "ich": "bedanke mich bei",
+                "du": "bedankst dich bei",
+                "er/sie/es": "bedankt sich bei",
+                "wir": "bedanken uns bei",
+                "ihr": "bedankt euch bei",
+                "sie/Sie": "bedanken sich bei"
                 },
-                "examples": [
-                  {
-                    "de": "Entschuldige dich für deine Verspätung!",
-                    "ar": "اعتذر عن تأخيرك!",
-                    "pron": "إنتشولديغِه ديش فور داينِه فيرشبيتونغ!"
-                  },
-                  {
-                    "de": "Er entschuldigt sich immer sofort.",
-                    "ar": "هو يعتذر دائمًا على الفور.",
-                    "pron": "إر إنتشولديغت زيش إمِر زوفورت"
-                  },
-                  {
-                    "de": "Wofür muss ich mich entschuldigen?",
-                    "ar": "عن ماذا يجب أن أعتذر؟",
-                    "pron": "فوفور موس إش ميش إنتشولديغِن؟"
-                  }
-                ]
-              },
-              {
-                "verb": "sich erkundigen nach",
-                "meaning": "يستفسر عن",
-                "type": "منتظم",
-                "tenses": {
-                  "Präsens": {
-                    "ich": "erkundige mich nach",
-                    "du": "erkundigst dich nach",
-                    "er/sie/es": "erkundigt sich nach",
-                    "wir": "erkundigen uns nach",
-                    "ihr": "erkundigt euch nach",
-                    "sie/Sie": "erkundigen sich nach"
-                  },
-                  "Perfekt": {
-                    "auxiliary": "haben",
-                    "participle": "erkundigt",
-                    "example": {
-                      "de": "Ich habe mich nach dem Weg erkundigt.",
-                      "ar": "لقد استفسرت عن الطريق.",
-                      "pron": "إش هابِه ميش ناخ ديم فيغ إيركونديغت"
-                    }
-                  }
+                "Präteritum": {
+                "ich": "bedankte mich bei",
+                "du": "bedanktest dich bei",
+                "er/sie/es": "bedankte sich bei",
+                "wir": "bedankten uns bei",
+                "ihr": "bedanktet euch bei",
+                "sie/Sie": "bedankten sich bei"
                 },
-                "examples": [
-                  {
-                    "de": "Erkundigen Sie sich nach den Öffnungszeiten.",
-                    "ar": "استفسر عن أوقات العمل.",
-                    "pron": "إيركونديغِن زي زيش ناخ دين أوفنونغستسايتِن"
-                  },
-                  {
-                    "de": "Ich erkundige mich nach dem Preis.",
-                    "ar": "أنا أستفسر عن السعر.",
-                    "pron": "إش إيركونديغِه ميش ناخ ديم برايس"
-                  }
-                ]
-              },
-              {
-                "verb": "sich freuen auf",
-                "meaning": "يتطلع إلى",
-                "type": "منتظم",
-                "tenses": {
-                  "Präsens": {
-                    "ich": "freue mich auf",
-                    "du": "freust dich auf",
-                    "er/sie/es": "freut sich auf",
-                    "wir": "freuen uns auf",
-                    "ihr": "freut euch auf",
-                    "sie/Sie": "freuen sich auf"
-                  },
-                  "Perfekt": {
-                    "auxiliary": "haben",
-                    "participle": "gefreut",
-                    "example": {
-                      "de": "Ich habe mich auf das Konzert gefreut.",
-                      "ar": "لقد تطلعت إلى الحفلة الموسيقية.",
-                      "pron": "إش هابِه ميش آوف داس كونتسيرت غِفرويت"
-                    }
-                  }
+                "Perfekt": {
+                "ich": "habe mich bedankt bei",
+                "du": "hast dich bedankt bei",
+                "er/sie/es": "hat sich bedankt bei",
+                "wir": "haben uns bedankt bei",
+                "ihr": "habt euch bedankt bei",
+                "sie/Sie": "haben sich bedankt bei"
                 },
-                "examples": [
-                  {
-                    "de": "Wir freuen uns auf deinen Besuch.",
-                    "ar": "نحن نتطلع إلى زيارتك.",
-                    "pron": "فير فْرويِن أونس آوف داينِن بِزوك"
-                  },
-                  {
-                    "de": "Freust du dich auf die Ferien?",
-                    "ar": "هل تتطلع إلى العطلة؟",
-                    "pron": "فْرويست دو ديش آوف دي فيريين؟"
-                  },
-                  {
-                    "de": "Sie freut sich sehr auf die Reise.",
-                    "ar": "هي تتطلع كثيرًا إلى الرحلة.",
-                    "pron": "زي فْرويت زيش زير آوف دي رايزِه"
-                  },
-                  {
-                    "de": "Ich freue mich schon auf morgen.",
-                    "ar": "أنا أتطلع بالفعل إلى الغد.",
-                    "pron": "إش فْرويِه ميش شون آوف مورغِن"
-                  }
-                ]
-              },
-              {
-                "verb": "sich gewöhnen an",
-                "meaning": "يعتاد على",
-                "type": "منتظم",
-                "tenses": {
-                  "Präsens": {
-                    "ich": "gewöhne mich an",
-                    "du": "gewöhnst dich an",
-                    "er/sie/es": "gewöhnt sich an",
-                    "wir": "gewöhnen uns an",
-                    "ihr": "gewöhnt euch an",
-                    "sie/Sie": "gewöhnen sich an"
-                  },
-                  "Perfekt": {
-                    "auxiliary": "haben",
-                    "participle": "gewöhnt",
-                    "example": {
-                      "de": "Ich habe mich an das Klima gewöhnt.",
-                      "ar": "لقد اعتدت على المناخ.",
-                      "pron": "إش هابِه ميش آن داس كليما غِفونت"
-                    }
-                  }
+                "Futur I": {
+                "ich": "werde mich bedanken bei",
+                "du": "wirst dich bedanken bei",
+                "er/sie/es": "wird sich bedanken bei",
+                "wir": "werden uns bedanken bei",
+                "ihr": "werdet euch bedanken bei",
+                "sie/Sie": "werden sich bedanken bei"
                 },
-                "examples": [
-                  {
-                    "de": "Man gewöhnt sich an alles.",
-                    "ar": "يعتاد المرء على كل شيء.",
-                    "pron": "مان غِفونت زيش آن آلِس"
-                  },
-                  {
-                    "de": "Ich kann mich nicht an die Hitze gewöhnen.",
-                    "ar": "لا أستطيع الاعتياد على الحر.",
-                    "pron": "إش كان ميش نيشت آن دي هيتزِه غِفونِن"
-                  }
-                ]
-              },
-              {
-                "verb": "sich irren in",
-                "meaning": "يخطئ في",
-                "type": "منتظم",
-                "tenses": {
-                  "Präsens": {
-                    "ich": "irre mich in",
-                    "du": "irrst dich in",
-                    "er/sie/es": "irrt sich in",
-                    "wir": "irren uns in",
-                    "ihr": "irrt euch in",
-                    "sie/Sie": "irren sich in"
-                  },
-                  "Perfekt": {
-                    "auxiliary": "haben",
-                    "participle": "geirrt",
-                    "example": {
-                      "de": "Ich habe mich in der Adresse geirrt.",
-                      "ar": "لقد أخطأت في العنوان.",
-                      "pron": "إش هابِه ميش إن دير آدرسِه غِإيرت"
-                    }
-                  }
+                "Imperativ": {
+                "du": "bedanke dich bei",
+                "ihr": "bedankt euch bei",
+                "Sie": "bedanken Sie sich bei"
+                }
+            },
+            "examples": [
+                {
+                "de": "Bedankst du dich bei deinen Eltern?",
+                "ar": "هل تشكر والديك؟",
+                "pron": "بيدانكست دو ديش باي داينِن إلترن؟"
                 },
-                "examples": [
-                  {
-                    "de": "Irren Sie sich vielleicht?",
-                    "ar": "هل أنت مخطئ ربما؟",
-                    "pron": "إيرِن زي زيش فيلايشت؟"
-                  },
-                  {
-                    "de": "Jeder kann sich irren.",
-                    "ar": "يمكن لأي شخص أن يخطئ.",
-                    "pron": "ييدِر كان زيش إيرِن"
-                  },
-                  {
-                    "de": "In welcher Hinsicht irrst du dich?",
-                    "ar": "في أي جانب تخطئ؟",
-                    "pron": "إن فيلشِر هينزيت إيرست دو ديش؟"
-                  }
-                ]
-              },
-              {
-                "verb": "sich konzentrieren auf",
-                "meaning": "يركز على",
-                "type": "منتظم",
-                "tenses": {
-                  "Präsens": {
-                    "ich": "konzentriere mich auf",
-                    "du": "konzentrierst dich auf",
-                    "er/sie/es": "konzentriert sich auf",
-                    "wir": "konzentrieren uns auf",
-                    "ihr": "konzentriert euch auf",
-                    "sie/Sie": "konzentrieren sich auf"
-                  },
-                  "Perfekt": {
-                    "auxiliary": "haben",
-                    "participle": "konzentriert",
-                    "example": {
-                      "de": "Ich habe mich auf die Prüfung konzentriert.",
-                      "ar": "لقد ركزت على الامتحان.",
-                      "pron": "إش هابِه ميش آوف دي بروفونغ كونتسينتريِرت"
-                    }
-                  }
+                {
+                "de": "Wir bedanken uns herzlich bei Ihnen.",
+                "ar": "نحن نشكركم بشدة.",
+                "pron": "فير بيدانكن أونس هيرتسليش باي إينِن"
                 },
-                "examples": [
-                  {
-                    "de": "Konzentrier dich auf deine Arbeit!",
-                    "ar": "ركز على عملك!",
-                    "pron": "كونتسينتريِر ديش آوف داينِه آربايت!"
-                  },
-                  {
-                    "de": "Sie kann sich gut konzentrieren.",
-                    "ar": "هي تستطيع التركيز جيدًا.",
-                    "pron": "زي كان زيش غوت كونتسينتريِرِن"
-                  }
-                ]
+                {
+                "de": "Sie bedankt sich immer höflich.",
+                "ar": "هي تشكر دائمًا بأدب.",
+                "pron": "زي بيدانكت زيش إمِر هوفليش"
+                }
+            ]
+            },
+            {
+            "verb": "sich bemühen um",
+            "meaning": "يبذل جهدًا للحصول على",
+            "type": "منتظم",
+            "conjugations": {
+                "Präsens": {
+                "ich": "bemühe mich um",
+                "du": "bemühst dich um",
+                "er/sie/es": "bemüht sich um",
+                "wir": "bemühen uns um",
+                "ihr": "bemüht euch um",
+                "sie/Sie": "bemühen sich um"
+                },
+                "Präteritum": {
+                "ich": "bemühte mich um",
+                "du": "bemühtest dich um",
+                "er/sie/es": "bemühte sich um",
+                "wir": "bemühten uns um",
+                "ihr": "bemühtet euch um",
+                "sie/Sie": "bemühten sich um"
+                },
+                "Perfekt": {
+                "ich": "habe mich bemüht um",
+                "du": "hast dich bemüht um",
+                "er/sie/es": "hat sich bemüht um",
+                "wir": "haben uns bemüht um",
+                "ihr": "habt euch bemüht um",
+                "sie/Sie": "haben sich bemüht um"
+                },
+                "Futur I": {
+                "ich": "werde mich bemühen um",
+                "du": "wirst dich bemühen um",
+                "er/sie/es": "wird sich bemühen um",
+                "wir": "werden uns bemühen um",
+                "ihr": "werdet euch bemühen um",
+                "sie/Sie": "werden sich bemühen um"
+                },
+                "Imperativ": {
+                "du": "bemühe dich um",
+                "ihr": "bemüht euch um",
+                "Sie": "bemühen Sie sich um"
+                }
+            },
+            "examples": [
+                {
+                "de": "Bemühe dich um bessere Noten!",
+                "ar": "ابذل جهدًا للحصول على درجات أفضل!",
+                "pron": "بيموهِه ديش أوم بيسيرِه نوتِن!"
+                },
+                {
+                "de": "Er bemüht sich sehr um seine Gesundheit.",
+                "ar": "هو يبذل جهدًا كبيرًا من أجل صحته.",
+                "pron": "إر بيمويت زيش زير أوم زاينِه غِزوندهايت"
+                }
+            ]
+            },
+            {
+            "verb": "sich beschweren über",
+            "meaning": "يشكو من",
+            "type": "منتظم",
+            "conjugations": {
+                "Präsens": {
+                "ich": "beschwere mich über",
+                "du": "beschwerst dich über",
+                "er/sie/es": "beschwert sich über",
+                "wir": "beschweren uns über",
+                "ihr": "beschwert euch über",
+                "sie/Sie": "beschweren sich über"
+                },
+                "Präteritum": {
+                "ich": "beschwerte mich über",
+                "du": "beschwertest dich über",
+                "er/sie/es": "beschwerte sich über",
+                "wir": "beschwerten uns über",
+                "ihr": "beschwertet euch über",
+                "sie/Sie": "beschwerten sich über"
+                },
+                "Perfekt": {
+                "ich": "habe mich beschwert über",
+                "du": "hast dich beschwert über",
+                "er/sie/es": "hat sich beschwert über",
+                "wir": "haben uns beschwert über",
+                "ihr": "habt euch beschwert über",
+                "sie/Sie": "haben sich beschwert über"
+                },
+                "Futur I": {
+                "ich": "werde mich beschweren über",
+                "du": "wirst dich beschweren über",
+                "er/sie/es": "wird sich beschweren über",
+                "wir": "werden uns beschweren über",
+                "ihr": "werdet euch beschweren über",
+                "sie/Sie": "werden sich beschweren über"
+                },
+                "Imperativ": {
+                "du": "beschwere dich über",
+                "ihr": "beschwert euch über",
+                "Sie": "beschweren Sie sich über"
+                }
+            },
+            "examples": [
+                {
+                "de": "Beschweren Sie sich oft über den Service?",
+                "ar": "هل تشكون غالبًا من الخدمة؟",
+                "pron": "بِشفيرِن زي زيش أوفت أوبِر دين زيرفيس؟"
+                },
+                {
+                "de": "Sie beschwert sich nie über ihre Arbeit.",
+                "ar": "هي لا تشكو أبدًا من عملها.",
+                "pron": "زي بِشفيرت زيش ني أوبِر إيرِه آربايت"
+                },
+                {
+                "de": "Worüber beschwerst du dich?",
+                "ar": "عم تشتكي؟",
+                "pron": "فورأوبِر بِشفيرست دو ديش؟"
+                }
+            ]
+            },
+            {
+            "verb": "sich beklagen über",
+            "meaning": "يشتكي من",
+            "type": "منتظم",
+            "conjugations": {
+                "Präsens": {
+                "ich": "beklage mich über",
+                "du": "beklagst dich über",
+                "er/sie/es": "beklagt sich über",
+                "wir": "beklagen uns über",
+                "ihr": "beklagt euch über",
+                "sie/Sie": "beklagen sich über"
+                },
+                "Präteritum": {
+                "ich": "beklagte mich über",
+                "du": "beklagtest dich über",
+                "er/sie/es": "beklagte sich über",
+                "wir": "beklagten uns über",
+                "ihr": "beklagtet euch über",
+                "sie/Sie": "beklagten sich über"
+                },
+                "Perfekt": {
+                "ich": "habe mich beklagt über",
+                "du": "hast dich beklagt über",
+                "er/sie/es": "hat sich beklagt über",
+                "wir": "haben uns beklagt über",
+                "ihr": "habt euch beklagt über",
+                "sie/Sie": "haben sich beklagt über"
+                },
+                "Futur I": {
+                "ich": "werde mich beklagen über",
+                "du": "wirst dich beklagen über",
+                "er/sie/es": "wird sich beklagen über",
+                "wir": "werden uns beklagen über",
+                "ihr": "werdet euch beklagen über",
+                "sie/Sie": "werden sich beklagen über"
+                },
+                "Imperativ": {
+                "du": "beklage dich über",
+                "ihr": "beklagt euch über",
+                "Sie": "beklagen Sie sich über"
+                }
+            },
+            "examples": [
+                {
+                "de": "Beklagst du dich oft über das Essen?",
+                "ar": "هل تشتكي غالبًا من الطعام؟",
+                "pron": "بيكلاكست دو ديش أوفت أوبِر داس إسِن؟"
+                },
+                {
+                "de": "Die Nachbarn beklagen sich über den Lärm.",
+                "ar": "الجيران يشكون من الضوضاء.",
+                "pron": "دي ناخبارن بيكلاغِن زيش أوبِر دين ليرم"
+                }
+            ]
+            },
+            {
+            "verb": "sich entschuldigen für",
+            "meaning": "يعتذر عن",
+            "type": "منتظم",
+            "conjugations": {
+                "Präsens": {
+                "ich": "entschuldige mich für",
+                "du": "entschuldigst dich für",
+                "er/sie/es": "entschuldigt sich für",
+                "wir": "entschuldigen uns für",
+                "ihr": "entschuldigt euch für",
+                "sie/Sie": "entschuldigen sich für"
+                },
+                "Präteritum": {
+                "ich": "entschuldigte mich für",
+                "du": "entschuldigtest dich für",
+                "er/sie/es": "entschuldigte sich für",
+                "wir": "entschuldigten uns für",
+                "ihr": "entschuldigtet euch für",
+                "sie/Sie": "entschuldigten sich für"
+                },
+                "Perfekt": {
+                "ich": "habe mich entschuldigt für",
+                "du": "hast dich entschuldigt für",
+                "er/sie/es": "hat sich entschuldigt für",
+                "wir": "haben uns entschuldigt für",
+                "ihr": "habt euch entschuldigt für",
+                "sie/Sie": "haben sich entschuldigt für"
+                },
+                "Futur I": {
+                "ich": "werde mich entschuldigen für",
+                "du": "wirst dich entschuldigen für",
+                "er/sie/es": "wird sich entschuldigen für",
+                "wir": "werden uns entschuldigen für",
+                "ihr": "werdet euch entschuldigen für",
+                "sie/Sie": "werden sich entschuldigen für"
+                },
+                "Imperativ": {
+                "du": "entschuldige dich für",
+                "ihr": "entschuldigt euch für",
+                "Sie": "entschuldigen Sie sich für"
+                }
+            },
+            "examples": [
+                {
+                "de": "Entschuldige dich für deine Verspätung!",
+                "ar": "اعتذر عن تأخيرك!",
+                "pron": "إنتشولديغِه ديش فور داينِه فيرشبيتونغ!"
+                },
+                {
+                "de": "Er entschuldigt sich immer sofort.",
+                "ar": "هو يعتذر دائمًا على الفور.",
+                "pron": "إر إنتشولديغت زيش إمِر زوفورت"
+                },
+                {
+                "de": "Wofür muss ich mich entschuldigen?",
+                "ar": "عن ماذا يجب أن أعتذر؟",
+                "pron": "فوفور موس إش ميش إنتشولديغِن؟"
+                }
+            ]
+            },
+            {
+            "verb": "sich erkundigen nach",
+            "meaning": "يستفسر عن",
+            "type": "منتظم",
+            "conjugations": {
+                "Präsens": {
+                "ich": "erkundige mich nach",
+                "du": "erkundigst dich nach",
+                "er/sie/es": "erkundigt sich nach",
+                "wir": "erkundigen uns nach",
+                "ihr": "erkundigt euch nach",
+                "sie/Sie": "erkundigen sich nach"
+                },
+                "Präteritum": {
+                "ich": "erkundigte mich nach",
+                "du": "erkundigtest dich nach",
+                "er/sie/es": "erkundigte sich nach",
+                "wir": "erkundigten uns nach",
+                "ihr": "erkundigtet euch nach",
+                "sie/Sie": "erkundigten sich nach"
+                },
+                "Perfekt": {
+                "ich": "habe mich erkundigt nach",
+                "du": "hast dich erkundigt nach",
+                "er/sie/es": "hat sich erkundigt nach",
+                "wir": "haben uns erkundigt nach",
+                "ihr": "habt euch erkundigt nach",
+                "sie/Sie": "haben sich erkundigt nach"
+                },
+                "Futur I": {
+                "ich": "werde mich erkundigen nach",
+                "du": "wirst dich erkundigen nach",
+                "er/sie/es": "wird sich erkundigen nach",
+                "wir": "werden uns erkundigen nach",
+                "ihr": "werdet euch erkundigen nach",
+                "sie/Sie": "werden sich erkundigen nach"
+                },
+                "Imperativ": {
+                "du": "erkundige dich nach",
+                "ihr": "erkundigt euch nach",
+                "Sie": "erkundigen Sie sich nach"
+                }
+            },
+            "examples": [
+                {
+                "de": "Erkundigen Sie sich nach den Öffnungszeiten.",
+                "ar": "استفسر عن أوقات العمل.",
+                "pron": "إيركونديغِن زي زيش ناخ دين أوفنونغستسايتِن"
+                },
+                {
+                "de": "Ich erkundige mich nach dem Preis.",
+                "ar": "أنا أستفسر عن السعر.",
+                "pron": "إش إيركونديغِه ميش ناخ ديم برايس"
+                }
+            ]
+            },
+            {
+            "verb": "sich irren in",
+            "meaning": "يخطئ في",
+            "type": "منتظم",
+            "conjugations": {
+                "Präsens": {
+                "ich": "irre mich in",
+                "du": "irrst dich in",
+                "er/sie/es": "irrt sich in",
+                "wir": "irren uns in",
+                "ihr": "irrt euch in",
+                "sie/Sie": "irren sich in"
+                },
+                "Präteritum": {
+                "ich": "irrte mich in",
+                "du": "irrtest dich in",
+                "er/sie/es": "irrte sich in",
+                "wir": "irrten uns in",
+                "ihr": "irrtet euch in",
+                "sie/Sie": "irrten sich in"
+                },
+                "Perfekt": {
+                "ich": "habe mich geirrt in",
+                "du": "hast dich geirrt in",
+                "er/sie/es": "hat sich geirrt in",
+                "wir": "haben uns geirrt in",
+                "ihr": "habt euch geirrt in",
+                "sie/Sie": "haben sich geirrt in"
+                },
+                "Futur I": {
+                "ich": "werde mich irren in",
+                "du": "wirst dich irren in",
+                "er/sie/es": "wird sich irren in",
+                "wir": "werden uns irren in",
+                "ihr": "werdet euch irren in",
+                "sie/Sie": "werden sich irren in"
+                },
+                "Imperativ": {
+                "du": "irre dich nicht in",
+                "ihr": "irrt euch nicht in",
+                "Sie": "irren Sie sich nicht in"
+                }
+            },
+            "examples": [
+                {
+                "de": "Irren Sie sich vielleicht?",
+                "ar": "هل أنت مخطئ ربما؟",
+                "pron": "إيرِن زي زيش فيلايشت؟"
+                },
+                {
+                "de": "Jeder kann sich irren.",
+                "ar": "يمكن لأي شخص أن يخطئ.",
+                "pron": "ييدِر كان زيش إيرِن"
+                },
+                {
+                "de": "In welcher Hinsicht irrst du dich?",
+                "ar": "في أي جانب تخطئ؟",
+                "pron": "إن فيلشِر هينزيت إيرست دو ديش؟"
+                }
+            ]
             }
         ]
     }

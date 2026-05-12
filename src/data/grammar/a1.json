@@ -266,7 +266,7 @@
           "verb": "sein",
           "meaning": "يكون",
           "type": "غير منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "bin",
               "du": "bist",
@@ -275,14 +275,34 @@
               "ihr": "seid",
               "sie/Sie": "sind"
             },
+            "Präteritum": {
+              "ich": "war",
+              "du": "warst",
+              "er/sie/es": "war",
+              "wir": "waren",
+              "ihr": "wart",
+              "sie/Sie": "waren"
+            },
             "Perfekt": {
-              "auxiliary": "sein",
-              "participle": "gewesen",
-              "example": {
-                "de": "Ich bin in Berlin gewesen.",
-                "ar": "لقد كنت في برلين.",
-                "pron": "إش بين إن بِرلين غِفيزِن"
-              }
+              "ich": "bin gewesen",
+              "du": "bist gewesen",
+              "er/sie/es": "ist gewesen",
+              "wir": "sind gewesen",
+              "ihr": "seid gewesen",
+              "sie/Sie": "sind gewesen"
+            },
+            "Futur I": {
+              "ich": "werde sein",
+              "du": "wirst sein",
+              "er/sie/es": "wird sein",
+              "wir": "werden sein",
+              "ihr": "werdet sein",
+              "sie/Sie": "werden sein"
+            },
+            "Imperativ": {
+              "du": "sei",
+              "ihr": "seid",
+              "Sie": "seien Sie"
             }
           },
           "examples": [
@@ -307,7 +327,7 @@
           "verb": "haben",
           "meaning": "يملك / لديه",
           "type": "غير منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "habe",
               "du": "hast",
@@ -316,14 +336,34 @@
               "ihr": "habt",
               "sie/Sie": "haben"
             },
+            "Präteritum": {
+              "ich": "hatte",
+              "du": "hattest",
+              "er/sie/es": "hatte",
+              "wir": "hatten",
+              "ihr": "hattet",
+              "sie/Sie": "hatten"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "gehabt",
-              "example": {
-                "de": "Ich habe ein Auto gehabt.",
-                "ar": "لقد كان لدي سيارة.",
-                "pron": "إش هابِه آين آوتو غِهابت"
-              }
+              "ich": "habe gehabt",
+              "du": "hast gehabt",
+              "er/sie/es": "hat gehabt",
+              "wir": "haben gehabt",
+              "ihr": "habt gehabt",
+              "sie/Sie": "haben gehabt"
+            },
+            "Futur I": {
+              "ich": "werde haben",
+              "du": "wirst haben",
+              "er/sie/es": "wird haben",
+              "wir": "werden haben",
+              "ihr": "werdet haben",
+              "sie/Sie": "werden haben"
+            },
+            "Imperativ": {
+              "du": "habe",
+              "ihr": "habt",
+              "Sie": "haben Sie"
             }
           },
           "examples": [
@@ -348,7 +388,7 @@
           "verb": "gehen",
           "meaning": "يذهب / يمشي",
           "type": "غير منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "gehe",
               "du": "gehst",
@@ -357,14 +397,34 @@
               "ihr": "geht",
               "sie/Sie": "gehen"
             },
+            "Präteritum": {
+              "ich": "ging",
+              "du": "gingst",
+              "er/sie/es": "ging",
+              "wir": "gingen",
+              "ihr": "gingt",
+              "sie/Sie": "gingen"
+            },
             "Perfekt": {
-              "auxiliary": "sein",
-              "participle": "gegangen",
-              "example": {
-                "de": "Ich bin ins Kino gegangen.",
-                "ar": "لقد ذهبت إلى السينما.",
-                "pron": "إش بين إنس كينو غِغانغِن"
-              }
+              "ich": "bin gegangen",
+              "du": "bist gegangen",
+              "er/sie/es": "ist gegangen",
+              "wir": "sind gegangen",
+              "ihr": "seid gegangen",
+              "sie/Sie": "sind gegangen"
+            },
+            "Futur I": {
+              "ich": "werde gehen",
+              "du": "wirst gehen",
+              "er/sie/es": "wird gehen",
+              "wir": "werden gehen",
+              "ihr": "werdet gehen",
+              "sie/Sie": "werden gehen"
+            },
+            "Imperativ": {
+              "du": "geh",
+              "ihr": "geht",
+              "Sie": "gehen Sie"
             }
           },
           "examples": [
@@ -389,7 +449,7 @@
           "verb": "kommen",
           "meaning": "يأتي",
           "type": "غير منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "komme",
               "du": "kommst",
@@ -398,14 +458,34 @@
               "ihr": "kommt",
               "sie/Sie": "kommen"
             },
+            "Präteritum": {
+              "ich": "kam",
+              "du": "kamst",
+              "er/sie/es": "kam",
+              "wir": "kamen",
+              "ihr": "kamt",
+              "sie/Sie": "kamen"
+            },
             "Perfekt": {
-              "auxiliary": "sein",
-              "participle": "gekommen",
-              "example": {
-                "de": "Ich bin gestern gekommen.",
-                "ar": "لقد أتيت أمس.",
-                "pron": "إش بين غِسترِن غِكومِن"
-              }
+              "ich": "bin gekommen",
+              "du": "bist gekommen",
+              "er/sie/es": "ist gekommen",
+              "wir": "sind gekommen",
+              "ihr": "seid gekommen",
+              "sie/Sie": "sind gekommen"
+            },
+            "Futur I": {
+              "ich": "werde kommen",
+              "du": "wirst kommen",
+              "er/sie/es": "wird kommen",
+              "wir": "werden kommen",
+              "ihr": "werdet kommen",
+              "sie/Sie": "werden kommen"
+            },
+            "Imperativ": {
+              "du": "komm",
+              "ihr": "kommt",
+              "Sie": "kommen Sie"
             }
           },
           "examples": [
@@ -430,7 +510,7 @@
           "verb": "wohnen",
           "meaning": "يسكن",
           "type": "منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "wohne",
               "du": "wohnst",
@@ -439,14 +519,34 @@
               "ihr": "wohnt",
               "sie/Sie": "wohnen"
             },
+            "Präteritum": {
+              "ich": "wohnte",
+              "du": "wohntest",
+              "er/sie/es": "wohnte",
+              "wir": "wohnten",
+              "ihr": "wohntet",
+              "sie/Sie": "wohnten"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "gewohnt",
-              "example": {
-                "de": "Ich habe in Berlin gewohnt.",
-                "ar": "لقد سكنت في برلين.",
-                "pron": "إش هابِه إن بِرلين غِفونت"
-              }
+              "ich": "habe gewohnt",
+              "du": "hast gewohnt",
+              "er/sie/es": "hat gewohnt",
+              "wir": "haben gewohnt",
+              "ihr": "habt gewohnt",
+              "sie/Sie": "haben gewohnt"
+            },
+            "Futur I": {
+              "ich": "werde wohnen",
+              "du": "wirst wohnen",
+              "er/sie/es": "wird wohnen",
+              "wir": "werden wohnen",
+              "ihr": "werdet wohnen",
+              "sie/Sie": "werden wohnen"
+            },
+            "Imperativ": {
+              "du": "wohn",
+              "ihr": "wohnt",
+              "Sie": "wohnen Sie"
             }
           },
           "examples": [
@@ -471,7 +571,7 @@
           "verb": "heißen",
           "meaning": "يُدعى / يُسمى",
           "type": "غير منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "heiße",
               "du": "heißt",
@@ -480,14 +580,34 @@
               "ihr": "heißt",
               "sie/Sie": "heißen"
             },
+            "Präteritum": {
+              "ich": "hieß",
+              "du": "hießest",
+              "er/sie/es": "hieß",
+              "wir": "hießen",
+              "ihr": "hießt",
+              "sie/Sie": "hießen"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "geheißen",
-              "example": {
-                "de": "Ich habe früher anders geheißen.",
-                "ar": "كان اسمي مختلفًا سابقًا.",
-                "pron": "إش هابِه فروِر أندِرس غِهايسِن"
-              }
+              "ich": "habe geheißen",
+              "du": "hast geheißen",
+              "er/sie/es": "hat geheißen",
+              "wir": "haben geheißen",
+              "ihr": "habt geheißen",
+              "sie/Sie": "haben geheißen"
+            },
+            "Futur I": {
+              "ich": "werde heißen",
+              "du": "wirst heißen",
+              "er/sie/es": "wird heißen",
+              "wir": "werden heißen",
+              "ihr": "werdet heißen",
+              "sie/Sie": "werden heißen"
+            },
+            "Imperativ": {
+              "du": "heiße",
+              "ihr": "heißt",
+              "Sie": "heißen Sie"
             }
           },
           "examples": [
@@ -512,7 +632,7 @@
           "verb": "machen",
           "meaning": "يفعل / يصنع",
           "type": "منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "mache",
               "du": "machst",
@@ -521,14 +641,34 @@
               "ihr": "macht",
               "sie/Sie": "machen"
             },
+            "Präteritum": {
+              "ich": "machte",
+              "du": "machtest",
+              "er/sie/es": "machte",
+              "wir": "machten",
+              "ihr": "machtet",
+              "sie/Sie": "machten"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "gemacht",
-              "example": {
-                "de": "Ich habe die Hausaufgaben gemacht.",
-                "ar": "لقد أنجزت الواجبات المنزلية.",
-                "pron": "إش هابِه دي هاوس آوفغابِن غِماخت"
-              }
+              "ich": "habe gemacht",
+              "du": "hast gemacht",
+              "er/sie/es": "hat gemacht",
+              "wir": "haben gemacht",
+              "ihr": "habt gemacht",
+              "sie/Sie": "haben gemacht"
+            },
+            "Futur I": {
+              "ich": "werde machen",
+              "du": "wirst machen",
+              "er/sie/es": "wird machen",
+              "wir": "werden machen",
+              "ihr": "werdet machen",
+              "sie/Sie": "werden machen"
+            },
+            "Imperativ": {
+              "du": "mach",
+              "ihr": "macht",
+              "Sie": "machen Sie"
             }
           },
           "examples": [
@@ -553,7 +693,7 @@
           "verb": "arbeiten",
           "meaning": "يعمل",
           "type": "منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "arbeite",
               "du": "arbeitest",
@@ -562,14 +702,34 @@
               "ihr": "arbeitet",
               "sie/Sie": "arbeiten"
             },
+            "Präteritum": {
+              "ich": "arbeitete",
+              "du": "arbeitetest",
+              "er/sie/es": "arbeitete",
+              "wir": "arbeiteten",
+              "ihr": "arbeitetet",
+              "sie/Sie": "arbeiteten"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "gearbeitet",
-              "example": {
-                "de": "Ich habe heute viel gearbeitet.",
-                "ar": "لقد عملت كثيرًا اليوم.",
-                "pron": "إش هابِه هويتِه فيل غِأربايتِت"
-              }
+              "ich": "habe gearbeitet",
+              "du": "hast gearbeitet",
+              "er/sie/es": "hat gearbeitet",
+              "wir": "haben gearbeitet",
+              "ihr": "habt gearbeitet",
+              "sie/Sie": "haben gearbeitet"
+            },
+            "Futur I": {
+              "ich": "werde arbeiten",
+              "du": "wirst arbeiten",
+              "er/sie/es": "wird arbeiten",
+              "wir": "werden arbeiten",
+              "ihr": "werdet arbeiten",
+              "sie/Sie": "werden arbeiten"
+            },
+            "Imperativ": {
+              "du": "arbeite",
+              "ihr": "arbeitet",
+              "Sie": "arbeiten Sie"
             }
           },
           "examples": [
@@ -594,7 +754,7 @@
           "verb": "lernen",
           "meaning": "يتعلم / يدرس",
           "type": "منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "lerne",
               "du": "lernst",
@@ -603,14 +763,34 @@
               "ihr": "lernt",
               "sie/Sie": "lernen"
             },
+            "Präteritum": {
+              "ich": "lernte",
+              "du": "lerntest",
+              "er/sie/es": "lernte",
+              "wir": "lernten",
+              "ihr": "lerntet",
+              "sie/Sie": "lernten"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "gelernt",
-              "example": {
-                "de": "Ich habe Deutsch gelernt.",
-                "ar": "لقد تعلمت الألمانية.",
-                "pron": "إش هابِه دُويتش غِلِرنت"
-              }
+              "ich": "habe gelernt",
+              "du": "hast gelernt",
+              "er/sie/es": "hat gelernt",
+              "wir": "haben gelernt",
+              "ihr": "habt gelernt",
+              "sie/Sie": "haben gelernt"
+            },
+            "Futur I": {
+              "ich": "werde lernen",
+              "du": "wirst lernen",
+              "er/sie/es": "wird lernen",
+              "wir": "werden lernen",
+              "ihr": "werdet lernen",
+              "sie/Sie": "werden lernen"
+            },
+            "Imperativ": {
+              "du": "lern",
+              "ihr": "lernt",
+              "Sie": "lernen Sie"
             }
           },
           "examples": [
@@ -635,7 +815,7 @@
           "verb": "spielen",
           "meaning": "يلعب",
           "type": "منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "spiele",
               "du": "spielst",
@@ -644,14 +824,34 @@
               "ihr": "spielt",
               "sie/Sie": "spielen"
             },
+            "Präteritum": {
+              "ich": "spielte",
+              "du": "spieltest",
+              "er/sie/es": "spielte",
+              "wir": "spielten",
+              "ihr": "spieltet",
+              "sie/Sie": "spielten"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "gespielt",
-              "example": {
-                "de": "Ich habe Fußball gespielt.",
-                "ar": "لقد لعبت كرة القدم.",
-                "pron": "إش هابِه فوسبال غِشبيلت"
-              }
+              "ich": "habe gespielt",
+              "du": "hast gespielt",
+              "er/sie/es": "hat gespielt",
+              "wir": "haben gespielt",
+              "ihr": "habt gespielt",
+              "sie/Sie": "haben gespielt"
+            },
+            "Futur I": {
+              "ich": "werde spielen",
+              "du": "wirst spielen",
+              "er/sie/es": "wird spielen",
+              "wir": "werden spielen",
+              "ihr": "werdet spielen",
+              "sie/Sie": "werden spielen"
+            },
+            "Imperativ": {
+              "du": "spiel",
+              "ihr": "spielt",
+              "Sie": "spielen Sie"
             }
           },
           "examples": [
@@ -676,7 +876,7 @@
           "verb": "essen",
           "meaning": "يأكل",
           "type": "غير منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "esse",
               "du": "isst",
@@ -685,14 +885,34 @@
               "ihr": "esst",
               "sie/Sie": "essen"
             },
+            "Präteritum": {
+              "ich": "aß",
+              "du": "aßest",
+              "er/sie/es": "aß",
+              "wir": "aßen",
+              "ihr": "aßt",
+              "sie/Sie": "aßen"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "gegessen",
-              "example": {
-                "de": "Ich habe Pizza gegessen.",
-                "ar": "لقد أكلت بيتزا.",
-                "pron": "إش هابِه بيتسا غِغِسِن"
-              }
+              "ich": "habe gegessen",
+              "du": "hast gegessen",
+              "er/sie/es": "hat gegessen",
+              "wir": "haben gegessen",
+              "ihr": "habt gegessen",
+              "sie/Sie": "haben gegessen"
+            },
+            "Futur I": {
+              "ich": "werde essen",
+              "du": "wirst essen",
+              "er/sie/es": "wird essen",
+              "wir": "werden essen",
+              "ihr": "werdet essen",
+              "sie/Sie": "werden essen"
+            },
+            "Imperativ": {
+              "du": "iss",
+              "ihr": "esst",
+              "Sie": "essen Sie"
             }
           },
           "examples": [
@@ -717,7 +937,7 @@
           "verb": "trinken",
           "meaning": "يشرب",
           "type": "غير منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "trinke",
               "du": "trinkst",
@@ -726,14 +946,34 @@
               "ihr": "trinkt",
               "sie/Sie": "trinken"
             },
+            "Präteritum": {
+              "ich": "trank",
+              "du": "trankst",
+              "er/sie/es": "trank",
+              "wir": "tranken",
+              "ihr": "trankt",
+              "sie/Sie": "tranken"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "getrunken",
-              "example": {
-                "de": "Ich habe Wasser getrunken.",
-                "ar": "لقد شربت ماء.",
-                "pron": "إش هابِه فاسِر غِترونكِن"
-              }
+              "ich": "habe getrunken",
+              "du": "hast getrunken",
+              "er/sie/es": "hat getrunken",
+              "wir": "haben getrunken",
+              "ihr": "habt getrunken",
+              "sie/Sie": "haben getrunken"
+            },
+            "Futur I": {
+              "ich": "werde trinken",
+              "du": "wirst trinken",
+              "er/sie/es": "wird trinken",
+              "wir": "werden trinken",
+              "ihr": "werdet trinken",
+              "sie/Sie": "werden trinken"
+            },
+            "Imperativ": {
+              "du": "trink",
+              "ihr": "trinkt",
+              "Sie": "trinken Sie"
             }
           },
           "examples": [
@@ -750,739 +990,1088 @@
             {
               "de": "Sie trinkt Wasser.",
               "ar": "هي تشرب الماء.",
-              "pron": "زي trinkt فاسِر"
-          }
-        ]
-      },
-      {
-        "verb": "sehen",
-        "meaning": "يرى / يشاهد",
-        "type": "غير منتظم",
-        "tenses": {
-          "Präsens": {
-            "ich": "sehe",
-            "du": "siehst",
-            "er/sie/es": "sieht",
-            "wir": "sehen",
-            "ihr": "seht",
-            "sie/Sie": "sehen"
-          },
-          "Perfekt": {
-            "auxiliary": "haben",
-            "participle": "gesehen",
-            "example": {
-              "de": "Ich habe einen Film gesehen.",
-              "ar": "لقد شاهدت فيلمًا.",
-              "pron": "إش هابِه آينِن فيلم غِزيهِن"
+              "pron": "زي ترينكت فاسِر"
             }
-          }
+          ]
         },
-        "examples": [
-          {
-            "de": "Ich sehe fern.",
-            "ar": "أنا أشاهد التلفاز.",
-            "pron": "إش زيه فِرن"
-          },
-          {
-            "de": "Siehst du das Auto?",
-            "ar": "هل ترى السيارة؟",
-            "pron": "زيست دو داس آوتو؟"
-          },
-          {
-            "de": "Wir sehen einen Film.",
-            "ar": "نحن نشاهد فيلمًا.",
-            "pron": "فير زيهِن آينِن فيلم"
-          }
-        ]
-      },
-      {
-        "verb": "hören",
-        "meaning": "يسمع",
-        "type": "منتظم",
-        "tenses": {
-          "Präsens": {
-            "ich": "höre",
-            "du": "hörst",
-            "er/sie/es": "hört",
-            "wir": "hören",
-            "ihr": "hört",
-            "sie/Sie": "hören"
-          },
-          "Perfekt": {
-            "auxiliary": "haben",
-            "participle": "gehört",
-            "example": {
-              "de": "Ich habe Musik gehört.",
-              "ar": "لقد استمعت للموسيقى.",
-              "pron": "إش هابِه موزيك غِهورت"
+        {
+          "verb": "sehen",
+          "meaning": "يرى / يشاهد",
+          "type": "غير منتظم",
+          "conjugations": {
+            "Präsens": {
+              "ich": "sehe",
+              "du": "siehst",
+              "er/sie/es": "sieht",
+              "wir": "sehen",
+              "ihr": "seht",
+              "sie/Sie": "sehen"
+            },
+            "Präteritum": {
+              "ich": "sah",
+              "du": "sahst",
+              "er/sie/es": "sah",
+              "wir": "sahen",
+              "ihr": "saht",
+              "sie/Sie": "sahen"
+            },
+            "Perfekt": {
+              "ich": "habe gesehen",
+              "du": "hast gesehen",
+              "er/sie/es": "hat gesehen",
+              "wir": "haben gesehen",
+              "ihr": "habt gesehen",
+              "sie/Sie": "haben gesehen"
+            },
+            "Futur I": {
+              "ich": "werde sehen",
+              "du": "wirst sehen",
+              "er/sie/es": "wird sehen",
+              "wir": "werden sehen",
+              "ihr": "werdet sehen",
+              "sie/Sie": "werden sehen"
+            },
+            "Imperativ": {
+              "du": "sieh",
+              "ihr": "seht",
+              "Sie": "sehen Sie"
             }
-          }
-        },
-        "examples": [
-          {
-            "de": "Ich höre Musik.",
-            "ar": "أنا أستمع للموسيقى.",
-            "pron": "إش هورِه موزيك"
           },
-          {
-            "de": "Hörst du Radio?",
-            "ar": "هل تستمع للراديو؟",
-            "pron": "هورست دو راديو؟"
-          },
-          {
-            "de": "Er hört einen Podcast.",
-            "ar": "هو يستمع لبودكاست.",
-            "pron": "إر هورت آينِن بودكاست"
-          }
-        ]
-      },
-      {
-        "verb": "fahren",
-        "meaning": "يقود / يسافر",
-        "type": "غير منتظم",
-        "tenses": {
-          "Präsens": {
-            "ich": "fahre",
-            "du": "fährst",
-            "er/sie/es": "fährt",
-            "wir": "fahren",
-            "ihr": "fahrt",
-            "sie/Sie": "fahren"
-          },
-          "Perfekt": {
-            "auxiliary": "sein",
-            "participle": "gefahren",
-            "example": {
-              "de": "Ich bin mit dem Bus gefahren.",
-              "ar": "لقد سافرت بالحافلة.",
-              "pron": "إش بين ميت ديم بوس غِفارِن"
+          "examples": [
+            {
+              "de": "Ich sehe fern.",
+              "ar": "أنا أشاهد التلفاز.",
+              "pron": "إش زيه فِرن"
+            },
+            {
+              "de": "Siehst du das Auto?",
+              "ar": "هل ترى السيارة؟",
+              "pron": "زيست دو داس آوتو؟"
+            },
+            {
+              "de": "Wir sehen einen Film.",
+              "ar": "نحن نشاهد فيلمًا.",
+              "pron": "فير زيهِن آينِن فيلم"
             }
-          }
+          ]
         },
-        "examples": [
-          {
-            "de": "Ich fahre Auto.",
-            "ar": "أنا أقود السيارة.",
-            "pron": "إش فارِه آوتو"
-          },
-          {
-            "de": "Fährst du mit dem Zug?",
-            "ar": "هل تسافر بالقطار؟",
-            "pron": "فيرست دو ميت ديم تسوغ؟"
-          },
-          {
-            "de": "Sie fährt nach Berlin.",
-            "ar": "هي تسافر إلى برلين.",
-            "pron": "زي فيرت ناخ بِرلين"
-          }
-        ]
-      },
-      {
-        "verb": "sprechen",
-        "meaning": "يتكلم",
-        "type": "غير منتظم",
-        "tenses": {
-          "Präsens": {
-            "ich": "spreche",
-            "du": "sprichst",
-            "er/sie/es": "spricht",
-            "wir": "sprechen",
-            "ihr": "sprecht",
-            "sie/Sie": "sprechen"
-          },
-          "Perfekt": {
-            "auxiliary": "haben",
-            "participle": "gesprochen",
-            "example": {
-              "de": "Ich habe mit ihm gesprochen.",
-              "ar": "لقد تحدثت معه.",
-              "pron": "إش هابِه ميت إهم غِشبروخِن"
+        {
+          "verb": "hören",
+          "meaning": "يسمع",
+          "type": "منتظم",
+          "conjugations": {
+            "Präsens": {
+              "ich": "höre",
+              "du": "hörst",
+              "er/sie/es": "hört",
+              "wir": "hören",
+              "ihr": "hört",
+              "sie/Sie": "hören"
+            },
+            "Präteritum": {
+              "ich": "hörte",
+              "du": "hörtest",
+              "er/sie/es": "hörte",
+              "wir": "hörten",
+              "ihr": "hörtet",
+              "sie/Sie": "hörten"
+            },
+            "Perfekt": {
+              "ich": "habe gehört",
+              "du": "hast gehört",
+              "er/sie/es": "hat gehört",
+              "wir": "haben gehört",
+              "ihr": "habt gehört",
+              "sie/Sie": "haben gehört"
+            },
+            "Futur I": {
+              "ich": "werde hören",
+              "du": "wirst hören",
+              "er/sie/es": "wird hören",
+              "wir": "werden hören",
+              "ihr": "werdet hören",
+              "sie/Sie": "werden hören"
+            },
+            "Imperativ": {
+              "du": "hör",
+              "ihr": "hört",
+              "Sie": "hören Sie"
             }
-          }
-        },
-        "examples": [
-          {
-            "de": "Ich spreche Deutsch.",
-            "ar": "أنا أتحدث الألمانية.",
-            "pron": "إش شبرِخِه دُويتش"
           },
-          {
-            "de": "Sprichst du Arabisch?",
-            "ar": "هل تتحدث العربية؟",
-            "pron": "شبريخست دو أرابيش؟"
-          },
-          {
-            "de": "Er spricht sehr schnell.",
-            "ar": "هو يتحدث بسرعة كبيرة.",
-            "pron": "إر شبريخت زِير شنِل"
-          }
-        ]
-      },
-      {
-        "verb": "lesen",
-        "meaning": "يقرأ",
-        "type": "غير منتظم",
-        "tenses": {
-          "Präsens": {
-            "ich": "lese",
-            "du": "liest",
-            "er/sie/es": "liest",
-            "wir": "lesen",
-            "ihr": "lest",
-            "sie/Sie": "lesen"
-          },
-          "Perfekt": {
-            "auxiliary": "haben",
-            "participle": "gelesen",
-            "example": {
-              "de": "Ich habe ein Buch gelesen.",
-              "ar": "لقد قرأت كتابًا.",
-              "pron": "إش هابِه آين بوخ غِليزِن"
+          "examples": [
+            {
+              "de": "Ich höre Musik.",
+              "ar": "أنا أستمع للموسيقى.",
+              "pron": "إش هورِه موزيك"
+            },
+            {
+              "de": "Hörst du Radio?",
+              "ar": "هل تستمع للراديو؟",
+              "pron": "هورست دو راديو؟"
+            },
+            {
+              "de": "Er hört einen Podcast.",
+              "ar": "هو يستمع لبودكاست.",
+              "pron": "إر هورت آينِن بودكاست"
             }
-          }
+          ]
         },
-        "examples": [
-          {
-            "de": "Ich lese gern Bücher.",
-            "ar": "أنا أحب قراءة الكتب.",
-            "pron": "إش ليزِه غِرن بوخِر"
-          },
-          {
-            "de": "Liest du die Zeitung?",
-            "ar": "هل تقرأ الجريدة؟",
-            "pron": "ليست دو دي تسايتونغ؟"
-          },
-          {
-            "de": "Sie liest einen Roman.",
-            "ar": "هي تقرأ رواية.",
-            "pron": "زي ليست آينِن رومان"
-          }
-        ]
-      },
-      {
-        "verb": "schreiben",
-        "meaning": "يكتب",
-        "type": "غير منتظم",
-        "tenses": {
-          "Präsens": {
-            "ich": "schreibe",
-            "du": "schreibst",
-            "er/sie/es": "schreibt",
-            "wir": "schreiben",
-            "ihr": "schreibt",
-            "sie/Sie": "schreiben"
-          },
-          "Perfekt": {
-            "auxiliary": "haben",
-            "participle": "geschrieben",
-            "example": {
-              "de": "Ich habe einen Brief geschrieben.",
-              "ar": "لقد كتبت رسالة.",
-              "pron": "إش هابِه آينِن بريف غِشريبِن"
+        {
+          "verb": "fahren",
+          "meaning": "يقود / يسافر",
+          "type": "غير منتظم",
+          "conjugations": {
+            "Präsens": {
+              "ich": "fahre",
+              "du": "fährst",
+              "er/sie/es": "fährt",
+              "wir": "fahren",
+              "ihr": "fahrt",
+              "sie/Sie": "fahren"
+            },
+            "Präteritum": {
+              "ich": "fuhr",
+              "du": "fuhrst",
+              "er/sie/es": "fuhr",
+              "wir": "fuhren",
+              "ihr": "fuhrt",
+              "sie/Sie": "fuhren"
+            },
+            "Perfekt": {
+              "ich": "bin gefahren",
+              "du": "bist gefahren",
+              "er/sie/es": "ist gefahren",
+              "wir": "sind gefahren",
+              "ihr": "seid gefahren",
+              "sie/Sie": "sind gefahren"
+            },
+            "Futur I": {
+              "ich": "werde fahren",
+              "du": "wirst fahren",
+              "er/sie/es": "wird fahren",
+              "wir": "werden fahren",
+              "ihr": "werdet fahren",
+              "sie/Sie": "werden fahren"
+            },
+            "Imperativ": {
+              "du": "fahr",
+              "ihr": "fahrt",
+              "Sie": "fahren Sie"
             }
-          }
-        },
-        "examples": [
-          {
-            "de": "Ich schreibe eine E-Mail.",
-            "ar": "أنا أكتب بريدًا إلكترونيًا.",
-            "pron": "إش شرايبِه آينِه إي-مِيل"
           },
-          {
-            "de": "Schreibst du einen Text?",
-            "ar": "هل تكتب نصًا؟",
-            "pron": "شرايبست دو آينِن تِكست؟"
-          },
-          {
-            "de": "Er schreibt einen Artikel.",
-            "ar": "هو يكتب مقالًا.",
-            "pron": "إر شرايبت آينِن أرتيكِل"
-          }
-        ]
-      },
-      {
-        "verb": "verstehen",
-        "meaning": "يفهم",
-        "type": "غير منتظم",
-        "tenses": {
-          "Präsens": {
-            "ich": "verstehe",
-            "du": "verstehst",
-            "er/sie/es": "versteht",
-            "wir": "verstehen",
-            "ihr": "versteht",
-            "sie/Sie": "verstehen"
-          },
-          "Perfekt": {
-            "auxiliary": "haben",
-            "participle": "verstanden",
-            "example": {
-              "de": "Ich habe die Frage verstanden.",
-              "ar": "لقد فهمت السؤال.",
-              "pron": "إش هابِه دي فراغِه فِرشتاندِن"
+          "examples": [
+            {
+              "de": "Ich fahre Auto.",
+              "ar": "أنا أقود السيارة.",
+              "pron": "إش فارِه آوتو"
+            },
+            {
+              "de": "Fährst du mit dem Zug?",
+              "ar": "هل تسافر بالقطار؟",
+              "pron": "فيرست دو ميت ديم تسوغ؟"
+            },
+            {
+              "de": "Sie fährt nach Berlin.",
+              "ar": "هي تسافر إلى برلين.",
+              "pron": "زي فيرت ناخ بِرلين"
             }
-          }
+          ]
         },
-        "examples": [
-          {
-            "de": "Ich verstehe Deutsch.",
-            "ar": "أنا أفهم الألمانية.",
-            "pron": "إش فِرشتيه دُويتش"
-          },
-          {
-            "de": "Verstehst du mich?",
-            "ar": "هل تفهمني؟",
-            "pron": "فِرشتيست دو ميش؟"
-          },
-          {
-            "de": "Sie versteht die Aufgabe.",
-            "ar": "هي تفهم المهمة.",
-            "pron": "زي فِرشتيت دي آوفغابِه"
-          }
-        ]
-      },
-      {
-        "verb": "kaufen",
-        "meaning": "يشتري",
-        "type": "منتظم",
-        "tenses": {
-          "Präsens": {
-            "ich": "kaufe",
-            "du": "kaufst",
-            "er/sie/es": "kauft",
-            "wir": "kaufen",
-            "ihr": "kauft",
-            "sie/Sie": "kaufen"
-          },
-          "Perfekt": {
-            "auxiliary": "haben",
-            "participle": "gekauft",
-            "example": {
-              "de": "Ich habe Brot gekauft.",
-              "ar": "لقد اشتريت خبزًا.",
-              "pron": "إش هابِه بروت غِكاوفت"
+        {
+          "verb": "sprechen",
+          "meaning": "يتكلم",
+          "type": "غير منتظم",
+          "conjugations": {
+            "Präsens": {
+              "ich": "spreche",
+              "du": "sprichst",
+              "er/sie/es": "spricht",
+              "wir": "sprechen",
+              "ihr": "sprecht",
+              "sie/Sie": "sprechen"
+            },
+            "Präteritum": {
+              "ich": "sprach",
+              "du": "sprachst",
+              "er/sie/es": "sprach",
+              "wir": "sprachen",
+              "ihr": "spracht",
+              "sie/Sie": "sprachen"
+            },
+            "Perfekt": {
+              "ich": "habe gesprochen",
+              "du": "hast gesprochen",
+              "er/sie/es": "hat gesprochen",
+              "wir": "haben gesprochen",
+              "ihr": "habt gesprochen",
+              "sie/Sie": "haben gesprochen"
+            },
+            "Futur I": {
+              "ich": "werde sprechen",
+              "du": "wirst sprechen",
+              "er/sie/es": "wird sprechen",
+              "wir": "werden sprechen",
+              "ihr": "werdet sprechen",
+              "sie/Sie": "werden sprechen"
+            },
+            "Imperativ": {
+              "du": "sprich",
+              "ihr": "sprecht",
+              "Sie": "sprechen Sie"
             }
-          }
-        },
-        "examples": [
-          {
-            "de": "Ich kaufe Obst.",
-            "ar": "أنا أشتري الفواكه.",
-            "pron": "إش كاوفِه أوبست"
           },
-          {
-            "de": "Kaufst du ein Auto?",
-            "ar": "هل تشتري سيارة؟",
-            "pron": "كاوفست دو آين آوتو؟"
-          },
-          {
-            "de": "Wir kaufen im Supermarkt.",
-            "ar": "نحن نشتري من السوبرماركت.",
-            "pron": "فير كاوفِن إم زوبِرماركت"
-          }
-        ]
-      },
-      {
-        "verb": "nehmen",
-        "meaning": "يأخذ",
-        "type": "غير منتظم",
-        "tenses": {
-          "Präsens": {
-            "ich": "nehme",
-            "du": "nimmst",
-            "er/sie/es": "nimmt",
-            "wir": "nehmen",
-            "ihr": "nehmt",
-            "sie/Sie": "nehmen"
-          },
-          "Perfekt": {
-            "auxiliary": "haben",
-            "participle": "genommen",
-            "example": {
-              "de": "Ich habe den Bus genommen.",
-              "ar": "لقد أخذت الحافلة.",
-              "pron": "إش هابِه دِن بوس غِنومِن"
+          "examples": [
+            {
+              "de": "Ich spreche Deutsch.",
+              "ar": "أنا أتحدث الألمانية.",
+              "pron": "إش شبرِخِه دُويتش"
+            },
+            {
+              "de": "Sprichst du Arabisch?",
+              "ar": "هل تتحدث العربية؟",
+              "pron": "شبريخست دو أرابيش؟"
+            },
+            {
+              "de": "Er spricht sehr schnell.",
+              "ar": "هو يتحدث بسرعة كبيرة.",
+              "pron": "إر شبريخت زِير شنِل"
             }
-          }
+          ]
         },
-        "examples": [
-          {
-            "de": "Ich nehme den Zug.",
-            "ar": "أنا آخذ القطار.",
-            "pron": "إش نيمِه دِن تسوغ"
-          },
-          {
-            "de": "Nimmst du Zucker?",
-            "ar": "هل تأخذ سكرًا؟",
-            "pron": "نيمست دو تسوكِر؟"
-          },
-          {
-            "de": "Er nimmt ein Taxi.",
-            "ar": "هو يأخذ تاكسي.",
-            "pron": "إر نيمت آين تاكسي"
-          }
-        ]
-      },
-      {
-        "verb": "geben",
-        "meaning": "يعطي",
-        "type": "غير منتظم",
-        "tenses": {
-          "Präsens": {
-            "ich": "gebe",
-            "du": "gibst",
-            "er/sie/es": "gibt",
-            "wir": "geben",
-            "ihr": "gebt",
-            "sie/Sie": "geben"
-          },
-          "Perfekt": {
-            "auxiliary": "haben",
-            "participle": "gegeben",
-            "example": {
-              "de": "Ich habe ihm das Buch gegeben.",
-              "ar": "لقد أعطيته الكتاب.",
-              "pron": "إش هابِه إهم داس بوخ غِغيبِن"
+        {
+          "verb": "lesen",
+          "meaning": "يقرأ",
+          "type": "غير منتظم",
+          "conjugations": {
+            "Präsens": {
+              "ich": "lese",
+              "du": "liest",
+              "er/sie/es": "liest",
+              "wir": "lesen",
+              "ihr": "lest",
+              "sie/Sie": "lesen"
+            },
+            "Präteritum": {
+              "ich": "las",
+              "du": "lasest",
+              "er/sie/es": "las",
+              "wir": "lasen",
+              "ihr": "last",
+              "sie/Sie": "lasen"
+            },
+            "Perfekt": {
+              "ich": "habe gelesen",
+              "du": "hast gelesen",
+              "er/sie/es": "hat gelesen",
+              "wir": "haben gelesen",
+              "ihr": "habt gelesen",
+              "sie/Sie": "haben gelesen"
+            },
+            "Futur I": {
+              "ich": "werde lesen",
+              "du": "wirst lesen",
+              "er/sie/es": "wird lesen",
+              "wir": "werden lesen",
+              "ihr": "werdet lesen",
+              "sie/Sie": "werden lesen"
+            },
+            "Imperativ": {
+              "du": "lies",
+              "ihr": "lest",
+              "Sie": "lesen Sie"
             }
-          }
-        },
-        "examples": [
-          {
-            "de": "Ich gebe dir das Geld.",
-            "ar": "أنا أعطيك المال.",
-            "pron": "إش غيبِه دير داس غِلت"
           },
-          {
-            "de": "Gibst du mir den Stift?",
-            "ar": "هل تعطيني القلم؟",
-            "pron": "غيبست دو مير دِن شتيفت؟"
-          },
-          {
-            "de": "Es gibt viele Bücher hier.",
-            "ar": "يوجد الكثير من الكتب هنا.",
-            "pron": "إس غيبت فيلِه بوخِر هير"
-          }
-        ]
-      },
-      {
-        "verb": "möchten",
-        "meaning": "يريد / يود",
-        "type": "فعل مساعد",
-        "tenses": {
-          "Präsens": {
-            "ich": "möchte",
-            "du": "möchtest",
-            "er/sie/es": "möchte",
-            "wir": "möchten",
-            "ihr": "möchtet",
-            "sie/Sie": "möchten"
-          }
-        },
-        "examples": [
-          {
-            "de": "Ich möchte Kaffee trinken.",
-            "ar": "أريد أن أشرب قهوة.",
-            "pron": "إش موشتِه كافِه ترينكِن"
-          },
-          {
-            "de": "Möchtest du etwas essen?",
-            "ar": "هل تريد أن تأكل شيئًا؟",
-            "pron": "موشتِست دو إتفاس إسِن؟"
-          },
-          {
-            "de": "Wir möchten ins Kino gehen.",
-            "ar": "نحن نريد الذهاب إلى السينما.",
-            "pron": "فير موشتِن إنس كينو غيهِن"
-          }
-        ]
-      },
-      {
-        "verb": "können",
-        "meaning": "يستطيع / يمكن",
-        "type": "فعل مساعد",
-        "tenses": {
-          "Präsens": {
-            "ich": "kann",
-            "du": "kannst",
-            "er/sie/es": "kann",
-            "wir": "können",
-            "ihr": "könnt",
-            "sie/Sie": "können"
-          },
-          "Perfekt": {
-            "auxiliary": "haben",
-            "participle": "gekonnt",
-            "example": {
-              "de": "Ich habe das machen können.",
-              "ar": "لقد استطعت فعل ذلك.",
-              "pron": "إش هابِه داس ماخِن غِكونت"
+          "examples": [
+            {
+              "de": "Ich lese gern Bücher.",
+              "ar": "أنا أحب قراءة الكتب.",
+              "pron": "إش ليزِه غِرن بوخِر"
+            },
+            {
+              "de": "Liest du die Zeitung?",
+              "ar": "هل تقرأ الجريدة؟",
+              "pron": "ليست دو دي تسايتونغ؟"
+            },
+            {
+              "de": "Sie liest einen Roman.",
+              "ar": "هي تقرأ رواية.",
+              "pron": "زي ليست آينِن رومان"
             }
-          }
+          ]
         },
-        "examples": [
-          {
-            "de": "Ich kann schwimmen.",
-            "ar": "أنا أستطيع السباحة.",
-            "pron": "إش كان شفيمِن"
-          },
-          {
-            "de": "Kannst du Deutsch sprechen?",
-            "ar": "هل تستطيع التحدث بالألمانية؟",
-            "pron": "كانست دو دُويتش شبرِخِن؟"
-          },
-          {
-            "de": "Er kann gut kochen.",
-            "ar": "هو يستطيع الطبخ بشكل جيد.",
-            "pron": "إر كان غوت كوخِن"
-          }
-        ]
-      },
-      {
-        "verb": "müssen",
-        "meaning": "يجب",
-        "type": "فعل مساعد",
-        "tenses": {
-          "Präsens": {
-            "ich": "muss",
-            "du": "musst",
-            "er/sie/es": "muss",
-            "wir": "müssen",
-            "ihr": "müsst",
-            "sie/Sie": "müssen"
-          },
-          "Perfekt": {
-            "auxiliary": "haben",
-            "participle": "gemusst",
-            "example": {
-              "de": "Ich habe arbeiten müssen.",
-              "ar": "لقد كان يجب علي العمل.",
-              "pron": "إش هابِه أربايتِن غِموست"
+        {
+          "verb": "schreiben",
+          "meaning": "يكتب",
+          "type": "غير منتظم",
+          "conjugations": {
+            "Präsens": {
+              "ich": "schreibe",
+              "du": "schreibst",
+              "er/sie/es": "schreibt",
+              "wir": "schreiben",
+              "ihr": "schreibt",
+              "sie/Sie": "schreiben"
+            },
+            "Präteritum": {
+              "ich": "schrieb",
+              "du": "schriebst",
+              "er/sie/es": "schrieb",
+              "wir": "schrieben",
+              "ihr": "schriebt",
+              "sie/Sie": "schrieben"
+            },
+            "Perfekt": {
+              "ich": "habe geschrieben",
+              "du": "hast geschrieben",
+              "er/sie/es": "hat geschrieben",
+              "wir": "haben geschrieben",
+              "ihr": "habt geschrieben",
+              "sie/Sie": "haben geschrieben"
+            },
+            "Futur I": {
+              "ich": "werde schreiben",
+              "du": "wirst schreiben",
+              "er/sie/es": "wird schreiben",
+              "wir": "werden schreiben",
+              "ihr": "werdet schreiben",
+              "sie/Sie": "werden schreiben"
+            },
+            "Imperativ": {
+              "du": "schreib",
+              "ihr": "schreibt",
+              "Sie": "schreiben Sie"
             }
-          }
-        },
-        "examples": [
-          {
-            "de": "Ich muss jetzt gehen.",
-            "ar": "يجب أن أذهب الآن.",
-            "pron": "إش موس يِتست غيهِن"
           },
-          {
-            "de": "Musst du heute arbeiten?",
-            "ar": "هل يجب عليك العمل اليوم؟",
-            "pron": "موست دو هويتِه أربايتِن؟"
-          },
-          {
-            "de": "Wir müssen lernen.",
-            "ar": "يجب علينا أن ندرس.",
-            "pron": "فير موسِن لِرنِن"
-          }
-        ]
-      },
-      {
-        "verb": "wollen",
-        "meaning": "يريد",
-        "type": "فعل مساعد",
-        "tenses": {
-          "Präsens": {
-            "ich": "will",
-            "du": "willst",
-            "er/sie/es": "will",
-            "wir": "wollen",
-            "ihr": "wollt",
-            "sie/Sie": "wollen"
-          },
-          "Perfekt": {
-            "auxiliary": "haben",
-            "participle": "gewollt",
-            "example": {
-              "de": "Ich habe das nicht gewollt.",
-              "ar": "لم أرد ذلك.",
-              "pron": "إش هابِه داس نيشت غِفولت"
+          "examples": [
+            {
+              "de": "Ich schreibe eine E-Mail.",
+              "ar": "أنا أكتب بريدًا إلكترونيًا.",
+              "pron": "إش شرايبِه آينِه إي-مِيل"
+            },
+            {
+              "de": "Schreibst du einen Text?",
+              "ar": "هل تكتب نصًا؟",
+              "pron": "شرايبست دو آينِن تِكست؟"
+            },
+            {
+              "de": "Er schreibt einen Artikel.",
+              "ar": "هو يكتب مقالًا.",
+              "pron": "إر شرايبت آينِن أرتيكِل"
             }
-          }
+          ]
         },
-        "examples": [
-          {
-            "de": "Ich will nach Hause gehen.",
-            "ar": "أريد الذهاب إلى المنزل.",
-            "pron": "إش فيل ناخ هاوزِه غيهِن"
-          },
-          {
-            "de": "Willst du mitkommen?",
-            "ar": "هل تريد أن تأتي معنا؟",
-            "pron": "فيلست دو ميتكومِن؟"
-          },
-          {
-            "de": "Sie will Ärztin werden.",
-            "ar": "هي تريد أن تصبح طبيبة.",
-            "pron": "زي فيل إرتستين فِردِن"
-          }
-        ]
-      },
-      {
-        "verb": "dürfen",
-        "meaning": "يُسمح له / يجوز",
-        "type": "فعل مساعد",
-        "tenses": {
-          "Präsens": {
-            "ich": "darf",
-            "du": "darfst",
-            "er/sie/es": "darf",
-            "wir": "dürfen",
-            "ihr": "dürft",
-            "sie/Sie": "dürfen"
-          },
-          "Perfekt": {
-            "auxiliary": "haben",
-            "participle": "gedurft",
-            "example": {
-              "de": "Ich habe das machen dürfen.",
-              "ar": "لقد سُمح لي بفعل ذلك.",
-              "pron": "إش هابِه داس ماخِن غِدورفت"
+        {
+          "verb": "verstehen",
+          "meaning": "يفهم",
+          "type": "غير منتظم",
+          "conjugations": {
+            "Präsens": {
+              "ich": "verstehe",
+              "du": "verstehst",
+              "er/sie/es": "versteht",
+              "wir": "verstehen",
+              "ihr": "versteht",
+              "sie/Sie": "verstehen"
+            },
+            "Präteritum": {
+              "ich": "verstand",
+              "du": "verstandst",
+              "er/sie/es": "verstand",
+              "wir": "verstanden",
+              "ihr": "verstandet",
+              "sie/Sie": "verstanden"
+            },
+            "Perfekt": {
+              "ich": "habe verstanden",
+              "du": "hast verstanden",
+              "er/sie/es": "hat verstanden",
+              "wir": "haben verstanden",
+              "ihr": "habt verstanden",
+              "sie/Sie": "haben verstanden"
+            },
+            "Futur I": {
+              "ich": "werde verstehen",
+              "du": "wirst verstehen",
+              "er/sie/es": "wird verstehen",
+              "wir": "werden verstehen",
+              "ihr": "werdet verstehen",
+              "sie/Sie": "werden verstehen"
+            },
+            "Imperativ": {
+              "du": "versteh",
+              "ihr": "versteht",
+              "Sie": "verstehen Sie"
             }
-          }
-        },
-        "examples": [
-          {
-            "de": "Ich darf hier parken.",
-            "ar": "يُسمح لي بالوقوف هنا.",
-            "pron": "إش دارف هير باركِن"
           },
-          {
-            "de": "Darfst du Auto fahren?",
-            "ar": "هل يُسمح لك بقيادة السيارة؟",
-            "pron": "دارفست دو آوتو فارِن؟"
-          },
-          {
-            "de": "Hier darf man nicht rauchen.",
-            "ar": "لا يُسمح بالتدخين هنا.",
-            "pron": "هير دارف مان نيشت راوخِن"
-          }
-        ]
-      },
-      {
-        "verb": "finden",
-        "meaning": "يجد",
-        "type": "غير منتظم",
-        "tenses": {
-          "Präsens": {
-            "ich": "finde",
-            "du": "findest",
-            "er/sie/es": "findet",
-            "wir": "finden",
-            "ihr": "findet",
-            "sie/Sie": "finden"
-          },
-          "Perfekt": {
-            "auxiliary": "haben",
-            "participle": "gefunden",
-            "example": {
-              "de": "Ich habe mein Handy gefunden.",
-              "ar": "لقد وجدت هاتفي.",
-              "pron": "إش هابِه ماين هاندي غِفوندِن"
+          "examples": [
+            {
+              "de": "Ich verstehe Deutsch.",
+              "ar": "أنا أفهم الألمانية.",
+              "pron": "إش فِرشتيه دُويتش"
+            },
+            {
+              "de": "Verstehst du mich?",
+              "ar": "هل تفهمني؟",
+              "pron": "فِرشتيست دو ميش؟"
+            },
+            {
+              "de": "Sie versteht die Aufgabe.",
+              "ar": "هي تفهم المهمة.",
+              "pron": "زي فِرشتيت دي آوفغابِه"
             }
-          }
+          ]
         },
-        "examples": [
-          {
-            "de": "Ich finde das Buch.",
-            "ar": "أنا أجد الكتاب.",
-            "pron": "إش فيندِه داس بوخ"
-          },
-          {
-            "de": "Findest du den Weg?",
-            "ar": "هل تجد الطريق؟",
-            "pron": "فيندِست دو دِن فِغ؟"
-          },
-          {
-            "de": "Das finde ich gut.",
-            "ar": "أجد ذلك جيدًا.",
-            "pron": "داس فيندِه إش غوت"
-          }
-        ]
-      },
-      {
-        "verb": "kochen",
-        "meaning": "يطبخ",
-        "type": "منتظم",
-        "tenses": {
-          "Präsens": {
-            "ich": "koche",
-            "du": "kochst",
-            "er/sie/es": "kocht",
-            "wir": "kochen",
-            "ihr": "kocht",
-            "sie/Sie": "kochen"
-          },
-          "Perfekt": {
-            "auxiliary": "haben",
-            "participle": "gekocht",
-            "example": {
-              "de": "Ich habe Suppe gekocht.",
-              "ar": "لقد طبخت حساءً.",
-              "pron": "إش هابِه زوبِه غِكوخت"
+        {
+          "verb": "kaufen",
+          "meaning": "يشتري",
+          "type": "منتظم",
+          "conjugations": {
+            "Präsens": {
+              "ich": "kaufe",
+              "du": "kaufst",
+              "er/sie/es": "kauft",
+              "wir": "kaufen",
+              "ihr": "kauft",
+              "sie/Sie": "kaufen"
+            },
+            "Präteritum": {
+              "ich": "kaufte",
+              "du": "kauftest",
+              "er/sie/es": "kaufte",
+              "wir": "kauften",
+              "ihr": "kauftet",
+              "sie/Sie": "kauften"
+            },
+            "Perfekt": {
+              "ich": "habe gekauft",
+              "du": "hast gekauft",
+              "er/sie/es": "hat gekauft",
+              "wir": "haben gekauft",
+              "ihr": "habt gekauft",
+              "sie/Sie": "haben gekauft"
+            },
+            "Futur I": {
+              "ich": "werde kaufen",
+              "du": "wirst kaufen",
+              "er/sie/es": "wird kaufen",
+              "wir": "werden kaufen",
+              "ihr": "werdet kaufen",
+              "sie/Sie": "werden kaufen"
+            },
+            "Imperativ": {
+              "du": "kauf",
+              "ihr": "kauft",
+              "Sie": "kaufen Sie"
             }
-          }
-        },
-        "examples": [
-          {
-            "de": "Ich koche gern.",
-            "ar": "أنا أحب الطبخ.",
-            "pron": "إش كوخِه غِرن"
           },
-          {
-            "de": "Kochst du heute?",
-            "ar": "هل تطبخ اليوم؟",
-            "pron": "كوخست دو هويتِه؟"
-          },
-          {
-            "de": "Sie kocht sehr gut.",
-            "ar": "هي تطبخ بشكل جيد جدًا.",
-            "pron": "زي كوخت زِير غوت"
-          }
-        ]
-      },
-      {
-        "verb": "brauchen",
-        "meaning": "يحتاج",
-        "type": "منتظم",
-        "tenses": {
-          "Präsens": {
-            "ich": "brauche",
-            "du": "brauchst",
-            "er/sie/es": "braucht",
-            "wir": "brauchen",
-            "ihr": "braucht",
-            "sie/Sie": "brauchen"
-          },
-          "Perfekt": {
-            "auxiliary": "haben",
-            "participle": "gebraucht",
-            "example": {
-              "de": "Ich habe Hilfe gebraucht.",
-              "ar": "لقد احتجت المساعدة.",
-              "pron": "إش هابِه هيلفِه غِبراوخت"
+          "examples": [
+            {
+              "de": "Ich kaufe Obst.",
+              "ar": "أنا أشتري الفواكه.",
+              "pron": "إش كاوفِه أوبست"
+            },
+            {
+              "de": "Kaufst du ein Auto?",
+              "ar": "هل تشتري سيارة؟",
+              "pron": "كاوفست دو آين آوتو؟"
+            },
+            {
+              "de": "Wir kaufen im Supermarkt.",
+              "ar": "نحن نشتري من السوبرماركت.",
+              "pron": "فير كاوفِن إم زوبِرماركت"
             }
-          }
+          ]
         },
-        "examples": [
-          {
-            "de": "Ich brauche Hilfe.",
-            "ar": "أنا أحتاج المساعدة.",
-            "pron": "إش براوخِه هيلفِه"
+        {
+          "verb": "nehmen",
+          "meaning": "يأخذ",
+          "type": "غير منتظم",
+          "conjugations": {
+            "Präsens": {
+              "ich": "nehme",
+              "du": "nimmst",
+              "er/sie/es": "nimmt",
+              "wir": "nehmen",
+              "ihr": "nehmt",
+              "sie/Sie": "nehmen"
+            },
+            "Präteritum": {
+              "ich": "nahm",
+              "du": "nahmst",
+              "er/sie/es": "nahm",
+              "wir": "nahmen",
+              "ihr": "nahmt",
+              "sie/Sie": "nahmen"
+            },
+            "Perfekt": {
+              "ich": "habe genommen",
+              "du": "hast genommen",
+              "er/sie/es": "hat genommen",
+              "wir": "haben genommen",
+              "ihr": "habt genommen",
+              "sie/Sie": "haben genommen"
+            },
+            "Futur I": {
+              "ich": "werde nehmen",
+              "du": "wirst nehmen",
+              "er/sie/es": "wird nehmen",
+              "wir": "werden nehmen",
+              "ihr": "werdet nehmen",
+              "sie/Sie": "werden nehmen"
+            },
+            "Imperativ": {
+              "du": "nimm",
+              "ihr": "nehmt",
+              "Sie": "nehmen Sie"
+            }
           },
-          {
-            "de": "Brauchst du Geld?",
-            "ar": "هل تحتاج مالًا؟",
-            "pron": "براوخست دو غِلت؟"
+          "examples": [
+            {
+              "de": "Ich nehme den Zug.",
+              "ar": "أنا آخذ القطار.",
+              "pron": "إش نيمِه دِن تسوغ"
+            },
+            {
+              "de": "Nimmst du Zucker?",
+              "ar": "هل تأخذ سكرًا؟",
+              "pron": "نيمست دو تسوكِر؟"
+            },
+            {
+              "de": "Er nimmt ein Taxi.",
+              "ar": "هو يأخذ تاكسي.",
+              "pron": "إر نيمت آين تاكسي"
+            }
+          ]
+        },
+        {
+          "verb": "geben",
+          "meaning": "يعطي",
+          "type": "غير منتظم",
+          "conjugations": {
+            "Präsens": {
+              "ich": "gebe",
+              "du": "gibst",
+              "er/sie/es": "gibt",
+              "wir": "geben",
+              "ihr": "gebt",
+              "sie/Sie": "geben"
+            },
+            "Präteritum": {
+              "ich": "gab",
+              "du": "gabst",
+              "er/sie/es": "gab",
+              "wir": "gaben",
+              "ihr": "gabt",
+              "sie/Sie": "gaben"
+            },
+            "Perfekt": {
+              "ich": "habe gegeben",
+              "du": "hast gegeben",
+              "er/sie/es": "hat gegeben",
+              "wir": "haben gegeben",
+              "ihr": "habt gegeben",
+              "sie/Sie": "haben gegeben"
+            },
+            "Futur I": {
+              "ich": "werde geben",
+              "du": "wirst geben",
+              "er/sie/es": "wird geben",
+              "wir": "werden geben",
+              "ihr": "werdet geben",
+              "sie/Sie": "werden geben"
+            },
+            "Imperativ": {
+              "du": "gib",
+              "ihr": "gebt",
+              "Sie": "geben Sie"
+            }
           },
-          {
-            "de": "Wir brauchen Zeit.",
-            "ar": "نحن نحتاج وقتًا.",
-            "pron": "فير براوخِن تسايت"
-          }
-        ]
-      }
-    ]
-  }
+          "examples": [
+            {
+              "de": "Ich gebe dir das Geld.",
+              "ar": "أنا أعطيك المال.",
+              "pron": "إش غيبِه دير داس غِلت"
+            },
+            {
+              "de": "Gibst du mir den Stift?",
+              "ar": "هل تعطيني القلم؟",
+              "pron": "غيبست دو مير دِن شتيفت؟"
+            },
+            {
+              "de": "Es gibt viele Bücher hier.",
+              "ar": "يوجد الكثير من الكتب هنا.",
+              "pron": "إس غيبت فيلِه بوخِر هير"
+            }
+          ]
+        },
+        {
+          "verb": "möchten",
+          "meaning": "يريد / يود",
+          "type": "فعل مساعد",
+          "conjugations": {
+            "Präsens": {
+              "ich": "möchte",
+              "du": "möchtest",
+              "er/sie/es": "möchte",
+              "wir": "möchten",
+              "ihr": "möchtet",
+              "sie/Sie": "möchten"
+            },
+            "Präteritum": {
+              "ich": "mochte",
+              "du": "mochtest",
+              "er/sie/es": "mochte",
+              "wir": "mochten",
+              "ihr": "mochtet",
+              "sie/Sie": "mochten"
+            },
+            "Perfekt": {
+              "ich": "habe gemocht",
+              "du": "hast gemocht",
+              "er/sie/es": "hat gemocht",
+              "wir": "haben gemocht",
+              "ihr": "habt gemocht",
+              "sie/Sie": "haben gemocht"
+            },
+            "Futur I": {
+              "ich": "werde mögen",
+              "du": "wirst mögen",
+              "er/sie/es": "wird mögen",
+              "wir": "werden mögen",
+              "ihr": "werdet mögen",
+              "sie/Sie": "werden mögen"
+            },
+            "Imperativ": {}
+          },
+          "examples": [
+            {
+              "de": "Ich möchte Kaffee trinken.",
+              "ar": "أريد أن أشرب قهوة.",
+              "pron": "إش موشتِه كافِه ترينكِن"
+            },
+            {
+              "de": "Möchtest du etwas essen?",
+              "ar": "هل تريد أن تأكل شيئًا؟",
+              "pron": "موشتِست دو إتفاس إسِن؟"
+            },
+            {
+              "de": "Wir möchten ins Kino gehen.",
+              "ar": "نحن نريد الذهاب إلى السينما.",
+              "pron": "فير موشتِن إنس كينو غيهِن"
+            }
+          ]
+        },
+        {
+          "verb": "können",
+          "meaning": "يستطيع / يمكن",
+          "type": "فعل مساعد",
+          "conjugations": {
+            "Präsens": {
+              "ich": "kann",
+              "du": "kannst",
+              "er/sie/es": "kann",
+              "wir": "können",
+              "ihr": "könnt",
+              "sie/Sie": "können"
+            },
+            "Präteritum": {
+              "ich": "konnte",
+              "du": "konntest",
+              "er/sie/es": "konnte",
+              "wir": "konnten",
+              "ihr": "konntet",
+              "sie/Sie": "konnten"
+            },
+            "Perfekt": {
+              "ich": "habe gekonnt",
+              "du": "hast gekonnt",
+              "er/sie/es": "hat gekonnt",
+              "wir": "haben gekonnt",
+              "ihr": "habt gekonnt",
+              "sie/Sie": "haben gekonnt"
+            },
+            "Futur I": {
+              "ich": "werde können",
+              "du": "wirst können",
+              "er/sie/es": "wird können",
+              "wir": "werden können",
+              "ihr": "werdet können",
+              "sie/Sie": "werden können"
+            },
+            "Imperativ": {}
+          },
+          "examples": [
+            {
+              "de": "Ich kann schwimmen.",
+              "ar": "أنا أستطيع السباحة.",
+              "pron": "إش كان شفيمِن"
+            },
+            {
+              "de": "Kannst du Deutsch sprechen?",
+              "ar": "هل تستطيع التحدث بالألمانية؟",
+              "pron": "كانست دو دُويتش شبرِخِن؟"
+            },
+            {
+              "de": "Er kann gut kochen.",
+              "ar": "هو يستطيع الطبخ بشكل جيد.",
+              "pron": "إر كان غوت كوخِن"
+            }
+          ]
+        },
+        {
+          "verb": "müssen",
+          "meaning": "يجب",
+          "type": "فعل مساعد",
+          "conjugations": {
+            "Präsens": {
+              "ich": "muss",
+              "du": "musst",
+              "er/sie/es": "muss",
+              "wir": "müssen",
+              "ihr": "müsst",
+              "sie/Sie": "müssen"
+            },
+            "Präteritum": {
+              "ich": "musste",
+              "du": "musstest",
+              "er/sie/es": "musste",
+              "wir": "mussten",
+              "ihr": "musstet",
+              "sie/Sie": "mussten"
+            },
+            "Perfekt": {
+              "ich": "habe gemusst",
+              "du": "hast gemusst",
+              "er/sie/es": "hat gemusst",
+              "wir": "haben gemusst",
+              "ihr": "habt gemusst",
+              "sie/Sie": "haben gemusst"
+            },
+            "Futur I": {
+              "ich": "werde müssen",
+              "du": "wirst müssen",
+              "er/sie/es": "wird müssen",
+              "wir": "werden müssen",
+              "ihr": "werdet müssen",
+              "sie/Sie": "werden müssen"
+            },
+            "Imperativ": {}
+          },
+          "examples": [
+            {
+              "de": "Ich muss jetzt gehen.",
+              "ar": "يجب أن أذهب الآن.",
+              "pron": "إش موس يِتست غيهِن"
+            },
+            {
+              "de": "Musst du heute arbeiten?",
+              "ar": "هل يجب عليك العمل اليوم؟",
+              "pron": "موست دو هويتِه أربايتِن؟"
+            },
+            {
+              "de": "Wir müssen lernen.",
+              "ar": "يجب علينا أن ندرس.",
+              "pron": "فير موسِن لِرنِن"
+            }
+          ]
+        },
+        {
+          "verb": "wollen",
+          "meaning": "يريد",
+          "type": "فعل مساعد",
+          "conjugations": {
+            "Präsens": {
+              "ich": "will",
+              "du": "willst",
+              "er/sie/es": "will",
+              "wir": "wollen",
+              "ihr": "wollt",
+              "sie/Sie": "wollen"
+            },
+            "Präteritum": {
+              "ich": "wollte",
+              "du": "wolltest",
+              "er/sie/es": "wollte",
+              "wir": "wollten",
+              "ihr": "wolltet",
+              "sie/Sie": "wollten"
+            },
+            "Perfekt": {
+              "ich": "habe gewollt",
+              "du": "hast gewollt",
+              "er/sie/es": "hat gewollt",
+              "wir": "haben gewollt",
+              "ihr": "habt gewollt",
+              "sie/Sie": "haben gewollt"
+            },
+            "Futur I": {
+              "ich": "werde wollen",
+              "du": "wirst wollen",
+              "er/sie/es": "wird wollen",
+              "wir": "werden wollen",
+              "ihr": "werdet wollen",
+              "sie/Sie": "werden wollen"
+            },
+            "Imperativ": {}
+          },
+          "examples": [
+            {
+              "de": "Ich will nach Hause gehen.",
+              "ar": "أريد الذهاب إلى المنزل.",
+              "pron": "إش فيل ناخ هاوزِه غيهِن"
+            },
+            {
+              "de": "Willst du mitkommen?",
+              "ar": "هل تريد أن تأتي معنا؟",
+              "pron": "فيلست دو ميتكومِن؟"
+            },
+            {
+              "de": "Sie will Ärztin werden.",
+              "ar": "هي تريد أن تصبح طبيبة.",
+              "pron": "زي فيل إرتستين فِردِن"
+            }
+          ]
+        },
+        {
+          "verb": "dürfen",
+          "meaning": "يُسمح له / يجوز",
+          "type": "فعل مساعد",
+          "conjugations": {
+            "Präsens": {
+              "ich": "darf",
+              "du": "darfst",
+              "er/sie/es": "darf",
+              "wir": "dürfen",
+              "ihr": "dürft",
+              "sie/Sie": "dürfen"
+            },
+            "Präteritum": {
+              "ich": "durfte",
+              "du": "durftest",
+              "er/sie/es": "durfte",
+              "wir": "durften",
+              "ihr": "durftet",
+              "sie/Sie": "durften"
+            },
+            "Perfekt": {
+              "ich": "habe gedurft",
+              "du": "hast gedurft",
+              "er/sie/es": "hat gedurft",
+              "wir": "haben gedurft",
+              "ihr": "habt gedurft",
+              "sie/Sie": "haben gedurft"
+            },
+            "Futur I": {
+              "ich": "werde dürfen",
+              "du": "wirst dürfen",
+              "er/sie/es": "wird dürfen",
+              "wir": "werden dürfen",
+              "ihr": "werdet dürfen",
+              "sie/Sie": "werden dürfen"
+            },
+            "Imperativ": {}
+          },
+          "examples": [
+            {
+              "de": "Ich darf hier parken.",
+              "ar": "يُسمح لي بالوقوف هنا.",
+              "pron": "إش دارف هير باركِن"
+            },
+            {
+              "de": "Darfst du Auto fahren?",
+              "ar": "هل يُسمح لك بقيادة السيارة؟",
+              "pron": "دارفست دو آوتو فارِن؟"
+            },
+            {
+              "de": "Hier darf man nicht rauchen.",
+              "ar": "لا يُسمح بالتدخين هنا.",
+              "pron": "هير دارف مان نيشت راوخِن"
+            }
+          ]
+        },
+        {
+          "verb": "finden",
+          "meaning": "يجد",
+          "type": "غير منتظم",
+          "conjugations": {
+            "Präsens": {
+              "ich": "finde",
+              "du": "findest",
+              "er/sie/es": "findet",
+              "wir": "finden",
+              "ihr": "findet",
+              "sie/Sie": "finden"
+            },
+            "Präteritum": {
+              "ich": "fand",
+              "du": "fandst",
+              "er/sie/es": "fand",
+              "wir": "fanden",
+              "ihr": "fandet",
+              "sie/Sie": "fanden"
+            },
+            "Perfekt": {
+              "ich": "habe gefunden",
+              "du": "hast gefunden",
+              "er/sie/es": "hat gefunden",
+              "wir": "haben gefunden",
+              "ihr": "habt gefunden",
+              "sie/Sie": "haben gefunden"
+            },
+            "Futur I": {
+              "ich": "werde finden",
+              "du": "wirst finden",
+              "er/sie/es": "wird finden",
+              "wir": "werden finden",
+              "ihr": "werdet finden",
+              "sie/Sie": "werden finden"
+            },
+            "Imperativ": {
+              "du": "find",
+              "ihr": "findet",
+              "Sie": "finden Sie"
+            }
+          },
+          "examples": [
+            {
+              "de": "Ich finde das Buch.",
+              "ar": "أنا أجد الكتاب.",
+              "pron": "إش فيندِه داس بوخ"
+            },
+            {
+              "de": "Findest du den Weg?",
+              "ar": "هل تجد الطريق؟",
+              "pron": "فيندِست دو دِن فِغ؟"
+            },
+            {
+              "de": "Das finde ich gut.",
+              "ar": "أجد ذلك جيدًا.",
+              "pron": "داس فيندِه إش غوت"
+            }
+          ]
+        },
+        {
+          "verb": "kochen",
+          "meaning": "يطبخ",
+          "type": "منتظم",
+          "conjugations": {
+            "Präsens": {
+              "ich": "koche",
+              "du": "kochst",
+              "er/sie/es": "kocht",
+              "wir": "kochen",
+              "ihr": "kocht",
+              "sie/Sie": "kochen"
+            },
+            "Präteritum": {
+              "ich": "kochte",
+              "du": "kochtest",
+              "er/sie/es": "kochte",
+              "wir": "kochten",
+              "ihr": "kochtet",
+              "sie/Sie": "kochten"
+            },
+            "Perfekt": {
+              "ich": "habe gekocht",
+              "du": "hast gekocht",
+              "er/sie/es": "hat gekocht",
+              "wir": "haben gekocht",
+              "ihr": "habt gekocht",
+              "sie/Sie": "haben gekocht"
+            },
+            "Futur I": {
+              "ich": "werde kochen",
+              "du": "wirst kochen",
+              "er/sie/es": "wird kochen",
+              "wir": "werden kochen",
+              "ihr": "werdet kochen",
+              "sie/Sie": "werden kochen"
+            },
+            "Imperativ": {
+              "du": "koch",
+              "ihr": "kocht",
+              "Sie": "kochen Sie"
+            }
+          },
+          "examples": [
+            {
+              "de": "Ich koche gern.",
+              "ar": "أنا أحب الطبخ.",
+              "pron": "إش كوخِه غِرن"
+            },
+            {
+              "de": "Kochst du heute?",
+              "ar": "هل تطبخ اليوم؟",
+              "pron": "كوخست دو هويتِه؟"
+            },
+            {
+              "de": "Sie kocht sehr gut.",
+              "ar": "هي تطبخ بشكل جيد جدًا.",
+              "pron": "زي كوخت زِير غوت"
+            }
+          ]
+        },
+        {
+          "verb": "brauchen",
+          "meaning": "يحتاج",
+          "type": "منتظم",
+          "conjugations": {
+            "Präsens": {
+              "ich": "brauche",
+              "du": "brauchst",
+              "er/sie/es": "braucht",
+              "wir": "brauchen",
+              "ihr": "braucht",
+              "sie/Sie": "brauchen"
+            },
+            "Präteritum": {
+              "ich": "brauchte",
+              "du": "brauchtest",
+              "er/sie/es": "brauchte",
+              "wir": "brauchten",
+              "ihr": "brauchtet",
+              "sie/Sie": "brauchten"
+            },
+            "Perfekt": {
+              "ich": "habe gebraucht",
+              "du": "hast gebraucht",
+              "er/sie/es": "hat gebraucht",
+              "wir": "haben gebraucht",
+              "ihr": "habt gebraucht",
+              "sie/Sie": "haben gebraucht"
+            },
+            "Futur I": {
+              "ich": "werde brauchen",
+              "du": "wirst brauchen",
+              "er/sie/es": "wird brauchen",
+              "wir": "werden brauchen",
+              "ihr": "werdet brauchen",
+              "sie/Sie": "werden brauchen"
+            },
+            "Imperativ": {
+              "du": "brauch",
+              "ihr": "braucht",
+              "Sie": "brauchen Sie"
+            }
+          },
+          "examples": [
+            {
+              "de": "Ich brauche Hilfe.",
+              "ar": "أنا أحتاج المساعدة.",
+              "pron": "إش براوخِه هيلفِه"
+            },
+            {
+              "de": "Brauchst du Geld?",
+              "ar": "هل تحتاج مالًا؟",
+              "pron": "براوخست دو غِلت؟"
+            },
+            {
+              "de": "Wir brauchen Zeit.",
+              "ar": "نحن نحتاج وقتًا.",
+              "pron": "فير براوخِن تسايت"
+            }
+          ]
+        }
+      ]
+    }
 }

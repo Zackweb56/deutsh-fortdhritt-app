@@ -496,12 +496,12 @@
           ]
         }
       ],
-"verbs": [
+      "verbs": [
         {
           "verb": "sich auseinandersetzen mit",
           "meaning": "يتعامل مع / يواجه (فكريًا)",
           "type": "منتظم انعكاسي",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "setze mich auseinander mit",
               "du": "setzt dich auseinander mit",
@@ -510,14 +510,34 @@
               "ihr": "setzt euch auseinander mit",
               "sie/Sie": "setzen sich auseinander mit"
             },
+            "Präteritum": {
+              "ich": "setzte mich auseinander mit",
+              "du": "setztest dich auseinander mit",
+              "er/sie/es": "setzte sich auseinander mit",
+              "wir": "setzten uns auseinander mit",
+              "ihr": "setztet euch auseinander mit",
+              "sie/Sie": "setzten sich auseinander mit"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "auseinandergesetzt",
-              "example": {
-                "de": "Ich habe mich intensiv mit diesem Thema auseinandergesetzt.",
-                "ar": "لقد تعاملت بشكل مكثف مع هذا الموضوع.",
-                "pron": "إش هابِه ميش إنتِنزيف ميت ديزِم تيما آوسآيناندِرغِزِتست"
-              }
+              "ich": "habe mich auseinandergesetzt mit",
+              "du": "hast dich auseinandergesetzt mit",
+              "er/sie/es": "hat sich auseinandergesetzt mit",
+              "wir": "haben uns auseinandergesetzt mit",
+              "ihr": "habt euch auseinandergesetzt mit",
+              "sie/Sie": "haben sich auseinandergesetzt mit"
+            },
+            "Futur I": {
+              "ich": "werde mich auseinandersetzen mit",
+              "du": "wirst dich auseinandersetzen mit",
+              "er/sie/es": "wird sich auseinandersetzen mit",
+              "wir": "werden uns auseinandersetzen mit",
+              "ihr": "werdet euch auseinandersetzen mit",
+              "sie/Sie": "werden sich auseinandersetzen mit"
+            },
+            "Imperativ": {
+              "du": "setz dich auseinander mit",
+              "ihr": "setzt euch auseinander mit",
+              "Sie": "setzen Sie sich auseinander mit"
             }
           },
           "examples": [
@@ -542,7 +562,7 @@
           "verb": "beitragen zu",
           "meaning": "يساهم في",
           "type": "غير منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "trage bei zu",
               "du": "trägst bei zu",
@@ -551,14 +571,34 @@
               "ihr": "tragt bei zu",
               "sie/Sie": "tragen bei zu"
             },
+            "Präteritum": {
+              "ich": "trug bei zu",
+              "du": "trugst bei zu",
+              "er/sie/es": "trug bei zu",
+              "wir": "trugen bei zu",
+              "ihr": "trugt bei zu",
+              "sie/Sie": "trugen bei zu"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "beigetragen",
-              "example": {
-                "de": "Diese Maßnahme hat zum Erfolg beigetragen.",
-                "ar": "ساهم هذا الإجراء في النجاح.",
-                "pron": "ديزِه ماسنامِه هات تسوم إرفولغ بايغِتراغِن"
-              }
+              "ich": "habe beigetragen zu",
+              "du": "hast beigetragen zu",
+              "er/sie/es": "hat beigetragen zu",
+              "wir": "haben beigetragen zu",
+              "ihr": "habt beigetragen zu",
+              "sie/Sie": "haben beigetragen zu"
+            },
+            "Futur I": {
+              "ich": "werde beitragen zu",
+              "du": "wirst beitragen zu",
+              "er/sie/es": "wird beitragen zu",
+              "wir": "werden beitragen zu",
+              "ihr": "werdet beitragen zu",
+              "sie/Sie": "werden beitragen zu"
+            },
+            "Imperativ": {
+              "du": "trag bei zu",
+              "ihr": "tragt bei zu",
+              "Sie": "tragen Sie bei zu"
             }
           },
           "examples": [
@@ -588,7 +628,7 @@
           "verb": "zurückführen auf",
           "meaning": "يعيد إلى / يرجع إلى",
           "type": "منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "führe zurück auf",
               "du": "führst zurück auf",
@@ -597,14 +637,34 @@
               "ihr": "führt zurück auf",
               "sie/Sie": "führen zurück auf"
             },
+            "Präteritum": {
+              "ich": "führte zurück auf",
+              "du": "führtest zurück auf",
+              "er/sie/es": "führte zurück auf",
+              "wir": "führten zurück auf",
+              "ihr": "führtet zurück auf",
+              "sie/Sie": "führten zurück auf"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "zurückgeführt",
-              "example": {
-                "de": "Man kann diese Entwicklung auf mehrere Faktoren zurückführen.",
-                "ar": "يمكن إرجاع هذا التطور إلى عدة عوامل.",
-                "pron": "مان كان ديزِه إنتفيكلونغ آوف ميريرِه فاكتورِن تسوروكفورِن"
-              }
+              "ich": "habe zurückgeführt auf",
+              "du": "hast zurückgeführt auf",
+              "er/sie/es": "hat zurückgeführt auf",
+              "wir": "haben zurückgeführt auf",
+              "ihr": "habt zurückgeführt auf",
+              "sie/Sie": "haben zurückgeführt auf"
+            },
+            "Futur I": {
+              "ich": "werde zurückführen auf",
+              "du": "wirst zurückführen auf",
+              "er/sie/es": "wird zurückführen auf",
+              "wir": "werden zurückführen auf",
+              "ihr": "werdet zurückführen auf",
+              "sie/Sie": "werden zurückführen auf"
+            },
+            "Imperativ": {
+              "du": "führ zurück auf",
+              "ihr": "führt zurück auf",
+              "Sie": "führen Sie zurück auf"
             }
           },
           "examples": [
@@ -629,7 +689,7 @@
           "verb": "ausgehen von",
           "meaning": "يفترض / ينطلق من",
           "type": "غير منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "gehe aus von",
               "du": "gehst aus von",
@@ -638,15 +698,31 @@
               "ihr": "geht aus von",
               "sie/Sie": "gehen aus von"
             },
+            "Präteritum": {
+              "ich": "ging aus von",
+              "du": "gingst aus von",
+              "er/sie/es": "ging aus von",
+              "wir": "gingen aus von",
+              "ihr": "gingt aus von",
+              "sie/Sie": "gingen aus von"
+            },
             "Perfekt": {
-              "auxiliary": "sein",
-              "participle": "ausgegangen",
-              "example": {
-                "de": "Wir sind von falschen Voraussetzungen ausgegangen.",
-                "ar": "انطلقنا من افتراضات خاطئة.",
-                "pron": "فير زينت فون فالشِن فوراوسزِتسونغِن آوسغِغانغِن"
-              }
-            }
+              "ich": "bin ausgegangen von",
+              "du": "bist ausgegangen von",
+              "er/sie/es": "ist ausgegangen von",
+              "wir": "sind ausgegangen von",
+              "ihr": "seid ausgegangen von",
+              "sie/Sie": "sind ausgegangen von"
+            },
+            "Futur I": {
+              "ich": "werde ausgehen von",
+              "du": "wirst ausgehen von",
+              "er/sie/es": "wird ausgehen von",
+              "wir": "werden ausgehen von",
+              "ihr": "werdet ausgehen von",
+              "sie/Sie": "werden ausgehen von"
+            },
+            "Imperativ": {}
           },
           "examples": [
             {
@@ -675,7 +751,7 @@
           "verb": "verfolgen",
           "meaning": "يتابع / يطارد / يسعى لـ",
           "type": "منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "verfolge",
               "du": "verfolgst",
@@ -684,14 +760,34 @@
               "ihr": "verfolgt",
               "sie/Sie": "verfolgen"
             },
+            "Präteritum": {
+              "ich": "verfolgte",
+              "du": "verfolgtest",
+              "er/sie/es": "verfolgte",
+              "wir": "verfolgten",
+              "ihr": "verfolgtet",
+              "sie/Sie": "verfolgten"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "verfolgt",
-              "example": {
-                "de": "Er hat seine Ziele konsequent verfolgt.",
-                "ar": "لقد سعى لتحقيق أهدافه بثبات.",
-                "pron": "إر هات زاينِه تسيلِه كونزِكفِنت فيرفولغت"
-              }
+              "ich": "habe verfolgt",
+              "du": "hast verfolgt",
+              "er/sie/es": "hat verfolgt",
+              "wir": "haben verfolgt",
+              "ihr": "habt verfolgt",
+              "sie/Sie": "haben verfolgt"
+            },
+            "Futur I": {
+              "ich": "werde verfolgen",
+              "du": "wirst verfolgen",
+              "er/sie/es": "wird verfolgen",
+              "wir": "werden verfolgen",
+              "ihr": "werdet verfolgen",
+              "sie/Sie": "werden verfolgen"
+            },
+            "Imperativ": {
+              "du": "verfolg",
+              "ihr": "verfolgt",
+              "Sie": "verfolgen Sie"
             }
           },
           "examples": [
@@ -721,7 +817,7 @@
           "verb": "behaupten",
           "meaning": "يدّعي / يزعم",
           "type": "منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "behaupte",
               "du": "behauptest",
@@ -730,14 +826,34 @@
               "ihr": "behauptet",
               "sie/Sie": "behaupten"
             },
+            "Präteritum": {
+              "ich": "behauptete",
+              "du": "behauptetest",
+              "er/sie/es": "behauptete",
+              "wir": "behaupteten",
+              "ihr": "behauptetet",
+              "sie/Sie": "behaupteten"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "behauptet",
-              "example": {
-                "de": "Er hat behauptet, dass er unschuldig sei.",
-                "ar": "ادعى أنه بريء.",
-                "pron": "إر هات بِهاوبتِت، داس إر أونشولديش زايه"
-              }
+              "ich": "habe behauptet",
+              "du": "hast behauptet",
+              "er/sie/es": "hat behauptet",
+              "wir": "haben behauptet",
+              "ihr": "habt behauptet",
+              "sie/Sie": "haben behauptet"
+            },
+            "Futur I": {
+              "ich": "werde behaupten",
+              "du": "wirst behaupten",
+              "er/sie/es": "wird behaupten",
+              "wir": "werden behaupten",
+              "ihr": "werdet behaupten",
+              "sie/Sie": "werden behaupten"
+            },
+            "Imperativ": {
+              "du": "behaupte",
+              "ihr": "behauptet",
+              "Sie": "behaupten Sie"
             }
           },
           "examples": [
@@ -762,7 +878,7 @@
           "verb": "betonen",
           "meaning": "يؤكد على / يشدد على",
           "type": "منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "betone",
               "du": "betonst",
@@ -771,14 +887,34 @@
               "ihr": "betont",
               "sie/Sie": "betonen"
             },
+            "Präteritum": {
+              "ich": "betonte",
+              "du": "betontest",
+              "er/sie/es": "betonte",
+              "wir": "betonten",
+              "ihr": "betontet",
+              "sie/Sie": "betonten"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "betont",
-              "example": {
-                "de": "Der Redner hat die Wichtigkeit dieses Themas betont.",
-                "ar": "شدد المتحدث على أهمية هذا الموضوع.",
-                "pron": "دير ريدنِر هات دي فيشتيشكايت ديزِس تيماس بِتونت"
-              }
+              "ich": "habe betont",
+              "du": "hast betont",
+              "er/sie/es": "hat betont",
+              "wir": "haben betont",
+              "ihr": "habt betont",
+              "sie/Sie": "haben betont"
+            },
+            "Futur I": {
+              "ich": "werde betonen",
+              "du": "wirst betonen",
+              "er/sie/es": "wird betonen",
+              "wir": "werden betonen",
+              "ihr": "werdet betonen",
+              "sie/Sie": "werden betonen"
+            },
+            "Imperativ": {
+              "du": "betone",
+              "ihr": "betont",
+              "Sie": "betonen Sie"
             }
           },
           "examples": [
@@ -808,7 +944,7 @@
           "verb": "widersprechen",
           "meaning": "يعارض / يناقض",
           "type": "غير منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "widerspreche",
               "du": "widersprichst",
@@ -817,14 +953,34 @@
               "ihr": "widersprecht",
               "sie/Sie": "widersprechen"
             },
+            "Präteritum": {
+              "ich": "widersprach",
+              "du": "widersprachst",
+              "er/sie/es": "widersprach",
+              "wir": "widersprachen",
+              "ihr": "widerspracht",
+              "sie/Sie": "widersprachen"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "widersprochen",
-              "example": {
-                "de": "Ich habe seiner Aussage widersprochen.",
-                "ar": "لقد عارضت تصريحه.",
-                "pron": "إش هابِه زاينِر آوسزاغِه فيدِرشبروخِن"
-              }
+              "ich": "habe widersprochen",
+              "du": "hast widersprochen",
+              "er/sie/es": "hat widersprochen",
+              "wir": "haben widersprochen",
+              "ihr": "habt widersprochen",
+              "sie/Sie": "haben widersprochen"
+            },
+            "Futur I": {
+              "ich": "werde widersprechen",
+              "du": "wirst widersprechen",
+              "er/sie/es": "wird widersprechen",
+              "wir": "werden widersprechen",
+              "ihr": "werdet widersprechen",
+              "sie/Sie": "werden widersprechen"
+            },
+            "Imperativ": {
+              "du": "widersprich",
+              "ihr": "widersprecht",
+              "Sie": "widersprechen Sie"
             }
           },
           "examples": [
@@ -849,7 +1005,7 @@
           "verb": "gelten als",
           "meaning": "يُعتبر / يُنظر إليه كـ",
           "type": "غير منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "gelte als",
               "du": "giltst als",
@@ -858,15 +1014,31 @@
               "ihr": "geltet als",
               "sie/Sie": "gelten als"
             },
+            "Präteritum": {
+              "ich": "galt als",
+              "du": "galtst als",
+              "er/sie/es": "galt als",
+              "wir": "galten als",
+              "ihr": "galtet als",
+              "sie/Sie": "galten als"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "gegolten",
-              "example": {
-                "de": "Er hat immer als zuverlässig gegolten.",
-                "ar": "لطالما اعتُبر موثوقًا.",
-                "pron": "إر هات إمِر آلس تسوفيرليسيش غِغولتِن"
-              }
-            }
+              "ich": "habe gegolten als",
+              "du": "hast gegolten als",
+              "er/sie/es": "hat gegolten als",
+              "wir": "haben gegolten als",
+              "ihr": "habt gegolten als",
+              "sie/Sie": "haben gegolten als"
+            },
+            "Futur I": {
+              "ich": "werde gelten als",
+              "du": "wirst gelten als",
+              "er/sie/es": "wird gelten als",
+              "wir": "werden gelten als",
+              "ihr": "werdet gelten als",
+              "sie/Sie": "werden gelten als"
+            },
+            "Imperativ": {}
           },
           "examples": [
             {
@@ -895,7 +1067,7 @@
           "verb": "sich beschränken auf",
           "meaning": "يقتصر على / يحصر نفسه في",
           "type": "منتظم انعكاسي",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "beschränke mich auf",
               "du": "beschränkst dich auf",
@@ -904,14 +1076,34 @@
               "ihr": "beschränkt euch auf",
               "sie/Sie": "beschränken sich auf"
             },
+            "Präteritum": {
+              "ich": "beschränkte mich auf",
+              "du": "beschränktest dich auf",
+              "er/sie/es": "beschränkte sich auf",
+              "wir": "beschränkten uns auf",
+              "ihr": "beschränktet euch auf",
+              "sie/Sie": "beschränkten sich auf"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "beschränkt",
-              "example": {
-                "de": "Ich habe mich auf die wichtigsten Punkte beschränkt.",
-                "ar": "لقد اقتصرت على النقاط الأكثر أهمية.",
-                "pron": "إش هابِه ميش آوف دي فيشتيغستِن بونكتِه بِشرِنكت"
-              }
+              "ich": "habe mich beschränkt auf",
+              "du": "hast dich beschränkt auf",
+              "er/sie/es": "hat sich beschränkt auf",
+              "wir": "haben uns beschränkt auf",
+              "ihr": "habt euch beschränkt auf",
+              "sie/Sie": "haben sich beschränkt auf"
+            },
+            "Futur I": {
+              "ich": "werde mich beschränken auf",
+              "du": "wirst dich beschränken auf",
+              "er/sie/es": "wird sich beschränken auf",
+              "wir": "werden uns beschränken auf",
+              "ihr": "werdet euch beschränken auf",
+              "sie/Sie": "werden sich beschränken auf"
+            },
+            "Imperativ": {
+              "du": "beschränk dich auf",
+              "ihr": "beschränkt euch auf",
+              "Sie": "beschränken Sie sich auf"
             }
           },
           "examples": [
@@ -936,7 +1128,7 @@
           "verb": "erörtern",
           "meaning": "يناقش / يبحث في",
           "type": "منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "erörtere",
               "du": "erörterst",
@@ -945,14 +1137,34 @@
               "ihr": "erörtert",
               "sie/Sie": "erörtern"
             },
+            "Präteritum": {
+              "ich": "erörterte",
+              "du": "erörtertest",
+              "er/sie/es": "erörterte",
+              "wir": "erörterten",
+              "ihr": "erörtertet",
+              "sie/Sie": "erörterten"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "erörtert",
-              "example": {
-                "de": "Wir haben das Problem ausführlich erörtert.",
-                "ar": "لقد ناقشنا المشكلة بالتفصيل.",
-                "pron": "فير هابِن داس بروبليم آوسفورليش إرأورتِرت"
-              }
+              "ich": "habe erörtert",
+              "du": "hast erörtert",
+              "er/sie/es": "hat erörtert",
+              "wir": "haben erörtert",
+              "ihr": "habt erörtert",
+              "sie/Sie": "haben erörtert"
+            },
+            "Futur I": {
+              "ich": "werde erörtern",
+              "du": "wirst erörtern",
+              "er/sie/es": "wird erörtern",
+              "wir": "werden erörtern",
+              "ihr": "werdet erörtern",
+              "sie/Sie": "werden erörtern"
+            },
+            "Imperativ": {
+              "du": "erörtere",
+              "ihr": "erörtert",
+              "Sie": "erörtern Sie"
             }
           },
           "examples": [
@@ -982,7 +1194,7 @@
           "verb": "voraussetzen",
           "meaning": "يفترض مسبقًا / يتطلب",
           "type": "منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "setze voraus",
               "du": "setzt voraus",
@@ -991,15 +1203,31 @@
               "ihr": "setzt voraus",
               "sie/Sie": "setzen voraus"
             },
+            "Präteritum": {
+              "ich": "setzte voraus",
+              "du": "setztest voraus",
+              "er/sie/es": "setzte voraus",
+              "wir": "setzten voraus",
+              "ihr": "setztet voraus",
+              "sie/Sie": "setzten voraus"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "vorausgesetzt",
-              "example": {
-                "de": "Diese Aufgabe setzt bestimmte Kenntnisse voraus.",
-                "ar": "تتطلب هذه المهمة معرفة معينة.",
-                "pron": "ديزِه آوفغابِه زِتست بِشتيمتِه كِنتنيسِه فوراوس"
-              }
-            }
+              "ich": "habe vorausgesetzt",
+              "du": "hast vorausgesetzt",
+              "er/sie/es": "hat vorausgesetzt",
+              "wir": "haben vorausgesetzt",
+              "ihr": "habt vorausgesetzt",
+              "sie/Sie": "haben vorausgesetzt"
+            },
+            "Futur I": {
+              "ich": "werde voraussetzen",
+              "du": "wirst voraussetzen",
+              "er/sie/es": "wird voraussetzen",
+              "wir": "werden voraussetzen",
+              "ihr": "werdet voraussetzen",
+              "sie/Sie": "werden voraussetzen"
+            },
+            "Imperativ": {}
           },
           "examples": [
             {
@@ -1028,7 +1256,7 @@
           "verb": "rechtfertigen",
           "meaning": "يبرر",
           "type": "منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "rechtfertige",
               "du": "rechtfertigst",
@@ -1037,14 +1265,34 @@
               "ihr": "rechtfertigt",
               "sie/Sie": "rechtfertigen"
             },
+            "Präteritum": {
+              "ich": "rechtfertigte",
+              "du": "rechtfertigtest",
+              "er/sie/es": "rechtfertigte",
+              "wir": "rechtfertigten",
+              "ihr": "rechtfertigtet",
+              "sie/Sie": "rechtfertigten"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "gerechtfertigt",
-              "example": {
-                "de": "Er konnte sein Verhalten nicht rechtfertigen.",
-                "ar": "لم يستطع تبرير سلوكه.",
-                "pron": "إر كونتِه زاين فيرهالتِن نيشت ريشتفِرتيغِن"
-              }
+              "ich": "habe gerechtfertigt",
+              "du": "hast gerechtfertigt",
+              "er/sie/es": "hat gerechtfertigt",
+              "wir": "haben gerechtfertigt",
+              "ihr": "habt gerechtfertigt",
+              "sie/Sie": "haben gerechtfertigt"
+            },
+            "Futur I": {
+              "ich": "werde rechtfertigen",
+              "du": "wirst rechtfertigen",
+              "er/sie/es": "wird rechtfertigen",
+              "wir": "werden rechtfertigen",
+              "ihr": "werdet rechtfertigen",
+              "sie/Sie": "werden rechtfertigen"
+            },
+            "Imperativ": {
+              "du": "rechtfertige",
+              "ihr": "rechtfertigt",
+              "Sie": "rechtfertigen Sie"
             }
           },
           "examples": [
@@ -1069,7 +1317,7 @@
           "verb": "unterstellen",
           "meaning": "يفترض / يتهم ضمنيًا",
           "type": "منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "unterstelle",
               "du": "unterstellst",
@@ -1078,14 +1326,34 @@
               "ihr": "unterstellt",
               "sie/Sie": "unterstellen"
             },
+            "Präteritum": {
+              "ich": "unterstellte",
+              "du": "unterstelltest",
+              "er/sie/es": "unterstellte",
+              "wir": "unterstellten",
+              "ihr": "unterstelltet",
+              "sie/Sie": "unterstellten"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "unterstellt",
-              "example": {
-                "de": "Man hat mir unterstellt, ich hätte gelogen.",
-                "ar": "اتُهمت ضمنيًا بأنني كذبت.",
-                "pron": "مان هات مير أونتِرشتِلت، إش هيتِه غِلوغِن"
-              }
+              "ich": "habe unterstellt",
+              "du": "hast unterstellt",
+              "er/sie/es": "hat unterstellt",
+              "wir": "haben unterstellt",
+              "ihr": "habt unterstellt",
+              "sie/Sie": "haben unterstellt"
+            },
+            "Futur I": {
+              "ich": "werde unterstellen",
+              "du": "wirst unterstellen",
+              "er/sie/es": "wird unterstellen",
+              "wir": "werden unterstellen",
+              "ihr": "werdet unterstellen",
+              "sie/Sie": "werden unterstellen"
+            },
+            "Imperativ": {
+              "du": "unterstell",
+              "ihr": "unterstellt",
+              "Sie": "unterstellen Sie"
             }
           },
           "examples": [
@@ -1115,7 +1383,7 @@
           "verb": "überwiegen",
           "meaning": "يرجح / يتفوق",
           "type": "غير منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "überwiege",
               "du": "überwiegst",
@@ -1124,15 +1392,31 @@
               "ihr": "überwiegt",
               "sie/Sie": "überwiegen"
             },
+            "Präteritum": {
+              "ich": "überwog",
+              "du": "überwogst",
+              "er/sie/es": "überwog",
+              "wir": "überwogen",
+              "ihr": "überwogt",
+              "sie/Sie": "überwogen"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "überwogen",
-              "example": {
-                "de": "Die Vorteile haben die Nachteile überwogen.",
-                "ar": "رجحت المزايا على العيوب.",
-                "pron": "دي فورتايلِه هابِن دي ناختايلِه إوبِرفوغِن"
-              }
-            }
+              "ich": "habe überwogen",
+              "du": "hast überwogen",
+              "er/sie/es": "hat überwogen",
+              "wir": "haben überwogen",
+              "ihr": "habt überwogen",
+              "sie/Sie": "haben überwogen"
+            },
+            "Futur I": {
+              "ich": "werde überwiegen",
+              "du": "wirst überwiegen",
+              "er/sie/es": "wird überwiegen",
+              "wir": "werden überwiegen",
+              "ihr": "werdet überwiegen",
+              "sie/Sie": "werden überwiegen"
+            },
+            "Imperativ": {}
           },
           "examples": [
             {
@@ -1156,7 +1440,7 @@
           "verb": "gewährleisten",
           "meaning": "يضمن / يكفل",
           "type": "منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "gewährleiste",
               "du": "gewährleistest",
@@ -1165,14 +1449,34 @@
               "ihr": "gewährleistet",
               "sie/Sie": "gewährleisten"
             },
+            "Präteritum": {
+              "ich": "gewährleistete",
+              "du": "gewährleistetest",
+              "er/sie/es": "gewährleistete",
+              "wir": "gewährleisteten",
+              "ihr": "gewährleistetet",
+              "sie/Sie": "gewährleisteten"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "gewährleistet",
-              "example": {
-                "de": "Die Regierung hat die Sicherheit der Bürger gewährleistet.",
-                "ar": "ضمنت الحكومة أمن المواطنين.",
-                "pron": "دي رِغيرونغ هات دي زيشِرهايت دير بورغِر غِفيرلايستِت"
-              }
+              "ich": "habe gewährleistet",
+              "du": "hast gewährleistet",
+              "er/sie/es": "hat gewährleistet",
+              "wir": "haben gewährleistet",
+              "ihr": "habt gewährleistet",
+              "sie/Sie": "haben gewährleistet"
+            },
+            "Futur I": {
+              "ich": "werde gewährleisten",
+              "du": "wirst gewährleisten",
+              "er/sie/es": "wird gewährleisten",
+              "wir": "werden gewährleisten",
+              "ihr": "werdet gewährleisten",
+              "sie/Sie": "werden gewährleisten"
+            },
+            "Imperativ": {
+              "du": "gewährleiste",
+              "ihr": "gewährleistet",
+              "Sie": "gewährleisten Sie"
             }
           },
           "examples": [
@@ -1202,7 +1506,7 @@
           "verb": "bewältigen",
           "meaning": "يتغلب على / يتعامل مع",
           "type": "منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "bewältige",
               "du": "bewältigst",
@@ -1211,14 +1515,34 @@
               "ihr": "bewältigt",
               "sie/Sie": "bewältigen"
             },
+            "Präteritum": {
+              "ich": "bewältigte",
+              "du": "bewältigtest",
+              "er/sie/es": "bewältigte",
+              "wir": "bewältigten",
+              "ihr": "bewältigtet",
+              "sie/Sie": "bewältigten"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "bewältigt",
-              "example": {
-                "de": "Sie hat die Krise erfolgreich bewältigt.",
-                "ar": "لقد تغلبت على الأزمة بنجاح.",
-                "pron": "زي هات دي كريزِه إرفولغرايش بِفيلتيخت"
-              }
+              "ich": "habe bewältigt",
+              "du": "hast bewältigt",
+              "er/sie/es": "hat bewältigt",
+              "wir": "haben bewältigt",
+              "ihr": "habt bewältigt",
+              "sie/Sie": "haben bewältigt"
+            },
+            "Futur I": {
+              "ich": "werde bewältigen",
+              "du": "wirst bewältigen",
+              "er/sie/es": "wird bewältigen",
+              "wir": "werden bewältigen",
+              "ihr": "werdet bewältigen",
+              "sie/Sie": "werden bewältigen"
+            },
+            "Imperativ": {
+              "du": "bewältige",
+              "ihr": "bewältigt",
+              "Sie": "bewältigen Sie"
             }
           },
           "examples": [
@@ -1248,7 +1572,7 @@
           "verb": "erzielen",
           "meaning": "يحقق (نتيجة/هدف)",
           "type": "منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "erziele",
               "du": "erzielst",
@@ -1257,14 +1581,34 @@
               "ihr": "erzielt",
               "sie/Sie": "erzielen"
             },
+            "Präteritum": {
+              "ich": "erzielte",
+              "du": "erzieltest",
+              "er/sie/es": "erzielte",
+              "wir": "erzielten",
+              "ihr": "erzieltet",
+              "sie/Sie": "erzielten"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "erzielt",
-              "example": {
-                "de": "Das Team hat ein gutes Ergebnis erzielt.",
-                "ar": "حقق الفريق نتيجة جيدة.",
-                "pron": "داس تيم هات آين غوتِس إرغِبنيس إرتسيلت"
-              }
+              "ich": "habe erzielt",
+              "du": "hast erzielt",
+              "er/sie/es": "hat erzielt",
+              "wir": "haben erzielt",
+              "ihr": "habt erzielt",
+              "sie/Sie": "haben erzielt"
+            },
+            "Futur I": {
+              "ich": "werde erzielen",
+              "du": "wirst erzielen",
+              "er/sie/es": "wird erzielen",
+              "wir": "werden erzielen",
+              "ihr": "werdet erzielen",
+              "sie/Sie": "werden erzielen"
+            },
+            "Imperativ": {
+              "du": "erziele",
+              "ihr": "erzielt",
+              "Sie": "erzielen Sie"
             }
           },
           "examples": [
@@ -1294,7 +1638,7 @@
           "verb": "sich engagieren für",
           "meaning": "يلتزم بـ / ينخرط في",
           "type": "منتظم انعكاسي",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "engagiere mich für",
               "du": "engagierst dich für",
@@ -1303,14 +1647,34 @@
               "ihr": "engagiert euch für",
               "sie/Sie": "engagieren sich für"
             },
+            "Präteritum": {
+              "ich": "engagierte mich für",
+              "du": "engagiertest dich für",
+              "er/sie/es": "engagierte sich für",
+              "wir": "engagierten uns für",
+              "ihr": "engagiertet euch für",
+              "sie/Sie": "engagierten sich für"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "engagiert",
-              "example": {
-                "de": "Sie hat sich immer für soziale Gerechtigkeit engagiert.",
-                "ar": "لطالما التزمت بالعدالة الاجتماعية.",
-                "pron": "زي هات زيش إمِر فور زوتسيالِه غِرِشتيشكايت إنغاجيرت"
-              }
+              "ich": "habe mich engagiert für",
+              "du": "hast dich engagiert für",
+              "er/sie/es": "hat sich engagiert für",
+              "wir": "haben uns engagiert für",
+              "ihr": "habt euch engagiert für",
+              "sie/Sie": "haben sich engagiert für"
+            },
+            "Futur I": {
+              "ich": "werde mich engagieren für",
+              "du": "wirst dich engagieren für",
+              "er/sie/es": "wird sich engagieren für",
+              "wir": "werden uns engagieren für",
+              "ihr": "werdet euch engagieren für",
+              "sie/Sie": "werden sich engagieren für"
+            },
+            "Imperativ": {
+              "du": "engagiere dich für",
+              "ihr": "engagiert euch für",
+              "Sie": "engagieren Sie sich für"
             }
           },
           "examples": [
@@ -1340,7 +1704,7 @@
           "verb": "ablehnen",
           "meaning": "يرفض",
           "type": "منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "lehne ab",
               "du": "lehnst ab",
@@ -1349,14 +1713,34 @@
               "ihr": "lehnt ab",
               "sie/Sie": "lehnen ab"
             },
+            "Präteritum": {
+              "ich": "lehnte ab",
+              "du": "lehntest ab",
+              "er/sie/es": "lehnte ab",
+              "wir": "lehnten ab",
+              "ihr": "lehntet ab",
+              "sie/Sie": "lehnten ab"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "abgelehnt",
-              "example": {
-                "de": "Der Antrag wurde abgelehnt.",
-                "ar": "تم رفض الطلب.",
-                "pron": "دير آنتراغ فوردِه آبغِلينت"
-              }
+              "ich": "habe abgelehnt",
+              "du": "hast abgelehnt",
+              "er/sie/es": "hat abgelehnt",
+              "wir": "haben abgelehnt",
+              "ihr": "habt abgelehnt",
+              "sie/Sie": "haben abgelehnt"
+            },
+            "Futur I": {
+              "ich": "werde ablehnen",
+              "du": "wirst ablehnen",
+              "er/sie/es": "wird ablehnen",
+              "wir": "werden ablehnen",
+              "ihr": "werdet ablehnen",
+              "sie/Sie": "werden ablehnen"
+            },
+            "Imperativ": {
+              "du": "lehn ab",
+              "ihr": "lehnt ab",
+              "Sie": "lehnen Sie ab"
             }
           },
           "examples": [
@@ -1386,7 +1770,7 @@
           "verb": "befürworten",
           "meaning": "يؤيد / يدعم",
           "type": "منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "befürworte",
               "du": "befürwortest",
@@ -1395,14 +1779,34 @@
               "ihr": "befürwortet",
               "sie/Sie": "befürworten"
             },
+            "Präteritum": {
+              "ich": "befürwortete",
+              "du": "befürwortetest",
+              "er/sie/es": "befürwortete",
+              "wir": "befürworteten",
+              "ihr": "befürwortetet",
+              "sie/Sie": "befürworteten"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "befürwortet",
-              "example": {
-                "de": "Die Partei hat die Reform befürwortet.",
-                "ar": "أيد الحزب الإصلاح.",
-                "pron": "دي بارتايه هات دي ريفورم بِفورفورتِت"
-              }
+              "ich": "habe befürwortet",
+              "du": "hast befürwortet",
+              "er/sie/es": "hat befürwortet",
+              "wir": "haben befürwortet",
+              "ihr": "habt befürwortet",
+              "sie/Sie": "haben befürwortet"
+            },
+            "Futur I": {
+              "ich": "werde befürworten",
+              "du": "wirst befürworten",
+              "er/sie/es": "wird befürworten",
+              "wir": "werden befürworten",
+              "ihr": "werdet befürworten",
+              "sie/Sie": "werden befürworten"
+            },
+            "Imperativ": {
+              "du": "befürworte",
+              "ihr": "befürwortet",
+              "Sie": "befürworten Sie"
             }
           },
           "examples": [
@@ -1432,7 +1836,7 @@
           "verb": "nachvollziehen",
           "meaning": "يفهم / يستوعب (الدوافع)",
           "type": "غير منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "vollziehe nach",
               "du": "vollziehst nach",
@@ -1441,14 +1845,34 @@
               "ihr": "vollzieht nach",
               "sie/Sie": "vollziehen nach"
             },
+            "Präteritum": {
+              "ich": "vollzog nach",
+              "du": "vollzogst nach",
+              "er/sie/es": "vollzog nach",
+              "wir": "vollzogen nach",
+              "ihr": "vollzogt nach",
+              "sie/Sie": "vollzogen nach"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "nachvollzogen",
-              "example": {
-                "de": "Ich kann deine Reaktion gut nachvollziehen.",
-                "ar": "يمكنني فهم رد فعلك جيدًا.",
-                "pron": "إش كان داينِه رِآكتسيون غوت ناخفولتسيهِن"
-              }
+              "ich": "habe nachvollzogen",
+              "du": "hast nachvollzogen",
+              "er/sie/es": "hat nachvollzogen",
+              "wir": "haben nachvollzogen",
+              "ihr": "habt nachvollzogen",
+              "sie/Sie": "haben nachvollzogen"
+            },
+            "Futur I": {
+              "ich": "werde nachvollziehen",
+              "du": "wirst nachvollziehen",
+              "er/sie/es": "wird nachvollziehen",
+              "wir": "werden nachvollziehen",
+              "ihr": "werdet nachvollziehen",
+              "sie/Sie": "werden nachvollziehen"
+            },
+            "Imperativ": {
+              "du": "vollzieh nach",
+              "ihr": "vollzieht nach",
+              "Sie": "vollziehen Sie nach"
             }
           },
           "examples": [
@@ -1478,7 +1902,7 @@
           "verb": "berücksichtigen",
           "meaning": "يأخذ في الاعتبار",
           "type": "منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "berücksichtige",
               "du": "berücksichtigst",
@@ -1487,14 +1911,34 @@
               "ihr": "berücksichtigt",
               "sie/Sie": "berücksichtigen"
             },
+            "Präteritum": {
+              "ich": "berücksichtigte",
+              "du": "berücksichtigtest",
+              "er/sie/es": "berücksichtigte",
+              "wir": "berücksichtigten",
+              "ihr": "berücksichtigtet",
+              "sie/Sie": "berücksichtigten"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "berücksichtigt",
-              "example": {
-                "de": "Wir haben alle Faktoren berücksichtigt.",
-                "ar": "لقد أخذنا جميع العوامل في الاعتبار.",
-                "pron": "فير هابِن آلِه فاكتورِن بِروكزيشتيخت"
-              }
+              "ich": "habe berücksichtigt",
+              "du": "hast berücksichtigt",
+              "er/sie/es": "hat berücksichtigt",
+              "wir": "haben berücksichtigt",
+              "ihr": "habt berücksichtigt",
+              "sie/Sie": "haben berücksichtigt"
+            },
+            "Futur I": {
+              "ich": "werde berücksichtigen",
+              "du": "wirst berücksichtigen",
+              "er/sie/es": "wird berücksichtigen",
+              "wir": "werden berücksichtigen",
+              "ihr": "werdet berücksichtigen",
+              "sie/Sie": "werden berücksichtigen"
+            },
+            "Imperativ": {
+              "du": "berücksichtige",
+              "ihr": "berücksichtigt",
+              "Sie": "berücksichtigen Sie"
             }
           },
           "examples": [
@@ -1524,7 +1968,7 @@
           "verb": "veranlassen",
           "meaning": "يحفّز / يدفع / يتسبب في",
           "type": "منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "veranlasse",
               "du": "veranlasst",
@@ -1533,14 +1977,34 @@
               "ihr": "veranlasst",
               "sie/Sie": "veranlassen"
             },
+            "Präteritum": {
+              "ich": "veranlasste",
+              "du": "veranlasstest",
+              "er/sie/es": "veranlasste",
+              "wir": "veranlassten",
+              "ihr": "veranlasstet",
+              "sie/Sie": "veranlassten"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "veranlasst",
-              "example": {
-                "de": "Was hat dich zu dieser Entscheidung veranlasst?",
-                "ar": "ما الذي دفعك إلى هذا القرار؟",
-                "pron": "فاس هات ديش تسو ديزِر إنتشايدونغ فيرآنلاست؟"
-              }
+              "ich": "habe veranlasst",
+              "du": "hast veranlasst",
+              "er/sie/es": "hat veranlasst",
+              "wir": "haben veranlasst",
+              "ihr": "habt veranlasst",
+              "sie/Sie": "haben veranlasst"
+            },
+            "Futur I": {
+              "ich": "werde veranlassen",
+              "du": "wirst veranlassen",
+              "er/sie/es": "wird veranlassen",
+              "wir": "werden veranlassen",
+              "ihr": "werdet veranlassen",
+              "sie/Sie": "werden veranlassen"
+            },
+            "Imperativ": {
+              "du": "veranlass",
+              "ihr": "veranlasst",
+              "Sie": "veranlassen Sie"
             }
           },
           "examples": [
@@ -1570,7 +2034,7 @@
           "verb": "veranschaulichen",
           "meaning": "يوضح / يبيّن بالأمثلة",
           "type": "منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "veranschauliche",
               "du": "veranschaulichst",
@@ -1579,14 +2043,34 @@
               "ihr": "veranschaulicht",
               "sie/Sie": "veranschaulichen"
             },
+            "Präteritum": {
+              "ich": "veranschaulichte",
+              "du": "veranschaulichtest",
+              "er/sie/es": "veranschaulichte",
+              "wir": "veranschaulichten",
+              "ihr": "veranschaulichtet",
+              "sie/Sie": "veranschaulichten"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "veranschaulicht",
-              "example": {
-                "de": "Das Beispiel veranschaulicht das Problem sehr gut.",
-                "ar": "يوضح المثال المشكلة بشكل جيد جدًا.",
-                "pron": "داس بايشبيل فيرآنشاوليشت داس بروبليم زِر غوت"
-              }
+              "ich": "habe veranschaulicht",
+              "du": "hast veranschaulicht",
+              "er/sie/es": "hat veranschaulicht",
+              "wir": "haben veranschaulicht",
+              "ihr": "habt veranschaulicht",
+              "sie/Sie": "haben veranschaulicht"
+            },
+            "Futur I": {
+              "ich": "werde veranschaulichen",
+              "du": "wirst veranschaulichen",
+              "er/sie/es": "wird veranschaulichen",
+              "wir": "werden veranschaulichen",
+              "ihr": "werdet veranschaulichen",
+              "sie/Sie": "werden veranschaulichen"
+            },
+            "Imperativ": {
+              "du": "veranschauliche",
+              "ihr": "veranschaulicht",
+              "Sie": "veranschaulichen Sie"
             }
           },
           "examples": [
@@ -1616,7 +2100,7 @@
           "verb": "sich durchsetzen",
           "meaning": "يفرض نفسه / ينجح في تحقيق",
           "type": "منتظم انعكاسي",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "setze mich durch",
               "du": "setzt dich durch",
@@ -1625,14 +2109,34 @@
               "ihr": "setzt euch durch",
               "sie/Sie": "setzen sich durch"
             },
+            "Präteritum": {
+              "ich": "setzte mich durch",
+              "du": "setztest dich durch",
+              "er/sie/es": "setzte sich durch",
+              "wir": "setzten uns durch",
+              "ihr": "setztet euch durch",
+              "sie/Sie": "setzten sich durch"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "durchgesetzt",
-              "example": {
-                "de": "Sie hat sich mit ihrer Meinung durchgesetzt.",
-                "ar": "لقد فرضت رأيها.",
-                "pron": "زي هات زيش ميت إيرِر ماينونغ دورشغِزِتست"
-              }
+              "ich": "habe mich durchgesetzt",
+              "du": "hast dich durchgesetzt",
+              "er/sie/es": "hat sich durchgesetzt",
+              "wir": "haben uns durchgesetzt",
+              "ihr": "habt euch durchgesetzt",
+              "sie/Sie": "haben sich durchgesetzt"
+            },
+            "Futur I": {
+              "ich": "werde mich durchsetzen",
+              "du": "wirst dich durchsetzen",
+              "er/sie/es": "wird sich durchsetzen",
+              "wir": "werden uns durchsetzen",
+              "ihr": "werdet euch durchsetzen",
+              "sie/Sie": "werden sich durchsetzen"
+            },
+            "Imperativ": {
+              "du": "setz dich durch",
+              "ihr": "setzt euch durch",
+              "Sie": "setzen Sie sich durch"
             }
           },
           "examples": [
@@ -1662,7 +2166,7 @@
           "verb": "aufgreifen",
           "meaning": "يتناول (موضوع) / يلتقط",
           "type": "غير منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "greife auf",
               "du": "greifst auf",
@@ -1671,14 +2175,34 @@
               "ihr": "greift auf",
               "sie/Sie": "greifen auf"
             },
+            "Präteritum": {
+              "ich": "griff auf",
+              "du": "griffst auf",
+              "er/sie/es": "griff auf",
+              "wir": "griffen auf",
+              "ihr": "grifft auf",
+              "sie/Sie": "griffen auf"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "aufgegriffen",
-              "example": {
-                "de": "Die Medien haben das Thema aufgegriffen.",
-                "ar": "تناولت وسائل الإعلام الموضوع.",
-                "pron": "دي ميديِن هابِن داس تيما آوفغِغريفِن"
-              }
+              "ich": "habe aufgegriffen",
+              "du": "hast aufgegriffen",
+              "er/sie/es": "hat aufgegriffen",
+              "wir": "haben aufgegriffen",
+              "ihr": "habt aufgegriffen",
+              "sie/Sie": "haben aufgegriffen"
+            },
+            "Futur I": {
+              "ich": "werde aufgreifen",
+              "du": "wirst aufgreifen",
+              "er/sie/es": "wird aufgreifen",
+              "wir": "werden aufgreifen",
+              "ihr": "werdet aufgreifen",
+              "sie/Sie": "werden aufgreifen"
+            },
+            "Imperativ": {
+              "du": "greif auf",
+              "ihr": "greift auf",
+              "Sie": "greifen Sie auf"
             }
           },
           "examples": [
@@ -1708,7 +2232,7 @@
           "verb": "vertreten",
           "meaning": "يمثل / يدافع عن (رأي)",
           "type": "غير منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "vertrete",
               "du": "vertrittst",
@@ -1717,14 +2241,34 @@
               "ihr": "vertretet",
               "sie/Sie": "vertreten"
             },
+            "Präteritum": {
+              "ich": "vertrat",
+              "du": "vertratst",
+              "er/sie/es": "vertrat",
+              "wir": "vertraten",
+              "ihr": "vertratet",
+              "sie/Sie": "vertraten"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "vertreten",
-              "example": {
-                "de": "Er hat seine Meinung klar vertreten.",
-                "ar": "لقد دافع عن رأيه بوضوح.",
-                "pron": "إر هات زاينِه ماينونغ كلار فيرتريتِن"
-              }
+              "ich": "habe vertreten",
+              "du": "hast vertreten",
+              "er/sie/es": "hat vertreten",
+              "wir": "haben vertreten",
+              "ihr": "habt vertreten",
+              "sie/Sie": "haben vertreten"
+            },
+            "Futur I": {
+              "ich": "werde vertreten",
+              "du": "wirst vertreten",
+              "er/sie/es": "wird vertreten",
+              "wir": "werden vertreten",
+              "ihr": "werdet vertreten",
+              "sie/Sie": "werden vertreten"
+            },
+            "Imperativ": {
+              "du": "vertritt",
+              "ihr": "vertretet",
+              "Sie": "vertreten Sie"
             }
           },
           "examples": [
@@ -1754,7 +2298,7 @@
           "verb": "umgehen mit",
           "meaning": "يتعامل مع",
           "type": "غير منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "gehe um mit",
               "du": "gehst um mit",
@@ -1763,14 +2307,34 @@
               "ihr": "geht um mit",
               "sie/Sie": "gehen um mit"
             },
+            "Präteritum": {
+              "ich": "ging um mit",
+              "du": "gingst um mit",
+              "er/sie/es": "ging um mit",
+              "wir": "gingen um mit",
+              "ihr": "gingt um mit",
+              "sie/Sie": "gingen um mit"
+            },
             "Perfekt": {
-              "auxiliary": "sein",
-              "participle": "umgegangen",
-              "example": {
-                "de": "Sie ist sehr geschickt mit der Situation umgegangen.",
-                "ar": "لقد تعاملت بمهارة كبيرة مع الموقف.",
-                "pron": "زي إست زِر غِشيكت ميت دير زيتواتسيون أومغِغانغِن"
-              }
+              "ich": "bin umgegangen mit",
+              "du": "bist umgegangen mit",
+              "er/sie/es": "ist umgegangen mit",
+              "wir": "sind umgegangen mit",
+              "ihr": "seid umgegangen mit",
+              "sie/Sie": "sind umgegangen mit"
+            },
+            "Futur I": {
+              "ich": "werde umgehen mit",
+              "du": "wirst umgehen mit",
+              "er/sie/es": "wird umgehen mit",
+              "wir": "werden umgehen mit",
+              "ihr": "werdet umgehen mit",
+              "sie/Sie": "werden umgehen mit"
+            },
+            "Imperativ": {
+              "du": "geh um mit",
+              "ihr": "geht um mit",
+              "Sie": "gehen Sie um mit"
             }
           },
           "examples": [
@@ -1800,7 +2364,7 @@
           "verb": "zunehmen",
           "meaning": "يزداد / يتزايد",
           "type": "غير منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "nehme zu",
               "du": "nimmst zu",
@@ -1809,14 +2373,34 @@
               "ihr": "nehmt zu",
               "sie/Sie": "nehmen zu"
             },
+            "Präteritum": {
+              "ich": "nahm zu",
+              "du": "nahmst zu",
+              "er/sie/es": "nahm zu",
+              "wir": "nahmen zu",
+              "ihr": "nahmt zu",
+              "sie/Sie": "nahmen zu"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "zugenommen",
-              "example": {
-                "de": "Die Zahl der Arbeitslosen hat zugenommen.",
-                "ar": "ازداد عدد العاطلين عن العمل.",
-                "pron": "دي تسال دير آربايتسلوزِن هات تسوغِنومِن"
-              }
+              "ich": "habe zugenommen",
+              "du": "hast zugenommen",
+              "er/sie/es": "hat zugenommen",
+              "wir": "haben zugenommen",
+              "ihr": "habt zugenommen",
+              "sie/Sie": "haben zugenommen"
+            },
+            "Futur I": {
+              "ich": "werde zunehmen",
+              "du": "wirst zunehmen",
+              "er/sie/es": "wird zunehmen",
+              "wir": "werden zunehmen",
+              "ihr": "werdet zunehmen",
+              "sie/Sie": "werden zunehmen"
+            },
+            "Imperativ": {
+              "du": "nimm zu",
+              "ihr": "nehmt zu",
+              "Sie": "nehmen Sie zu"
             }
           },
           "examples": [
@@ -1846,7 +2430,7 @@
           "verb": "abnehmen",
           "meaning": "يتناقص / ينقص",
           "type": "غير منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "nehme ab",
               "du": "nimmst ab",
@@ -1855,14 +2439,34 @@
               "ihr": "nehmt ab",
               "sie/Sie": "nehmen ab"
             },
+            "Präteritum": {
+              "ich": "nahm ab",
+              "du": "nahmst ab",
+              "er/sie/es": "nahm ab",
+              "wir": "nahmen ab",
+              "ihr": "nahmt ab",
+              "sie/Sie": "nahmen ab"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "abgenommen",
-              "example": {
-                "de": "Die Nachfrage hat stark abgenommen.",
-                "ar": "انخفض الطلب بشدة.",
-                "pron": "دي ناخفراغِه هات شتارك آبغِنومِن"
-              }
+              "ich": "habe abgenommen",
+              "du": "hast abgenommen",
+              "er/sie/es": "hat abgenommen",
+              "wir": "haben abgenommen",
+              "ihr": "habt abgenommen",
+              "sie/Sie": "haben abgenommen"
+            },
+            "Futur I": {
+              "ich": "werde abnehmen",
+              "du": "wirst abnehmen",
+              "er/sie/es": "wird abnehmen",
+              "wir": "werden abnehmen",
+              "ihr": "werdet abnehmen",
+              "sie/Sie": "werden abnehmen"
+            },
+            "Imperativ": {
+              "du": "nimm ab",
+              "ihr": "nehmt ab",
+              "Sie": "nehmen Sie ab"
             }
           },
           "examples": [
@@ -1892,7 +2496,7 @@
           "verb": "verschärfen",
           "meaning": "يشدد / يزيد حدة",
           "type": "منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "verschärfe",
               "du": "verschärfst",
@@ -1901,14 +2505,34 @@
               "ihr": "verschärft",
               "sie/Sie": "verschärfen"
             },
+            "Präteritum": {
+              "ich": "verschärfte",
+              "du": "verschärftest",
+              "er/sie/es": "verschärfte",
+              "wir": "verschärften",
+              "ihr": "verschärftet",
+              "sie/Sie": "verschärften"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "verschärft",
-              "example": {
-                "de": "Die Regierung hat die Gesetze verschärft.",
-                "ar": "شددت الحكومة القوانين.",
-                "pron": "دي رِغيرونغ هات دي غِزِتسِه فيرشيرفت"
-              }
+              "ich": "habe verschärft",
+              "du": "hast verschärft",
+              "er/sie/es": "hat verschärft",
+              "wir": "haben verschärft",
+              "ihr": "habt verschärft",
+              "sie/Sie": "haben verschärft"
+            },
+            "Futur I": {
+              "ich": "werde verschärfen",
+              "du": "wirst verschärfen",
+              "er/sie/es": "wird verschärfen",
+              "wir": "werden verschärfen",
+              "ihr": "werdet verschärfen",
+              "sie/Sie": "werden verschärfen"
+            },
+            "Imperativ": {
+              "du": "verschärf",
+              "ihr": "verschärft",
+              "Sie": "verschärfen Sie"
             }
           },
           "examples": [
@@ -1938,7 +2562,7 @@
           "verb": "herauskristallisieren",
           "meaning": "يتبلور / يتضح",
           "type": "منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "kristallisiere heraus",
               "du": "kristallisierst heraus",
@@ -1947,15 +2571,31 @@
               "ihr": "kristallisiert heraus",
               "sie/Sie": "kristallisieren heraus"
             },
+            "Präteritum": {
+              "ich": "kristallisierte heraus",
+              "du": "kristallisiertest heraus",
+              "er/sie/es": "kristallisierte heraus",
+              "wir": "kristallisierten heraus",
+              "ihr": "kristallisiertet heraus",
+              "sie/Sie": "kristallisierten heraus"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "herauskristallisiert",
-              "example": {
-                "de": "Es hat sich herauskristallisiert, dass wir eine Lösung brauchen.",
-                "ar": "لقد تبين أننا بحاجة إلى حل.",
-                "pron": "إس هات زيش هِراوسكريستاليزيرت، داس فير آينِه لوزونغ براوخِن"
-              }
-            }
+              "ich": "habe heraus kristallisiert",
+              "du": "hast heraus kristallisiert",
+              "er/sie/es": "hat heraus kristallisiert",
+              "wir": "haben heraus kristallisiert",
+              "ihr": "habt heraus kristallisiert",
+              "sie/Sie": "haben heraus kristallisiert"
+            },
+            "Futur I": {
+              "ich": "werde herauskristallisieren",
+              "du": "wirst herauskristallisieren",
+              "er/sie/es": "wird herauskristallisieren",
+              "wir": "werden herauskristallisieren",
+              "ihr": "werdet herauskristallisieren",
+              "sie/Sie": "werden herauskristallisieren"
+            },
+            "Imperativ": {}
           },
           "examples": [
             {
@@ -1984,7 +2624,7 @@
           "verb": "erfordern",
           "meaning": "يتطلب / يستلزم",
           "type": "منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "erfordere",
               "du": "erforderst",
@@ -1993,15 +2633,31 @@
               "ihr": "erfordert",
               "sie/Sie": "erfordern"
             },
+            "Präteritum": {
+              "ich": "erforderte",
+              "du": "erfordertest",
+              "er/sie/es": "erforderte",
+              "wir": "erforderten",
+              "ihr": "erfordertet",
+              "sie/Sie": "erforderten"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "erfordert",
-              "example": {
-                "de": "Diese Aufgabe hat viel Geduld erfordert.",
-                "ar": "تطلبت هذه المهمة صبرًا كبيرًا.",
-                "pron": "ديزِه آوفغابِه هات فيل غِدولت إرفوردِرت"
-              }
-            }
+              "ich": "habe erfordert",
+              "du": "hast erfordert",
+              "er/sie/es": "hat erfordert",
+              "wir": "haben erfordert",
+              "ihr": "habt erfordert",
+              "sie/Sie": "haben erfordert"
+            },
+            "Futur I": {
+              "ich": "werde erfordern",
+              "du": "wirst erfordern",
+              "er/sie/es": "wird erfordern",
+              "wir": "werden erfordern",
+              "ihr": "werdet erfordern",
+              "sie/Sie": "werden erfordern"
+            },
+            "Imperativ": {}
           },
           "examples": [
             {
@@ -2030,7 +2686,7 @@
           "verb": "darlegen",
           "meaning": "يعرض / يشرح بالتفصيل",
           "type": "منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "lege dar",
               "du": "legst dar",
@@ -2039,14 +2695,34 @@
               "ihr": "legt dar",
               "sie/Sie": "legen dar"
             },
+            "Präteritum": {
+              "ich": "legte dar",
+              "du": "legtest dar",
+              "er/sie/es": "legte dar",
+              "wir": "legten dar",
+              "ihr": "legtet dar",
+              "sie/Sie": "legten dar"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "dargelegt",
-              "example": {
-                "de": "Er hat seine Argumente überzeugend dargelegt.",
-                "ar": "لقد عرض حججه بشكل مقنع.",
-                "pron": "إر هات زاينِه آرغومِنتِه إوبِرتسويغِنت دارغِليخت"
-              }
+              "ich": "habe dargelegt",
+              "du": "hast dargelegt",
+              "er/sie/es": "hat dargelegt",
+              "wir": "haben dargelegt",
+              "ihr": "habt dargelegt",
+              "sie/Sie": "haben dargelegt"
+            },
+            "Futur I": {
+              "ich": "werde darlegen",
+              "du": "wirst darlegen",
+              "er/sie/es": "wird darlegen",
+              "wir": "werden darlegen",
+              "ihr": "werdet darlegen",
+              "sie/Sie": "werden darlegen"
+            },
+            "Imperativ": {
+              "du": "leg dar",
+              "ihr": "legt dar",
+              "Sie": "legen Sie dar"
             }
           },
           "examples": [
@@ -2076,7 +2752,7 @@
           "verb": "nachweisen",
           "meaning": "يثبت / يبرهن",
           "type": "غير منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "weise nach",
               "du": "weist nach",
@@ -2085,14 +2761,34 @@
               "ihr": "weist nach",
               "sie/Sie": "weisen nach"
             },
+            "Präteritum": {
+              "ich": "wies nach",
+              "du": "wiesest nach",
+              "er/sie/es": "wies nach",
+              "wir": "wiesen nach",
+              "ihr": "wieset nach",
+              "sie/Sie": "wiesen nach"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "nachgewiesen",
-              "example": {
-                "de": "Die Studie hat einen Zusammenhang nachgewiesen.",
-                "ar": "أثبتت الدراسة وجود علاقة.",
-                "pron": "دي شتوديِه هات آينِن تسوزامِنهانغ ناخغِفيزِن"
-              }
+              "ich": "habe nachgewiesen",
+              "du": "hast nachgewiesen",
+              "er/sie/es": "hat nachgewiesen",
+              "wir": "haben nachgewiesen",
+              "ihr": "habt nachgewiesen",
+              "sie/Sie": "haben nachgewiesen"
+            },
+            "Futur I": {
+              "ich": "werde nachweisen",
+              "du": "wirst nachweisen",
+              "er/sie/es": "wird nachweisen",
+              "wir": "werden nachweisen",
+              "ihr": "werdet nachweisen",
+              "sie/Sie": "werden nachweisen"
+            },
+            "Imperativ": {
+              "du": "weis nach",
+              "ihr": "weist nach",
+              "Sie": "weisen Sie nach"
             }
           },
           "examples": [
@@ -2122,7 +2818,7 @@
           "verb": "hervorheben",
           "meaning": "يبرز / يشدد على",
           "type": "غير منتظم",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "hebe hervor",
               "du": "hebst hervor",
@@ -2131,14 +2827,34 @@
               "ihr": "hebt hervor",
               "sie/Sie": "heben hervor"
             },
+            "Präteritum": {
+              "ich": "hob hervor",
+              "du": "hobst hervor",
+              "er/sie/es": "hob hervor",
+              "wir": "hoben hervor",
+              "ihr": "hobt hervor",
+              "sie/Sie": "hoben hervor"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "hervorgehoben",
-              "example": {
-                "de": "Der Autor hat diesen Punkt besonders hervorgehoben.",
-                "ar": "أبرز المؤلف هذه النقطة بشكل خاص.",
-                "pron": "دير آوتور هات ديزِن بونكت بِزوندِرس هيرفورغِهوبِن"
-              }
+              "ich": "habe hervorgehoben",
+              "du": "hast hervorgehoben",
+              "er/sie/es": "hat hervorgehoben",
+              "wir": "haben hervorgehoben",
+              "ihr": "habt hervorgehoben",
+              "sie/Sie": "haben hervorgehoben"
+            },
+            "Futur I": {
+              "ich": "werde hervorheben",
+              "du": "wirst hervorheben",
+              "er/sie/es": "wird hervorheben",
+              "wir": "werden hervorheben",
+              "ihr": "werdet hervorheben",
+              "sie/Sie": "werden hervorheben"
+            },
+            "Imperativ": {
+              "du": "heb hervor",
+              "ihr": "hebt hervor",
+              "Sie": "heben Sie hervor"
             }
           },
           "examples": [
@@ -2168,7 +2884,7 @@
           "verb": "sich niederschlagen",
           "meaning": "ينعكس / يظهر أثره",
           "type": "غير منتظم انعكاسي",
-          "tenses": {
+          "conjugations": {
             "Präsens": {
               "ich": "schlage mich nieder",
               "du": "schlägst dich nieder",
@@ -2177,15 +2893,31 @@
               "ihr": "schlagt euch nieder",
               "sie/Sie": "schlagen sich nieder"
             },
+            "Präteritum": {
+              "ich": "schlug mich nieder",
+              "du": "schlugst dich nieder",
+              "er/sie/es": "schlug sich nieder",
+              "wir": "schlugen uns nieder",
+              "ihr": "schlugt euch nieder",
+              "sie/Sie": "schlugen sich nieder"
+            },
             "Perfekt": {
-              "auxiliary": "haben",
-              "participle": "niedergeschlagen",
-              "example": {
-                "de": "Die Krise hat sich in den Zahlen niedergeschlagen.",
-                "ar": "انعكست الأزمة في الأرقام.",
-                "pron": "دي كريزِه هات زيش إن دِن تسالِن نيدِرغِشلاغِن"
-              }
-            }
+              "ich": "habe mich niedergeschlagen",
+              "du": "hast dich niedergeschlagen",
+              "er/sie/es": "hat sich niedergeschlagen",
+              "wir": "haben uns niedergeschlagen",
+              "ihr": "habt euch niedergeschlagen",
+              "sie/Sie": "haben sich niedergeschlagen"
+            },
+            "Futur I": {
+              "ich": "werde mich niederschlagen",
+              "du": "wirst dich niederschlagen",
+              "er/sie/es": "wird sich niederschlagen",
+              "wir": "werden uns niederschlagen",
+              "ihr": "werdet euch niederschlagen",
+              "sie/Sie": "werden sich niederschlagen"
+            },
+            "Imperativ": {}
           },
           "examples": [
             {
