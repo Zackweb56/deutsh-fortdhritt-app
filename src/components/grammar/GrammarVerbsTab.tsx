@@ -50,6 +50,18 @@ type GrammarTopic = {
   examples?: { de: string; ar: string; pron?: string }[];
 };
 
+// Map for tense display names with German and Arabic
+const tenseDisplayNames: Record<string, { ar: string; de: string }> = {
+  'Präsens': { ar: 'المضارع', de: 'Präsens' },
+  'Perfekt': { ar: 'الماضي التام', de: 'Perfekt' },
+  'Präteritum': { ar: 'الماضي البسيط', de: 'Präteritum' },
+  'Futur I': { ar: 'المستقبل', de: 'Futur I' },
+  'Plusquamperfekt': { ar: 'الماضي التام السابق', de: 'Plusquamperfekt' },
+  'Konjunktiv I': { ar: 'صيغة الشرط I', de: 'Konjunktiv I' },
+  'Konjunktiv II': { ar: 'صيغة الشرط II', de: 'Konjunktiv II' },
+  'Imperativ': { ar: 'صيغة الأمر', de: 'Imperativ' }
+};
+
 function highlightVerbText(v: VerbItem, text: string) {
   if (!text) return text as unknown as any;
   const forms = new Set<string>();
@@ -320,17 +332,22 @@ export const GrammarVerbsTab = () => {
                     {renderTypeBadge(v.type)}
                   </div>
 
-                  {/* Tense selector inside each card */}
+                  {/* Tense selector inside each card - Enhanced with Arabic */}
                   {tenses.length > 0 && (
                     <div className="flex items-center justify-between gap-3 bg-muted/30 p-2 rounded-lg border border-border/50">
-                      <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">الزمن:</span>
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground whitespace-nowrap">اختر الزمن:</span>
                       <Select value={currentTense} onValueChange={(t) => setVerbTenses(prev => ({ ...prev, [v.verb]: t }))}>
-                        <SelectTrigger className="h-8 w-[120px] text-xs">
+                        <SelectTrigger className="h-8 min-w-[180px] w-auto text-xs">
                           <SelectValue placeholder="الزمن" />
                         </SelectTrigger>
                         <SelectContent>
                           {tenses.map(t => (
-                            <SelectItem key={t} value={t}>{t}</SelectItem>
+                            <SelectItem key={t} value={t}>
+                              <div className="flex items-center justify-between gap-2 w-full">
+                                <span className="text-xs">{tenseDisplayNames[t]?.ar || t}</span>
+                                <span className="text-[9px] opacity-60">({tenseDisplayNames[t]?.de || t})</span>
+                              </div>
+                            </SelectItem>
                           ))}
                         </SelectContent>
                       </Select>
@@ -380,6 +397,8 @@ export const GrammarVerbsTab = () => {
 };
 
 function renderConjugation(v: VerbItem, tense: string) {
+  const tenseDisplay = tenseDisplayNames[tense] || { ar: tense, de: tense };
+  
   const conj = v.conjugations?.[tense];
   
   if (conj) {
@@ -388,9 +407,10 @@ function renderConjugation(v: VerbItem, tense: string) {
     
     return (
       <div className="mt-3 space-y-3">
-        <div className="text-[10px] font-black text-muted-foreground uppercase tracking-[0.2em] flex items-center gap-2">
-          <span className="h-1 w-1 rounded-full bg-accent" />
-          {tense}
+        <div className="text-[11px] font-semibold text-muted-foreground flex items-center gap-2">
+          <span>📖 التصريف في</span>
+          <span className="text-foreground font-bold">{tenseDisplay.ar}</span>
+          <span className="text-[9px] opacity-50">({tenseDisplay.de})</span>
         </div>
         <div className="rounded-xl overflow-hidden border border-border/50 bg-black/5">
           <Table>
@@ -401,7 +421,7 @@ function renderConjugation(v: VerbItem, tense: string) {
                     {highlightVerbForm(v.verb, conj[k])}
                   </TableCell>
                   <TableCell className="py-2 px-4 text-[11px] text-muted-foreground font-medium text-left border-r border-border/10">
-                    {k}
+                    {getPronounArabic(k)}
                   </TableCell>
                 </TableRow>
               ) : null)}
@@ -417,9 +437,10 @@ function renderConjugation(v: VerbItem, tense: string) {
     const order = ['ich', 'du', 'er/sie/es', 'wir', 'ihr', 'sie/Sie'];
     return (
       <div className="mt-3 space-y-3">
-        <div className="text-[10px] font-black text-muted-foreground uppercase tracking-[0.2em] flex items-center gap-2">
-          <span className="h-1 w-1 rounded-full bg-accent" />
-          Präsens
+        <div className="text-[11px] font-semibold text-muted-foreground flex items-center gap-2">
+          <span>📖 التصريف في</span>
+          <span className="text-foreground font-bold">المضارع</span>
+          <span className="text-[9px] opacity-50">(Präsens)</span>
         </div>
         <Table className="border-border/50">
           <TableBody>
@@ -428,7 +449,9 @@ function renderConjugation(v: VerbItem, tense: string) {
                 <TableCell className="text-right py-2 px-4 font-bold">
                   {highlightVerbForm(v.verb, (pr as any)[k])}
                 </TableCell>
-                <TableCell className="py-2 px-4 text-[11px] text-muted-foreground text-left border-r border-border/10">{k}</TableCell>
+                <TableCell className="py-2 px-4 text-[11px] text-muted-foreground text-left border-r border-border/10">
+                  {getPronounArabic(k)}
+                </TableCell>
               </TableRow>
             ) : null)}
           </TableBody>
@@ -440,33 +463,88 @@ function renderConjugation(v: VerbItem, tense: string) {
   if (tense === 'Perfekt' && v.tenses?.Perfekt) {
     const perf = v.tenses.Perfekt;
     return (
-      <div className="space-y-3">
-        <div className="text-sm font-bold border-b border-border/20 pb-2">الماضي التام (Perfekt)</div>
-        <div className="space-y-2.5 p-1">
+      <div className="mt-3 space-y-4">
+        {/* Header with "التصريف في" phrase */}
+        <div className="text-[11px] font-semibold text-muted-foreground flex items-center gap-2">
+          <span>📖 التصريف في</span>
+          <span className="text-foreground font-bold">الماضي التام</span>
+          <span className="text-[9px] opacity-50">(Perfekt)</span>
+        </div>
+        
+        {/* Perfekt Info Section - Displayed BEFORE the table */}
+        <div className="space-y-3 bg-muted/10 rounded-lg p-3 border border-border/30">
+          {/* الفعل المساعد section */}
           {perf.auxiliary && (
-            <div className="text-xs text-muted-foreground flex justify-between items-center">
-              <span>الفعل المساعد:</span>
-              <span className={perf.auxiliary === 'sein' ? 'text-red-500 font-black' : 'text-emerald-500 font-black'}>{perf.auxiliary}</span>
+            <div className="flex items-center justify-between border-b border-border/20 pb-2">
+              <div className="flex flex-col">
+                <span className="text-xs font-medium text-muted-foreground">الفعل المساعد:</span>
+                <span className="text-[9px] text-muted-foreground/60">Hilfsverb</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className={`text-sm font-bold ${perf.auxiliary === 'sein' ? 'text-red-500' : 'text-emerald-500'}`}>
+                  {perf.auxiliary}
+                </span>
+                <Badge variant="outline" className="text-[9px]">
+                  {perf.auxiliary === 'sein' ? 'يكون' : 'يملك'}
+                </Badge>
+              </div>
             </div>
           )}
+          
+          {/* اسم المفعول section */}
           {perf.participle && (
-            <div className="text-xs text-muted-foreground flex justify-between items-center">
-              <span>اسم المفعول:</span>
-              <span className="text-accent font-black tracking-wide">{perf.participle}</span>
-            </div>
-          )}
-          {perf.example && (
-            <div className="p-3 rounded-lg border border-border bg-accent/5 mt-3">
-              <div className="font-bold text-sm text-foreground">{highlightVerbText(v, perf.example.de)}</div>
-              <div className="text-xs text-muted-foreground mt-1">{perf.example.ar}</div>
+            <div className="flex items-center justify-between border-b border-border/20 pb-2">
+              <div className="flex flex-col">
+                <span className="text-xs font-medium text-muted-foreground">اسم المفعول:</span>
+                <span className="text-[9px] text-muted-foreground/60">Partizip II</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-sm font-bold text-accent tracking-wide">
+                  {perf.participle}
+                </span>
+                <Badge variant="outline" className="text-[9px]">
+                  Partizip II
+                </Badge>
+              </div>
             </div>
           )}
         </div>
+        
+        {/* Example sentence with explanation */}
+        {perf.example && (
+          <div className="mt-2">
+            <div className="text-[10px] font-medium text-muted-foreground mb-2">📖 مثال:</div>
+            <div className="p-2 rounded-lg bg-accent/5 border border-accent/20">
+              <div className="font-bold text-sm text-foreground">{highlightVerbText(v, perf.example.de)}</div>
+              <div className="text-xs text-muted-foreground mt-1.5">{perf.example.ar}</div>
+              {perf.example.pron && (
+                <div className="text-[10px] text-muted-foreground/60 mt-1 italic">{perf.example.pron}</div>
+              )}
+            </div>
+          </div>
+        )}
       </div>
     );
   }
 
   return <div className="py-4 text-center text-xs text-muted-foreground/50 italic border border-dashed border-border rounded-lg">غير متوفر.</div>;
+}
+
+// Helper function to get Arabic pronouns
+function getPronounArabic(pronoun: string): string {
+  const pronounMap: Record<string, string> = {
+    'ich': 'أنا',
+    'du': 'أنت',
+    'er': 'هو',
+    'sie': 'هي',
+    'es': 'هو',
+    'wir': 'نحن',
+    'ihr': 'أنتم',
+    'sie/Sie': 'هم / سي',
+    'Sie': 'حضرتك',
+    'er/sie/es': 'هو / هي / هو'
+  };
+  return pronounMap[pronoun] || pronoun;
 }
 
 function renderFlexibleTable(table: Record<string, any>) {

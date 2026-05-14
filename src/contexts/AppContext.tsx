@@ -38,7 +38,7 @@ interface AppState {
   days: Day[];
   vocabulary: VocabularyItem[];
   resources: Resource[];
-  currentTab: 'schedule' | 'vocabulary' | 'grammar' | 'lessons' | 'listening' | 'writing' | 'resources' | 'preparation';
+  currentTab: 'schedule' | 'vocabulary' | 'grammar' | 'lessons' | 'listening' | 'speaking' | 'writing' | 'resources' | 'preparation';
   preparationState: {
     step: 'level' | 'institute' | 'module' | 'teil' | 'topic' | 'preview';
     level: string | null;
@@ -51,7 +51,7 @@ interface AppState {
 }
 
 interface AppContextType extends AppState {
-  setCurrentTab: (tab: 'schedule' | 'vocabulary' | 'grammar' | 'lessons' | 'listening' | 'writing' | 'resources' | 'preparation') => void;
+  setCurrentTab: (tab: 'schedule' | 'vocabulary' | 'grammar' | 'lessons' | 'listening' | 'speaking' | 'writing' | 'resources' | 'preparation') => void;
   toggleHourComplete: (dayId: string, hourId: string) => void;
   updateTimer: (dayId: string, hourId: string, seconds: number, running: boolean) => void;
   addVocabulary: (item: Omit<VocabularyItem, 'id' | 'dateAdded'>) => void;
@@ -528,7 +528,7 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
     }
   }, [state]);
 
-  const setCurrentTab = (tab: 'schedule' | 'vocabulary' | 'grammar' | 'lessons' | 'listening' | 'writing' | 'resources' | 'preparation') => {
+  const setCurrentTab = (tab: 'schedule' | 'vocabulary' | 'grammar' | 'lessons' | 'listening' | 'speaking' | 'writing' | 'resources' | 'preparation') => {
     setState(prev => ({ ...prev, currentTab: tab }));
   };
   

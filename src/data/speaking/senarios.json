@@ -1,0 +1,1192 @@
+{
+  "levels": [
+    {
+      "level": "A1",
+      "description": {
+        "de": "Anfänger. Einfache Sätze, Präsens, Grundwortschatz. Kurze Dialoge (3-5 Wortwechsel).",
+        "ar": "مبتدئ. جمل بسيطة، زمن المضارع، مفردات أساسية. محادثات قصيرة (3-5 تبادلات)."
+      },
+      "scenarios": [
+        {
+          "id": "A1_restaurant",
+          "topic": "Im Restaurant",
+          "icon": "🍴",
+          "difficulty": "A1",
+          "ai_name": "Herr Weber",
+          "ai_gender": "männlich",
+          "description": {
+            "de": "Du bist in einem deutschen Restaurant. Ziel: Etwas bestellen, nach der Rechnung fragen und sich verabschieden. Simuliere einen echten Restaurantbesuch.",
+            "ar": "أنت في مطعم ألماني. الهدف: طلب الطعام، طلب الفاتورة، والوداع. محاكاة زيارة حقيقية لمطعم."
+          },
+          "system_prompt": "Du bist Herr Weber, ein Kellner in einem deutschen Restaurant. Der Nutzer ist Gast. Sprich nur A1-Deutsch: kurze Sätze, Präsens, höflich mit 'Sie'. Frage nach der Bestellung. Beende das Gespräch höflich, wenn der Nutzer einen der Trigger-Sätze sagt.",
+          "user_role": "Gast",
+          "initial_message": "Guten Tag! Was möchten Sie trinken?",
+          "ending_triggers": ["Die Rechnung, bitte", "Ich möchte zahlen", "Auf Wiedersehen", "Tschüss"],
+          "tips": {
+            "de": "Sag 'Ich möchte...' oder 'Ich hätte gern...' für deine Bestellung. Beispiel: 'Ich möchte eine Pizza' oder 'Ich hätte gern ein Wasser'. Am Ende sag 'Die Rechnung, bitte' zum Bezahlen. Verabschiede dich mit 'Auf Wiedersehen'.",
+            "ar": "قل 'Ich möchte...' أو 'Ich hätte gern...' لطلبك. مثال: 'أريد بيتزا' أو 'أريد ماء من فضلك'. في النهاية قل 'الفاتورة من فضلك' لتدفع. ودّع بـ 'وداعًا'."
+          },
+          "key_vocab": {
+            "de": ["Speisekarte", "bestellen", "trinken", "essen", "zahlen", "Rechnung"],
+            "ar": ["قائمة طعام", "يطلب", "يشرب", "يأكل", "يدفع", "الفاتورة"]
+          }
+        },
+        {
+          "id": "A1_supermarkt",
+          "topic": "Im Supermarkt",
+          "icon": "🛒",
+          "difficulty": "A1",
+          "ai_name": "Frau Schmidt",
+          "ai_gender": "weiblich",
+          "description": {
+            "de": "Du suchst Produkte im Supermarkt und fragst nach Preisen. Ziel: Einen einfachen Einkauf mit Fragen wie 'Wo ist ...?' simulieren.",
+            "ar": "أنت تبحث عن منتجات في السوبرماركت وتسأل عن الأسعار. الهدف: محاكاة تسوق بسيط بأسئلة مثل 'أين يوجد...؟'"
+          },
+          "system_prompt": "Du bist Frau Schmidt, eine Verkäuferin im Supermarkt. Der Nutzer sucht Produkte. Sprich A1-Deutsch: 'Wo ist...?', 'Haben Sie...?', 'Das kostet...'. Gib kurze Antworten. Beende das Gespräch höflich bei Trigger-Phrasen.",
+          "user_role": "Kunde",
+          "initial_message": "Guten Tag! Kann ich Ihnen helfen?",
+          "ending_triggers": ["Vielen Dank", "Das ist alles", "Schönen Tag", "Tschüss"],
+          "tips": {
+            "de": "Frage 'Wo finde ich...?' oder 'Haben Sie...?'. Für den Preis: 'Was kostet das?'. Wenn du fertig bist, sag 'Das ist alles, danke' und dann 'Schönen Tag'.",
+            "ar": "اسأل 'أين أجد...؟' أو 'هل لديك...؟'. للسعر: 'كم ثمن هذا؟'. عندما تنتهي قل 'هذا كل شيء، شكرًا' ثم 'يوم سعيد'."
+          },
+          "key_vocab": {
+            "de": ["kaufen", "kosten", "Obst", "Gemüse", "Brot", "Milch"],
+            "ar": ["يشتري", "يكلف", "فاكهة", "خضروات", "خبز", "حليب"]
+          }
+        },
+        {
+          "id": "A1_arzttermin",
+          "topic": "Beim Arzt (Termin machen)",
+          "icon": "👨‍⚕️",
+          "difficulty": "A1",
+          "ai_name": "Frau Müller",
+          "ai_gender": "weiblich",
+          "description": {
+            "de": "Du rufst in einer Arztpraxis an, um einen Termin zu machen. Ziel: Ein einfaches Telefonat mit Namen und Uhrzeit simulieren.",
+            "ar": "أنت تتصل بعيادة طبية لتحديد موعد. الهدف: محاكاة مكالمة هاتفية بسيطة بالاسم والوقت."
+          },
+          "system_prompt": "Du bist Frau Müller, die Sprechstundenhilfe. Der Nutzer will einen Termin. Sprich A1-Deutsch: Name, Uhrzeit, einfache Fragen. Beende das Gespräch höflich bei Trigger-Phrasen.",
+          "user_role": "Patient",
+          "initial_message": "Arztpraxis Müller, guten Tag! Wie heißen Sie?",
+          "ending_triggers": ["Danke", "Auf Wiedersehen", "Bis morgen", "Tschüss"],
+          "tips": {
+            "de": "Sag zuerst deinen Namen: 'Ich heiße...'. Dann sag 'Ich brauche einen Termin'. Bei Schmerzen: 'Ich habe Schmerzen im Bauch / Kopf'. Am Ende: 'Danke, auf Wiedersehen'.",
+            "ar": "قل اسمك أولاً: 'اسمي...'. ثم قل 'أحتاج موعدًا'. عند الألم: 'لدي ألم في البطن / الرأس'. في النهاية: 'شكرًا، وداعًا'."
+          },
+          "key_vocab": {
+            "de": ["Termin", "krank", "Schmerzen", "Uhrzeit", "Name"],
+            "ar": ["موعد", "مريض", "ألم", "وقت", "اسم"]
+          }
+        },
+        {
+          "id": "A1_hobby",
+          "topic": "Hobbys und Freizeit",
+          "icon": "⚽",
+          "difficulty": "A1",
+          "ai_name": "Tom",
+          "ai_gender": "männlich",
+          "description": {
+            "de": "Du triffst einen neuen Nachbarn und sprichst über Hobbys. Ziel: Eine lockere Unterhaltung auf Du-Ebene führen.",
+            "ar": "تقابل جارًا جديدًا وتتحدث عن الهوايات. الهدف: إجراء محادثة غير رسمية بصيغة المُخاطَب 'du'."
+          },
+          "system_prompt": "Du bist Tom, ein neuer Nachbar. Frag nach Hobbys. Sprich A1-Deutsch mit 'du'. Sage 'Was machst du gerne?' Beende das Gespräch höflich bei Trigger-Phrasen.",
+          "user_role": "Nachbar",
+          "initial_message": "Hallo! Ich bin Tom. Was machst du gerne in deiner Freizeit?",
+          "ending_triggers": ["Schönen Abend", "Bis bald", "Mach's gut", "Tschüss"],
+          "tips": {
+            "de": "Sag 'Ich spiele Fußball', 'Ich lese gerne' oder 'Ich schwimme'. Du kannst auch fragen 'Und du?'. Zum Abschied: 'Schönen Abend' oder 'Bis bald'.",
+            "ar": "قل 'ألعب كرة القدم'، 'أنا أقرأ كثيرًا' أو 'أنا أسبح'. يمكنك أن تسأل 'وأنت؟'. للوداع: 'أمسية سعيدة' أو 'أراك قريبًا'."
+          },
+          "key_vocab": {
+            "de": ["Fußball", "lesen", "Musik", "Freunde", "schwimmen", "tanzen"],
+            "ar": ["كرة قدم", "يقرأ", "موسيقى", "أصدقاء", "يسبح", "يرقص"]
+          }
+        },
+        {
+          "id": "A1_cafe",
+          "topic": "Im Café",
+          "icon": "☕",
+          "difficulty": "A1",
+          "ai_name": "Laura",
+          "ai_gender": "weiblich",
+          "description": {
+            "de": "Du bist in einem Café und bestellst etwas. Ziel: Eine einfache Bestellung an der Theke simulieren.",
+            "ar": "أنت في مقهى وتطلب شيئًا. الهدف: محاكاة طلب بسيط عند المنضدة."
+          },
+          "system_prompt": "Du bist Laura, eine Barista. Nimm Bestellungen auf: Kaffee, Tee, Kuchen. Sprich kurze Sätze auf A1-Niveau. Beende das Gespräch höflich bei Trigger-Phrasen.",
+          "user_role": "Kunde",
+          "initial_message": "Hallo! Was darf es sein?",
+          "ending_triggers": ["Danke, tschüss", "Auf Wiedersehen", "Schönen Tag"],
+          "tips": {
+            "de": "Sag 'Ich hätte gerne einen Kaffee' oder 'Einen Tee, bitte'. Du kannst sagen 'mit Milch' oder 'mit Zucker'. Zum Bezahlen: 'Ich möchte zahlen'. Dann 'Danke, tschüss'.",
+            "ar": "قل 'أريد قهوة من فضلك' أو 'شاي من فضلك'. يمكنك أن تقول 'مع حليب' أو 'مع سكر'. لتدفع: 'أريد أن أدفع'. ثم 'شكرًا، وداعًا'."
+          },
+          "key_vocab": {
+            "de": ["Kaffee", "Tee", "Kuchen", "Milch", "Zucker", "bezahlen"],
+            "ar": ["قهوة", "شاي", "كعكة", "حليب", "سكر", "يدفع"]
+          }
+        },
+        {
+          "id": "A1_familie",
+          "topic": "Über die Familie sprechen",
+          "icon": "👪",
+          "difficulty": "A1",
+          "ai_name": "Ahmed",
+          "ai_gender": "männlich",
+          "description": {
+            "de": "Ein Kollege fragt dich nach deiner Familie. Ziel: Ein einfaches Gespräch über Familienmitglieder führen.",
+            "ar": "زميل يسألك عن عائلتك. الهدف: إجراء محادثة بسيطة عن أفراد العائلة."
+          },
+          "system_prompt": "Du bist Ahmed, ein Kollege. Frag nach der Familie: 'Hast du Kinder? Wie alt?' Sprich einfaches A1-Deutsch mit 'du'. Beende das Gespräch höflich bei Trigger-Phrasen.",
+          "user_role": "Kollege",
+          "initial_message": "Hallo! Erzähl mir bitte von deiner Familie.",
+          "ending_triggers": ["Danke für das Gespräch", "Bis morgen", "Tschüss"],
+          "tips": {
+            "de": "Erzähle: 'Meine Mutter heißt...', 'Ich habe einen Bruder', 'Mein Vater ist Arzt'. Du kannst auch sagen 'Ich habe zwei Schwestern'. Am Ende: 'Danke für das Gespräch'.",
+            "ar": "احكِ: 'والدتي اسمها...'، 'لدي أخ واحد'، 'والدي طبيب'. يمكنك أن تقول 'لدي أختان'. في النهاية: 'شكرًا على الحديث'."
+          },
+          "key_vocab": {
+            "de": ["Mutter", "Vater", "Bruder", "Schwester", "Kind", "Eltern"],
+            "ar": ["أم", "أب", "أخ", "أخت", "طفل", "والدان"]
+          }
+        },
+        {
+          "id": "A1_zug",
+          "topic": "Am Zugfahrkartenautomat",
+          "icon": "🎫",
+          "difficulty": "A1",
+          "ai_name": "Herr Klein",
+          "ai_gender": "männlich",
+          "description": {
+            "de": "Du brauchst Hilfe am Fahrkartenautomaten. Ziel: Eine kurze Interaktion mit einem Helfer simulieren.",
+            "ar": "أنت بحاجة لمساعدة في آلة تذاكر القطار. الهدف: محاكاة تفاعل قصير مع مساعد."
+          },
+          "system_prompt": "Du bist Herr Klein, ein Helfer am Automaten. Sprich A1-Deutsch: 'Ein Ticket nach Berlin?' 'Das kostet...'. Beende das Gespräch höflich bei Trigger-Phrasen.",
+          "user_role": "Fahrgast",
+          "initial_message": "Brauchen Sie Hilfe bei der Fahrkarte?",
+          "ending_triggers": ["Danke, das reicht", "Auf Wiedersehen", "Tschüss"],
+          "tips": {
+            "de": "Sag 'Ein Ticket nach [Stadt], bitte'. Für eine Richtung: 'einfach', für hin und zurück: 'hin und zurück'. Frage 'Wie viel kostet das?'. Dann sag 'Danke, das reicht'.",
+            "ar": "قل 'تذكرة إلى [اسم المدينة] من فضلك'. للاتجاه الواحد: 'ذهاب فقط'، للذهاب والإياب: 'ذهاب وإياب'. اسأل 'كم ثمن ذلك؟'. ثم قل 'شكرًا، هذا يكفي'."
+          },
+          "key_vocab": {
+            "de": ["Ticket", "einfach", "hin und zurück", "Gleis", "Abfahrt"],
+            "ar": ["تذكرة", "ذهاب فقط", "ذهاب وإياب", "رصيف", "مغادرة"]
+          }
+        },
+        {
+          "id": "A1_wetter",
+          "topic": "Über das Wetter sprechen",
+          "icon": "☀️",
+          "difficulty": "A1",
+          "ai_name": "Frau Bauer",
+          "ai_gender": "weiblich",
+          "description": {
+            "de": "Du triffst eine Nachbarin im Fahrstuhl und sprichst über das Wetter. Ziel: Eine kurze Smalltalk-Situation simulieren.",
+            "ar": "تقابل جارة في المصعد وتتحدث عن الطقس. الهدف: محاكاة موقف دردشة قصير."
+          },
+          "system_prompt": "Du bist Frau Bauer, eine Nachbarin im Fahrstuhl. Sprich A1-Deutsch: 'Heute ist es kalt / warm / sonnig.' Einfache Sätze. Beende das Gespräch höflich bei Trigger-Phrasen.",
+          "user_role": "Nachbar",
+          "initial_message": "Guten Morgen! Schönes Wetter heute, oder?",
+          "ending_triggers": ["Ja, tschüss", "Auf Wiedersehen", "Schönen Tag"],
+          "tips": {
+            "de": "Sag 'Ja, die Sonne scheint' oder 'Nein, es regnet leider'. Du kannst sagen 'Es ist sehr kalt heute' oder 'Schön warm'. Zum Schluss: 'Schönen Tag noch'.",
+            "ar": "قل 'نعم، الشمس مشرقة' أو 'لا، إنها تمطر للأسف'. يمكنك أن تقول 'الجو بارد جدًا اليوم' أو 'دافئ وجميل'. في النهاية: 'أتمنى لك يومًا سعيدًا'."
+          },
+          "key_vocab": {
+            "de": ["Sonne", "Regen", "kalt", "warm", "windig", "Schnee"],
+            "ar": ["شمس", "مطر", "بارد", "دافئ", "عاصف", "ثلج"]
+          }
+        },
+        {
+          "id": "A1_geburtstag",
+          "topic": "Geburtstagseinladung",
+          "icon": "🎂",
+          "difficulty": "A1",
+          "ai_name": "Lena",
+          "ai_gender": "weiblich",
+          "description": {
+            "de": "Ein Freund lädt dich zu seinem Geburtstag ein. Ziel: Das Annehmen oder Ablehnen einer Einladung simulieren.",
+            "ar": "صديق يدعوك لعيد ميلاده. الهدف: محاكاة قبول أو رفض دعوة."
+          },
+          "system_prompt": "Du bist Lena, eine Freundin. Lade den Nutzer zum Geburtstag ein. Sprich A1-Deutsch: 'Wann? Wo?' Einfache Sätze mit 'du'. Beende das Gespräch höflich bei Trigger-Phrasen.",
+          "user_role": "Freund",
+          "initial_message": "Hey! Ich habe am Samstag Geburtstag. Kommst du?",
+          "ending_triggers": ["Danke für die Einladung", "Tschüss", "Bis Samstag"],
+          "tips": {
+            "de": "Wenn du kommen willst: 'Ja, gerne! Wann fängt die Party an?' oder 'Kann ich etwas mitbringen?' Wenn du nicht kannst: 'Leider kann ich nicht, aber danke für die Einladung'.",
+            "ar": "للحضور: 'نعم، بسعادة! متى تبدأ الحفلة؟' أو 'هل يمكنني إحضار شيء؟' للاعتذار: 'للأسف لا أستطيع، لكن شكرًا على الدعوة'."
+          },
+          "key_vocab": {
+            "de": ["Party", "Geschenk", "Einladung", "Uhrzeit", "kommen"],
+            "ar": ["حفلة", "هدية", "دعوة", "وقت", "يأتي"]
+          }
+        },
+        {
+          "id": "A1_tier",
+          "topic": "Haustiere",
+          "icon": "🐕",
+          "difficulty": "A1",
+          "ai_name": "Dr. Hoffmann",
+          "ai_gender": "männlich",
+          "description": {
+            "de": "Du bist mit deinem Haustier beim Tierarzt. Ziel: Eine einfache Untersuchung und Beschreibung der Symptome simulieren.",
+            "ar": "أنت عند الطبيب البيطري مع حيوانك الأليف. الهدف: محاكاة فحص بسيط ووصف الأعراض."
+          },
+          "system_prompt": "Du bist Dr. Hoffmann, ein Tierarzt. Sprich A1-Deutsch: 'Wie heißt dein Hund?' 'Ist er krank?' Einfache Sätze mit 'du'. Beende das Gespräch höflich bei Trigger-Phrasen.",
+          "user_role": "Besitzer",
+          "initial_message": "Hallo! Was hat dein Tier?",
+          "ending_triggers": ["Danke, tschüss", "Auf Wiedersehen", "Bis bald"],
+          "tips": {
+            "de": "Sag 'Mein Hund / meine Katze heißt...' und 'Er / Sie ist krank' oder 'Er hat Schmerzen'. Beschreibe: 'Er frisst nicht' oder 'Er humpelt'. Am Ende: 'Danke, auf Wiedersehen'.",
+            "ar": "قل 'كلبي / قطتي اسمه/اسمها...' و 'هو/هي مريض/مريضة' أو 'لديه ألم'. صف: 'هو لا يأكل' أو 'هو يعرج'. في النهاية: 'شكرًا، وداعًا'."
+          },
+          "key_vocab": {
+            "de": ["Hund", "Katze", "krank", "Arzt", "Tablette", "Schmerzen"],
+            "ar": ["كلب", "قطة", "مريض", "طبيب", "حبة دواء", "ألم"]
+          }
+        },
+        {
+          "id": "A1_schule",
+          "topic": "In der Schule (erster Tag)",
+          "icon": "📚",
+          "difficulty": "A1",
+          "ai_name": "Herr Fischer",
+          "ai_gender": "männlich",
+          "description": {
+            "de": "Du bist an deinem ersten Tag in einer Deutschklasse. Ziel: Eine kurze Vorstellung gegenüber dem Lehrer simulieren.",
+            "ar": "أنت في أول يوم لك في فصل الألمانية. الهدف: محاكاة تقديم نفسك قصيرًا للمعلم."
+          },
+          "system_prompt": "Du bist Herr Fischer, ein Lehrer. Sprich A1-Deutsch: 'Wie heißt du?' 'Woher kommst du?' Einfache Fragen mit 'du'. Beende das Gespräch höflich bei Trigger-Phrasen.",
+          "user_role": "Schüler",
+          "initial_message": "Willkommen in der Klasse! Stell dich bitte kurz vor.",
+          "ending_triggers": ["Danke, tschüss", "Auf Wiedersehen", "Bis morgen"],
+          "tips": {
+            "de": "Sag 'Ich heiße...' und 'Ich komme aus...' (z.B. aus Marokko). Sag 'Ich lerne Deutsch'. Bei Verständnisproblemen: 'Ich verstehe nicht, bitte wiederholen Sie'. Zum Schluss: 'Danke, auf Wiedersehen'.",
+            "ar": "قل 'اسمي...' و 'أنا من...' (مثلاً من المغرب). قل 'أنا أتعلم الألمانية'. إذا لم تفهم: 'أنا لا أفهم، من فضلك كرر'. في النهاية: 'شكرًا، وداعًا'."
+          },
+          "key_vocab": {
+            "de": ["Lehrer", "Schüler", "Klasse", "Deutsch", "lernen", "Frage"],
+            "ar": ["معلم", "طالب", "فصل", "ألمانية", "يتعلم", "سؤال"]
+          }
+        },
+        {
+          "id": "A1_post",
+          "topic": "Auf der Post (Briefmarke kaufen)",
+          "icon": "📮",
+          "difficulty": "A1",
+          "ai_name": "Frau König",
+          "ai_gender": "weiblich",
+          "description": {
+            "de": "Du gehst zur Post, um Briefmarken zu kaufen. Ziel: Eine einfache Transaktion an einem Schalter simulieren.",
+            "ar": "تذهب إلى مكتب البريد لشراء طوابع بريدية. الهدف: محاكاة معاملة بسيطة عند الشباك."
+          },
+          "system_prompt": "Du bist Frau König, eine Postmitarbeiterin. Der Nutzer will Briefmarken kaufen. Sprich A1-Deutsch: 'Wie viele?', 'Das kostet...'. Beende das Gespräch höflich bei Trigger-Phrasen.",
+          "user_role": "Kunde",
+          "initial_message": "Guten Tag! Was brauchen Sie?",
+          "ending_triggers": ["Danke, tschüss", "Auf Wiedersehen", "Schönen Tag"],
+          "tips": {
+            "de": "Sag 'Ich möchte eine Briefmarke nach Deutschland, bitte' oder 'Fünf Briefmarken, bitte'. Frage 'Wie viel kostet das?' Dann 'Danke, tschüss'.",
+            "ar": "قل 'أريد طابعًا بريديًا إلى ألمانيا من فضلك' أو 'خمسة طوابع من فضلك'. اسأل 'كم ثمن ذلك؟' ثم 'شكرًا، وداعًا'."
+          },
+          "key_vocab": {
+            "de": ["Briefmarke", "Post", "Karte", "schicken", "Euro", "Adresse"],
+            "ar": ["طابع بريدي", "بريد", "بطاقة", "يرسل", "يورو", "عنوان"]
+          }
+        }
+      ]
+    },
+    {
+      "level": "A2",
+      "description": {
+        "de": "Grundlagen. Perfekt (Vergangenheit), Modalverben (können, müssen, wollen). Längere Dialoge (5-8 Wortwechsel).",
+        "ar": "أساسي. الماضي التام (Perfekt)، أفعال المودال (يمكن، يجب، يريد). حوارات أطول (5-8 تبادلات)."
+      },
+      "scenarios": [
+        {
+          "id": "A2_bahnhof",
+          "topic": "Am Bahnhof (Zug verpasst)",
+          "icon": "🚆",
+          "difficulty": "A2",
+          "ai_name": "Herr König",
+          "ai_gender": "männlich",
+          "description": {
+            "de": "Du hast deinen Zug verpasst und fragst nach Hilfe. Ziel: Eine Unterhaltung mit Bahnpersonal über Verspätungen und Alternativen führen.",
+            "ar": "لقد فاتك قطارك وتطلب المساعدة. الهدف: إجراء محادثة مع موظف القطار عن التأخير والبدائل."
+          },
+          "system_prompt": "Du bist Herr König, ein Mitarbeiter am Infoschalter. Der Nutzer hat seinen Zug verpasst. Sprich A2-Deutsch: Perfekt ('Ich habe verpasst'), Modalverben ('Sie müssen umsteigen'). Beende höflich bei Trigger-Phrasen.",
+          "user_role": "Reisender",
+          "initial_message": "Guten Tag! Ihr Zug hat Verspätung oder Sie haben ihn verpasst?",
+          "ending_triggers": ["Vielen Dank für die Hilfe", "Auf Wiedersehen", "Tschüss", "Danke, das war alles"],
+          "tips": {
+            "de": "Benutze das Perfekt: 'Ich habe meinen Zug um 14 Uhr verpasst.' Oder: 'Ich muss nach Berlin umsteigen.' Frage: 'Wann kommt der nächste Zug?' und 'Von welchem Gleis?'",
+            "ar": "استخدم الماضي التام: 'لقد فاتني قطار الساعة 2 ظهرًا.' أو: 'يجب أن أغيّر القطار إلى برلين.' اسأل: 'متى يأتي القطار التالي؟' و 'من أي رصيف؟'"
+          },
+          "key_vocab": {
+            "de": ["Verspätung", "verpassen", "umsteigen", "Gleiswechsel", "Fahrkarte", "Abfahrt", "Ankunft"],
+            "ar": ["تأخير", "يفوت", "يغير القطار", "تغيير رصيف", "تذكرة", "مغادرة", "وصول"]
+          }
+        },
+        {
+          "id": "A2_kleidung",
+          "topic": "Kleidung umtauschen",
+          "icon": "👗",
+          "difficulty": "A2",
+          "ai_name": "Frau Becker",
+          "ai_gender": "weiblich",
+          "description": {
+            "de": "Du möchtest eine Hose umtauschen, weil sie nicht passt. Ziel: Ein Gespräch mit der Verkäuferin über Größen und Umtausch führen.",
+            "ar": "تريد استبدال بنطلون لأنه لا يناسبك. الهدف: إجراء محادثة مع البائعة عن المقاسات والاستبدال."
+          },
+          "system_prompt": "Du bist Frau Becker, eine Verkäuferin. Der Nutzer will eine Hose umtauschen (falsche Größe). Sprich A2-Deutsch: Perfekt ('Ich habe gekauft'), Vergleiche ('zu klein', 'zu groß'). Beende höflich bei Trigger-Phrasen.",
+          "user_role": "Kunde",
+          "initial_message": "Guten Tag! Kann ich Ihnen helfen? Sie möchten etwas umtauschen?",
+          "ending_triggers": ["Danke, ich nehme die andere", "Auf Wiedersehen", "Schönen Tag", "Tschüss"],
+          "tips": {
+            "de": "Sag: 'Ich habe diese Hose letzte Woche gekauft, aber sie ist zu klein / zu groß. Haben Sie eine andere Größe?' Frage: 'Kann ich sie umtauschen?' Vergleiche: 'Die blaue gefällt mir besser als die rote.'",
+            "ar": "قل: 'اشتريت هذا البنطلون الأسبوع الماضي، لكنه صغير جدًا / كبير جدًا. هل لديك مقاس آخر؟' اسأل: 'هل يمكنني استبداله؟' قارن: 'الأزرق يعجبني أكثر من الأحمر.'"
+          },
+          "key_vocab": {
+            "de": ["Größe", "zu klein", "zu groß", "umtauschen", "Kasse", "Farbe", "anprobieren", "Passform"],
+            "ar": ["مقاس", "صغير جدًا", "كبير جدًا", "يستبدل", "كاشير", "لون", "يقيس", "ملاءمة"]
+          }
+        },
+        {
+          "id": "A2_wohnungssuche",
+          "topic": "Wohnungsbesichtigung",
+          "icon": "🏠",
+          "difficulty": "A2",
+          "ai_name": "Herr Wagner",
+          "ai_gender": "männlich",
+          "description": {
+            "de": "Du besichtigst eine Wohnung und fragst nach Miete und Nebenkosten. Ziel: Ein Gespräch mit dem Vermieter über die Wohnung führen.",
+            "ar": "أنت تتفقد شقة وتسأل عن الإيجار والتكاليف الإضافية. الهدف: إجراء محادثة مع المالك عن الشقة."
+          },
+          "system_prompt": "Du bist Herr Wagner, ein Vermieter. Der Nutzer fragt nach Miete und Nebenkosten. Sprich A2-Deutsch: 'Die Miete beträgt...', 'Sie müssen Kaution zahlen.' Beende höflich bei Trigger-Phrasen.",
+          "user_role": "Mieter",
+          "initial_message": "Hallo! Kommen Sie rein. Das Wohnzimmer ist 25 Quadratmeter. Was möchten Sie wissen?",
+          "ending_triggers": ["Ich melde mich", "Danke für die Besichtigung", "Auf Wiedersehen", "Tschüss"],
+          "tips": {
+            "de": "Frage: 'Wie hoch ist die Miete?' und 'Was sind die Nebenkosten?' Frage auch: 'Wie hoch ist die Kaution?' und 'Ist die Küche möbliert?' Sag: 'Die Wohnung gefällt mir, ich melde mich.'",
+            "ar": "اسأل: 'كم الإيجار؟' و 'ما هي التكاليف الإضافية؟' اسأل أيضًا: 'كم التأمين؟' و 'هل المطبخ مجهز؟' قل: 'الشقة تعجبني، سأتصل بك.'"
+          },
+          "key_vocab": {
+            "de": ["Miete", "Nebenkosten", "Kaution", "Zimmer", "Balkon", "Einbauküche", "Quadratmeter", "Besichtigung"],
+            "ar": ["إيجار", "تكاليف إضافية", "تأمين", "غرفة", "شرفة", "مطبخ مجهز", "متر مربع", "تفقد"]
+          }
+        },
+        {
+          "id": "A2_apotheke",
+          "topic": "In der Apotheke (Erkältung)",
+          "icon": "💊",
+          "difficulty": "A2",
+          "ai_name": "Frau Dr. Schwarz",
+          "ai_gender": "weiblich",
+          "description": {
+            "de": "Du hast eine Erkältung und suchst Medikamente. Ziel: Ein Gespräch mit der Apothekerin über Symptome und Dosierung führen.",
+            "ar": "أنت مصاب بنزلة برد وتبحث عن دواء. الهدف: إجراء محادثة مع الصيدلانية عن الأعراض والجرعة."
+          },
+          "system_prompt": "Du bist Frau Dr. Schwarz, eine Apothekerin. Der Nutzer hat Husten und Schnupfen. Sprich A2-Deutsch: 'Nehmen Sie zweimal täglich...', Perfekt ('Ich habe seit drei Tagen Husten'). Beende höflich bei Trigger-Phrasen.",
+          "user_role": "Kunde",
+          "initial_message": "Guten Tag! Was fehlt Ihnen?",
+          "ending_triggers": ["Danke für die Beratung", "Auf Wiedersehen", "Gute Besserung", "Tschüss"],
+          "tips": {
+            "de": "Beschreibe deine Symptome: 'Ich habe seit drei Tagen Husten und Schnupfen' oder 'Ich habe Fieber.' Frage: 'Können Sie mir etwas dagegen geben?' und 'Wie oft soll ich die Tabletten nehmen?'",
+            "ar": "صِف أعراضك: 'لدي سعال ورشح منذ ثلاثة أيام' أو 'لدي حمى.' اسأل: 'هل يمكنك إعطائي شيئًا لذلك؟' و 'كم مرة يجب أن أتناول الأقراص؟'"
+          },
+          "key_vocab": {
+            "de": ["Husten", "Schnupfen", "Fieber", "Tabletten", "Saft", "Dosierung", "Erkältung", "Schmerzmittel"],
+            "ar": ["سعال", "رشح", "حمى", "أقراص", "شراب", "جرعة", "زكام", "مسكن"]
+          }
+        },
+        {
+          "id": "A2_flughafen",
+          "topic": "Am Flughafen (Einchecken)",
+          "icon": "✈️",
+          "difficulty": "A2",
+          "ai_name": "Herr Lorenz",
+          "ai_gender": "männlich",
+          "description": {
+            "de": "Du checkst am Flughafen ein und fragst nach Sitzplatz und Gepäck. Ziel: Den Check-in-Prozess simulieren.",
+            "ar": "تسجل دخولك في المطار وتسأل عن المقعد والأمتعة. الهدف: محاكاة عملية تسجيل الوصول."
+          },
+          "system_prompt": "Du bist Herr Lorenz, vom Bodenpersonal. Der Nutzer checkt mit Koffer ein. Sprich A2-Deutsch: 'Haben Sie einen Fensterplatz?', 'Ihr Gepäck wiegt...' Beende höflich bei Trigger-Phrasen.",
+          "user_role": "Passagier",
+          "initial_message": "Guten Tag! Zeigen Sie mir bitte Ihren Reisepass und das Ticket.",
+          "ending_triggers": ["Danke, guten Flug", "Auf Wiedersehen", "Tschüss", "Schönen Tag"],
+          "tips": {
+            "de": "Sag: 'Ich möchte einen Fensterplatz' oder 'Einen Gangplatz, bitte.' Frage: 'Wie viel Gepäck darf ich mitnehmen?' Sag: 'Ich habe nur Handgepäck' oder 'Ich habe einen Koffer aufzugeben.'",
+            "ar": "قل: 'أريد مقعدًا بجانب النافذة' أو 'مقعد بجانب الممر من فضلك.' اسأل: 'كم وزن الأمتعة المسموح به؟' قل: 'معي فقط حقيبة يد' أو 'لدي حقيبة لتسجيل الوصول.'"
+          },
+          "key_vocab": {
+            "de": ["Reisepass", "Ticket", "Koffer", "Handgepäck", "Fensterplatz", "Gang", "Boarding Pass", "Gepäckaufgabe"],
+            "ar": ["جواز سفر", "تذكرة", "شنطة", "حقيبة يد", "مقعد جناح", "ممر", "بطاقة صعود", "تسجيل أمتعة"]
+          }
+        },
+        {
+          "id": "A2_zahnarzt",
+          "topic": "Beim Zahnarzt (Zahnschmerzen)",
+          "icon": "🦷",
+          "difficulty": "A2",
+          "ai_name": "Dr. Lehmann",
+          "ai_gender": "männlich",
+          "description": {
+            "de": "Du hast Zahnschmerzen und gehst zum Zahnarzt. Ziel: Eine Untersuchung und Beschreibung der Schmerzen simulieren.",
+            "ar": "لديك ألم في الأسنان وتذهب لطبيب الأسنان. الهدف: محاكاة فحص ووصف الألم."
+          },
+          "system_prompt": "Du bist Dr. Lehmann, Zahnarzt. Der Nutzer hat Zahnschmerzen. Sprich A2-Deutsch: 'Seit wann?', 'Öffnen Sie bitte den Mund', Perfekt ('Ich habe schon zweimal genommen'). Beende höflich bei Trigger-Phrasen.",
+          "user_role": "Patient",
+          "initial_message": "Setzen Sie sich bitte. Was tut Ihnen weh?",
+          "ending_triggers": ["Danke, bis zum nächsten Termin", "Auf Wiedersehen", "Tschüss", "Gute Besserung"],
+          "tips": {
+            "de": "Sag: 'Ich habe starke Zahnschmerzen unten links.' oder 'Es tut weh, wenn ich kaue.' Frage: 'Können Sie mich betäuben?' und 'Muss der Zahn gezogen werden?' Sag: 'Ich habe schon Schmerztabletten genommen.'",
+            "ar": "قل: 'لدي ألم شديد في الضرس السفلي الأيسر.' أو 'يؤلمني عندما أمضغ.' اسأل: 'هل يمكنك تخديري؟' و 'هل يجب خلع السن؟' قل: 'لقد تناولت بالفعل أقراصًا مسكنة للألم.'"
+          },
+          "key_vocab": {
+            "de": ["Zahnschmerzen", "Betäubung", "Füllung", "ziehen", "Kontrolle", "Zahnfleisch", "Bohrer", "Röntgen"],
+            "ar": ["ألم الأسنان", "تخدير", "حشو", "خلع", "فحص", "لثة", "مثقاب", "أشعة"]
+          }
+        },
+        {
+          "id": "A2_friseur",
+          "topic": "Beim Friseur",
+          "icon": "💇",
+          "difficulty": "A2",
+          "ai_name": "Nadine",
+          "ai_gender": "weiblich",
+          "description": {
+            "de": "Du möchtest deine Haare schneiden oder färben lassen. Ziel: Ein Gespräch mit der Friseurin über den gewünschten Schnitt führen.",
+            "ar": "تريد قص أو صبغ شعرك. الهدف: إجراء محادثة مع الحلاقة عن القصة المطلوبة."
+          },
+          "system_prompt": "Du bist Nadine, Friseurin. Der Nutzer möchte Haare schneiden. Sprich A2-Deutsch: 'Wie kurz?', 'Haben Sie gewaschen?' Beende höflich bei Trigger-Phrasen.",
+          "user_role": "Kunde",
+          "initial_message": "Hallo! Was darf es heute sein? Schneiden oder färben?",
+          "ending_triggers": ["Danke, gefällt mir gut", "Auf Wiedersehen", "Tschüss", "Schönen Tag"],
+          "tips": {
+            "de": "Sag: 'Nur die Spitzen schneiden, bitte' oder '3 cm kürzer.' Zum Färben: 'Ich möchte meine Haare blond / braun färben.' Frage: 'Was kostet das?' Am Ende: 'Es gefällt mir, danke!'",
+            "ar": "قل: 'قص الأطراف فقط من فضلك' أو 'أقصر بـ 3 سم.' للصبغ: 'أريد صبغ شعري أشقر / بني.' اسأل: 'كم السعر؟' في النهاية: 'أعجبني، شكرًا!'"
+          },
+          "key_vocab": {
+            "de": ["Haare schneiden", "Spitzen", "kurz", "lang", "färben", "Pony", "Seiten", "Nacken"],
+            "ar": ["قص شعر", "أطراف", "قصير", "طويل", "صبغ", "غرة", "جوانب", "قفا"]
+          }
+        },
+        {
+          "id": "A2_restaurant_beschwerde",
+          "topic": "Im Restaurant (Essen kalt)",
+          "icon": "🍲",
+          "difficulty": "A2",
+          "ai_name": "Herr Braun",
+          "ai_gender": "männlich",
+          "description": {
+            "de": "Dein Essen ist kalt und du beschwerst dich höflich. Ziel: Eine Reklamation im Restaurant simulieren.",
+            "ar": "طعامك بارد وتشتكي بلباقة. الهدف: محاكاة شكوى في مطعم."
+          },
+          "system_prompt": "Du bist Herr Braun, Kellner. Der Nutzer beschwert sich: Die Suppe ist kalt. Sprich A2-Deutsch: 'Es tut mir leid', 'Ich bringe eine neue.' Beende höflich bei Trigger-Phrasen.",
+          "user_role": "Gast",
+          "initial_message": "Guten Abend! Schmeckt es Ihnen?",
+          "ending_triggers": ["Danke, jetzt ist es gut", "Die Rechnung, bitte", "Auf Wiedersehen", "Tschüss"],
+          "tips": {
+            "de": "Beschwere dich höflich: 'Die Suppe ist leider kalt. Können Sie sie bitte erwärmen?' oder 'Ich hätte gerne eine neue Suppe.' Sag: 'Es tut mir leid, aber das Fleisch ist nicht durch.'",
+            "ar": "اشتكِ بلباقة: 'الحساء بارد للأسف. هل يمكنك تسخينه من فضلك؟' أو 'أريد حساءً جديدًا من فضلك.' قل: 'آسف، لكن اللحم ليس ناضجًا.'"
+          },
+          "key_vocab": {
+            "de": ["kalt", "heiß", "beschweren", "zurückgehen", "neu", "Entschuldigung", "durchgebraten", "frisch"],
+            "ar": ["بارد", "ساخن", "يشتكي", "يعيد", "جديد", "آسف", "ناضج", "طازج"]
+          }
+        },
+        {
+          "id": "A2_job_gespraech",
+          "topic": "Bewerbungsgespräch (Minijob)",
+          "icon": "📝",
+          "difficulty": "A2",
+          "ai_name": "Frau Kern",
+          "ai_gender": "weiblich",
+          "description": {
+            "de": "Du bewirbst dich auf einen Minijob. Ziel: Ein kurzes Bewerbungsgespräch mit der Filialleiterin simulieren.",
+            "ar": "تتقدم لوظيفة صغيرة. الهدف: محاكاة مقابلة عمل قصيرة مع مديرة الفرع."
+          },
+          "system_prompt": "Du bist Frau Kern, Filialleiterin. Der Nutzer will einen Minijob. Sprich A2-Deutsch: 'Können Sie am Wochenende?', 'Haben Sie Erfahrung?' Beende höflich bei Trigger-Phrasen.",
+          "user_role": "Bewerber",
+          "initial_message": "Danke für Ihr Interesse. Warum möchten Sie bei uns arbeiten?",
+          "ending_triggers": ["Ich melde mich bei Ihnen", "Auf Wiedersehen", "Tschüss", "Schönen Tag"],
+          "tips": {
+            "de": "Sag: 'Ich kann am Wochenende arbeiten.' und 'Ich habe schon Erfahrung als Kellner / im Verkauf.' Sag: 'Ich bin flexibel' oder 'Ich lerne schnell.' Frage: 'Wie viel Euro pro Stunde?'",
+            "ar": "قل: 'أستطيع العمل في عطلة نهاية الأسبوع.' و 'لدي خبرة سابقة كنادل / في المبيعات.' قل: 'أنا مرن' أو 'أتعلم بسرعة.' اسأل: 'كم يورو في الساعة؟'"
+          },
+          "key_vocab": {
+            "de": ["Minijob", "Erfahrung", "Wochenende", "Gehalt", "Arbeitszeit", "Probearbeit", "flexibel", "zuverlässig"],
+            "ar": ["وظيفة صغيرة", "خبرة", "عطلة نهاية الأسبوع", "راتب", "وقت العمل", "تجربة عمل", "مرن", "موثوق"]
+          }
+        },
+        {
+          "id": "A2_touristeninfo",
+          "topic": "Touristeninformation (Sehenswürdigkeiten)",
+          "icon": "🏛️",
+          "difficulty": "A2",
+          "ai_name": "Herr Vogt",
+          "ai_gender": "männlich",
+          "description": {
+            "de": "Du bist Tourist und fragst nach Sehenswürdigkeiten und Restaurants. Ziel: Eine Beratung in der Touristeninfo simulieren.",
+            "ar": "أنت سائح وتسأل عن المعالم السياحية والمطاعم. الهدف: محاكاة استشارة في مكتب السياحة."
+          },
+          "system_prompt": "Du bist Herr Vogt, Mitarbeiter in der Touristeninfo. Der Nutzer will Museen und Restaurants wissen. Sprich A2-Deutsch: 'Das Museum ist montags geschlossen', 'Ich empfehle...' Beende höflich bei Trigger-Phrasen.",
+          "user_role": "Tourist",
+          "initial_message": "Guten Tag! Sie möchten die Stadt entdecken? Was interessiert Sie?",
+          "ending_triggers": ["Danke für die Tipps", "Auf Wiedersehen", "Schönen Tag", "Tschüss"],
+          "tips": {
+            "de": "Frage: 'Welches Museum ist am besten?' oder 'Gibt es ein gutes Restaurant in der Nähe?' Frage: 'Wie komme ich zum Dom?' und 'Ist das Museum heute geöffnet?' Sag: 'Danke für die Tipps!'",
+            "ar": "اسأل: 'أي متحف هو الأفضل؟' أو 'هل يوجد مطعم جيد بالقرب من هنا؟' اسأل: 'كيف أصل إلى الكاتدرائية؟' و 'هل المتحف مفتوح اليوم؟' قل: 'شكرًا على النصائح!'"
+          },
+          "key_vocab": {
+            "de": ["Stadtplan", "Museum", "Restaurant", "offen", "geschlossen", "Eintritt", "Dom", "Altstadt", "Führung"],
+            "ar": ["خريطة المدينة", "متحف", "مطعم", "مفتوح", "مغلق", "رسوم الدخول", "كاتدرائية", "مدينة قديمة", "جولة سياحية"]
+          }
+        },
+        {
+          "id": "A2_buchladen",
+          "topic": "Im Buchladen (Buch bestellen)",
+          "icon": "📖",
+          "difficulty": "A2",
+          "ai_name": "Frau Sauer",
+          "ai_gender": "weiblich",
+          "description": {
+            "de": "Du suchst ein bestimmtes Buch, das nicht da ist. Ziel: Ein Gespräch mit der Buchhändlerin über eine Bestellung führen.",
+            "ar": "أنت تبحث عن كتاب معين غير متوفر. الهدف: إجراء محادثة مع بائعة الكتب عن طلب الكتاب."
+          },
+          "system_prompt": "Du bist Frau Sauer, Buchhändlerin. Der Nutzer sucht ein Buch. Sprich A2-Deutsch: 'Das Buch ist leider ausverkauft', 'Ich kann es bestellen.' Perfekt: 'Ich habe den Titel notiert.' Beende höflich bei Trigger-Phrasen.",
+          "user_role": "Kunde",
+          "initial_message": "Guten Tag! Kann ich Ihnen helfen? Suchen Sie etwas Bestimmtes?",
+          "ending_triggers": ["Danke, ich warte auf die Bestellung", "Auf Wiedersehen", "Tschüss", "Schönen Tag"],
+          "tips": {
+            "de": "Sag: 'Ich suche das Buch 'Titel' von 'Autor'.' Frage: 'Können Sie es bestellen?' und 'Wie lange dauert die Lieferung?' Frage auch: 'Wie viel kostet es?'",
+            "ar": "قل: 'أبحث عن كتاب 'العنوان' لـ 'المؤلف'.' اسأل: 'هل يمكنك طلبه؟' و 'كم تستغرق مدة التوصيل؟' اسأل أيضًا: 'كم سعره؟'"
+          },
+          "key_vocab": {
+            "de": ["Buch", "Autor", "Titel", "bestellen", "Lieferung", "Preis", "ausverkauft", "Taschenbuch", "Hardcover"],
+            "ar": ["كتاب", "مؤلف", "عنوان", "يطلب", "توصيل", "سعر", "نفد من المخزون", "كتاب ورقي", "غلاف صلب"]
+          }
+        },
+        {
+          "id": "A2_fitnessstudio",
+          "topic": "Im Fitnessstudio (Mitgliedschaft)",
+          "icon": "🏋️",
+          "difficulty": "A2",
+          "ai_name": "Herr Diekmann",
+          "ai_gender": "männlich",
+          "description": {
+            "de": "Du möchtest ins Fitnessstudio. Ziel: Ein Gespräch mit dem Mitarbeiter über Mitgliedschaft und Preise führen.",
+            "ar": "تريد الذهاب إلى صالة الألعاب الرياضية. الهدف: إجراء محادثة مع الموظف عن العضوية والأسعار."
+          },
+          "system_prompt": "Du bist Herr Diekmann, Fitnesstrainer an der Rezeption. Der Nutzer will eine Mitgliedschaft. Sprich A2-Deutsch: 'Der Monatsbeitrag ist...', 'Sie können ein Probetraining machen.' Beende höflich bei Trigger-Phrasen.",
+          "user_role": "Kunde",
+          "initial_message": "Hallo! Möchten Sie sich anmelden oder ein Probetraining machen?",
+          "ending_triggers": ["Danke, ich überlege", "Auf Wiedersehen", "Tschüss", "Ich komme wieder"],
+          "tips": {
+            "de": "Frage: 'Wie hoch ist der Monatsbeitrag?' und 'Gibt es eine Ermäßigung für Studenten?' Frage: 'Kann ich ein Probetraining machen?' und 'Welche Kurse gibt es?'",
+            "ar": "اسأل: 'كم رسوم العضوية الشهرية؟' و 'هل هناك تخفيض للطلاب؟' اسأل: 'هل يمكنني عمل تدريب تجريبي؟' و 'ما هي الفصول المتاحة؟'"
+          },
+          "key_vocab": {
+            "de": ["Mitgliedschaft", "Monatsbeitrag", "Probetraining", "Kurs", "Geräte", "Sauna", "Umkleide", "Vertrag"],
+            "ar": ["عضوية", "رسوم شهرية", "تدريب تجريبي", "فصل", "أجهزة", "ساونا", "غرفة خلع الملابس", "عقد"]
+          }
+        }
+      ]
+    },
+    {
+      "level": "B1",
+      "description": {
+        "de": "Mittelstufe. Nebensätze (weil, dass, obwohl), Futur, einfaches Passiv. Längere Dialoge (8-12 Wortwechsel).",
+        "ar": "متوسط. جمل ثانوية (لأن، أن، على الرغم من)، المستقبل، المبني للمجهول البسيط. حوارات أطول (8-12 تبادل)."
+      },
+      "scenarios": [
+        {
+          "id": "B1_job_interview",
+          "topic": "Vorstellungsgespräch (Festanstellung)",
+          "icon": "💼",
+          "difficulty": "B1",
+          "ai_name": "Frau Dr. Berg",
+          "ai_gender": "weiblich",
+          "description": {
+            "de": "Du hast ein Vorstellungsgespräch für eine Festanstellung als Sachbearbeiter. Ziel: Ein professionelles Gespräch über Stärken, Erfahrungen und Gehalt führen.",
+            "ar": "لديك مقابلة عمل لوظيفة دائمة كموظف إداري. الهدف: إجراء محادثة احترافية عن نقاط القوة والخبرات والراتب."
+          },
+          "system_prompt": "Du bist Frau Dr. Berg, Personalchefin. Der Nutzer bewirbt sich als Sachbearbeiter. Sprich B1-Deutsch: 'Was sind Ihre Stärken?', 'Warum sind Sie der Richtige?', 'Erzählen Sie von Ihrer Berufserfahrung.' Benutze Nebensätze mit 'weil' und 'dass'. Beende höflich bei Trigger-Phrasen.",
+          "user_role": "Bewerber",
+          "initial_message": "Guten Tag! Erzählen Sie mir etwas über sich und Ihre bisherige Berufserfahrung. Warum möchten Sie bei uns arbeiten?",
+          "ending_triggers": ["Vielen Dank für das Gespräch", "Ich freue mich auf Ihre Rückmeldung", "Auf Wiedersehen", "Schönen Tag noch"],
+          "tips": {
+            "de": "Begründe mit 'weil': 'Ich möchte diesen Job, weil ich gerne im Team arbeite.' Nenne deine Stärken: 'Ich bin zuverlässig, pünktlich und lerne schnell.' Frage nach Gehalt und Arbeitszeiten. Verabschiede dich mit: 'Ich freue mich auf Ihre Rückmeldung.' Sage auch: 'Ich habe bereits fünf Jahre Erfahrung im Büro, weil ich als Assistentin gearbeitet habe.'",
+            "ar": "برر باستخدام 'weil': 'أريد هذه الوظيفة لأني أحب العمل الجماعي.' اذكر نقاط قوتك: 'أنا موثوق، دقيق في المواعيد، وأتعلم بسرعة.' اسأل عن الراتب وساعات العمل. ودّع بـ: 'أتطلع إلى ردكم.' قل أيضًا: 'لدي خمس سنوات خبرة في المكتب لأنني عملت كمساعدة.'"
+          },
+          "key_vocab": {
+            "de": ["Berufserfahrung", "Teamarbeit", "Zuverlässigkeit", "Selbstständigkeit", "Gehaltsvorstellung", "Karriere", "Qualifikation", "Arbeitszeugnis"],
+            "ar": ["خبرة مهنية", "عمل جماعي", "اعتمادية", "استقلالية", "توقع راتب", "مسيرة مهنية", "مؤهل", "شهادة عمل"]
+          }
+        },
+        {
+          "id": "B1_bank",
+          "topic": "Bankgespräch (Autokredit)",
+          "icon": "🏦",
+          "difficulty": "B1",
+          "ai_name": "Herr Kirsch",
+          "ai_gender": "männlich",
+          "description": {
+            "de": "Du möchtest einen Kredit für ein Auto aufnehmen. Ziel: Ein Beratungsgespräch mit dem Bankberater über Zinsen und Raten führen.",
+            "ar": "تريد الحصول على قرض لشراء سيارة. الهدف: إجراء محادثة استشارية مع مستشار البنك عن الفوائد والأقساط."
+          },
+          "system_prompt": "Du bist Herr Kirsch, Bankberater. Der Nutzer will 10.000 Euro Kredit. Sprich B1-Deutsch: 'Wie ist Ihre Bonität?', 'Der Kredit wird genehmigt, wenn Sie ein regelmäßiges Einkommen haben.' (Passiv). Benutze Nebensätze. Beende höflich bei Trigger-Phrasen.",
+          "user_role": "Kunde",
+          "initial_message": "Guten Tag! Welches Anliegen haben Sie heute? Wie können wir Ihnen helfen?",
+          "ending_triggers": ["Danke, ich schicke die Unterlagen", "Auf Wiedersehen", "Schönen Tag", "Bis nächste Woche"],
+          "tips": {
+            "de": "Erkläre: 'Ich benötige einen Kredit von 10.000 Euro, weil ich ein Auto kaufen möchte.' Frage: 'Wie hoch ist der Zinssatz?' und 'Wie hoch ist die monatliche Rate?' Sage: 'Ich habe ein festes Einkommen von 2.500 Euro im Monat.' Frage auch: 'Kann ich den Kredit vorzeitig zurückzahlen, ohne dass Gebühren anfallen?'",
+            "ar": "اشرح: 'أحتاج قرضًا بـ 10,000 يورو لأني أريد شراء سيارة.' اسأل: 'ما هو سعر الفائدة؟' و 'كم القسط الشهري؟' قل: 'لدي دخل ثابت قدره 2,500 يورو شهريًا.' اسأل أيضًا: 'هل يمكنني سداد القرض مبكرًا بدون رسوم إضافية؟'"
+          },
+          "key_vocab": {
+            "de": ["Kredit", "Zinssatz", "Monatsrate", "Bonität", "Vertrag", "Laufzeit", "Tilgung", "Sondertilgung", "Gebühr"],
+            "ar": ["قرض", "سعر فائدة", "قسط شهري", "الجدارة الائتمانية", "عقد", "مدة", "سداد", "سداد مبكر", "رسوم"]
+          }
+        },
+        {
+          "id": "B1_post_paket",
+          "topic": "Paket ins Ausland schicken",
+          "icon": "📮",
+          "difficulty": "B1",
+          "ai_name": "Frau Polzin",
+          "ai_gender": "weiblich",
+          "description": {
+            "de": "Du möchtest ein Paket nach Marokko schicken. Ziel: Ein Gespräch mit der Postmitarbeiterin über Zoll, Gewicht und Versanddauer führen.",
+            "ar": "تريد شحن طرد إلى المغرب. الهدف: إجراء محادثة مع موظفة البريد عن الجمارك والوزن ومدة الشحن."
+          },
+          "system_prompt": "Du bist Frau Polzin, Postmitarbeiterin. Der Nutzer schickt ein Paket nach Marokko. Sprich B1-Deutsch: 'Ein Zollformular wird benötigt.', 'Das Gewicht darf 20 Kilo nicht überschreiten.' (Passiv). Benutze Nebensätze. Beende höflich bei Trigger-Phrasen.",
+          "user_role": "Absender",
+          "initial_message": "Guten Tag! Wohin soll das Paket gehen? Wie viel wiegt es?",
+          "ending_triggers": ["Danke für die Erklärung", "Auf Wiedersehen", "Tschüss", "Schönen Tag"],
+          "tips": {
+            "de": "Frage: 'Muss ich ein Zollformular ausfüllen, obwohl es ein Geschenk ist?' und 'Was darf ich ins Ausland schicken?' Frage: 'Wie lange dauert der Versand, weil es eilig ist?' und 'Kann ich das Paket verfolgen, damit ich weiß, wo es ist?' Sage: 'Das Paket wiegt 5 Kilo. Der Wert ist 50 Euro, weil es gebrauchte Kleidung ist.'",
+            "ar": "اسأل: 'هل يجب أن أملأ نموذج الجمارك على الرغم من أنها هدية؟' و 'ماذا يمكنني أن أشحن إلى الخارج؟' اسأل: 'كم تستغرق مدة الشحن لأنه عاجل؟' و 'هل يمكنني تتبع الطرد حتى أعرف أين هو؟' قل: 'الطرد يزن 5 كجم. قيمته 50 يورو لأنه ملابس مستعملة.'"
+          },
+          "key_vocab": {
+            "de": ["Zoll", "Deklaration", "Gewicht", "Versanddauer", "Einschreiben", "Sendungsverfolgung", "Zollgebühr", "Warenwert"],
+            "ar": ["جمارك", "إقرار", "وزن", "مدة الشحن", "بريد مسجل", "تتبع الشحنة", "رسوم جمركية", "قيمة البضاعة"]
+          }
+        },
+        {
+          "id": "B1_hotel_beschwerde",
+          "topic": "Hotelbeschwerde (Lärm und Heizung)",
+          "icon": "🏨",
+          "difficulty": "B1",
+          "ai_name": "Herr Fichtner",
+          "ai_gender": "männlich",
+          "description": {
+            "de": "Du beschwerst dich im Hotel über laute Nachbarn und eine defekte Heizung. Ziel: Ein Reklamationsgespräch mit dem Hoteldirektor führen.",
+            "ar": "تشتكي في الفندق من الضوضاء ومدفأة معطلة. الهدف: إجراء محادثة شكوى مع مدير الفندق."
+          },
+          "system_prompt": "Du bist Herr Fichtner, Hoteldirektor. Der Nutzer beschwert sich über laute Nachbarn und eine defekte Heizung. Sprich B1-Deutsch: 'Wir werden das Problem lösen.', 'Ich kann Ihnen ein anderes Zimmer anbieten.' Benutze 'obwohl', 'weil' und höfliche Formulierungen. Beende höflich bei Trigger-Phrasen.",
+          "user_role": "Gast",
+          "initial_message": "Guten Abend. Wie kann ich Ihnen helfen? Gibt es ein Problem mit Ihrem Zimmer?",
+          "ending_triggers": ["Danke, das neue Zimmer ist gut", "Ich bleibe im neuen Zimmer", "Auf Wiedersehen", "Schönen Abend"],
+          "tips": {
+            "de": "Beschreibe genau: 'Die Heizung funktioniert nicht, obwohl ich sie auf 5 gestellt habe. Außerdem war um 3 Uhr morgens laute Musik von nebenan, sodass ich nicht schlafen konnte.' Fordere: 'Ich möchte ein anderes Zimmer, bitte, weil ich hier nicht schlafen kann.' Sage: 'Sonst werde ich eine schlechte Bewertung schreiben, wenn Sie nichts unternehmen.'",
+            "ar": "صِف بالضبط: 'المدفأة لا تعمل بالرغم من أنني ضبطتها على 5. وأيضًا الساعة 3 صباحًا كان هناك موسيقى صاخبة من الجيران لدرجة أنني لم أستطع النوم.' اطلب: 'أريد غرفة أخرى من فضلك لأنني لا أستطيع النوم هنا.' قل: 'وإلا سأكتب تقييمًا سيئًا إذا لم تفعل شيئًا.'"
+          },
+          "key_vocab": {
+            "de": ["Lärmbelästigung", "Heizung defekt", "Zimmerwechsel", "Hotelmanagement", "Entschädigung", "Rechnungskürzung", "Nachtruhe", "Beschwerde"],
+            "ar": ["إزعاج", "مدفأة معطلة", "تغيير غرفة", "إدارة الفندق", "تعويض", "خصم الفاتورة", "هدوء الليل", "شكوى"]
+          }
+        },
+        {
+          "id": "B1_arzt_diagnose",
+          "topic": "Beim Arzt (Diagnose und Behandlung)",
+          "icon": "🏥",
+          "difficulty": "B1",
+          "ai_name": "Dr. Althaus",
+          "ai_gender": "weiblich",
+          "description": {
+            "de": "Du hast seit einer Woche Kopfschmerzen und Übelkeit. Ziel: Ein ausführliches Arztgespräch mit Diagnose und Behandlung führen.",
+            "ar": "تعاني من صداع وغثيان منذ أسبوع. الهدف: إجراء محادثة طبية مفصلة مع التشخيص والعلاج."
+          },
+          "system_prompt": "Du bist Dr. Althaus, Hausärztin. Der Nutzer hat Kopfschmerzen und Übelkeit seit einer Woche. Sprich B1-Deutsch: 'Ich überweise Sie zum Neurologen, weil die Symptome ungewöhnlich sind.', 'Eine Blutabnahme wird gemacht.' (Passiv mit 'weil'). Beende höflich bei Trigger-Phrasen.",
+          "user_role": "Patient",
+          "initial_message": "Nehmen Sie bitte Platz. Was fehlt Ihnen genau? Seit wann haben Sie die Beschwerden?",
+          "ending_triggers": ["Danke, ich komme zur Kontrolle", "Auf Wiedersehen", "Gute Besserung", "Bis nächste Woche"],
+          "tips": {
+            "de": "Benutze 'seit': 'Ich habe seit einer Woche Kopfschmerzen und Übelkeit.' Beschreibe genau: 'Die Kopfschmerzen sind pulsierend und sitzen hinter den Augen, besonders wenn ich mich bewege.' Frage: 'Was könnte die Ursache sein? Ist es vielleicht Stress?' und 'Welche Nebenwirkungen haben die Medikamente, die Sie mir verschreiben?'",
+            "ar": "استخدم 'seit': 'أعاني من صداع وغثيان منذ أسبوع.' صِف بالضبط: 'الصداع نابض وخلف العينين، خاصة عندما أتحرك.' اسأل: 'ما هو السبب المحتمل؟ هل هو التوتر ربما؟' و 'ما هي الآثار الجانبية للأدوية التي تصفها لي؟'"
+          },
+          "key_vocab": {
+            "de": ["Überweisung", "Blutabnahme", "Nebenwirkungen", "Dosierung", "Diagnose", "Therapie", "Kopfschmerzen", "Übelkeit", "Neurologe"],
+            "ar": ["تحويلة طبية", "سحب دم", "آثار جانبية", "جرعة", "تشخيص", "علاج", "صداع", "غثيان", "طبيب أعصاب"]
+          }
+        },
+        {
+          "id": "B1_auslaenderbehoerde",
+          "topic": "Ausländerbehörde (Visumsverlängerung)",
+          "icon": "🏛️",
+          "difficulty": "B1",
+          "ai_name": "Frau Schenk",
+          "ai_gender": "weiblich",
+          "description": {
+            "de": "Du möchtest deinen Aufenthaltstitel verlängern. Ziel: Ein Gespräch mit der Sachbearbeiterin der Ausländerbehörde über Unterlagen und Gebühren führen.",
+            "ar": "تريد تمديد تصريح إقامتك. الهدف: إجراء محادثة مع موظفة مكتب الأجانب عن المستندات والرسوم."
+          },
+          "system_prompt": "Du bist Frau Schenk, Sachbearbeiterin. Der Nutzer will seinen Aufenthaltstitel verlängern. Sprich B1-Deutsch: 'Sie müssen ein neues Passfoto mitbringen, weil das alte abgelaufen ist.', 'Die Gebühr wird erst nach Prüfung fällig.' (Passiv). Beende höflich bei Trigger-Phrasen.",
+          "user_role": "Antragsteller",
+          "initial_message": "Guten Tag. Sie möchten Ihren Aufenthaltstitel verlängern? Haben Sie alle erforderlichen Unterlagen dabei?",
+          "ending_triggers": ["Danke, ich bringe die fehlenden Dokumente", "Auf Wiedersehen", "Schönen Tag", "Bis nächste Woche"],
+          "tips": {
+            "de": "Sage: 'Mein Aufenthaltstitel läuft am 15. Juni ab, deshalb möchte ich ihn verlängern, bevor er ungültig wird.' Frage: 'Welche Unterlagen brauche ich genau, damit ich nichts vergesse?' und 'Wie lange dauert die Bearbeitung, weil ich eine Reise plane?' Frage auch: 'Darf ich während der Bearbeitung arbeiten, auch wenn mein alter Titel abgelaufen ist?'",
+            "ar": "قل: 'تصريح إقامتي ينتهي في 15 يونيو، لذلك أريد تمديده قبل أن يصبح غير صالح.' اسأل: 'ما هي المستندات المطلوبة بالضبط حتى لا أنسى شيئًا؟' و 'كم تستغرق المعالجة لأنني أخطط لرحلة؟' اسأل أيضًا: 'هل يُسمح لي بالعمل أثناء المعالجة حتى لو انتهت صلاحية تصريحي القديم؟'"
+          },
+          "key_vocab": {
+            "de": ["Aufenthaltstitel", "Visum", "Frist", "Gebühr", "Bescheid", "Arbeitserlaubnis", "Passfoto", "Antrag", "Bearbeitungsdauer"],
+            "ar": ["تصريح إقامة", "تأشيرة", "موعد نهائي", "رسوم", "إخطار", "تصريح عمل", "صورة جواز سفر", "طلب", "مدة المعالجة"]
+          }
+        },
+        {
+          "id": "B1_werkstatt",
+          "topic": "Autowerkstatt (seltsames Geräusch)",
+          "icon": "🚗",
+          "difficulty": "B1",
+          "ai_name": "Herr Kurz",
+          "ai_gender": "männlich",
+          "description": {
+            "de": "Dein Auto macht ein seltsames Geräusch beim Bremsen. Ziel: Ein Gespräch mit dem Mechaniker über das Problem und die Reparaturkosten führen.",
+            "ar": "سيارتك تصدر صوتًا غريبًا عند الفرامل. الهدف: إجراء محادثة مع الميكانيكي عن المشكلة وتكلفة الإصلاح."
+          },
+          "system_prompt": "Du bist Herr Kurz, Mechaniker. Der Nutzer hört ein Klackern beim Bremsen. Sprich B1-Deutsch: 'Es könnte die Bremse sein, weil die Beläge abgenutzt sind.', 'Der Wagen muss in die Werkstatt gebracht werden, damit wir den Fehler finden.' (Passiv mit 'damit'). Beende höflich bei Trigger-Phrasen.",
+          "user_role": "Kunde",
+          "initial_message": "Was ist los mit Ihrem Auto? Was hören oder sehen Sie?",
+          "ending_triggers": ["Danke, rufen Sie mich an, wenn es fertig ist", "Auf Wiedersehen", "Tschüss", "Bis später"],
+          "tips": {
+            "de": "Beschreibe: 'Wenn ich bremse, höre ich ein Klackern links vorne, besonders wenn es regnet. Das Geräusch wird schlimmer, je schneller ich fahre.' Frage: 'Können Sie einen Kostenvoranschlag machen, bevor Sie mit der Reparatur beginnen?' und 'Wie lange dauert die Reparatur ungefähr, weil ich das Auto jeden Tag brauche?' Frage auch: 'Ist es gefährlich, noch weiterzufahren, oder kann ich erst nächste Woche kommen?'",
+            "ar": "صِف: 'عندما أضغط على الفرامل، أسمع صوت طقطقة في الأمام يسارًا، خاصة عندما تمطر. الصوت يزداد سوءًا كلما زادت سرعتي.' اسأل: 'هل يمكنك عمل تقدير للتكلفة قبل أن تبدأ الإصلاح؟' و 'كم تستغرق مدة الإصلاح تقريبًا لأنني أحتاج السيارة كل يوم؟' اسأل أيضًا: 'هل من الخطر الاستمرار في القيادة أم يمكنني القدوم الأسبوع القادم؟'"
+          },
+          "key_vocab": {
+            "de": ["Bremse", "Motorengeräusch", "Werkstatt", "Kostenvoranschlag", "Reparatur", "Ersatzteil", "Bremsbelag", "Inspektion", "TÜV"],
+            "ar": ["فرامل", "صوت محرك", "ورشة", "تقدير تكلفة", "إصلاح", "قطعة غيار", "وسادة فرامل", "فحص", "فحص دوري"]
+          }
+        },
+        {
+          "id": "B1_umzug",
+          "topic": "Umzugshilfe organisieren (Freunde anrufen)",
+          "icon": "📦",
+          "difficulty": "B1",
+          "ai_name": "Jonas",
+          "ai_gender": "männlich",
+          "description": {
+            "de": "Du ziehst um und brauchst Hilfe von Freunden. Ziel: Einen Anruf bei einem Freund simulieren, um Unterstützung zu organisieren.",
+            "ar": "أنت تنتقل إلى منزل جديد وتحتاج مساعدة من الأصدقاء. الهدف: محاكاة مكالمة مع صديق لتنظيم الدعم."
+          },
+          "system_prompt": "Du bist Jonas, ein Freund. Der Nutzer ruft an, weil er umzieht und Hilfe braucht. Sprich B1-Deutsch: 'Kannst du am Samstag kommen?', 'Weil ich einen großen Kleiderschrank habe, brauche ich starke Leute.' Benutze 'weil' und 'obwohl'. Beende höflich bei Trigger-Phrasen.",
+          "user_role": "Freund (Anrufer)",
+          "initial_message": "Hallo! Lange nicht gehört. Was ist los? Brauchst du etwas?",
+          "ending_triggers": ["Danke, bis Samstag", "Auf Wiedersehen", "Tschüss", "Bis dann"],
+          "tips": {
+            "de": "Erkläre: 'Ich brauche Hilfe, weil ich am Samstag umziehe. Die neue Wohnung ist im dritten Stock ohne Aufzug.' Frage: 'Kannst du mir helfen? Und kannst du vielleicht einen Transporter ausleihen, weil ich keinen habe?' Sage: 'Es gibt schwere Möbel, wie zum Beispiel einen Eichenholzschrank, obwohl ich schon einige Kartons gepackt habe.' Versprich: 'Ich zahle Pizza und Bier für alle, die helfen!'",
+            "ar": "اشرح: 'أحتاج مساعدة لأني أنتقل يوم السبت. الشقة الجديدة في الطابق الثالث بدون مصعد.' اسأل: 'هل يمكنك مساعدتي؟ وهل يمكنك استعارة شاحنة صغيرة لأنني لا أملك واحدة؟' قل: 'هناك أثاث ثقيل، مثل خزانة من خشب البلوط، على الرغم من أنني قمت بتعبئة بعض الكراتين بالفعل.' وعد: 'سأدفع ثمن البيتزا والبيرة لكل من يساعد!'"
+          },
+          "key_vocab": {
+            "de": ["Umzug", "Kartons", "Möbel", "Transporter", "schleppen", "pünktlich", "Abbau", "Aufbau", "Möbelpacker"],
+            "ar": ["انتقال", "كراتين", "أثاث", "شاحنة صغيرة", "يحمل", "في الوقت المحدد", "تفكيك", "تركيب", "عمال نقل أثاث"]
+          }
+        },
+        {
+          "id": "B1_elektronik_reklamation",
+          "topic": "Reklamation (Laptop defekt)",
+          "icon": "💻",
+          "difficulty": "B1",
+          "ai_name": "Frau Moritz",
+          "ai_gender": "weiblich",
+          "description": {
+            "de": "Dein vor zwei Wochen gekaufter Laptop funktioniert nicht. Ziel: Eine Reklamation im Elektronikladen mit Garantieanspruch simulieren.",
+            "ar": "الكمبيوتر المحمول الذي اشتريته منذ أسبوعين لا يعمل. الهدف: محاكاة شكوى في متجر الإلكترونيات مع طلب الضمان."
+          },
+          "system_prompt": "Du bist Frau Moritz, Verkäuferin im Elektromarkt. Der Nutzer hat vor zwei Wochen einen Laptop gekauft, der nicht bootet. Sprich B1-Deutsch: 'Haben Sie die Garantie noch?', 'Das Gerät wird eingeschickt, damit die Hersteller es reparieren.' (Passiv mit 'damit'). Beende höflich bei Trigger-Phrasen.",
+          "user_role": "Kunde",
+          "initial_message": "Guten Tag! Was ist das Problem? Ihr Laptop macht Schwierigkeiten?",
+          "ending_triggers": ["Danke, ich warte auf die Reparatur", "Auf Wiedersehen", "Tschüss", "Schönen Tag"],
+          "tips": {
+            "de": "Sage: 'Ich habe diesen Laptop vor zwei Wochen bei Ihnen gekauft, aber er bootet nicht mehr, obwohl ich gestern noch damit gearbeitet habe.' Zeige die Rechnung. Frage: 'Habe ich noch Garantie, weil es erst zwei Wochen her ist?' und 'Wie lange dauert die Reparatur ungefähr, wenn Sie ihn einschicken?' Bestehe auf: 'Ich möchte eine kostenlose Reparatur oder mein Geld zurück, da der Defekt nicht meine Schuld ist.'",
+            "ar": "قل: 'اشتريت هذا الكمبيوتر المحمول من عندكم منذ أسبوعين، لكنه لم يعد يعمل بالرغم من أنني كنت أعمل عليه بالأمس.' أظهر الفاتورة. اسأل: 'هل ما زال تحت الضمان لأنه مضى أسبوعان فقط؟' و 'كم تستغرق مدة الإصلاح تقريبًا إذا قمت بإرساله؟' أصر على: 'أريد إصلاحًا مجانيًا أو استعادة أموالي لأن العطل ليس خطئي.'"
+          },
+          "key_vocab": {
+            "de": ["Garantie", "Reparatur", "Einsendung", "Defekt", "Rechnung", "Umtausch", "Herstellergarantie", "Gewährleistung", "Booten"],
+            "ar": ["ضمان", "إصلاح", "إرسال", "عطل", "فاتورة", "استبدال", "ضمان المصنع", "ضمان قانوني", "إقلاع"]
+          }
+        },
+        {
+          "id": "B1_sportverein",
+          "topic": "Sportverein (Mitgliedschaft)",
+          "icon": "⚽",
+          "difficulty": "B1",
+          "ai_name": "Herr Zorn",
+          "ai_gender": "männlich",
+          "description": {
+            "de": "Du möchtest einem Fußballverein beitreten. Ziel: Ein Gespräch mit dem Vereinsvorsitzenden über Beiträge, Trainingszeiten und Ausrüstung führen.",
+            "ar": "تريد الانضمام لنادي كرة قدم. الهدف: إجراء محادثة مع رئيس النادي عن الرسوم وأوقات التدريب والمعدات."
+          },
+          "system_prompt": "Du bist Herr Zorn, Vereinsvorsitzender. Der Nutzer will dem Fußballverein beitreten. Sprich B1-Deutsch: 'Der Jahresbeitrag beträgt 150 Euro, weil die Platzmiete teuer ist.', 'Das Training findet dienstags und donnerstags statt.' Benutze 'weil' und 'dass'. Beende höflich bei Trigger-Phrasen.",
+          "user_role": "Interessent",
+          "initial_message": "Hallo! Sie möchten bei uns Fußball spielen? Das ist schön. Was möchten Sie wissen?",
+          "ending_triggers": ["Danke, ich bringe das Formular unterschrieben", "Auf Wiedersehen", "Tschüss", "Bis zum Training"],
+          "tips": {
+            "de": "Frage: 'Wie hoch ist der Mitgliedsbeitrag und gibt es eine Ermäßigung für Studenten oder Arbeitslose?' Frage: 'Wann sind die genauen Trainingszeiten, weil ich berufstätig bin?' und 'Brauche ich eigene Ausrüstung wie Fußballschuhe und Schienbeinschoner, oder stellt der Verein etwas?' Frage auch: 'Kann ich erst ein Probetraining machen, bevor ich den Vertrag unterschreibe, um zu sehen, ob es mir gefällt?'",
+            "ar": "اسأل: 'كم تبلغ رسوم العضوية وهل هناك تخفيض للطلاب أو العاطلين عن العمل؟' اسأل: 'ما هي أوقات التدريب الدقيقة لأنني موظف؟' و 'هل أحتاج إلى معداتي الخاصة مثل حذاء القدم وواقي الساق أم أن النادي يوفر شيئًا؟' اسأل أيضًا: 'هل يمكنني عمل تدريب تجريبي قبل أن أوقع العقد لأرى ما إذا كان يعجبني؟'"
+          },
+          "key_vocab": {
+            "de": ["Mitgliedsbeitrag", "Trainingszeiten", "Plätze", "Ausrüstung", "Liga", "Mannschaft", "Probetraining", "Vertrag", "Schienbeinschoner"],
+            "ar": ["رسوم العضوية", "أوقات التدريب", "ملاعب", "معدات", "دوري", "فريق", "تدريب تجريبي", "عقد", "واقي الساق"]
+          }
+        },
+        {
+          "id": "B1_termin_absage",
+          "topic": "Termin absagen (Arzt, Friseur etc.)",
+          "icon": "📅",
+          "difficulty": "B1",
+          "ai_name": "Frau Lenz",
+          "ai_gender": "weiblich",
+          "description": {
+            "de": "Du musst einen Termin absagen, weil du krank geworden bist. Ziel: Ein höfliches Telefonat mit der Praxis führen, um den Termin zu verschieben.",
+            "ar": "يجب عليك إلغاء موعد لأنك مرضت. الهدف: إجراء مكالمة هاتفية مهذبة مع العيادة لتأجيل الموعد."
+          },
+          "system_prompt": "Du bist Frau Lenz, die Rezeptionistin in der Arztpraxis. Der Nutzer muss einen Termin absagen. Sprich B1-Deutsch: 'Das ist schade, aber kein Problem.', 'Wann möchten Sie einen neuen Termin?' Benutze höfliche Formulierungen mit 'würden'. Beende höflich bei Trigger-Phrasen.",
+          "user_role": "Patient",
+          "initial_message": "Arztpraxis Dr. Weber, guten Tag! Frau Lenz am Apparat. Wie kann ich Ihnen helfen?",
+          "ending_triggers": ["Danke für Ihr Verständnis", "Auf Wiedersehen", "Tschüss", "Bis nächste Woche"],
+          "tips": {
+            "de": "Sage: 'Ich habe leider einen Termin für heute um 15 Uhr bei Dr. Weber, den ich absagen muss, weil ich plötzlich krank geworden bin mit Fieber.' Frage: 'Könnten Sie mir bitte einen neuen Termin geben, zum Beispiel nächste Woche, wenn es Ihnen passt?' Sage: 'Es tut mir leid für die kurzfristige Absage, aber ich konnte vorher nicht wissen, dass ich krank werde.'",
+            "ar": "قل: 'لدي موعد اليوم الساعة 3 مع الدكتور فيبر، والذي يجب أن ألغيه لأنني مرضت فجأة بحمى.' اسأل: 'هل يمكنك إعطائي موعدًا جديدًا من فضلك، مثلاً الأسبوع القادم إذا كان مناسبًا لك؟' قل: 'أنا آسف للإلغاء في اللحظة الأخيرة، لكنني لم أكن أعرف أنني سأمرض.'"
+          },
+          "key_vocab": {
+            "de": ["Termin absagen", "verschieben", "neuer Termin", "krank", "Fieber", "Rezeption", "Uhrzeit", "Wochentag", "Notfall"],
+            "ar": ["إلغاء موعد", "تأجيل", "موعد جديد", "مريض", "حمى", "استقبال", "وقت", "يوم الأسبوع", "حالة طارئة"]
+          }
+        },
+        {
+          "id": "B1_restaurant_reservierung",
+          "topic": "Restaurant reservieren (für Gruppe)",
+          "icon": "🍽️",
+          "difficulty": "B1",
+          "ai_name": "Herr Paul",
+          "ai_gender": "männlich",
+          "description": {
+            "de": "Du möchtest einen Tisch für eine Gruppe im Restaurant reservieren. Ziel: Ein Telefonat mit dem Restaurantmitarbeiter über Datum, Uhrzeit und Wünsche führen.",
+            "ar": "تريد حجز طاولة لمجموعة في مطعم. الهدف: إجراء مكالمة هاتفية مع موظف المطعم عن التاريخ والوقت والرغبات."
+          },
+          "system_prompt": "Du bist Herr Paul, Restaurantmitarbeiter. Der Nutzer will für eine Gruppe reservieren. Sprich B1-Deutsch: 'Für wie viele Personen?', 'Bevorzugen Sie drinnen oder draußen?' Benutze höfliche Formen. Beende höflich bei Trigger-Phrasen.",
+          "user_role": "Gast",
+          "initial_message": "Restaurant 'Zum Löwen', guten Tag! Herr Paul hier. Möchten Sie reservieren?",
+          "ending_triggers": ["Danke für die Reservierung", "Auf Wiedersehen", "Tschüss", "Bis Samstag"],
+          "tips": {
+            "de": "Sage: 'Ich möchte gerne einen Tisch für acht Personen reservieren, weil wir eine Geburtstagsfeier planen.' Erkläre: 'Wir kommen am Samstag, den 15. Mai, um 19 Uhr, wenn das möglich ist.' Frage: 'Können Sie uns einen Tisch im Nichtraucherbereich geben, falls es einen gibt?' und 'Könnte jeder sein Essen separat bezahlen, oder gibt es nur eine Rechnung für die ganze Gruppe?'",
+            "ar": "قل: 'أريد حجز طاولة لثمانية أشخاص لأننا نخطط لحفلة عيد ميلاد.' اشرح: 'سنأتي يوم السبت 15 مايو الساعة 7 مساءً إذا كان ذلك ممكنًا.' اسأل: 'هل يمكنك إعطاؤنا طاولة في منطقة غير المدخنين إذا وجدت؟' و 'هل يمكن لكل شخص أن يدفع طلبه بشكل منفصل أم أن هناك فاتورة واحدة للمجموعة بأكملها؟'"
+          },
+          "key_vocab": {
+            "de": ["Reservierung", "Gruppe", "Personen", "Tisch", "Geburtstag", "Nichtraucherbereich", "getrennte Rechnung", "Uhrzeit", "Datum"],
+            "ar": ["حجز", "مجموعة", "أشخاص", "طاولة", "عيد ميلاد", "منطقة غير المدخنين", "فاتورة منفصلة", "وقت", "تاريخ"]
+          }
+        }
+      ]
+    },
+    {
+      "level": "B2",
+      "description": {
+        "de": "Fortgeschritten. Konjunktiv I & II, komplexe Nebensätze, Redewendungen, Diskussionen, Meinungen begründen. Längere, konfliktreichere Dialoge (12-15 Wortwechsel).",
+        "ar": "متقدم عليا. صيغة التمني والأدب (Konjunktiv I & II)، جمل ثانوية معقدة، تعابير اصطلاحية، مناقشات، تبرير الآراء. حوارات أطول وأكثر تعقيدًا (12-15 تبادلًا)."
+      },
+      "scenarios": [
+        {
+          "id": "B2_vermieter_schimmel",
+          "topic": "Streit mit Vermieter (Schimmel in der Wohnung)",
+          "icon": "🏚️",
+          "difficulty": "B2",
+          "ai_name": "Herr Rott",
+          "ai_gender": "männlich",
+          "description": {
+            "de": "Seit drei Monaten hast du Schimmel im Bad, obwohl du regelmäßig lüftest. Der Vermieter reagiert nicht. Ziel: Einen Konflikt mit Androhung von Mietminderung und Anwalt führen.",
+            "ar": "منذ ثلاثة أشهر يعاني من العفن الأسود في الحمام بالرغم من التهوية المنتظمة. المالك لا يستجيب. الهدف: خوض نزاع مع التهديد بتخفيض الإيجار والمحامي."
+          },
+          "system_prompt": "Du bist Herr Rott, ein abweisender Vermieter. Der Nutzer fordert seit 3 Monaten Schimmelbeseitigung. Sprich B2-Deutsch: 'Also, wenn Sie richtig gelüftet hätten, wäre der Schimmel nicht gekommen.' (Konjunktiv II), 'Ich würde ja gerne helfen, aber die Handwerker haben keine Zeit.' Benutze 'obwohl', 'trotzdem' und Konjunktiv II. Beende höflich bei Trigger-Phrasen.",
+          "user_role": "Mieter",
+          "initial_message": "Hallo? Wohnungsgenossenschaft Meier. Was ist denn diesmal wieder los? Ich habe viel zu tun.",
+          "ending_triggers": ["Ich werde einen Anwalt einschalten", "Danke für die Zusage", "Auf Wiedersehen", "Ich fordere schriftliche Bestätigung"],
+          "tips": {
+            "de": "Bleib sachlich aber bestimmt: 'Seit drei Monaten habe ich Schimmel im Bad, obwohl ich regelmäßig lüfte – wie Sie mir damals gesagt haben.' Zitiere das Gesetz: 'Laut § 536 BGB darf ich die Miete mindern, wenn Sie nicht handeln. Das wäre dann eine Mietminderung von 20 Prozent.' Setze eine Frist: 'Ich gebe Ihnen 14 Tage Frist zur Beseitigung des Mangels. Sollten Sie nichts unternehmen, werde ich einen Anwalt einschalten und die Miete einbehalten.' Frage: 'Würden Sie es verantworten, wenn mein Kind durch den Schimmel krank wird?'",
+            "ar": "كن هادئًا ولكن حازمًا: 'منذ ثلاثة أشهر أعاني من العفن الأسود في الحمام بالرغم من أنني أُهوي بانتظام – كما أخبرتني حينها.' استشهد بالقانون: 'وفقًا للفقرة 536 من القانون المدني الألماني، يحق لي تخفيض الإيجار إذا لم تتصرف. سيكون ذلك تخفيضًا بنسبة 20 بالمئة.' حدد مهلة: 'أعطيك 14 يومًا مهلة لإزالة العيب. إذا لم تفعل شيئًا، سأتصل بمحامٍ وسأحتجز الإيجار.' اسأل: 'هل ستتحمل المسؤولية إذا مرض طفلي بسبب العفن؟'"
+          },
+          "key_vocab": {
+            "de": ["Schimmel", "Mängelbeseitigung", "Mietminderung", "Anwalt", "Frist setzen", "Wohnungsaufsicht", "Gesundheitsgefahr", "BGB § 536", "Mieterschutzbund"],
+            "ar": ["عفن أسود", "إزالة العيوب", "تخفيض الإيجار", "محام", "تحديد مهلة", "رقابة الإسكان", "خطر صحي", "الفقرة 536 من القانون المدني", "حماية المستأجرين"]
+          }
+        },
+        {
+          "id": "B2_personalgespraech",
+          "topic": "Mitarbeitergespräch (Leistungskritik)",
+          "icon": "📈",
+          "difficulty": "B2",
+          "ai_name": "Frau Dr. Ehlert",
+          "ai_gender": "weiblich",
+          "description": {
+            "de": "Deine Verkaufszahlen waren schlecht im letzten Quartal. Deine Chefin kritisiert dich. Ziel: Ein professionelles Gespräch mit Verbesserungsplan und Rechtfertigung führen.",
+            "ar": "مبيعاتك كانت سيئة في الربع الأخير. مديرتك تنتقدك. الهدف: إجراء محادثة مهنية مع خطة تحسين وتبرير."
+          },
+          "system_prompt": "Du bist Frau Dr. Ehlert, Vorgesetzte. Der Nutzer ist ein Mitarbeiter mit schlechten Verkaufszahlen. Sprich B2-Deutsch: 'Es wäre wünschenswert gewesen, wenn Sie sich mehr engagiert hätten.' (Konjunktiv II), 'Hätten Sie häufiger Kundenbesuche gemacht, wäre das Quartal besser gewesen.' Benutze Kritik mit Konjunktiv II. Beende höflich bei Trigger-Phrasen.",
+          "user_role": "Mitarbeiter",
+          "initial_message": "Nehmen Sie bitte Platz. Das letzte Quartal war schwach – wie erklären Sie sich das? Ich bin enttäuscht.",
+          "ending_triggers": ["Ich werde mich verbessern", "Danke für das Feedback", "Auf Wiedersehen", "Ich akzeptiere den Verbesserungsplan"],
+          "tips": {
+            "de": "Nimm die Kritik an, aber erkläre die Gründe sachlich: 'Ich verstehe, dass die Zahlen schlecht waren, aber ich hatte im August persönliche Probleme, weil ein Familienmitglied schwer erkrankte. Das hat mich abgelenkt, auch wenn es keine Ausrede sein soll.' Biete eine konkrete Lösung an: 'Ich werde einen detaillierten Verbesserungsplan erstellen und plane, mindestens fünf zusätzliche Kundenbesuche pro Woche zu machen.' Frage: 'Welche konkreten Ziele setzen wir für das nächste Quartal, damit wir beide dieselbe Erwartung haben?' Zeige Eigeninitiative: 'Könnten wir zusätzliche Verkaufstrainings organisieren, damit ich meine Techniken verbessern kann?'",
+            "ar": "تقبل النقد، لكن اشرح الأسباب بموضوعية: 'أتفهم أن الأرقام كانت سيئة، لكن كان لدي مشاكل شخصية في أغسطس لأن أحد أفراد العائلة مرض بشدة. هذا أثر على تركيزي، رغم أنه لا ينبغي أن يكون عذرًا.' قدم حلاً ملموسًا: 'سأضع خطة تحسين مفصلة وأخطط لعمل خمس زيارات إضافية للعملاء على الأقل أسبوعيًا.' اسأل: 'ما هي الأهداف المحددة التي نضعها للربع القادم حتى يكون لدينا نفس التوقعات؟' أظهر مبادرة: 'هل يمكننا تنظيم تدريبات إضافية في المبيعات حتى أتمكن من تحسين أسلوبي؟'"
+          },
+          "key_vocab": {
+            "de": ["Leistungsbeurteilung", "Zielvorgabe", "Verbesserungsplan", "Kündigungsdrohung", "Feedbackkultur", "Umsatz", "Vertrieb", "Kundenbesuch", "Verkaufszahlen"],
+            "ar": ["تقييم الأداء", "تحديد أهداف", "خطة تحسين", "تهديد بالفصل", "ثقافة التغذية الراجعة", "مبيعات", "توزيع", "زيارة عميل", "أرقام المبيعات"]
+          }
+        },
+        {
+          "id": "B2_flugannullierung",
+          "topic": "Flug annulliert – Entschädigung fordern",
+          "icon": "🛫",
+          "difficulty": "B2",
+          "ai_name": "Herr Noll",
+          "ai_gender": "männlich",
+          "description": {
+            "de": "Dein Flug wurde wegen Streiks annulliert. Du willst einen Ersatzflug und eine Entschädigung. Ziel: Eine konfliktreiche Auseinandersetzung am Schalter simulieren.",
+            "ar": "تم إلغاء رحلتك بسبب إضراب. تريد رحلة بديلة وتعويضًا. الهدف: محاكاة جدال حاد عند الشباك."
+          },
+          "system_prompt": "Du bist Herr Noll, ein gestresster Schaltermitarbeiter nach einem Streik. Der Nutzer will Ersatzflug und Entschädigung. Sprich B2-Deutsch: 'Wir bieten Ihnen einen Hotelgutschein an, obwohl wir dazu nicht verpflichtet sind.', 'Gemäß EU-Verordnung hätten Sie Anspruch auf Entschädigung, wenn der Streik nicht höhere Gewalt wäre.' Benutze Konjunktiv II und 'obwohl'. Beende höflich bei Trigger-Phrasen.",
+          "user_role": "Passagier",
+          "initial_message": "Nächster, bitte! Wir tun unser Bestes, aber der Streik dauert an. Haben Sie etwas Geduld!",
+          "ending_triggers": ["Überweisen Sie die Entschädigung", "Ich buche selbst um", "Auf Wiedersehen", "Ich beschwere mich bei der Schlichtungsstelle"],
+          "tips": {
+            "de": "Berufe dich auf die EU-Fluggastrechteverordnung: 'Mein Flug wurde annulliert, obwohl die Airline den Streik hätte vorhersehen müssen. Laut EU-Verordnung 261/2004 habe ich Anspruch auf einen Ersatzflug UND eine Entschädigung von 400 Euro, da es keine höhere Gewalt ist.' Frage: 'Wann ist der nächste verfügbare Ersatzflug? Ich muss morgen zu einem wichtigen Geschäftstermin.' Bestehe auf Soforthilfe: 'Brauche dringend eine Hotellübernachtung und Verpflegung, da ich nun einen Tag warten muss. Die Airline ist dazu verpflichtet.' Drohe: 'Wenn Sie mir nicht helfen, werde ich mich bei der Schlichtungsstelle für Luftverkehr beschweren und rechtliche Schritte einleiten.'",
+            "ar": "استند إلى لائحة حقوق المسافرين الجويين في الاتحاد الأوروبي: 'تم إلغاء رحلتي بالرغم من أن شركة الطيران كان بإمكانها توقع الإضراب. وفقًا للائحة EU 261/2004، يحق لي الحصول على رحلة بديلة وتعويض قدره 400 يورو لأنه ليس قوة قاهرة.' اسأل: 'متى موعد الرحلة البديلة المتاحة التالية؟ يجب أن أصل غدًا لموعد عمل مهم.' أصر على المساعدة الفورية: 'أحتاج بشكل عاجل إلى فندق ووجبات لأنني مضطر للانتظار يومًا كاملاً. شركة الطيران ملزمة بذلك.' هدد: 'إذا لم تساعدني، سأشكو إلى هيئة التوفيق للنقل الجوي وسأتخذ إجراءات قانونية.'"
+          },
+          "key_vocab": {
+            "de": ["Annullierung", "Überbuchung", "Streik", "Entschädigung", "Ersatzflug", "Hotelierung", "EU-Fluggastrechteverordnung", "höhere Gewalt", "Schlichtungsstelle"],
+            "ar": ["إلغاء", "حجز زائد", "إضراب", "تعويض", "رحلة بديلة", "إقامة فندقية", "لائحة حقوق المسافرين الجويين في الاتحاد الأوروبي", "قوة قاهرة", "هيئة التوفيق"]
+          }
+        },
+        {
+          "id": "B2_diskussion_windrad",
+          "topic": "Diskussion: Windrad vor dem Haus",
+          "icon": "🌬️",
+          "difficulty": "B2",
+          "ai_name": "Frau Tilsner",
+          "ai_gender": "weiblich",
+          "description": {
+            "de": "Deine Nachbarin ist gegen das neue Windrad. Du bist dafür. Ziel: Eine kontroverse Diskussion über erneuerbare Energien mit Argumenten führen.",
+            "ar": "جارتك ضد توربين الرياح الجديد. أنت معه. الهدف: خوض مناقشة مثيرة للجدل حول الطاقة المتجددة بالحجج."
+          },
+          "system_prompt": "Du bist Frau Tilsner, eine Nachbarin, die das Windrad vor ihrem Haus schrecklich findet. Der Nutzer ist Befürworter von Windkraft. Sprich B2-Deutsch: 'Sollen wir etwa die Vögel töten, nur damit Sie Ihr grünes Gewissen beruhigen?', 'Wenn es nach Ihnen ginge, würden wir überall Beton versiegeln.' Argumentiere leidenschaftlich mit Konjunktiv II und Redewendungen. Beende höflich bei Trigger-Phrasen.",
+          "user_role": "Befürworter (Windkraft)",
+          "initial_message": "Also ich finde, das Windrad zerstört unsere schöne Landschaft total! Haben Sie sich das überhaupt angesehen? Eine riesige, hässliche Maschine!",
+          "ending_triggers": ["Wir werden uns nicht einig", "Danke für die Diskussion", "Auf Wiedersehen", "Lassen wir das Thema"],
+          "tips": {
+            "de": "Argumentiere sachlich, aber bleib respektvoll: 'Einerseits verstehe ich Ihren Landschaftsschutz durchaus, andererseits ist der Klimawandel eine existenzielle Bedrohung für uns alle – und das Windrad ist nur ein kleiner Teil der Lösung.' Widerlege ihre Ängste: 'Windräder töten nicht annähernd so viele Vögel wie Hauskatzen oder Fensterscheiben. Das ist ein Mythos, der längst widerlegt ist.' Biete Kompromisse an: 'Was würden Sie denn sagen, wenn wir das Windrad etwas weiter weg bauen, dafür aber Kompensationszahlungen an die Anwohner leisten?' Bleib respektvoll: 'Ich respektiere Ihre Meinung, aber ich sehe die Priorität beim Klimaschutz – sonst haben unsere Kinder bald keine schöne Landschaft mehr, die sie schützen könnten.'",
+            "ar": "ناقش بموضوعية لكن حافظ على الاحترام: 'من ناحية، أفهم تمامًا حماية المناظر الطبيعية لديك، لكن من ناحية أخرى، التغير المناخي تهديد وجودي لنا جميعًا – وتوربينات الرياح هي جزء صغير فقط من الحل.' دحض مخاوفها: 'توربينات الرياح لا تقتل طيورًا بقدر ما تقتل القطط المنزلية أو النوافذ الزجاجية. هذه أسطورة تم دحضها منذ زمن طويل.' قدم حلولاً وسطًا: 'ماذا لو قمنا ببناء توربين الرياح بعيدًا قليلاً، لكن مع دفع تعويضات للسكان المحليين؟' حافظ على الاحترام: 'أحترم رأيك، لكني أرى الأولوية لحماية المناخ – وإلا فلن يكون لدى أطفالنا منظر طبيعي جميل ليحموه.'"
+          },
+          "key_vocab": {
+            "de": ["erneuerbare Energien", "Landschaftsschutz", "Klimawandel", "NIMBY", "Kompensation", "Artenschutz", "Windkraft", "Beton", "Existenzbedrohung"],
+            "ar": ["طاقة متجددة", "حماية المناظر الطبيعية", "تغير مناخي", "ليس في فنائي الخلفي", "تعويض", "حماية الأنواع", "طاقة الرياح", "خرسانة", "تهديد وجودي"]
+          }
+        },
+        {
+          "id": "B2_bewerbungsabsage",
+          "topic": "Absage auf Bewerbung – Widerspruch",
+          "icon": "📧",
+          "difficulty": "B2",
+          "ai_name": "Frau Johst",
+          "ai_gender": "weiblich",
+          "description": {
+            "de": "Du hast eine Bewerbungsabsage erhalten und rufst an, um konstruktives Feedback zu bekommen. Ziel: Ein professionelles Telefonat mit HR über die Gründe der Absage.",
+            "ar": "تلقيت رفضًا على طلب توظيف وتتصل للحصول على ملاحظات بناءة. الهدف: إجراء مكالمة هاتفية احترافية مع الموارد البشرية حول أسباب الرفض."
+          },
+          "system_prompt": "Du bist Frau Johst von der Personalabteilung. Du rufst an, um die Absage mitzuteilen. Der Nutzer will wissen, warum. Sprich B2-Deutsch: 'Ihre Qualifikation ist zweifellos gut, jedoch haben wir uns für einen Bewerber mit mehr Berufserfahrung entschieden.', 'Wäre Ihre Bewerbung früher gekommen, hätten wir Sie vielleicht eingeladen.' Benutze Konjunktiv II. Beende höflich bei Trigger-Phrasen.",
+          "user_role": "Bewerber",
+          "initial_message": "Herr/Frau Schmidt? Hier ist Frau Johst von der Firma ABC. Ich wollte Sie persönlich informieren: Leider müssen wir Ihnen absagen. Es war eine schwierige Entscheidung.",
+          "ending_triggers": ["Danke für die Ehrlichkeit", "Schade, dann nicht", "Auf Wiedersehen", "Ich akzeptiere die Entscheidung"],
+          "tips": {
+            "de": "Frage höflich, aber direkt nach konstruktivem Feedback: 'Vielen Dank für die persönliche Rückmeldung, das schätze ich sehr. Könnten Sie mir konkret sagen, woran es genau gelegen hat? Ich möchte mich verbessern.' Bitte um Zukunftschance: 'Wenn ich mich in einem Jahr noch einmal bewerben würde – wäre das sinnvoll, oder suchen Sie dann wieder jemanden mit mehr Erfahrung?' Zeige Professionalität: 'Könnten Sie mir vielleicht einen Tipp geben, an welchen Fähigkeiten ich arbeiten sollte, um beim nächsten Mal besser zu bestehen? Das würde mir sehr helfen.' Bedanke dich: 'Vielen Dank für die Offenheit und Ehrlichkeit – das hilft mir wirklich für meine weitere berufliche Entwicklung.'",
+            "ar": "اسأل بلباقة ولكن مباشرة للحصول على ملاحظات بناءة: 'شكرًا جزيلاً للإفادة الشخصية، أقدر ذلك كثيرًا. هل يمكنك أن تخبرني بالتحديد ما سبب الرفض بالضبط؟ أريد تحسين نفسي.' اطلب فرصة مستقبلية: 'إذا تقدمت مرة أخرى بعد عام – هل سيكون ذلك منطقيًا أم أنكم ستبحثون مرة أخرى عن شخص لديه خبرة أكبر؟' أظهر احترافية: 'هل يمكنك إعطائي نصيحة حول أي مهارات يجب أن أعمل عليها لأكون أفضل في المرة القادمة؟ هذا سيساعدني كثيرًا.' اشكر: 'شكرًا جزيلاً على الصراحة والوضوح – هذا يساعدني حقًا في تطوري المهني المستقبلي.'"
+          },
+          "key_vocab": {
+            "de": ["Absage", "Widerspruch", "Bewerbungsprozess", "Soft Skills", "Hardskills", "Überqualifikation", "Feedback", "berufliche Entwicklung", "Eignung"],
+            "ar": ["رفض", "اعتراض", "عملية التوظيف", "مهارات ناعمة", "مهارات صلبة", "تأهيل زائد", "تغذية راجعة", "تطور مهني", "كفاءة"]
+          }
+        },
+        {
+          "id": "B2_steuerberater",
+          "topic": "Steuerberater (Selbstständiger)",
+          "icon": "💰",
+          "difficulty": "B2",
+          "ai_name": "Herr Mohn",
+          "ai_gender": "männlich",
+          "description": {
+            "de": "Du bist selbstständig (Etsy-Handel) und möchtest Steuern sparen. Ziel: Ein Beratungsgespräch mit dem Steuerberater über Betriebsausgaben und Abschreibungen.",
+            "ar": "أنت حر (تجارة على Etsy) وتريد توفير الضرائب. الهدف: إجراء محادثة استشارية مع مستشار الضرائب حول نفقات التشغيل والاستهلاك."
+          },
+          "system_prompt": "Du bist Herr Mohn, Steuerberater. Der Nutzer hat ein kleines Gewerbe (Etsy/Handel). Sprich B2-Deutsch: 'Sie könnten Ihre Betriebsausgaben optimieren, indem Sie auch kleinere Anschaffungen absetzen.', 'Würden Sie eine Bilanz erstellen oder reicht die EÜR?' Erkläre Fachbegriffe. Benutze Konjunktiv II und Passiv. Beende höflich bei Trigger-Phrasen.",
+          "user_role": "Selbstständiger",
+          "initial_message": "Setzen Sie sich bitte. Erzählen Sie mir etwas über Ihre Einnahmen und Ausgaben im letzten Jahr. Wie läuft Ihr Gewerbe?",
+          "ending_triggers": ["Danke, ich sende Ihnen die Belege", "Auf Wiedersehen", "Bis nächste Woche", "Schönen Tag noch"],
+          "tips": {
+            "de": "Frage konkret: 'Kann ich mein Homeoffice vollständig von der Steuer absetzen, obwohl ich nur drei Tage die Woche von zu Hause arbeite?', 'Wie hoch ist die Umsatzsteuervorauszahlung monatlich, und kann ich sie reduzieren, wenn die Einnahmen schwanken?' Frage auch: 'Welche konkreten Ausgaben sind steuerlich absetzbar – zum Beispiel mein Internet, mein Laptop, Portokosten für Pakete?' Nenne genaue Zahlen: 'Mein Gewinn lag im letzten Jahr bei etwa 20.000 Euro, aber meine Ausgaben waren ungefähr 8.000 Euro für Material und Versand. Wie kann ich meine Steuerlast optimieren?' Frage zur Abschreibung: 'Kann ich größere Anschaffungen wie meinen neuen 3D-Drucker sofort absetzen oder muss ich ihn über mehrere Jahre abschreiben?'",
+            "ar": "اسأل بالتحديد: 'هل يمكنني خصم مكتبي المنزلي بالكامل من الضريبة على الرغم من أنني أعمل من المنزل ثلاثة أيام فقط في الأسبوع؟'، 'كم تبلغ دفعة ضريبة المبيعات المقدمة شهريًا، وهل يمكنني تخفيضها إذا كانت الإيرادات متقلبة؟' اسأل أيضًا: 'ما هي النفقات المحددة القابلة للخصم الضريبي – على سبيل المثال الإنترنت، الكمبيوتر المحمول، تكاليف شحن الطرود؟' اذكر أرقامًا محددة: 'أرباحي كانت حوالي 20,000 يورو في العام الماضي، لكن نفقاتي كانت حوالي 8,000 يورو للمواد والشحن. كيف يمكنني تحسين عبئي الضريبي؟' اسأل عن الاستهلاك: 'هل يمكنني خصم المشتريات الكبيرة مثل طابعة الـ 3D الجديدة الخاصة بي فورًا أم يجب أن أستهلكها على مدى عدة سنوات؟'"
+          },
+          "key_vocab": {
+            "de": ["Betriebsausgaben", "Abschreibung (AfA)", "EÜR", "Vorsteuer", "Gewerbesteuer", "Steuerfreibetrag", "Homeoffice", "Umsatzsteuer", "Sonderausgaben"],
+            "ar": ["نفقات تشغيلية", "استهلاك", "حساب الربح والخسارة المبسط", "ضريبة المدخلات", "ضريبة الأعمال", "إعفاء ضريبي", "مكتب منزلي", "ضريبة المبيعات", "نفقات خاصة"]
+          }
+        },
+        {
+          "id": "B2_kita_gespraech",
+          "topic": "Elterngespräch in der Kita (Kind beißt)",
+          "icon": "🧸",
+          "difficulty": "B2",
+          "ai_name": "Frau Quast",
+          "ai_gender": "weiblich",
+          "description": {
+            "de": "Dein Kind beißt andere Kinder in der Kita. Die Erzieherin möchte mit dir sprechen. Ziel: Ein einfühlsames, aber lösungsorientiertes Elterngespräch führen.",
+            "ar": "طفلك يعض الأطفال الآخرين في الروضة. المعلمة تريد التحدث معك. الهدف: إجراء محادثة حساسة ولكن موجهة نحو الحلول مع أولياء الأمور."
+          },
+          "system_prompt": "Du bist Frau Quast, Erzieherin. Der Nutzer ist ein besorgter Elternteil. Das Kind beißt andere. Sprich B2-Deutsch: 'Wir haben beobachtet, dass er besonders frustriert ist, wenn ein anderes Kind sein Spielzeug nimmt.', 'Es wäre wichtig, wenn Sie zu Hause konsequent dieselben Regeln anwenden würden.' Benutze Konjunktiv II und einfühlsame Formulierungen. Beende höflich bei Trigger-Phrasen.",
+          "user_role": "Elternteil",
+          "initial_message": "Hallo, danke dass Sie gekommen sind. Wir müssen über Leo sprechen – es ist mir nicht leicht, das zu sagen, aber er hat heute Morgen zwei Kinder gebissen. Wir machen uns Sorgen.",
+          "ending_triggers": ["Wir arbeiten zu Hause daran", "Danke für die Unterstützung", "Auf Wiedersehen", "Wir bleiben im Austausch"],
+          "tips": {
+            "de": "Zeige Kooperationsbereitschaft, ohne in Rechtfertigung zu verfallen: 'Vielen Dank, dass Sie mich informieren und sich so viel Mühe geben. Ich bin schockiert, weil Leo zu Hause überhaupt nicht so ist.' Frage nach den genauen Auslösern: 'Können Sie mir genau beschreiben, in welchen Situationen das Beißen passiert? Was passiert unmittelbar davor?' Frage nach pädagogischen Methoden: 'Welche Strategien wenden Sie in der Kita an, wenn Leo frustriert ist? Dann kann ich dieselben Regeln zu Hause anwenden, damit er keine verwirrenden Signale bekommt.' Biete an: 'Ich werde zu Hause konsequent dasselbe sagen: 'Beißen tut weh, wir verwenden Worte.' Frage auch: 'Braucht mein Kind vielleicht eine Frühförderung oder eine Ergotherapie? Das würde ich sofort organisieren.'",
+            "ar": "أظهر استعدادًا للتعاون دون الوقوع في التبرير: 'شكرًا جزيلاً لإبلاغي ولاهتمامكم الكبير. أنا مصدوم لأن ليو ليس كذلك على الإطلاق في المنزل.' اسأل عن المسببات الدقيقة: 'هل يمكنك أن تصفي لي بالضبط في أي المواقف يحدث العض؟ ماذا يحدث قبله مباشرة؟' اسأل عن الأساليب التربوية: 'ما هي الاستراتيجيات التي تستخدمونها في الروضة عندما يشعر ليو بالإحباط؟ عندها سأطبق نفس القواعد في المنزل حتى لا يتلقى إشارات مربكة.' اعرض: 'سأطبق باستمرار نفس القول في المنزل: 'العض يؤلم، نستخدم الكلمات.' اسأل أيضًا: 'هل يحتاج طفلي ربما إلى تدخل مبكر أو علاج وظائفي؟ سأنظم ذلك فورًا.'"
+          },
+          "key_vocab": {
+            "de": ["Verhaltensauffälligkeit", "Frühförderung", "Konsequenz", "pädagogisches Konzept", "Elterngespräch", "Tagesablauf", "Ergotherapie", "Frustration", "soziales Lernen"],
+            "ar": ["سلوك شاذ", "تدخل مبكر", "اتساق", "مفهوم تربوي", "اجتماع أولياء أمور", "روتين يومي", "علاج وظائفي", "إحباط", "تعلم اجتماعي"]
+          }
+        },
+        {
+          "id": "B2_gepaeck_verloren",
+          "topic": "Gepäck verloren – Fluggesellschaft anrufen",
+          "icon": "🧳",
+          "difficulty": "B2",
+          "ai_name": "Herr Uter",
+          "ai_gender": "männlich",
+          "description": {
+            "de": "Dein Koffer ist seit 5 Tagen verloren. Du rufst die Fluggesellschaft an. Ziel: Ein forderndes Telefonat mit Callcenter-Mitarbeiter über Entschädigung.",
+            "ar": "حقيبتك مفقودة منذ 5 أيام. تتصل بشركة الطيران. الهدف: إجراء مكالمة هاتفية متطلبة مع موظف مركز الاتصال حول التعويض."
+          },
+          "system_prompt": "Du bist Herr Uter, Callcenter-Mitarbeiter bei Lufthansa. Der Nutzer hat seit 5 Tagen kein Gepäck. Sprich B2-Deutsch: 'Ihr Koffer wurde in Frankfurt zuletzt gescannt, aber seitdem gibt es keine Bewegung.', 'Gemäß Montrealer Abkommen bekommen Sie eine Entschädigung von maximal 1.300 Euro, sollten wir den Koffer endgültig nicht finden.' Benutze Rechtsbegriffe und Konjunktiv II. Beende höflich bei Trigger-Phrasen.",
+          "user_role": "Fluggast",
+          "initial_message": "Danke für Ihren Anruf bei der Lufthansa Gepäckhotline. Bitte nennen Sie mir Ihre PIR-Nummer für den Suchauftrag.",
+          "ending_triggers": ["Überweisen Sie die Entschädigung", "Ich warte noch zwei Tage", "Auf Wiedersehen", "Ich reiche eine offizielle Beschwerde ein"],
+          "tips": {
+            "de": "Nenne deine PIR-Nummer und den exakten Wert des Inhalts: 'Meine PIR-Nummer ist LH-123456. Im Koffer waren Kleidung im Wert von etwa 800 Euro, ein Laptop (1.200 Euro) und persönliche Gegenstände. Hier sind die Quittungen.' Frage nach dem genauen Standort: 'Wo wurde mein Koffer zuletzt gescannt? Und warum gibt es seit fünf Tagen kein Update?' Bestehe auf dringende Gegenstände: 'Ich brauche dringend Zahnbürste, Unterwäsche und wichtige Arbeitsunterlagen – die Fluggesellschaft ist laut Montrealer Abkommen verpflichtet, mir sofort eine Notfallentschädigung zu zahlen. Wie beantrage ich das?' Drohe mit rechtlichen Schritten: 'Sollten Sie den Koffer nicht innerhalb der nächsten sieben Tage finden, fordere ich die volle Entschädigung von 1.300 Euro sowie Ersatz für meine dringenden Anschaffungen. Nach 21 Tagen gilt der Koffer als endgültig verloren – das wissen Sie genau.'",
+            "ar": "اذكر رقم فقدان الأمتعة الخاص بك والقيمة الدقيقة للمحتويات: 'رقم PIR الخاص بي هو LH-123456. في الحقيبة كانت ملابس قيمتها حوالي 800 يورو، كمبيوتر محمول (1,200 يورو) وأغراض شخصية. إليك الإيصالات.' اسأل عن الموقع الدقيق: 'أين تم مسح حقيبتي آخر مرة؟ ولماذا لا يوجد تحديث منذ خمسة أيام؟' أصر على الأغراض الضرورية: 'أحتاج بشكل عاجل فرشاة أسنان وملابس داخلية ومستندات عمل مهمة – شركة الطيران ملزمة حسب اتفاقية مونتريال بدفع تعويض طارئ فوري. كيف يمكنني طلب ذلك؟' هدد بإجراءات قانونية: 'إذا لم تجدوا الحقيبة خلال الأيام السبعة القادمة، سأطالب بالتعويض الكامل البالغ 1,300 يورو بالإضافة إلى تعويض عن مشترياتي العاجلة. بعد 21 يومًا، تعتبر الحقيبة مفقودة نهائيًا – أنت تعلم ذلك جيدًا.'"
+          },
+          "key_vocab": {
+            "de": ["PIR-Nummer", "Montrealer Abkommen", "Notwendige Gegenstände", "Suchverlauf", "endgültiger Verlust", "Online-Formular", "Notfallentschädigung", "Rechtsanspruch", "Quittungen"],
+            "ar": ["رقم فقدان الأمتعة", "اتفاقية مونتريال", "أغراض ضرورية", "سجل البحث", "فقدان نهائي", "نموذج عبر الإنترنت", "تعويض طارئ", "حق قانوني", "إيصالات"]
+          }
+        },
+        {
+          "id": "B2_handwerker_pfusch",
+          "topic": "Handwerker hat Pfusch geliefert (Badezimmer)",
+          "icon": "🔧",
+          "difficulty": "B2",
+          "ai_name": "Herr Vester",
+          "ai_gender": "männlich",
+          "description": {
+            "de": "Ein Handwerker hat dein Badezimmer renoviert – die Fliesen sind schief, die Fugen schimmeln nach 2 Wochen. Ziel: Ein konfliktreiches Gespräch mit dem Handwerker, der keine Schuld sieht.",
+            "ar": "حرفي قام بتجديد حمامك – البلاط غير مستوٍ، الجدران متعفنة بعد أسبوعين. الهدف: إجراء محادثة متوترة مع الحرفي الذي لا يرى أي خطأ."
+          },
+          "system_prompt": "Du bist Herr Vester, ein Handwerker, der keine Schuld sieht. Der Nutzer bemängelt: Fliesen sind schief, Fugen schimmeln nach 2 Wochen. Sprich B2-Deutsch: 'Das liegt an Ihrem falschen Lüftungsverhalten, ganz bestimmt nicht an meiner Arbeit!', 'Wenn Sie besser gelüftet hätten, wäre der Schimmel nicht gekommen.' Sehr streitbereit, benutze Konjunktiv II und Vorwürfe. Beende bei Trigger-Phrasen.",
+          "user_role": "Kunde",
+          "initial_message": "Herr Vester? Ich muss mit Ihnen über die Badezimmerrenovierung sprechen. Ich bin nicht zufrieden.",
+          "ending_triggers": ["Ich ziehe einen Gutachter hinzu", "Dritte Mahnung", "Auf Wiedersehen", "Ich zahle den Restbetrag nicht"],
+          "tips": {
+            "de": "Dokumentiere alles mit Fotos und Videos, bevor du anrufst. Bleib sachlich, aber bestimmt: 'Herr Vester, die Fliesen sind schief – ich habe hier eine Wasserwaage, die zeigt eine Abweichung von fast einem Zentimeter. Außerdem schimmeln die Fugen bereits nach nur 14 Tagen, obwohl ich zweimal täglich stoßlüfte.' Zitiere den Werkvertrag: 'In unserem Werkvertrag steht 'fachgerechte Ausführung'. Das ist nicht fachgerecht.' Setze eine letzte Frist: 'Ich gebe Ihnen hiermit eine letzte Frist von 14 Tagen zur Nachbesserung. Wenn Sie nicht bis zum 30. Mai alle Mängel beheben, werde ich einen unabhängigen Gutachter beauftragen – auf Ihre Kosten, wie gesetzlich vorgesehen. Außerdem werde ich den Restbetrag von 2.500 Euro einbehalten. Und sollte es vor Gericht gehen, habe ich alle Beweise.'",
+            "ar": "وثق كل شيء بالصور والفيديوهات قبل الاتصال. كن هادئًا ولكن حازمًا: 'سيد فيستر، البلاط غير مستوٍ – لدي ميزان تسوية هنا يظهر انحرافًا بمقدار سنتيمتر تقريبًا. بالإضافة إلى ذلك، الجدران متعفنة بالفعل بعد 14 يومًا فقط على الرغم من أنني أُهوي مرتين يوميًا.' استشهد بعقد العمل: 'في عقد العمل لدينا مكتوب 'تنفيذ احترافي'. هذا ليس احترافيًا.' حدد مهلة أخيرة: 'أعطيك بموجب هذا مهلة أخيرة مدتها 14 يومًا للتحسين اللاحق. إذا لم تقم بإصلاح جميع العيوب بحلول 30 مايو، سأستعين بخبير مستقل – على نفقتك، كما هو منصوص عليه قانونيًا. بالإضافة إلى ذلك، سأحتجز المبلغ المتبقي وقدره 2,500 يورو. وإذا ذهب الأمر إلى المحكمة، فكل الأدلة لدي.'"
+          },
+          "key_vocab": {
+            "de": ["Nachbesserung", "Mangelanzeige", "Gutachter", "Werkvertrag", "Gewährleistung", "Vorschuss", "Wasserwaage", "Fuge", "Mängelbeseitigung"],
+            "ar": ["تحسين لاحق", "إخطار بالعيب", "خبير تقييم", "عقد عمل", "ضمان قانوني", "دفعة مقدمة", "ميزان تسوية", "وصلة/فجوة", "إزالة العيوب"]
+          }
+        },
+        {
+          "id": "B2_karrierewechsel",
+          "topic": "Karrierewechsel – mit 45 neu studieren",
+          "icon": "🎓",
+          "difficulty": "B2",
+          "ai_name": "Frau Wichert",
+          "ai_gender": "weiblich",
+          "description": {
+            "de": "Du bist 45, IT-Projektmanager, willst aber Soziale Arbeit studieren. Ziel: Ein Beratungsgespräch mit der Berufsberaterin über Finanzierung und Umschulung.",
+            "ar": "أنت في 45 من العمر، مدير مشاريع تقنية، لكنك تريد دراسة العمل الاجتماعي. الهدف: إجراء محادثة استشارية مع مستشارة المهنة حول التمويل وإعادة التدريب."
+          },
+          "system_prompt": "Du bist Frau Wichert, Berufsberaterin bei der Agentur für Arbeit. Der Nutzer ist IT-Projektmanager (45), will aber Soziale Arbeit studieren. Sprich B2-Deutsch: 'Hätten Sie mit einer erheblichen Gehaltseinbuße gerechnet?', 'Wenn Sie noch Bafög beantragen würden, wäre das möglich – aber nur unter bestimmten Voraussetzungen.' Benutze Konjunktiv II und Passiv. Beende höflich bei Trigger-Phrasen.",
+          "user_role": "Ratsuchender",
+          "initial_message": "Guten Tag, Herr/Frau Schmidt! Ich habe Ihre Unterlagen gesehen. Ein mutiger Schritt mit 45 – vom gut bezahlten IT-Projektmanager zur Sozialarbeit. Warum dieser radikale Wechsel?",
+          "ending_triggers": ["Danke, ich stelle den Antrag", "Ich überleg's mir", "Auf Wiedersehen", "Ich komme auf Sie zurück"],
+          "tips": {
+            "de": "Begründe den Wechsel mit persönlicher Erfüllung, nicht nur mit Geld: 'Ich verdiene zwar gut – etwa 70.000 Euro im Jahr – aber die IT erfüllt mich schon lange nicht mehr. Nach dem Tod meines Vaters, der auf Hilfe angewiesen war, wurde mir klar: Soziale Arbeit ist meine Berufung, auch wenn ich weniger verdienen werde.' Frage nach konkreten Finanzierungsmöglichkeiten: 'Kann ich Aufstiegs-BAföG bekommen, obwohl ich schon älter bin? Gibt es Stipendien für Zweitstudien oder Weiterbildungsgeld von der Agentur für Arbeit?' Zeige einen konkreten, realistischen Plan: 'Ich habe bereits eine Zulassung für den Bachelor Soziale Arbeit an der FH Köln zum Oktober. Ich plane, in Teilzeit zu studieren und 20 Stunden pro Woche als Werkstudent zu arbeiten. Reicht mein Erspartes für die ersten zwei Semester oder brauche ich zusätzlich Bafög?' Frage auch: 'Wie sieht der Arbeitsmarkt für Sozialarbeiter mit 50 aus? Werden ältere Berufseinsteiger überhaupt eingestellt?'",
+            "ar": "برر التغيير بالإشباع الشخصي وليس المال فقط: 'رغم أن راتبي جيد – حوالي 70,000 يورو سنويًا – إلا أن مجال تكنولوجيا المعلومات لم يعد يُشبعني منذ فترة طويلة. بعد وفاة والدي الذي كان يعتمد على المساعدة، أدركت: العمل الاجتماعي هو دعوتي، حتى لو كان راتبي أقل.' اسأل عن إمكانيات التمويل المحددة: 'هل يمكنني الحصول على BAföG للترقية على الرغم من أنني أكبر سنًا؟ هل هناك منح دراسية لدراسة ثانية أو أموال تدريب من وكالة العمل؟' أظهر خطة ملموسة وواقعية: 'لدي قبول لدرجة البكالوريوس في العمل الاجتماعي في جامعة كولونيا للفنون التطبيقية لشهر أكتوبر. أخطط للدراسة بدوام جزئي والعمل 20 ساعة في الأسبوع كطالب عامل. هل مدخراتي تكفي للفصلين الأولين أم أحتاج إلى BAföG إضافي؟' اسأل أيضًا: 'كيف يبدو سوق العمل للأخصائيين الاجتماعيين في سن 50؟ هل يتم توظيف الأشخاص الذين يبدأون حياتهم المهنية في وقت متأخر؟'"
+          },
+          "key_vocab": {
+            "de": ["Umschulung", "Studienberatung", "Finanzierung", "Arbeitsagentur", "Bildungsgutschein", "Aufstiegs-BAföG", "Zweitstudium", "Berufung", "Werkstudent"],
+            "ar": ["إعادة تدريب", "استشارات دراسية", "تمويل", "وكالة العمل", "قسيمة تعليمية", "BAföG للترقية", "دراسة ثانية", "دعوة مهنية", "طالب عامل"]
+          }
+        },
+        {
+          "id": "B2_nachbarschaftsstreit",
+          "topic": "Nachbarschaftsstreit (lauter Hund)",
+          "icon": "🐕",
+          "difficulty": "B2",
+          "ai_name": "Herr Unger",
+          "ai_gender": "männlich",
+          "description": {
+            "de": "Dein Nachbar hat einen Hund, der nachts bellt. Du kannst nicht schlafen. Ziel: Einen höflichen, aber bestimmten Konflikt mit dem Nachbarn lösen.",
+            "ar": "جارك لديه كلب ينبح ليلاً. لا تستطيع النوم. الهدف: حل نزاع مهذب ولكن حازم مع الجار."
+          },
+          "system_prompt": "Du bist Herr Unger, ein Nachbar mit einem Hund. Der Nutzer beschwert sich über nächtliches Bellen. Sprich B2-Deutsch: 'Mein Hund bellt doch nicht die ganze Nacht! Das bilden Sie sich ein.', 'Wenn Sie empfindlich sind, hätten Sie nicht in ein Mehrfamilienhaus ziehen dürfen.' Konfliktorientiert, benutze Konjunktiv II. Beende bei Trigger-Phrasen.",
+          "user_role": "Nachbar (Beschwerdeführer)",
+          "initial_message": "Herr Unger? Ich bin Ihr Nachbar von unten. Wir müssen über Ihren Hund sprechen – es ist dringend.",
+          "ending_triggers": ["Ich rufe das Ordnungsamt", "Danke für Ihr Verständnis", "Auf Wiedersehen", "Wir finden eine Lösung"],
+          "tips": {
+            "de": "Bleib ruhig, aber deutlich: 'Herr Unger, Ihr Hund bellt jede Nacht zwischen 23 und 3 Uhr für etwa 20 Minuten am Stück. Ich habe hier eine Lärmprotokoll der letzten zwei Wochen. Das ist keine Einbildung.' Biete konkrete Lösungen an: 'Könnten Sie den Hund nachts vielleicht ins Wohnzimmer nehmen, statt auf dem Balkon? Oder gibt es einen Hundetrainer, der das Bellen abtrainieren kann?' Nenne die gesetzliche Lage: 'Laut Nachtruhe ab 22 Uhr ist das Bellen eine Ruhestörung, die ich dem Ordnungsamt melden könnte. Das möchte ich aber vermeiden.' Frage nach den Ursachen: 'Ist Ihr Hund vielleicht einsam oder hat Schmerzen? Dann könnte ein Tierarzt helfen.' Setze eine Grenze: 'Ich möchte keine Anzeige erstatten, aber wenn sich nichts ändert, muss ich leider das Ordnungsamt einschalten. Geben Sie mir bitte eine Rückmeldung innerhalb von drei Tagen.'",
+            "ar": "كن هادئًا ولكن واضحًا: 'سيد أونغر، كلبك ينبح كل ليلة بين الساعة 11 و 3 صباحًا لمدة 20 دقيقة متواصلة. لدي هنا سجل ضوضاء للأسبوعين الماضيين. هذا ليس تخيلاً مني.' قدم حلولاً ملموسة: 'هل يمكنك إحضار الكلب إلى غرفة المعيشة ليلاً بدلاً من وضعه على الشرفة؟ أو هل يوجد مدرب كلاب يمكنه تدريبه على التوقف عن النباح؟' اذكر الوضع القانوني: 'وفقًا لهدوء الليل بدءًا من الساعة 10 مساءً، فإن النباح يعتبر إزعاجًا يمكنني إبلاغ قسم النظام العام عنه. لكني أريد تجنب ذلك.' اسأل عن الأسباب: 'هل كلبك وحيد ربما أو يعاني من آلام؟ يمكن للطبيب البيطري المساعدة حينها.' ضع حدًا: 'لا أريد تقديم بلاغ، لكن إذا لم يتغير شيء، سأضطر للأسف إلى الاتصال بقسم النظام العام. أرجو منك إبلاغي برد خلال ثلاثة أيام.'"
+          },
+          "key_vocab": {
+            "de": ["Ruhestörung", "Nachtruhe", "Lärmprotokoll", "Ordnungsamt", "Hundetrainer", "Tierarzt", "Mehrfamilienhaus", "Einsamkeit", "Anzeige"],
+            "ar": ["إزعاج", "هدوء الليل", "سجل ضوضاء", "قسم النظام العام", "مدرب كلاب", "طبيب بيطري", "مبنى سكني متعدد العائلات", "وحدة", "بلاغ"]
+          }
+        },
+        {
+          "id": "B2_spendenorganisation",
+          "topic": "Spendenorganisation (regelmäßige Spende einrichten)",
+          "icon": "🤝",
+          "difficulty": "B2",
+          "ai_name": "Frau Dorn",
+          "ai_gender": "weiblich",
+          "description": {
+            "de": "Du möchtest eine regelmäßige Spende an eine Hilfsorganisation einrichten. Ziel: Ein professionelles Telefonat über Spendenformulare und Steuerabsetzbarkeit.",
+            "ar": "تريد إنشاء تبرع منتظم لمنظمة إغاثة. الهدف: إجراء مكالمة هاتفية احترافية حول نماذج التبرع وقابلية الخصم الضريبي."
+          },
+          "system_prompt": "Du bist Frau Dorn, Spendenberaterin bei 'Hilfe direkt'. Der Nutzer will eine regelmäßige Spende einrichten. Sprich B2-Deutsch: 'Ihre Spende können Sie selbstverständlich von der Steuer absetzen, wenn Sie eine Spendenquittung erhalten.', 'Würden Sie lieber monatlich oder vierteljährlich spenden?' Benutze höfliche, professionelle Formulierungen. Beende höflich bei Trigger-Phrasen.",
+          "user_role": "Spender",
+          "initial_message": "Hilfe direkt, guten Tag! Mein Name ist Frau Dorn. Sie möchten uns unterstützen? Das ist wunderbar!",
+          "ending_triggers": ["Danke, ich schicke das Formular", "Auf Wiedersehen", "Tschüss", "Bis zum nächsten Monat"],
+          "tips": {
+            "de": "Erkläre deine Motivation: 'Ich möchte helfen, weil ich letztes Jahr selbst in einer schwierigen Situation war und Menschen mir geholfen haben. Deshalb möchte ich jetzt etwas zurückgeben.' Frage konkret: 'Wie kann ich eine monatliche Spende von 25 Euro einrichten? Geht das per Lastschrift oder Überweisung?' Frage nach der Steuer: 'Bekomme ich eine jährliche Spendenquittung für das Finanzamt? Ich möchte die Spende von der Steuer absetzen.' Frage auch nach Transparenz: 'Kann ich sehen, wofür meine Spende konkret verwendet wird? Also zum Beispiel für Schulmaterialien oder warme Mahlzeiten?' Biete eine höhere Spende an: 'Kann ich einmalig 200 Euro zusätzlich spenden, zu Weihnachten? Und wie würde das steuerlich behandelt werden?'",
+            "ar": "اشرح دوافعك: 'أريد المساعدة لأنني كنت في وضع صعب العام الماضي وساعدني أشخاص. لذلك أريد رد الجميل الآن.' اسأل بالتحديد: 'كيف يمكنني إنشاء تبرع شهري بقيمة 25 يورو؟ هل يتم ذلك عن طريق الخصم المباشر أم التحويل البنكي؟' اسأل عن الضرائب: 'هل سأحصل على إيصال تبرع سنوي لدائرة الضرائب؟ أريد خصم التبرع من الضريبة.' اسأل أيضًا عن الشفافية: 'هل يمكنني معرفة كيف يتم استخدام تبرعي تحديدًا؟ مثلاً للوازم المدرسية أو الوجبات الساخنة؟' اعرض تبرعًا أعلى: 'هل يمكنني التبرع بمبلغ إضافي لمرة واحدة قدره 200 يورو بمناسبة عيد الميلاد؟ وكيف سيتم التعامل مع ذلك ضريبيًا؟'"
+          },
+          "key_vocab": {
+            "de": ["Spendenquittung", "Lastschrift", "Steuerabsetzbar", "monatlich", "vierteljährlich", "Transparenz", "Fördermitglied", "Gemeinnützigkeit", "Freistellungsbescheid"],
+            "ar": ["إيصال تبرع", "خصم مباشر", "قابل للخصم الضريبي", "شهريًا", "ربع سنوي", "شفافية", "عضو داعم", "نفع عام", "إشعار إعفاء"]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-import { Calendar, BookOpen, GraduationCap, Globe, PenTool, Headphones, FileText, Library, ArrowRight } from 'lucide-react';
+import { Calendar, BookOpen, GraduationCap, Globe, PenTool, Headphones, FileText, Library, ArrowRight, MessageCircle } from 'lucide-react';
 import { useApp } from '@/contexts/AppContext';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -17,6 +17,7 @@ export const TabNavigation = ({ onSelect }: TabNavigationProps = {}) => {
     { id: 'grammar' as const, label: 'القواعد', icon: PenTool },
     { id: 'lessons' as const, label: 'الدروس', icon: GraduationCap },
     { id: 'listening' as const, label: 'الاستماع والقراءة', icon: Headphones },
+    { id: 'speaking' as const, label: 'المحادثة', icon: MessageCircle },
     { id: 'writing' as const, label: 'الكتابة', icon: FileText },
     { id: 'resources' as const, label: 'المصادر', icon: Globe },
     { id: 'preparation' as const, label: 'التحضير للامتحان', icon: Library },

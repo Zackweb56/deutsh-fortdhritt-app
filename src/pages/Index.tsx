@@ -6,6 +6,7 @@ import { ScheduleTab } from '@/components/schedule/ScheduleTab';
 import { VocabularyTab } from '@/components/vocabulary/VocabularyTab';
 import LessonsTab from '@/components/lessons/LessonsTab';
 import ListeningTab from '@/components/listening/ListeningTab';
+import SpeakingTab from '@/components/speaking/SpeakingTab';
 
 import WritingLibraryTab from '@/components/writing/WritingLibraryTab';
 import { ResourcesTab } from '@/components/resources/ResourcesTab';
@@ -110,6 +111,7 @@ const AppContent = () => {
         {currentTab === 'grammar' && <GrammarTab />}
         {currentTab === 'lessons' && <LessonsTab />}
         {currentTab === 'listening' && <ListeningTab />}
+        {currentTab === 'speaking' && <SpeakingTab />}
         {currentTab === 'writing' && <WritingLibraryTab />}
         {currentTab === 'resources' && <ResourcesTab />}
         {currentTab === 'preparation' && <PreparationTab />}
