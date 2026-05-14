@@ -398,13 +398,53 @@ export const GrammarVerbsTab = () => {
 
 function renderConjugation(v: VerbItem, tense: string) {
   const tenseDisplay = tenseDisplayNames[tense] || { ar: tense, de: tense };
-  
+
+  // Helper: renders a single pronoun cell with German + Arabic stacked
+  function PronounCell({ k }: { k: string }) {
+    return (
+      <td className="py-2 px-3 text-center border-r border-border/20 w-[90px]" style={{ verticalAlign: 'middle' }}>
+        <div className="flex flex-col items-center gap-0.5">
+          <span className="text-[12px] font-bold text-foreground leading-tight" dir="ltr">{k}</span>
+          <span className="text-[9px] text-muted-foreground leading-tight">{getPronounArabic(k)}</span>
+        </div>
+      </td>
+    );
+  }
+
+  // Helper: renders a single verb form cell
+  function FormCell({ k, form }: { k: string; form: string }) {
+    return (
+      <td className="py-2 px-3 text-center" style={{ verticalAlign: 'middle' }}>
+        <div className="text-sm font-bold" dir="ltr">{highlightVerbForm(v.verb, form)}</div>
+      </td>
+    );
+  }
+
+  // Renders a simple vertical table (one row per pronoun)
+  function renderSimpleTable(order: string[], formsMap: Record<string, string>) {
+    const available = order.filter(k => formsMap[k]);
+    return (
+      <div className="rounded-xl overflow-hidden border border-border/50 bg-black/5" dir="ltr">
+        <table className="w-full">
+          <tbody>
+            {available.map(k => (
+              <tr key={k} className="border-b border-border/15 hover:bg-muted/30 transition-colors">
+                <PronounCell k={k} />
+                <FormCell k={k} form={formsMap[k]} />
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    );
+  }
+
   const conj = v.conjugations?.[tense];
-  
+
   if (conj) {
     const isImperativ = tense === 'Imperativ';
     const order = isImperativ ? ['du', 'ihr', 'Sie'] : ['ich', 'du', 'er/sie/es', 'wir', 'ihr', 'sie/Sie'];
-    
+
     return (
       <div className="mt-3 space-y-3">
         <div className="text-[11px] font-semibold text-muted-foreground flex items-center gap-2">
@@ -412,28 +452,13 @@ function renderConjugation(v: VerbItem, tense: string) {
           <span className="text-foreground font-bold">{tenseDisplay.ar}</span>
           <span className="text-[9px] opacity-50">({tenseDisplay.de})</span>
         </div>
-        <div className="rounded-xl overflow-hidden border border-border/50 bg-black/5">
-          <Table>
-            <TableBody>
-              {order.map(k => conj[k] ? (
-                <TableRow key={k} className="hover:bg-muted/50 transition-colors border-border/20">
-                  <TableCell className="text-right py-2 px-4 font-bold">
-                    {highlightVerbForm(v.verb, conj[k])}
-                  </TableCell>
-                  <TableCell className="py-2 px-4 text-[11px] text-muted-foreground font-medium text-left border-r border-border/10">
-                    {getPronounArabic(k)}
-                  </TableCell>
-                </TableRow>
-              ) : null)}
-            </TableBody>
-          </Table>
-        </div>
+        {renderSimpleTable(order, conj as Record<string, string>)}
       </div>
     );
   }
 
   if (tense === 'Präsens' && v.tenses?.Präsens) {
-    const pr = v.tenses.Präsens;
+    const pr = v.tenses.Präsens as Record<string, string>;
     const order = ['ich', 'du', 'er/sie/es', 'wir', 'ihr', 'sie/Sie'];
     return (
       <div className="mt-3 space-y-3">
@@ -442,20 +467,7 @@ function renderConjugation(v: VerbItem, tense: string) {
           <span className="text-foreground font-bold">المضارع</span>
           <span className="text-[9px] opacity-50">(Präsens)</span>
         </div>
-        <Table className="border-border/50">
-          <TableBody>
-            {order.map(k => (pr as any)[k] ? (
-              <TableRow key={k} className="hover:bg-muted/50 border-border/20">
-                <TableCell className="text-right py-2 px-4 font-bold">
-                  {highlightVerbForm(v.verb, (pr as any)[k])}
-                </TableCell>
-                <TableCell className="py-2 px-4 text-[11px] text-muted-foreground text-left border-r border-border/10">
-                  {getPronounArabic(k)}
-                </TableCell>
-              </TableRow>
-            ) : null)}
-          </TableBody>
-        </Table>
+        {renderSimpleTable(order, pr)}
       </div>
     );
   }
