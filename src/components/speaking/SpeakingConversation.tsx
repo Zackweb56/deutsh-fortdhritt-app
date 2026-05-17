@@ -34,10 +34,39 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 
+interface MenuItem {
+  name: string;
+  description?: string;
+  price: string;
+}
+
+interface MenuCategory {
+  name: string;
+  items: MenuItem[];
+}
+
+interface VisualMenu {
+  title: string;
+  icon: string;
+  categories: MenuCategory[];
+}
+
+interface ReceiptItem {
+  name: string;
+  price: string;
+}
+
+interface ReceiptData {
+  items: ReceiptItem[];
+  total: string;
+}
+
 interface Message {
   role: 'user' | 'ai';
   text: string;
   timestamp: Date;
+  showMenu?: boolean;
+  receiptData?: ReceiptData;
 }
 
 interface SpeakingConversationProps {
@@ -50,10 +79,12 @@ interface SpeakingConversationProps {
     ai_gender: string;
     description: { de: string; ar: string };
     system_prompt: string;
+    scenario_context?: string;
     user_role: string;
     initial_message: string;
     ending_triggers: string[];
     tips: { de: string; ar: string };
+    visual_menu?: VisualMenu;
     key_vocab: { de: string[]; ar: string[] };
   };
   onBack: () => void;
@@ -129,7 +160,7 @@ This conversation is at CEFR level ${scenario.difficulty}. You MUST adapt every 
 
 NEVER use grammar or vocabulary above level ${scenario.difficulty}. Keep your messages natural and appropriate for a ${scenario.difficulty} learner.
 
-${scenario.system_prompt}`,
+${scenario.system_prompt}${scenario.scenario_context ? `\n\nSCENARIO CONTEXT (Use this information if the user asks for details like a menu, prices, places, etc.):\n${scenario.scenario_context}` : ""}`,
             },
             ...history
           ],
@@ -161,18 +192,32 @@ ${scenario.system_prompt}`,
       userText.toLowerCase().includes(trigger.toLowerCase())
     );
 
-    if (triggerFound) {
-      const aiResponse = await callAI([...messages, newUserMessage]);
-      setMessages(prev => [...prev, { role: 'ai', text: aiResponse, timestamp: new Date() }]);
-      setIsEnded(true);
-      setIsLoading(false);
-      toast.success("تم إنهاء المحادثة بنجاح!");
-      return;
+    let aiResponse = await callAI([...messages, newUserMessage]);
+
+    let showMenu = false;
+    if (aiResponse.includes('[SHOW_MENU]')) {
+      showMenu = true;
+      aiResponse = aiResponse.replace(/\[SHOW_MENU\]/g, '').trim();
     }
 
-    const aiResponse = await callAI([...messages, newUserMessage]);
-    setMessages(prev => [...prev, { role: 'ai', text: aiResponse, timestamp: new Date() }]);
+    let receiptData: ReceiptData | undefined = undefined;
+    const receiptMatch = aiResponse.match(/\[RECEIPT\]([\s\S]*?)\[\/RECEIPT\]/);
+    if (receiptMatch) {
+      try {
+        receiptData = JSON.parse(receiptMatch[1].trim());
+        aiResponse = aiResponse.replace(receiptMatch[0], '').trim();
+      } catch (e) {
+        console.error("Failed to parse receipt JSON", e);
+      }
+    }
+
+    setMessages(prev => [...prev, { role: 'ai', text: aiResponse, timestamp: new Date(), showMenu, receiptData }]);
     setIsLoading(false);
+
+    if (triggerFound) {
+      setIsEnded(true);
+      toast.success("تم إنهاء المحادثة بنجاح!");
+    }
   };
 
   const requestFeedback = async () => {
@@ -403,6 +448,85 @@ Return a valid JSON object (no markdown, no extra text) with this exact structur
                       {msg.role === 'user' && <CheckCircle2 className="h-2.5 w-2.5" />}
                     </div>
                   </div>
+
+                  {/* Visual Menu Component */}
+                  {msg.showMenu && scenario.visual_menu && (
+                    <div className="mt-2 w-full max-w-[280px] sm:max-w-[340px]">
+                      <div className="bg-card border border-border/50 rounded-xl shadow-lg overflow-hidden flex flex-col">
+                        {/* Minimalist Header */}
+                        <div className="py-5 flex flex-col items-center justify-center border-b border-border/30 bg-muted/20">
+                          <span className="text-xl mb-1 opacity-80">{scenario.visual_menu.icon}</span>
+                          <h4 className="font-serif text-lg font-medium tracking-[0.15em] text-foreground uppercase">
+                            {scenario.visual_menu.title}
+                          </h4>
+                          <div className="w-8 h-px bg-primary/40 mt-2"></div>
+                        </div>
+
+                        <div className="p-5 space-y-6 bg-card/50">
+                          {scenario.visual_menu.categories.map((category, idx) => (
+                            <div key={idx}>
+                              <h5 className="font-serif text-[11px] tracking-[0.1em] text-muted-foreground uppercase mb-3 text-center">
+                                {category.name}
+                              </h5>
+                              <ul className="space-y-2.5">
+                                {category.items.map((item, itemIdx) => (
+                                  <li key={itemIdx} className="flex justify-between items-baseline group">
+                                    <span className="text-[12px] text-foreground font-medium group-hover:text-primary transition-colors">
+                                      {item.name}
+                                      {item.description && <span className="block text-[9px] text-muted-foreground font-normal mt-0.5">{item.description}</span>}
+                                    </span>
+                                    <div className="flex-1 mx-3 border-b border-dotted border-muted-foreground/30"></div>
+                                    <span className="text-[12px] text-foreground/80 font-mono">{item.price}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Receipt Component */}
+                  {msg.receiptData && (
+                    <div className="mt-3 w-full max-w-[280px] sm:max-w-[320px]">
+                      <div className="bg-[#1a1a1a] rounded-lg border border-[#2a2a2a] p-4 shadow-lg">
+                        {/* Header */}
+                        <div className="text-center mb-5 pb-3 border-b border-[#2a2a2a]">
+                          <h4 className="font-bold text-sm uppercase tracking-wider text-gray-100">
+                            RECHNUNG
+                          </h4>
+                          <p className="text-[10px] text-gray-500 mt-1">
+                            Vielen Dank für Ihren Besuch!
+                          </p>
+                        </div>
+
+                        {/* Items */}
+                        <div className="space-y-2 mb-5">
+                          {msg.receiptData.items.map((item, idx) => (
+                            <div key={idx} className="flex justify-between text-xs text-gray-300">
+                              <span className="flex-1">{item.name}</span>
+                              <span className="font-mono">{item.price}€</span>
+                            </div>
+                          ))}
+                        </div>
+
+                        {/* Total */}
+                        <div className="flex justify-between items-center pt-3 border-t border-[#2a2a2a]">
+                          <span className="text-xs font-bold uppercase text-gray-200">Gesamt</span>
+                          <span className="text-sm font-bold font-mono text-emerald-500">{msg.receiptData.total}€</span>
+                        </div>
+
+                        {/* Footer */}
+                        <div className="text-center mt-4 pt-2 text-[9px] text-gray-600">
+                          <p>inkl. MwSt.</p>
+                          <p className="mt-0.5">
+                            {msg.timestamp.toLocaleDateString('de-DE')} • {msg.timestamp.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' })}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
@@ -520,7 +644,7 @@ Return a valid JSON object (no markdown, no extra text) with this exact structur
                     { label: 'بنية الجمل', score: feedbackData.sentence_structure.score, icon: <Zap className="h-3 w-3" /> },
                   ].map(({ label, score, icon }) => (
                     <div key={label} className="flex flex-col items-center gap-1.5 bg-muted/20 rounded-xl p-2.5">
-                      <div className={`h-6 w-6 rounded-full flex items-center justify-center ${ score >= 70 ? 'bg-green-500/10 text-green-500' : score >= 45 ? 'bg-yellow-500/10 text-yellow-500' : 'bg-red-500/10 text-red-500' }`}>
+                      <div className={`h-6 w-6 rounded-full flex items-center justify-center ${score >= 70 ? 'bg-green-500/10 text-green-500' : score >= 45 ? 'bg-yellow-500/10 text-yellow-500' : 'bg-red-500/10 text-red-500'}`}>
                         {icon}
                       </div>
                       <span className="text-base font-bold">{score}</span>

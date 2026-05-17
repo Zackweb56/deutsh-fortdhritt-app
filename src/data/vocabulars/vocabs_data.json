@@ -18469,154 +18469,109 @@
                     "count": 21,
                     "vocab": [
                         {
-                            "de": "die Bewegung",
-                            "ar": [
-                                "الحركة"
-                            ],
-                            "image": ""
+                            "de": "der Schritt",
+                            "ar": ["الخطوة"],
+                            "image": "/vocabs_imgs/001_Schritt.png"
                         },
                         {
-                            "de": "die Ruhe",
-                            "ar": [
-                                "الهدوء",
-                                "السكون"
-                            ],
-                            "image": ""
+                            "de": "die Stimme",
+                            "ar": ["الصوت"],
+                            "image": "/vocabs_imgs/002_Stimme.png"
                         },
                         {
-                            "de": "der Schlaf",
-                            "ar": [
-                                "النوم"
-                            ],
-                            "image": ""
-                        },
-                        {
-                            "de": "der Traum",
-                            "ar": [
-                                "الحلم"
-                            ],
-                            "image": ""
-                        },
-                        {
-                            "de": "das Essen",
-                            "ar": [
-                                "الأكل",
-                                "الطعام"
-                            ],
-                            "image": ""
-                        },
-                        {
-                            "de": "das Trinken",
-                            "ar": [
-                                "الشرب"
-                            ],
-                            "image": ""
-                        },
-                        {
-                            "de": "der Hunger",
-                            "ar": [
-                                "الجوع"
-                            ],
-                            "image": ""
-                        },
-                        {
-                            "de": "der Durst",
-                            "ar": [
-                                "العطش"
-                            ],
-                            "image": ""
-                        },
-                        {
-                            "de": "die Müdigkeit",
-                            "ar": [
-                                "التعب",
-                                "النعاس"
-                            ],
-                            "image": ""
-                        },
-                        {
-                            "de": "die Energie",
-                            "ar": [
-                                "الطاقة"
-                            ],
-                            "image": ""
-                        },
-                        {
-                            "de": "die Kraft",
-                            "ar": [
-                                "القوة"
-                            ],
-                            "image": ""
-                        },
-                        {
-                            "de": "die Schwäche",
-                            "ar": [
-                                "الضعف"
-                            ],
-                            "image": ""
-                        },
-                        {
-                            "de": "die Gesundheit",
-                            "ar": [
-                                "الصحة"
-                            ],
-                            "image": ""
-                        },
-                        {
-                            "de": "die Krankheit",
-                            "ar": [
-                                "المرض"
-                            ],
-                            "image": ""
-                        },
-                        {
-                            "de": "die Verletzung",
-                            "ar": [
-                                "الإصابة"
-                            ],
-                            "image": ""
-                        },
-                        {
-                            "de": "der Schmerz",
-                            "ar": [
-                                "الألم"
-                            ],
-                            "image": ""
-                        },
-                        {
-                            "de": "die Geburt",
-                            "ar": [
-                                "الولادة"
-                            ],
-                            "image": ""
-                        },
-                        {
-                            "de": "der Tod",
-                            "ar": [
-                                "الموت"
-                            ],
-                            "image": ""
-                        },
-                        {
-                            "de": "das Leben",
-                            "ar": [
-                                "الحياة"
-                            ],
-                            "image": ""
+                            "de": "die Träne",
+                            "ar": ["الدمعة"],
+                            "image": "/vocabs_imgs/003_Träne.png"
                         },
                         {
                             "de": "die Atmung",
-                            "ar": [
-                                "التنفس"
-                            ],
-                            "image": ""
+                            "ar": ["التنفس"],
+                            "image": "/vocabs_imgs/004_Atmung.png"
                         },
                         {
-                            "de": "der Herzschlag",
-                            "ar": [
-                                "نبض القلب"
-                            ],
-                            "image": ""
+                            "de": "der Durst",
+                            "ar": ["العطش"],
+                            "image": "/vocabs_imgs/005_Durst.png"
+                        },
+                        {
+                            "de": "die Eile",
+                            "ar": ["العجلة", "السرعة"],
+                            "image": "/vocabs_imgs/006_Eile.png"
+                        },
+                        {
+                            "de": "die Energie",
+                            "ar": ["الطاقة"],
+                            "image": "/vocabs_imgs/007_Energie.png"
+                        },
+                        {
+                            "de": "der Fall",
+                            "ar": ["السقوط"],
+                            "image": "/vocabs_imgs/008_Fall.png"
+                        },
+                        {
+                            "de": "der Hunger",
+                            "ar": ["الجوع"],
+                            "image": "/vocabs_imgs/009_Hunger.png"
+                        },
+                        {
+                            "de": "der Husten",
+                            "ar": ["السعال"],
+                            "image": "/vocabs_imgs/010_Husten.png"
+                        },
+                        {
+                            "de": "die Krankheit",
+                            "ar": ["المرض"],
+                            "image": "/vocabs_imgs/011_Krankheit.png"
+                        },
+                        {
+                            "de": "der Kuss",
+                            "ar": ["القبلة"],
+                            "image": "/vocabs_imgs/012_Kuss.png"
+                        },
+                        {
+                            "de": "das Lächeln",
+                            "ar": ["الابتسامة"],
+                            "image": "/vocabs_imgs/013_Lächeln.png"
+                        },
+                        {
+                            "de": "das Lachen",
+                            "ar": ["الضحك"],
+                            "image": "/vocabs_imgs/014_Lachen.png"
+                        },
+                        {
+                            "de": "der Schlaf",
+                            "ar": ["النوم"],
+                            "image": "/vocabs_imgs/015_Schlaf.png"
+                        },
+                        {
+                            "de": "die Aktivität",
+                            "ar": ["النشاط"],
+                            "image": "/vocabs_imgs/016_Aktivität.png"
+                        },
+                        {
+                            "de": "der Alptraum",
+                            "ar": ["الكابوس"],
+                            "image": "/vocabs_imgs/017_Alptraum.png"
+                        },
+                        {
+                            "de": "die Ankunft",
+                            "ar": ["الوصول"],
+                            "image": "/vocabs_imgs/018_Ankunft.png"
+                        },
+                        {
+                            "de": "die Umarmung",
+                            "ar": ["العناق"],
+                            "image": "/vocabs_imgs/019_Umarmung.png"
+                        },
+                        {
+                            "de": "das Verhalten",
+                            "ar": ["السلوك"],
+                            "image": "/vocabs_imgs/020_Verhalten.png"
+                        },
+                        {
+                            "de": "das Verhungern",
+                            "ar": ["الموت جوعاً"],
+                            "image": "/vocabs_imgs/021_Verhungern.png"
                         }
                     ]
                 },

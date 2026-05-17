@@ -26,6 +26,40 @@
             "de": "Sag 'Ich möchte...' oder 'Ich hätte gern...' für deine Bestellung. Beispiel: 'Ich möchte eine Pizza' oder 'Ich hätte gern ein Wasser'. Am Ende sag 'Die Rechnung, bitte' zum Bezahlen. Verabschiede dich mit 'Auf Wiedersehen'.",
             "ar": "قل 'Ich möchte...' أو 'Ich hätte gern...' لطلبك. مثال: 'أريد بيتزا' أو 'أريد ماء من فضلك'. في النهاية قل 'الفاتورة من فضلك' لتدفع. ودّع بـ 'وداعًا'."
           },
+          "scenario_context": "WICHTIG: Wenn der Gast nach der Speisekarte oder dem Menü fragt, antworte ganz normal (z.B. 'Hier ist die Speisekarte. Was möchten Sie essen oder trinken?') und füge ganz am Ende deiner Nachricht EXAKT den Text [SHOW_MENU] ein. Das System zeigt dem Gast dann eine visuelle Speisekarte an. Die Karte enthält: Getränke: Mineralwasser (2,80€), Apfelschorle (3,50€), Pils vom Fass (4,20€), Kaffee (3,00€), Tee (2,80€), Spezi (3,80€). Hauptspeisen: Wiener Schnitzel mit Kartoffelsalat (18,50€), Currywurst mit Pommes (9,50€), Käsespätzle (14,90€), Gemüsepfanne mit Reis (12,90€). Desserts: Apfelstrudel mit Vanilleeis (6,50€), Schokopudding (3,90€).\n\nZWEITE WICHTIGE REGEL: Wenn der Gast nach der Rechnung fragt oder zahlen möchte, nenne den Gesamtbetrag in deiner Antwort und füge GANZ AM ENDE deiner Nachricht einen JSON-Block mit den bestellten Artikeln ein. Das Format MUSS exakt so aussehen: [RECEIPT] {\"items\": [{\"name\": \"Kaffee\", \"price\": \"3,00\"}, {\"name\": \"Wiener Schnitzel\", \"price\": \"18,50\"}], \"total\": \"21,50\"} [/RECEIPT]. Füge diesen Block NUR EIN EINZIGES MAL hinzu, wenn der Gast das erste Mal fragt. Sende ihn in zukünftigen Nachrichten nicht erneut.",
+          "visual_menu": {
+            "title": "Speisekarte",
+            "icon": "🍴",
+            "categories": [
+              {
+                "name": "Getränke",
+                "items": [
+                  { "name": "Mineralwasser", "price": "2,80€" },
+                  { "name": "Apfelschorle", "price": "3,50€" },
+                  { "name": "Pils vom Fass", "price": "4,20€" },
+                  { "name": "Kaffee", "price": "3,00€" },
+                  { "name": "Tee", "price": "2,80€" },
+                  { "name": "Spezi", "price": "3,80€" }
+                ]
+              },
+              {
+                "name": "Hauptspeisen",
+                "items": [
+                  { "name": "Wiener Schnitzel", "description": "mit Kartoffelsalat", "price": "18,50€" },
+                  { "name": "Currywurst", "description": "mit Pommes", "price": "9,50€" },
+                  { "name": "Käsespätzle", "description": "mit Röstzwiebeln", "price": "14,90€" },
+                  { "name": "Gemüsepfanne", "description": "mit Reis", "price": "12,90€" }
+                ]
+              },
+              {
+                "name": "Desserts",
+                "items": [
+                  { "name": "Apfelstrudel", "description": "mit Vanilleeis", "price": "6,50€" },
+                  { "name": "Schokopudding", "price": "3,90€" }
+                ]
+              }
+            ]
+          },
           "key_vocab": {
             "de": ["Speisekarte", "bestellen", "trinken", "essen", "zahlen", "Rechnung"],
             "ar": ["قائمة طعام", "يطلب", "يشرب", "يأكل", "يدفع", "الفاتورة"]
