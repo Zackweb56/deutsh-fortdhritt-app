@@ -11,7 +11,8 @@ import {
   MoreVertical,
   Flag,
   Lightbulb,
-  ChevronLeft,
+  ChevronRight,
+  ChevronDown,
   MessageSquare,
   ArrowUp,
   BarChart2,
@@ -19,6 +20,11 @@ import {
   AlertCircle,
   Zap,
   Loader2,
+  Phone,
+  Mic,
+  MicOff,
+  PhoneOff,
+  Volume2,
 } from 'lucide-react';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { toast } from 'sonner';
@@ -104,10 +110,10 @@ interface FeedbackData {
   grammar: { score: number; notes: string; notes_ar: string };
   vocabulary: { score: number; notes: string; notes_ar: string };
   sentence_structure: { score: number; notes: string; notes_ar: string };
-  strengths: string[];
   strengths_ar: string[];
   improvements: string[];
   improvements_ar: string[];
+  specific_corrections: { original: string; correction: string; explanation: string; explanation_ar: string; }[];
   summary: string;
   summary_ar: string;
 }
@@ -122,7 +128,101 @@ const SpeakingConversation = ({ scenario, onBack, onEnd }: SpeakingConversationP
   const [showFeedback, setShowFeedback] = useState(false);
   const [feedbackData, setFeedbackData] = useState<FeedbackData | null>(null);
   const [isFeedbackLoading, setIsFeedbackLoading] = useState(false);
+
+  // Call Mode States
+  const [isCallActive, setIsCallActive] = useState(false);
+  const [showCallOverlay, setShowCallOverlay] = useState(false);
+  const [isRecording, setIsRecording] = useState(false);
+  const [isTranscribing, setIsTranscribing] = useState(false);
+  const [isSpeaking, setIsSpeaking] = useState(false);
+  const [isUserSpeaking, setIsUserSpeaking] = useState(false);
+
   const scrollRef = useRef<HTMLDivElement>(null);
+  const recognitionRef = useRef<any>(null);
+  const isCallActiveRef = useRef(false);
+  const isLoadingRef = useRef(false);
+  const isSpeakingRef = useRef(false);
+  const speakingTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  useEffect(() => {
+    isLoadingRef.current = isLoading;
+  }, [isLoading]);
+
+  useEffect(() => {
+    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    if (SpeechRecognition) {
+      const recognition = new SpeechRecognition();
+      recognition.lang = 'de-DE';
+      recognition.continuous = false;
+      recognition.interimResults = true;
+
+      recognition.onstart = () => setIsRecording(true);
+
+      recognition.onresult = (event: any) => {
+        let finalTranscript = '';
+
+        // Handle User Speaking Sound Wave
+        setIsUserSpeaking(true);
+        if (speakingTimeoutRef.current) clearTimeout(speakingTimeoutRef.current);
+        speakingTimeoutRef.current = setTimeout(() => setIsUserSpeaking(false), 800);
+
+        for (let i = event.resultIndex; i < event.results.length; ++i) {
+          if (event.results[i].isFinal) {
+            finalTranscript += event.results[i][0].transcript;
+          }
+        }
+        if (finalTranscript.trim()) {
+          sendUserMessage(finalTranscript.trim());
+        }
+      };
+
+      recognition.onend = () => {
+        setIsRecording(false);
+        // Automatically restart if we are in call mode and the AI is not thinking or speaking
+        if (isCallActiveRef.current && !isLoadingRef.current && !isSpeakingRef.current) {
+          try {
+            recognitionRef.current.start();
+          } catch (e) {
+            // Might fail if already started or blocked
+          }
+        }
+      };
+
+      recognition.onerror = (e: any) => {
+        console.error("Speech recognition error:", e.error);
+        setIsRecording(false);
+        setIsUserSpeaking(false);
+        if (e.error === 'no-speech') {
+          // 'no-speech' is thrown when silence is detected for too long. We should just restart.
+          if (isCallActiveRef.current && !isLoadingRef.current && !isSpeakingRef.current) {
+            try { recognitionRef.current.start(); } catch (err) { }
+          }
+        } else if (e.error === 'not-allowed') {
+          toast.error("Mikrofonzugriff verweigert!");
+        }
+      };
+
+      recognitionRef.current = recognition;
+    }
+  }, []);
+
+  useEffect(() => {
+    isCallActiveRef.current = isCallActive;
+    if (!isCallActive) {
+      window.speechSynthesis.cancel();
+      setIsSpeaking(false);
+      setIsUserSpeaking(false);
+      if (recognitionRef.current) {
+        try { recognitionRef.current.stop(); } catch (e) { }
+      }
+    } else {
+      // Start call mode: AI speaks the last message (or initial message)
+      const lastAiMsg = messages.slice().reverse().find(m => m.role === 'ai');
+      if (lastAiMsg) {
+        speakText(lastAiMsg.text);
+      }
+    }
+  }, [isCallActive]);
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -160,6 +260,13 @@ This conversation is at CEFR level ${scenario.difficulty}. You MUST adapt every 
 
 NEVER use grammar or vocabulary above level ${scenario.difficulty}. Keep your messages natural and appropriate for a ${scenario.difficulty} learner.
 
+STRICT CONVERSATION RULES:
+1. Stay STRICTLY on the topic of the scenario: "${scenario.topic}".
+2. Do not answer questions or discuss anything outside of this topic. If the user goes off-topic, politely bring them back to the scenario in German.
+3. Act your role in a REAL-WORLD physical setting (e.g., at a clinic, a restaurant). Do NOT act like an AI or an online chat. Simulate a real, face-to-face human interaction.
+4. PACE THE CONVERSATION LOGICALLY AND STEP-BY-STEP. You MUST guide the flow naturally. For example: if it's a clinic, ask about symptoms BEFORE scheduling the appointment. If it's a restaurant, ask about drinks BEFORE food.
+5. Ask ONLY ONE short question at a time and WAIT for the user to answer. Do NOT rush to the conclusion. Keep responses very concise (1-2 sentences).
+
 ${scenario.system_prompt}${scenario.scenario_context ? `\n\nSCENARIO CONTEXT (Use this information if the user asks for details like a menu, prices, places, etc.):\n${scenario.scenario_context}` : ""}`,
             },
             ...history
@@ -178,10 +285,90 @@ ${scenario.system_prompt}${scenario.scenario_context ? `\n\nSCENARIO CONTEXT (Us
     }
   };
 
-  const handleSend = async () => {
-    if (!inputText.trim() || isLoading || isEnded) return;
+  const speakText = (text: string) => {
+    window.speechSynthesis.cancel();
 
-    const userText = inputText.trim();
+    // Remove tags like [SHOW_MENU] or [RECEIPT] before speaking
+    const cleanText = text.replace(/\[.*?\]/g, '').trim();
+
+    const utterance = new SpeechSynthesisUtterance(cleanText);
+    utterance.lang = 'de-DE';
+    utterance.rate = 0.95;
+
+    const voices = window.speechSynthesis.getVoices();
+    const germanVoices = voices.filter(v => v.lang.startsWith('de'));
+
+    if (germanVoices.length > 0) {
+      let selectedVoice = germanVoices.find(v => v.name.includes('Premium') || v.name.includes('Google'));
+
+      if (!selectedVoice) {
+        selectedVoice = germanVoices.find(v => v.name.includes('Hedda') || v.name.includes('Katja'));
+      }
+
+      if (scenario.ai_gender === 'male') {
+        const maleVoice = germanVoices.find(v => v.name.includes('Stefan') || v.name.includes('Conrad') || v.name.includes('Klaus'));
+        if (maleVoice) selectedVoice = maleVoice;
+      }
+
+      if (selectedVoice) {
+        utterance.voice = selectedVoice;
+      } else {
+        utterance.voice = germanVoices[0];
+      }
+    }
+
+    utterance.onstart = () => {
+      setIsSpeaking(true);
+      isSpeakingRef.current = true;
+      if (recognitionRef.current) {
+        try { recognitionRef.current.stop(); } catch (e) { }
+      }
+    };
+
+    utterance.onend = () => {
+      setIsSpeaking(false);
+      isSpeakingRef.current = false;
+      if (isCallActiveRef.current && recognitionRef.current && !isLoadingRef.current) {
+        try { recognitionRef.current.start(); } catch (e) { }
+      }
+    };
+
+    utterance.onerror = () => {
+      setIsSpeaking(false);
+      isSpeakingRef.current = false;
+      if (isCallActiveRef.current && recognitionRef.current && !isLoadingRef.current) {
+        try { recognitionRef.current.start(); } catch (e) { }
+      }
+    };
+
+    window.speechSynthesis.speak(utterance);
+  };
+
+  const toggleRecording = () => {
+    if (isRecording) {
+      if (recognitionRef.current) {
+        try { recognitionRef.current.stop(); } catch (e) { }
+      }
+    } else {
+      if (isSpeaking) {
+        window.speechSynthesis.cancel();
+        setIsSpeaking(false);
+        isSpeakingRef.current = false;
+      }
+      if (recognitionRef.current) {
+        try { recognitionRef.current.start(); } catch (e) {
+          toast.error("Mikrofon konnte nicht gestartet werden");
+        }
+      } else {
+        toast.error("Spracherkennung wird in diesem Browser nicht unterstützt.");
+      }
+    }
+  };
+
+  const sendUserMessage = async (userText: string) => {
+    if (!userText.trim() || isLoadingRef.current || isEnded) return;
+
+    isLoadingRef.current = true;
     const newUserMessage: Message = { role: 'user', text: userText, timestamp: new Date() };
 
     setMessages(prev => [...prev, newUserMessage]);
@@ -198,6 +385,7 @@ ${scenario.system_prompt}${scenario.scenario_context ? `\n\nSCENARIO CONTEXT (Us
     if (aiResponse.includes('[SHOW_MENU]')) {
       showMenu = true;
       aiResponse = aiResponse.replace(/\[SHOW_MENU\]/g, '').trim();
+      setShowCallOverlay(false);
     }
 
     let receiptData: ReceiptData | undefined = undefined;
@@ -206,6 +394,7 @@ ${scenario.system_prompt}${scenario.scenario_context ? `\n\nSCENARIO CONTEXT (Us
       try {
         receiptData = JSON.parse(receiptMatch[1].trim());
         aiResponse = aiResponse.replace(receiptMatch[0], '').trim();
+        setShowCallOverlay(false);
       } catch (e) {
         console.error("Failed to parse receipt JSON", e);
       }
@@ -213,12 +402,21 @@ ${scenario.system_prompt}${scenario.scenario_context ? `\n\nSCENARIO CONTEXT (Us
 
     setMessages(prev => [...prev, { role: 'ai', text: aiResponse, timestamp: new Date(), showMenu, receiptData }]);
     setIsLoading(false);
+    isLoadingRef.current = false;
+
+    if (isCallActiveRef.current) {
+      speakText(aiResponse);
+    }
 
     if (triggerFound) {
       setIsEnded(true);
+      setIsCallActive(false);
+      setShowCallOverlay(false);
       toast.success("تم إنهاء المحادثة بنجاح!");
     }
   };
+
+  const handleSend = () => sendUserMessage(inputText);
 
   const requestFeedback = async () => {
     setIsFeedbackLoading(true);
@@ -233,7 +431,8 @@ Your role in the scenario: ${scenario.user_role}
 Conversation transcript (this is text-based writing, NOT speaking):
 ${conversation}
 
-Analyze ONLY the lines starting with "You (student)". Address the student directly using "you" and "your" in all notes and feedback (never say "the student" or "student").
+Analyze ONLY the lines starting with "You (student)". Address the student directly using "you" and "your" in all notes and feedback (never say "the student" or "student"). 
+For specific corrections, ONLY list meaningful grammatical, vocabulary, or structural errors. Ignore simple casing or punctuation mistakes (like 'ich heisse' instead of 'Ich heiße').
 Return a valid JSON object (no markdown, no extra text) with this exact structure:
 {
   "overall_score": <number 0-100>,
@@ -242,10 +441,17 @@ Return a valid JSON object (no markdown, no extra text) with this exact structur
   "grammar": { "score": <0-100>, "notes": "<English, use 'you'>", "notes_ar": "<Arabic, address student directly>" },
   "vocabulary": { "score": <0-100>, "notes": "<English, use 'you'>", "notes_ar": "<Arabic, address student directly>" },
   "sentence_structure": { "score": <0-100>, "notes": "<English feedback on your sentence construction and variety, use 'you'>", "notes_ar": "<Arabic, address student directly>" },
-  "strengths": ["<strength 1 in English using 'you'>", "<strength 2>"],
   "strengths_ar": ["<strength 1 in Arabic>", "<strength 2>"],
   "improvements": ["<area 1 in English using 'you'>", "<area 2>"],
   "improvements_ar": ["<area 1 in Arabic>", "<area 2>"],
+  "specific_corrections": [
+    {
+      "original": "<exact phrase/word you said incorrectly (e.g. 'ich helfe mich')>",
+      "correction": "<the correct German version (e.g. 'ich helfe mir')>",
+      "explanation": "<short English explanation of the rule>",
+      "explanation_ar": "<Short, specific GRAMMATICAL explanation in PERFECT, FLUENT Arabic. Do NOT mix other languages. Wrap any German words inside the Arabic text with double asterisks like **Wort** so they can be highlighted.>"
+    }
+  ],
   "summary": "<2-3 sentences overall English summary using 'you'>",
   "summary_ar": "<same in Arabic, addressing student directly>"
 }`;
@@ -270,15 +476,132 @@ Return a valid JSON object (no markdown, no extra text) with this exact structur
   };
 
   return (
-    <div className="flex flex-col h-full bg-background text-xs">
+    <div className="flex flex-col h-full bg-background text-xs relative overflow-hidden">
+
+      {/* Call Mode Overlay */}
+      {showCallOverlay && isCallActive && (
+        <div className="absolute inset-0 z-50 bg-[#0f1115] flex flex-col items-center justify-between p-6 overflow-hidden animate-in fade-in duration-300">
+          {/* Header */}
+          <div className="w-full flex justify-between items-center text-neutral-300 mt-2">
+            <Button variant="ghost" size="icon" onClick={() => setShowCallOverlay(false)} className="hover:bg-white/10 rounded-full h-10 w-10">
+              <ChevronDown className="h-6 w-6" />
+            </Button>
+            <div className="flex flex-col items-center">
+              <span className="text-base font-semibold text-white tracking-wide" dir="ltr">{scenario.ai_name}</span>
+              <span className={`text-xs mt-0.5 ${isSpeaking ? 'text-green-400' : isTranscribing ? 'text-yellow-400' : isRecording ? 'text-red-400' : 'text-neutral-400'} font-medium`}>
+                {isSpeaking ? "Spricht..." : isTranscribing ? "Hört zu..." : isRecording ? "Aufnahme..." : "Verbunden"}
+              </span>
+            </div>
+            <div className="w-10"></div>
+          </div>
+
+          {/* Center Avatar */}
+          <div className="flex-1 flex flex-col items-center justify-center relative w-full mt-8">
+            <div className={`relative flex items-center justify-center w-36 h-36 rounded-full bg-neutral-800 border-2 border-neutral-700 transition-all duration-300 ${isSpeaking ? 'scale-110 shadow-[0_0_40px_rgba(34,197,94,0.3)] border-green-500/50' : ''}`}>
+              <span className="text-6xl">{scenario.icon}</span>
+
+              {/* Pulsing rings if speaking */}
+              {isSpeaking && (
+                <>
+                  <span className="absolute inset-0 rounded-full border border-green-500/30 animate-ping" style={{ animationDuration: '2s' }}></span>
+                  <span className="absolute inset-[-20px] rounded-full border border-green-500/20 animate-ping" style={{ animationDuration: '2.5s', animationDelay: '0.5s' }}></span>
+                </>
+              )}
+            </div>
+
+            {/* Optional: Show last transcribed text or AI text briefly */}
+            <div className="mt-12 text-center max-w-[85%] h-16 flex items-center justify-center">
+              {isTranscribing && (
+                <div className="flex gap-1.5 justify-center items-center">
+                  <span className="w-2.5 h-2.5 bg-neutral-500 rounded-full animate-bounce"></span>
+                  <span className="w-2.5 h-2.5 bg-neutral-500 rounded-full animate-bounce [animation-delay:0.2s]"></span>
+                  <span className="w-2.5 h-2.5 bg-neutral-500 rounded-full animate-bounce [animation-delay:0.4s]"></span>
+                </div>
+              )}
+              {!isTranscribing && messages[messages.length - 1]?.role === 'ai' && (
+                <p className="text-sm text-neutral-300 line-clamp-3 leading-relaxed" dir="ltr">
+                  {messages[messages.length - 1].text.replace(/\[.*?\]/g, '')}
+                </p>
+              )}
+            </div>
+          </div>
+
+          {/* Controls */}
+          <div className="w-full flex items-center justify-center gap-8 pb-10">
+            <Button
+              size="icon"
+              variant="ghost"
+              className="h-14 w-14 rounded-full bg-white/5 hover:bg-white/10 text-white"
+              onClick={() => setShowCallOverlay(false)}
+            >
+              <MessageSquare className="h-6 w-6" />
+            </Button>
+
+            <Button
+              size="icon"
+              className={`h-[88px] w-[88px] rounded-full shadow-lg transition-all border-4 ${isRecording ? 'bg-neutral-900 border-neutral-700' : 'bg-primary border-primary/50'}`}
+              onClick={toggleRecording}
+            >
+              {isUserSpeaking ? (
+                <div className="flex items-center gap-1.5 px-2">
+                  <div className="w-1.5 bg-green-400 rounded-full h-8 animate-pulse"></div>
+                  <div className="w-1.5 bg-green-400 rounded-full h-12 animate-pulse [animation-delay:150ms]"></div>
+                  <div className="w-1.5 bg-green-400 rounded-full h-6 animate-pulse [animation-delay:300ms]"></div>
+                  <div className="w-1.5 bg-green-400 rounded-full h-10 animate-pulse [animation-delay:75ms]"></div>
+                  <div className="w-1.5 bg-green-400 rounded-full h-7 animate-pulse [animation-delay:200ms]"></div>
+                </div>
+              ) : isRecording ? (
+                <Mic className="h-10 w-10 text-green-400/80" />
+              ) : (
+                <MicOff className="h-10 w-10 text-neutral-500" />
+              )}
+            </Button>
+
+            <Button
+              size="icon"
+              className="h-14 w-14 rounded-full bg-red-500 hover:bg-red-600 text-white"
+              onClick={() => {
+                setIsCallActive(false);
+                setShowCallOverlay(false);
+              }}
+            >
+              <PhoneOff className="h-6 w-6" />
+            </Button>
+          </div>
+
+          <div className="absolute bottom-6 text-[11px] text-neutral-500 font-medium">
+            Mikrofon ist {isRecording ? 'offen' : 'stummgeschaltet'}
+          </div>
+        </div>
+      )}
+
+      {/* Active Call Banner (when overlay is minimized) */}
+      {isCallActive && !showCallOverlay && (
+        <div
+          onClick={() => setShowCallOverlay(true)}
+          className="bg-green-500 hover:bg-green-600 cursor-pointer w-full text-white px-4 py-2.5 flex items-center justify-center gap-2 text-xs font-semibold transition-colors z-30 shrink-0"
+        >
+          <Phone className="h-4 w-4 animate-pulse" />
+          Anruf läuft... Tippen zum Zurückkehren
+        </div>
+      )}
 
       {/* Header */}
       <div className="bg-card border-b border-border p-2.5 flex items-center justify-between z-20 shrink-0">
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-1.5">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={onBack}
+            className="h-8 w-8 rounded-full md:hidden"  // ← hides on medium screens and up
+          >
+            <ChevronRight className="h-5 w-5 text-muted-foreground" />
+          </Button>
+
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="rounded-full h-8 w-8">
-                <MoreVertical className="h-4 w-4" />
+                <MoreVertical className="h-4 w-4 text-muted-foreground" />
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[320px] p-0 border-l border-border/40 overflow-hidden bg-card" dir="rtl">
@@ -390,20 +713,25 @@ Return a valid JSON object (no markdown, no extra text) with this exact structur
               </div>
             </SheetContent>
           </Sheet>
+
+          <Button variant="ghost" size="icon" onClick={() => {
+            setIsCallActive(true);
+            setShowCallOverlay(true);
+          }} className="h-8 w-8 rounded-full text-green-600 bg-green-500/10 hover:bg-green-500/10 hover:text-neutral-200/50 transition-colors">
+            <Phone className="h-4 w-4" />
+          </Button>
         </div>
 
         <div className="flex items-center gap-2.5">
-          <div className="min-w-0">
+          <div className="min-w-0 text-right">
             <h3 className="font-bold text-xs text-primary" dir='ltr'>{scenario.ai_name}</h3>
-            <div className="flex items-center gap-1.5">
+            <div className="flex items-center gap-1.5 justify-end">
               <span className="text-[9px] text-muted-foreground" dir='ltr'>{scenario.topic}</span>
             </div>
+
           </div>
 
           <div className="flex items-center gap-2.5">
-            <Button variant="ghost" size="icon" onClick={onBack} className="md:hidden h-8 w-8 rounded-full">
-              <ChevronLeft className="h-5 w-5" />
-            </Button>
 
             {/* Profile Icon with Online Dot */}
             <div className="relative shrink-0">
@@ -412,7 +740,9 @@ Return a valid JSON object (no markdown, no extra text) with this exact structur
               </div>
               <span className="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-green-500 ring-2 ring-background"></span>
             </div>
+
           </div>
+
         </div>
       </div>
 
@@ -698,6 +1028,38 @@ Return a valid JSON object (no markdown, no extra text) with this exact structur
                     ))}
                   </ul>
                 </div>
+
+                {/* Specific Corrections */}
+                {feedbackData.specific_corrections && feedbackData.specific_corrections.length > 0 && (
+                  <div className="px-5 py-4">
+                    <div className="flex items-center justify-end gap-1.5 mb-3">
+                      <span className="text-[10px] font-semibold text-red-500">أخطاء وتصحيحها</span>
+                      <RefreshCw className="h-3 w-3 text-red-500" />
+                    </div>
+                    <div className="space-y-2.5">
+                      {feedbackData.specific_corrections.map((corr, i) => (
+                        <div key={i} className="bg-neutral-500/5 rounded-xl p-3 border border-neutral-500/10 flex flex-col gap-2">
+                          <div className="flex flex-wrap items-center gap-2 text-left" dir="ltr">
+                            <span className="text-[9px] text-red-400/80 line-through decoration-red-500/50">{corr.original}</span>
+                            <span className="text-[12px] font-semibold text-green-500">{corr.correction}</span>
+                          </div>
+                          <p className="text-[9.5px] text-muted-foreground leading-relaxed text-right border-t border-red-500/10 pt-2" dir="rtl">
+                            {corr.explanation_ar.split(/\*\*(.*?)\*\*/g).map((part, pIdx) => {
+                              if (pIdx % 2 === 1) {
+                                return (
+                                  <span key={pIdx} className="text-blue-400 font-semibold font-mono text-[10.5px] mx-1" dir="ltr">
+                                    {part}
+                                  </span>
+                                );
+                              }
+                              return <span key={pIdx}>{part}</span>;
+                            })}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
                 {/* Summary */}
                 <div className="px-5 py-4">

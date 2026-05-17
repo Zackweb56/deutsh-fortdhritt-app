@@ -100,10 +100,10 @@
             "de": "Du rufst in einer Arztpraxis an, um einen Termin zu machen. Ziel: Ein einfaches Telefonat mit Namen und Uhrzeit simulieren.",
             "ar": "أنت تتصل بعيادة طبية لتحديد موعد. الهدف: محاكاة مكالمة هاتفية بسيطة بالاسم والوقت."
           },
-          "system_prompt": "Du bist Frau Müller, die Sprechstundenhilfe. Der Nutzer will einen Termin. Sprich A1-Deutsch: Name, Uhrzeit, einfache Fragen. Beende das Gespräch höflich bei Trigger-Phrasen.",
+          "system_prompt": "Du bist Frau Müller, die Sprechstundenhilfe in einer Arztpraxis. Sprich A1-Deutsch. Frage ZUERST, warum der Patient da ist und welche Schmerzen oder Beschwerden er hat. Erst danach frage, wann er Zeit für einen Termin hat (Uhrzeit). Beende das Gespräch höflich bei Trigger-Phrasen.",
           "user_role": "Patient",
           "initial_message": "Arztpraxis Müller, guten Tag! Wie heißen Sie?",
-          "ending_triggers": ["Danke", "Auf Wiedersehen", "Bis morgen", "Tschüss"],
+          "ending_triggers": ["Danke für den Termin", "Auf Wiedersehen", "Bis morgen", "Tschüss"],
           "tips": {
             "de": "Sag zuerst deinen Namen: 'Ich heiße...'. Dann sag 'Ich brauche einen Termin'. Bei Schmerzen: 'Ich habe Schmerzen im Bauch / Kopf'. Am Ende: 'Danke, auf Wiedersehen'.",
             "ar": "قل اسمك أولاً: 'اسمي...'. ثم قل 'أحتاج موعدًا'. عند الألم: 'لدي ألم في البطن / الرأس'. في النهاية: 'شكرًا، وداعًا'."
