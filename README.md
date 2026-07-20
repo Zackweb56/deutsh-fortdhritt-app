@@ -6,6 +6,7 @@ for Arabic speakers, covering A1 to B2 with daily lessons,
 vocabulary, listening, reading, and exam simulation.
 
 🔗 **Live Demo:** [deutschpath.vercel.app](https://deutschpath.vercel.app)
+🔑 **Free Access Code:** FREE-ACCESS
 
 ---
 
@@ -38,56 +39,106 @@ an admin dashboard — the foundation is already there.
 
 ---
 
-## Screenshots
+## How I Use AI Professionally (Cursor + Antigravity)
 
-### Daily Study Schedule — الجدول الزمني
-![Schedule](screenshots/schedule.png)
-Structured daily lessons per week with progress tracking, 
-timers, and locked/unlocked content per level.
+I built DeutschPath using AI as a professional development partner, not just as a code generator. I used Cursor for fast implementation, refactoring, debugging, and component-level development, while Antigravity helped me think more clearly about structure, product flow, maintainability, and user experience.
 
-### Vocabulary Manager — المفردات
-![Vocabulary](screenshots/vocabulary.png)
-Learn and manage vocabulary across A1, A2, B1, B2 levels 
-with definition tools and custom word lists.
+My workflow was:
+- Plan the feature first: define the learning journey, user needs, and layout.
+- Build the UI quickly: create reusable components, tabs, cards, and modules.
+- Refine with AI: improve code quality, fix bugs, and reduce repetition.
+- Review everything manually: validate logic, design, accessibility, and correctness.
+- Document and improve: keep the product clear, polished, and easier to scale.
 
-### Reading Practice — القراءة
-![Reading](screenshots/reading.png)
-Level-based German reading texts with comprehension 
-questions and AI-generated voice narration with 
-real-time word highlighting.
-
-### Listening Practice — الاستماع
-![Listening](screenshots/listening.png)
-Audio exercises with speed control (0.5x → 1.5x), 
-Arabic translation toggle, and synchronized 
-text highlighting while audio plays.
+This is the professional way I use AI:
+- It accelerates development.
+- It helps me explore ideas faster.
+- It improves productivity without replacing product judgment.
+- It allows me to focus more on quality, clarity, and user value.
 
 ---
 
-## Features
+## Screenshots
 
-**Learning Modules**
-- 📅 Daily Study Schedule — Structured weekly plans with 4 study hours per day, timers, and progress tracking across A1-B2 levels
-- 📚 Vocabulary Manager — Add, view, and delete custom vocabulary with German words, pronunciation, and Arabic translations
-- 📝 Grammar & Verbs — Reference section for German grammar rules and verb conjugations
-- 🎓 Lessons — Structured course content organized by proficiency level (A1, A2, B1, B2) with lesson completion tracking and search functionality
-- 🎧 Listening Practice — Audio exercises with playback controls and text synchronization
-- 📖 Reading Practice — Level-based German texts with comprehension content and text-to-speech narration
-- 🔗 Resources — Curated external learning resources organized by category (listening, reading, speaking, etc.) with ability to add custom links
+The screenshots below are already stored in the screenshots folder and are referenced directly in this README.
 
-**App Features**
-- 🔐 Access Control — Three-tier system: Free (limited access), Test (10-minute trial), Paid (full access) with unique code verification
-- 💾 Data Persistence — All progress, vocabulary, and resources saved locally using browser localStorage
-- 📱 Responsive Design — Mobile-first layout with full support for desktop and tablet devices
-- 🔤 RTL Interface — Right-to-left Arabic interface with bilingual German/Arabic content throughout
-- 🔊 Text-to-Speech — AI-generated voice narration for reading texts with real-time word highlighting
-- ⏱️ Study Timers — Built-in timers for each study session with start/pause functionality
-- 🌙 Dark Mode — Optional dark theme for comfortable reading in low light
-- 📢 Ad Integration — AdSense banners for monetization
-- 🔄 Reset Functionality — Option to reset all progress, vocabulary, and resources
-- 📜 Scroll to Top — Convenient button for easy navigation in long pages
-- 📄 Additional Pages — About page, Privacy Policy, and Reset Access page
-- 🛡️ Security Measures — Anti-screenshot and anti-dev-tools protections for test access
+### Main Dashboard
+![Dashboard](screenshots/dashboard.png)
+The main learning dashboard presents the app’s structure, navigation, and core learning entry points in one polished interface.
+
+### Study Schedule
+![Study Schedule](screenshots/dashboard.png)
+The study planner gives learners a structured weekly path with daily goals, study hours, and progression-based unlocks.
+
+### Vocabulary System
+![Vocabulary 1](screenshots/vocabs_02.png)
+![Vocabulary 2](screenshots/vocabs_03.png)
+![Vocabulary 3](screenshots/vocabs_04.png)
+![Vocabulary 4](screenshots/vocabs_05.png)
+The vocabulary experience allows learners to manage German words, meanings, pronunciation, and personal study lists in a clean and practical workflow.
+
+### Grammar & Verbs
+![Grammar 1](screenshots/grammar_01.png)
+![Grammar 2](screenshots/grammar_02.png)
+![Verbs](screenshots/verbs_01.png)
+The grammar and verb modules provide structured explanations and examples for German learners, with an emphasis on clarity and usability.
+
+### Lessons
+![Lessons](screenshots/lessons_01.png)
+The lessons section organizes content by proficiency level and supports guided study progression from A1 to B2.
+
+### Reading Practice
+![Reading](screenshots/reading_01.png)
+The reading module focuses on comprehension and text-based practice, with support for narration and guided interaction.
+
+### Resources & Preparation
+![Resources](screenshots/ressources_01.png)
+The resources area includes curated learning materials and preparation support to help learners continue beyond the core lessons.
+
+### Speaking Conversation
+![Conversation](screenshots/conversation_01.png)
+The speaking experience includes an interactive AI-driven conversation flow designed to simulate real spoken practice and support German communication skills.
+
+### Writing Practice
+![Writing](screenshots/wrinting_01.png)
+The writing module supports written expression practice and is designed as part of the broader exam preparation experience.
+
+### Exam Simulation
+![Exam Simulation](screenshots/exam.png)
+The exam simulation brings together reading, listening, writing, and speaking into a complete preparation experience that mirrors the structure of official German exam practice.
+
+---
+
+## Core Components & Features
+
+DeutschPath is not just a content app; it is a complete learning product experience built around modular React components and a polished user journey.
+
+### Product Modules
+- 📅 Study Schedule — Structured daily and weekly planning with progress tracking and level-based unlocks
+- 📚 Vocabulary System — Personalized vocabulary management with German terms, translations, pronunciation, and custom word lists
+- 📝 Grammar & Verbs — Reference-focused modules for grammar rules, verb patterns, and example usage
+- 🎓 Lessons — Organized lesson content across A1, A2, B1, and B2 with clear progression
+- 🎧 Listening Practice — Audio-based exercises with control and review features
+- 📖 Reading Practice — Reading activities with comprehension-focused interaction
+- 🗣️ Speaking Conversation — AI-assisted speaking practice with conversational flow and feedback logic
+- ✍️ Writing Practice — Structured writing tasks that support exam-style preparation
+- 🧪 Exam Simulation — A full mock-exam experience covering listening, reading, writing, and speaking
+
+### Key App Components
+- 🧭 Tab Navigation — A central navigation system that organizes the learning experience into clear sections
+- 🔐 Access Gate — A premium-style access system with free, trial, and paid access logic
+- 🧠 Speaking Conversation Flow — Interactive AI-driven conversation logic built around user input and guided responses
+- 🧪 Exam Engine — Modular exam workflow with instruction screens, progress handling, and results presentation
+- 🔊 Text-to-Speech Support — Voice narration and audio interaction to improve listening and reading experience
+- 📱 Responsive UI — A mobile-friendly experience designed for accessibility and ease of use
+- 🌐 RTL Arabic/German Experience — A bilingual interface tailored for Arabic-speaking learners
+
+### Platform & Product Features
+- 💾 Local Persistence — User progress, vocabulary, and preferences are stored locally in the browser
+- 🔒 Access Control — Supports free access, trial access, and paid access workflows through code-based verification
+- 📈 Learning Flow — Designed to guide users from study to practice to exam preparation in a cohesive path
+- 🛠️ Modular Architecture — The app is organized into reusable, feature-oriented components for maintainability and future growth
+- 🚀 Scalable Foundation — The current product is lightweight and cost-efficient, but the architecture is ready for future expansion with backend services and richer user accounts
 
 ---
 
@@ -128,14 +179,13 @@ per user — no online payment system required.
 
 ---
 
-## Run Locally
+## Production & Deployment
 
-```bash
-npm install
-npm run dev
-```
+The app is deployed and managed through Vercel with a lightweight production setup focused on speed, reliability, and low operational cost. The deployment workflow is designed for continuous delivery, fast iteration, and simple production monitoring.
 
----
+In production, I treat configuration and deployment carefully by separating development and production environments, managing secrets securely, and keeping deployment steps predictable. The app is also structured to support future optimization through caching, CDN delivery, and more advanced backend services when the product scales.
+
+In a broader product context, the next step would be to introduce more robust backend services for user accounts, content management, analytics, and session persistence. That could include managed databases, caching layers, and a more structured API layer while preserving the same frontend experience.
 
 ## Notes
 
@@ -143,6 +193,6 @@ npm run dev
 - Zero infrastructure cost — runs entirely on Vercel free tier
 - No backend by design — localStorage handles all persistence
 - Real paying users — access codes sold and distributed manually
-- Version 1.2.1 currently live
+- Version 1.4.2 currently live
 - Built specifically for the Moroccan/Arabic-speaking market
 - Could scale to full SaaS with backend integration
