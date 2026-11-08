@@ -87,6 +87,7 @@ const Teil2: React.FC<Teil2Props> = ({ teil, topic, userText, onTextChange, word
         </div>
         
         <textarea
+          id="schreiben-textarea"
           value={userText}
           onChange={onTextChange}
           placeholder="Schreiben Sie hier..."

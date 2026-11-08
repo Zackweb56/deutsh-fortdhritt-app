@@ -18,6 +18,14 @@ import LockOverlay from '@/components/ui/lock-overlay';
 
 type Level = 'B1' | 'B2';
 type Module = 'lesen' | 'horen' | 'schreiben' | 'sprechen';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import speakingData from '@/data/speaking/senarios.json';
+
 type Institute = 'goethe' | 'telc';
 
 const MODULE_DISPLAY_MAP: Record<Module, string> = {
@@ -433,7 +441,7 @@ export const PreparationTab = () => {
         </div>
       )}
 
-      {step === 'topic' && selectedLevel && selectedModule && selectedTeil && selectedInstitute && (
+      {(step === 'topic' || step === 'preview') && selectedLevel && selectedModule && selectedTeil && selectedInstitute && (
         <div className="space-y-6 sm:space-y-10 animate-in slide-in-from-bottom-4 duration-500">
           <div className="space-y-2 sm:space-y-3 text-center">
              <div className="inline-block px-2 sm:px-3 py-1 bg-red-600 rounded-full text-[7px] sm:text-[8px] font-black text-white uppercase italic mb-2 sm:mb-3 tracking-widest">
@@ -494,72 +502,78 @@ export const PreparationTab = () => {
         </div>
       )}
 
-      {step === 'preview' && selectedLevel && selectedInstitute && selectedModule && selectedTeil && selectedTopic && (
-        <div className="space-y-6 sm:space-y-10 animate-in slide-in-from-bottom-4 duration-500">
-          <div className="space-y-2 sm:space-y-3 text-center">
-             <div className="inline-block px-3 py-1 bg-[#ffcc00] rounded-full text-[8px] font-black text-black uppercase italic mb-2 tracking-widest">
-               Thema Vorschau
-             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tighter text-white uppercase italic">
-               Bereit für <span className="text-[#ffcc00]">{selectedTopic.title}</span>
-            </h2>
-            <p className="text-white/30 text-[9px] font-black uppercase tracking-[0.2em] italic max-w-md mx-auto leading-relaxed">
-              Hier sehen Sie das Thema des gewählten Teils. Diese Vorschau hilft Ihnen, das richtige Modellhema zu verstehen, bevor Sie mit der eigentlichen Simulation starten.
-            </p>
-          </div>
-
-          <Card className="bg-[#111] border-white/5 rounded-2xl p-4 sm:p-6 text-left">
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div>
-                <p className="text-[7px] text-white/30 font-black uppercase tracking-widest">Thema</p>
-                <p className="text-xs sm:text-sm font-black text-white mt-1 sm:mt-2">{selectedTopic.title}</p>
-              </div>
-              {selectedTopic.titleAr && (
-                <div>
-                  <p className="text-[7px] text-white/30 font-black uppercase tracking-widest">Thema (Arabic)</p>
-                  <p className="text-xs sm:text-sm font-black text-[#ffcc00] mt-1 sm:mt-2 text-right" dir="rtl">{selectedTopic.titleAr}</p>
+      <Dialog open={step === 'preview'} onOpenChange={(open) => !open && resetToTopic()}>
+        <DialogContent className="sm:max-w-2xl bg-[#111] border-white/10 text-white">
+          {selectedLevel && selectedInstitute && selectedModule && selectedTeil && selectedTopic && (
+            <>
+              <DialogHeader>
+                <div className="inline-block px-3 py-1 bg-[#ffcc00] rounded-full text-[8px] font-black text-black uppercase italic mb-2 tracking-widest w-fit mx-auto">
+                  Thema Vorschau
                 </div>
-              )}
-              <div>
-                <p className="text-[7px] text-white/30 font-black uppercase tracking-widest">Teil</p>
-                <p className="text-xs sm:text-sm font-black text-white mt-1 sm:mt-2">{selectedTeil.label} • {getTeilRoleLabel(selectedModule, selectedTeil.nummer, selectedLevel)}</p>
-              </div>
-              <div>
-                <p className="text-[7px] text-white/30 font-black uppercase tracking-widest">Themeninfo</p>
-                <p className="text-xs sm:text-sm text-white/70 mt-1 sm:mt-2">{getTopicSubtitle(selectedTeil, selectedTopic) || 'Prüfungsthema'}</p>
-              </div>
-            </div>
+                <DialogTitle className="text-2xl sm:text-3xl font-black tracking-tighter text-white uppercase italic text-center">
+                  Bereit für <span className="text-[#ffcc00]">{selectedTopic.title}</span>
+                </DialogTitle>
+                <p className="text-white/30 text-[9px] font-black uppercase tracking-[0.2em] italic max-w-md mx-auto leading-relaxed text-center mt-2">
+                  Hier sehen Sie das Thema des gewählten Teils. Diese Vorschau hilft Ihnen, das richtige Modellhema zu verstehen, bevor Sie mit der eigentlichen Simulation starten.
+                </p>
+              </DialogHeader>
 
-            <div className="mt-4 sm:mt-6 rounded-3xl border border-white/10 bg-white/5 p-4 sm:p-5 text-xs sm:text-sm leading-6 sm:leading-7 text-white/80">
-              {selectedTopic.transkript ? (
-                <div className="space-y-3">
-                  <p className="font-black uppercase tracking-[0.2em] text-white/50">Auszug</p>
-                  <p>{selectedTopic.transkript}</p>
-                </div>
-              ) : selectedTopic.audioTexts ? (
-                <div className="space-y-3">
-                  <p className="font-black uppercase tracking-[0.2em] text-white/50">Audio-Thema</p>
-                  <p>{selectedTopic.audioTexts.length} Audiotext(e) inklusive.</p>
-                </div>
-              ) : (
-                <p className="text-white/70">Dieses Thema ist bereit zum Starten der Simulation.</p>
-              )}
-            </div>
-          </Card>
+              <div className="space-y-6 sm:space-y-8 mt-4">
+                <Card className="bg-white/5 border-white/5 rounded-2xl p-4 sm:p-6 text-left shadow-none">
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <div>
+                      <p className="text-[7px] text-white/30 font-black uppercase tracking-widest">Thema</p>
+                      <p className="text-xs sm:text-sm font-black text-white mt-1 sm:mt-2">{selectedTopic.title}</p>
+                    </div>
+                    {selectedTopic.titleAr && (
+                      <div>
+                        <p className="text-[7px] text-white/30 font-black uppercase tracking-widest">Thema (Arabic)</p>
+                        <p className="text-xs sm:text-sm font-black text-[#ffcc00] mt-1 sm:mt-2 text-right" dir="rtl">{selectedTopic.titleAr}</p>
+                      </div>
+                    )}
+                    <div>
+                      <p className="text-[7px] text-white/30 font-black uppercase tracking-widest">Teil</p>
+                      <p className="text-xs sm:text-sm font-black text-white mt-1 sm:mt-2">{selectedTeil.label} • {getTeilRoleLabel(selectedModule, selectedTeil.nummer, selectedLevel)}</p>
+                    </div>
+                    <div>
+                      <p className="text-[7px] text-white/30 font-black uppercase tracking-widest">Themeninfo</p>
+                      <p className="text-xs sm:text-sm text-white/70 mt-1 sm:mt-2">{getTopicSubtitle(selectedTeil, selectedTopic) || 'Prüfungsthema'}</p>
+                    </div>
+                  </div>
 
-          <div className="grid gap-3 sm:grid-cols-2">
-            <Button className="text-white border-white/10 hover:border-primary bg-primary text-white" onClick={resetToTopic}>
-              Zurück zu den Themen
-            </Button>
-            <Button
-              className="bg-[#ffcc00] hover:bg-[#ffcc00] text-black font-black uppercase tracking-[0.2em]"
-              onClick={() => navigate(`/preparation/${selectedInstitute}/${selectedLevel}/${selectedModule}/${selectedTeil.id}/${selectedTopic.id}`)}
-            >
-              Simulation starten
-            </Button>
-          </div>
-        </div>
-      )}
+                  <div className="mt-4 sm:mt-6 rounded-3xl border border-white/10 bg-black/20 p-4 sm:p-5 text-xs sm:text-sm leading-6 sm:leading-7 text-white/80">
+                    {selectedTopic.transkript ? (
+                      <div className="space-y-3">
+                        <p className="font-black uppercase tracking-[0.2em] text-white/50 text-[10px]">Auszug</p>
+                        <p className="text-sm">{selectedTopic.transkript}</p>
+                      </div>
+                    ) : selectedTopic.audioTexts ? (
+                      <div className="space-y-3">
+                        <p className="font-black uppercase tracking-[0.2em] text-white/50 text-[10px]">Audio-Thema</p>
+                        <p className="text-sm">{selectedTopic.audioTexts.length} Audiotext(e) inklusive.</p>
+                      </div>
+                    ) : (
+                      <p className="text-white/70">Dieses Thema ist bereit zum Starten der Simulation.</p>
+                    )}
+                  </div>
+                </Card>
+
+                <div className="grid gap-3 sm:grid-cols-2">
+                  <Button variant="outline" className="text-white border-white/10 hover:bg-white/10" onClick={resetToTopic}>
+                    Abbrechen
+                  </Button>
+                  <Button
+                    className="bg-[#ffcc00] hover:bg-[#e6b800] text-black font-black uppercase tracking-[0.2em]"
+                    onClick={() => navigate(`/preparation/${selectedInstitute}/${selectedLevel}/${selectedModule}/${selectedTeil.id}/${selectedTopic.id}`)}
+                  >
+                    Simulation starten
+                  </Button>
+                </div>
+              </div>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { ChevronLeft, ChevronRight, Flag, Check, Send } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Flag, Check, Send, Highlighter, Trash2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface ExamTeil {
@@ -90,6 +90,46 @@ const GoetheExamLayout: React.FC<GoetheExamLayoutProps> = ({
   allTeile = [],
   currentTeilId,
 }) => {
+  const [isHighlighterActive, setIsHighlighterActive] = useState(false);
+
+  useEffect(() => {
+    if (!isHighlighterActive) return;
+    
+    const handleMouseUp = (e: MouseEvent) => {
+      // Don't highlight if clicking buttons
+      if ((e.target as HTMLElement).closest('button')) return;
+
+      const selection = window.getSelection();
+      if (!selection || selection.isCollapsed) return;
+      
+      const range = selection.getRangeAt(0);
+      const span = document.createElement('mark');
+      span.className = 'bg-yellow-200 text-inherit rounded px-0.5';
+      try {
+        range.surroundContents(span);
+        selection.removeAllRanges();
+      } catch (e) {
+        console.warn('Could not highlight across multiple nodes');
+      }
+    };
+    
+    document.addEventListener('mouseup', handleMouseUp);
+    return () => document.removeEventListener('mouseup', handleMouseUp);
+  }, [isHighlighterActive]);
+
+  const clearHighlights = () => {
+    const marks = document.querySelectorAll('mark.bg-yellow-200');
+    marks.forEach(mark => {
+      const parent = mark.parentNode;
+      if (parent) {
+        while (mark.firstChild) {
+          parent.insertBefore(mark.firstChild, mark);
+        }
+        parent.removeChild(mark);
+      }
+    });
+  };
+
   return (
     <div className="min-h-screen bg-[#f1f5f9] text-[#333] flex flex-col font-sans exam-container" dir="ltr">
       {/* Top Bar */}
@@ -137,6 +177,29 @@ const GoetheExamLayout: React.FC<GoetheExamLayoutProps> = ({
 
           {/* Right: Timer + Action Buttons */}
           <div className="flex items-center gap-3 w-full md:w-auto justify-between md:justify-end shrink-0">
+            <div className="flex items-center gap-1.5 mr-2 md:mr-4 border-r border-gray-700 pr-3 md:pr-4">
+              <Tooltip de="Text markieren" ar="تحديد النص">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => setIsHighlighterActive(!isHighlighterActive)}
+                  className={cn("h-7 w-7 md:h-8 md:w-8 rounded transition-colors", isHighlighterActive ? "bg-yellow-500/20 text-yellow-400 hover:bg-yellow-500/30 hover:text-yellow-300" : "text-gray-400 hover:text-white hover:bg-gray-800")}
+                >
+                  <Highlighter className="h-3.5 w-3.5 md:h-4 md:w-4" />
+                </Button>
+              </Tooltip>
+              <Tooltip de="Markierungen löschen" ar="مسح التحديد">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={clearHighlights}
+                  className="h-7 w-7 md:h-8 md:w-8 rounded text-gray-400 hover:text-red-400 hover:bg-gray-800 transition-colors"
+                >
+                  <Trash2 className="h-3.5 w-3.5 md:h-4 md:w-4" />
+                </Button>
+              </Tooltip>
+            </div>
+
             <div className="flex flex-col items-end">
               {totalTimeLabel && (
                 <span className="text-[8px] text-gray-400 uppercase tracking-wide leading-none">

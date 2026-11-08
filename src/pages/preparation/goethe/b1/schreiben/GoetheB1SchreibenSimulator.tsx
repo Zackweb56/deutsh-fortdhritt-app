@@ -24,6 +24,25 @@ const formatAufgabentyp = (typ?: string, nummer?: number): string => {
   return 'Schreiben';
 };
 
+const GermanCharacterPicker = ({ onInsert }: { onInsert: (char: string) => void }) => {
+  const chars = ['ä', 'ö', 'ü', 'ß', 'Ä', 'Ö', 'Ü'];
+  return (
+    <div className="flex items-center gap-2 mt-4 p-3 bg-gray-50 border border-gray-200 rounded-lg">
+      <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mr-2">Sonderzeichen:</span>
+      {chars.map(char => (
+        <button
+          key={char}
+          onClick={() => onInsert(char)}
+          className="h-8 w-8 flex items-center justify-center bg-white border border-gray-300 rounded hover:bg-gray-100 hover:border-gray-400 font-serif text-lg font-bold text-gray-800 transition-colors"
+          type="button"
+        >
+          {char}
+        </button>
+      ))}
+    </div>
+  );
+};
+
 const GoetheB1SchreibenSimulator = () => {
   const { teilId, topicId } = useParams<{ teilId: string; topicId: string }>();
   const navigate = useNavigate();
@@ -80,6 +99,27 @@ const GoetheB1SchreibenSimulator = () => {
     setUserText(text);
     const words = text.trim().split(/\s+/).filter(w => w.length > 0);
     setWordCount(words.length);
+  };
+
+  const insertCharacter = (char: string) => {
+    const textarea = document.getElementById('schreiben-textarea') as HTMLTextAreaElement;
+    if (textarea) {
+      const start = textarea.selectionStart;
+      const end = textarea.selectionEnd;
+      const text = textarea.value;
+      const newText = text.substring(0, start) + char + text.substring(end);
+      setUserText(newText);
+      
+      const words = newText.trim().split(/\s+/).filter(w => w.length > 0);
+      setWordCount(words.length);
+      
+      setTimeout(() => {
+        textarea.focus();
+        textarea.setSelectionRange(start + char.length, start + char.length);
+      }, 0);
+    } else {
+      setUserText(prev => prev + char);
+    }
   };
 
   const handleSubmit = async () => {
@@ -195,6 +235,8 @@ Punkte: ${topic.aufgabenpunkte?.join(', ') || ''}`,
             )}
 
             {renderTeil()}
+
+            <GermanCharacterPicker onInsert={insertCharacter} />
           </div>
         </div>
       </GoetheExamLayout>
