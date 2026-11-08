@@ -3,12 +3,17 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
+import LandingPlaceholder from "@/pages/LandingPlaceholder";
+import SectionEntry from "@/pages/SectionEntry";
+import LearningSection from "@/pages/sections/LearningSection";
+import ExamPrepSection from "@/pages/sections/ExamPrepSection";
+import InterviewSection from "@/pages/sections/InterviewSection";
+import { SectionProvider } from "@/contexts/SectionContext";
 import ResetAccess from "./pages/ResetAccess";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import About from "./pages/About";
 import AccessGate from "./components/AccessGate";
-import { useEffect } from "react";
+import { useEffect, type ReactNode } from "react";
 import { setupAdsAutoSync } from "./lib/ads";
 import NotFound from "./pages/NotFound";
 import ScrollToTopButton from "./components/ScrollToTopButton";
@@ -38,6 +43,8 @@ const getDeviceId = (): string => {
     return 'fallback-id';
   }
 };
+
+const withAccess = (element: ReactNode) => <AccessGate>{element}</AccessGate>;
 
 const App = () => {
   useEffect(() => {
@@ -69,29 +76,36 @@ const App = () => {
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <AccessGate>
-          <AppProvider>
+        <AppProvider>
+          <SectionProvider>
             <BrowserRouter>
               <Routes>
-                <Route path="/" element={<Index />} />
-                <Route path="/lessons/a1/:lessonNumber" element={<A1Lesson />} />
-                <Route path="/lessons/a2/:lessonNumber" element={<A2Lesson />} />
-                <Route path="/lessons/b1/:lessonNumber" element={<B1Lesson />} />
-                <Route path="/lessons/b2/:lessonNumber" element={<B2Lesson />} />
-                <Route path="/exams" element={<ExamsSelection />} />
-                <Route path="/exam/:instituteLevel" element={<ExamSimulator />} />
-                <Route path="/preparation/:institute/:level/:module/:teilId/:topicId" element={<PreparationSimulator />} />
-                <Route path="/reset-access" element={<ResetAccess />} />
-                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/stats" element={<SimpleAnalytics />} />
+                <Route path="/" element={<LandingPlaceholder />} />
+                <Route path="/sections" element={withAccess(<SectionEntry />)} />
+                <Route path="/learning/*" element={withAccess(<LearningSection />)} />
+                <Route path="/exam-preparation/*" element={withAccess(<ExamPrepSection />)} />
+                <Route path="/interviews/*" element={withAccess(<InterviewSection />)} />
+                <Route path="/lessons/a1/:lessonNumber" element={withAccess(<A1Lesson />)} />
+                <Route path="/lessons/a2/:lessonNumber" element={withAccess(<A2Lesson />)} />
+                <Route path="/lessons/b1/:lessonNumber" element={withAccess(<B1Lesson />)} />
+                <Route path="/lessons/b2/:lessonNumber" element={withAccess(<B2Lesson />)} />
+                <Route path="/exams" element={withAccess(<ExamsSelection />)} />
+                <Route path="/exam/:instituteLevel" element={withAccess(<ExamSimulator />)} />
+                <Route
+                  path="/preparation/:institute/:level/:module/:teilId/:topicId"
+                  element={withAccess(<PreparationSimulator />)}
+                />
+                <Route path="/reset-access" element={withAccess(<ResetAccess />)} />
+                <Route path="/privacy-policy" element={withAccess(<PrivacyPolicy />)} />
+                <Route path="/about" element={withAccess(<About />)} />
+                <Route path="/stats" element={withAccess(<SimpleAnalytics />)} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-                <Route path="*" element={<NotFound />} />
+                <Route path="*" element={withAccess(<NotFound />)} />
               </Routes>
               <ScrollToTopButton />
             </BrowserRouter>
-          </AppProvider>
-        </AccessGate>
+          </SectionProvider>
+        </AppProvider>
       </TooltipProvider>
     </QueryClientProvider>
   );

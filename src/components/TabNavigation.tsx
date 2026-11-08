@@ -1,4 +1,4 @@
-import { Calendar, BookOpen, GraduationCap, Globe, PenTool, Headphones, FileText, Library, ArrowRight, MessageCircle } from 'lucide-react';
+import { Calendar, BookOpen, GraduationCap, Globe, PenTool, Headphones, FileText, ArrowRight, MessageCircle } from 'lucide-react';
 import { useApp } from '@/contexts/AppContext';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -20,13 +20,12 @@ export const TabNavigation = ({ onSelect }: TabNavigationProps = {}) => {
     { id: 'speaking' as const, label: 'المحادثة', icon: MessageCircle },
     { id: 'writing' as const, label: 'الكتابة', icon: FileText },
     { id: 'resources' as const, label: 'المصادر', icon: Globe },
-    { id: 'preparation' as const, label: 'التحضير للامتحان', icon: Library },
   ];
 
   return (
     <div
       className="
-        flex flex-wrap sm:flex-nowrap
+        flex flex-wrap sm:flex-nowrap sm:overflow-x-auto sm:overscroll-x-contain
         gap-2 p-2
         bg-card rounded-lg border border-border
         w-full
@@ -35,7 +34,7 @@ export const TabNavigation = ({ onSelect }: TabNavigationProps = {}) => {
       {/* Exam resources were moved to the resources tab */}
 
       {/* Tabs navigation */}
-      <div className="flex-1 flex flex-wrap sm:flex-nowrap gap-2">
+      <div className="grid flex-1 grid-cols-2 gap-2 sm:flex sm:w-max sm:min-w-full sm:flex-nowrap sm:gap-2">
         {tabs.map((tab) => {
           const Icon = tab.icon;
           const isActive = currentTab === tab.id;
@@ -49,8 +48,8 @@ export const TabNavigation = ({ onSelect }: TabNavigationProps = {}) => {
               }}
               variant="ghost"
               className={`
-                flex-1 gap-2 justify-center
-                text-sm sm:text-base
+                min-w-0 gap-2 justify-center
+                text-sm sm:flex-none sm:whitespace-nowrap sm:px-5 sm:text-base
                 ${isActive
                   ? 'bg-primary text-primary-foreground hover:bg-primary/90'
                   : 'bg-neutral-800 text-neutral-foreground'}

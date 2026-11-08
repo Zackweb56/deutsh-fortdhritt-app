@@ -31,7 +31,7 @@ export const ScrollToTopButton: React.FC = () => {
       onClick={() => smoothScrollToTop(700)}
       aria-label="Scroll to top"
       className={`
-        fixed bottom-6 right-6 z-50
+        fixed bottom-6 left-6 z-50
         h-12 w-12 rounded-full
         flex items-center justify-center
         shadow-lg border border-border
@@ -47,5 +47,4 @@ export const ScrollToTopButton: React.FC = () => {
 };
 
 export default ScrollToTopButton;
-
 

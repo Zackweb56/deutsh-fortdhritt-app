@@ -1,5 +1,5 @@
 import { AppProvider, useApp } from '@/contexts/AppContext';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { TabNavigation } from '@/components/TabNavigation';
 import { ScheduleTab } from '@/components/schedule/ScheduleTab';
@@ -12,7 +12,6 @@ import WritingLibraryTab from '@/components/writing/WritingLibraryTab';
 import { ResourcesTab } from '@/components/resources/ResourcesTab';
 
 import { GrammarTab } from '@/components/grammar/GrammarTab';
-import { PreparationTab } from '@/components/preparation/PreparationTab';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Button } from '@/components/ui/button';
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog';
@@ -20,10 +19,15 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { GraduationCap, RefreshCw, Info, Shield, Menu, X } from 'lucide-react';
 
 const AppContent = () => {
-  const { currentTab, isLoaded } = useApp();
-  const { resetAll } = useApp();
+  const { currentTab, isLoaded, resetAll, setCurrentTab } = useApp();
   const [confirmOpen, setConfirmOpen] = useState(false);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+
+  useEffect(() => {
+    if (isLoaded && currentTab === 'preparation') {
+      setCurrentTab('schedule');
+    }
+  }, [currentTab, isLoaded, setCurrentTab]);
 
   if (!isLoaded) {
     return (
@@ -40,24 +44,8 @@ const AppContent = () => {
   return (
     <div className="flex flex-col min-h-screen pb-0">
       <header className="bg-card/95 border-b border-border sticky top-0 z-50 backdrop-blur-sm">
-        <div className="container mx-auto px-4 py-4 relative">
-          {/* Desktop reset button */}
-          <div className="absolute left-4 top-4 hidden sm:block">
-            <Button onClick={() => setConfirmOpen(true)} className="h-10 px-3 py-2 bg-primary text-primary-foreground hover:bg-primary/90">
-              <RefreshCw className="h-5 w-5 ml-2" />
-              <span>إعادة التعيين</span>
-            </Button>
-          </div>
-          <div className="flex items-center justify-between mb-4">
-            <div className="flex items-center gap-3">
-              <div className="h-15 w-15 flex items-center justify-center overflow-hidden">
-                <img src="/deutschpath_logo.svg" alt="DeutschPath" className="h-12 w-12 object-contain" />
-              </div>
-              <div>
-                <h1 className="text-xl font-bold">تعلم الألمانية بنفسك</h1>
-                <p className="text-xs text-muted-foreground">أداة يومية لتطوير مهاراتك بسرعة</p>
-              </div>
-            </div>
+        <div className="container mx-auto px-4 py-3 relative">
+          <div className="mb-3 flex items-center justify-end">
             {/* Mobile burger toggle */}
             <div className="sm:hidden">
               <Sheet open={mobileNavOpen} onOpenChange={setMobileNavOpen}>
@@ -80,14 +68,14 @@ const AppContent = () => {
                         <h2 className="text-lg font-bold">تعلم الألمانية بنفسك</h2>
                       </div>
                     </div>
-                    
+
                     <div className="mb-6">
                       <Button onClick={() => { setConfirmOpen(true); setMobileNavOpen(false); }} className="w-full h-10 bg-primary text-primary-foreground hover:bg-primary/90">
                         <RefreshCw className="h-5 w-5 ml-2" />
                         <span>إعادة التعيين</span>
                       </Button>
                     </div>
-                    
+
                     <div className="flex-1 overflow-y-auto pb-6">
                       <TabNavigation onSelect={() => setMobileNavOpen(false)} />
                     </div>
@@ -97,8 +85,15 @@ const AppContent = () => {
             </div>
           </div>
           {/* Desktop navigation */}
-          <div className="hidden sm:block">
+          <div className="hidden grid-cols-[minmax(0,9fr)_minmax(0,1fr)] items-stretch gap-2 sm:grid">
             <TabNavigation />
+            <Button
+              onClick={() => setConfirmOpen(true)}
+              className="h-full min-h-10 min-w-0 gap-1 whitespace-normal px-1 text-[10px] leading-tight sm:text-xs lg:gap-2 lg:px-3 lg:text-sm"
+            >
+              <RefreshCw className="h-4 w-4 shrink-0 lg:h-5 lg:w-5" />
+              <span>إعادة التعيين</span>
+            </Button>
           </div>
         </div>
       </header>
@@ -114,7 +109,6 @@ const AppContent = () => {
         {currentTab === 'speaking' && <SpeakingTab />}
         {currentTab === 'writing' && <WritingLibraryTab />}
         {currentTab === 'resources' && <ResourcesTab />}
-        {currentTab === 'preparation' && <PreparationTab />}
       </main>
       
       {/* ScrollToTopButton moved to global App shell */}
